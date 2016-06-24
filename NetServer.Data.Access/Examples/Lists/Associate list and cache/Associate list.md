@@ -1,0 +1,89 @@
+<properties date="2016-05-11"
+SortOrder="6"
+/>
+
+The associate list represents a list of all the associates in the SuperOffice database. This is the mechanism of retrieving the associates from the database. Let’s look at an example.
+
+```
+using SuperOffice.CRM.Services;
+using SuperOffice.CRM.Lists;
+using SuperOffice;
+ 
+using(SoSession session = SoSession.Authenticate("SAL0", ""))
+{
+//get the associate list as a flat list by passing the bool
+      //value true as the parameter
+      ISoListProvider assoList = SoLists.GetAssociateList(true);
+      if (assoList.RootItems.Count > 0)
+      {
+            //set the list view properties
+           listView2.View = View.List;
+            listView2.ShowItemToolTips = true;
+            int i = 0;
+            //loop through the root items to get to the associate
+            //information
+            foreach (SoListItem item in assoList.RootItems)
+            {
+                  //add the name and the tooltip to list view
+                  listView2.Items.Add(item.Name);
+                  listView2.Items[i].ToolTipText = item.Tooltip;
+                  i++;
+            }
+}
+}
+```
+
+ 
+
+In the above example the associate list is retrieved through the GetAssociateList method of the SoLists class which returns an object of type ISoListProvider. You may notice that we pass the bool value True as a parameter to the GetAssociateList method; this means it will return a flat list without groupings. The returned items will then all appear in the RootItems property of the ISoListProvider object. The above example will not return a list grouped on the different user groups the associate belongs to. In the next example let’s try out how we can get a list grouped on user groups.
+
+```
+using SuperOffice.CRM.Services;
+using SuperOffice.CRM.Lists;
+using SuperOffice;
+ 
+using(SoSession session = SoSession.Authenticate("SAL0", ""))
+{
+//get the associate list asa grouped list by not providing a
+      //parameter to the method
+      ISoListProvider assoList = SoLists.GetAssociateList();
+      if (assoList.HeadingItems.Count > 0)
+      {
+            //loop through the heading items since under the
+headings iems
+            //only the associates will be grouped
+            foreach (SoListHeading headingItem in
+assoList.HeadingItems)
+            {
+                  if (headingItem.Items.Count > 0)
+                  {
+                        //set the properties of the list view
+                        listView2.View = View.List;
+                        listView2.ShowItemToolTips = true;
+                        int i = 0;
+                        //loop through the items of the heading
+items to
+                        //access the individual information of the 
+
+                  //associates
+                        foreach (SoListItem item in
+headingItem.Items)
+                        {
+                             listView2.Items.Add(item.Name);
+                             listView2.Items[i].ToolTipText =
+item.Tooltip;
+                              i++;
+                        }
+                  }
+            }
+}
+}
+```
+
+ 
+
+In the above example the only difference from the first example is that we don’t tell NetServer explicitly to give us a flat list by not supplying a parameter for the method GetAssociateList. This means that all the associates will be returned grouped on the user groups that they belong to.
+
+ When a list of this type returned the associates that belong to each group will be under the Items property of the HeadingItems property of the main list. That is the reason that we have to traverse through the HeadingItems to get to the associates of each group.
+
+The above examples show only one usage of the associate list but there can be many more innovative designs using the provided functionality, the creativity is up to the user.
