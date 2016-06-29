@@ -1,13 +1,13 @@
 <properties date="2016-05-11"
-SortOrder="1"
+SortOrder="1" DefaultTopic="yes"
 />
 
 ![](images/DevNet_logo.png) ![](expander-sdk.jpg)
 Expander SDK: Server Data .net API
 ==================================
 
-Documentation for NetServer 7.5
-(Feb 2014)
+Documentation for NetServer 8.0
+(Jun 2016)
 
 The SuperOffice Server Data API provides .net programmers with direct access to the database through four different abstractions. Web services are built in a separate API on top of these classes.
 
@@ -23,8 +23,5 @@ Please explore what is available in this part of the SDK:
 * [Introduction to NetServer concepts](Introduction/Introduction.md)
 * [In depth guide to programming with NetServer](Developer's%20Guide/Developer's%20Guide.md)
 * [Programming examples](Examples/Examples.md)
-
-<!-- -->
-
 * [Quote Connector APIs](Developer's%20Guide/ERP%20Connectors/ERP%20Quote%20Connector%20Interface/ERP%20Quote%20Connector%20Interface.md) to support integration with price lists and quote management systems.
 * [ERP Sync Connector APIs](Developer's%20Guide/ERP%20Connectors/ERP%20Sync%20Connector%20Interface/ERP%20Sync%20Connector%20Interface.md) to support customer and project integration with ERP systems.
