@@ -2,7 +2,7 @@
 SortOrder="1"
 />
 
-![](images/devnet_logo.png) ![](expander-sdk.jpg)
+![](images/so_logo_50h.gif) ![](expander-sdk.jpg)
 Expander SDK: Server Services .net API
 ======================================
 
