@@ -24,3 +24,4 @@ Take a look at:
 * [**Introduction to services: concepts**](Introduction/Introduction.md)
 * [**Guide to programming with the services API**](Developer's%20Guide/Developer's%20Guide.md)
 * [**Programming Examples**](Examples/Examples.md)
+* The re-usable Dynamic Client Foundation (DCF) components. These are generic and can be used outside ASP.net to build any sort of client. For example: Internationalization/translation support
