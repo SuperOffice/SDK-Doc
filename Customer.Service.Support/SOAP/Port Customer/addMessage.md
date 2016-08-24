@@ -13,10 +13,9 @@ Adds a message to an existing ticket. You are only allowed to add messages to a 
 * sessionKey            - A valid session key
 * messageBody        - The text in the message.
 * ticketId     - The ticket to attach the message to.
-* sLevel        - Security level of the ticket. Can be:
-
-   o   1 – Intenal
-   o   2 – External
+* sLevel       - Security level of the ticket. Can be:
+   *   1 – Intenal
+   *   2 – External
 
  
 
