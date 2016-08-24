@@ -11,22 +11,16 @@ Adds a message to an existing ticket. You are only allowed to add messages to a 
 *In Parameters*:
 
 * sessionKey            - A valid session key
-
 * messageBody        - The text in the message.
-
 * ticketId     - The ticket to attach the message to.
-
 * sLevel        - Security level of the ticket. Can be:
 
-o   1 – Intenal
-
-o   2 – External
+   o   1 – Intenal
+   o   2 – External
 
  
 
 Other values will result in an error.
-
- 
 
 * attachmentIds       - An array of the IDs of all attachments that you wish to connect to this message. The ID is received from addAttachment().
 
@@ -37,27 +31,20 @@ Other values will result in an error.
 *Out Parameters*:
 
 * errorCode  - See appendix for error codes
-
 * messageId - The internal ID of the new message.
 
  
 
 *Example*:
 
+```cs
 customer.customerService custService = new customer.customerService();
 
- 
-
 string sessionKey;
-
 string ret = custService.login("test","test", out sessionKey);
 
- 
-
 if(ret == "0")
-
 {
-
        string\[\] attachmentIDs = new string\[0\];
        string messageId;
        ret = custService.addMessage(sessionKey,
@@ -68,5 +55,5 @@ if(ret == "0")
           cout &lt;&lt; messageId;
           //messageId now contains the new ID
        custService.logout(sessionKey);
-
 }
+```
