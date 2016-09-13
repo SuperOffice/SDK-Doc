@@ -1,5 +1,5 @@
 <properties date="2016-05-11"
-SortOrder="1"
+SortOrder="75"
 />
 
 Improvements in 7.5

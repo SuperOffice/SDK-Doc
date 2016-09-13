@@ -1,5 +1,5 @@
 <properties date="2016-06-24"
-SortOrder="2"
+SortOrder="79"
 />
 
 Improvements in 7.1
