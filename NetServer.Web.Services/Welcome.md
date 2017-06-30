@@ -6,8 +6,8 @@ SortOrder="1"
 Expander SDK: Server Services .net API
 ======================================
 
-Documentation for NetServer 8.0
-(Jun 2016)
+Documentation for NetServer 8.0 SR5
+(Jun 2017)
 
 The web-services API gives you platform-independent access to SuperOffice data and functionality.
 The [corresponding **SuperOffice.NetServer.Services** Nuget package](https://www.nuget.org/packages/SuperOffice.NetServer.Services/) contains the assemblies needed to use these APIs. The internal core APIs are documented separately. If you want to work with SuperOffice Online, you will also need to add [the Online Nuget package](https://www.nuget.org/packages/SuperOffice.Crm.Online.Core/) to your solution.

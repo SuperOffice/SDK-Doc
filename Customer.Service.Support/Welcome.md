@@ -6,8 +6,8 @@ SortOrder="1"
 Expander SDK:Customer Service API
 =================================
 
-Documentation for Customer Service (eJournal) 8.0
-(June 2016)
+Documentation for Customer Service (eJournal) 8.0 SR5
+(June 2017)
 
 Customer Service and Support (aka eJournal) has a several APIs.
 
@@ -16,6 +16,7 @@ Customer Service and Support (aka eJournal) has a several APIs.
 * A SOAP API is available for external programs to read/write information. Access to the SOAP API requires a license.
 
 Please explore what is available in this part of the SDK:
+
 * [Business Logic: Screen designer, queries, scripts](Blogic/Blogic.md)
 * [ejScript language reference](EJScript/EJScript.md)
 * [ejScript event model](EJScript%20event%20model/EJScript%20event%20model.md)

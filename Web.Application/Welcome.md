@@ -6,8 +6,8 @@ SortOrder="1"
 Expander SDK: Web GUI .net API
 ==============================
 
-Documentation for CRM.web 8.0
-(Jun 2016)
+Documentation for CRM.web 8.0 SR5
+(Jun 2017)
 
 The SuperOffice Sales & Marketing web-client can be customized in many different ways. The web-client is built using a reusable set of components documented here. The web-client can be extended with new components and configured to use custom components. The [SuperOffice Web Client Nuget package](https://www.nuget.org/packages/SuperOffice.Crm.Web/) adds the needed assemblies to extend the web client. This will also install [the SuperOffice web services package](https://www.nuget.org/packages/SuperOffice.NetServer.Services/) and [the SuperOffice Core package](https://www.nuget.org/packages/SuperOffice.NetServer.Core/).
 
