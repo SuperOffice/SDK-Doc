@@ -18,10 +18,10 @@ New fields on old CRM database tables
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><p><a href="Database_db~s-crm7~t-APPOINTMENT.html">appointment</a></p></td>
+<td><p><a href="../Tables/APPOINTMENT.md">appointment</a></p></td>
 <td><p>sale_id</p></td>
 <td><p></p></td>
-<td><p><a href="Database_db~s-crm7~t-PROJECT.html">project</a></p></td>
+<td><p><a href="../Tables/PROJECT.md">project</a></p></td>
 <td><p>activeLinks</p></td>
 </tr>
 <tr class="even">
@@ -35,11 +35,11 @@ New fields on old CRM database tables
 <td><p></p></td>
 <td><p>suggestedDocumentId</p></td>
 <td><p></p></td>
-<td><p><a href="Database_db~s-crm7~t-SALE.html">sale</a></p></td>
+<td><p><a href="../Tables/SALE.md">sale</a></p></td>
 <td><p>saleType_id</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="Database_db~s-crm7~t-ASSOCIATE.html">associate</a></p></td>
+<td><p><a href="../Tables/ASSOCIATE.md">associate</a></p></td>
 <td><p>locationAddress</p></td>
 <td><p></p></td>
 <td><p></p></td>
@@ -53,7 +53,7 @@ New fields on old CRM database tables
 <td><p>reasonStalled_id</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="Database_db~s-crm7~t-CONTACT.html">contact</a></p></td>
+<td><p><a href="../Tables/CONTACT.md">contact</a></p></td>
 <td><p>ticketPriorityId</p></td>
 <td><p></p></td>
 <td><p></p></td>
@@ -91,7 +91,7 @@ New fields on old CRM database tables
 <td><p></p></td>
 <td><p>dbi_agent_id</p></td>
 <td><p></p></td>
-<td><p><a href="Database_db~s-crm7~t-SALEHIST.html">salehist</a></p></td>
+<td><p><a href="../Tables/SALEHIST.md">salehist</a></p></td>
 <td><p>saleType_id</p></td>
 </tr>
 <tr class="even">
@@ -116,7 +116,7 @@ New fields on old CRM database tables
 <td><p>reopenDate</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="Database_db~s-crm7~t-EMAIL.html">email</a></p></td>
+<td><p><a href="../Tables/EMAIL.md">email</a></p></td>
 <td><p>bounceCount</p></td>
 <td><p></p></td>
 <td><p></p></td>
@@ -144,10 +144,10 @@ New fields on old CRM database tables
 <td><p>saleTypeCat_id</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="Database_db~s-crm7~t-MODULELICENSE.html">modulelicense</a></p></td>
+<td><p><a href="../Tables/MODULELICENSE.md">modulelicense</a></p></td>
 <td><p>moduleVersion</p></td>
 <td><p></p></td>
-<td><p><a href="Database_db~s-crm7~t-SELECTION.html">selection</a></p></td>
+<td><p><a href="../Tables/SELECTION.md">selection</a></p></td>
 <td><p>targetTableNumber</p></td>
 </tr>
 <tr class="even">
@@ -182,7 +182,7 @@ New fields on old CRM database tables
 <td><p></p></td>
 <td><p>unrestricted</p></td>
 <td><p></p></td>
-<td><p><a href="Database_db~s-crm7~t-SELECTIONMEMBER.html">selectionmember</a></p></td>
+<td><p><a href="../Tables/SELECTIONMEMBER.md">selectionmember</a></p></td>
 <td><p>targetTableNumber</p></td>
 </tr>
 <tr class="odd">
@@ -196,11 +196,11 @@ New fields on old CRM database tables
 <td><p></p></td>
 <td><p>prerequisiteModule</p></td>
 <td><p></p></td>
-<td><p><a href="Database_db~s-crm7~t-TRAVELGENERATEDTRANSACTION.html">travelgeneratedtransaction</a></p></td>
+<td><p><a href="../Tables/TRAVELGENERATEDTRANSACTION.md">travelgeneratedtransaction</a></p></td>
 <td><p>transNumLong</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="Database_db~s-crm7~t-PERSON.html">person</a></p></td>
+<td><p><a href="../Tables/PERSON.md">person</a></p></td>
 <td><p>sentInfo</p></td>
 <td><p></p></td>
 <td><p></p></td>
@@ -376,47 +376,47 @@ New database tables (including eJournal tables)
 360: [invoice\_entry](../Tables/invoice_entry.md)
 361: [invoice\_type](../Tables/invoice_type.md)
 362: [soap\_access](../Tables/soap_access.md)
-363: [hotlist](SuperOffice%20Seven_db~s-crm7~t-hotlist.md)
-364: [log\_events](SuperOffice%20Seven_db~s-crm7~t-log_events.md)
-365: [log\_debug](SuperOffice%20Seven_db~s-crm7~t-log_debug.md)
-366: [form\_keys](SuperOffice%20Seven_db~s-crm7~t-form_keys.md)
-367: [sms\_hysteria](SuperOffice%20Seven_db~s-crm7~t-sms_hysteria.md)
-368: [item\_config](SuperOffice%20Seven_db~s-crm7~t-item_config.md)
-369: [snapshot](SuperOffice%20Seven_db~s-crm7~t-snapshot.md)
-370: [screen\_definition](SuperOffice%20Seven_db~s-crm7~t-screen_definition.md)
-371: [screen\_definition\_action](SuperOffice%20Seven_db~s-crm7~t-screen_definition_action.md)
-372: [screen\_definition\_element](SuperOffice%20Seven_db~s-crm7~t-screen_definition_element.md)
-373: [screen\_definition\_hidden](SuperOffice%20Seven_db~s-crm7~t-screen_definition_hidden.md)
-374: [screen\_definition\_language](SuperOffice%20Seven_db~s-crm7~t-screen_definition_language.md)
-375: [screen\_chooser](SuperOffice%20Seven_db~s-crm7~t-screen_chooser.md)
-376: [scheduled\_task](SuperOffice%20Seven_db~s-crm7~t-scheduled_task.md)
-377: [ejscript](SuperOffice%20Seven_db~s-crm7~t-ejscript.md)
-378: [system\_script](SuperOffice%20Seven_db~s-crm7~t-system_script.md)
-379: [schedule](SuperOffice%20Seven_db~s-crm7~t-schedule.md)
-380: [locking](SuperOffice%20Seven_db~s-crm7~t-locking.md)
-381: [dbi\_agent](SuperOffice%20Seven_db~s-crm7~t-dbi_agent.md)
-382: [dbi\_agent\_field](SuperOffice%20Seven_db~s-crm7~t-dbi_agent_field.md)
-383: [dbi\_agent\_schedule](SuperOffice%20Seven_db~s-crm7~t-dbi_agent_schedule.md)
-384: [ejpackage](SuperOffice%20Seven_db~s-crm7~t-ejpackage.md)
-385: [ejpackage\_item](SuperOffice%20Seven_db~s-crm7~t-ejpackage_item.md)
-386: [message\_id](SuperOffice%20Seven_db~s-crm7~t-message_id.md)
-387: [ejscript\_debug](SuperOffice%20Seven_db~s-crm7~t-ejscript_debug.md)
-388: [sms](SuperOffice%20Seven_db~s-crm7~t-sms.md)
-389: [user\_candidate](SuperOffice%20Seven_db~s-crm7~t-user_candidate.md)
-390: [s\_smtp\_servers](SuperOffice%20Seven_db~s-crm7~t-s_smtp_servers.md)
-391: [ejselection](SuperOffice%20Seven_db~s-crm7~t-ejselection.md)
-392: [ejsel\_ejsel](SuperOffice%20Seven_db~s-crm7~t-ejsel_ejsel.md)
-393: [ejsel\_source\_idlist](SuperOffice%20Seven_db~s-crm7~t-ejsel_source_idlist.md)
-394: [ejsel\_source\_script](SuperOffice%20Seven_db~s-crm7~t-ejsel_source_script.md)
-395: [ejsel\_source\_xml](SuperOffice%20Seven_db~s-crm7~t-ejsel_source_xml.md)
-396: [static\_list\_ref](SuperOffice%20Seven_db~s-crm7~t-static_list_ref.md)
-397: [ejsel\_meta\_result](SuperOffice%20Seven_db~s-crm7~t-ejsel_meta_result.md)
-398: [ejsel\_result\_set](SuperOffice%20Seven_db~s-crm7~t-ejsel_result_set.md)
-399: [tree\_explorer\_entry](SuperOffice%20Seven_db~s-crm7~t-tree_explorer_entry.md)
-400: [tree\_explorer\_link](SuperOffice%20Seven_db~s-crm7~t-tree_explorer_link.md)
-401: [external\_document](SuperOffice%20Seven_db~s-crm7~t-external_document.md)
-402: [autosave](SuperOffice%20Seven_db~s-crm7~t-autosave.md)
-403: [user\_attribute](SuperOffice%20Seven_db~s-crm7~t-user_attribute.md)
-404: [notice\_frame](SuperOffice%20Seven_db~s-crm7~t-notice_frame.md)
-405: [s\_sent\_message](SuperOffice%20Seven_db~s-crm7~t-s_sent_message.md)
-406: [access\_script](SuperOffice%20Seven_db~s-crm7~t-access_script.md)
+363: [hotlist](../Tables/hotlist.md)
+364: [log\_events](../Tables/log_events.md)
+365: [log\_debug](../Tables/log_debug.md)
+366: [form\_keys](../Tables/form_keys.md)
+367: [sms\_hysteria](../Tables/sms_hysteria.md)
+368: [item\_config](../Tables/item_config.md)
+369: [snapshot](../Tables/snapshot.md)
+370: [screen\_definition](../Tables/screen_definition.md)
+371: [screen\_definition\_action](../Tables/screen_definition_action.md)
+372: [screen\_definition\_element](../Tables/screen_definition_element.md)
+373: [screen\_definition\_hidden](../Tables/screen_definition_hidden.md)
+374: [screen\_definition\_language](../Tables/screen_definition_language.md)
+375: [screen\_chooser](../Tables/screen_chooser.md)
+376: [scheduled\_task](../Tables/scheduled_task.md)
+377: [ejscript](../Tables/ejscript.md)
+378: [system\_script](../Tables/system_script.md)
+379: [schedule](../Tables/schedule.md)
+380: [locking](../Tables/locking.md)
+381: [dbi\_agent](../Tables/dbi_agent.md)
+382: [dbi\_agent\_field](../Tables/dbi_agent_field.md)
+383: [dbi\_agent\_schedule](../Tables/dbi_agent_schedule.md)
+384: [ejpackage](../Tables/ejpackage.md)
+385: [ejpackage\_item](../Tables/ejpackage_item.md)
+386: [message\_id](../Tables/message_id.md)
+387: [ejscript\_debug](../Tables/ejscript_debug.md)
+388: [sms](../Tables/sms.md)
+389: [user\_candidate](../Tables/user_candidate.md)
+390: [s\_smtp\_servers](../Tables/s_smtp_servers.md)
+391: [ejselection](../Tables/ejselection.md)
+392: [ejsel\_ejsel](../Tables/ejsel_ejsel.md)
+393: [ejsel\_source\_idlist](../Tables/ejsel_source_idlist.md)
+394: [ejsel\_source\_script](../Tables/ejsel_source_script.md)
+395: [ejsel\_source\_xml](../Tables/ejsel_source_xml.md)
+396: [static\_list\_ref](../Tables/static_list_ref.md)
+397: [ejsel\_meta\_result](../Tables/ejsel_meta_result.md)
+398: [ejsel\_result\_set](../Tables/ejsel_result_set.md)
+399: [tree\_explorer\_entry](../Tables/tree_explorer_entry.md)
+400: [tree\_explorer\_link](../Tables/tree_explorer_link.md)
+401: [external\_document](../Tables/external_document.md)
+402: [autosave](../Tables/autosave.md)
+403: [user\_attribute](../Tables/user_attribute.md)
+404: [notice\_frame](../Tables/notice_frame.md)
+405: [s\_sent\_message](../Tables/s_sent_message.md)
+406: [access\_script](../Tables/access_script.md)

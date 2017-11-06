@@ -13,13 +13,13 @@ SELECT \* FROM contact WHERE name = 'SuperOffice Corporation'
 
 This gives us a contact\_id.
 
-![SELECT \* FROM contact WHERE name = ' SuperOffice Corp'](Images/select-contact.gif)
+![SELECT \* FROM contact WHERE name = ' SuperOffice Corp'](../Images/select-contact.gif)
 
 We plug this into the next query, which gives us a list of people for that company:
 
 SELECT \* FROM person WHERE contact\_id = 81
 
-![SELECT \* FROM person WHERE contact\_id = 81](Images/select-person.gif)
+![SELECT \* FROM person WHERE contact\_id = 81](../Images/select-person.gif)
 
  
 

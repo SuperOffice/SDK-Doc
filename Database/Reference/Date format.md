@@ -25,17 +25,16 @@ One day is 60 \* 60 \* 24 = 86400
 
  
 
-**Example Visual Basic:
-**
+## Example Visual Basic:
 
-<img src="images/copycode.gif" class="copyCodeImage" />Copy Code
+```vb
     MsgBox DateDiff("s", #1/1/1970#, Now)
-
+```
  
 
 Visual Basic for Applications - Excel
 
-<img src="images/copycode.gif" class="copyCodeImage" />Copy Code
+```vb
     Sub Conv_to_SO_date()
         Dim myDate
         Dim NewDate, OldDate
@@ -77,3 +76,4 @@ Visual Basic for Applications - Excel
         Wend
 
      End Sub
+```
