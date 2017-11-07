@@ -8,9 +8,9 @@ The main tables in the system are:
 
  
 
-|                                                                   |                                                         |
+|        Table                                   |  Contains                                                |
 |-------------------------------------------------------------------|---------------------------------------------------------|
-| [Contact](../Tables/TICKET.md)                  | The companies                                           |
+| [Contact](../Tables/Contact.md)                  | The companies                                           |
 | [Person](../Tables/PERSON.md)                   | The contact persons                                     |
 | [Associate](../Tables/ASSOCIATE.md)             | The users - these are linked to contact persons         |
 | [Appointment](../Tables/APPOINTMENT.md)         | Meetings, to-do activities                              |
@@ -28,7 +28,7 @@ A source of confusion needs to be explained. The database schema was defined ea
 
 Unfortunately the user interface came up with names which do not match the table names used to generate the user interface.
 
-"Company" in the user interface   =  **Contact** table
-"Contact" in the user interface   =  **Person** table
+* "Company" in the user interface   =  **Contact** table
+* "Contact" in the user interface   =  **Person** table
 
 The [Company](../Tables/Company.md) table is used to store the id of the company that owns the license. It has nothing to do with the company display in the user interface.
