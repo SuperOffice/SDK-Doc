@@ -1,5 +1,5 @@
 <properties date="2016-05-11"
-SortOrder="3"
+SortOrder="2"
 />
 
 This section will give you an overview of the SuperOffice Database and explain the basic elements that you need to get started.

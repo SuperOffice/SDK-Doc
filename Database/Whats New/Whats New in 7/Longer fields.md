@@ -21,7 +21,9 @@ This will not make the database bigger, unless the new space is actually used. S
 
 SQL Server has a little-publicised limitation: Index nodes cannot be more than 900 bytes (even in 2008)
 A unicode string consumes 2 bytes/char
+
 A multi-field index creates nodes from the sum of all fields
+
 And – so – if name + department (which have a combined index) become more than 900 bytes of actual content, save fails
 For the most popular field combinations, we have limited the size; and it does not happen on Oracle.
 If you introduce new combined indexes as part of some optimization, bear this in mind. The 900-byte limit is there.

@@ -6,29 +6,31 @@ title: Sales management
 Database change:
 
 several new lists (MDO lists with grouplink and headinglink tables)
-[SaleTypeCat](../Tables/SaleTypeCat.md)
-[SaleType](../Tables/SaleType.md)
-[ReasonStalled](../Tables/ReasonStalled.md)
-[ReasonSold](../Tables/ReasonSold.md)
-[SaleStakeholder](../Tables/SaleStakeholder.md)
-[SaleTypeStageLink](../Tables/SaleTypeStageLink.md)
-[StakeholderRole](../Tables/StakeholderRole.md)
+
+* [SaleTypeCat](../Tables/SaleTypeCat.md)
+* [SaleType](../Tables/SaleType.md)
+* [ReasonStalled](../Tables/ReasonStalled.md)
+* [ReasonSold](../Tables/ReasonSold.md)
+* [SaleStakeholder](../Tables/SaleStakeholder.md)
+* [SaleTypeStageLink](../Tables/SaleTypeStageLink.md)
+* [StakeholderRole](../Tables/StakeholderRole.md)
 
 New tables for suggested document/appointment
-[SuggestedAppointment](../Tables/SuggestedAppointment.md)
-[SuggestedDocument](../Tables/SuggestedDocument.md)
+
+* [SuggestedAppointment](../Tables/SuggestedAppointment.md)
+* [SuggestedDocument](../Tables/SuggestedDocument.md)
 
 New fields in Sale/SaleHist
-saleType\_id
-postitText\_id
-reasonStalled\_id
-reopenDate
-nextDueDate
-nddAppointment\_id
-reasonSold\_id
-saleTypeCat\_id
 
- 
+* saleType\_id
+* postitText\_id
+* reasonStalled\_id
+* reopenDate
+* nextDueDate
+* nddAppointment\_id
+* reasonSold\_id
+* saleTypeCat\_id
+
 
 The motivation behind this is:
 
