@@ -6,7 +6,7 @@ title: Get List Of Categories
 ### Get all categories
 
 ```SQL
-select l.category\_id, l.name, l.tooltip
+select l.category_id, l.name, l.tooltip
 from Category l
 where l.deleted = 0
 order by l.rank
@@ -29,12 +29,12 @@ Filtering is done through the user's group membership.
 Some items are hidden from some groups.
 
 ```SQL
-select l.category\_id, l.name, l.rank
+select l.category_id, l.name, l.rank
 from Category l, CategoryGroupLink gl, UserGroupLink ugl
 where l.deleted = 0
-and l.category\_id = gl.category\_id
-and gl.group\_id = ugl.usergroup\_id
-and ugl.assoc\_id = &lt;my assoc\_id&gt;
+and l.category_id = gl.category_id
+and gl.group_id = ugl.usergroup_id
+and ugl.assoc_id = &lt;my assoc_id&gt;
 order by l.rank
 ```
 
@@ -51,11 +51,11 @@ Note that items that are visible to more than one group will be returned twice. 
 ### Get all items with headings, no filtering
 
 ```SQL
-select h.rank, h.name, l.name, l.category\_id, l.rank
+select h.rank, h.name, l.name, l.category_id, l.rank
 from Heading h, Category l, CategoryHeadingLink hl
 where l.deleted = 0
-and h.heading\_id = hl.heading\_id
-and l.category\_id = hl.category\_id
+and h.heading_id = hl.heading_id
+and l.category_id = hl.category_id
 order by h.rank, l.rank
 ```
  
@@ -71,14 +71,14 @@ The result is a set of heading-name pairs, ordered by heading and then the desir
 ### Filter and group under headings
 
 ```SQL
-select distinct h.rank, h.name, l.name, l.category\_id, l.rank
+select distinct h.rank, h.name, l.name, l.category_id, l.rank
 from Heading h, Category l, CategoryHeadingLink hl, CategoryGroupLink gl, UserGroupLink ugl
 where l.deleted = 0
-and h.heading\_id = hl.heading\_id
-and l.category\_id = hl.category\_id
-and l.category\_id = gl.category\_id
-and gl.group\_id = ugl.usergroup\_id
-and ugl.assoc\_id = **&lt;my assoc\_id&gt;**
+and h.heading_id = hl.heading_id
+and l.category_id = hl.category_id
+and l.category_id = gl.category_id
+and gl.group_id = ugl.usergroup_id
+and ugl.assoc_id = **&lt;my assoc_id&gt;**
 order by h.rank, l.rank
 ```
 

@@ -1,6 +1,6 @@
 A dictionary step is responsible for defining a list of schema changes and optionally importing priming data. Schema changes are actions, such as a new table, new fields in an existing table, new indexes and many more.
 
-<img src="https://community.superoffice.com/globalassets/developer-club/articles/continuousdatabase/image003.png" title="Database Model" alt="Database Model" class="image_responsive" width="175" height="169" />
+![Database Model](image003.png)
 
 Each dictionary step is uniquely identified by its **name** and **step number** combination. While the name is generally associated with a product name or feature, the step number is usually equal to an iteration. The step number is used to indicate in which order each dictionary step is applied to the database model to ensure includes all necessary changes a present and accounted for.
 
@@ -8,11 +8,11 @@ The dictionary step **description** should represent a general description of 
 
 Let’s look at an example. Suppose a vendor called Uno creates a dictionary step that adds a string field to the contact table that is to be 25 characters in length. As seen in the figure below, the initial dictionary step number to perform that action is defined as having a StepNumber set to 1. Next, suppose Uno decides to change the string field property to support 255 characters in length. The third-party must then define a new dictionary step that sets the StepNumber to 2.
 
-<img src="https://community.superoffice.com/contentassets/181b0b6feee340aeaa034cb06c275b9c/dictstep1.png" width="640" height="167" />
+![](dictstep1.png)
 
 A second example is when there are two third-party integrations that make database schema changes. In addition to the previously mentioned Uno, third-party Duo comes along and adds a field to the contact table. Duo’s dictionary step must be uniquely named and the step number is then 1.
 
-<img src="https://community.superoffice.com/contentassets/181b0b6feee340aeaa034cb06c275b9c/dictstep2.png" width="640" height="190" />
+![](dictstep2.png)
 
 The dictionary step state property is used to indicate whether this dictionary step is an “InDevelopment” or “Released” state.
 
@@ -42,16 +42,15 @@ A third-party is expected to override and implement at least one of three primar
 
 CustomPriming: performs unique priming data actions or data transformations after ImpFileNames is complete, using direct SQL statements.
 
-<img src="https://community.superoffice.com/globalassets/developer-club/articles/continuousdatabase/image006.png" width="685" height="333" />
+![](image006.png)
 
  
 
 Below is an example DictionaryStep that overrides the Structure and ImpFileNames.
 
- 
-
 CDD Example Step
-```
+
+```cs
     using SuperOffice.CD.DSL.V1.StepModel;
     using System.Collections.Generic;
     namespace SuperOffice.DevNetCddLib.DictionarySteps
@@ -95,7 +94,6 @@ CDD Example Step
         }
     }
 ```
- 
 
 Only implement the methods that have actual content, i.e. do not create empty overrides as that leads to degraded performance during upgrades.
 
@@ -105,9 +103,7 @@ The DictionaryStep is conceptually a pipeline to:
 -   Add priming data.
 -   Transform table data.
 
-<img src="https://community.superoffice.com/globalassets/developer-club/articles/continuousdatabase/image007.png" width="680" height="396" />
-
- 
+![](image007.png)
 
 While none of the methods are required, each routine presents an opportunity to make database changes. Whether physical schema changes, priming data-related, or simply data transformation in the database, actions done in the pipeline are a means to ensure an agile and evolutionary database design.
 

@@ -163,6 +163,6 @@ CDD ExecuteSelect
             return new List<string>();
     }
 ```
- 
 
 [Read the full article on DevNet](https://community.superoffice.com/en/content/content/database/continuous-database/) - it has more details than this overview.
+
