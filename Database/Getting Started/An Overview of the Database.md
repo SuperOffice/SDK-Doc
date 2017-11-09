@@ -17,7 +17,7 @@ The main objects in the system are:
 
 In the database these relationships are expressed using the following set of tables and fields.
 
-![](../Images/so-table-structure.gif)
+![Basic relationships](Images/so-table-structure.gif)
 
 This gives us the following join conditions we can use:
 
