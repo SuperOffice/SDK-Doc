@@ -1,0 +1,8 @@
+Set soDB = CreateObject("SuperOffice.Application")
+
+Set myContact = soDB.CurrentContact
+myContact.AutoSaveOnChangeIdentity = True
+myContact.AutoSaveOnFlush = True
+myContact.Name = myContact.lastname & " autosave performed"
+MsgBox "If you now move another contact or click shift+F5 the new description will be saved."
+

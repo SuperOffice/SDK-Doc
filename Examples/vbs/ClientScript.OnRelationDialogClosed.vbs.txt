@@ -1,0 +1,17 @@
+Sub OnRelationDialogClosed
+if currentrelation.comment = "" then
+	yesno = somessagebox ("You have not added a comment, do you want to phone later and check it up?", "Relation", 4)
+
+	if yesno = 2 then 
+		'User clicked Yes
+		      Set newAppnt1 = database.CreateAppointment
+      			newAppnt1.SetDefaults
+      			newAppnt1.Contact = CurrentContact
+      			newAppnt1.Person = CurrentPerson
+      			newAppnt1.task = database.GetListItemByName(67, "Phone-Out")
+      			newAppnt1.DoBy = DateAdd("d", 0, Now())
+      			newAppnt1.Description = "Missing relation comment - should there be any?"
+      			newAppnt1.Save
+	end if
+end if	
+End Sub

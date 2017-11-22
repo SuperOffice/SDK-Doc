@@ -1,0 +1,17 @@
+Dim objSO
+Dim objPM
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    If objSO.CurrentProject.Members.count > 0 then
+        set members = objso.currentproject.members
+        for each item in members
+            Set objPM = item
+            MsgBox "The first ProjectMember of the current project is: " & item.Contact.Name
+        next
+    Else
+        MsgBox "The current project has no members"
+    End if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

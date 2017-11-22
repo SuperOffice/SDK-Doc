@@ -1,0 +1,5 @@
+Sub OnDocumentEdit
+    If Not (CurrentDocument.Associate.Identity = Database.UserAssociateId) Then
+        SOMessagebox "This is not your document"
+    End If			
+End Sub

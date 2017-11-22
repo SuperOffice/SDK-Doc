@@ -1,0 +1,12 @@
+dim objso
+set objso = CreateObject("superofficedb.database")
+set objsoapp = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    objso.login "<username>", "<password>"
+    set mycontact = objso.getcontact(objsoapp.currentcontact.identity)
+    mycontact.foreignkey.set "myapplication",  "mydevice", "mykey",  "this is my foreignkey"
+    msgbox mycontact.name &  " has the following foreginkey set: " &  mycontact.foreignkey.get ("myapplication",  "mydevice", "mykey")
+else
+    msgbox "unable to connect to database"
+end if
+set objso = nothing

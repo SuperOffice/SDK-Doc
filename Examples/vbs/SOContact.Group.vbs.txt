@@ -1,0 +1,17 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+    Set myContact = objDB.GetContact(2) 'get contact with contact_id=2
+    msg = msg & "Counters: " & CStr(myContact.Counters.LastCompletedActivity(enAppointAllCounters, Nothing, enDirectionAllCounters)) & vbCrLf
+    msg = msg & "Group: " & myContact.Group.Id & vbCrLf
+    msg = msg & "Mother name: " & myContact.Mother.Name & vbCrLf
+    msg = msg & "Are all required fields filled: " & myContact.Sentry.AreAllRequiredFieldsFilled & vbCrLf
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing

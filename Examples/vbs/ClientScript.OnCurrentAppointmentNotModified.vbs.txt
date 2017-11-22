@@ -1,0 +1,5 @@
+
+Sub OnAppointmentNotModified
+	SOMessageBox "The appointment was saved, but no changes was added"
+End Sub
+

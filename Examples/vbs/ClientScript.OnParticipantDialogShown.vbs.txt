@@ -1,0 +1,6 @@
+Sub OnParticipantDialogShown
+  if currentappointment.GetNoOfParticipants > 5 then
+	SOMessagebox "There are more than 5 participants to this meeting, have you booked a big enough meeting room?"
+  end if
+	
+End Sub

@@ -1,0 +1,5 @@
+
+##SUMMARY: enIsEqual
+
+Is equal
+

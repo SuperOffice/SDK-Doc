@@ -1,0 +1,15 @@
+Dim objSO 
+Dim objTI 
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Set objTI = objSO.Database.TravelInterface
+    If objTI.ManageArea Then
+        'The Generate satellite dialog will be shown in GUI
+        MsgBox "User may generate satellites."
+    Else
+        MsgBox "The logged in user might not have the correct permissions. Check log file for error message."
+    End If
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

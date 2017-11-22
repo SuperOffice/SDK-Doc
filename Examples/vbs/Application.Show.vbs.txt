@@ -1,0 +1,9 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+    Msgbox "SuperOffice Sales & Marketing will be minimized now. Minimize ", vbInformation + vbOkOnly, "SuperCOM"
+    objSO.Show(0)
+    Msgbox "SuperOffice Sales & Marketing will be shown normal now.", vbInformation + vbOkOnly, "SuperCOM"
+    objSO.Show(1)
+    Msgbox "SuperOffice Sales & Marketing will be shown as maximize now.", vbInformation + vbOkOnly, "SuperCOM"
+    objSO.Show(2)
+set objSO = Nothing

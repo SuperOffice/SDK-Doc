@@ -1,0 +1,14 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+	Set myProjMemb = objDB.GetProjectMember(2)
+	MsgBox "Are all required fields filled: " & myProjMemb.Sentry.AreAllRequiredFieldsFilled
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing

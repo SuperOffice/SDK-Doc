@@ -1,0 +1,12 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    if objSO.CurrentContact.Urls.Exists (1) then
+        MsgBox "The current contact has registered one or more URL’s"
+    else
+        MsgBox "The current contact has no URL’s registered"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

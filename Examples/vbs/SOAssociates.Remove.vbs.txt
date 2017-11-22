@@ -1,0 +1,14 @@
+Dim objSO 
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "<USERID>", "<PASSWORD>"
+    set associates = objSO.GetAssociateList
+    msgbox "There are " & associates.count & "associates in the collection"
+    set first = associates.item(0)
+    msgbox "The first one is: " & first.fullname
+    associates.remove(0)
+    Msgbox "This associate was removed from memory"
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

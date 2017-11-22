@@ -1,0 +1,4 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+    Msgbox objSO.HWnd
+set objSO = Nothing

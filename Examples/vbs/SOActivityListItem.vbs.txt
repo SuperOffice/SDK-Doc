@@ -1,0 +1,38 @@
+dim activitylistitem
+set objso = CreateObject("superofficedb.database")
+if objso.login("<USERNAME>", "<PASSWORD>") then
+    set contacts = objso.find.contactsbyname("super")
+    set contact = contacts.getfirst
+    set activitylist = contact.getactivitylist(7)
+    set activitylistitem = activitylist.getfirst
+    while not activitylist.EOF
+    	If Not activitylistitem.Appointment Is Nothing Then
+        	msg = msg & "appointment.alarm: " & activitylistitem.appointment.alarm & vbcrlf  
+        End If
+        msg = msg & "associate.fullname: " &  activitylistitem.associate.fullname & vbcrlf  
+        msg = msg & "associatename: " &  activitylistitem.associatename & vbcrlf  
+        msg = msg & "contactname: " &  activitylistitem.contactname & vbcrlf 
+        msg = msg & "date: " &  activitylistitem.date & vbcrlf 
+        msg = msg & "description: " &  activitylistitem.description & vbcrlf 
+        if not activitylistitem.document is nothing then
+            msg = msg & "document.header: " &  activitylistitem.document.header & vbcrlf 
+        end if
+        msg = msg & "done: " &  activitylistitem.done & vbcrlf 
+        msg = msg & "iconid: " &  activitylistitem.iconid & vbcrlf
+        msg = msg & "identity: " &  activitylistitem.identity & vbcrlf 
+        msg = msg & "person.firstname & person.lastname: " &  activitylistitem.person.firstname & " " &  activitylistitem.person.lastname & vbcrlf  
+        msg = msg & "personname: " &  activitylistitem.personname & vbcrlf 
+        msg = msg & "projectname: " &  activitylistitem.projectname & vbcrlf 
+        msg = msg & "rowtype: " &  activitylistitem.rowtype & vbcrlf 
+        if not activitylistitem.sale is nothing then
+            msg = msg & "sale.amount: " &  activitylistitem.sale.amount & vbcrlf  
+        end if
+        msg = msg & "typetext: " &  activitylistitem.typetext & vbcrlf 
+        msg = msg & "******************* NEXT ***********************" & vbCrLf
+        set activitylistitem = activitylist.getnext
+    wend
+    msgbox msg,,"SuperCOM"
+else
+    msgbox "could not log on to superoffice", , "SuperCOM"
+end if
+set objso = nothing

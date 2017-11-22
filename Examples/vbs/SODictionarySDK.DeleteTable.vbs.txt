@@ -1,0 +1,11 @@
+Dim objDict
+Set objDict = CreateObject("SODictionarySDK.Dictionary.1")
+if not (objDict is nothing) then
+    objDict.SetDatabase "ODBC:<Datasouce>", "<Username>", "<Password>", "CRM5" ' user must have create table rights on the database
+    objDict.DeleteTable("My_Own_Table")        
+    objDict.CommitChanges 
+    MsgBox "My_Own_Table is deleted"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objDict = Nothing

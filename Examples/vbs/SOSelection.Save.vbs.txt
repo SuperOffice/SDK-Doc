@@ -1,0 +1,14 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = MsgBox ("There have been no programmatically changes to your current selection." & vbCrLf & "But, by pushing 'YES' this will save the changes on your current selection, are you sure?", vbInformation + vbYesNo, "SuperCOM")
+    if result = vbYes then
+        objSO.CurrentSelection.Save
+    else
+        MsgBox "The selection change were not saved.", vbInformation + vbOkOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

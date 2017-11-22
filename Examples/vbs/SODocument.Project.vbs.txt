@@ -1,0 +1,14 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Result = objSO.CurrentDocument.project.name
+    If result <> "" then
+        MsgBox "Current document project name is: " & objSO.CurrentDocument.project.name, vbInformation + vbOKOnly, "SuperCOM"
+    Else
+        MsgBox "Current document is not connected to a project", vbInformation + vbOKOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

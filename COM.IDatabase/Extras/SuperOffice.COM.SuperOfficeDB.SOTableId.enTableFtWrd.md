@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableFtWrd
+
+= 45
+

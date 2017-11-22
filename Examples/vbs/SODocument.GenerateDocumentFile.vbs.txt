@@ -1,0 +1,13 @@
+dim objso
+set objso = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    set sodoc = objso.database.createdocument
+    sodoc.setdefaults
+    sodoc.contact = objso.currentcontact
+    sodoc.header = "test of generatedocumentfile"
+    sodoc.generatedocumentfile
+    sodoc.save
+else
+    msgbox  "unable to connect to database"
+end if
+set objso = nothing

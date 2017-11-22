@@ -1,0 +1,16 @@
+Dim objSO
+Dim objPerson
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "<USERID>", "<password>"
+    set objPerson = objSO.Find.PersonsByPhone("2251")
+    set Person = objPerson.getfirst
+    while not objPerson.eof
+        item = Person.firstname & " " & Person.lastname
+        msgbox item
+        set person = objPerson.Getnext
+    wend
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

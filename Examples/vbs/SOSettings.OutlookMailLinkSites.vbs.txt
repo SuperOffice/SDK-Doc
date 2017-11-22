@@ -1,0 +1,16 @@
+Dim objSO
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "<userID>", "<password>"
+    msg = msg & "Number of Sync engine users " & objSO.Settings.SyncEngineUsers & vbcrlf
+    msg = msg & "Number of windows client users " & objSO.Settings.WindowsClientUsers & vbcrlf
+    msg = msg & "Number of total logins " & objSO.Settings.TotalLogins & vbcrlf
+    msg = msg & "Location of SuperOffice logfile " & objSO.Settings.SuperOfLogPath & vbcrlf
+    msg = msg & "Number of Outlook Mail Link sites " & objSO.Settings.OutlookMailLinkSites & vbcrlf
+    msg = msg & "Number of Notes Link sites " & objSO.Settings.NotesLinkSites & vbcrlf
+    msg = msg & "License expires " & objSO.Settings.ExpirationDate & vbcrlf
+    msgbox msg
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

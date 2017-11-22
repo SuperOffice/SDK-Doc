@@ -1,0 +1,20 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+    Set mySelection = objDB.GetSelection(6) 'get selection with selection_id=6
+    msg = msg & "Selection type: " & mySelection.Type & vbCrLf
+    msg = msg & "Number of selection criterions: " & mySelection.Criteria.Count & vbCrLf
+    msg = msg & "Group: " & mySelection.Group.Id & vbCrLf
+    msg = msg & "Include first person: " & mySelection.IncludeFirstPerson & vbCrLf
+    msg = msg & "Private to group: " & mySelection.PrivateToGroup.Text & vbCrLf
+    
+    MsgBox msg, vbInformation, "SuperCOM"
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing

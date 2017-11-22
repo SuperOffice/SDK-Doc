@@ -1,0 +1,27 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    set relation = objSO.CurrentRelation    
+    if relation.sourcetable = 5 then 'the source of the relation is a company
+        set cont = relation.sourcerecord
+        Source =  cont.name
+    else 'the source of the relation is a person, and source record would be 6
+        set pers = relation.sourcerecord
+        Source = pers.firstname & " " & pers.lastname & " from company " & pers.contact.name
+    end if
+    if relation.targettable = 5 then
+        set cont = relation.targetrecord
+        target =  cont.name
+    else
+        set pers = relation.targetrecord
+        target = pers.firstname & " " & pers.lastname & " from company " & pers.contact.name
+    end if
+        msg = Source & " " & relation.ActiveText & " " & target & vbCrLf
+        msg = msg & target & " " & relation.PassiveText & " " & source & vbCrLf & vbCrLf
+        msg = msg & "Relation type = " & cstr(relation.type)  & vbCrLf
+        msg = msg & "Relation comment = " & relation.comment & vbCrLf
+        msgbox msg,,"The current relation:"
+else
+       MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

@@ -1,0 +1,51 @@
+Dim soDB, myAppnt
+Set soDB = CreateObject("SuperOfficeDB.Database")
+enTableTask = 67
+enTablePriority = 79 
+ 
+If soDB.Login ("USERID", "PASSWORD") then
+
+	Set myAppnt = sodb.CreateAppointment
+    myAppnt.Alarm = True
+    myAppnt.AlarmOffset = 10
+    myAppnt.AllDayEvent = False
+    myAppnt.Associate = soDB.GetAssociate(soDB.UserAssociateId)
+    myAppnt.Completed = False
+    myAppnt.Contact = soDB.GetContact(soDB.OwnerContactId)
+    myAppnt.Description = "Strawberrys for all - summer pep talk"
+    myAppnt.DoBy = #6/1/2007 12:00:00 PM#
+    myAppnt.Duration = 60
+    myAppnt.FreeBusy = enFreeBusyBusy
+    myAppnt.Task = soDB.GetListItemByName(enTableTask, "Meeting (Internal)")
+    myAppnt.Priority = soDB.GetListItemByName(enTablePriority, "1 High")
+    myAppnt.Location = "Meeting room"
+    myAppnt.Private = 0 'public appointment, everyone can see
+    myAppnt.Project = soDB.GetProject(2)
+    For Each assoc In soDB.GetAssociateList
+    
+        myAppnt.AddParticipant assoc
+    
+    Next
+    
+
+    
+    If myAppnt.Sentry.AreAllRequiredFieldsFilled = True Then
+        myAppnt.Save
+        
+        msg = msg & "Appointment saved with appointment_id = " & myAppnt.Identity & vbCrLf
+        msg = msg & "Appointment is created by " & myAppnt.CreatedAssociate.FullName & vbCrLf
+        msg = msg & "and belongs to usergroup " & myAppnt.Group.Text & vbCrLf
+        If myAppnt.UpdatedDate > #1/1/1970# Then
+            msg = msg & "Appointment was last updated by: " & myAppnt.UpdatedAssociate.FullName & " at " & myAppnt.UpdatedDate
+        Else
+            msg = msg & "Appointment has never been updated"
+        End If
+        
+        MsgBox msg
+    End If
+
+
+
+Else
+    MsgBox "Unable to log in"
+End If

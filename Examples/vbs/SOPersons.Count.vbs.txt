@@ -1,0 +1,21 @@
+Set soDb = CreateObject("SuperOfficeDB.Database")
+
+isOk = soDb.Login("user, "pass")
+if isOk Then
+
+    Set persons = soDb.GetContact(20).GetPersons()
+    MsgBox "There are " & persons.Count & " registered on contact_id = 20"
+    MsgBox "Person_id 20 is found here: " & persons.exists(20)
+    For Each person In persons
+        msg = msg & person.FullName & vbCrLf
+    Next
+    MsgBox msg, vbInformation + vbOKOnly, "SuperCOM"
+else
+   MsgBox "Login failed"
+end if
+
+
+
+
+ 
+

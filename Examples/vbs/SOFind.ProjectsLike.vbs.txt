@@ -1,0 +1,15 @@
+dim objprojects
+set objso = CreateObject("superofficedb.database")
+If not (objSO is nothing) Then
+    objso.login  "<USERID>", "<password>"
+    set objprojects =  objso.find.projectslike("super")
+    set proj = objprojects.getfirst
+    while not objprojects.eof
+        item = proj.name
+        msgbox item
+        set proj = objprojects.getnext
+    wend
+else
+    msgbox "could not log in"
+end if
+set objso = nothing

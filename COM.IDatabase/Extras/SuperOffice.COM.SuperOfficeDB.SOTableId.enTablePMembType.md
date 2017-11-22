@@ -1,0 +1,5 @@
+
+##SUMMARY: enTablePMembType
+
+= 91
+

@@ -1,0 +1,28 @@
+dim objdb
+set objdb =  CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+
+    endbvariantcentral = 0
+    endbvarianttravel = 1
+    endbvariantsatellite = 2
+    endbvariantprototype = 3
+    endbvariantupdatedprototype = 4
+
+    objdb.login  "<userid>", "<password>" ' log in to the database
+
+    select  case objdb.datasourcevariant
+    case  0
+        msgbox  "this is the central database", vbinformation + vbokonly,  "supercom"
+    case  1
+        msgbox  "this is a travel database", vbinformation + vbokonly,  "supercom"
+    case  2
+        msgbox  "this is a satellite database", vbinformation + vbokonly,  "supercom"
+    case  3
+        msgbox  "this is a prototype database", vbinformation + vbokonly,  "supercom"
+    case  4
+        msgbox  "this is an updated prototype database", vbinformation + vbokonly,  "supercom"
+    end  select
+else
+    msgbox  "unable to connect to database"
+end if
+set objdb = nothing

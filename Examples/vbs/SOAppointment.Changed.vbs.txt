@@ -1,0 +1,14 @@
+Dim objSO
+dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = objSO.CurrentAppointment.Changed
+    if result = false then
+        MsgBox "Current appointment has been modified since it was loaded. ", vbInformation + vbOKOnly, "SuperCOM"   
+    else
+        msgbox "The current appointment has NOT been modified since it was loaded.", vbInformation + vbOKOnly, "SuperCOM"        
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

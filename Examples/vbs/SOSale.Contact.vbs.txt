@@ -1,0 +1,9 @@
+Dim objSO
+dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+     MsgBox "Company the Current sale is with: " & objSO.CurrentSale.Contact.Name, vbInformation + vbOKOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

@@ -1,0 +1,4 @@
+Sub OnFindContactDialogShown
+	SOMessageBOx "Find contact dialog is shown"
+	
+End Sub

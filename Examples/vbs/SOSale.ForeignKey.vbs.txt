@@ -1,0 +1,16 @@
+Dim objSO
+Set objSO = CreateObject("SuperOfficeDB.Database")
+Set objSOApp = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    objSO.Login "<userID>", "<password>"
+    if objSOApp.currentSale.Identity <> 0 then
+        set mySale = objSo.GetSale(objSOApp.CurrentSale.Identity)
+        mySale.ForeignKey.Set "MyApplication", "MyDevice", "MyKey", "This is my foreignKey"
+        MsgBox mySale.Title & " has the following foreginKey set: " & mySale.ForeignKey.Get ("MyApplication", "MyDevice", "MyKey")
+    else
+        msgbox "Mark a Sale and try again"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

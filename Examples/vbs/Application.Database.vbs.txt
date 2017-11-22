@@ -1,0 +1,15 @@
+Dim objDB
+Dim i
+Set objDB = CreateObject("SuperOffice.Application") 
+If Not (objDB is Nothing) Then
+    enDBMSCtree = 0
+    i = objDB.Database.DataSourceType
+    if i = enDBMSCtree Then
+        MsgBox "We’re running a CTree database"
+    Else
+        MsgBox "We’re running an SQL database"
+    End If
+else
+          MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

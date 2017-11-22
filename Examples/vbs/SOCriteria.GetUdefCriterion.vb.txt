@@ -1,0 +1,14 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim selection As SOSelection = db.GetSelection(26)
+    'Get the criterion based on table and field name
+    'The field name must be an exact match, remember the colon
+    Dim criterion As SOCriterion = selection.Criteria.GetUdefCriterion(EnUDefType.enUDefContact, "Creative contact:")
+    If Not criterion Is Nothing Then
+        MsgBox(criterion.Identity)
+    Else
+        MsgBox("did not find criterion")
+    End If
+Else
+    MsgBox("failed to log in")
+End If

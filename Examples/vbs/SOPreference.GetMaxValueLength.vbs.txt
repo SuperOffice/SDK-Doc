@@ -1,0 +1,16 @@
+dim objSO, objPref
+
+set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "USERNAME", "PASSWORD"
+    set  objPref = objSO.preferences
+    s  = objPref.get("filter", "daysbefore")
+    msg = "Filter settings, days before: " & s & vbCrLf
+    msg = msg & "Max key length: " & objPref.GetMaxKeyLength & vbCrLf
+    msg = msg &  "Max section length: " & objPref.GetMaxSectionLength & vbCrLf
+    msg = msg &  "Max value length: " & objPref.GetMaxValueLength & vbCrLf
+    MsgBox msg
+Else
+    msgbox "Unable to connect to database"
+end if
+set objSO = nothing

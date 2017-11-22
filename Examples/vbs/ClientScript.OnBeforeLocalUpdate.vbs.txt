@@ -1,0 +1,3 @@
+Sub OnBeforeLocalUpdate
+	SOMessageBox "Did you update your diary if you're travelling for a while?"
+End Sub

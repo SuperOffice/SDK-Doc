@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableAssociateHL
+
+= 4
+

@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableCreditedGL
+
+= 98
+

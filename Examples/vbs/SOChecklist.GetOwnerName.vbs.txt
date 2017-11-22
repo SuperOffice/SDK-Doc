@@ -1,0 +1,25 @@
+Dim objSO
+Dim objCheckList
+Dim objCheckLists
+ 
+Set objSO = CreateObject("SuperOfficeDB.Database")
+enAListAll = 15 
+a = objSO.Login("<USERID>","<PASSWORD")
+
+if a then
+    set objCheckLists = objSO.Database.GetCheckList(0, enAListAll)
+    assid = objCheckLists.AssociateId
+    MsgBox "This checklist is owned by id no. " & assid, vbInformation, "SuperCOM"
+    ownername = objchecklists.GetOwnerName
+    MsgBox "Owner (full name) of this checklist is: " & ownername, vbInformation, "SuperCOM"
+    set objCheckList = objCHeckLists.GetFirst
+    While Not objCHeckLists.EOF
+        msgbox objCHeckList.Description, vbInformation, "SuperCOM"
+        set objCHeckList = objCHeckLists.GetNext
+    wend
+    msgbox "No more checklist items in this checklist.", vbInformation, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+
+Set objSO = Nothing

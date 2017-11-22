@@ -1,0 +1,6 @@
+
+Sub OnCurrentContactNotModified
+	SOMessagebox "Current contact was saved but nothing was modified"
+End Sub
+
+

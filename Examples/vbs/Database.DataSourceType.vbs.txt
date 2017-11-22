@@ -1,0 +1,16 @@
+dim objdb
+set objdb =  CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    enDBMSMySQL = 13
+    objdb.login  "<userid>", "<password>" ' log in to the database
+    i  = objdb.datasourcetype
+
+    if i = enDBMSMySQL then
+        msgbox "we are running an sqlserver database"
+    else
+        msgbox "we are not running an sqlserver database"
+    end  if
+else
+    msgbox "unable to connect to database"
+end if
+set objso = nothing

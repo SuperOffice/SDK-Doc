@@ -1,0 +1,9 @@
+dim objso
+dim person
+dim user
+set objso  = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    msgbox "total number of intellisync users  " & objso.database.admin.totalintellisyncusers 
+else
+    msgbox  "failed to connect to the database"
+end if

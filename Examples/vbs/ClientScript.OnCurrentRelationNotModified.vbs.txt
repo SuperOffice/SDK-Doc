@@ -1,0 +1,3 @@
+Sub OnCurrentRelationNotModified
+	SOMesssagebox "Current relation was saved but there where no changes"	
+End Sub

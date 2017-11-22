@@ -1,0 +1,29 @@
+Dim objSO
+Dim Travellers
+Dim Traveller
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    a = objSO.Login("grenersen", "")
+    set Travellers = objSO.TravelInterface.GetTravellers
+    msgbox travellers.trlogmax, vbInformation + vbOkOnly, "TrLogMax"
+    Set traveller = travellers.GetFirst   
+    while not travellers.EOF
+        msgbox traveller.AreaId, vbinformation + vbOkOnly, "AreaID"
+        msgbox traveller.AreaName, vbinformation + vbOkOnly, "AreaName"
+        msgbox traveller.AsyncEnabled, vbinformation + vbOkOnly, "AsyncEnabled"
+        msgbox traveller.DBVariant, vbinformation + vbOkOnly, "DBVariant"
+        msgbox traveller.EncryptionVariant, vbinformation + vbOkOnly, "EncryptionVariant"
+        msgbox traveller.ID, vbinformation + vbOkOnly, "ID"
+        msgbox traveller.LastReceivedDate, vbinformation + vbOkOnly, "LastReceivedDate"
+        msgbox traveller.LastReceivedLog, vbinformation + vbOkOnly, "LastReceivedLog"
+        msgbox traveller.LastReceivedNum, vbinformation + vbOkOnly, "LastReceivedNum"
+        msgbox traveller.LastSentDate, vbinformation + vbOkOnly, "LastSentDate"
+        msgbox traveller.LastSentLog, vbinformation + vbOkOnly, "LastSentLog"
+        msgbox traveller.LastSentNum, vbinformation + vbOkOnly, "LastSentNum"
+        msgbox traveller.Name, vbinformation + vbOkOnly, "Name"
+        set Traveller =travellers.getNext
+    wend
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

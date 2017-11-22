@@ -1,0 +1,33 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application") 
+If not (objSO is nothing) Then
+    Select case objSO.CurrentAppointment.Status
+    Case 0
+        MsgBox "Current appointment is a post-it", vbInformation + vbOKOnly, "SuperCOM"
+    Case 1
+        MsgBox "Current appointment is not started", vbInformation + vbOKOnly, "SuperCOM"
+    Case 2
+        MsgBox "Current appointment is started", vbInformation + vbOKOnly, "SuperCOM"
+    Case 3
+        MsgBox "Current appointment is Completed", vbInformation + vbOKOnly, "SuperCOM"
+    Case 4
+        MsgBox "Current appointment is hidden", vbInformation + vbOKOnly, "SuperCOM"
+    Case 5
+        MsgBox "Current appointment is a booking", vbInformation + vbOKOnly, "SuperCOM"
+    Case 6
+        MsgBox "Current appointment is a booking that has been moved.", vbInformation + vbOKOnly, "SuperCOM"
+    Case 7
+        MsgBox "Current appointment is a booking. You have seen the booking, but not declined or accepted it.", vbInformation + vbOKOnly, "SuperCOM"
+    Case 8
+        MsgBox "Current appointment is a booking. The booking has been moved and you have seen the change, but not declined or accepted it.", vbInformation + vbOKOnly, "SuperCOM"
+    Case 9
+        MsgBox "Current appointment is a booking. You have declined the booking.", vbInformation + vbOKOnly, "SuperCOM"
+    Case 10
+        MsgBox "Current appointment is a booking. Status of 'child' appointment whose 'mother' has been deleted (the meeting is cancelled).", vbInformation + vbOKOnly, "SuperCOM"         
+    Case else
+        MsgBox "This status must be new, I have no information regarding this appointment status", vbInformation + vbOKOnly, "SuperCOM"
+    end select
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

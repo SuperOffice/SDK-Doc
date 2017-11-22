@@ -1,0 +1,11 @@
+dim objso
+dim obproj
+set objso =  CreateObject("superofficedb.database")
+If not (objSO is nothing) Then
+    objso.login  "<userid>", "<password>"
+    set  objproj = objso.getproject (7)
+    msgbox  "project name = " & objproj.name
+else
+    msgbox  "unable to connect to database"
+end if
+set objso = nothing

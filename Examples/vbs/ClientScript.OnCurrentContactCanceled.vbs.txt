@@ -1,0 +1,3 @@
+Sub OnCurrentContactCanceled
+	SOMessageBox "Current contact changes was canceled"
+End Sub

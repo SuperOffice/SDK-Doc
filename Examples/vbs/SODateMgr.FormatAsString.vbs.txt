@@ -1,0 +1,12 @@
+set resmgr = CreateObject("SuperOffice.ResMgr")
+set datemgr = CreateObject("SuperOffice.DateMgr")
+
+l = now
+
+lcid = resmgr.GetLCIDForLanguageCode( "CZ" )
+msg = msg & "Date:" & datemgr.FormatAsDateString( lcid, l, 1 ) & chr(10)
+msg = msg & "Timestring:" & datemgr.FormatAsTimeString( lcid, l, 1 ) & chr(10)
+msg = msg & "Datestring:" & datemgr.FormatAsString( lcid, l, "MM dd yyyy" ) & chr(10)
+
+ 
+msgbox msg

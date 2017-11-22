@@ -1,0 +1,12 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    if objSO.CurrentContact.Emails.Empty then
+        MsgBox "The current contact has no email addresses"
+    else
+        MsgBox "The current contact has one or more email addresses"
+    End if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

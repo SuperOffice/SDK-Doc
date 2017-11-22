@@ -1,0 +1,10 @@
+sub OnCurrentSaleStatusChanged
+' add a follow up
+	set soApnt = database.createappointment
+	soApnt.SetDefaults
+	soApnt.contact = currentcontact
+      	soApnt.task = database.GetListItemByName(67, "Sale followup")
+      	soApnt.DoBy = DateAdd("d", 1, Now())
+      	soApnt.Description = "A sale status was changed yesterday, do you need to follow it up today?"
+      	soApnt.Save
+end sub

@@ -1,0 +1,21 @@
+Dim objdb
+Dim objdoc
+set objdb = CreateObject("superofficedb.database")
+isOk = objdb.login( "<userid>", "<password>" ) ' log in to the database
+If isOk Then
+    set objdoc = objdb.CreateDocument
+    objdoc.SetDefaults()
+    objdoc.Contact = objdb.GetContact(3)
+    objdoc.Person = objdb.GetPerson(7)
+    objdoc.Description = "My Document"
+    objdoc.Done = Now
+    objdoc.Template = objdb.GetListItem(130, 2)
+    objdoc.Header = "My Letter"
+    objdoc.GenerateDocumentFile
+    objdoc.Save
+    MsgBox(objdoc.FullPath)
+Else
+    MsgBox("unable to connect to database")
+End If
+set objdoc = Nothing
+set objdb = Nothing

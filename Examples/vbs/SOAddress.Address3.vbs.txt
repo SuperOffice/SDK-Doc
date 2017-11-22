@@ -1,0 +1,9 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application") 
+If not (objSO is nothing) Then 
+    MsgBox "Current contact street addressline 3: " & objSO.Currentcontact.StreetAddress.Address1, vbInformation + vbOKOnly, "SuperCOM"
+    MsgBox "Current contact postal addressline 3: " & objSO.CurrentContact.Postaladdress.Address1, vbInformation + vbOKOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

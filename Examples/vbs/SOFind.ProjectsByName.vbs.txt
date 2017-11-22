@@ -1,0 +1,16 @@
+Dim objSO
+Dim objProjects
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "<USERID>", "<password>"
+    set objProjects = objSO.Find.ProjectsByName("Super")
+    set proj = objProjects.getfirst
+    while not objProjects.eof
+        item = proj.name
+        msgbox item
+        set proj = objProjects.Getnext
+    wend
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

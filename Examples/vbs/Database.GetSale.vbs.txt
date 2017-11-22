@@ -1,0 +1,11 @@
+dim objso
+dim objsale
+set objso =  CreateObject("superofficedb.database")
+If not (objSO is nothing) Then
+    objso.login  "<userid>", "<password>"
+    set  objsale = objso.getsale(2)
+    msgbox  "sale with sale_id = 2: " & objsale.saletext & " Amount: " & objsale.amount
+else
+    msgbox  "unable to connect to database"
+end if
+set objso = nothing

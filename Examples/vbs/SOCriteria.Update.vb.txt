@@ -1,0 +1,12 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim selection As SOSelection = db.GetSelection(25)
+    Dim criterion As SOCriterion = selection.Criteria.GetCriterion("contact.name")
+    criterion.Operator = EnCriterionOperator.enIsEqual
+
+    selection.Criteria.Update(criterion)
+    selection.Save()
+    MsgBox("criterion updated")
+Else
+    MsgBox("failed to log in")
+End If

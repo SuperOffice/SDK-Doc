@@ -1,0 +1,20 @@
+Dim objSO 
+Dim contact
+Dim contacts
+Dim activitylist
+Dim activitylistitem
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If objSO.Login("<USERNAME>", "<PASSWORD>") Then
+    Set contacts = objSO.Find.ContactsByName("Super")
+    Set contact = contacts.GetFirst
+    Set activitylist = contact.GetActivityList(7)
+    Set activitylistitem = activitylist.GetFirst
+    While Not activitylist.EOF
+        MsgBox activitylistitem.Person.FirstName & " " & activitylistitem.Person.LastName, vbInformation + vbOkOnly, "Person.FirstName & Person.LastName"
+        Set activitylistitem = activitylist.GetNext
+    Wend
+    msgbox "End of activitylist", vbInformation + vbOkOnly, "SuperCOM"
+Else
+    MsgBox "Could not log on to SuperOffice", vbInformation + vbOkOnly, "SuperCOM"
+End If
+Set objSO = Nothing

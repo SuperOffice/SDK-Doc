@@ -1,0 +1,18 @@
+Dim objSO
+Dim result
+Dim id
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    id = objSO.CurrentProject.Identity
+    objSO.CurrentProject.Description = "This text been changed"
+    result = MsgBox ("The text of the current project has been changed, do you want to save these changes?", vbInformation + vbYesNo, "SuperCOM")
+    if result = vbYes then
+        objSO.CurrentProject.ChangeIdentity(id)
+    else
+        objSO.CurrentProject.CancelChanges()
+        msgbox "The project changes were not saved", vbInformation + vbOkOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

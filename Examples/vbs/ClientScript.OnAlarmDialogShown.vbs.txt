@@ -1,0 +1,3 @@
+Sub OnAlarmDialogShown
+	SOMessageBox "Alarm dialog was shown"
+End Sub

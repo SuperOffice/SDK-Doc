@@ -1,0 +1,8 @@
+dim objso
+set objso = CreateObject("superoffice.application")
+If not (objSO is nothing) Then 
+    msgbox "current document full path: " & objso.currentdocument.fullpath, vbinformation + vbokonly, "supercom"
+else
+    msgbox "unable to connect"
+end if
+set objso = nothing

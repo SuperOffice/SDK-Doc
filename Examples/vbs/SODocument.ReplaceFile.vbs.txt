@@ -1,0 +1,24 @@
+Dim objDB, objApp, soDoc
+Set objDB = CreateObject("SuperOfficeDB.Database")
+Set objApp = CreateObject("SuperOffice.Application")
+
+objDB.Login objApp.Database.Username, objApp.Database.Password
+Set soDoc = objDB.CreateDocument
+soDoc.SetDefaults
+soDoc.Contact = objDB.GetContact(2)
+soDoc.Header = "Added though SuperCOM"
+soDoc.Save
+
+objApp.database.Refresh
+objApp.SetContext 2, 0, 0
+MsgBox "Check for the added document with header Added through SuperCOM, try to open." & vbCrLf & "It fails since we have not yet created a document file."
+
+soDoc.ReplaceFile "c:\test.doc", False
+soDoc.Save
+objApp.database.Refresh
+MsgBox "Now try to open the file"
+
+soDoc.ReplaceFile "c:\test2.doc", False
+soDoc.Save
+objApp.database.Refresh
+MsgBox "Now try to open the file, verify that the text is replaced."

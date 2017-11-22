@@ -1,0 +1,14 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = objSO.CurrentSale.Person.Identity      
+    if result = 0 then
+        msgbox "The current sale does not have a contact person!", vbInformation + vbOkOnly, "SuperCOM"
+    else
+        msgbox "Current sale  is with: " & objSO.CurrentSale.Person.FirstName & " " &         objSO.CurrentSale.Person.LastName, vbInformation + vbOKOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

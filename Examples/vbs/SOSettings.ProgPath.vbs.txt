@@ -1,0 +1,8 @@
+Dim objSO
+Set objSO = CreateObject("SuperOfficeDB.Database")
+if objSO.login ("<userID>", "<password>") = True then            
+    msgbox objSO.settings.ProgPath
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

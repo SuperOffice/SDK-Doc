@@ -1,0 +1,11 @@
+dim objdb
+set objdb  = CreateObject("superofficedb.database")
+entablecntry = 19 ' vb would  understand the enumeration, but vbs doesn't.
+isok = objdb.login("jr","")
+'isok = objdb.login("<username>","<password>")
+if isok  then
+    set item = objdb.getlistitem(entablecntry , 578)  ' country norway
+    msgbox item.table
+else
+    msgbox "could  not login"
+end if

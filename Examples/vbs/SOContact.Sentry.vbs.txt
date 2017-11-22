@@ -1,0 +1,26 @@
+Dim soDB, myCont
+Set soDB = CreateObject("SuperOfficeDB.Database")
+enTableCntry=19
+If not (soDB is nothing) Then
+
+    soDB.Login "MHR", "MHR"
+
+    Set myCont = soDB.CreateContact
+    myCont.SetDefaults
+    myCont.Name = "Rent a light"
+    myCont.PostalAddress.Address1 = "Light avenue 1"
+    myCont.PostalAddress.City = "Lightville"
+    myCont.PostalAddress.ZipCode = "0234"
+    myCont.Urls.Add "www.rent-a-light.com",""
+    myCont.Phones.Add "123456789", ""
+    myCont.Country = soDB.GetListItem(enTableCntry, soDB.OwnerCountryId )
+    
+    
+   If myCont.Sentry.AreAllRequiredFieldsFilled Then
+        myCont.Save
+    End If
+
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

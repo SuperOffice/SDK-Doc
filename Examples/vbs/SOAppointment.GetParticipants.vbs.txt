@@ -1,0 +1,15 @@
+dim db
+dim assoclist, assoc, appnt
+Set db = CreateObject("SuperOfficedb.Database")
+if db.login("<username>","<password>") then	
+    set appnt = db.GetAppointment(442)
+    set assoclist = appnt.GetParticipants( 1 )	'enPartTypeAssociate
+	
+    for each assoc in assoclist
+	appnt.RemoveParticipant( assoc )
+    next
+    appnt.Save
+else
+    MsgBox "Could not log on"
+end if
+Set objSO = Nothing

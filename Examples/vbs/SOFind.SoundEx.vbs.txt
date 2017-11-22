@@ -1,0 +1,11 @@
+Dim objSO
+Dim objSound
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "<USERID>", "<password>"
+    objSound = objSO.Find.SoundEx("SuperOffice")
+    msgbox "The SoundEx for SuperOffice is: " & objsound
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing  

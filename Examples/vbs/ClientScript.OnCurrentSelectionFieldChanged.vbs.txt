@@ -1,0 +1,5 @@
+Sub OnCurrentSelectionFieldChanged(fieldname)
+	if fieldname = "selection.searchCat_id" then
+		SOMessageBox "The seleciton type was changed"
+	end if
+End Sub

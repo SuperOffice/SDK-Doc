@@ -1,0 +1,5 @@
+Sub OnSelectionMailmergeDocument
+
+	SOMessageBox "Perform a mail merge was clicked on selection task panel"
+	
+End Sub

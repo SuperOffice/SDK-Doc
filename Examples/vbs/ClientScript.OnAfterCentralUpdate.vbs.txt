@@ -1,0 +1,20 @@
+Sub OnAfterCentralUpdate(assocID)
+	if assocID = 2 then
+	Set myContacts = Database.Find.ContactsByName(Database.GetAssociate(Database.UserAssociateId).FullName & " workday")
+	set myContact = myContacts.GetFirst
+	If myContacts.EOF Then
+	    'No contact exist, create it.
+	    Set myContact = Database.CreateContact
+	    myContact.SetDefaults
+	    myContact.Name = Database.GetAssociate(Database.UserAssociateId).FullName & " workday"
+	    myContact.Save
+	End If
+
+	Set soApnt = Database.CreateAppointment
+	soApnt.SetDefaults
+	soApnt.Contact = myContact
+	soApnt.Description = Now() & ": Central update performed."
+	soApnt.Save	
+	SOMessageBox "Welcome home!", "Central update", 2
+	end if
+End Sub

@@ -1,0 +1,5 @@
+
+##SUMMARY: enTablePersIntGL
+
+= 74
+

@@ -1,0 +1,13 @@
+Dim soDB, myStatusMon
+Set soDB = CreateObject("SuperOfficeDB.Database")
+
+If not (soDB is nothing) Then
+
+	soDB.Login "USERNAME", "PASSWORD"
+	Set myStatusMon = soDB.Admin.GetStatusMonitor(1)
+	MsgBox "Statusmonitor with statusdef_id = 1 is named " & myStatusMon.Name
+
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

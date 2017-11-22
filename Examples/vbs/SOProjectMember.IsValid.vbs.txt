@@ -1,0 +1,18 @@
+Dim objSO
+Dim objProjMemb
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "<userID>", "<password>"
+    Set objProjMemb = objSO.GetProjectMember(2)
+    'Remove the ' to load the projectmember to buffer, and this objProjMemb will be valid. 
+    'test = objProjMemb.Person.Firstname
+       
+    if objProjMemb.Isvalid = true then
+        MsgBox "Projectmember with projectmember_id=2: " & objProjMemb.Person.FirstName
+    else
+        msgbox "There is no projectmember in the buffer with projectmember _id=2"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

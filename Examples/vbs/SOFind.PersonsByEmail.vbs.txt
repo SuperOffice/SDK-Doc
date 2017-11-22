@@ -1,0 +1,16 @@
+dim objso
+set objso = CreateObject("superofficedb.database")
+If not (objSO is nothing) Then
+    objso.login  "<USERID>", "<password>"
+    set  objperson = objso.find.personsbyemail("sdk@superoffice.com")
+    set  person = objperson.getfirst
+    while  not objperson.eof
+        item = person.firstname &  " " & person.lastname
+        msgbox item
+        set person = objperson.getnext
+    wend
+    msgbox "thats  all..."
+else
+    msgbox  "could not log in"
+end if
+set objso = nothing

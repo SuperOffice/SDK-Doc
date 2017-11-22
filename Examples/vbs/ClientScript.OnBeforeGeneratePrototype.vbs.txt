@@ -1,0 +1,5 @@
+Sub OnBeforeGeneratePrototype
+    If Time$ > "15:00" And Time$ < "17:30" Then
+        SOMessageBox "Do you really want to start generating a new prototyp now, it takes time and the users will start going home soon?"
+    End If
+End Sub

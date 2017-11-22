@@ -1,0 +1,6 @@
+Sub OnCurrentPersonSaved
+	if currentcontact.identity = database.ownercontactid then
+		SOMessageBox "This person was saved on the owner contact, did you change an associate?"
+	end if
+	
+End Sub

@@ -1,0 +1,4 @@
+Sub OnCurrentAppointmentCreated
+	SOMessageBox "A new appointment has been created"
+End Sub
+

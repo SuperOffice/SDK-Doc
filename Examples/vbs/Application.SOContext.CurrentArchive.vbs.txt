@@ -1,0 +1,42 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+Set objCtx = objSO.Context
+panel = objCtx.CurrentArchive
+ 
+enArchiveNone = 0
+enArchivePerson = 1
+enArchiveRelations = 2
+enArchiveProjects = 3
+enArchiveActivities = 4
+enArchiveProjMem = 5
+enArchiveProjActivities = 6
+enArchiveCustom = 7
+enArchiveMax = 8
+ 
+if panel = enArchiveNone then        
+    msgbox "No archive active"
+end if
+if panel = enArchivePerson then      
+    msgbox "Person archive"
+end if
+if panel = enArchiveRelations then   
+    msgbox "Relations archive"
+end if
+if panel = enArchiveProjects then    
+    msgbox "Projects archive"
+end if
+if panel = enArchiveActivities then   
+    msgbox "Activities archive"
+end if
+if panel = enArchiveProjMem then   
+    msgbox "Project members archive"
+end if
+if panel = enArchiveProjActivities then       
+    msgbox "Project activities archive"
+end if
+if panel = enArchiveCustom then    
+    msgbox "Custom archive – does not work in CRM 5 Release 5.5"
+end if
+if panel = enArchiveMax then         
+    msgbox "Upper boundary value"
+end if

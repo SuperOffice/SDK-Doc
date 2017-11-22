@@ -1,0 +1,25 @@
+Dim soDB, myRole, myCopyFromRole
+Set soDB = CreateObject("SuperOfficeDB.Database")
+
+If not (soDB is nothing) Then
+
+	soDB.Login "USERNAME", "PASSWORD"
+	Set myRoles = soDB.Admin.GetRoles(enRoleTypeEmployee)
+	For Each myRole In myRoles
+	    If myRole.Name = "User level 2" Then
+	        Set myCopyFromRole = myRole
+	        Exit For
+	    End If
+	Next
+    
+
+	Set myRole = soDB.Admin.CreateRole(enRoleTypeEmployee, myCopyFromRole)
+	myRole.AddFunctionRight soDB.Admin.GetFunctionRight("hide-project")
+	myRole.RemoveFunctionRight soDB.Admin.GetFunctionRight("allow-bulk-copy-members")
+	myRole.Name = "Update level 2"
+	myRole.Description = myRole.Description & " Same rights as User level 2 but not able to see project and copy selections."
+	myRole.Save
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

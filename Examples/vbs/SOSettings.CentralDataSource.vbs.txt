@@ -1,0 +1,10 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Set objSettings = objSO.Database.Settings
+    MsgBox "Central data source: " & objSettings.CentralDataSource , vbInformation + vbOkOnly, "SuperCOM" 
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

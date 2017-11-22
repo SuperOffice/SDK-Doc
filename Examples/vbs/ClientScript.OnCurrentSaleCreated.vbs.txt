@@ -1,0 +1,11 @@
+sub oncurrentsalecreated
+'we create a followup to call the customer two days after a sale is registered
+      Set newAppnt1 = database.CreateAppointment
+      newAppnt1.SetDefaults
+      newAppnt1.Contact = Currentsale.Contact
+      newAppnt1.Person = Currentsale.Person
+      newAppnt1.task = database.GetListItemByName(67, "Phone-Out")
+      newAppnt1.DoBy = DateAdd("d", 2, Now())
+      newAppnt1.Description = "We sent you a proposal two days ago, did you take a look at it...."
+      newAppnt1.Save
+end sub

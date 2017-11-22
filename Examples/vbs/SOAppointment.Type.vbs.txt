@@ -1,0 +1,25 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Select case objSO.CurrentAppointment.Type
+    Case 1
+        MsgBox "Current appointment is shown in Diary", vbInformation + vbOKOnly, "SuperCOM"
+    Case 2
+        MsgBox "Current appointment is shown in Checklist", vbInformation + vbOKOnly, "SuperCOM"
+    Case 3
+        MsgBox "Current appointment is shown as a 'Post-it'", vbInformation + vbOKOnly, "SuperCOM"
+    Case 4
+        MsgBox "Current appointment is an incoming document", vbInformation + vbOKOnly, "SuperCOM"
+    Case 5
+        MsgBox "Current appointment is an outgoing document", vbInformation + vbOKOnly, "SuperCOM"
+    Case 6
+        MsgBox "Current appointment is a booking, shown in Diary", vbInformation + vbOKOnly, "SuperCOM"
+    Case 7
+        MsgBox "Current appointment is a booking, shown in Checklist", vbInformation + vbOKOnly, "SuperCOM"
+    Case else
+        MsgBox "This type must be new, I have no information regarding this type of appointment", vbInformation + vbOKOnly, "SuperCOM"
+    end select
+else
+    MsgBox "Unable to connect to database"
+end if 
+Set objSO = Nothing

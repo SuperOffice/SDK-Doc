@@ -1,0 +1,28 @@
+dim objso
+set objso = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    set sorelations = objso.currentcontact.getrelations
+    set relation = sorelations.getfirst
+    while not sorelations.eof
+        if relation.sourcetable = 5 then 'the source of the relation  is a company
+            set cont = relation.sourcerecord
+            source = cont.name
+        else 'the  source of the relation is a person, and source record would be 6
+            set pers = relation.sourcerecord
+            source = pers.firstname  & " " & pers.lastname & " from company " & pers.contact.name
+        end if
+        if relation.targettable = 5 then
+            set cont = relation.targetrecord
+            target = cont.name
+        else
+            set pers = relation.targetrecord
+            target = pers.firstname & " " & pers.lastname & " from company " & pers.contact.name
+        end if
+        msg = source & " " & relation.activetext  & " " & target & vbcrlf
+        msgbox  msg,,"relations:"
+        set relation = sorelations.getnext
+    wend
+else
+    msgbox  "unable to connect to database"
+end if
+set objso  = nothing

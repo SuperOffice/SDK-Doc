@@ -1,0 +1,17 @@
+Dim objSO
+Dim objSale
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "<userID>", "<password>"
+    Set objSale = objSO.GetSale(2)
+    'Remove the ' to load the Sale to buffer, and this objSale will be valid. 
+    'test = objSale.SaleText
+          
+    if objSale.Isvalid = true then
+        MsgBox "Sale with sale_id=2: " & objSale.Saletext
+    else
+        msgbox "There is no sale in buffer with sale_id=2"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if

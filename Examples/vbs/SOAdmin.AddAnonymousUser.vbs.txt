@@ -1,0 +1,38 @@
+dim objSO
+dim person
+dim user
+set objSO = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    'we  need a person to add as a user, this will create it and add it as a contact  person on the database owner.
+    set  person = objso.database.createperson
+    person.firstname = "hugo"
+    person.lastname = "super"
+    person.contact = objso.database.getcontact(objso.database.systemownercontactid)
+    person.save
+   
+    ' create a user with login name "hugo" and  password "super"
+    set user = objso.database.admin.adduser(person)
+    user.isasynchenabled = true
+    user.isexternalusersadminenabled = true
+    user.isintellisyncenabled = true
+    user.isloginenabled = true
+    user.isnetserverloginenabled = true
+    user.isprivateappntenabled = true
+    user.isreportsdkenabled = true
+    user.issqlauth = true
+    user.istravelenabled = true
+    user.iswebloginenabled = true
+    user.iswinloginenabled = true
+    user.loginname = "hugo"
+    user.password = "super"
+    user.type = enassoctypelogin
+    Set myRoles = objSO.Database.Admin.GetRoles(enRoleTypeEmployee)
+    For Each myRole In myRoles
+        If myRole.Name = "User level 2" Then
+            Exit For
+        End If
+    Next
+    user.Role = myRole
+    user.save
+    msgbox "new user added  with associate_id = " & user.associateid
+end if

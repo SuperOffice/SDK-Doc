@@ -1,0 +1,17 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim selection As SOSelection = db.GetSelection(26)
+    Dim criterion As SOCriterion = selection.Criteria.NewCriterion("contact.name", EnCriterionOperator.enBeginsWith)
+    criterion.Values.AddString("super")
+    selection.Criteria.Add(criterion)
+
+    Dim nextCriterion As SOCriterion = selection.Criteria.NewCriterion("contact.updated", EnCriterionOperator.enDateIsEqual)
+    Dim myDate As New Date(2005, 8, 24)
+    nextCriterion.Values.AddDate(myDate)
+    selection.Criteria.Add(nextCriterion)
+
+    selection.Save()
+    MsgBox("criterion added")
+Else
+    MsgBox("failed to log in")
+End If

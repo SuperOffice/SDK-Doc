@@ -1,0 +1,18 @@
+dim objdb
+set objdb = CreateObject("superofficedb.database")
+if not (objdb is nothing) then
+    objdb.login "<username>",  "<password>" ' log in  to the database
+    set person = objso.database.getperson(2)
+    if person.isassociate  = true then
+        set user = objso.admin.getuserforperson(person)
+        msg = msg  & "is the user travelling? " & user.isontravel  & vbcrlf
+        msg = msg  & "may we edit login name " & user.caneditloginname  & vbcrlf
+        msg = msg  & "is this current user? " & user.iscurrentuser  & vbcrlf
+        msgbox msg
+    else
+        msgbox "there where no user person_id  = 2 in this database"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

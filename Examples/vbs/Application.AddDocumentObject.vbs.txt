@@ -1,0 +1,14 @@
+Dim objSO
+Dim objDoc
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then       
+    'Add to current contact
+    Set objDoc = objSO.database.CreateDocument
+    objDoc.SetDefaults
+    ObjDoc.Contact = objSO.CurrentContact
+    objSO.AddDocumentObject "C:\myfile.doc", "False", objDoc
+    MsgBox "Document added."
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

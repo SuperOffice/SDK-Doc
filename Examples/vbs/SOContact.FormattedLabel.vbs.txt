@@ -1,0 +1,8 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then        
+    MsgBox "Current contact formatted label is: " & vbCrLf & objSO.CurrentContact.FormattedLabel, vbInformation + vbOKOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect"
+end if
+Set objSO = Nothing

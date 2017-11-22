@@ -1,0 +1,8 @@
+set numMgr = CreateObject("SuperOffice.NumericMgr")
+
+msg = msg & numMgr.FormatDoubleString(1043, "102030") & vbCrLf
+msg = msg & CStr(numMgr.ParseStringToDouble(1043, "123.23")) & vbCrLf
+msg = msg & CStr(numMgr.ParseStringToDouble(1043, "123,23")) & vbCrLf
+msg = msg & CStr(numMgr.ParseStringToDouble(1043, "123 23")) & vbCrLf
+
+msgbox msg,,"Local ID"

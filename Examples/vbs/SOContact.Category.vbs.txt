@@ -1,0 +1,25 @@
+Dim soDB, myContact
+Set soDB = CreateObject("SuperOfficeDB.Database")
+enTableCntry = 19
+enTableBusiness =  61
+enTableCategory = 64
+
+ 
+If soDB.Login ("USERNAME", "PASSWORD") then
+
+Set myContact = sodb.CreateContact
+myContact.Name = "The dress company"
+myContact.Department = "Eveningdresses"
+myContact.Associate = sodb.GetAssociate(sodb.UserAssociateId)
+myContact.Business = sodb.GetListItemByName(enTableBusiness, "Customer")
+myContact.Category = sodb.GetListItem(enTableCategory, 2)
+myContact.Country = sodb.GetListItemByName(enTableCntry, "Norway")
+myContact.Number1 = "TheDress"
+myContact.Number2 = "12033"
+myContact.Nomailing = True
+myContact.Xstop = True
+myContact.Save
+
+Else
+	MsgBox "Unable to log in"
+End If

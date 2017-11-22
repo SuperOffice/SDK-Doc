@@ -1,0 +1,9 @@
+Dim soDB, myAppnt
+Set soDB = CreateObject("SuperOffice.Application")
+
+Set myAppnt = soDB.CurrentAppointment
+myAppnt.AutoSaveOnChangeIdentity = True
+myAppnt.AutoSaveOnFlush = True
+myAppnt.Description = myAppnt.Description & " autosave performed"
+MsgBox "If you now move another appointment or click shift+F5 the new description will be saved."
+

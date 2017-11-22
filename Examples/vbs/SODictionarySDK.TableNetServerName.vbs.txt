@@ -1,0 +1,23 @@
+Dim objDict
+Set objDict = CreateObject("SODictionarySDK.Dictionary.1")
+if not (objDict is nothing) then
+    objDict.SetDatabase "ODBC:<Datasouce>", "<Username>", "<Password>", "CRM5" ' user must have create table rights on the database
+    Set myTable = objDict.CreateTable("My_Own_Table")
+    myTable.Description = "This table, called My_Own_Table is used as an SDK example. It has some fields, and is available from the import system in SOAdmin"
+    myTable.NetServerName = "My_Own_Table in NetServer"
+   
+    Set fText = myTable.CreateField("My_Text", 2, 30)
+    fText.Description = "My_Text fields description seen in NetServer. This is a short text field"
+    fText.NetServerName = "My_Text field in NetServer"
+    fText.SetFlags True, True, False
+    fText.AddImportName 1033, "My_Text"
+
+    objDict.CommitChanges
+    MsgBox "Table 'My_Own_Table' created"          
+else
+    MsgBox "Unable to connect to database"
+end if
+
+ 
+
+Set objDict = Nothing

@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableCredited
+
+= 97
+

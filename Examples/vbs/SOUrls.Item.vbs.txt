@@ -1,0 +1,13 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    If objSO.CurrentContact.Urls.Exists(1) then
+        Set objURL = objSO.CurrentContact.Urls.Item(1)
+        MsgBox "The first URL of the current contact is: " & objURL.UrlAddress
+    Else
+        MsgBox "The current contact has no URL’s"
+    End if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

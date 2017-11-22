@@ -1,0 +1,6 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+    Msgbox "Find document dialog will be shown now, MultiSelect is False. ", vbInformation + vbOkOnly, "SuperCOM"
+    objSO.ShowFindDocumentDlg False, True
+set objSO = Nothing
+

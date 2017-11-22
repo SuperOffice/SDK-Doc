@@ -1,0 +1,16 @@
+Dim objSO
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "<UserID>", "<password>"
+    set cont = objSO.GetContact(2)
+    set urls = cont.urls
+    for each url in urls
+        item = item & "Urls rank: " & url.rank & " "
+        item = item & "Urls id: " & url.id & " "
+        item = item & "Urls urlid: " & url.urlid & vbCrLf
+    next
+    MsgBox item, vbInformation + vbOKOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

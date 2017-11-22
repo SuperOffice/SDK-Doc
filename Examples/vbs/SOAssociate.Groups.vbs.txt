@@ -1,0 +1,18 @@
+Dim soDB, myAssoc
+Set soDB = CreateObject("SuperOfficeDB.Database")
+ 
+If soDB.Login ("USERNAME", "PASSWORD") then
+
+	Set myAssoc = sodb.GetAssociate(sodb.UserAssociateId)
+
+	msg = msg & "myAssoc.FullName: " & myAssoc.FullName & vbCrLfmsg = msg & myAssoc.Groups.Count & " usergroups:" & vbCrLf
+   	For Each Item In myAssoc.Groups
+       		msg = msg & Item.Text & vbCrLf
+   	Next
+   	MsgBox msg
+	
+Else
+	MsgBox "Unable to log in"
+End If
+
+

@@ -1,0 +1,4 @@
+Sub OnSelectionEmailTaskClicked
+	soMessagebox "The Send e-mail button was clicked on selection task"
+	
+End Sub

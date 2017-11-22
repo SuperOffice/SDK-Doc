@@ -1,0 +1,5 @@
+
+##SUMMARY: enPartTypeExtPerson
+
+External person
+

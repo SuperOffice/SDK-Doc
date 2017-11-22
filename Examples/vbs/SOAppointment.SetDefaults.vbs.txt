@@ -1,0 +1,11 @@
+Dim objSO 
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    objSO.CurrentAppointment.SetDefaults()
+    msgbox "Take a look at the current appointment now, when you click OK the changes will be cancelled."
+    objSO.CurrentAppointment.CancelChanges()          
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing
+ 

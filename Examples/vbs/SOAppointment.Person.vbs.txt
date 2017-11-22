@@ -1,0 +1,15 @@
+Dim objSO
+Dim result 
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = objSO.CurrentAppointment.person.Identity
+          
+    if result = 0 then
+        msgbox "The current appointment does not have a contact person!", vbInformation + vbOkOnly, "SuperCOM"
+    else
+        msgbox "Current appointment is with: " & objSO.CurrentAppointment.Person.FirstName & " " & objSO.CurrentAppointment.Person.LastName, vbInformation + vbOKOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

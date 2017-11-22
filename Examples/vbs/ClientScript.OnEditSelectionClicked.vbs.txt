@@ -1,0 +1,3 @@
+Sub OnEditSelectionClicked
+	somessagebox "Edit selection clicked"	
+End Sub

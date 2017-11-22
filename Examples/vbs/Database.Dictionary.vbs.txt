@@ -1,0 +1,17 @@
+dim objdb
+set objdb = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objdb.login  "<userid>", "<password>" ' log in to the database
+    msg = msg & "contact.name fieldid= "  & objdb.dictionary.getfieldid("contact.name") & vbcrlf
+    msg = msg & "contact.name field length= " & objdb.dictionary.getfieldlength(1281)  & vbcrlf
+    msg = msg & "fieldname of fieldid 1281= "  & objdb.dictionary.getfieldname(1281) & vbcrlf
+    msg = msg & "fieldtype of fieldid 1281= "  & objdb.dictionary.getfieldtype(1281) & vbcrlf
+    msg = msg & "fullname of fieldid 1281= "  & objdb.dictionary.getfullname(1281) & vbcrlf
+    msg = msg & "tableid of fieldid 1281= "  & objdb.dictionary.gettableidfromfieldid(1281)  & vbcrlf
+    msg = msg & "tablename of fieldid 1281= "  & objdb.dictionary.gettablename(1281) & vbcrlf
+    msg = msg &  "dictionary revision= " & objdb.dictionary.revision  & vbcrlf
+    msg = msg &  "dictionary version= " & objdb.dictionary.version  & vbcrlf
+    msgbox  msg, vbinformation + vbokonly, "sodictionary"
+else
+    msgbox "unable to connect to database"
+end if

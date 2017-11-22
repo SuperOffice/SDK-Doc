@@ -1,0 +1,18 @@
+Dim objdb
+Dim checklistItems
+Dim msg
+dim enCListDocuments
+enCListDocuments = 4
+set objdb =  CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+'    objdb.login  "<userid>", "<password>"
+objdb.login  "jr", ""
+    set checklistItems = objdb.GetChecklist(2, enCListDocuments)
+    For Each checklistItem In checklistItems
+        msg = msg & checklistItem.DateComplete & " - " & checklistItem.Done & vbCrLf
+    Next
+    MsgBox(msg)
+else
+    msgbox  "unable to connect to database"
+end if
+set objdb = nothing

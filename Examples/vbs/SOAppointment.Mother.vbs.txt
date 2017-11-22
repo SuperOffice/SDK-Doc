@@ -1,0 +1,17 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+Set myApnt = objSO.CurrentAppointment
+Set mum = myApnt.Mother
+If mum.Identity <> myApnt.Identity Then
+    app = mum.Associate.FullName
+End If
+ 
+Select Case mum.Identity
+Case 0
+    MsgBox "The current appointment is a normal appointment", vbInformation + vbOKOnly, "SuperCOM"
+Case contact.Identity
+    MsgBox "The current appointment is the master booking ", vbInformation + vbOKOnly, "SuperCOM"
+Case Else
+    MsgBox "You where invited to this appointment by: " & app, vbInformation + vbOKOnly, "SuperCOM"
+End Select
+Set my_app = Nothing

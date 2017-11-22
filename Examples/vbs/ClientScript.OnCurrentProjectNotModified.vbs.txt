@@ -1,0 +1,3 @@
+Sub OnCurrentProjectNotModified
+	SOMessagebox "Current project was saved, but there where no changes"
+End Sub

@@ -1,0 +1,18 @@
+Dim objdb
+Dim objfind
+Dim objcontacts
+Dim msg
+
+Set objdb = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objdb.login "<userid>", "<password>" ' log in to the database
+
+    Set contacts = objdb.Find.ContactsByName("super")
+    For Each contact In contacts
+        msg = msg & contact.Name
+    Next
+    MsgBox(msg)
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing

@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableProjTypeGL
+
+= 86
+

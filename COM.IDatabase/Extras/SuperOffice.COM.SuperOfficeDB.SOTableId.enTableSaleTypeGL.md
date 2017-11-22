@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableSaleTypeGL
+
+= 150
+

@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableFtIdx
+
+= 46
+

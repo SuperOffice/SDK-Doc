@@ -1,0 +1,12 @@
+dim objso
+dim objpref
+set objso =  CreateObject("superofficedb.database")
+If not (objSO is nothing) Then
+    objso.login  "<userid>", "<password>"
+    set  objpref = objso.preferences
+    s  = objpref.get("filter", "daysbefore")
+    msgbox  "filter settings, days before: " & s
+else
+    msgbox  "unable to connect to database"
+end if
+set objso = nothing

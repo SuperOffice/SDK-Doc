@@ -1,0 +1,4 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+    Msgbox "SuperOffice CRM 5 width: " & objSO.Width, vbInformation + vbOkOnly, "SuperCOM"
+set objSO = Nothing

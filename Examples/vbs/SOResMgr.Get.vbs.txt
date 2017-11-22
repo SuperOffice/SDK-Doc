@@ -1,0 +1,5 @@
+set resmgr = CreateObject("SuperOffice.ResMgr")
+
+msgbox resmgr.get("no",11911),,"NO 11911"
+
+set resmgr = nothing

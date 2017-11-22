@@ -1,0 +1,5 @@
+
+##SUMMARY: enUDFTLongTextEdit
+
+Long text
+

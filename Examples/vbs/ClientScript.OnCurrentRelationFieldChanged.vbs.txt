@@ -1,0 +1,5 @@
+Sub OnCurrentRelationFieldChanged(fieldname)
+	if fieldname = "relations.reldef_id" then
+	   CurrentRelation.Comment = "This realtion type was changed"
+	end if
+End Sub

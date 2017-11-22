@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableComptr
+
+= 109
+

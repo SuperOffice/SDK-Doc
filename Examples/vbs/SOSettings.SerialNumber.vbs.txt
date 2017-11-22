@@ -1,0 +1,10 @@
+Dim objSO
+Dim objSettings
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Set objSettings = objSO.Database.Settings
+    MsgBox "Serial number: " & objSettings.SerialNumber
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

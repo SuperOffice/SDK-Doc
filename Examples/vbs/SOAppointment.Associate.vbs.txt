@@ -1,0 +1,8 @@
+dim objso
+set objso = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    MsgBox "Current appointments owner associate: " & objSO.CurrentAppointment.Associate.FullName, vbInformation + vbOKOnly, "SuperCOM"
+else
+    msgbox "unable to connect to database"
+end if
+set objso = nothing

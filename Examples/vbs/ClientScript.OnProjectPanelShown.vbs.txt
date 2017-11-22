@@ -1,0 +1,5 @@
+Sub OnProjectPanelShown
+    If CurrentProject.Members.Exists(Database.GetAssociate(Database.UserAssociateId).PersonId) Then
+ 	SOMessageBox "I'm a member of this project"
+    End If	
+End Sub

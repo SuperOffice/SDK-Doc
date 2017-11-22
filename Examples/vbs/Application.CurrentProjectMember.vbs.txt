@@ -1,0 +1,7 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+Dim cur
+Set cur = objSO.CurrentProjectMember
+    Msgbox "The current projectmembers lastname is: " & cur.person.lastname, vbInformation + vbOkOnly, "SuperCOM"
+set cur = Nothing
+set objSO = Nothing

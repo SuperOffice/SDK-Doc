@@ -1,0 +1,4 @@
+Sub OnFindSelectionDialogShown
+	SOMessageBox "Find selection dialog is shown"
+	
+End Sub

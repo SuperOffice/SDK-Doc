@@ -1,0 +1,20 @@
+Dim objSO
+Dim objFind
+Dim objContacts
+Dim objContact
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "<USERID>", "<password>"
+    set objFind = objSO.Find
+    Set objContacts = objFind.ContactsByPhone ("22517000")
+    set objContact = objContacts.GetFirst
+    no = 1
+    While Not objContacts.EOF
+        no = no+1
+        Set objContact = objContacts.GetNext
+    Wend
+    MsgBox "There were " & no & " contacts that matched the search criteria"
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

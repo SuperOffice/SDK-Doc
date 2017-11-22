@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableFkDevice
+
+= 182
+

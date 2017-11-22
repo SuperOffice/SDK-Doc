@@ -1,0 +1,13 @@
+dim objdb
+set objdb  = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objdb.login "<userlevel>",  "<password>"
+    set mes = objdb.getassociate(  objdb.userassociateid )
+    set appoint = objdb.getappointment(  1 )
+    access = mes.accesslevel( appoint.associate )
+    msgbox "what access level do i have to this appointment:  " & access, vbinformation + 
+      vbokonly, "supercom"
+else
+    msgbox  "unable to connect to database"
+end if
+set objso  = nothing

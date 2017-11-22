@@ -1,0 +1,9 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim appnt As SOAppointment
+    appnt = db.GetAppointment(414)
+    appnt.Recurrence.AddDate(New Date(2005, 11, 7))
+    appnt.Save()
+Else
+    MsgBox("failed to log in")
+End If

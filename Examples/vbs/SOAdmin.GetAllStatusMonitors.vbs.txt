@@ -1,0 +1,18 @@
+Dim soDB, myStatusMonitors 
+Set soDB = CreateObject("SuperOfficeDB.Database")
+enTableCont = 5
+If not (soDB is nothing) Then
+
+	soDB.Login "USERNAME", "PASSWORD"
+		Set myStatusMonitors = soDB.Admin.GetAllStatusMonitors(enTableCont, False)
+		
+		For Each myStatusMon In myStatusMonitors
+		    
+		    msg = msg & myStatusMon.Name & vbCrLf
+		Next
+		MsgBox "All statusmonitors for contact:" & vbCrLf & msg
+
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

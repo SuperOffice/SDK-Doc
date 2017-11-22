@@ -1,0 +1,9 @@
+Dim db As New Database
+If db.Login("jr", "") Then
+    Dim picture As ISOPicture
+    Dim msg As String = ""
+    Dim person As SOPerson = db.GetPerson(7)
+    person.Picture.WriteToFile("c:\john.jpg")
+Else
+    MsgBox("could not log on")
+End If

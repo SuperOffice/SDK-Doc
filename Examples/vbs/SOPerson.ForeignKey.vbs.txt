@@ -1,0 +1,16 @@
+Dim objSO
+Set objSO = CreateObject("SuperOfficeDB.Database")
+Set objSOApp = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    objSO.Login "<USERID>", "<password>"
+    if objSOApp.CurrentPerson.Identity <> 0 then
+        set myPerson = objSo.GetPerson(objSOApp.CurrentPerson.Identity)
+        myPerson.ForeignKey.Set "MyApplication", "MyDevice", "MyKey", "This is my foreignKey"
+        MsgBox myPerson.FirstName & " has the following foreginKey set: " & myPerson.ForeignKey.Get ("MyApplication", "MyDevice", "MyKey")
+    else
+        msgbox "Mark a person and try again"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

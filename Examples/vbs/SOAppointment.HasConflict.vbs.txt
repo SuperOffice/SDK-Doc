@@ -1,0 +1,15 @@
+dim db
+dim assoclist, assoc, appnt
+Set db = CreateObject("SuperOfficedb.Database")
+'if db.login("<username>","<password>") then	
+if db.login("jr","") then	
+    set appnt = db.GetAppointment(451)
+    if appnt.HasConflict then
+       msgbox "Appointment has a conflict"
+    else
+       msgbox "Appointment does not have a conflict"
+    end if
+else
+    MsgBox "Could not log on"
+end if
+Set objSO = Nothing

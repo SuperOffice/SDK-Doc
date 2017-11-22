@@ -1,0 +1,11 @@
+Sub OnCurrentDocumentBeforeSave
+'Requires a user defined text field
+'named "Extra info" defined on document
+
+If CurrentContact.Category.Text = "Business Partner" Then
+    If CurrentDocument.Template.Text = "Memo" Then
+            CurrentDocument.UDef.ByName("Extra info").Value = "Make a note of..."
+    End If
+End If
+
+End Sub

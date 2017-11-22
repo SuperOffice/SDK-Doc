@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableTrmap
+
+= 43
+

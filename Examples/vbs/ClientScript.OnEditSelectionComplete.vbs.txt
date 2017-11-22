@@ -1,0 +1,6 @@
+Sub OnEditSelectionComplete
+'occurs both when you click OK and Cancel
+	somessagebox "Edit selection complete"
+End Sub
+
+

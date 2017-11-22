@@ -1,0 +1,13 @@
+dim objdb
+set objdb = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objdb.login  "<username>", "<password>"
+    if objdb.IsAnsiBase  then
+		MsgBox "This is a ansi database"
+	Else
+		MsgBox "This is a unicode database"
+    end  if
+else
+    msgbox  "unable to connect to database"
+end if
+set objso = nothing

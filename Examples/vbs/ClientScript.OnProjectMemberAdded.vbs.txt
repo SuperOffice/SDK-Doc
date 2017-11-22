@@ -1,0 +1,3 @@
+sub OnProjectMemberAdded(id)
+	somessagebox "OnProjectMemberAdded " & id
+end sub

@@ -1,0 +1,13 @@
+Dim objSO
+Set objSO = Nothing
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    set soPerson = objSO.CurrentPerson
+    msgbox soperson.firstname & " " & soperson.middlename & " " & soperson.lastname
+    soPerson.middlename = "van"
+    soperson.save
+    msgbox soperson.firstname & " " & soperson.middlename & " " & soperson.lastname
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

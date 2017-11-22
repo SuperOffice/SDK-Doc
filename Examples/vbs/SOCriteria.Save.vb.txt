@@ -1,0 +1,12 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim selection As SOSelection = db.GetSelection(26)
+    'Remove a criterion from the collection 
+    Dim criterion As SOCriterion = selection.Criteria.GetCriterion("contact.name")
+    selection.Criteria.Remove(criterion)
+
+    selection.Save()
+    MsgBox("criterion removed")
+Else
+    MsgBox("failed to log in")
+End If

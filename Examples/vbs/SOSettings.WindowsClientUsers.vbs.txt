@@ -1,0 +1,48 @@
+Dim objSO
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "<userID>", "<password>"
+    dbSettings = ojbSO.Settings
+
+        msg = msg & "AudienceSites:" & dbSettings.AudienceSites & vbCrLf
+        msg = msg & "CentralArchivePath:" & dbSettings.CentralArchivePath & vbCrLf
+        msg = msg & "CentralDataSource:" & dbSettings.CentralDataSource & vbCrLf
+        msg = msg & "CurrentArchivePath:" & dbSettings.CurrentArchivePath & vbCrLf
+        msg = msg & "CurrentDataSource:" & dbSettings.CurrentDataSource & vbCrLf
+        msg = msg & "CurrentTemplatePath:" & dbSettings.CurrentTemplatePath & vbCrLf
+        msg = msg & "ExpanderKeyLicense:" & dbSettings.ExpanderKeyLicense & vbCrLf
+        msg = msg & "ExpirationDate:" & dbSettings.ExpirationDate & vbCrLf
+        msg = msg & "GetNumLicense(windows):" & dbSettings.GetNumLicense("windows") & vbCrLf
+        msg = msg & "HasLicense(import):" & dbSettings.HasLicense("SuperOffice.import") & vbCrLf
+        msg = msg & "LanguageCode:" & dbSettings.LanguageCode & vbCrLf
+        msg = msg & "LocalArchivePath:" & dbSettings.LocalArchivePath & vbCrLf
+        msg = msg & "LocalDataSource:" & dbSettings.LocalDataSource & vbCrLf
+        msg = msg & "LoginUsers:" & dbSettings.LoginUsers & vbCrLf
+        msg = msg & "NetServerClientUsers:" & dbSettings.NetServerClientUsers & vbCrLf
+        msg = msg & "NetServerCollaborativeLicense:" & dbSettings.NetServerCollaborativeLicense & vbCrLf
+        msg = msg & "NetServerEAILicense:" & dbSettings.NetServerEAILicense & vbCrLf
+        msg = msg & "NetServerOverrides:" & dbSettings.NetServerOverrides.Length & vbCrLf
+        msg = msg & "NotesLinkSites:" & dbSettings.NotesLinkSites & vbCrLf
+        msg = msg & "OutlookMailLinkSites:" & dbSettings.OutlookMailLinkSites & vbCrLf
+        msg = msg & "OutlookSynchronizerUsers:" & dbSettings.OutlookSynchronizerUsers & vbCrLf
+        msg = msg & "ProgPath:" & dbSettings.ProgPath & vbCrLf
+        msg = msg & "ReporterUsers:" & dbSettings.ReporterUsers & vbCrLf
+        msg = msg & "SaintEnabled:" & dbSettings.SaintEnabled & vbCrLf
+        msg = msg & "SaintLicense:" & dbSettings.SaintLicense & vbCrLf
+        msg = msg & "SaintUpdateInRealTime:" & dbSettings.SaintUpdateInRealTime & vbCrLf
+        msg = msg & "Satellites:" & dbSettings.Satellites & vbCrLf
+        msg = msg & "SerialNumber:" & dbSettings.SerialNumber & vbCrLf
+        msg = msg & "SuperofConfigPath:" & dbSettings.SuperofConfigPath & vbCrLf
+        msg = msg & "SuperofIniPath:" & dbSettings.SuperofIniPath & vbCrLf
+        msg = msg & "SuperofLogPath:" & dbSettings.SuperofLogPath & vbCrLf
+        msg = msg & "SyncEngineUsers:" & dbSettings.SyncEngineUsers & vbCrLf
+        msg = msg & "SynchronizerSites:" & dbSettings.SynchronizerSites & vbCrLf
+        msg = msg & "TotalLogins:" & dbSettings.TotalLogins & vbCrLf
+        msg = msg & "UpdatedTravelUsers:" & dbSettings.UpdatedTravelUsers & vbCrLf
+        msg = msg & "WebUsers:" & dbSettings.WebUsers & vbCrLf
+        msg = msg & "WindowsClientUsers:" & dbSettings.WindowsClientUsers & vbCrLf
+    msgbox msg
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

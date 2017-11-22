@@ -1,0 +1,14 @@
+Dim soDB 
+Set soDB = CreateObject("SuperOfficeDB.Database")
+If not (soDB is nothing) Then
+
+	soDB.Login "USERID", "PASSWORD"
+	Set myFuncRights = soDB.Admin.GetAllFunctionRights(enRoleTypeEmployee)
+	For Each Item In myFuncRights
+	    msg = msg & Item.Text & vbCrLf
+	Next
+	MsgBox msg
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

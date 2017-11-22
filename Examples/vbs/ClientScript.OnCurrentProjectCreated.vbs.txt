@@ -1,0 +1,8 @@
+Sub OnCurrentProjectCreated
+
+if Month(Now) = 6 or Month(Now) =  7 then	
+	somessagebox "It's summertime - make sure you add extra time on the activites due to the summer holiday"
+elseIf Month(Now) = 12 then
+	somessagebox "Christmas just around the corner, are you making a christmasparty?"
+end if
+End Sub

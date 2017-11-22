@@ -1,0 +1,30 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim appnt As SOAppointment
+    appnt = db.CreateAppointment
+
+    appnt.SetDefaults()
+    appnt.Contact = db.GetContact(3)
+    appnt.Person = db.GetPerson(7)
+    appnt.Description = "Discussing what to do the next week"
+    appnt.Task = db.GetListItem(SOTableId.enTableTask, 2)
+    appnt.DoBy = New Date(2005, 12, 1, 14, 0, 0, 0)
+    appnt.Duration = 60
+    appnt.RecurrenceRuleId = 0
+
+    appnt.Location = "TestLocation"
+    appnt.AllDayEvent = False
+    appnt.FreeBusy = EnFreeBusy.enFreeBusyBusy
+
+    appnt.Recurrence.Pattern = EnRecurrencePattern.enPatternDaily
+    appnt.Recurrence.SubPattern = EnRecurrenceSubPattern.enSubPatternDaily_EveryDay
+    appnt.Recurrence.StartDate = New Date(2005, 12, 1)
+    appnt.Recurrence.EndDate = New Date(2005, 12, 6)
+    appnt.UpdateMode = EnRecurrenceUpdateMode.enThisAndForward
+    appnt.Recurrence.ComputeDates()
+    appnt.Recurrence.RemoveDate(New Date(2005, 12, 3))
+
+    appnt.Save()
+Else
+    MsgBox("failed to log in")
+End If

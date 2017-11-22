@@ -1,0 +1,12 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then        
+    if objSO.CurrentPerson.Information = "" then
+        msgbox "The current contact person has nothing written on Information.", vbInformation + vbOKOnly, "SuperCOM"
+    else
+        MsgBox "Current contact person Information text: " & objSO.CurrentPerson.Information, vbInformation + vbOKOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect"
+end if
+Set objSO = Nothing

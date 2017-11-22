@@ -1,0 +1,3 @@
+sub OnFindAppointment
+	somessagebox "Find button clicked from diary panel"
+end sub

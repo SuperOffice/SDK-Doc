@@ -1,0 +1,15 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim role As SORole = db.Admin.CreateRole(EnAssocRoleType.enRoleTypeEmployee, Nothing)
+    role.Name = "the new role"
+    role.Description = "this is the new role"
+    role.Save()
+
+    Dim allrights As IListTextItems = db.Admin.GetAllFunctionRights(EnAssocRoleType.enRoleTypeEmployee)
+    Dim fr As IListTextItem = allrights(3)
+    role.AddFunctionRight(fr)
+
+    role.Save()
+Else
+    MsgBox("failed to log in")
+End If

@@ -1,0 +1,14 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = ObjSO.CurrentSelection.CompanyUnique    
+    if result = false then
+        MsgBox "The current selection is not marked with Company is Unique. You may add more than one contact person from a company as selectionmembers.", vbInformation + vbOKOnly, "SuperCOM"
+    else
+        MsgBox "The current selection is marked with Company is Unique", vbInformation + vbOKOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect"
+end if
+set objSO = Nothing

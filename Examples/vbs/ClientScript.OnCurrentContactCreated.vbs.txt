@@ -1,0 +1,18 @@
+Sub OnCurrentContactCreated
+        'if contact.name = Lastname, Firstname
+        'and Category = B2C (Business to consumer),
+        'then this will create a person on this company
+        Position = InStr(1, CurrentContact.Name, ", ")
+        
+        Set cat = Database.GetListItemByName(64, "B2C")
+        
+        If CurrentContact.Category.Id = cat.Id Then
+            Set soPers = CurrentPerson
+            soPers.SetDefaults
+            soPers.MrMrs = ""
+            soPers.LastName = Trim(Left(CurrentContact.Name, Position - 1))
+            soPers.FirstName = Trim(Right(CurrentContact.Name, Len(CurrentContact.Name) - Position))
+            soPers.Save
+        End If
+
+End Sub

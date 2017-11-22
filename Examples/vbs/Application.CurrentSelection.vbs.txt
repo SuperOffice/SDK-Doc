@@ -1,0 +1,7 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+Dim sel
+Set sel = objSO.CurrentSelection
+    Msgbox "The current selection is: " & sel.name, vbInformation + vbOkOnly, "SuperCOM"
+set sel = Nothing
+set objSO = Nothing

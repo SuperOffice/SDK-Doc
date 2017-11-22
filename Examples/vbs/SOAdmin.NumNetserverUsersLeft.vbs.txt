@@ -1,0 +1,8 @@
+dim objso
+
+set objso  = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    msgbox  "number of netserver users left  " & objso.database.admin.numnetserverusersleft  
+else
+    msgbox  "failed to connect to the database"
+end if

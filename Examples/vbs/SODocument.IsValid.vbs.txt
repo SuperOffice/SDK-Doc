@@ -1,0 +1,18 @@
+Dim objSO
+Dim objDocument
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "<USERID>", "<password>"
+    Set objDocument = objSO.GetDocument(2)
+    'Remove the ' to load the document to buffer, and this objDocument will be valid. 
+    'test = objDocument.header
+          
+    if objDocument.Isvalid = true then
+        MsgBox "Document with document_id=2: " & objDocument.header
+    else
+        msgbox "There is no document in the buffer with document_id=2"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

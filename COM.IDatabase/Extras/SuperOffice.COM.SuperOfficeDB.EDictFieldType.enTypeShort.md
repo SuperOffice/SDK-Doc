@@ -1,0 +1,5 @@
+
+##SUMMARY: enTypeShort
+
+Short
+

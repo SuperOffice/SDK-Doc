@@ -1,0 +1,4 @@
+Sub OnFindProjectDialogShown
+	SOMessagebox "Find project dialog is shown"
+	
+End Sub

@@ -1,0 +1,5 @@
+
+##SUMMARY: enTypeBool
+
+Bool
+

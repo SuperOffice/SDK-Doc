@@ -1,0 +1,24 @@
+Set soApp = CreateObject("SuperOffice.Application.1")
+Dim numb
+Set numb = soApp.Database.Numbers
+
+MsgBox "Is the counter for Contact Number 2 active? " & numb.IsActive("contact.number2")
+numb.Add ("My_own_table.My_Text")
+MsgBox "Current counter for My_Own_Table.My_Text value = " & numb.Value("My_own_table.My_Text")
+numb.GetNext ("My_own_table.My_Text")
+MsgBox "Current counter for My_Own_Table.My_Text value = " & numb.Value("My_own_table.My_Text")
+numb.GetNext ("My_own_table.My_Text")
+MsgBox "Current counter for My_Own_Table.My_Text value = " & numb.Value("My_own_table.My_Text")
+numb.GetNext ("My_own_table.My_Text")
+MsgBox "Current counter for My_Own_Table.My_Text value = " & numb.Value("My_own_table.My_Text")
+numb.GetNext ("My_own_table.My_Text")
+MsgBox "Current counter for My_Own_Table.My_Text value = " & numb.Value("My_own_table.My_Text")
+
+MsgBox "We will now remove the counter for My_Own_Table.My_Text"
+numb.Remove "My_own_table.My_Text"
+
+MsgBox "Now we add the counter again"
+numb.Add ("My_own_table.My_Text")
+MsgBox "Current counter for My_Own_Table.My_Text after delete. Value = " & numb.Value("My_own_table.My_Text")
+numb.GetNext ("My_own_table.My_Text")
+MsgBox "Current counter for My_Own_Table.My_Text value = " & numb.Value("My_own_table.My_Text")

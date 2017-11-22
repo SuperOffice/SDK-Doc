@@ -1,0 +1,14 @@
+Dim objSO
+Set objSO = CreateObject("SuperOfficeDB.Database")
+Set objSOApp = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    objSO.Login "<USERID>", "<PASSWORD>"
+    set myProjectMembers = objSOApp.CurrentProject.Members
+    for each myProjectMember in myProjectMembers
+        myProjectMember.ForeignKey.Set "MyApplication", "MyDevice", "MyKey", "This is my foreignKey"
+        MsgBox myProjectMember.person.FirstName & " has the following foreginKey set: " & myProjectMember.ForeignKey.Get ("MyApplication", "MyDevice", "MyKey")
+    next
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

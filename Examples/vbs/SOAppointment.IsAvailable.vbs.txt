@@ -1,0 +1,15 @@
+Dim objSO
+Dim objAppointment
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "<USERID>", "<PASSWORD>"
+    Set objAppointment = objSO.GetAppointment (2)          
+    if objAppointment.IsAvailable = true then
+        MsgBox "Appointment with Appointment_id=2 has the following description: " & objAppointment.description
+    else
+        msgbox "There is no Appointment in the database with Appointment_id=2"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

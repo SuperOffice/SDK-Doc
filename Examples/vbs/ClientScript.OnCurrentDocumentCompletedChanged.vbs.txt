@@ -1,0 +1,6 @@
+Sub OnCurrentDocumentCompletedChanged
+if currentdocument.completed = True then
+	SOMessageBox "Current document finished"
+end if
+	
+End Sub

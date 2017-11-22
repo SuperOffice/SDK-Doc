@@ -1,0 +1,34 @@
+'This is written to run from a CRM SIX programfolder
+
+enRoleTypeEmployee = 0
+
+Dim db
+Set db = CreateObject("superofficedb.Database")
+If db.Login("<username>", "<password>") Then
+    set role = db.Admin.CreateRole(enRoleTypeEmployee, Nothing)
+    role.Name = "deleterole"
+    role.Description = "this is a new role with name deleterole"
+    role.Save()
+
+    set allrights = db.Admin.GetAllFunctionRights(enRoleTypeEmployee)
+    set fr = allrights(3)
+    role.AddFunctionRight(fr)
+
+    role.Save()
+
+    For Each item In role.FunctionRights
+        MsgBox(item.Text)
+    Next
+
+    role.Delete()
+
+    If db.Admin.GetRoles(enRoleTypeEmployee).Exists(role.Identity) Then
+	MsgBox("Role is not deleted")
+    End If
+
+    If role.FunctionRights.Exists(3) Then
+	MsgBox("FunctionRight is not deleted")
+    End If
+Else
+    MsgBox("failed to log in")
+End If

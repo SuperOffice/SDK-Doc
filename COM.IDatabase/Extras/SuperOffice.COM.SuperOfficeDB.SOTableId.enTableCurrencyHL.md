@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableCurrencyHL
+
+= 114
+

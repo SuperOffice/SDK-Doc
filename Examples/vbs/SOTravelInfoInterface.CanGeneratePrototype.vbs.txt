@@ -1,0 +1,14 @@
+Dim objSO 
+Dim objTI 
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Set objTI = objSO.Database.TravelInterface
+    If objTI.CanGeneratePrototype Then
+        MsgBox "The on logged user may generate prototype."
+    Else
+        MsgBox "The on logged user might not have the correct permissions. Check log file for error message Check log file for error message."
+    End If
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

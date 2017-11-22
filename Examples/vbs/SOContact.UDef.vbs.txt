@@ -1,0 +1,23 @@
+dim soDB, udef, udefs, myContact
+set soDB = CreateObject("SuperOfficeDB.Database")
+enUDFTShortTextEdit = 2
+
+If Not (soDB is Nothing) Then
+    soDB.login  "USERID", "PASSWORD"
+    set myContact = soDB.GetContact(2)
+    set udefs = myContact.udef
+    item = "The number of userdefined fields  defined on contact panel: " & udefs.count  & vbcrlf
+    for each udef in udefs
+        item = item & "lable = " & udef.label  & vbcrlf
+    next
+    msgbox item
+    For Each udef In udefs
+    	If udef.fieldtype = enUDFTShortTextEdit Then
+    		udef.value = "We change the value"
+    	End If
+    next
+
+	myContact.Save 'calling this will also save any changes to the udef fields
+else
+    msgbox  "unable to connect to database"
+end if

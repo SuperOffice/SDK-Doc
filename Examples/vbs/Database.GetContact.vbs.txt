@@ -1,0 +1,11 @@
+dim objso
+dim objcontact
+set objso =  CreateObject("superofficedb.database")
+If not (objSO is nothing) Then
+    objso.login  "<userid>", "<password>"
+    set  objcontact = objso.getcontact(45)
+    msgbox "company name of contact with  contact_id=45: " & objcontact.name
+else
+    msgbox  "unable to connect to database"
+end if
+set objso = nothing

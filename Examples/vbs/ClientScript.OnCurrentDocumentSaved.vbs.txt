@@ -1,0 +1,11 @@
+Sub OnCurrentDocumentSaved
+
+If CurrentDocument.Template.Text = "Offer" Then
+    Set myApnt = Database.CreateAppointment
+    myApnt.SetDefaultsToDo
+    myApnt.Contact = CurrentContact
+    myApnt.Description = "A new offer was created on this contact, you need to ...."
+    myApnt.Save
+End If
+	
+End Sub

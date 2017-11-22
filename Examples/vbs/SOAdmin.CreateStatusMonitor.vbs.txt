@@ -1,0 +1,19 @@
+Dim soDB, myStatusMon, myCriterion
+Set soDB = CreateObject("SuperOfficeDB.Database")
+enTableCont = 5
+If not (soDB is nothing) Then
+
+	soDB.Login "USERNAME", "PASSWORD"
+	Set myStatusMon = soDB.Admin.CreateStatusMonitor(enTableCont)
+	myStatusMon.Name = "Super"
+	myStatusMon.Description = "All contacts that starts with Super"
+	myStatusMon.Save
+	Set myCriterion = myStatusMon.Criteria.NewCriterion("contact.name", enBeginsWith)
+	myCriterion.Values.AddString "Super"
+	myStatusMon.Criteria.Add myCriterion
+	myStatusMon.Save
+	
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

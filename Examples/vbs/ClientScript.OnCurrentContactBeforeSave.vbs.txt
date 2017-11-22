@@ -1,0 +1,13 @@
+Sub OnCurrentContactBeforeSave
+' requires a userdefined field named 
+' "Next service" as date defined on contact
+
+'If this is a new contact, then set Next service
+if Currentcontact.identity = 0 then
+        
+	'Ser next service to three months from today
+        CurrentContact.UDef.ByName("Next service").Value = DateAdd("m", 3, Now())
+    Next
+end if
+
+End Sub

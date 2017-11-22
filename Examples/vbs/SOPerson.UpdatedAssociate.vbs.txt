@@ -1,0 +1,14 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = objSO.CurrentPerson.UpdatedAssociate.Identity          
+    if result = 0 then
+        msgbox "The current appointment has never been updated!", vbInformation + vbOkOnly, "SuperCOM"
+    else
+        msgbox "Current person was last updated by: " & _
+        objSO.CurrentPerson.UpdatedAssociate.FullName, vbInformation + vbOKOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

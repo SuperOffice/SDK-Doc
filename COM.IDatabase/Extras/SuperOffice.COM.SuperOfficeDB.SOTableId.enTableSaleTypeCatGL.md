@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableSaleTypeCatGL
+
+= 119
+

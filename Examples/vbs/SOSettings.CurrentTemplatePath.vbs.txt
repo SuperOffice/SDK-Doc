@@ -1,0 +1,9 @@
+Dim objSO
+Set objSO = CreateObject("SuperOfficeDB.Database")
+'This do not require that you're logged in
+If not (objSO is nothing) Then         
+    msgbox objSO.settings.CurrentTemplatePath
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

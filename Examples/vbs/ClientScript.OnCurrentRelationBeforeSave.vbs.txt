@@ -1,0 +1,12 @@
+Sub OnCurrentRelationBeforeSave
+' requires a userdefined field named
+' "Mother company" as chech box defined on company
+
+
+  If soapp.CurrentRelation.SourceTable = 5 Then  'the source of the relation is a company
+    If soapp.CurrentRelation.ActiveText = "owns" Then
+       soapp.CurrentContact.udef.ByName("Mother company").value = True
+    End If
+  End If
+
+End Sub

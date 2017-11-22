@@ -1,0 +1,29 @@
+dim objso
+  dim travellers
+  dim traveller
+  set objso =  CreateObject("superofficedb.database")
+      If not (objSO is nothing) Then
+   a  = objso.login("<userid>", "<password>")
+   set travellers =  objso.travelinterface.gettravellers
+   msgbox travellers.trlogmax,  vbinformation + vbokonly, "trlogmax"
+   set  traveller = travellers.getfirst 
+   while  not travellers.eof
+   msgbox  traveller.areaid, vbinformation + vbokonly, "areaid"
+   msgbox  traveller.areaname, vbinformation + vbokonly, "areaname"
+   msgbox  traveller.asyncenabled, vbinformation + vbokonly, "asyncenabled"
+   msgbox  traveller.dbvariant, vbinformation + vbokonly, "dbvariant"
+   msgbox  traveller.encryptionvariant, vbinformation + vbokonly,  "encryptionvariant"
+   msgbox  traveller.id, vbinformation + vbokonly, "id"
+   msgbox  traveller.lastreceiveddate, vbinformation + vbokonly,  "lastreceiveddate"
+   msgbox  traveller.lastreceivedlog, vbinformation + vbokonly,  "lastreceivedlog"
+   msgbox  traveller.lastreceivednum, vbinformation + vbokonly,  "lastreceivednum"
+   msgbox  traveller.lastsentdate, vbinformation + vbokonly, "lastsentdate"
+   msgbox  traveller.lastsentlog, vbinformation + vbokonly, "lastsentlog"
+   msgbox  traveller.lastsentnum, vbinformation + vbokonly, "lastsentnum"
+   msgbox  traveller.name, vbinformation + vbokonly, "name"
+   set traveller  =travellers.getnext
+   wend
+  else
+   msgbox "unable to connect to  database"
+  end if
+      set objso = nothing

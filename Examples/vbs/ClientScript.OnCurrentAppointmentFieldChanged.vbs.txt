@@ -1,0 +1,5 @@
+Sub OnCurrentAppointmentFieldChanged (fieldname)
+	if fieldname = "appointment.associate_id" then
+		SOMessageBox "The appointmentowner was changed"
+	end if 
+End Sub

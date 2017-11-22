@@ -1,0 +1,5 @@
+
+##SUMMARY: enTypeFloat
+
+Float
+

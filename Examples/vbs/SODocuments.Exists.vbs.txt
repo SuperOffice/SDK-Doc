@@ -1,0 +1,19 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+        Set myApnt = objDB.GetAppointment(5)
+        Set myDocs = myApnt.ActivityLinks.Documents
+
+        If myDocs.Exists(2) Then
+            MsgBox "There is a document with id=2 linked to this appointment"
+        End If
+
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing  

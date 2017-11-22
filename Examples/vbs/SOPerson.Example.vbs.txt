@@ -1,0 +1,61 @@
+Dim soDB, myContact, myPerson
+Set soDB = CreateObject("SuperOfficeDB.Database")
+enTableCntry = 19
+enTablePersPos = 76
+ 
+If soDB.Login ("USERNAME", "PASSWORD") then
+
+    'create a new person on the ownercompanycard
+    
+    Set myPerson = soDB.CreatePerson
+    myPerson.SetDefaults
+    myPerson.FirstName = "Mary"
+    myPerson.MiddleName = "von"
+    myPerson.LastName = "Dreier"
+    myPerson.Address.Address1 = "Home avenue 1"
+    myPerson.Address.ZipCode = "0123"
+    myPerson.Address.City = "Homeville"
+    myPerson.Contact = soDB.GetContact(soDB.OwnerContactId)
+    myPerson.Country = soDB.GetListItemByName(enTableCntry, "Sweden")
+    myPerson.DayOfBirth = 24
+    myPerson.MonthOfBirth = 12
+    myPerson.YearOfBirth = 1971
+    myPerson.Emails.Add "mary.von.dreier@hometown.xxx", "Private email"
+    myPerson.Information = "Mary wants all post sent to her homeaddress"
+    myPerson.UseAsMailingAddress = True
+    myPerson.Interests.Add (1)
+    myPerson.MrMrs = "Mrs"
+    myPerson.NoDM = False
+    myPerson.Number = "1234"
+    myPerson.Phones.Add "22334455", "direct"
+    myPerson.Phones.Add "91123456", "mobile"
+    'requires that the file actually exists
+    ' myPerson.Picture.ReadFromFile ("c:\mary.jpg")
+    myPerson.Position = soDB.GetListItem(enTablePersPos, 2)
+    myPerson.Retired = False
+    myPerson.Salutation = "Professor Ing."
+    myPerson.Title = "CEO"
+    
+    
+    
+    If myPerson.Sentry.AreAllRequiredFieldsFilled = True Then
+        myPerson.Save
+            msg = msg & "Person saved with contact_id = " & myPerson.Identity & vbCrLf
+            msg = msg & "Person is created by " & myPerson.CreatedAssociate.FullName & vbCrLf
+            If myPerson.UpdatedDate > #1/1/1970# Then
+                msg = msg & "Person was last updated by: " & myPerson.UpdatedAssociate.FullName & " at " & myPerson.UpdatedDate
+            Else
+                msg = msg & "Person has never been updated"
+            End If
+            
+            MsgBox msg
+    
+    
+    Else
+        MsgBox "All required fields are not filled, and person is not saved"
+    End If
+
+
+Else
+	MsgBox "Unable to log in"
+End If

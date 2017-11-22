@@ -1,0 +1,28 @@
+Dim soDB, myApnt, myApnts
+Set soDB = CreateObject("SuperOfficeDB.Database")
+
+If not (soDB is nothing) Then
+
+   soDB.Login "USERNAME", "PASSWORD"
+
+    Set myApnt = sodb.GetAppointment(3)
+    Set links = myApnt.ActivityLinks
+    links.AddAppointment sodb.GetAppointment(4)
+    links.AddAppointment sodb.GetAppointment(5)
+    myApnt.Save
+    Set appnt = links.Appointments
+    If Not myApnts.Empty Then
+        msg = msg & "Number of appointments: " & myApnts.Count & vbCrLf
+        For i = 0 To myApnts.Count - 1
+            msg = msg & myApnts.Item(i).Description & vbCrLf
+        Next
+        If myApnts.Exists(1) Then msg = msg & "There is an appointment with id = 1."
+        MsgBox msg
+    Else
+        MsgBox "There are no appointments in this collection"
+    End If
+
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

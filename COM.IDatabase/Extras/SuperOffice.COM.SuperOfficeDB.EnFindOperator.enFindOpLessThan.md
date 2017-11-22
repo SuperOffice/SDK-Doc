@@ -1,0 +1,5 @@
+
+##SUMMARY: enFindOpLessThan
+
+Less than
+

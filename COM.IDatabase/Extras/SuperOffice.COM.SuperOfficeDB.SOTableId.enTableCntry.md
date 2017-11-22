@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableCntry
+
+= 19
+

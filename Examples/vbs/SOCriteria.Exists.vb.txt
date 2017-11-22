@@ -1,0 +1,8 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim selection As SOSelection = db.GetSelection(26)
+    'Find if the criterion exists in this selection based on Id
+    MsgBox(selection.Criteria.Exists(1281))
+Else
+    MsgBox("failed to log in")
+End If

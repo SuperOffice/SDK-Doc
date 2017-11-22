@@ -1,0 +1,22 @@
+dim objdb
+dim objapp
+dim objproject
+dim objperson
+dim objprojectmember
+
+Set objapp = CreateObject("SuperOffice.Application")
+if not (objapp is nothing) then
+    objdb = objapp.Database
+    objperson = objapp.Database.GetPerson(3)
+    objproject = objapp.CurrentProject
+    objprojectmember = objdb.CreateProjectMember
+    objprojectmember.SetDefaults()
+    objprojectmember.PersonId = objperson.Identity
+    objprojectmember.ContactId = objperson.Contact.Identity
+    objprojectmember.project = objproject
+    objprojectmember.Save()
+    MsgBox "ferdig"
+else
+    msgbox  "unable to connect to database"
+end if
+set objapp = nothing

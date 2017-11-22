@@ -1,0 +1,5 @@
+
+##SUMMARY: enDBVariantCentral
+
+Central database
+

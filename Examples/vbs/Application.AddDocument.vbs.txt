@@ -1,0 +1,9 @@
+Dim objSO
+Dim objDoc
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+          objSO.AddDocument "C:\myfile.doc", "False"
+else
+          MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

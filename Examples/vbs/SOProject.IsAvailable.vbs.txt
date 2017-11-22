@@ -1,0 +1,15 @@
+Dim objSO
+Dim objProject
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "<USERID>", "<PASSWORD>"
+    Set objProject = objSO.GetProject(2)          
+    if objProject.IsAvailable = true then
+        MsgBox "Project with Project_id=2: " & objProject.name
+    else
+        msgbox "There is no Project in the database with Project_id=2"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

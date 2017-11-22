@@ -1,0 +1,26 @@
+Dim objSO
+Dim myConts
+Dim myCont
+enSaleAllCounters = 4
+enFindOpLessThanOrEqual = 4
+
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "USERID", "PASSWORD"
+    Set myConts = objSO.Find.ContactsWithNumSalesCreatedPeriod(enSaleAllCounters, Nothing, enFindOpLessThanOrEqual, 1)
+    Set myCont = myConts.GetFirst
+    While Not myConts.EOF
+    
+        msg = msg & myCont.Name & vbCrLf
+        Set myCont = myConts.GetNext
+    Wend
+    If msg <> "" Then
+        MsgBox msg, vbInformation & vbOKOnly, "Contacts matching search"
+    Else
+        MsgBox "No match"
+    End If
+Else
+    MsgBox "Could not log in"
+End If
+
+Set objSO = Nothing

@@ -1,0 +1,12 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    if objSO.CurrentProject.Members.Exists(1) then
+        MsgBox "The current project has registered a project member with person_id=1"
+    else
+        MsgBox "The current project has no members registered"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

@@ -1,0 +1,11 @@
+set resmgr = CreateObject("SuperOffice.ResMgr")
+set datemgr = CreateObject("SuperOffice.DateMgr") 
+
+d = Now
+msg = "Parse " & d & " to Long (SuperOffice date) and to a valid date." & chr(10)
+
+lcid = resmgr.GetLCIDForLanguageCode( "GE" )
+msg = msg & "ParseAsDateStringTolong: " & datemgr.ParseDateStringToLong(lcid, CStr(d)) & chr(10)
+msg = msg & "ParseAsDateStringtodate: " & datemgr.ParseDateStringToDate(lcid, CStr(d)) & chr(10)
+
+msgbox msg

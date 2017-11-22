@@ -1,0 +1,15 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+    Set mySelection = objDB.GetSelection(2) 'get selection with selection_id=2
+    msg = msg & "Are all required fields filled: " & mySelection.Sentry.AreAllRequiredFieldsFilled & vbCrLf
+    MsgBox msg, vbInformation, "SuperCOM"
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing

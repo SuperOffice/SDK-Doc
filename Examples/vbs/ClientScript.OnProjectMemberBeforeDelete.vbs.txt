@@ -1,0 +1,3 @@
+sub OnProjectMemberBeforeDelete(id)
+	somessagebox "If you need any values from this projectmember you need to get them now. After this the projectmember with contact_id= "  & contactid & " would be gone from the project" 
+end sub

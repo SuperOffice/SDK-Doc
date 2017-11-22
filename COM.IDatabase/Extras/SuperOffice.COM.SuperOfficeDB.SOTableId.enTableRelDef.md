@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableRelDef
+
+= 48
+

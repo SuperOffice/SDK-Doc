@@ -1,0 +1,5 @@
+
+##SUMMARY: enTypeLong
+
+Long
+

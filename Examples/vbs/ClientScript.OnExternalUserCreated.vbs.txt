@@ -1,0 +1,3 @@
+sub OnExternalUserCreated(associd)
+	somessagebox "OnExternalUserCreated " & associd
+end sub

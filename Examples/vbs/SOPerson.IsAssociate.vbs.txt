@@ -1,0 +1,15 @@
+Dim objSO
+Dim objPerson
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "<USERID>", "<PASSWORD>"
+    Set objPerson = objSO.GetPerson(2)       
+    if objPerson.IsAssociate = true then
+        MsgBox "Person with person_id=2 has the following firstname: " & objPerson.firstname
+    else
+        msgbox "There is no person in the database with person_id=2"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

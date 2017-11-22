@@ -1,0 +1,7 @@
+Sub OnPersonDialogShown
+if currentperson.identity > 0 then
+  if currentperson.title = "" then
+	somessagebox "This person is missing a job title!"
+  end if
+end if	
+End Sub

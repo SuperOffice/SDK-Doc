@@ -1,0 +1,16 @@
+Dim objSO
+Dim Appnt
+Dim Appnts
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    set Appnts = objSO.Database.Find.Appointments("140","01.11.2000","03.11.2000")
+    Appnt = Appnts.GetFirst()
+    While Not Appnts.EOF
+        msgbox Appnt.Description
+        Appnt = Appnts.GetNext()
+    wend          
+    msgbox "No appointments.", vbInformation, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

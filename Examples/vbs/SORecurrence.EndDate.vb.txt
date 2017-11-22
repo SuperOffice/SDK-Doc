@@ -1,0 +1,15 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim appnt As SOAppointment
+    appnt = db.GetAppointment(414)
+
+    appnt.Recurrence.Pattern = EnRecurrencePattern.enPatternDaily
+    appnt.Recurrence.SubPattern = EnRecurrenceSubPattern.enSubPatternDaily_EveryDay
+    appnt.Recurrence.StartDate = appnt.DoBy
+    appnt.Recurrence.EndDate = appnt.DoBy.AddDays(5)
+    appnt.UpdateMode = EnRecurrenceUpdateMode.enThisAndForward
+    appnt.Recurrence.ComputeDates()
+    appnt.Save()
+Else
+    MsgBox("failed to log in")
+End If

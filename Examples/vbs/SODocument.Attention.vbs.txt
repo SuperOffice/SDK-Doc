@@ -1,0 +1,14 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Result = objSO.CurrentDocument.Attention
+    If result <> "" then
+        MsgBox "Current document attention is: " & objSO.CurrentDocument.Attention, vbInformation + vbOKOnly, "SuperCOM"   
+    Else
+        MsgBox "Current document does not have a contact person in the document attention", vbInformation + vbOKOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

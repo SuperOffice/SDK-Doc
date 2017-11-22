@@ -1,0 +1,18 @@
+Sub OnParticipantDialogDone
+if currentappointment.GetNoOfParticipants > 5 then
+	yesno = somessagebox ("There are more than 5 participants to this meeting, add a follow up to check?", "Participants", 4)
+
+	if yesno = 2 then 
+		'User clicked Yes
+		      Set newAppnt1 = database.CreateAppointment
+      			newAppnt1.SetDefaults
+      			newAppnt1.Contact = Currentappointment.contact
+      			newAppnt1.Person = Currentappointment.person
+      			newAppnt1.task = database.GetListItemByName(67, "Follow-up")
+      			newAppnt1.DoBy = DateAdd("d", 0, Now())
+      			newAppnt1.Description = "Are there enough cake or do I need to buy more?"
+      			newAppnt1.Save
+	end if
+end if
+	
+End Sub

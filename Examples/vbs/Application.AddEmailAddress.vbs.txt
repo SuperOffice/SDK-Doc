@@ -1,0 +1,19 @@
+on error resume next
+Dim objSO
+Dim cont
+Dim pers
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    set cont = objSO.CurrentPerson.contact
+    msgbox cont.name
+    set pers = objSO.CurrentPerson
+    msgbox pers.firstname
+    Msgbox "The add email address dialog is shown in GUI, add mail address to the correct person. ", vbInformation + vbOkOnly, "SuperCOM"
+    Call objSO.AddEmailAddress ("Displayname", "email@domain.com", objSO.CurrentPerson.contact, objSO.CurrentPerson)
+if err.number <> 0 then
+	msgbox err.description
+end if
+else
+    msgbox "Unable to connect"
+end if
+set objSO = Nothing

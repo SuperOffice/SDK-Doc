@@ -1,0 +1,10 @@
+Set soApp = CreateObject("SuperOffice.Application")
+Dim sopersons, person, msg
+Set sopersons = soApp.PersonArchive
+Set person = sopersons.list.GetFirst
+For Each person In sopersons.list
+    msg = msg & person.FullName & vbCrLf
+    Set person = sopersons.list.GetNext
+Next
+MsgBox msg
+Set soApp = Nothing

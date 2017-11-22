@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableSaleTypeCatHL
+
+= 120
+

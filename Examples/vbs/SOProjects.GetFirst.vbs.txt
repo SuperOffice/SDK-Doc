@@ -1,0 +1,14 @@
+Dim Proj
+Dim Projs
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    set Projs = objSO.Database.Find.ProjectsByName("CRM5 ")
+    Proj = Projs.GetFirst()
+    While Not Projs.EOF
+        msgbox Proj.identity
+        Proj = Projs.GetNext()
+    wend        
+        msgbox "No more project match the search criteria", vbInformation, "SuperCOM"
+else
+        MsgBox "Unable to connect to database"
+end if

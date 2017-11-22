@@ -1,0 +1,7 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+Dim cur 
+Set cur = objSO.CurrentAppointment
+    Msgbox "The current appointment is: " & cur.description, vbInformation + vbOkOnly, "SuperCOM"
+set cur = Nothing
+set objSO = Nothing

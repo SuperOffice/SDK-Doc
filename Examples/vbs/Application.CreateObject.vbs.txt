@@ -1,0 +1,9 @@
+Dim objSo
+Set objSo = CreateObject("Superoffice.Application")
+If not (objSO is nothing) Then
+	' Use the object here
+	objso.somessagebox("Object Created")
+Else
+	' Show error message
+msgbox ("An error occured while creating object")
+End If

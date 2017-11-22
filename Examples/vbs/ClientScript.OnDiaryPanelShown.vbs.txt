@@ -1,0 +1,3 @@
+Sub OnDiaryPanelShown
+	SOMessageBox "Diary panel is shown with the active diary of: & Database.GetAssociate(Context.DiaryAssociateId).FullName
+End Sub

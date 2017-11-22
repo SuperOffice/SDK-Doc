@@ -1,0 +1,3 @@
+Sub OnSelectionRefreshSearch
+	soMessagebox "Refresh button clicked"
+end Sub

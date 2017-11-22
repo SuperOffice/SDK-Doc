@@ -1,0 +1,4 @@
+Sub OnEditContactComplete
+'occurs both when you click OK and Cancel
+	somessagebox "Edit contact complete"
+End Sub

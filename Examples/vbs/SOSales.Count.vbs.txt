@@ -1,0 +1,28 @@
+Dim soDB, mySale, mySaless
+Set soDB = CreateObject("SuperOfficeDB.Database")
+
+If not (soDB is nothing) Then
+
+   soDB.Login "USERNAME", "PASSWORD"
+
+        Set mySale = sodb.GetSale(3)
+        Set links = mySale.ActivityLinks
+        links.AddSale sodb.GetSale(4)
+        links.AddSale sodb.GetSale(5)
+        mySale.Save
+        Set mySales = links.sales
+        If Not mySales.Empty Then
+            msg = msg & "Number of sales: " & mySales.Count & vbCrLf
+            For i = 0 To mySales.Count - 1
+                msg = msg & mySales.Item(i).Description & vbCrLf
+            Next
+            If mySales.Exists(1) Then msg = msg & "There is a sale with id = 1."
+            MsgBox msg
+        Else
+            MsgBox "There are no sales in this collection"
+        End If
+
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

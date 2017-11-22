@@ -1,0 +1,4 @@
+
+Sub OnCurrentAppointmentSaved
+	SOMessageBox "The appointment was saved!"
+End Sub

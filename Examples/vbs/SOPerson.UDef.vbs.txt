@@ -1,0 +1,12 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    if objSO.CurrentPerson.Udef.Count > 0 then
+        MsgBox "The person panel has user defined fields", vbInformation + vbOKOnly, "SuperCOM"
+    else
+        MsgBox "No user defined fields defined on the person panel."
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

@@ -1,0 +1,7 @@
+Sub OnCurrentSaleFieldChanged(fieldname)
+	if fieldname = "sale.probability_idx" then
+		If CurrentSale.Amount > 100000 Then
+			SOMessageBox "This is a large sale, should you include more internal resources?"
+		end if
+	end if			
+End Sub

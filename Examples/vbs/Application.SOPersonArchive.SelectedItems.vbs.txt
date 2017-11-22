@@ -1,0 +1,11 @@
+Set soApp = CreateObject("SuperOffice.Application")
+Dim sopersons, myList, person
+ 
+set sopersons = soApp.PersonArchive
+Set myList = sopersons.SelectedItems
+Set person = myList.GetFirst
+While Not myList.EOF
+    msg = msg & person.FullName & vbCrLf
+    Set person = myList.GetNext
+Wend
+MsgBox msg

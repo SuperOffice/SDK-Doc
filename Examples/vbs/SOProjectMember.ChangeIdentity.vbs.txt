@@ -1,0 +1,17 @@
+Dim objSO
+Dim result
+Dim projMemb
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    projMemb = ObjSO.Database.GetProjectMember(1)
+    ProjMemb.Comment = "This will change the text in the comment field. "
+    result = MsgBox ("Do you want to save the changes that was made to the comment field?", vbInformation + vbYesNo, "SuperCOM")
+    if result = vbYes then
+        projMemb.ChangeIdentity(1)
+    else
+        projMemb.CancelChanges
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

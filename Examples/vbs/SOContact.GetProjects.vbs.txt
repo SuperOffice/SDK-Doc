@@ -1,0 +1,16 @@
+dim objso
+dim collprojs
+dim proj
+dim msg 
+set objso =  createobject("superoffice.application")
+If not (objSO is nothing) Then
+    set collprojs = objso.currentcontact.getprojects()
+    for each proj in collprojs
+        msg = msg & proj.name 
+        msg = msg & chr(13) & chr(10)
+    next
+    msgbox msg, vbinformation + vbokonly, "supercom"  
+else
+    msgbox "unable to connect to database"
+end if
+set objso = nothing

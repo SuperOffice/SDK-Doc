@@ -1,0 +1,10 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim person As SOPerson = db.GetPerson(7)
+    If Not person.HasPicture Then
+        person.Picture.ReadFromFile("c:\torrdal.jpg")
+    End If
+    person.Save()
+Else
+    MsgBox("failed to log in")
+End If

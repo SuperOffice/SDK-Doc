@@ -1,0 +1,20 @@
+dim objSO
+set objSO = CreateObject("SuperOfficeDB.Database")
+enUrlEncodingANSI = 2
+enUrlEncodingUnicode = 3
+If not (objSO is nothing) Then
+	objSO.Login "USERNAME", "PASSWORD"
+    str = "Dear <atfn>, have <name> received our offer? " & vbCrLf & "Best regards <auth>"
+    MsgBox objSO.SubstituteTemplateVars(str,2,2,1,1, False, False, False),, "Url encoding template variables false"
+    MsgBox objSO.SubstituteTemplateVars(str,2,2,1,1, False, False, True),, "Url encoding template variables true"
+   
+    MsgBox objSO.SubstituteTemplateVarsEx (str, 2, 2, 1, 1, 0, 0, 0, 4, false, false, false, false),, "Url encoding template variables false"
+    MsgBox objSO.SubstituteTemplateVarsEx (str, 2, 2, 1, 1, 0, 0, 0, 4, false, false, true, false),, "Url encoding template variables true"
+    
+    MsgBox objSO.SubstituteTemplateVarsUrlEncoding (str, 2, 2, 1, 1, 0, 0, 0, 4, false, false, enUrlEncodingANSI, false),, "Url encoding template variables ansi"
+    MsgBox objSO.SubstituteTemplateVarsUrlEncoding (str, 2, 2, 1, 1, 0, 0, 0, 4, false, false, enUrlEncodingUnicode, false),, "Url encoding template variables unicode"    
+   
+else
+    msgbox "unable to connect to database"
+end if
+set objso = nothing

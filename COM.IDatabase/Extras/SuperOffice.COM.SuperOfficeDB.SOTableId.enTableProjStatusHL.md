@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableProjStatusHL
+
+= 90
+

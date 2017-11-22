@@ -1,0 +1,5 @@
+Sub OnCurrentPersonFieldChanged(fieldname)
+	if fieldname = "person.position_idx" then
+		SOMessageBox "The persons position is changed, should you update person interests?"
+	end if	
+End Sub

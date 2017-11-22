@@ -1,0 +1,36 @@
+dim objdb
+dim udef
+dim udefs
+set objdb = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objdb.login  "<userID>", "<password>"
+    set cont = objdb.getcontact(1)
+    set udefs = cont.udef
+    for each udef in udefs
+        item = item  & "lable = " & udef.label  & vbcrlf
+        item = item  & "defaultvalue = " & udef.defaultvalue & vbcrlf
+        item = item  & "fieldid = " & udef.fieldid & vbcrlf
+        item = item  & "fieldtype = " & udef.fieldtype & vbcrlf
+        item = item  & "isindexed = " & udef.isindexed & vbcrlf
+        item = item  & "ismandatory = " & udef.ismandatory & vbcrlf
+        item = item  & "isreadonly = " & udef.isreadonly & vbcrlf
+        item = item  & "lableh = " & udef.labelh  & vbcrlf
+        item = item  & "lablew = " & udef.labelw  & vbcrlf
+        item = item  & "lablex = " & udef.labelx  & vbcrlf
+        item = item  & "labley = " & udef.labely  & vbcrlf
+        item = item  & "listtableid = " & udef.listtableid & vbcrlf
+        item = item  & "showonpage1 = " & udef.showonpage1 & vbcrlf
+        item = item  & "taborder = " & udef.taborder & vbcrlf
+        item = item  & "textlength = " & udef.textlength & vbcrlf
+        item = item  & "tooltip = " & udef.tooltip & vbcrlf
+        item = item  & "value = " & udef.value & vbcrlf
+        item = item  & "valueh = " & udef.valueh  & vbcrlf
+        item = item  & "valuew = " & udef.valuew  & vbcrlf
+        item = item  & "valuex = " & udef.valuex  & vbcrlf
+        item = item  & "valuey = " & udef.valuey  & vbcrlf
+        item = item  & "________________________________" & vbcrlf
+    next
+    msgbox item
+else
+    msgbox  "unable to connect to database"
+end if

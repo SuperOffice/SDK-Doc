@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableWinPosSize
+
+= 208
+

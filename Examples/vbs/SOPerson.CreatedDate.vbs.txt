@@ -1,0 +1,10 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    MsgBox "Current contact person created date: " & objSO.CurrentPerson.CreatedDate, vbInformation + vbOKOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing
+
+ 

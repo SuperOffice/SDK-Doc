@@ -1,0 +1,18 @@
+Dim objSO
+Dim result
+Dim id
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    id = objSO.CurrentSale.Identity
+    objSO.CurrentSale.SaleText = "This text been changed"
+    result = MsgBox ("The text of the current sale has been changed, do you want to save these changes?", vbInformation + vbYesNo, "SuperCOM")
+    if result = vbYes then
+        objSO.CurrentSale.ChangeIdentity(id)
+    else
+        objSO.CurrentSale.CancelChanges()
+        msgbox "The Sale changes was not saved", vbInformation + vbOkOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

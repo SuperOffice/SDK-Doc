@@ -1,0 +1,10 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+Set objCtx = objSO.Context
+edit = objCtx.EditMode
+ 
+if edit = True then
+    msgbox "Editmode = True. The user is currently editing something in GUI."
+else
+    msgbox "The user is not currently editing."
+end if

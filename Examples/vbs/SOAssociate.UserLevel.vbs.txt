@@ -1,0 +1,8 @@
+dim objso
+set objso =  CreateObject("superoffice.application")
+If not (objSO is nothing)  then 
+    MsgBox "Our contact on current contact has Userlevel: " & objSO.CurrentContact.Associate.UserLevel, vbInformation + vbOKOnly, "Associate UserLevel"
+else
+    msgbox "unable to connect"
+end if
+set objso = nothing

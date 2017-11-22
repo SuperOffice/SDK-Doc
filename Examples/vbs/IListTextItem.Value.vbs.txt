@@ -1,0 +1,10 @@
+dim objso
+set objso  = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    'get  a currency item (nok)
+    set list = objso.database.getlistitem  (112, 76 )
+    msgbox "currency: "  & list.text  & " rate value: " & list.value("rate")
+else
+    msgbox  "unable to connect to database"
+end if
+set objso  = nothing

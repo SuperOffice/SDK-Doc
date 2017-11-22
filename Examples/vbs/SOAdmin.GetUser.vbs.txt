@@ -1,0 +1,30 @@
+dim objso
+dim person
+dim user
+set objso  = CreateObject("superoffice.application")
+if not (objso is nothing) then
+    set persons = objso.database.getassociatelist
+    for each person in persons
+        if person.loginname  = "hugo" then
+            exit for
+        end if
+    next
+    if not (person is nothing) then
+        set user = objso.database.admin.getuser(person)
+        msg = msg  & "is the user travelling? " & user.isontravel  & vbcrlf
+        msg = msg  & "may we edit login name " & user.caneditloginname  & vbcrlf
+        msg = msg  & "may we edit password " & user.caneditpassword  & vbcrlf
+        msg = msg  & "may we edit usergroup " & user.caneditusergroup & vbcrlf
+        msg = msg  & "may we edit userlevel " & user.canedituserlevel & vbcrlf
+        msg = msg & "person_id " &  user.personid & vbcrlf
+        msg = msg & "usergroup "  & user.groupid & vbcrlf
+        msg = msg  & "is this current user? " & user.iscurrentuser  & vbcrlf
+        msgbox msg
+        result = msgbox("do  you want to delete this user?", vbyesno)
+    else
+        msgbox "there where no user  with username hugo in this database"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

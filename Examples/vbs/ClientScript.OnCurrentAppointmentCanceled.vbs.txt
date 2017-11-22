@@ -1,0 +1,3 @@
+Sub OnCurrentAppointmentCanceled
+	SOMessageBox "The current apointments changes was canceled"
+End Sub

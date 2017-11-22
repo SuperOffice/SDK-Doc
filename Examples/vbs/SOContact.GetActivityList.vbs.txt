@@ -1,0 +1,17 @@
+Dim objSO As SOApplication
+Dim collActs
+Dim Act 
+Dim msg
+
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Set collActs = objSO.CurrentContact.GetActivityList(enAListAll)
+    For Each Act In collActs
+        msg = msg & Act.Description & " - " & Act.Date
+        msg = msg & Chr(13) & Chr(10)
+    Next
+    MsgBox msg, vbInformation + vbOKOnly, "SuperCOM"
+Else
+    MsgBox "Unable to connect to database"
+End If
+Set objSO = Nothing

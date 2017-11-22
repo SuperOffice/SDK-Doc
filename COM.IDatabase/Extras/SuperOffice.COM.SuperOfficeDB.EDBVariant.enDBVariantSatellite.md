@@ -1,0 +1,5 @@
+
+##SUMMARY: enDBVariantSatellite
+
+Satellite database
+

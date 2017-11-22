@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableLanguageInfo
+
+= 210
+

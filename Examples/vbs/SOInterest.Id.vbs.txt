@@ -1,0 +1,14 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = objSO.CurrentContact.Interests.Count    
+    if result > 0 then
+        msgbox "Current company has " & result & " active interests" & vbCrLf & vbCrLf & "The first interest has contactinterest_id = " &         objSO.CurrentContact.Interests.item(1).id, vbInformation + vbOkOnly, "SuperCOM"
+    else    
+        msgbox "The current company has no active interests", vbInformation + vbOkOnly, "SuperCOM"     
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if 
+Set objSO = Nothing

@@ -1,0 +1,17 @@
+Sub OnCurrentSaleBeforeSave
+' requires a userdefined field named 
+' "Next service" as date and "Extra info" as string defined on sale
+' This script may be used e.g in a periode where you have special offers for sale
+
+'If this is a new sale, then set Next service and special offer
+if Currentsale.identity = 0 then
+    set theSale = Currentsale
+    set udefs = theSale.udef
+        
+    For Each udef In udefs
+	'Ser next service to three months from today
+        If udef.label = "Next service" Then udef.value = DateAdd("m", 3, Now())
+	if udef.label = "Extra info" then udef.value = "Special offer"
+    Next
+end if
+End Sub

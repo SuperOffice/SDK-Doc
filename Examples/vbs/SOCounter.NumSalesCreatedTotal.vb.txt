@@ -1,0 +1,10 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim contact As SOContact = db.GetContact(3)
+    Dim count As SOCounters = contact.Counters()
+    Dim msg As String = contact.Name
+    msg += " - " & count.NumSalesCreatedTotal(EnSaleStatus.enSaleSold, db.GetListItem(SOTableId.enTableAmountClass, 1))
+    MsgBox(msg)
+Else
+    MsgBox("could not log on")
+End If

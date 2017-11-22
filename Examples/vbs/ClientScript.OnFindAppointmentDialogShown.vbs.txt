@@ -1,0 +1,4 @@
+Sub OnFindAppointmentDialogShown
+	SOMessageBox "Find appointment dialog is shown"
+	
+End Sub

@@ -1,0 +1,8 @@
+dim objSO
+
+set objSO  = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    msgbox "number of async users left " & objso.database.admin.numasynchusersleft  
+else
+    msgbox  "failed to connect to the database"
+end if

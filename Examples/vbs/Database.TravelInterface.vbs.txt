@@ -1,0 +1,15 @@
+dim objso
+dim objti
+set objso =  CreateObject("superofficedb.database")
+If not (objSO is nothing) Then
+    objso.login  "<userid>", "<password>"
+    set  objti = objso.travelinterface
+    if  objti.istravelling then
+        msgbox  "we are travelling"
+    else
+       msgbox  "we are not travelling"
+    end  if
+else
+    msgbox  "unable to connect to database"
+end if
+set objso = nothing

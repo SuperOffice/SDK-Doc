@@ -1,0 +1,5 @@
+
+##SUMMARY: enCriterionLinkTypeOr
+
+Or
+

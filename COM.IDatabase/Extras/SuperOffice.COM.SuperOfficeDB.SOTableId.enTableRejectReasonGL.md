@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableRejectReasonGL
+
+= 223
+

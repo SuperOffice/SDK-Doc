@@ -1,0 +1,3 @@
+sub OnCurrentPersonIdentityChanged
+	msgbox "User moved to another contact person"
+end sub

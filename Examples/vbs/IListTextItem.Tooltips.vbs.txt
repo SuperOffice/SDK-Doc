@@ -1,0 +1,8 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application") 
+If not (objSO is nothing) Then
+    MsgBox "Current contact business type tooltip: " & objSO.CurrentContact.Business.tooltip, vbInformation + vbOKOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

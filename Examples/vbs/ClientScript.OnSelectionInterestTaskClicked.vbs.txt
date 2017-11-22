@@ -1,0 +1,3 @@
+Sub OnSelectionInterestTaskClicked
+		SOMessageBox "Add/Remove interests button was clicked on selection task panel"
+End Sub

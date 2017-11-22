@@ -1,0 +1,14 @@
+Dim objSO
+Dim result
+Dim intID
+Dim inttext
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = objSO.CurrentContact.interests.count
+    if result > 0 then
+        intID = objSO.currentcontact.interests.Item(1).interestid
+        inttext = objSO.Database.GetListItem(enTableContInt, intID).text
+        msgbox "Current company first active ContactInterest name: " & inttext, vbInformation + vbOkOnly, "SuperCOM"
+    else
+        msgbox "The current company has no active interest defined", vbInformation + vbOkOnly, "SuperCOM"
+end if

@@ -1,0 +1,5 @@
+
+##SUMMARY: enUrlEncodingANSI
+
+Ansi
+

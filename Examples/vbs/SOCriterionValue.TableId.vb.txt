@@ -1,0 +1,17 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim selection As SOSelection = db.GetSelection(25)
+    Dim msg As String
+    Dim criterion As SOCriterion = selection.Criteria.GetUdefCriterion(EnUDefType.enUDefContact, "Creative contact:")
+    For Each value As SOCriterionValue In criterion.Values
+        msg += "Double: " & value.Double & vbCrLf
+        msg += "ListItem: " & value.ListItem & vbCrLf
+        msg += "Long: " & value.Long & vbCrLf
+        msg += "String: " & value.String & vbCrLf
+        msg += "TableId: " & value.tableid.ToString & vbCrLf
+    Next
+    msg += vbCrLf
+    MsgBox(msg)
+Else
+    MsgBox("failed to log in")
+End If

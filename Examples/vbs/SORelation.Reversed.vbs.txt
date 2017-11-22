@@ -1,0 +1,31 @@
+Dim objSO, relation, cont
+Set objSO = CreateObject("SuperOfficeDB.Database")
+
+If objSO.Login("USERNAME","PASSWORD") Then
+    set relation = objSO.GetRelation (1)         
+    if relation.sourcetable = 5 then 'the source of the relation is a company
+        set cont = relation.sourcerecord
+        Source =  cont.name
+    else 'the source of the relation is a person, and source record would be 6
+        set pers = relation.sourcerecord
+        Source = pers.firstname & " " & pers.lastname & " from company " & pers.contact.name
+    end if
+    if relation.targettable = 5 then
+        Set cont = relation.targetrecord
+        target =  cont.name
+    else
+        set pers = relation.targetrecord
+        target = pers.firstname & " " & pers.lastname & " from company " & pers.contact.name
+    end if
+    msg = Source & " " & relation.ActiveText & " " & target & vbCrLf
+    msg = msg & target & " " & relation.PassiveText & " " & source & vbCrLf & vbCrLf
+    msg = msg & "Relation type = " & cstr(relation.Type )   & vbCrLf
+    msg = msg & "Relation comment = " & relation.Comment  & vbCrLf
+    msg = msg & "Relation sentry, are all required fields filled = " & relation.Sentry.AreAllRequiredFieldsFilled & vbCrLf
+    msg = msg & "Relation reversed = " & relation.Reversed & vbCrLf
+    msg = msg & "Relation GroupID = " & relation.GroupID & vbCrLf
+    msgbox msg,,"The relation:"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

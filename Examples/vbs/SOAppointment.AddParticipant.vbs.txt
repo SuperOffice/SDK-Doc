@@ -1,0 +1,14 @@
+dim appnt
+dim db
+set db = CreateObject("SuperOfficedb.Database")
+if db.Login("jr", "") then
+set appnt = db.GetAppointment(442)
+    appnt.InsertAppointmentPerson() ' If there is a person on the appointment, insert it as a participant
+    appnt.AddParticipant( db.GetPerson( 21 ) )
+    appnt.AddParticipant( db.GetPerson( 22 ) )
+    appnt.AddParticipant( db.GetAssociate( 9 ) )
+    appnt.Save
+    set appnt = nothing
+else
+   msgbox("could not log in")
+end if

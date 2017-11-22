@@ -1,0 +1,7 @@
+set app = CreateObject("Superoffice.application")
+set sale = app.Database.CreateSale
+sale.AmountAsFloat = 100.57
+sale.cost = 10.57
+msg = msg & "Amount = " & sale.AmountAsFloat & ". sale cost = " & sale.cost & vbCRLF
+msg = msg & "Earning = " & sale.Earning & ". Sale earning percent =  " & sale.earningpercent
+msgbox msg ,, "Sale"

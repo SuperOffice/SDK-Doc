@@ -1,0 +1,4 @@
+Sub OnSelectionAddOneMember
+	SOmessagebox "The add button was clicked on selection"
+	
+End Sub

@@ -1,0 +1,4 @@
+
+sub OnFindProject
+	somessagebox "Find button clicked from project panel"
+end sub

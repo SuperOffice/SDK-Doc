@@ -1,0 +1,9 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    projMemb = ObjSO.Database.GetProjectMember(1)
+    msgbox "The projectmember Type: " & projMemb.Type.Text, vbInformation + vbOKOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

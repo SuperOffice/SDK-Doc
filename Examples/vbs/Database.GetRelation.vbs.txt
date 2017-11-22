@@ -1,0 +1,24 @@
+dim objso
+set objso =  CreateObject("superofficedb.database")
+If not (objSO is nothing) Then
+    objso.login  "<username>", "<password>"
+    set  objrelation = objso.getrelation(2)
+    if objrelation.sourcetable = 5 then 'the  source of the relation is a company
+        set cont =  objrelation.sourcerecord
+        source = cont.name
+    else 'the source of the relation is a  person, and source record would be 6
+        set pers = objrelation.sourcerecord
+        source = pers.firstname  & " " & pers.lastname & " from company " &  pers.contact.name
+    end if
+    if objrelation.targettable = 5 then
+        set cont =  objrelation.targetrecord
+        target = cont.name
+    else
+        set pers =  objrelation.targetrecord
+        target = pers.firstname  & " " & pers.lastname & " from company " &  pers.contact.name
+    end if
+    msg = source & " "  & objrelation.activetext & " " & target & vbcrlf
+    msgbox msg,,"relation with relation_id  = 1 is between:"
+else
+    msgbox "unable to connect to  database"
+end if

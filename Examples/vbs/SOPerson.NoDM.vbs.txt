@@ -1,0 +1,9 @@
+Dim objSO
+Set objSO = Nothing
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    MsgBox "The current person No mailings setting" & objSO.CurrentPerson.NoDM, vbInformation + vbOkOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

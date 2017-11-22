@@ -1,0 +1,3 @@
+Sub OnBeforeLocalUpdateShutdown
+	SOMessageBox "Remember to turn your monitor off before you leave the office"
+End Sub

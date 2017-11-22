@@ -1,0 +1,22 @@
+Dim objSO
+Dim myProjs
+Dim myProj
+
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "USERID", "PASSWORD"
+    Set myProjs = objSO.Find.ProjectsWithLastCompletedActivity(enAppointAllCounters, Nothing, enDirectionAllCounters, enFindOpLessThanOrEqual, #1/1/2007#)
+    Set myProj = myProjs.GetFirst
+    While Not myProjs.EOF
+    
+        msg = msg & myProj.Name & vbCrLf
+        Set myProj = myProjs.GetNext
+    Wend
+    if msg <> "" then
+        MsgBox msg, vbInformation & vbOKOnly, "Projects matching search"
+    Else
+        MsgBox "No match"
+    End If
+End If
+
+Set objSO = Nothing

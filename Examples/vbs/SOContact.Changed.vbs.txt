@@ -1,0 +1,15 @@
+Dim objSO
+dim result
+
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = objSO.CurrentContact.Changed
+    if result = false then
+        MsgBox "Current company has been modified since it was loaded.", vbInformation + vbOKOnly, "SuperCOM"       
+    else
+        msgbox "The current company has NOT been modified since it was loaded.",  vbInformation + vbOKOnly, "SuperCOM"   
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

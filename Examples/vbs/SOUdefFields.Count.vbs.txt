@@ -1,0 +1,14 @@
+Dim objDB
+Dim udef
+Dim udefs
+Dim item
+Set objDB = CreateObject("SuperOfficeDB.Database")
+If Not (objDB is Nothing) Then
+    objDB.Login "<userID>", "<password>"
+    set cont = objDB.GetContact(1)
+    set udefs = cont.udef
+    item = "Number of userdefined fields defined on contact panel: " & udefs.count & vbCrLf
+    msgbox item
+else
+    MsgBox "Unable to connect to database"
+end if

@@ -1,0 +1,3 @@
+Sub OnCurrentDocumentNotModified
+	SOMessageBox "Current document was saved, but there where no changes"
+End Sub

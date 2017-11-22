@@ -1,0 +1,5 @@
+
+##SUMMARY: enTablePMembTypeGL
+
+= 92
+

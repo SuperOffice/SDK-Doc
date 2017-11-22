@@ -1,0 +1,5 @@
+sub OnCurrentProjectIdentityChanged
+  if currentproject.associate.identity = database.userassociateid then
+	somessagebox "This is my project"
+  end if
+end sub

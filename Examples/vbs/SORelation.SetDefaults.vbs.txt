@@ -1,0 +1,9 @@
+dim objso
+set objso = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    objSO.CurrentPerson.SetDefaults()
+    msgbox "Take a look at the current relation now, when you click OK the changes will be cancelled."
+    objSO.CurrentRelation.CancelChanges()
+else
+    msgbox "unable to connect to database"
+end if

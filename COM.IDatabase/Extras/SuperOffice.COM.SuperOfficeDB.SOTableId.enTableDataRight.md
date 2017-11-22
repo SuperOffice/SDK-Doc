@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableDataRight
+
+= 195
+

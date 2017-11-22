@@ -1,0 +1,8 @@
+Set soDB = CreateObject("SuperOffice.Application")
+
+Set myProject = soDB.CurrentProject
+myProject.AutoSaveOnChangeIdentity = True
+myProject.AutoSaveOnFlush = True
+myProject.Name = myProject.Description.Name & " autosave performed"
+MsgBox "If you now move another project or click shift+F5 the new description will be saved."
+

@@ -1,0 +1,13 @@
+Sub OnCurrentProjectFieldChanged(fullFieldName)
+  if fullFieldName = "project.associate_id" then	
+	if currentproject.associate.identity = database.userassociateid then
+	  Set newAppnt1 = database.CreateAppointment
+      	  newAppnt1.SetDefaults
+      	  newAppnt1.Project = CurrentProject
+      	  newAppnt1.task = database.GetListItemByName(67, "Meeting (Internal)")
+      	  newAppnt1.DoBy = DateAdd("d", 1, Now())
+      	  newAppnt1.Description = "This is now your project, have a stausmeeting to check progress..."
+      	  newAppnt1.Save
+	end if
+  end if	
+End Sub

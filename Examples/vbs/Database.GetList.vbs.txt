@@ -1,0 +1,13 @@
+dim objso
+dim objlistitems
+set objso = CreateObject("superofficedb.database")
+If not (objSO is nothing)  then
+    objso.login "<username>", "<password>"
+    set  objlistitems = objso.getlist(130)
+    for each item in objlistitems
+        msgbox item.text
+    next
+else
+    msgbox "unable to connect to database"
+end if
+set objso = nothing

@@ -1,0 +1,19 @@
+dim objSO
+set objSO = createobject("SuperOfficeDB.Database") 
+If not (objSO is nothing) Then
+    objSO.login "<username>", "<password>" 
+    Set myListTextItem = objSO.GetListItemByName(enTableDocTmpl, "Memo")
+    msg = "Template 'Memo' have the following doctmpl_id=" & myListTextItem.Id & " with tooltip: " & myListTextItem.Tooltip & vbCrLf
+    
+    Set myListTextItem = objSO.GetListItemByName(enTableCategory, "Customer")
+    msg = msg & "Category 'customer' have the category_id=" & myListTextItem.Id & vbCrLf
+        
+    Set myListTextItem = objSO.GetListItemByName(enTablePersPos, "Sales")
+    msg = msg & "Person position 'sales' have perspos_id=" & myListTextItem.Id & vbCrLf
+    
+    MsgBox msg
+
+else
+    msgbox "Unable to log in"
+end if
+set objSO = Nothing

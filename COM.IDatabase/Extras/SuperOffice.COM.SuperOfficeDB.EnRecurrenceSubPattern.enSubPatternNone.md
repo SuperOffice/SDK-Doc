@@ -1,0 +1,5 @@
+
+##SUMMARY: enSubPatternNone
+
+None
+

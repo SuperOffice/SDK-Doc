@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableRel
+
+= 52
+

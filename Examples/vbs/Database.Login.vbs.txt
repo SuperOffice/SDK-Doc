@@ -1,0 +1,12 @@
+Set objSO = CreateObject("SuperOfficeDB.Database")
+
+'Try login with AD authentication first
+if objSO.login ("", "") = true then  
+	Msg = "AD authentication"
+Else
+	objSO.login "ADM0", "" 
+	Msg = "SuperOffice authentication"
+End If
+
+
+msgbox Msg & vbCrLf & "Safecredentials: " & objSO.SafeCredentials

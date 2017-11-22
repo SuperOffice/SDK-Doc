@@ -1,0 +1,10 @@
+Sub OnPhoneDialled(phonenumber)
+    Set myApnt = Database.CreateAppointment
+    myApnt.SetDefaultsCall
+    myApnt.Contact = CurrentContact
+    myApnt.Person = CurrentPerson
+    myApnt.Description = phonenumber & ": called " & vbcrlf
+    myApnt.Save
+    SetContext myApnt.Identity, 3, 0  'enCtxAppointment = 3
+	
+End Sub

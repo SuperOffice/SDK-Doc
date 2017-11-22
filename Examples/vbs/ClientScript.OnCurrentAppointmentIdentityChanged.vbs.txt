@@ -1,0 +1,3 @@
+Sub OnCurrentAppointmentIdentityChanged
+	SOMessageBox "User moved to another appointment"
+End Sub

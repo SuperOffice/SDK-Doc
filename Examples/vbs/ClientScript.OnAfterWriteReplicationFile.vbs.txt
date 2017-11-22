@@ -1,0 +1,11 @@
+Sub OnAfterWriteReplicationFile
+
+    If Database.DataSourceVariant = 1 Then 'enDBVariantTravel
+	SOMessageBox "Make sure the file is sent to the central archive if you did not use SORT"
+    ElseIf Database.DataSourceVariant = 0 Then 'enDBVariantCentral
+	SOMessageBox "New updates ready for your satellites and travellers"    
+    ElseIf Database.DataSourceVariant = 2 Then ' enDBVariantSatellite
+	SOMessageBox "New updates ready for your central database and travellers"        
+    End If
+
+End Sub

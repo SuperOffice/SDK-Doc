@@ -1,0 +1,16 @@
+Dim objSO
+Dim a
+Dim objSettings
+Set objSO = CreateObject("SuperOfficeDB.Database")
+
+If Not (objSO Is Nothing) Then
+    a = objSO.Login("<userID>", "<password>")
+    Set objSettings = objSO.Database.Settings
+
+    MsgBox "Number of synchronizer sites: " & objSettings.SynchronizerSites
+
+Else
+    MsgBox "Unable to connect to database"
+End If
+
+Set objSO = Nothing

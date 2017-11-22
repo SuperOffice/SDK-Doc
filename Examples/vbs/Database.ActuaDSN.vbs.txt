@@ -1,0 +1,11 @@
+Dim objDB
+Set objDB = CreateObject("SuperOfficeDB.Database")
+ 
+If Not (objDB is Nothing) Then
+    objDB.Login "<userid>", "<password>"   ' Log in to the database
+    MsgBox "DSN: " & objDB.ActualDSN, vbInformation + vbOKOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+ 
+Set objSO = Nothing

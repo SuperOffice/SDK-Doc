@@ -1,0 +1,12 @@
+Dim objSO
+Dim objPerson
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "rp", ""
+    Set objPerson = objSO.GetPerson (2)
+         
+     MsgBox "Person with person_id=2: " & objPerson.FirstName
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

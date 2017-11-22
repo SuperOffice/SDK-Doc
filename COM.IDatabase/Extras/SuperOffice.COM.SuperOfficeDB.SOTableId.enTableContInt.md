@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableContInt
+
+= 70
+

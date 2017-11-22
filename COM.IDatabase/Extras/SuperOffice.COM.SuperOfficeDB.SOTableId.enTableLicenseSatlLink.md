@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableLicenseSatlLink
+
+= 239
+

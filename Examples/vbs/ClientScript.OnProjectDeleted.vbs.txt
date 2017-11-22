@@ -1,0 +1,20 @@
+Sub OnProjectDeleted(projId)
+
+	Set myProjects = Database.Find.ProjectsByName("Deleted - warnings")
+	set myProject = myProjects.GetFirst
+	If myProjects.EOF Then
+	    'No contact exist, create it.
+	    Set myProject = Database.CreateProject
+	    myProject.SetDefaults
+	    myProject.Name = "Deleted - warnings"
+	    myProject.Save
+	End If
+
+	Set soApnt = Database.CreateAppointment
+	soApnt.SetDefaults
+	soApnt.Contact = currentcontact
+	soApnt.Project = myProject
+	soApnt.Description = Now() & " Project_id=" & projID & "with name = " & currentproject.name & vbcrlf & "***** Was deleted *****"
+	soApnt.Save
+
+End Sub

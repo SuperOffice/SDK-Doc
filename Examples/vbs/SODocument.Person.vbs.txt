@@ -1,0 +1,14 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = objSO.CurrentDocument.person.Identity          
+    if result = 0 then
+        msgbox "The current document does not have a contact person!", vbInformation + vbOkOnly, "SuperCOM"
+    else
+        msgbox "Current document is written to person: " & objSO.CurrentAppointment.Person.FirstName & " " & objSO.CurrentAppointment.Person.LastName, vbInformation + vbOKOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

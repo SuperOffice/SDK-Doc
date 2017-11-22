@@ -1,0 +1,5 @@
+
+##SUMMARY: enUDFTShortTextEdit
+
+Short text
+

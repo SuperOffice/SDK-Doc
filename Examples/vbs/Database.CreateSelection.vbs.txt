@@ -1,0 +1,16 @@
+dim objdb
+dim objapp
+dim objsel
+dim objselmem
+dim objcontact
+set objapp =  CreateObject("superoffice.application")
+if not (objapp is nothing) then
+    set objdb = objapp.database
+    set objsel = objdb.createselection
+    objsel.setdefaults
+    objsel.name = "my customers"
+    objsel.save
+else
+    msgbox  "unable to connect to database"
+end if
+set objapp = nothing

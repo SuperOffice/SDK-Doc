@@ -1,0 +1,18 @@
+Dim objSO
+Dim objSelection
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "<userID>", "<password>"
+    Set objSelection = objSO.GetSelection(2)
+    'Remove the ' to load the Selection to buffer, and this objSelection will be valid. 
+    'test = objSelection.name
+          
+    if objSelection.Isvalid = true then
+        MsgBox "Selection with selection_id=2: " & objSelection.Name
+    else
+        msgbox "There is no selection in the buffer with selection_id=2"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

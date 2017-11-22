@@ -1,0 +1,10 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    set sele = objSO.currentSelection.SelectionMembers.item(1)
+    msgbox "First selection member:" & sele.Person.FormattedLabel
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

@@ -1,0 +1,11 @@
+Sub OnCurrentPersonBeforeSave
+' requires a userdefined field named 
+' "Next update" as date defined on person
+
+'If this is a new person, then set Next update interval
+if Currentperson.identity = 0 then
+    	'Ser next update a year from today
+        currentperson.udef.ByName("Next update").value = DateAdd("m", 12, Now())
+end if
+
+End Sub

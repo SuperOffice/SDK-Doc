@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableContIntHL
+
+= 72
+

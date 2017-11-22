@@ -1,0 +1,9 @@
+Sub OnAppointmentDialogShown
+if currentappointment.identity > 0 then
+  if currentappointment.completed = false then
+	somessagebox "You have not completed this appointment"
+
+ end if
+end if
+	
+End Sub

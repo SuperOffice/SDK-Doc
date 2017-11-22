@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableUdcontSmall
+
+= 35
+

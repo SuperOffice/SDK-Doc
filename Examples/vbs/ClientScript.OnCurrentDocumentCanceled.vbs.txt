@@ -1,0 +1,3 @@
+Sub OnCurrentdocumentCanceled
+	SOMessageBox "Current documents changes was canceled"
+End Sub

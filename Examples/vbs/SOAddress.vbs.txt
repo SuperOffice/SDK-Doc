@@ -1,0 +1,40 @@
+set objso = CreateObject("superofficedb.database")
+if objso.login("<USERNAME>", "<PASSWORD>") then
+    set contact = objso.GetContact(objso.OwnerContactId)
+        msg = msg & "************* Street address *************" & vbCrLf
+        msg = msg & "Address1: " &  contact.StreetAddress.Address1 & vbcrlf  
+        msg = msg & "Address2: " &  contact.StreetAddress.Address2 & vbcrlf  
+        msg = msg & "Address3: " &  contact.StreetAddress.Address3 & vbcrlf 
+        msg = msg & "AddressId: " &  contact.StreetAddress.AddressId & vbcrlf 
+        msg = msg & "City: " &  contact.StreetAddress.City & vbcrlf 
+        msg = msg & "CountryId: " &  contact.StreetAddress.CountryId & vbcrlf 
+        msg = msg & "County: " &  contact.StreetAddress.County & vbcrlf 
+        msg = msg & "FormattedAddress: " &  contact.StreetAddress.FormattedAddress & vbcrlf
+        msg = msg & "State: " &  contact.StreetAddress.State & vbcrlf 
+        msg = msg & "Type: " &  contact.StreetAddress.Type & vbcrlf  
+        msg = msg & "TypeIdx: " &  contact.StreetAddress.TypeIdx & vbcrlf 
+        msg = msg & "ValidFrom: " &  contact.StreetAddress.ValidFrom & vbcrlf 
+        'bug id 6147
+        'msg = msg & "ValidTo: " &  contact.StreetAddress.ValidTo() & vbcrlf 
+        msg = msg & "ZipCode: " &  contact.StreetAddress.ZipCode & vbcrlf  
+        msg = msg & "************* Postal address *************" & vbCrLf
+        msg = msg & "Address1: " &  contact.PostalAddress.Address1 & vbcrlf  
+        msg = msg & "Address2: " &  contact.PostalAddress.Address2 & vbcrlf  
+        msg = msg & "Address3: " &  contact.PostalAddress.Address3 & vbcrlf 
+        msg = msg & "AddressId: " &  contact.PostalAddress.AddressId & vbcrlf 
+        msg = msg & "City: " &  contact.PostalAddress.City & vbcrlf 
+        msg = msg & "CountryId: " &  contact.PostalAddress.CountryId & vbcrlf 
+        msg = msg & "County: " &  contact.PostalAddress.County & vbcrlf 
+        msg = msg & "FormattedAddress: " &  contact.PostalAddress.FormattedAddress & vbcrlf
+        msg = msg & "State: " &  contact.PostalAddress.State & vbcrlf 
+        msg = msg & "Type: " &  contact.PostalAddress.Type & vbcrlf  
+        msg = msg & "TypeIdx: " &  contact.PostalAddress.TypeIdx & vbcrlf 
+        msg = msg & "ValidFrom: " &  contact.PostalAddress.ValidFrom & vbcrlf 
+        'bug id 6147
+        'msg = msg & "ValidTo: " &  contact.PostalAddress.ValidTo & vbcrlf 
+        msg = msg & "ZipCode: " &  contact.PostalAddress.ZipCode & vbcrlf  
+    msgbox msg, ,"SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

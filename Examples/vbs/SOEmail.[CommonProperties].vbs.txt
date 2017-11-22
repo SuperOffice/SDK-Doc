@@ -1,0 +1,21 @@
+Dim objSO
+Dim emailItem
+Dim msg
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    ' Select the first email from the currently selected contact
+    Set emailItem = objSO.CurrentContact.Emails.Item(1)
+    ' Create a message with information about the email address
+    msg = "Current contact email information: " + vbCrLf
+    msg = msg & "Id: " & emailItem.Id & vbCrLf
+    msg = msg & "Address: " & emailItem.Address & vbCrLf
+    msg = msg & "Description: " & emailItem.Description & vbCrLf
+    msg = msg & "Rank: " & emailItem.Rank & vbCrLf
+    msg = msg & "Protocol: " & emailItem.Protocol & vbCrLf
+    msg = msg & "Type: " & emailItem.Type & vbCrLf
+    
+    MsgBox msg, vbInformation + vbOKOnly, "Email Information"
+Else
+    MsgBox "Unable to create SuperOffice Application instance"
+End If
+Set objSO = Nothing

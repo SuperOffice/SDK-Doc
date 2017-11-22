@@ -1,0 +1,37 @@
+Dim soDB, myContact, myPerson
+Set soDB = CreateObject("SuperOfficeDB.Database")
+enTableCntry = 19
+ 
+If soDB.Login ("USERNAME", "PASSWORD") then
+
+Set myContact = soDB.CreateContact
+myContact.SetDefaults
+myContact.Name= "The Light company 5"
+myContact.Department = "The blue department"
+myContact.Emails.Add "info@lightcompany.xxx", "Information email address"
+myContact.Interests.Add (2)
+myContact.Phones.Add "123321123", "Orders"
+myContact.Phones.Add "123321111", "Information"
+myContact.OrgNr = "987654321"
+myContact.PostItText = "This company produces all our blue candle lights"
+myContact.StreetAddress.Address1= "Ligth avenue 1"
+myContact.PostalAddress.Address1="P.O.Box 123"
+myContact.PostalAddress.ZipCode = "1234"
+myContact.PostalAddress.City= "Lightsville"
+myContact.Country = soDB.GetListItemByName (enTableCntry, "Norway")
+myContact.Urls.Add "www.lightscompany.xxx", "Home page"
+myContact.Save
+
+Set myPerson = soDB.CreatePerson
+myPerson.SetDefaults
+myPerson.FirstName = "Mary"
+myPerson.LastName = "Jones"
+myPerson.Phones.Add "123321180", "Direct"
+myPerson.Emails.Add "mary@lightcompany.xxx", "Direct"
+myPerson.Information = "This is our sales rep"
+myPerson.Contact = myContact
+myPerson.Save
+
+Else
+	MsgBox "Unable to log in"
+End If

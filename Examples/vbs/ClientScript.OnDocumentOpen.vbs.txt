@@ -1,0 +1,3 @@
+Sub OnDocumentOpen
+	somessagebox currentdocument.description & " was opened"	
+End Sub

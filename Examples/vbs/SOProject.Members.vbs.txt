@@ -1,0 +1,14 @@
+Dim objSO
+Dim projmembs 
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    MsgBox "The current project has " & objSO.currentproject.members.count & " project members.", vbInformation + vbOkOnly, "SuperCOM"
+    Set projmembs = objSO.CurrentProject.Members
+    For Each projmember In projmembs
+        msg = msg & projmembs.Item(projmember.PersonId).Person.FirstName & " " &projmembs.Item(projmember.PersonId).Person.LastName & vbCrLf
+    Next
+    MsgBox "The current projects projectmembers names are:" & vbCrLf & msg, vbInformation + vbOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

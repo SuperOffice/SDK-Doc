@@ -1,0 +1,3 @@
+sub OnFindContact
+	somessagebox "OnFindContact"
+end sub

@@ -1,0 +1,11 @@
+dim objso
+set objso =  createobject("superofficedb.database")
+If not (objSO is nothing) Then
+    objso.login  "<userid>", "<password>" 
+    msg  = "owner contact id = " & objso.ownercontactid
+    msg  = msg & vbcrlf & "owner country id = " &  objso.ownercountryid
+    msgbox  msg, vbinformation, "supercom"
+else
+    msgbox  "unable to log in"
+end if
+set objso = nothing

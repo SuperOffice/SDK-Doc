@@ -1,0 +1,11 @@
+dim objdb 
+dim objsel
+set objdb =  CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objdb.login  "jr", ""
+    set  objsel = objdb.getselection(19)
+    msgbox  "selection with id=1 is called: " & objsel.name
+else
+    msgbox "could not log in"
+end if
+set objdb = nothing

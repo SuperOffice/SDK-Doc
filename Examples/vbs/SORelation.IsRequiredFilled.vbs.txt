@@ -1,0 +1,23 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    set soRelation = objSO.database.GetRelation(1)
+    if soRelation.isAvailable = true then
+        msgbox "SORelation with relation_id = 1 is available"
+    else
+        msgbox "SORelation with relation_id = 1 is not available"
+    end if
+    if soRelation.isValid = true then
+        msgbox "SORelation with relation_id = 1 is valid"
+    else
+        msgbox "SORelation with relation_id = 1 is not valid"
+    end if
+    if soRelation.isRequiredFilled = true then
+        msgbox "All required fields for SORelation with relation_id = 1 are filled."
+    else
+        msgbox "There are still some required fields on SORelation with relation_id = 1 that are not filled."
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

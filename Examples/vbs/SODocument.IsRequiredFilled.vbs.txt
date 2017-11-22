@@ -1,0 +1,22 @@
+Dim objSO
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "<USERID>", "<password>"
+    set cont = objSO.GetContact(1)
+    msg = "name= " & cont.Name & chr(10)
+    msg = msg & "IsAvailable = " & cont.IsAvailable & chr(10)
+    msg = msg & "IsValid = " & cont.IsValid & chr(10)
+    msg = msg & "RequiredFilled = " & cont.IsRequiredFilled 
+    MsgBox msg, 0, "Contact 1"
+ 
+    'most likely, this contact will not be a contact in your database
+    set cont = objSO.GetContact(12345678)
+    msg = "name= " & cont.Name & chr(10)
+    msg = msg & "IsAvailable = " & cont.IsAvailable & chr(10)
+    msg = msg & "IsValid = " & cont.IsValid & chr(10)
+    msg = msg & "RequiredFilled = " & cont.IsRequiredFilled 
+    MsgBox msg, 0, "Contact 12345678"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

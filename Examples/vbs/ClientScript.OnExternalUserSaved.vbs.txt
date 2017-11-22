@@ -1,0 +1,3 @@
+sub OnExternalUserSaved(associd)
+	somessagebox "OnExternalUserSaved " & associd
+end sub

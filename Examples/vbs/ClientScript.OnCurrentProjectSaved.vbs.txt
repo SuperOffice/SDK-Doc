@@ -1,0 +1,6 @@
+Sub OnCurrentProjectSaved
+' Check if a description is added!
+	if currentproject.description = "" then
+		somessagebox "You forgot to add a decription to this project!"
+	end if
+End Sub

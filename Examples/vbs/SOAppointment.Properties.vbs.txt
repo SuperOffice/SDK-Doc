@@ -1,0 +1,29 @@
+dim db
+Dim appnt, msg
+Set db = CreateObject("SuperOfficedb.Database")
+if db.login("<username>","<password>") then	
+    
+    set appnt = db.GetAppointment(458)
+    msg = "Description:" & appnt.Description & vbcrlf
+    msg = msg & "Appointment Owner: " & appnt.Associate.LoginName & vbcrlf
+    msg = msg & "Assigned by: " & appnt.AssignedBy & vbcrlf
+    msg = msg & "PrivateToGroup: " & appnt.PrivateToGroup.Id  & vbcrlf
+    msg = msg & "RecurrenceRuleId: " & appnt.RecurrenceRuleId & vbcrlf
+    msg = msg & "Location: " & appnt.Location & vbcrlf
+    msg = msg & "AllDayEvent: " & appnt.AllDayEvent & vbcrlf
+    msg = msg & "FreeBusy: " & appnt.FreeBusy & vbcrlf
+    msg = msg & "Group: " & appnt.Group.Id & vbcrlf
+    msg = msg & "RejectCounter: " & appnt.RejectCounter & vbcrlf
+    msg = msg & "RejectReason: " & appnt.RejectReason & vbcrlf
+    msg = msg & "Emailid: " & appnt.Emailid & vbcrlf
+    msg = msg & "AssignedBy: " & appnt.AssignedBy & vbcrlf
+    msg = msg & "PublishType: " & appnt.PublishType & vbcrlf
+    msg = msg & "IsRecurring: " & appnt.IsRecurring & vbcrlf
+    msg = msg & "Leadtime: " & appnt.LeadTime & vbcrlf
+    msg = msg & "UpdateMode: " & appnt.UpdateMode & vbcrlf
+
+    msgbox (msg)
+else
+    MsgBox "Could not log on"
+end if
+Set objSO = Nothing

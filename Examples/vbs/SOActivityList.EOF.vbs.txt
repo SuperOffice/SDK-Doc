@@ -1,0 +1,35 @@
+dim activitylistitem
+set objso = CreateObject("superofficedb.database")
+if objso.login("<username>", "<password>") then
+    set contacts = objso.find.contactsbyname("super")
+    set contact = contacts.getfirst
+    set activitylist = contact.getactivitylist(7)
+    set activitylistitem = activitylist.getfirst
+    while not activitylist.eof
+        msgbox activitylistitem.appointment.alarm, vbinformation + vbokonly,  "appointment.alarm"
+        msgbox activitylistitem.associate.fullname, vbinformation + vbokonly,  "associate.fullname"
+        msgbox activitylistitem.associatename, vbinformation + vbokonly,  "associatename"
+        msgbox activitylistitem.contactname, vbinformation + vbokonly, "contactname"
+        msgbox activitylistitem.date, vbinformation + vbokonly, "date"
+        msgbox activitylistitem.description, vbinformation + vbokonly, "description"
+        if not activitylistitem.document is nothing then
+            msgbox activitylistitem.document.header, vbinformation +  vbokonly, "document.header"
+        end if
+        msgbox activitylistitem.done, vbinformation + vbokonly, "done"
+        msgbox activitylistitem.iconid,  vbinformation + vbokonly, "iconid"
+        msgbox activitylistitem.identity, vbinformation + vbokonly, "identity"
+        msgbox activitylistitem.person.firstname & " " &  activitylistitem.person.lastname, vbinformation + vbokonly,  "person.firstname & person.lastname"
+        msgbox activitylistitem.personname, vbinformation + vbokonly, "personname"
+        msgbox activitylistitem.projectname, vbinformation + vbokonly, "projectname"
+        msgbox activitylistitem.rowtype, vbinformation + vbokonly, "rowtype"
+        if not activitylistitem.sale is nothing then
+            msgbox activitylistitem.sale.amount, vbinformation +  vbokonly, "sale.amount"
+        end if
+        msgbox activitylistitem.typetext, vbinformation + vbokonly, "typetext"
+        set activitylistitem = activitylist.getnext
+    wend
+    msgbox "end of activitylist", vbinformation + vbokonly, "supercom"
+else
+    msgbox "could not log on to superoffice", vbinformation + vbokonly,  "supercom"
+end if
+set objso = nothing

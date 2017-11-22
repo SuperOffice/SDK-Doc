@@ -1,0 +1,15 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = objSO.CurrentSelection.UpdatedAssociate.Identity       
+    if result = 0 then
+        msgbox "The current selection has never been updated!", vbInformation + vbOkOnly, "SuperCOM"
+    else
+        msgbox "Current selection was last updated by: " & _
+        objSO.CurrentSelection.UpdatedAssociate.FullName, vbInformation + vbOKOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

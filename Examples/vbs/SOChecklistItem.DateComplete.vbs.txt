@@ -1,0 +1,42 @@
+dim objchecklists
+set  objso = CreateObject("superofficedb.database")
+enalistall  = 15 
+
+a =  objso.login("<userid>","<password>")
+if a then
+    set objchecklists =  objso.getchecklist(0, enalistall)
+    ownername = objchecklists.getownername
+    msgbox "owner (full name) of this checklist is: "  & ownername, vbinformation, "supercom"
+    set objchecklist =  objchecklists.getfirst
+    while not objchecklists.eof
+        for each item in objchecklists
+            msg = msg & "contactid:  " & item.contactid
+            msg = msg & chr(13)  & chr(10)
+            msg = msg & "contact name: " & item.contactname 
+            msg = msg & chr(13)  & chr(10)
+            msg = msg & "contact department: " & item.contactdepartment
+            msg = msg & chr(13)  & chr(10)
+            msg = msg & "datecomplete: " & item.datecomplete 
+            msg = msg & chr(13)  & chr(10)	
+            msg = msg & "typetext: " & item.typetext 
+            msg = msg & chr(13) & chr(10)
+            msg = msg & "prioritytext: " & item.prioritytext 
+            msg = msg & chr(13)  & chr(10)
+            msg = msg & "done:  " & item.done 
+            msg = msg & chr(13)  & chr(10)
+            msg = msg & "prioritytext: " & item.prioritytext 
+            msg = msg & chr(13)  & chr(10)
+            msg = msg & "rowtype: " & item.rowtype 
+            msg = msg & chr(13)  & chr(10)
+            msg = msg & "tableid: " & item.tableid
+            msg = msg & chr(13) & chr(10)
+            msg = msg & "description: " & item.description
+            msgbox msg
+            msg  = ""
+        next
+    wend
+    msgbox "no more checklist items  in this checklist.", vbinformation, "supercom"
+else
+    msgbox "unable to connect to  database"
+end if
+set objso = nothing

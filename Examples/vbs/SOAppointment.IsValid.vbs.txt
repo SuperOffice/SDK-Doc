@@ -1,0 +1,17 @@
+Dim objSO
+Dim objAppointment
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "<USERID>", "<PASSWORD>"
+    Set objAppointment = objSO.GetAppointment (2)
+    'Remove the ' to load the contact to buffer, and this objContact will be valid. 
+    'test = objAppointment.description
+          
+    if objAppointment.Isvalid = true then
+        MsgBox "Appointment with Appointment_id=2: " & objAppointment.Description
+    else
+        msgbox "There is no Appointment in the buffer with Appointment_id=2"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if

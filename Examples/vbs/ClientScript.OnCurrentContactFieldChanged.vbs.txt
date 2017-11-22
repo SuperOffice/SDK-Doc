@@ -1,0 +1,9 @@
+
+Sub OnCurrentContactFieldChanged (fieldname)
+	if fieldname = "contact.associate_id" then
+		set soApnt = database.createappointment
+		soApnt.SetDefaults
+		soApnt.Description "The owner was changed by: " & currentcontact.associate.fullname
+		soApnt.save
+	end if
+End Sub

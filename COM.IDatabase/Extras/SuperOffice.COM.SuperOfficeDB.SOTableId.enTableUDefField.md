@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableUDefField
+
+= 146
+

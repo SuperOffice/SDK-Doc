@@ -1,0 +1,7 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+Dim cur 
+Set cur = objSO.CurrentPerson
+    Msgbox "The current contact person is: " & cur.firstname & " " & cur.lastname, vbInformation + vbOkOnly, "SuperCOM"
+set cur = Nothing
+set objSO = Nothing

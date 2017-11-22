@@ -2,6 +2,9 @@
 uid: getting_started
 title: Getting Started
 ---
+<properties date="2017-11-24"
+SortOrder="3"
+/>
 
 This section will get you started using the database access components. It explains what the components are, describe the concepts around the components,  and how to use them for simple tasks.
 

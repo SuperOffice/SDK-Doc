@@ -1,0 +1,3 @@
+sub OnCurrentRelationIdentityChanged
+	msgbox "User moved to another relation"
+end sub

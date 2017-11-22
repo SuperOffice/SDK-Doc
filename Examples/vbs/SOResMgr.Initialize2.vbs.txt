@@ -1,0 +1,7 @@
+set resmgr = CreateObject("SuperOffice.ResMgr")
+
+resmgr.Initialize2 "NO", "c:\resources\soln32no.dll"
+resmgr.Initialize2 "US", "c:\superoffice\soln32us.dll"
+msgbox resmgr.get("us", 30305),,"us 30305"
+
+set resmgr = nothing

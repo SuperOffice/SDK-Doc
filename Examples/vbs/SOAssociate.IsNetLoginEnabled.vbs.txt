@@ -1,0 +1,37 @@
+Dim soDB, myAssoc
+Set soDB = CreateObject("SuperOfficeDB.Database")
+ 
+If soDB.Login ("USERNAME", "PASSWORD") then
+
+	Set myAssoc = sodb.GetAssociate(sodb.UserAssociateId)
+	msg = msg & "myAssoc.FullName: " & myAssoc.FullName & vbCrLf
+	msg = msg & "myAssoc.Group: " & myAssoc.Group & vbCrLf
+	msg = msg & "myAssoc.GroupID: " & myAssoc.GroupID & vbCrLf
+	msg = msg & "myAssoc.Identity: " & myAssoc.Identity & vbCrLf
+	msg = msg & "myAssoc.IdentName: " & myAssoc.IdentName & vbCrLf
+	msg = msg & "myAssoc.IsAsynchEnabled: " & myAssoc.IsAsynchEnabled & vbCrLf
+	msg = msg & "myAssoc.IsExtPersonAdmin: " & myAssoc.IsExtPersonAdmin & vbCrLf
+	msg = msg & "myAssoc.IsIntellisyncEnabled: " & myAssoc.IsIntellisyncEnabled & vbCrLf
+	msg = msg & "myAssoc.IsLoginEnabled: " & myAssoc.IsLoginEnabled & vbCrLf
+	msg = msg & "myAssoc.IsNetLoginEnabled: " & myAssoc.IsNetLoginEnabled & vbCrLf
+	msg = msg & "myAssoc.IsOutlookLinkEnabled: " & myAssoc.IsOutlookLinkEnabled & vbCrLf
+	msg = msg & "myAssoc.IsOutlookSynchronizerEnabled: " & myAssoc.IsOutlookSynchronizerEnabled & vbCrLf
+	msg = msg & "myAssoc.IsPrivateAppntEnabled: " & myAssoc.IsPrivateAppntEnabled & vbCrLf
+	msg = msg & "myAssoc.IsPublishEnabled: " & myAssoc.IsPublishEnabled & vbCrLf
+	msg = msg & "myAssoc.IsReportSDKEnabled: " & myAssoc.IsReportSDKEnabled & vbCrLf
+	msg = msg & "myAssoc.IsTravelEnabled: " & myAssoc.IsTravelEnabled & vbCrLf
+	msg = msg & "myAssoc.IsWebLoginEnabled: " & myAssoc.IsWebLoginEnabled & vbCrLf
+	msg = msg & "myAssoc.IsWinLoginEnabled: " & myAssoc.IsWinLoginEnabled & vbCrLf
+	msg = msg & "myAssoc.LoginName: " & myAssoc.LoginName & vbCrLf
+	msg = msg & "myAssoc.Person.FullName: " & myAssoc.Person.FullName & vbCrLf
+	msg = msg & "myAssoc.PersonId: " & myAssoc.PersonId & vbCrLf
+	msg = msg & "myAssoc.Role.Description: " & myAssoc.Role.Description & vbCrLf
+	msg = msg & "myAssoc.Type: " & myAssoc.Type & vbCrLf
+	
+	MsgBox msg
+	
+Else
+	MsgBox "Unable to log in"
+End If
+
+

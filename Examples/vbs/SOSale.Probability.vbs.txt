@@ -1,0 +1,10 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    MsgBox "Current sale Probability set by the user: " & objSO.CurrentSale.Propability.Text, vbInformation + vbOKOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing
+

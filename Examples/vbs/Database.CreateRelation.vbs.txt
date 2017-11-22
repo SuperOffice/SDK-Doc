@@ -1,0 +1,19 @@
+dim objso
+set objso  = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    set newrelation = objso.database.createrelation
+    'set  company with contact_id=1 to target
+    newrelation.targetrecord = objso.database.getcontact(3)
+    'set company with contact_id=2 as  source
+    newrelation.sourcerecord = objso.database.getcontact(2)
+    'set a type of relation, this will by default be: owns -  owned by
+    newrelation.type = 1
+    'add  a comment to the created relation
+    newrelation.comment = "relation created with supercom."
+    'save it to the database
+    newrelation.save
+    'set context to the relation panel of the target company.
+    objso.setcontext 1,0,13
+else
+    msgbox "unable to connect to database"
+end if

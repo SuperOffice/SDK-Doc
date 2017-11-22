@@ -1,0 +1,5 @@
+
+##SUMMARY: enRoleTypeExternal
+
+External
+

@@ -1,0 +1,19 @@
+Sub OnDocumentDialogClosed
+if currentdocument.identity > 0 then
+  if currentdocument.completed = false then
+	yesno = somessagebox ("You have not completed this document, do you want to add a followup?", "Document", 4)
+
+	if yesno = 2 then 
+		'User clicked Yes
+		      Set newAppnt1 = database.CreateAppointment
+      			newAppnt1.SetDefaults
+      			newAppnt1.Contact = CurrentDocument.Contact
+      			newAppnt1.Person = CurrentDocument.Person
+      			newAppnt1.task = database.GetListItemByName(67, "Follow-up")
+      			newAppnt1.DoBy = DateAdd("d", 1, Now())
+      			newAppnt1.Description = "Document not finished!"
+      			newAppnt1.Save
+	end if
+  end if
+end if	
+End Sub

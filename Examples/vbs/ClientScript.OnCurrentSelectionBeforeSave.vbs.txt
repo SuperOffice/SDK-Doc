@@ -1,0 +1,19 @@
+Sub OnCurrentSelectionBeforeSave
+
+dim selMembs
+Dim ownCont
+Dim theAppnt
+Set selMembs = soapp.CurrentSelection.SelectionMembers
+Dim item As SOSelectionMember
+For Each item In selMembs
+    If item.Contact.Identity = soapp.Database.OwnerContactId Then
+        Set ownCont = soapp.Database.GetContact(soapp.Database.OwnerContactId)
+         Set theAppnt = soapp.Database.CreateAppointment
+         theAppnt.SetDefaults
+         theAppnt.Contact = ownCont
+         theAppnt.Description = "Owner contact was added to the following selection: " & soapp.CurrentSelection.Name
+         theAppnt.Save
+    End If
+Next
+
+End Sub

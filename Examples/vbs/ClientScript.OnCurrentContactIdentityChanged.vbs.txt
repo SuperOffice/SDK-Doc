@@ -1,0 +1,3 @@
+Sub OnCurrentContactIdentityChanged
+	SOMessageBox "The user changed to another contact"
+End Sub

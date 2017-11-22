@@ -1,0 +1,23 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+dim per    ' one person
+Dim pers    ' all Persons of current Contact
+Dim isSales   ' boolean if Interest "Sales Contact" of this person has been set
+
+
+    isSales = false
+    set Pers = objSO.CurrentContact.GetPersons
+    For each per in pers 
+        If per.interests.Exists(46) then
+            isSales = true
+            SOMessageBOX per.lastname & " has Interest 'Sales Contact'."
+            Exit For
+         End If
+     Next
+     
+     If isSales = true Then
+         CurrentContact.Category = "GET Reseller Application"    'change the category
+    End If    
+
+
+

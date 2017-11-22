@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableSaleTypeHL
+
+= 151
+

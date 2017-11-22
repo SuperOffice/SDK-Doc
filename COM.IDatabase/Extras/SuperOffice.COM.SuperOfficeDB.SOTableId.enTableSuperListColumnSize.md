@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableSuperListColumnSize
+
+= 209
+

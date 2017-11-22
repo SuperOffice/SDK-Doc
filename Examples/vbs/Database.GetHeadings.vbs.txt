@@ -1,0 +1,14 @@
+dim objso
+dim objh
+dim headings
+set objso =  CreateObject("superofficedb.database")
+If not (objSO is nothing) Then
+    objso.login "<userid>", "<password>"
+    set headings = objso.getheadings(130)
+    For Each heading In headings
+        MsgBox heading.HeadingText, vbInformation + vbOKOnly, "supercom"
+    Next
+else
+    msgbox "unable to connect to database"
+end if
+set objso = nothing

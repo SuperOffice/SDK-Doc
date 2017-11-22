@@ -1,0 +1,10 @@
+Dim objSO
+Dim objPM
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    objSO.CurrentProject.Members.Remove(1)
+    MsgBox "The projectmember with person_id=1 was removed from the current projects members collection"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

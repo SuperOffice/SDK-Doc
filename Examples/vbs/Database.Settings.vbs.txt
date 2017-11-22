@@ -1,0 +1,18 @@
+dim objso
+set objso =  CreateObject("superofficedb.database")
+If not (objSO is nothing) Then
+    'these  setting does not require login.
+    set  setting = objso.settings
+    msg  = "language code: " & setting.languagecode
+    msg  = msg & vbcrlf
+    msg  = msg & "central archive path: " & setting.centralarchivepath
+    msg  = msg & vbcrlf
+    msg  = msg & "central data source: " & setting.centraldatasource
+    msg  = msg & vbcrlf
+    msg  = msg & "superof5.ini path: " & setting.superofinipath
+    msg  = msg & vbcrlf
+    msgbox  msg, vbinformation, "superoffice settings"
+else
+    msgbox  "unable to connect to database"
+end if
+set objso = nothing

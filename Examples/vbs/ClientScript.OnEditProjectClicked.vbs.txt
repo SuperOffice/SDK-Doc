@@ -1,0 +1,3 @@
+Sub OnEditProjectClicked
+	somessagebox "Edit project clicked"
+End Sub

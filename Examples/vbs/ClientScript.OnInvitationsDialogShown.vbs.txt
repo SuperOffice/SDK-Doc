@@ -1,0 +1,4 @@
+Sub OnInvitationsDialogShown
+	
+	SOMessageBox "Invitations dialog is shown"
+End Sub

@@ -1,0 +1,3 @@
+Sub OnFindDocumentDialogShown
+	SOMessageBox "Find document dialog shown"	
+End Sub

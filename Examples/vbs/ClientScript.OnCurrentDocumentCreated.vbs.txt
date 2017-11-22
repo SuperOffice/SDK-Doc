@@ -1,0 +1,7 @@
+Sub OnCurrentDocumentCreated
+
+If CurrentDocument.Template.Text = "Memo" Then
+    SOMessageBox "A new memo was created"
+End If
+	
+End Sub

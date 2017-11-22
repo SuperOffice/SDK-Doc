@@ -1,0 +1,5 @@
+Sub OnCurrentDocumentFieldChanged(fieldname)
+	if fieldname = "document.our_ref" then
+		SOMessageBox "You should not change the Our ref field of a saved document"
+	end if
+End Sub

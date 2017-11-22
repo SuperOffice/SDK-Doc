@@ -1,0 +1,21 @@
+dim objso, p1, p2
+set objso = CreateObject("superofficedb.database")
+if objso.login  ("<USERID>", "<password>") = true then
+    set p1 = objso.getdocument(2)
+    set p2 = objso.getdocument(3)
+    p1.foreignkey.set  "mail", "xyz", "alias", "value"
+    p1.foreignkey.set "mail",  "tux", "alias", "dummyvalue"
+    p2.foreignkey.set  "mail", "tux", "alias", "anotherdummyvalue"
+    p2.foreignkey.set  "mail", "xyz", "alias", "yetanotherdummyvalue"
+   
+    ' does not affect values set above
+    p1.foreignkey.remove  "mail", "xyz", "alias"
+    ' removes value from p1, but leaves "dummyvalue" on p1 alone
+    p1.foreignkey.remove  "mail", "xyz", "alias"
+    ' removes all values from p2, but leaves values on p1 alone
+    p2.foreignkey.removeall 
+    ' none of the  foreign keys are saved until the model is saved.
+    p1.save
+    p2.save
+    msgbox objso.find.idfromforeignkey  ("mail", "tux", "alias", "dummyvalue", 6)
+end if

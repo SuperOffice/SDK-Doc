@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableCurrencyGL
+
+= 113
+

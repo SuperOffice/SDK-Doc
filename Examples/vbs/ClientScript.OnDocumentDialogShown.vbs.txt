@@ -1,0 +1,7 @@
+Sub OnDocumentDialogShown
+if currentdocument.identity > 0 then
+  if currentdocument.completed = false then
+	somessagebox "You have not completed this document!"
+  end if	
+end if
+End Sub

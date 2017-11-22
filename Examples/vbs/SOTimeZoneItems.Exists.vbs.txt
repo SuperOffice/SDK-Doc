@@ -1,0 +1,25 @@
+Dim objSO, msg, tz
+Set objSO = CreateObject("SuperOfficeDB.Database")
+if objSO.login ("USERID", "PASSWORD") = true then
+Set tz = objSO.TimeZones
+
+	msg = msg & "Preferred timezone location_id: " & tz.PreferedTimeZoneLocationId & vbCrLf
+	msg = msg & "Diary timezone location_id: " & tz.DiaryTimeZoneLocationId & vbCrLf
+	msg = msg & "Convert current time to diary display time: " & tz.ConvertBase2DiaryDate(Now) & vbCrLf
+	msg = msg & "Database base time to UTC time: " & tz.ConvertBase2UTCDate(Now) & vbCrLf
+	msg = msg & "UTC time to databaes base time: " & tz.ConvertUTC2BaseDate(Now) & vbCrLf
+	msg = msg & "Convert current time to UK time: " & tz.ConvertBase2DisplayDate(Now, 503) & vbCrLf
+	msg = msg & "Convert " & Now & " UK time to prefered timezone time: " & tz.ConvertDisplay2BaseDate(Now, 503) & vbCrLf
+	msg = msg & "Get main cities for UK: " & tz.GetTimeZoneItemByCode("GB", #1/1/2007#).Cities & vbCrLf
+	msg = msg & "Country name of timezone location_id=263: " & tz.GetTimeZoneItemById(263, #1/1/2007#).CountryName & vbCrLf
+	msg = msg & "Number of timezones in this database: " & tz.GetTimeZoneItems(#1/1/2007#).Count & vbCrLf
+	msg = msg & "Is it empty? " & tz.GetTimeZoneItems(#1/1/2007#).Empty & vbCrLf
+	msg = msg & "Does timezone with location_id=243 exist? " & tz.GetTimeZoneItems(#1/1/2007#).Exists(243) & vbCrLf
+	msg = msg & "Countryname for timezone with location_id=243: " & tz.GetTimeZoneItems(#1/1/2007#).Item(243).CountryName & vbCrLf
+
+
+	MsgBox msg
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

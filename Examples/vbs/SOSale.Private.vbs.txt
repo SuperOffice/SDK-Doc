@@ -1,0 +1,18 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Select case objSO.CurrentSale.Private
+    Case 0
+        MsgBox "This sale can be read by anyone.", vbInformation + vbOKOnly, "SuperCOM"
+    Case 1
+        MsgBox "This sale can only be read/seen by the owner", vbInformation + vbOKOnly, "SuperCOM"
+    Case 2
+        MsgBox "This sale can only be read by members in owning associates group/dept", vbInformation + vbOKOnly, "SuperCOM"
+    Case else
+        MsgBox "This type must be new, I have no information regarding this type of privacy on appointments.", vbInformation + vbOKOnly, "SuperCOM"
+    end select
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

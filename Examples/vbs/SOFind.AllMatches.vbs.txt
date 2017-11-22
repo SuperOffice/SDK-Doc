@@ -1,0 +1,17 @@
+Dim objSO
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "<USERID>", "<password>"
+    no = 0
+    searchsValue = "979%"
+    result = objSO.find.Allmatches("Contact", "Contact_id", "OrgNr", searchsValue)
+    for each item in result
+        set cont = objSO.getContact(item) 
+        msgbox cont.name
+        no = no + 1
+    next
+    msgbox "There were " & no & " records that matched the search criteria"
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

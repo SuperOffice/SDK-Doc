@@ -1,0 +1,28 @@
+Dim db, Dates, Appnt
+Set db = CreateObject("SuperOfficeDB.Database")
+enPatternDaily = 1
+enSubPatternDaily_EveryDay = 2
+enThisAndForward = 2
+
+If db.Login("USERNAME", "PASSWORD") Then
+    
+    Set Appnt = db.GetAppointment(4)
+
+    Appnt.Recurrence.Pattern = enPatternDaily
+    Appnt.Recurrence.SubPattern = enSubPatternDaily_EveryDay
+    Appnt.Recurrence.StartDate = appnt.DoBy
+    Appnt.Recurrence.EndDate = DateAdd("d", 5, appnt.DoBy)
+    Appnt.UpdateMode = enThisAndForward
+    Set Dates = Appnt.Recurrence.ComputeDates
+    If Not Dates.Empty Then
+     For i = 0 To Dates.Count - 1
+      msg = msg & Dates.Item(i) & ", "
+      msg = msg & Dates.Exists(i) & vbCrLf
+     Next
+    MsgBox msg, vbInformation, "Appointments created on"
+    End If
+    
+    Appnt.Save
+Else
+    MsgBox ("failed to log in")
+End If

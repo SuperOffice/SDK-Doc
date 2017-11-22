@@ -1,0 +1,10 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+Set objCtx = objSO.Context
+
+DDate = objCtx.DiaryDate
+AssId = objCtx.DiaryAssociateId
+
+'Use the DiaryAssociateId to get the full name of the associate
+DiaryOwnerName = objSO.Database.GetAssociate(AssId).Fullname
+msgbox "The current date in " & DiaryOwnerName  & " diary is: " & DDate

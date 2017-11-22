@@ -1,0 +1,5 @@
+
+##SUMMARY: enCriterionLinkTypeUndefined
+
+Undefined
+

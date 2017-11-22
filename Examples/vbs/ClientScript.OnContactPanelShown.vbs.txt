@@ -1,0 +1,7 @@
+Sub OnContactPanelShown
+
+If CurrentContact.Identity = Database.OwnerContactId Then
+    SOMessageBox "This is the owner contact"
+End If
+	
+End Sub

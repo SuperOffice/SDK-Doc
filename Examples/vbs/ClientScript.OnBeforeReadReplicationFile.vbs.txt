@@ -1,0 +1,12 @@
+Sub OnBeforeReadReplicationFile
+
+    If Database.DataSourceVariant = 1 Then 'enDBVariantTravel
+	SOMessageBox "New updates will be added to the traveldatabase"            
+    ElseIf Database.DataSourceVariant = 0 Then 'enDBVariantCentral
+	SOMessageBox "New updates will be added to the central database"      
+    ElseIf Database.DataSourceVariant = 2 Then ' enDBVariantSatellite
+	SOMessageBox "New updates will be added to the satellite database"      
+    End If
+
+	
+End Sub

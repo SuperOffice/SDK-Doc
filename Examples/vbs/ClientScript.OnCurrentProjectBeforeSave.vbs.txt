@@ -1,0 +1,17 @@
+Sub OnCurrentProjectBeforeSave
+' requires a userdefined field named 
+' "Next service" as date and
+' "Technician" as associate list defined on project
+
+'If this is a new project, then set Next service
+if Currentproject.identity = 0 then
+    set cont = Currentproject
+    set udefs = cont.udef
+        
+    For Each udef In udefs
+	'Ser next service to three months from today
+        If udef.label = "Next service" Then udef.value = DateAdd("m", 3, Now())
+	If udef.label = "Technician" then udef.value = 2 'associate with associate_id=2
+    Next
+end if
+End Sub

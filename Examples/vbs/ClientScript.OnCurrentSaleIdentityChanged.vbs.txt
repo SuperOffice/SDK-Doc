@@ -1,0 +1,3 @@
+sub OnCurrentSaleIdentityChanged
+	msgbox "User moved to a new sale. Here you could add logic to see if anything was changed"
+end sub

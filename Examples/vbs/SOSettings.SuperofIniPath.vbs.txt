@@ -1,0 +1,12 @@
+Dim objSO
+Dim objSettings
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Set objSettings = objSO.Database.Settings
+    MsgBox "Path where the SuperOffice.ini file is located: " & objSettings.SuperOfIniPath
+    objSettings.SuperOfIniPath = "c:\SuperOffice2\SuperOf5.ini"
+    MsgBox "Path where the SuperOfX.ini file is located: " & objSettings.SuperOfIniPath
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

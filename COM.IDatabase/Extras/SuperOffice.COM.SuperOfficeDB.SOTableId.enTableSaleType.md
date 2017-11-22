@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableSaleType
+
+= 149
+

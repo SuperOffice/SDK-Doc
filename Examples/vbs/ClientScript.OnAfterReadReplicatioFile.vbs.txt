@@ -1,0 +1,10 @@
+Sub OnAfterReadReplicationFile
+    If Database.DataSourceVariant = 1 Then 'enDBVariantTravel
+ 	SOMessageBox "Check you diary for new appointments made by your co-workers."       
+    ElseIf Database.DataSourceVariant = 0 Then 'enDBVariantCentral
+    	SOMessageBox "New information added"
+    ElseIf Database.DataSourceVariant = 2 Then ' enDBVariantSatellite
+	SOMessageBox "New information added"
+    End If
+	
+End Sub

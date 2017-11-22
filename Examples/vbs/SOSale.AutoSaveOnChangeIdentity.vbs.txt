@@ -1,0 +1,8 @@
+Set soDB = CreateObject("SuperOffice.Application")
+
+Set mySale = soDB.CurrentSale
+mySale.AutoSaveOnChangeIdentity = True
+mySale.AutoSaveOnFlush = True
+mySale.Description = mySale.Description & " autosave performed"
+MsgBox "If you now move another sale or click shift+F5 the new description will be saved."
+

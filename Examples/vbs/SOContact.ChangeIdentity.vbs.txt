@@ -1,0 +1,19 @@
+Dim objSO
+Dim result
+Dim id
+
+Set objSO = CreateObject("SuperOffice.Application") 
+If not (objSO is nothing) Then
+    id = objSO CurrentContact.Identity
+    objSO.CurrentContact.Name = "This text been changed"
+    result = MsgBox ("The text of the current companies name has been changed, do you want to save these changes?", vbInformation + vbYesNo, "SuperCOM")
+    if result = vbYes then
+        objSO.CurrentContact.ChangeIdentity(id)
+    else
+        objSO.CurrentContact.CancelChanges()
+        msgbox "The Company changes were not saved", vbInformation + vbOkOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

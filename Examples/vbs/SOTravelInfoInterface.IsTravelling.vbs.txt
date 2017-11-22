@@ -1,0 +1,14 @@
+Dim objSO 
+Dim objTI 
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = objSO.Database.travelInterface.IsTravelling
+    if result = false then
+        MsgBox "This user is not travelling: " & objSO.Database.UserName, vbInformation + vbOKOnly, "SuperCOM"
+    else
+        Msgbox "This user is travelling: " & objSO.Database.UserName, vbInformation + vbOKOnly, "SuperCOM"
+    end if
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

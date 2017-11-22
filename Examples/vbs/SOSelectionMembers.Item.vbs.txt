@@ -1,0 +1,14 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    If objSO.CurrentSelection.SelectionMembers.Exists(1) then
+        Set objSM = objSO.CurrentSelection.SelectionMembers.Item(1)
+        MsgBox "The first SelectionMember of the current selection is: ” & objSM.ContactName
+    Else
+        MsgBox “The current contact has no URL’s”
+    End if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

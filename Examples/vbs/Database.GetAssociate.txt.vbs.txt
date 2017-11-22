@@ -1,0 +1,11 @@
+dim objso
+dim objassoc
+set objso = CreateObject("superofficedb.database")
+If not (objSO is nothing)  then
+    objso.login  "<userid>", "<password>"
+    set  objassoc = objso.getassociate  (12)
+    msgbox objassoc.fullname
+else
+    msgbox "unable to connect to database"
+end if
+set objso = nothing

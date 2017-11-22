@@ -1,0 +1,13 @@
+'Will get all resource items marked as Location
+set objso = CreateObject("superofficedb.database")
+If not (objSO is nothing) then
+    objso.login "ADM0", ""
+    set objLocations = objso.getlocationlist()
+    for each item in objLocations
+
+        msgbox item.text
+    next
+else
+    msgbox "unable to connect to database"
+end if
+set objso = nothing

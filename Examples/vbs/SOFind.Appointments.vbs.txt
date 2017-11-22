@@ -1,0 +1,21 @@
+Dim objSO
+Dim objFind
+Dim objAppoint
+Dim objA
+
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "<USERID>", "<password>"
+    set objFind = objSO.Find
+    set objAppoint = objFind.Appointments(objSO.UserAssociateId, #1/1/2000#, #12/31/2000#)
+    Set objA = objAppoint.GetFirst
+    no = 0
+    While Not objAppoint.EOF
+        no = no + 1
+        Set objA = objAppoint.GetNext
+    Wend
+    MsgBox "There were " & no & " appointments in the given time range for user with associate_id = " & objSO.UserAssociateID
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

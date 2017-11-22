@@ -1,0 +1,4 @@
+Sub OnSelectionMailMergeEnd
+ 	somessagebox "Did you forget to add a follow up, click yes to add it now", 2, "Mail merge end"
+	for each socontact in currentselection. 
+end sub

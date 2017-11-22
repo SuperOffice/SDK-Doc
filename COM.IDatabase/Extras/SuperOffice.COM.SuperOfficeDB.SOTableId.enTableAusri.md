@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableAusri
+
+= 41
+

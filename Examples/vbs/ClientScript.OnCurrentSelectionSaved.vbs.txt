@@ -1,0 +1,11 @@
+Sub OnCurrentSelectionSaved	
+If CurrentSelection.SelectionCategory.Text = "Campaign" Then
+    Set myApnt = Database.CreateAppointment
+    myApnt.SetDefaultsToDo
+    myApnt.Contact = Database.GetContact(Database.OwnerContactId)
+    myApnt.Description = "The campaign selection: " & CurrentSelection.Name & " was saved!"
+    myApnt.Save
+End If    
+
+	
+End Sub

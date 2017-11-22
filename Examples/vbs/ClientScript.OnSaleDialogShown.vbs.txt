@@ -1,0 +1,6 @@
+Sub OnSaleDialogShown
+  if currentsale.completed = false then
+	SOMessagebox "Good luck closing this sale!"
+  end if
+		
+End Sub

@@ -1,0 +1,8 @@
+Sub OnPersonFieldsChanged(action, identity, fieldIds, fieldNames) 
+    msg = "action: " & action & vbCRLF 
+    msg = msg & "identity: " & CStr( identity ) & vbCRLF 
+    msg = msg & "fieldIds: " & CStr( fieldIds ) & vbCRLF 
+    msg = msg & "fieldNames: " & CStr(fieldNames) & vbCRLF 
+ 
+    SOMessageBox  msg
+End Sub

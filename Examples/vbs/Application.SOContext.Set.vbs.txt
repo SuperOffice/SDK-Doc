@@ -1,0 +1,10 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    msgbox ("set contact panel with contact_id = 2 and the activityarchive active")	
+    'set contact panel with contact_id = 2 and the activityarchive active
+    objSO.Context.Set "superoffice:contact.main.activityarchive?contact_id=2"
+else
+    msgbox "Unable to connect"
+end if
+set objSO = Nothing

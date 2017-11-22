@@ -1,0 +1,5 @@
+dim objso
+set objso = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    msgbox objso.database.getdocument(2).getfilecopy
+end if

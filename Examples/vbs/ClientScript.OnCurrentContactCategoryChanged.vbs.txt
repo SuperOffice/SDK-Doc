@@ -1,0 +1,8 @@
+sub OnCurrentContactCategoryChanged (oldValue, newValue)
+	if newvalue = 4 then
+		set newApnt = database.createappointment
+		newApnt.SetDefaults
+		newApnt.description = "The category was changed from:" & oldvalue
+		newApnt.save
+	end if
+End Sub

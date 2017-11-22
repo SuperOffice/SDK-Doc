@@ -1,0 +1,18 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Select case objSO.CurrentAppointment.Status
+    Case 1
+        MsgBox "The sale is still open.", vbInformation + vbOKOnly, "SuperCOM"
+    Case 2
+        MsgBox "The sale is set as sold.", vbInformation + vbOKOnly, "SuperCOM"
+    Case 3
+        MsgBox "The sale is set as lost.", vbInformation + vbOKOnly, "SuperCOM"
+    Case else
+        MsgBox "This status must be new, I have no information regarding this sale status", vbInformation + vbOKOnly, "SuperCOM"
+    end select
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

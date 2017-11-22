@@ -1,0 +1,3 @@
+Sub OnCurrentPersonCanceled
+	SOMessageBox "Current persons changes was canceled"
+End Sub

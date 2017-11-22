@@ -1,0 +1,9 @@
+Dim objSO
+Set objSO = Nothing
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    MsgBox "The current contact person has this registered on his number field: " & objSO.CurrentPerson.number, vbInformation + vbOkOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

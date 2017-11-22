@@ -1,0 +1,3 @@
+Sub OnSelectionPanelShown
+	soMessagBox "Selection Panel shown"
+end sub

@@ -1,0 +1,4 @@
+
+sub OnExternalUsersDialogClosed
+	somessagebox "OnExternalUserDialogClosed"
+end sub

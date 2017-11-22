@@ -1,0 +1,20 @@
+Sub OnAppointmentDialogClosed
+if currentappointment.identity > 0 then
+  if currentappointment.completed = false then
+	yesno = somessagebox ("You have not completed this task, do you want to add a followup?", "Appointment", 4)
+
+	if yesno = 2 then 
+		'User clicked Yes
+		      Set newAppnt1 = database.CreateAppointment
+      			newAppnt1.SetDefaults
+      			newAppnt1.Contact = CurrentContact
+      			newAppnt1.Person = CurrentPerson
+      			newAppnt1.task = database.GetListItemByName(67, "Follow-up")
+      			newAppnt1.DoBy = DateAdd("d", 1, Now())
+      			newAppnt1.Description = "Task not finished"
+      			newAppnt1.Save
+	end if
+  end if
+end if
+	
+End Sub

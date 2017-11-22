@@ -1,0 +1,24 @@
+Dim soDB, myAppnt 
+Set soDB = CreateObject("SuperOfficeDB.Database")
+e
+If not (soDB is nothing) Then
+
+    soDB.Login "USERNAME", "PASSWORD"
+
+    Set myAppnt = soDB.CreateAppointment
+    myAppnt.SetDefaults
+    'set company to owner contact
+    myAppnt.Contact = soDB.GetContact(soDB.OwnerContactId)
+    'assign the appointment to associate with associate_id = 23
+    myAppnt.AssignTo soDB.GetAssociate(23), soDB.GetAssociate(soDB.Database.UserAssociateId)
+    'set timezone to UTC/GMT
+    myAppnt.TimeZoneLocationId = 2
+
+    If myAppnt.Sentry.AreAllRequiredFieldsFilled Then
+        myAppnt.Save
+    End If
+
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

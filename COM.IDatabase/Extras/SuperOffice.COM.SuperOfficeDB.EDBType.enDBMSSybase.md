@@ -1,0 +1,8 @@
+
+##SUMMARY: enDBMSSybase
+
+
+
+Sybase XI
+
+

@@ -1,0 +1,16 @@
+dim objso
+set objso = CreateObject("superofficedb.database")
+set objsoapp = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    objso.login "<USERID>", "<PASSWORD>"
+    if objsoapp.currentproject.identity  <> 0 then
+        set myproject = objso.getproject(objsoapp.currentproject.identity)
+        myproject.foreignkey.set "myapplication",  "mydevice", "mykey",  "this is my foreignkey"
+        msgbox myproject.name &  " has the following foreginkey set: " &  myproject.foreignkey.get ("myapplication",  "mydevice", "mykey")
+    else
+        msgbox "make a project and  try again"
+    end if
+else
+    msgbox "unable to connect to database"
+end if
+set objso = nothing

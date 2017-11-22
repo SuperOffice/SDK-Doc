@@ -1,0 +1,5 @@
+
+##SUMMARY: enType_MAX
+
+.
+

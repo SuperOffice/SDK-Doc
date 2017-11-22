@@ -1,0 +1,22 @@
+
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+    Set myDocument = objDB.GetDocument(2) 'get document with document_id=2
+    msg = msg & "Number of documents attached: " & myDocument.ActivityLinks.Documents.Count & vbCrLf
+    msg = msg & "Group id: " & myDocument.Group.Id & vbCrLf
+    msg = msg & "Private to group: " & myDocument.PrivateToGroup.Id & vbCrLf
+    msg = msg & "Publish type: " & myDocument.PublishType & vbCrLf
+    msg = msg & "Search name: " & myDocument.SearchName & vbCrLf
+    msg = msg & "Are all required fields filled: " & myDocument.Sentry.AreAllRequiredFieldsFilled & vbCrLf
+    msg = msg & "Number of userdefined fields: " & myDocument.UDef.Count & vbCrLf
+    
+    MsgBox msg, vbInformation, "SuperCOM"
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing

@@ -1,0 +1,18 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+    Set myRoles = objDB.Admin.GetRoles(enRoleTypeEmployee)
+      Set myRoles = objDB.Admin.GetRoles(enRoleTypeEmployee)
+
+    If myRoles.Exists(2) Then
+        MsgBox "The role with id 2 = " & myRoles.item(2).Name
+    End If
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing  

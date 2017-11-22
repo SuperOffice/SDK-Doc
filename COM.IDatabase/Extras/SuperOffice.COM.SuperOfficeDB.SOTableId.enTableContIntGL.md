@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableContIntGL
+
+= 71
+

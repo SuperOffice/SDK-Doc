@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableModuleLicense
+
+= 237
+

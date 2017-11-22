@@ -1,0 +1,15 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim picture As ISOPicture
+    Dim msg As String = ""
+    Dim person As SOPerson = db.GetPerson(7)
+    picture = person.Picture
+    msg = msg & "Height: " & picture.Height & vbCrLf
+    msg = msg & "Id: " & picture.Id & vbCrLf
+    msg = msg & "IsReadOnly: " & picture.IsReadOnly & vbCrLf
+    msg = msg & "Type: " & picture.Type & vbCrLf
+    msg = msg & "Width: " & picture.Width & vbCrLf
+    MsgBox(msg)
+Else
+    MsgBox("could not log on")
+End If

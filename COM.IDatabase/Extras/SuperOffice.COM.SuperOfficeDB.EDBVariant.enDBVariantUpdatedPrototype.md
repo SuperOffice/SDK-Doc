@@ -1,0 +1,5 @@
+
+##SUMMARY: enDBVariantUpdatedPrototype
+
+Updated prototype
+

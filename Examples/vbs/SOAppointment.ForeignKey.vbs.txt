@@ -1,0 +1,10 @@
+dim objsoapp
+set objsoapp  = CreateObject("superoffice.application")
+if not (objsoapp is nothing) then
+    set myappointment = objsoapp.currentappointment
+    myappointment.foreignkey.set "myapplication",  "mydevice", "mykey",  "this is my foreignkey"
+    msgbox myappointment.description  & " has the following foreginkey set: "  & myappointment.foreignkey.get ("myapplication", "mydevice",  "mykey")
+else
+    msgbox "unable to connect to database"
+end if
+set objso  = nothing

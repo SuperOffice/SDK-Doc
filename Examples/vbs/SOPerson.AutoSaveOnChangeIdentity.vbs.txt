@@ -1,0 +1,8 @@
+Set soDB = CreateObject("SuperOffice.Application")
+
+Set myPerson = soDB.CurrentPerson
+myPerson.AutoSaveOnChangeIdentity = True
+myPerson.AutoSaveOnFlush = True
+myPerson.Name = myPerson.lastname & " autosave performed"
+MsgBox "If you now move another person or click shift+F5 the new description will be saved."
+

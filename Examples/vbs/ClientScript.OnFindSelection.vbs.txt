@@ -1,0 +1,3 @@
+sub OnFindSelection
+	somessagebox "Find button clicked from selection panel"
+end sub

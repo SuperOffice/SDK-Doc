@@ -1,0 +1,8 @@
+Set soDB = CreateObject("SuperOffice.Application")
+
+Set mySel = soDB.CurrentSelection
+mySel.AutoSaveOnChangeIdentity = True
+mySel.AutoSaveOnFlush = True
+mySel.Name = mySel.Name & " autosave performed"
+MsgBox "If you now move another selection or click shift+F5 the new description will be saved."
+

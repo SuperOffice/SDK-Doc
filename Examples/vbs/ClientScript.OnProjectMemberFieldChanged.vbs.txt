@@ -1,0 +1,4 @@
+
+sub OnProjectMemberFieldChanged(fieldname)
+	somessagebox "OnProjectMemberFieldChanged " & fieldname
+end sub

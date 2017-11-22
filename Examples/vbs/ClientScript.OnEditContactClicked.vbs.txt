@@ -1,0 +1,3 @@
+Sub OnEditContactClicked
+	somessagebox "Edit contact clicked"
+End Sub

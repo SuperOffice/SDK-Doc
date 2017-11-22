@@ -1,0 +1,3 @@
+Sub OnCurrentPersonNotModified
+	SOMessagebox "Changes to current person was not saved"	
+End Sub

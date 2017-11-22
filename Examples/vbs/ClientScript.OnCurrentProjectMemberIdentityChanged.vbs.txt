@@ -1,0 +1,3 @@
+sub OnCurrentProjectMemberIdentityChanged
+	somessagebox "OnCurrentProjectMemberIdentityChanged"
+end sub

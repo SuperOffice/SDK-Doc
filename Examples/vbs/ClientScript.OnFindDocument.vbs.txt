@@ -1,0 +1,3 @@
+sub OnFindDocument
+	somessagebox "Find document clicked from View menu"
+end sub

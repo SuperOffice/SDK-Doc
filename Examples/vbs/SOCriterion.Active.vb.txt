@@ -1,0 +1,29 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim selection As SOSelection = db.GetSelection(25)
+    Dim msg As String
+    If Not selection.Criteria.Empty Then
+        For Each criterion As SOCriterion In selection.Criteria
+            msg += "Active: " & criterion.Active & vbCrLf
+            msg += "ExtraId: " & criterion.ExtraId & vbCrLf
+            msg += "fieldname: " & criterion.fieldname & vbCrLf
+            msg += "Identity: " & criterion.Identity & vbCrLf
+            msg += "Linktype: " & criterion.LinkType & vbCrLf
+            msg += "Operator: " & criterion.Operator & vbCrLf
+            msg += "SearchFieldId: " & criterion.SearchFieldId & vbCrLf
+            For Each value As SOCriterionValue In criterion.Values
+                msg += "Double: " & value.Double & vbCrLf
+                msg += "ListItem: " & value.ListItem & vbCrLf
+                msg += "Long: " & value.Long & vbCrLf
+                msg += "String: " & value.String & vbCrLf
+                msg += "TableId: " & value.tableid.ToString & vbCrLf
+            Next
+            msg += vbCrLf
+        Next
+        MsgBox(msg)
+    Else
+        MsgBox("selection contains no criteria")
+    End If
+Else
+    MsgBox("failed to log in")
+End If

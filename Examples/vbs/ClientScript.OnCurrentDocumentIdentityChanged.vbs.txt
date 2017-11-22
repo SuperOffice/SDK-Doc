@@ -1,0 +1,3 @@
+sub OnCurrentDocumentIdentityChanged
+	msgbox "User moved to another document"
+end sub

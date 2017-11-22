@@ -1,0 +1,71 @@
+Dim soDB, myContact, myPerson
+Set soDB = CreateObject("SuperOfficeDB.Database")
+enTableCntry = 19
+enTableBusiness = 61
+enTableCategory = 64
+ 
+If soDB.Login ("USERNAME", "PASSWORD") then
+
+    Set myContact = soDB.CreateContact
+    myContact.SetDefaults
+    myContact.Name = "The Light company 5"
+    myContact.Department = "The blue department"
+    'Associate, business, category, number1, number2 and country is also set automagically by SetDefaults
+    myContact.Associate = soDB.GetAssociate(soDB.UserAssociateId)
+    myContact.Business = soDB.GetListItemByName(enTableBusiness, "Services")
+    myContact.Category = soDB.GetListItemByName(enTableCategory, "Supplier")
+    myContact.Number1 = "THELIGHT"
+    myContact.Number2 = "12345"
+    myContact.Emails.Add "info@lightcompany.xxx", "Information email address"
+    myContact.Phones.Add "123321123", "Orders"
+    myContact.Phones.Add "123321111", "Information"
+    myContact.OrgNr = "987654321"
+    myContact.PostItText = "This company produces all our blue candle lights"
+    myContact.StreetAddress.Address1 = "Ligth avenue 1"
+    myContact.PostalAddress.Address1 = "P.O.Box 123"
+    myContact.PostalAddress.ZipCode = "1234"
+    myContact.PostalAddress.City = "Lightsville"
+    myContact.Country = soDB.GetListItemByName(enTableCntry, "Norway")
+    myContact.Urls.Add "www.lightscompany.xxx", "Home page"
+    myContact.Xstop = False
+    
+    If myContact.Sentry.AreAllRequiredFieldsFilled = True Then
+        myContact.Save
+        
+            'create a new contact person on the new company
+            Set myPerson = soDB.CreatePerson
+            myPerson.SetDefaults
+            myPerson.FirstName = "Mary"
+            myPerson.LastName = "Jones"
+            myPerson.Phones.Add "123321180", "Direct"
+            myPerson.Emails.Add "mary@lightcompany.xxx", "Direct"
+            myPerson.Information = "This is our sales rep"
+            myPerson.Contact = myContact
+            myPerson.Save
+        
+        msg = msg & "Contact saved with contact_id = " & myContact.Identity & vbCrLf
+        msg = msg & "Contact is created by " & myContact.CreatedAssociate.FullName & vbCrLf
+        msg = msg & "and belongs to usergroup " & myContact.Group.Text & vbCrLf
+        If myContact.UpdatedDate > #1/1/1970# Then
+            msg = msg & "Contact was last updated by: " & myContact.UpdatedAssociate.FullName & " at " & myContact.UpdatedDate
+        Else
+            msg = msg & "Contact has never been updated"
+        End If
+        
+        MsgBox msg
+
+	Else
+	    Dim myUdefs, udef
+	    Set myUdefs = myContact.udef
+	    For Each udef In myUdefs
+	        If udef.IsMandatory Then msg = msg & udef.Label & vbCrLf
+	    Next
+	        
+	    MsgBox "Mandatory fields that also need to be filled:" & msg
+	End If
+
+
+
+Else
+	MsgBox "Unable to log in"
+End If

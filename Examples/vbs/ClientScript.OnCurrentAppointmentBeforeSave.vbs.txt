@@ -1,0 +1,11 @@
+Sub OnCurrentAppointmentBeforeSave
+'Requires a user defined text field 
+'named "Extra info" defined on appointment
+
+If CurrentContact.Category.Text = "Business Partner" Then
+    If CurrentAppointment.Task.Id = Database.GetListItemByName(enTableTask, "Meeting (Internal)").Id Then
+        CurrentAppointment.UDef.ByName("Extra info").Value = "Special meeting"
+    End If
+End If
+
+End Sub

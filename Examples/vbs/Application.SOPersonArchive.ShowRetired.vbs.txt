@@ -1,0 +1,11 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+
+If not (objSO is nothing) Then
+    'Will turn off or on the retired checkbox
+    objSO.Activate
+    objSO.PersonArchive.ShowRetired = NOT objSO.PersonArchive.ShowRetired
+else
+    msgbox "Unable to connect"
+end if
+set objSO = Nothing

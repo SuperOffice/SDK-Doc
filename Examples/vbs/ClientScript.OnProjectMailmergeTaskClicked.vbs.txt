@@ -1,0 +1,5 @@
+Sub OnProjectMailmergeTaskClicked
+  if currentproject.associate.identity <> database.userassociateid then
+	somessagebox "The Mail merge task was clicked on a project I don't own..."
+  end if	
+End Sub

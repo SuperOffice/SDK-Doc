@@ -1,0 +1,13 @@
+Dim objSO
+Dim contact
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    if objSO.CurrentContact.Interests.Exists (1) then
+        MsgBox "The current contact has registered one or more active Company Interests”
+    else
+        MsgBox “The current contact has no active Company Interests registered”
+    end if 
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

@@ -1,0 +1,3 @@
+Sub OnCurrentProjectCanceled
+	SOMessageBox "Current projects changes was canceled"
+End Sub

@@ -1,0 +1,5 @@
+
+##SUMMARY: enOperatorGreaterThan
+
+Greater than
+

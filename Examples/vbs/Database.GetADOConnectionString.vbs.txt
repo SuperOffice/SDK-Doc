@@ -1,0 +1,23 @@
+Dim objdb
+Set objdb =  createobject("superofficedb.database")
+if not objdb is nothing then
+    isOk = objdb.login("<userid>", "<password>")
+    if isOk then
+       constr = objdb.GetAdoConnectionString
+       MsgBox constr, vbinformation + vbokonly, "Connection string"
+
+       set con = CreateObject("ADODB.Connection")
+       con.Open constr
+       Set rs = con.Execute("select * from associate where type = 1")
+       While not rs.eof
+           msg = msg & rs(1).Value & vbcrlf
+           rs.movenext
+       Wend
+       MsgBox msg, vbinformation + vbokonly, "List of resources"
+    else
+       MsgBox "unable to connect to  database"
+    end if
+else
+    MsgBox "unable to create database object"
+end if
+set objdb =  nothing

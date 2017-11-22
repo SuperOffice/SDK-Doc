@@ -1,0 +1,5 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+    Msgbox "Freetextsearch will open and search for SuperOffice ", vbInformation + vbOkOnly, "SuperCOM"
+    objSO.FreetextSearch("SuperOffice")
+set objSO = Nothing

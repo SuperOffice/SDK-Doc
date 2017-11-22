@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableAmountClassGL
+
+= 226
+

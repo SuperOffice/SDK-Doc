@@ -1,0 +1,45 @@
+Dim soDB, myProject, msg
+enPublishTypeExternal = 1
+enTableProjStatus = 88
+enTableProjType = 85
+
+Set soDB = CreateObject("SuperOfficeDB.Database")
+If soDB.Login ("USERNAME", "PASSWORD") Then
+
+
+    Set myProject = soDB.CreateProject
+    myProject.SetDefaults
+    myProject.Name = "Summer party 2007"
+    'This will be automagically set for you by using SetDefaults
+    myProject.Associate = soDB.GetAssociate(soDB.UserAssociateId)
+    myProject.Description = "The annual summer party where we invite all our large customers"
+    myProject.PostItText = "This years we will do a barbeque"
+    'This will fail if there is no "c:\summerparty.jpg"
+    myProject.Picture.ReadFromFile ("c:\summerparty.jpg")
+    'The project will be available through audience
+    myProject.PublishType = enPublishTypeExternal
+    myProject.Urls.Add "www.summerparty.xxx", "The summerparty website"
+    'This will be automagically set for you by using SetDefaults
+    myProject.ProjectNumber= 1234
+    myProject.Status = soDB.GetListItemByName(enTableProjStatus, "Planned")
+    myProject.Type  =  soDB.GetListItemByName (enTableProjType, "Other")
+        
+    If myProject.Sentry.AreAllRequiredFieldsFilled = True Then
+    	myProject.Save
+    	msg = msg & "Project saved with project_id = " & myProject.Identity & vbCrLf 
+    	msg = msg & "Project is created by " & myProject.CreatedAssociate.FullName & vbCrLf
+    	msg = msg & "and belongs to usergroup " & myProject.Group.Text & vbCrLf 
+    	If myProject.UpdatedDate > #1/1/1970# then
+    		msg = msg & "Project was last updated by: " & myProject.UpdatedAssociate.FullName & " at " & myProject.UpdatedDate 
+	else
+		msg = msg & "Project has never been updated"    
+	End If
+    	
+    	MsgBox msg
+    	
+    End If
+    
+else
+    MsgBox "Unable to log in"
+end if
+Set soDB = Nothing

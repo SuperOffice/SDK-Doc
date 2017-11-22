@@ -1,0 +1,25 @@
+dim db
+Dim msg, app, links, appnt
+Set db = CreateObject("SuperOfficedb.Database")
+if db.login("USERNAME","PASSWORD") then
+
+    set app = db.GetAppointment(3)
+    set links = app.ActivityLinks
+    links.AddAppointment(db.GetAppointment(2))
+    app.Save()
+    For Each appnt In links.Appointments
+        msg = msg & appnt.description & vbCrLf
+    Next
+
+    MsgBox(msg)
+
+    'remove the appointments
+    For Each appnt In links.Appointments
+        links.RemoveAppointment(appnt)
+    Next
+    app.Save()
+    MsgBox("done")
+else
+    MsgBox "Could not log on"
+end if
+Set objSO = Nothing

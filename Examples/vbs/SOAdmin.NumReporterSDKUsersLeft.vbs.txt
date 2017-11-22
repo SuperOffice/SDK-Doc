@@ -1,0 +1,8 @@
+dim objSO
+
+set objSO = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    msgbox "Number of reportersdk users left " & objso.database.admin.numreportersdkusersleft 
+else
+    msgbox  "Failed to connect to the database"
+end if

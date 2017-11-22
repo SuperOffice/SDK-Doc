@@ -1,0 +1,16 @@
+Dim objSO
+Dim objContact
+
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "<USERID>", "<PASSWORD>"
+    Set objContact = objSO.GetContact(2)         
+    if objContact.IsAvailable = true then
+        MsgBox "Contact with contact_id=2: " & objContact.Name
+    else
+        msgbox "There is no contact in the database with contact_id=2"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

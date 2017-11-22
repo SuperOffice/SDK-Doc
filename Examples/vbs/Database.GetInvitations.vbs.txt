@@ -1,0 +1,26 @@
+dim objSO
+set objSO = createobject("SuperOfficeDB.Database") 
+If not (objSO is nothing) Then
+    objSO.login "<username>", "<password>" 
+
+    Set myApnts = objSO.GetInvitations
+    Set myApnt = myApnts.GetFirst
+    
+    While Not myApnts.EOF
+        msg = "The " & myApnt.ActiveDate & " your invited to " & myApnt.Description & " it lasts for " & myApnt.Duration & " minutes"
+        answer = MsgBox(msg, vbYesNoCancel, "Do you want to accept the invitation?")
+        If answer = vbYes Then
+            myApnt.AcceptInvitation 1 '1 = enResponseAccept 
+        ElseIf answer = vbNo Then
+            myApnt.AcceptInvitation 0 '0 = enResponseReject 
+        Else
+            myApnt.AcceptInvitation 2 '2 = enResponseInvalid 
+        End If
+        Set myApnt = myApnts.GetNext
+    Wend
+
+
+else
+    msgbox "Unable to log in"
+end if
+set objSO = Nothing

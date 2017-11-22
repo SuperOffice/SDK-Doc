@@ -1,0 +1,14 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = MsgBox ("This will delete your current document, are you sure?", vbInformation + vbYesNo, "SuperCOM")
+    if result = vbYes then
+        objSO.CurrentDocument.Delete
+    else
+        msgbox “The document was not deleted?”, vbInformation + vbOkOnly, “SuperCOM”
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

@@ -1,0 +1,8 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If objSO.IsBusyWithModal=False then
+    Msgbox "SuperOffice CRM 5 is not busy with a modal dialog", vbInformation + vbOkOnly, "SuperCOM"
+Else
+    Msgbox "SuperOffice CRM 5 is busy with a modal dialog", vbInformation + vbOkOnly, "SuperCOM"
+End if
+set objSO = Nothing

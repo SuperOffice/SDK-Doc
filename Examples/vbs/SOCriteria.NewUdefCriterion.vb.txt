@@ -1,0 +1,15 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim selection As SOSelection = db.GetSelection(26)
+    'Remember that the FieldLabel argument must be written exactly as in the admin client. With the colon!
+    Dim criterion As SOCriterion = selection.Criteria.NewUdefCriterion(EnUDefType.enUDefContact, "Creative contact:", _
+        EnCriterionOperator.enBeginsWith)
+    criterion.Values.AddString("Hannah")
+    selection.Criteria.Add(criterion)
+
+    selection.Save()
+
+    MsgBox("criterion added")
+Else
+    MsgBox("failed to log in")
+End If

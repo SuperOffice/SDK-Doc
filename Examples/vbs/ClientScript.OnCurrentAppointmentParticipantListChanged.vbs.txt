@@ -1,0 +1,6 @@
+Sub OnAppointmentParticipantListChanged
+
+	SOMessageBox "There where changes to the participants"
+
+End Sub
+

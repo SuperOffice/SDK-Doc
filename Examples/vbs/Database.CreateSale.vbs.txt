@@ -1,0 +1,16 @@
+Dim objDB
+Dim objSale
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+    Set objSale = objDB.CreateSale
+    objSale.setdefaults
+    objSale.amount = 30000
+    ' Get the contact with the ID 3
+    objSale.contact = objDB.GetContact(3)
+    objSale.saletext = "instrumentation of the new cessna 172"
+    objSale.Save
+Else
+    MsgBox "Unable to connect to database"
+End If
+Set objDB = Nothing

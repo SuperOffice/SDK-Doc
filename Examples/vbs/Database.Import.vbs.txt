@@ -1,0 +1,11 @@
+dim objdb
+set objdb = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objdb.login  "<username>", "<password>"
+    if  (objdb.import("c:\imp\projmemb.dsc"))=true  then
+        msgbox "import successful", vbinformation  + vbokonly, "supercom"
+    end  if
+else
+    msgbox  "unable to connect to database"
+end if
+set objso = nothing

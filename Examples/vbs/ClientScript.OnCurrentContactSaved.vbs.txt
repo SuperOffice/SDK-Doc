@@ -1,0 +1,3 @@
+Sub OnCurrentContactSaved
+	SOMessageBox "Current contact was saved"
+End Sub

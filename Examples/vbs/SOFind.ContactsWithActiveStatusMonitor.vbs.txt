@@ -1,0 +1,22 @@
+Dim objSO
+Dim myConts
+Dim myCont
+
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.login "<USERID>", "<PASSWORD>"
+    Set myConts = objSO.Find.ContactsWithActiveStatusMonitor(2)
+    Set myCont = myConts.GetFirst
+    While Not myConts.EOF
+    
+        msg = msg & myCont.Name & vbCrLf
+        Set myCont = myConts.GetNext
+    Wend
+    if msg <> "" then
+        MsgBox msg, vbInformation & vbOKOnly, "Contacts matching search"
+    Else
+        MsgBox "No match"
+    End If
+End If
+
+Set objSO = Nothing

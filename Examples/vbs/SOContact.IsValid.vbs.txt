@@ -1,0 +1,17 @@
+Dim objSO
+Dim objContact
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "<USERID>", "<PASSWORD>"
+    Set objContact = objSO.GetContact(2)
+    'Remove the ' to load the contact to buffer, and this objContact will be valid. 
+    'test = objContact.name         
+    if objContact.Isvalid = true then
+        MsgBox "Contact with contact_id=2: " & objContact.Name
+    else
+        msgbox "There is no contact in the buffer with contact_id=2"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

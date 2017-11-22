@@ -1,0 +1,11 @@
+Dim objDict
+Set objDict = CreateObject("SODictionarySDK.Dictionary.1")
+if not (objDict is nothing) then
+    objDict.SetDatabase "ODBC:<Datasouce>", "<Username>", "<Password>", "CRM5" ' user must have create table rights on the database
+    Set myTable = objDict.GetTable("contact")
+    Set myField = myTable.GetField("name")        
+    MsgBox myTable.Name & " " & myField.Name & ". Is a system table? " & myTable.SystemTable
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objDict = Nothing

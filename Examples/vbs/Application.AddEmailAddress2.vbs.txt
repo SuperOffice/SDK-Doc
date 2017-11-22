@@ -1,0 +1,9 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    objSO.Activate
+    objSO.AddEmailAddress2 "SDK support", "sdk@superoffice.com", 0, objSO.CurrentContact, objSO.CurrentPerson
+else
+    msgbox "Unable to connect"
+end if
+set objSO = Nothing

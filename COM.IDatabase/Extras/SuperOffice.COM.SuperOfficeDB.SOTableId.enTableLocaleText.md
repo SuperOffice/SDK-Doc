@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableLocaleText
+
+= 169
+

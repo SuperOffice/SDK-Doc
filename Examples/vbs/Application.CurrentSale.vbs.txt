@@ -1,0 +1,7 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+Dim cur
+Set cur = objSO.CurrentSale
+    Msgbox "The current sale is: " & cur.title & " The current amount is: " & cur.Amount, vbInformation + vbOkOnly, "SuperCOM"
+set cur = Nothing
+set objSO = Nothing

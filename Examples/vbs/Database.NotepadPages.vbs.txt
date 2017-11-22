@@ -1,0 +1,17 @@
+dim objso
+dim i
+dim a
+set objso =  CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    'returns the number of notepadpages that belongs  to the currently logged in associate
+    msgbox "number of notepadpages: " &  objso.database.notepadpages
+    'returns the number of notepadpages that belongs  to the currently logged in associate
+    a=objso.database.notepadpages
+   
+    for  i=1 to a
+        msgbox "text on page " & i & " = " &  objso.database.notepadpage(i)
+    next
+else
+    msgbox "unable to connect to database"
+end if
+set objso = nothing

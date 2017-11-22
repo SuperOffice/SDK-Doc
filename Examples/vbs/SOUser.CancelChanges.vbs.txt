@@ -1,0 +1,27 @@
+Dim objSO, User, person, OK
+Set objSO = CreateObject("SuperOfficeDB.Database")
+if objSO.login ("<username>", "<password>") = true then  'user need useradmin rights
+
+Set persons = objSO.GetAssociateList
+For Each person In persons
+    If person.LoginName = "HUGO" Then
+    	OK = 1
+        Exit For
+    End If
+Next
+
+	If  OK = 1 then
+    Set user = objSO.Admin.GetUser(person)
+    msgbox "Is the user modified? " & user.IsModified
+    'Make a small change
+    User.IsAsynchEnabled = Not User.IsAsynchEnabled
+    msgbox "Now the user is modified = " & user.isModified
+    user.CancelChanges
+
+	else
+	    msgbox "There where no user with username HUGO in this database"
+	end If
+Else
+	MsgBox "Unable to log in, verify username and password"
+	
+End if

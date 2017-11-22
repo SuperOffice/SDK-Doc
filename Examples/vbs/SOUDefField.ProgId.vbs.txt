@@ -1,0 +1,19 @@
+dim objdb
+dim udef
+dim udefs
+set objdb = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objdb.login  "<username>", "<password>"
+    set cont = objdb.getcontact(1)
+    set udefs = cont.udef
+    for each udef in udefs
+        item = item  & "lable = " & udef.label  & vbcrlf
+        item = item  & "HideLabel = " & udef.HideLabel & vbcrlf
+        item = item  & "ShortLabel = " & udef.ShortLabel & vbcrlf
+        item = item  & "ProgId = " & udef.ProgId & vbcrlf
+        item = item  & "________________________________" & vbcrlf
+    next
+    msgbox item
+else
+    msgbox  "unable to connect to database"
+end if 

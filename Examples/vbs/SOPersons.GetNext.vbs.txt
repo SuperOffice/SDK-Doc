@@ -1,0 +1,16 @@
+Dim objSO
+Dim Per
+Dim Pers
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    set Pers = objSO.CurrentContact.GetPersons()
+    Per = Pers.GetFirst()
+    While Not Pers.EOF
+        msgbox Per.LastName
+        Per = Pers.GetNext()
+    wend        
+    msgbox "No contact persons.", vbInformation, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

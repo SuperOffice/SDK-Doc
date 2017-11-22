@@ -1,0 +1,14 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    set relation = objSO.CurrentRelation
+    msg = "The internal identity = " & relation.identity & vbCrLf
+    msg = msg & "Originally made by: " & relation.CreatedAssociate.Fullname & vbCrLf
+    msg = msg & "when: " & relation.CreatedDate & vbCrLf
+    msg = msg & "Changed by: " & relation.UpdatedAssociate.Fullname & vbCrLf
+    msg = msg & "when: " & relation.UpdatedDate & vbCrLf
+    msgbox msg, vbInformation + vbOkOnly, "Current relation: "
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

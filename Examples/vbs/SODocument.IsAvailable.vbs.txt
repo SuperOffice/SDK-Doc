@@ -1,0 +1,15 @@
+Dim objSO
+Dim objDocument
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then
+    objSO.Login "<USERID>", "<password>"
+    Set objDocument = objSO.GetDocument(2)        
+    if objDocument.IsAvailable = true then
+        MsgBox "Document with document_id=2 has the following header: " & objDocument.header
+    else
+        msgbox "There is no document in the database with document_id=2"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

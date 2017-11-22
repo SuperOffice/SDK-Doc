@@ -1,0 +1,5 @@
+Sub OnCurrentPersonCreated
+	if currentcontact.identity = database.ownercontactid
+		SOMessageBox "This is the owner contact, if this is a new associate please contact an administrator to make sure they get a username and password"
+	end if
+End Sub

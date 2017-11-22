@@ -1,0 +1,29 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+    Set myContact = objDB.GetContact(2)
+    Set myStatusMonitorValues = myContact.StatusMonitors
+    
+    If Not myStatusMonitorValues.Empty Then
+        For Each Item In myStatusMonitorValues
+            msg = msg & "Definition name: " & Item.Definition.Name & vbCrLf
+            msg = msg & "Identity: " & Item.Id & vbCrLf
+            msg = msg & "Is dirty: " & Item.IsDirty & vbCrLf
+            msg = msg & "Is signalled: " & Item.IsSignalled & vbCrLf
+            msg = msg & "Owner table: " & Item.OwnerTable & vbCrLf
+            msg = msg & "Record id: " & Item.RecordId & vbCrLf
+            MsgBox msg
+        Next
+        MsgBox "There are " & myStatusMonitorValues.Count & " status monitor values that match " & myContact.Name
+    Else
+        MsgBox "There are no status monitors that match contact: " & myContact.Name
+    End If
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing 

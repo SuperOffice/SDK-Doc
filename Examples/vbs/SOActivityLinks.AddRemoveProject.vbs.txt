@@ -1,0 +1,23 @@
+Set db = CreateObject("SuperOfficedb.Database")
+if db.login("USERNAME","PASSWORD") then
+
+    set app = db.GetAppointment(3)
+    set links = app.ActivityLinks
+    links.AddProject(db.GetProject(2))
+    app.Save()
+    For Each proj In links.Projects
+        msg = msg & proj.name & vbCrLf
+    Next
+
+    MsgBox(msg)
+
+    'remove the projects
+    For Each proj In links.Projects
+        links.RemoveProject(proj)
+    Next
+    app.Save()
+    MsgBox("Done - please note this will not work in 7.1, there is also no GUI for it.")
+else
+    MsgBox "Could not log on"
+end if
+Set objSO = Nothing

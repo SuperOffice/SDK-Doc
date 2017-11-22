@@ -1,0 +1,3 @@
+Sub OnCurrentRelationCanceled
+	SOMessageBox "Current relations changes was canceled"
+End Sub

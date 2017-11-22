@@ -1,0 +1,14 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Result = objSO.CurrentDocument.completed
+    If result = True then
+        MsgBox "Current document is set as complete.", vbInformation + vbOKOnly, "SuperCOM"
+    Else
+        MsgBox "Current document is NOT set as complete.", vbInformation + vbOKOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

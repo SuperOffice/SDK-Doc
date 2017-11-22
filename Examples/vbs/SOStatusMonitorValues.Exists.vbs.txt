@@ -1,0 +1,18 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+    Set myContact = objDB.GetContact(2)
+    Set myStatusMonitorValues = myContact.StatusMonitors
+    
+    If myStatusMonitorValues.Exists(2) Then
+        MsgBox "Status monitor value with id 2 exists on " & myContact.Name
+    End If
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing 

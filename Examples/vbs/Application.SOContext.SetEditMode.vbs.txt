@@ -1,0 +1,13 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    'change to project panel
+    msgbox("change to project panel")	
+    objSO.SetContext 0, 1, 0
+    msgbox("set project panel in edit mode")	
+    'set project panel in edit mode
+    objSO.Context.SetEditMode (True)
+else
+    msgbox "Unable to connect"
+end if
+set objSO = Nothing

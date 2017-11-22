@@ -1,0 +1,21 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+    Set myPerson = objDB.GetPerson(2)
+    msg = msg & "Are all required fields filled: " & myPerson.Sentry.AreAllRequiredFieldsFilled & vbCrLf
+    msg = msg & "Can create: " & myPerson.Sentry.CanCreate & vbCrLf
+    msg = msg & "Can delete: " & myPerson.Sentry.CanDelete & vbCrLf
+    msg = msg & "Can read: " & myPerson.Sentry.CanRead & vbCrLf
+    msg = msg & "Can read field: " & myPerson.Sentry.CanReadField("person.lastname") & vbCrLf
+    msg = msg & "Can update: " & myPerson.Sentry.CanUpdate & vbCrLf
+    msg = msg & "Can update field: " & myPerson.Sentry.CanUpdateField("person.lastname") & vbCrLf
+    MsgBox msg, vbInformation, "SuperCOM"
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing

@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableProjStatusGL
+
+= 89
+

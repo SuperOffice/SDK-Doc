@@ -1,0 +1,16 @@
+Dim objSO
+Dim objContact
+Set objSO = CreateObject("SuperOfficeDB.Database") 
+If not (objSO is nothing) Then
+    objSO.login "<USERID>", "<password>"
+    set objContact = objSO.Find.ContactsBYName("Super")
+    set Contact = objContact.getfirst
+    while not objContact.eof
+        item = Contact.name & " - " & Contact.department
+        msgbox item
+        set contact = objContact.Getnext
+    wend
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

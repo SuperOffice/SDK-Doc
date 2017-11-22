@@ -1,0 +1,18 @@
+Dim objSO
+Dim headings
+Set objSO = CreateObject("SuperOfficeDB.Database")
+If not (objSO is nothing) Then 
+    objSO.Login "<USERID>", "<PASSWORD>"
+    set headings = objSO.GetHeadings(130)          
+    for each head in Headings
+        set collItems = head.Items
+        for each item in collItems
+            msg = msg & head.HeadingText & " - " & item.text
+            msg = msg & chr(13) & chr(10)
+        next
+    next
+    msgbox msg
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

@@ -1,0 +1,3 @@
+sub OnRelationBeforeDelete(id)
+	somessagebox "If you need any values from this relation you need to get them now. After this the relation with relation_id= "  & id & " would be gone from the database"
+end sub

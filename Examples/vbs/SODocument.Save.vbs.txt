@@ -1,0 +1,14 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    result = MsgBox ("There have been no programmatically changes to your current document." & vbCrLf & "But, by pushing 'YES' this will save the changes on your current appointment, are you sure?", vbInformation + vbYesNo, "SuperCOM")
+    if result = vbYes then
+        objSO.CurrentDocument.Save
+    else
+        MsgBox "The document change were not saved.", vbInformation + vbOkOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

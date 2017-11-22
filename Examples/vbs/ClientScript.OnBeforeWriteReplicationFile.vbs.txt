@@ -1,0 +1,12 @@
+Sub OnBeforeWriteReplicatonFile
+
+    If Database.DataSourceVariant = 1 Then 'enDBVariantTravel
+        SOMessageBox "New updates will be written to the central database with information from your database"
+    ElseIf Database.DataSourceVariant = 0 Then 'enDBVariantCentral
+        SOMessageBox "New updates will be written to travellers and satellite databases with information from the central database"    
+    ElseIf Database.DataSourceVariant = 2 Then ' enDBVariantSatellite
+        SOMessageBox "New updates will be written to travellers and the central database with information from the satellite database"    
+    End If
+
+	
+End Sub

@@ -1,0 +1,13 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    set Relations = objSO.CurrentContact.GetRelations
+    Set Relation= Relations.GetFirst()
+    While Not Relations.EOF
+        msgbox Relation.ActiveText
+        set Relation = Relations.GetNext()
+    wend          
+    msgbox "No more relations defined on the current contact", vbInformation, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if

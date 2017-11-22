@@ -1,0 +1,8 @@
+dim objso
+set objso = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    msgbox "Current appointments active date: " & objso.currentappointment.activedate, vbinformation + vbokonly,  "supercom"
+else
+    msgbox "unable to connect to database"
+end if
+set objso = nothing

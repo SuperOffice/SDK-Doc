@@ -1,0 +1,4 @@
+
+sub OnCurrentAppointmentCompletedChanged (oldValue, newValue)
+	SOMessageBox "The current appointments completedflag was changed from: " & oldvalue & ", to: " & newvalue
+End Sub

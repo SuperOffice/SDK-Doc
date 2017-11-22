@@ -1,0 +1,3 @@
+sub OnProjectMemberRemoved (id)
+	somessagebox "OnProjectMemberRemoved " & id
+end sub

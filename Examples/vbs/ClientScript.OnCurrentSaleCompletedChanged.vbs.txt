@@ -1,0 +1,3 @@
+Sub OnCurrentSaleCompletedChanged
+	
+End Sub

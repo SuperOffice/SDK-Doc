@@ -1,0 +1,10 @@
+dim objso
+dim person
+dim user
+set objso  = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    msgbox "Number of web users left "  & objso.database.admin.numwebusersleft & vbcrlf   
+
+else
+    msgbox  "failed to connect to the database"
+end if

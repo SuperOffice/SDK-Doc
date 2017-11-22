@@ -1,0 +1,20 @@
+Const enTableCurrency = 112 
+set app = CreateObject("Superoffice.application")
+set sale = app.Database.CreateSale
+sale.AmountAsFloat = 100.57
+
+msg = "100.57 in AmountAsFloat" & vbCrLf
+msg = msg & "Amount=" & sale.Amount & vbCRLF
+msg = msg & "AmountAsFloat=" & sale.AmountAsFloat & vbCRLF
+msg = msg & "Amount and AmountAsFloat are the same value, with different precision"
+msgbox msg,,"Amount 100.57"
+
+msg = "OurCurrency = " &  sale.OurCurrency.Text & vbCRLF
+sale.Currency = app.GetListItem( enTableCurrency, 44 ) ' 44 = Haiti Gourde (HTG)
+msg = msg & "Currency = " & sale.Currency.Text & vbCRLF
+sale.Amount = 100 ' 100 HTG
+
+msg = msg & "Amount = " & sale.Amount & " " & sale.Currency.Text & " " & sale.Currency.Tooltip  & vbCRLF
+msg = msg & "Amount in " & sale.OurCurrency.Text & " = " 
+msg = msg & sale.ConvertToOurCurrency( sale.Amount ) & vbCRLF
+msgbox msg ,, "Currency"

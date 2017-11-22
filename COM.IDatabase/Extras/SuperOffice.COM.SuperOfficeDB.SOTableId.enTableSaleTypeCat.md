@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableSaleTypeCat
+
+= 118
+

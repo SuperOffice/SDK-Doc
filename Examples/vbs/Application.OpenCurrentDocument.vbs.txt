@@ -1,0 +1,5 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+    Msgbox "The current doucment will be opened up. ", vbInformation + vbOkOnly, "SuperCOM"
+    objSO.OpenCurrentDocument
+set objSO = Nothing

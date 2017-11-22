@@ -1,0 +1,3 @@
+Sub OnCurrentSelectionNotModified
+	SOMessageBox "Current selection was saved but there where no changes"
+End Sub

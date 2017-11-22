@@ -1,0 +1,23 @@
+set resmgr = CreateObject("SuperOffice.ResMgr")
+
+lcid = resmgr.GetLCIDForLanguageCode( "NL" )
+msg = msg & "LCID for The Netherlands=" & lcid & chr(10)
+
+LC = resmgr.GetLanguageCodeForLCID (lcid)
+msg = msg & "The language code for the Netherlands=" & LC & chr(10)
+
+lcid = resmgr.GetLCIDForLanguageCode( "NO" )
+msg = msg & "LCID for Norway:" & lcid & chr(10) 
+
+LC = resmgr.GetLanguageCodeForLCID (lcid)
+msg = msg & "The language code for Norway=" & LC & chr(10)
+
+lcid = resmgr.GetLCIDForLanguageCode( "SW" )
+msg = msg & "LCID for Sweden:" & lcid & chr(10) 
+
+LC = resmgr.GetLanguageCodeForLCID (lcid)
+msg = msg & "The language code for Sweden=" & LC & chr(10)
+
+msgbox msg,,"Local ID"
+
+set resmgr = nothing

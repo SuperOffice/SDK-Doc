@@ -1,0 +1,17 @@
+Dim soDB, udef, udefs, myContact
+set soDB = CreateObject("SuperOfficeDB.Database")
+enUDFTShortTextEdit = 2
+
+If Not (soDB is Nothing) Then
+    soDB.login  "USERNAME", "PASSWORD"
+    set myContact = soDB.GetContact(soDB.OwnerContactId)
+    Set udef = myContact.UDef.ByFieldIdentity (1)
+    If udef.FieldType= 2 Then
+    'to save the new udef value, you need to call myContact.save after.
+    	udef.Value= "Short text"
+    End If
+    MsgBox udef.value
+    
+else
+    msgbox  "Unable to connect to database"
+end if

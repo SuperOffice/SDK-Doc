@@ -1,0 +1,3 @@
+sub OnCurrentSelectionIdentityChanged
+	msgbox "User moved to another selection card"
+end sub

@@ -1,0 +1,3 @@
+sub OnExternalUsersDialogShown
+	somessagebox "OnExternalUserDialogShown"
+end sub

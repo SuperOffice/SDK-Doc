@@ -1,0 +1,19 @@
+set resmgr = CreateObject("SuperOffice.ResMgr")
+resmgr.Initialize("c:\Program files\SuperOffice")
+
+resmgr.LoadResFromDB "Provider=SQLOLEDB;Data Source=<SERVER>;Initial Catalog=<Database>;", "<USRNAM>", "<PASSWORD>", "CRM5"
+
+msg = "Names:" & chr(10)
+thelist = resmgr.GetLanguageNameList()
+for i= 0 to ubound(thelist)
+    msg = msg & thelist(i) & chr(10)
+next
+
+msg = chr(10) & msg & "Codes:" & chr(10)
+thelist = resmgr.GetLanguageCodeList()
+for i= 0 to ubound(thelist)
+    msg = msg & thelist(i) & chr(10)
+next
+msgbox msg
+
+set resmgr = nothing

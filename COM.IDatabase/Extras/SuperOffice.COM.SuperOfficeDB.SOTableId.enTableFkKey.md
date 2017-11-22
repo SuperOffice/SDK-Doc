@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableFkKey
+
+= 183
+

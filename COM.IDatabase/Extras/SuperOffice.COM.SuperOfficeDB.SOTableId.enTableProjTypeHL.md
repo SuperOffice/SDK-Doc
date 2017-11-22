@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableProjTypeHL
+
+= 87
+

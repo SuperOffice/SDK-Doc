@@ -1,0 +1,9 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+
+objSO.SOMessageBox "Information and OK button", "My SO messagebox", 0
+objSO.SOMessageBox "Question and OK/Cancel button", "My SO messagebox", 1
+objSO.SOMessageBox "Information and OK button", "My SO messagebox", 2
+objSO.SOMessageBox "Question and Yes/No/Cancel button", "My SO messagebox", 3
+objSO.SOMessageBox "Question and Yes/No button", "My SO messagebox", 4
+objSO.SOMessageBox "Question and Retry/Cancel button", "My SO messagebox", 5

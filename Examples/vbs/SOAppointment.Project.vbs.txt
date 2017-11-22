@@ -1,0 +1,15 @@
+Dim objSO
+Dim result
+Set objSO = CreateObject("SuperOffice.Application")
+if IsObect(objSO) then
+    result = objSO.CurrentAppointment.project.Identity         
+    if result = 0 then                   
+        msgbox "The current appointment is not part of a project!", vbInformation + vbOkOnly, "SuperCOM"
+    else
+        msgbox "Current appointment is located on the project: " & _
+        objSO.CurrentAppointment.Project.Name, vbInformation + vbOKOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

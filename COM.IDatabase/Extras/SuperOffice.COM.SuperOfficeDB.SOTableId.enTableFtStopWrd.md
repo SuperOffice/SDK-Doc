@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableFtStopWrd
+
+= 44
+

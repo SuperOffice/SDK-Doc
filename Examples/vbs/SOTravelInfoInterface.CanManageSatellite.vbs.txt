@@ -1,0 +1,14 @@
+Dim objSO 
+Dim objTI 
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Set objTI = objSO.Database.TravelInterface
+    If objTI.CanManageSatellite Then
+        MsgBox "The associate that is logged in can manage satellites"
+    Else
+        MsgBox "The associate that is logged in can't manage satellites"
+    End If
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

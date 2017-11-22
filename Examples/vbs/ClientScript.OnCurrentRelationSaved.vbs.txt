@@ -1,0 +1,7 @@
+Sub OnCurrentRelationSaved
+  If CurrentRelation.ActiveText = "owns" Then
+    CurrentContact.Category = Database.GetListItemByName(64, "Mother company") 'enTableCategory = 64
+  ElseIf CurrentRelation.ActiveText = "is owned by" Then
+    CurrentContact.Category = Database.GetListItemByName(64, "Subsidiary") 'enTableCategory = 64
+  End If	
+End Sub

@@ -1,0 +1,23 @@
+'This is written to run from a CRM SIX programfolder
+
+enRoleTypeEmployee = 0
+enRelToOtherGroup = 4
+enRelToSameProject = 7
+
+Dim db
+Set db = CreateObject("superofficedb.Database")
+If db.Login("<username>", "<password>") Then
+    set roles = db.Admin.GetRoles(enRoleTypeEmployee)
+     If roles.Count > 0 Then
+	set role = roles.Item(3)		'User level 2
+    End If	
+
+    If role.IsRelationshipCovered(enRelToOtherGroup) Then
+	MsgBox("RelToOtherGroup is true")
+    End If
+    If role.IsRelationshipCovered(enRelToSameProject) Then
+	MsgBox("RelToSameProject is true")
+    End If
+Else
+    MsgBox("failed to log in")
+End If

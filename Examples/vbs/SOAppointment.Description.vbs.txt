@@ -1,0 +1,14 @@
+Dim soDB, myAppnt
+Set soDB = CreateObject("SuperOfficeDB.Database")
+ 
+If soDB.Login ("MHR", "MHR") then
+
+Set myAppnt = soDB.GetAppointment(2)
+myAppnt.AutoSaveOnChangeIdentity = True
+myAppnt.AutoSaveOnFlush = True
+myAppnt.Description = myAppnt.Description & " autosave performed"
+MsgBox "try to move another appointment or click F5"
+
+Else
+	MsgBox "Unable to log in"
+End If

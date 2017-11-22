@@ -1,0 +1,44 @@
+'This is written to run from a CRM SIX programfolder
+
+enRoleTypeEmployee = 0
+
+Dim db
+Set db = CreateObject("superofficedb.Database")
+If db.Login("<username>", "<password>") Then
+    set role = db.Admin.CreateRole(enRoleTypeEmployee, Nothing)
+    role.Name = "funcrole"
+    role.Description = "this is a new role with name funcrole"
+    role.Save()
+
+    set allrights = db.Admin.GetAllFunctionRights(enRoleTypeEmployee)
+    set fr = allrights(3)
+    role.AddFunctionRight(fr)
+
+    role.Save()
+
+    If role.HasFunctionRight(3) Then
+	MsgBox("FunctionRight was added")
+    End If
+
+    role.RemoveFunctionRight(fr)
+
+    If role.HasFunctionRight(3) Then
+	MsgBox("FunctionRight was added")
+    End If
+
+    'The call to role.FunctionRights refresh the list in the role 
+    'this must be done before the role is saved.
+    'And the role must be saved to remove the functionright.
+    If role.FunctionRights.Exists(3) Then
+	MsgBox("FunctionRight is not removed")
+    End If
+
+    role.Save()
+
+    If role.FunctionRights.Exists(3) Then
+	MsgBox("FunctionRight is not removed after save")
+    End If
+
+Else
+    MsgBox("failed to log in")
+End If

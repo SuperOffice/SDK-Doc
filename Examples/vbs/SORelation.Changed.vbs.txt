@@ -1,0 +1,17 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    set relation = objSO.CurrentRelation
+    msgbox "The property changed on the current relation is currently set to " & relation.Changed
+    relation.comment = "One of the property is now changed trough SuperCOM"
+    msg = msgbox ("The property changed is now set to " & relation.changed & " since the Property comment was changed programmatically, and you should ask the user if he want to save the changes?", vbYesNo, "SuperCOM")
+    if msg = vbyes then
+        relation.save
+    else
+        relation.cancelchanges
+        'The change was not saved.
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

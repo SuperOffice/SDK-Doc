@@ -1,0 +1,20 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+    Set mySale = objDB.GetSale(2) 'get sale with sale_id=2
+    msg = msg & "Are all required fields filled: " & mySale.Sentry.AreAllRequiredFieldsFilled & vbCrLf
+    msg = msg & "Appointment: " & mySale.Appointment.Description & vbCrLf
+    msg = msg & "Group: " & mySale.Group.Text & vbCrLf
+    msg = msg & "Private to group: " & mySale.PrivateToGroup.Id & vbCrLf
+    msg = msg & "Publish type: " & mySale.PublishType & vbCrLf
+    msg = msg & "Number of documents added to this sale =  " & mySale.ActivityLinks.Documents.Count & vbCrLf
+    MsgBox msg, vbInformation, "SuperCOM"
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing

@@ -1,0 +1,3 @@
+Sub OnCurrentSaleCanceled
+	SOMessageBox "Current sales changes was canceled"
+End Sub

@@ -1,0 +1,8 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    MsgBox "Current person Category: " & objSO.CurrentPerson.Category.Text, vbInformation + vbOkOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

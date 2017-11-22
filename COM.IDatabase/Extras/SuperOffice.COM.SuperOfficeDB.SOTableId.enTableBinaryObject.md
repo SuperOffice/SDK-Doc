@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableBinaryObject
+
+= 205
+

@@ -1,0 +1,27 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+    Set myStatusMonitor = objDB.Admin.GetStatusMonitor(2) 'requires there to be a status monitor with id = 2 in the database
+        msg = msg & "DefaultTaskText: " & myStatusMonitor.DefaultTaskText & vbCrLf
+        msg = msg & "DefaultTaskType: " & myStatusMonitor.DefaultTaskType.Text & vbCrLf
+        msg = msg & "Description: " & myStatusMonitor.Description & vbCrLf
+        msg = msg & "Identity: " & myStatusMonitor.Identity & vbCrLf
+        msg = msg & "IsDeleted: " & myStatusMonitor.IsDeleted & vbCrLf
+        msg = msg & "IsDirty: " & myStatusMonitor.IsDirty & vbCrLf
+        msg = msg & "IsVisual: " & myStatusMonitor.IsVisual & vbCrLf
+        msg = msg & "LastGenerated: " & myStatusMonitor.LastGenerated & vbCrLf
+        msg = msg & "Name: " & myStatusMonitor.Name & vbCrLf
+        msg = msg & "NumDirtyMatches: " & myStatusMonitor.NumDirtyMatches & vbCrLf
+        msg = msg & "OwnerTable: " & myStatusMonitor.OwnerTable & vbCrLf
+        msg = msg & "Picture.Type: " & myStatusMonitor.Picture.Type & vbCrLf
+        msg = msg & "Rank: " & myStatusMonitor.Rank & vbCrLf
+
+    MsgBox msg, vbInformation, "SuperCOM"
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing

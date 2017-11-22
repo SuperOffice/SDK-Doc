@@ -1,0 +1,18 @@
+Dim objSO
+Dim result
+Dim id
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    id = objSO.CurrentPerson.Identity
+    objSO.CurrentPerson.Firstname = "This text been changed"
+    result = MsgBox ("The text of the current person has been changed, do you want to save these changes?", vbInformation + vbYesNo, "SuperCOM")
+    if result = vbYes then
+        objSO.CurrentPerson.ChangeIdentity(id)
+    else
+        objSO.CurrentPerson.CancelChanges()
+        msgbox "The person changes were not saved", vbInformation + vbOkOnly, "SuperCOM"
+    end if
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

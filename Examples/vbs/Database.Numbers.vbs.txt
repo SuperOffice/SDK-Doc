@@ -1,0 +1,15 @@
+Set soApp = CreateObject("SuperOffice.Application.1")
+
+dim numb
+set numb  = soapp.database.numbers
+msgbox "is the counter for contact number 2 active?  " & numb.isactive("contact.number2")
+numb.add ("my_own_table.my_text")
+msgbox "current counter for my_own_table.my_text  value = " & numb.value("my_own_table.my_text")
+
+msgbox "we will now remove the counter for my_own_table.my_text"
+numb.remove "my_own_table.my_text"
+msgbox "now we add the counter again"
+numb.add ("my_own_table.my_text")
+msgbox "current counter for my_own_table.my_text  after delete. value = "  & numb.value("my_own_table.my_text")
+numb.getnext ("my_own_table.my_text")
+msgbox "current counter for my_own_table.my_text  value = " & numb.value("my_own_table.my_text")

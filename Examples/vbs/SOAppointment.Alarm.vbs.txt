@@ -1,0 +1,28 @@
+Dim soDB, myAppnt
+Set soDB = CreateObject("SuperOfficeDB.Database")
+enTableTask = 67
+enTablePriority = 79 
+
+ 
+If soDB.Login ("USERNAME", "PASSWORD") then
+
+Set myAppnt = sodb.CreateAppointment
+myAppnt.SetDefaultsToDo
+myAppnt.Alarm = True
+myAppnt.AlarmOffset = 10
+myAppnt.AllDayEvent = False
+myAppnt.Completed = False
+myAppnt.Contact = sodb.GetContact(sodb.OwnerContactId)
+myAppnt.Description = "Remember to pick up cake for the meeting this evening"
+myAppnt.DoBy = DateAdd("h", 4, Now)
+myAppnt.Duration = 60
+myAppnt.FreeBusy = enFreeBusyBusy
+myAppnt.Task = sodb.GetListItemByName(enTableTask, "Private")
+myAppnt.Priority = sodb.GetListItemByName(enTablePriority, "1 High")
+myAppnt.Save
+'If the CRM client is open, Refresh will make the new appointment appear
+sodb.Refresh
+
+Else
+	MsgBox "Unable to log in"
+End If

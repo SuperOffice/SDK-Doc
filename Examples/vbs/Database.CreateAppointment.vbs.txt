@@ -1,0 +1,14 @@
+dim objdb
+dim objapp
+set objdb =  CreateObject("superofficedb.database")
+isOK = objDB.login("<username>", "<password>") ' log in to the database
+If isOK Then
+    set objapp = objdb.createappointment()
+    objapp.setdefaults()
+    objapp.contact = objdb.getContact(3)
+    objapp.description  = "board meeting"
+    objapp.save
+else
+    msgbox  "unable to connect to database"
+end if
+set objso = nothing

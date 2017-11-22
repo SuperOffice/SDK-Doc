@@ -1,0 +1,5 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+    Msgbox "SuperOffice Sales & Marketing will be activated now. ", vbInformation + vbOkOnly, "SuperCOM"
+    objSO.Activate()
+set objSO = Nothing

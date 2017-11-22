@@ -1,0 +1,18 @@
+Sub OnSaleDialogClosed
+if currentsale.completed = false then
+	yesno = somessagebox ("You have not completed this sale, do you want to phone then 3 days later and check it up?", "Sale", 4)
+
+	if yesno = 2 then 
+		'User clicked Yes
+		      Set newAppnt1 = database.CreateAppointment
+      			newAppnt1.SetDefaults
+      			newAppnt1.Contact = CurrentContact
+      			newAppnt1.Person = CurrentPerson
+      			newAppnt1.task = database.GetListItemByName(67, "Phone-Out")
+      			newAppnt1.DoBy = DateAdd("d", 3, Now())
+      			newAppnt1.Description = "Did you come to a decision regarding the offer I sent you yet?"
+      			newAppnt1.Save
+	end if
+end if
+	
+End Sub

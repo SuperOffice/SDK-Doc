@@ -1,0 +1,10 @@
+Dim objSO
+Dim contact
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    objSO.CurrentContact.Interests.Clear()
+    MsgBox "All company interests are deleted from the current contact"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

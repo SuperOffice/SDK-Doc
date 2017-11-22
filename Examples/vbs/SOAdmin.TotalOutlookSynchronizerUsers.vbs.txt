@@ -1,0 +1,9 @@
+dim objso
+
+set objso = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    msgbox "Total number of Outlook Synchronizer users left " & objso.database.admin.TotalOutlookSynchronizerUserst 
+
+else
+    msgbox "failed to connect to the database"
+end if

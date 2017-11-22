@@ -1,0 +1,14 @@
+dim objso 
+dim objcl 
+set objso =  CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    set objcl = objso.database.gethistoryitems(130)
+    if objcl.empty then
+        msgbox "there are no items for this table"
+    else
+        msgbox "there are " & objcl.count & "  historyitems in this table."
+    end if
+else
+    msgbox "could not log in"
+end if
+set objso = nothing

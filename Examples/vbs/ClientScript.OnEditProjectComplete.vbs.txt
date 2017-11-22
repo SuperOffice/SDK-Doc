@@ -1,0 +1,4 @@
+Sub OnEditProjectComplete
+'occurs both when you click OK and Cancel
+	somessagebox "Edit project complete"
+End Sub

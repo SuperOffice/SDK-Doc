@@ -1,0 +1,12 @@
+dim objso
+set objso = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    result = MsgBox ("There have been no programmatically changes to your current relation." & vbCrLf & "But, by pushing 'YES' this will save the changes on your current relation, are you sure?", vbInformation + vbYesNo, "SuperCOM")
+    if result = vbYes then
+        objSO.CurrentRelation.Save
+    else
+        MsgBox "The relation change were not saved.", vbInformation + vbOkOnly, "SuperCOM"
+    end if
+else
+    msgbox "unable to connect to database"
+end if

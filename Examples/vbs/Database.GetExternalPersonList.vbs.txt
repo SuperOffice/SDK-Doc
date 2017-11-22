@@ -1,0 +1,14 @@
+dim objSO
+
+set objSO = createobject("SuperOfficeDB.Database") 
+If not (objSO is nothing) Then
+    objSO.login "<username>", "<password>" 
+    Set myExtAssocs = objSO.GetExternalPersonList 
+    For Each myAssoc In myExtAssocs
+        msg = msg & myAssoc.FullName & vbCrLf
+    Next
+    msgbox msg, vbInformation, "SuperCOM"
+else
+    msgbox "Unable to log in"
+end if
+set objSO = Nothing

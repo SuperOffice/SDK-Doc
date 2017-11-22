@@ -1,0 +1,104 @@
+Dim soDB, mySelection, msg
+enSelTypeStaticContact = 0
+enTableSearchCat = 106
+enSelTypeDynamicContact = 1
+enBeginsWith = 18
+
+Set soDB = CreateObject("SuperOfficeDB.Database")
+If soDB.Login ("MHR", "MHR") Then
+
+	'Create a dynamic or static selection?
+	If MsgBox ("Do you want to create a dynamic selection?", vbYesNo, "Yes = Dynamic. No = Static") = vbYes Then
+		DynamicSelection
+	Else
+		StaticSelection
+	End if
+
+Else 
+	MsgBox "Unable to log in"
+End If
+
+Sub DynamicSelection
+	Set mySelection = soDB.CreateSelection
+	mySelection.Name = "My dynamic list of all customers starting with S"
+	mySelection.Type = enSelTypeDynamicContact
+	mySelection.PostItText = "This selecion is only visible for me"
+	mySelection.Private = True
+	mySelection.Associate = soDB.GetAssociate(soDB.UserAssociateId)
+	mySelection.IncludeFirstPerson = True
+	mySelection.SelectionCategory = soDB.GetListItemByName(enTableSearchCat, "Private mailing list")
+	mySelection.Save
+	
+	set myCriteria = mySelection.Criteria.NewCriterion("contact.name", enBeginsWith )
+    myCriteria.Values.AddString("S")
+    mySelection.Criteria.Add myCriteria
+    mySelection.Save
+    
+    for each member in mySelection.SelectionMembers
+        msg = msg & member.ContactName & " :: " & member.PersonName & vbCrLf
+    next 
+    msgbox msg
+    
+    If mySelection.Sentry.AreAllRequiredFieldsFilled = True Then
+    	mySelection.Save
+    	msg = ""
+        msg = msg & "Selection saved with selection_id = " & mySelection.Identity & vbCrLf
+        msg = msg & "Selection is created by " & mySelection.CreatedAssociate.FullName & vbCrLf
+        msg = msg & "and belongs to usergroup " & mySelection.Group.Text & vbCrLf
+        If mySelection.UpdatedDate > #1/1/1970# Then
+            msg = msg & "Selection was last updated by: " & mySelection.UpdatedAssociate.FullName & " at " & mySelection.UpdatedDate
+        Else
+            msg = msg & "Selection has never been updated"
+        End If
+        
+        MsgBox msg
+	Else
+	    MsgBox "Not all required fields are filled so selection will not be saved"
+	    mySelection.CancelChanges
+	End If
+End Sub
+
+Sub StaticSelection
+'In a static selection stays the same even if new contacts/persons are added that match your search criteria
+	Set mySelection = soDB.CreateSelection
+	mySelection.Name = "My list of all associates"
+	mySelection.Type = enSelTypeStaticContact
+	mySelection.CompanyUnique = False
+	
+	mySelection.PostItText = "This selecion is only visible for me"
+	mySelection.Private = True
+	mySelection.Associate = soDB.GetAssociate(soDB.UserAssociateId)
+	mySelection.IncludeFirstPerson = True
+	mySelection.SelectionCategory = soDB.GetListItemByName(enTableSearchCat, "Private mailing list")
+
+
+	Set myContact = soDB.GetContact(soDB.OwnerContactId)
+	mySelection.Description = "A list of all who works in " & myContact.Name
+
+	Set myPersons = myContact.GetPersons
+	Set myPerson = myPersons.GetFirst
+
+	While Not myPersons.EOF
+	    mySelection.AddMember myPerson.Contact.Identity, myPerson.Identity
+	    Set myPerson = myPersons.GetNext
+	Wend
+	
+
+	If mySelection.Sentry.AreAllRequiredFieldsFilled = True Then
+	    mySelection.Save
+	        msg = msg & "Selection saved with selection_id = " & mySelection.Identity & vbCrLf
+	        msg = msg & "Selection is created by " & mySelection.CreatedAssociate.FullName & vbCrLf
+	        msg = msg & "and belongs to usergroup " & mySelection.Group.Text & vbCrLf
+	        If mySelection.UpdatedDate > #1/1/1970# Then
+	            msg = msg & "Selection was last updated by: " & mySelection.UpdatedAssociate.FullName & " at " & mySelection.UpdatedDate
+	        Else
+	            msg = msg & "Selection has never been updated"
+	        End If
+	        
+	        MsgBox msg
+	Else
+	    MsgBox "Not all required fields are filled so selection will not be saved"
+	    mySelection.CancelChanges
+	End If
+
+End Sub

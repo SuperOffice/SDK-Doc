@@ -1,0 +1,29 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+Set objCtx = objSO.Context
+panel = objCtx.CurrentPanel
+
+enCtxContact = 0
+enCtxProject = 1
+enCtxDiary = 2
+enCtxSelection = 7
+enCtxMail = 8
+ 
+if panel = enCtxContact then         
+    msgbox "Contact panel"
+end if
+if panel = enCtxProject then 
+    msgbox "Project panel"
+end if
+if panel = enCtxDiary then    
+    msgbox "Diary panel"
+end if
+if panel = enCtxSelection then        
+    msgbox "Selection panel"
+end if
+if panel = enCtxMail then     
+    msgbox "E-mail panel (inbox)"
+end if
+msgbox "Changing panel to Contact"
+objSO.SetContext 0, enCtxContact, enSubCtxMain
+msgbox "voila"

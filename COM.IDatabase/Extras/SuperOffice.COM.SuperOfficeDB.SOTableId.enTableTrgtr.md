@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableTrgtr
+
+= 30
+

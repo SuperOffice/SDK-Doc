@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableProjStatus
+
+= 88
+

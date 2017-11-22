@@ -1,0 +1,10 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    Msg = Msg &  "Current contact first phone number: " & objSO.Currentcontact.Phones.Item(1).formattedphone & vbcrlf
+    Msg = Msg &  "Current contact first phone number stripped: " & objSO.Currentcontact.Phones.Item(1).strippedphone & vbcrlf
+    Msgbox Msg, vbInformation + vbOKOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

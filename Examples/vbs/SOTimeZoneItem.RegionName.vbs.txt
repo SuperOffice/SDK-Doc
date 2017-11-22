@@ -1,0 +1,23 @@
+Dim objSO, msg, tz
+Set objSO = CreateObject("SuperOfficeDB.Database")
+if objSO.login ("username", "password") = true then
+Set tz = objSO.TimeZones
+
+	msg = msg & "Norway - Cities: " & tz.GetTimeZoneItemByCode("NO", Now).Cities & vbCrLf
+	msg = msg & "Norway - Code: " & tz.GetTimeZoneItemByCode("NO", Now).Code & vbCrLf
+	msg = msg & "Norway - CountryId: " & tz.GetTimeZoneItemByCode("NO", Now).CountryId & vbCrLf
+	msg = msg & "Norway - CountryName: " & tz.GetTimeZoneItemByCode("NO", Now).CountryName & vbCrLf
+	msg = msg & "Norway - DstOffset: " & tz.GetTimeZoneItemByCode("NO", Now).DstOffset & vbCrLf
+	msg = msg & "Norway - Id: " & tz.GetTimeZoneItemByCode("NO", Now).Id & vbCrLf
+	msg = msg & "Norway - IsActive: " & tz.GetTimeZoneItemByCode("NO", Now).IsActive & vbCrLf
+	msg = msg & "Norway - IsBuiltIn: " & tz.GetTimeZoneItemByCode("NO", Now).IsBuiltIn & vbCrLf
+	msg = msg & "Norway - IsDeleted: " & tz.GetTimeZoneItemByCode("NO", Now).IsDeleted & vbCrLf
+	msg = msg & "Norway - RegionName: " & tz.GetTimeZoneItemByCode("NO", Now).RegionName & vbCrLf
+	msg = msg & "Norway - ShortName: " & tz.GetTimeZoneItemByCode("NO", Now).ShortName & vbCrLf
+	msg = msg & "Norway - StdOffset: " & tz.GetTimeZoneItemByCode("NO", Now).StdOffset & vbCrLf
+
+	MsgBox msg
+Else
+    MsgBox "Could not log in"
+End If
+Set objSO = Nothing

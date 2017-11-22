@@ -1,0 +1,7 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+Dim cur
+Set cur = objSO.CurrentContact
+     Msgbox "The current company is: " & cur.name, vbInformation + vbOkOnly, "SuperCOM"
+set cur = Nothing
+set objSO = Nothing

@@ -1,0 +1,27 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+    Set myRoles = objDB.Admin.GetRoles(enRoleTypeEmployee)
+    If Not myRoles.Empty Then
+        For Each item In myRoles
+            msg = msg & "Name :" & item.Name & vbCrLf
+            msg = msg & "Description :" & item.Description & vbCrLf
+            msg = msg & "Dataright contact-to group:" & item.DataRight(enTableCont, enRelToGroup) & vbCrLf
+            msg = msg & "Deleted :" & item.Deleted & vbCrLf
+            msg = msg & "Functionrights :" & item.FunctionRights.Count & vbCrLf
+            msg = msg & "Identity :" & item.Identity & vbCrLf
+            msg = msg & "Type :" & item.Type & vbCrLf
+            msg = msg & "_________________________________________________" & vbCrLf
+        Next
+        MsgBox "There are " & myRoles.Count & " roles: " & vbCrLf & msg
+        
+    End If
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing    

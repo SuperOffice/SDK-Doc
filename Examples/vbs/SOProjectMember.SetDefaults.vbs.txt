@@ -1,0 +1,10 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+    objSO.CurrentProject.members.item(1).SetDefaults()
+    msgbox "Take a look at the current person now, when you click OK the changes will be cancelled."
+    objSO.CurrentProject.CancelChanges()
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

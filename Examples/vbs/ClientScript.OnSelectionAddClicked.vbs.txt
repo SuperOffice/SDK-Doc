@@ -1,0 +1,3 @@
+Sub OnSelectionAddClicked 
+	somessagebox "The add selection button was clicked"
+End Sub

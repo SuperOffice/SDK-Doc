@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableCountryGL
+
+= 20
+

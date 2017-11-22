@@ -1,0 +1,15 @@
+dim objso 
+  dim objti 
+  set objso  = CreateObject("superoffice.application")
+      If not (objSO is nothing) Then
+   set objti = objso.database.travelinterface
+   if objti.uagenerateprototype(1)  then
+   objso.database.preference.set "travel", "gwsilent",  0
+   msgbox "the prototype for area 1 is generated."
+   else
+   msgbox " area 1 may not be a valid area. check log file for error  message."
+    end  if
+    else
+   msgbox  "could not log in"
+    end if
+      set objso = nothing

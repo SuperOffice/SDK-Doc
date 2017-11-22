@@ -1,0 +1,11 @@
+dim objso
+dim objappoint
+set objso = CreateObject("superofficedb.database")
+If not (objSO is nothing) Then
+    objso.login  "<userid>", "<password>"
+    set objappoint  = objso.getappointment (227)
+    msgbox  "the full name of the associate that owns this appointment: " & objappoint.associate.fullname
+else
+    msgbox  "unable to connect to database"
+end if
+set objso = nothing

@@ -1,0 +1,8 @@
+dim objSO 
+
+set objSO = CreateObject("superoffice.application")
+If not (objSO is nothing) Then
+    msgbox "number of intellisync users left  " & objso.database.admin.numintellisyncusersleft  
+else
+    msgbox  "failed to connect to the database"
+end if

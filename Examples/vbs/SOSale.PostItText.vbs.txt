@@ -1,0 +1,26 @@
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then
+        
+        mySale = objSO.CurrentSale
+        msg = msg & "ActiveLinks:" & mySale.ActiveLinks & vbCrLf
+        msg = msg & "CanBeCompleted:" & mySale.CanBeCompleted & vbCrLf
+        msg = msg & "ExternalFieldChanged:" & mySale.ExternalFieldChanged & vbCrLf
+        'fails if sale is not guided
+        msg = msg & "GetSuggestedAppointments:" & mySale.GetSuggestedAppointments(mySale.Identity).Item(0).Text & vbCrLf
+        'fails if sale is not guided
+        msg = msg & "GetSuggestedDocuments:" & mySale.GetSuggestedDocuments(mySale.Identity).Item(0).Text & vbCrLf
+        msg = msg & "NextDueDate:" & mySale.NextDueDate & vbCrLf
+        msg = msg & "PostItText:" & mySale.PostItText & vbCrLf
+        msg = msg & "ReasonLost:" & mySale.ReasonLost.Text & vbCrLf
+        msg = msg & "ReasonSold:" & mySale.ReasonSold.Text & vbCrLf
+        msg = msg & "ReasonStalled:" & mySale.ReasonStalled.Text & vbCrLf
+        msg = msg & "ReopenDate:" & mySale.ReopenDate & vbCrLf
+        msg = msg & "SaleType:" & mySale.SaleType.Text & vbCrLf
+        msg = msg & "Stage:" & mySale.Stage.Text & vbCrLf
+        msg = msg & "ValidationMessage:" & mySale.ValidationMessage & vbCrLf
+        MsgBox msg, vbInformation + vbOKOnly, "SuperCOM"
+ 
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing

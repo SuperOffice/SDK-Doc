@@ -1,0 +1,8 @@
+Dim objSO
+Set objSO = CreateObject("SuperOffice.Application")
+If not (objSO is nothing) Then        
+    MsgBox "The current contact person has " & objSO.CurrentPerson.Interests.Count & " active interests.", vbInformation + vbOkOnly, "SuperCOM"
+else
+    MsgBox "Unable to connect"
+end if
+Set objSO = Nothing

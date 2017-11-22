@@ -1,0 +1,3 @@
+sub OnDocumentBeforeDelete
+	somessagebox "If you need any values from this document you need to get them now. After this the document with document_id= "  & id & " would be gone from the database"
+end sub

@@ -1,0 +1,24 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+    Set myStatusMonitor = objDB.Admin.CreateStatusMonitor(5)
+    myStatusMonitor.Name = "Super"
+    myStatusMonitor.Description = "All contacts that start with Super"
+    myStatusMonitor.Picture.ReadFromFile ("c:\Super.jpg")
+    myStatusMonitor.IsVisual = True
+    myStatusMonitor.Save
+    Set myCriteria = myStatusMonitor.Criteria.NewCriterion("contact.name", enBeginsWith)
+    myCriteria.Values.AddString ("Super")
+    myStatusMonitor.Criteria.Add myCriteria
+    Set myCriteria = myStatusMonitor.Criteria.NewCriterion("contact.registered", enAllAfter)
+    myCriteria.Values.AddDate (Date$)
+    myStatusMonitor.Criteria.Add myCriteria
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing 

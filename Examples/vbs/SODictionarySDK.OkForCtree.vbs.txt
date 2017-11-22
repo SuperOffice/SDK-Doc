@@ -1,0 +1,38 @@
+Dim objDict
+Set objDict = CreateObject("SODictionarySDK.Dictionary.1") 
+if not (objDict is nothing) then
+    objDict.SetDatabase "ODBC:<Datasouce>", "<Username>", "<Password>", "CRM5" ' user must have create table rights on the database
+    if objDict.OkForCtree = 1 then
+        Set myTable = objDict.CreateTable("My_Own_Table")
+        myTable.Description = "This table, called My_Own_Table is used as an SDK example. It has some fields, and is available from the import system in SOAdmin"
+        myTable.NetServerName = "My_Own_Table in NetServer"
+
+        Set myImpCat = objDict.CreateImportCategory
+        myImpCat.AddName 1033, "MyOwnImpCat"
+        myTable.SetImportCategory objDict.GetImportCategory (1033, "MyOwnImpCat")
+        myTable.AddImportName 1033, "My_Import"
+        Set fText = myTable.CreateField("My_Text", 2, 30)
+        fText.Description = "My_Text fields description seen in NetServer. This is a short text field"
+        fText.NetServerName = "My_Text field in NetServer"
+        fText.SetFlags True, True, False
+        fText.AddImportName 1033, "My_Text"
+        Set fContact_id = myTable.CreateForeignKey("contact", 2)
+        fContact_id.AddImportName 1033, "My_Contact_id"
+
+        Set i1 = myTable.CreateIndex(True)
+        i1.AddField fText
+        i1.Description = "My own tables indexed field seen in NetServer"
+        i1.NetServerName = "My_Own_Tables Index field"
+
+        Set fmyProject_Idx = myTable.CreateFIeld("My_Project_idx", 1, 4)
+        fmyProject_Idx.SetRelationTarget objDict.GetTable("project").GetField("project_id"), 2
+        fmyProject_Idx.AddImportName 1033, "My_Project_id"
+        myTable.SetReplicationFlags True, True, True
+        objDict.CommitChanges
+
+        MsgBox "Table 'My_Own_Table' created"
+    End if  
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objDict = Nothing

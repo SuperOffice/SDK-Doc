@@ -1,0 +1,11 @@
+dim objdb
+dim objdoc
+set objdb =  CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objdb.login  "<userid>", "<password>" ' log in to the database
+    set  objdoc = objdb.adddocument ("c:\myfile.doc", "false")
+    msgbox  "document added"
+else
+    msgbox  "unable to connect to database"
+end if
+set objso = nothing

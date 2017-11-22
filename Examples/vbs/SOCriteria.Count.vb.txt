@@ -1,0 +1,16 @@
+Dim db As New Database
+If db.Login("<username>", "<password>") Then
+    Dim selection As SOSelection = db.GetSelection(25)
+    Dim i As Integer
+    Dim msg As String
+    If Not selection.Criteria.Empty Then
+        For i = 0 To selection.Criteria.Count - 1
+            msg += selection.Criteria.Item(i).fieldname
+        Next
+        MsgBox(msg)
+    Else
+        MsgBox("selection contains no criteria")
+    End If
+Else
+    MsgBox("failed to log in")
+End If

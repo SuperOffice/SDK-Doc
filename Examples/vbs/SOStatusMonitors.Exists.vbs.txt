@@ -1,0 +1,18 @@
+Dim objDB
+Dim msg
+
+Set objDB = CreateObject("superofficedb.database")
+If Not (objDB is Nothing) Then
+    objDB.login "<userid>", "<password>" ' log in to the database
+
+     Set myStatusMonitors = objDB.Admin.GetAllStatusMonitors(5, False) 'Get all statusmonitors for contacts.
+        If myStatusMonitors.Exists(32) Then
+            MsgBox "There's a status monitor with id = 32"
+        End If
+
+        MsgBox "There are " & myStatusMonitors.Count & " active statusmonitor for contact."
+
+Else
+    MsgBox "unable to connect to database"
+End If
+Set objso = Nothing 

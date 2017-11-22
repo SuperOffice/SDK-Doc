@@ -1,0 +1,3 @@
+Sub OnCurrentSelectionCanceled
+	SOMessageBox "Current selections changes was canceled"
+End Sub

@@ -1,0 +1,25 @@
+set objso = CreateObject("superofficedb.database")
+if objso.login("USERNAME", "PASSWORD") then
+    set admin = objso.Admin
+        msg = msg & "************* Database license info *************" & vbCrLf
+        msg = msg & "Total Asynch Users: " &  admin.TotalAsynchUsers & vbcrlf 
+        msg = msg & "Number of Asynch Users Left: " &  admin.NumAsynchUsersLeft & vbcrlf  
+        msg = msg & "Total Intellisync Users: " &  admin.TotalIntellisyncUsers & vbcrlf 
+        msg = msg & "Number ofIntellisync Users Left: " &  admin.NumIntellisyncUsersLeft & vbcrlf 
+        msg = msg & "Total Netserver Users: " &  admin.TotalNetserverUsers & vbcrlf  
+        msg = msg & "Number of Netserver Users Left: " &  admin.NumNetserverUsersLeft & vbCrLf
+        msg = msg & "Total Outlook Synchronizer Users: " &  admin.TotalOutlookSynchronizerUsers & vbcrlf  
+        msg = msg & "Number of Outlook Synchronizer Users Left: " &  admin.NumOutlookSynchronizerUsersLeft & vbcrlf 
+        msg = msg & "Total ReporterSDK Users: " &  admin.TotalReporterSDKUsers & vbcrlf
+        msg = msg & "Number of ReporterSDK Users Left: " &  admin.NumReporterSDKUsersLeft & vbcrlf 
+        msg = msg & "Total Users: " &  admin.TotalUsers & vbcrlf 
+        msg = msg & "Number of Users Left: " &  admin.NumUsersLeft & vbcrlf 
+        msg = msg & "Total Web Users: " &  admin.TotalWebUsers & vbcrlf  
+        msg = msg & "Number of Web Users Left: " &  admin.NumWebUsersLeft & vbcrlf 
+        msg = msg & "Total Win Users: " &  admin.TotalWinUsers & vbcrlf
+        msg = msg & "Number of Win Users Left: " &  admin.NumWinUsersLeft & vbcrlf
+    msgbox msg, ,"SuperCOM"
+else
+    MsgBox "Unable to connect to database"
+end if
+Set objSO = Nothing
