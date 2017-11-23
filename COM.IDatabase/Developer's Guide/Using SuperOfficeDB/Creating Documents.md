@@ -21,8 +21,8 @@ When you’re using these components, things are a little different:
 You can create the document file like this:
 
 -   copy a file to the appropriate place in the SO\_ARC directory yourself
-    (this is what the [Database.AddDocument](SUPEROFFICEDBLib~Database~AddDocument.md) method does)
--   use the [Document.GenerateDocumentFile](SUPEROFFICEDBLib~SODocument~GenerateDocumentFile.md) method
+    (this is what the <see cref="Database.AddDocument">Database.AddDocument</see> method does)
+-   use the <see cref="SODocument.GenerateDocumentFile">Document.GenerateDocumentFile</see> method
     (this will copy a template and substitute the correct values, just like the dialog does)
 
  

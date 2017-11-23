@@ -11,10 +11,10 @@ Remember this table structure from the database section?
 
 There are actually four functions on the database object which deal with lists and list items.
 
--   [Database.GetHeadings](SUPEROFFICEDBLib~Database~GetHeadings.md)
--   [Database.GetList](SUPEROFFICEDBLib~Database~GetList.md)
--   [Database.GetListItem](SUPEROFFICEDBLib~Database~GetListItem.md)
--   [Database.GetListItemByName](SUPEROFFICEDBLib~Database~GetListItemByName.md)
+-   <see cref="Database.GetHeadings">Database.GetHeadings</see>
+-   <see cref="Database.GetList">Database.GetList</see>
+-   <see cref="Database.GetListItem">Database.GetListItem</see>
+-   <see cref="Database.GetListItemByName">Database.GetListItemByName</see>
 
  
 

@@ -101,7 +101,7 @@ During a remote travel update no auto magical behavior is implemented to support
 
 ### SDK
 
-The SDK function [SODocument.FullPath](SUPEROFFICEDBLib~SODocument~FullPath.md) will most likely not work with all types of plug-ins.  This function should return an absolute path to a physical file.  Not all systems operate with files however. This will probably lead to a need to improve/rewrite applications that use the CRM 5 SDK.  A workaround could be to use the [GetFileCopy](SUPEROFFICEDBLib~SODocument~GetFileCopy.md) function in SODocument instead.  This should give the user a copy of the original file to play with, and she has the option of giving as parameter the path to the directory where the copy will be stored.  Most systems should probably support this.
+The SDK function <see cref="SODocument.FullPath">SODocument.FullPath</see> will most likely not work with all types of plug-ins.  This function should return an absolute path to a physical file.  Not all systems operate with files however. This will probably lead to a need to improve/rewrite applications that use the CRM 5 SDK.  A workaround could be to use the <see cref="SODocument.GetFileCopy">GetFileCopy</see> function in SODocument instead.  This should give the user a copy of the original file to play with, and she has the option of giving as parameter the path to the directory where the copy will be stored.  Most systems should probably support this.
 
 If CRM 5 SDK is used in other methods than those that are not used by CRM5.web, the plug-in will not work with CRM5.web. (See description of interface)
 

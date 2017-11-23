@@ -7,7 +7,7 @@ Here is a brief overview of how to use the variables in the templates:
 
 -   You can also use template variables in URL and filename strings in the Application list. In this case you do not need to use fill characters.
     For example, you can define an application button to launch the program "MAGIC.EXE" with the parameter  "company=&lt;name&gt;".
--   You can access template variable expansion using the [Database.SubstituteTemplateVars](SUPEROFFICEDBLib~Database~SubstituteTemplateVars.md) and [Database.SubstituteTemplateVarsEx](SUPEROFFICEDBLib~Database~SubstituteTemplateVarsEx.md) methods in the COM API.
+-   You can access template variable expansion using the <see cref="Database.SubstituteTemplateVars">Database.SubstituteTemplateVars</see> and <see cref="Database.SubstituteTemplateVarsEx">Database.SubstituteTemplateVarsEx</see> methods in the COM API.
 
 The full list of template variables are described on [Techdoc](http://techdoc.superoffice.com/?sixTemplate.html).
 

@@ -49,7 +49,7 @@ The database object must be logged in before use. The exception to this is when 
  
 
 
-The components will try to enforce the security system that applies in the SuperOffice client, so if you attempt to read another users private appointment with the %SOAppointment:SuperOfficeDB.Interop~SuperOffice.COM.SuperOfficeDB.IAppointment% object, then your code will raise a security exception. Similarly, attempting to save an object that your user is only allowed to read will also lead to a security exception.
+The components will try to enforce the security system that applies in the SuperOffice client, so if you attempt to read another users private appointment with the <see cref="SuperOffice.COM.SuperOfficeDB.IAppointment% object, then your code will raise a security exception. Similarly, attempting to save an object that your user is only allowed to read will also lead to a security exception.
 
 
 Security is enforced based on the user that you are logged in as.
@@ -71,7 +71,7 @@ Here is a little program that displays the name and country of all companies tha
  
 
 <DIV class=LanguageSpecific id=Example_VB>
-<TABLE class=syntaxtable cellSpacing=0 cellPadding=0 width="100%">
+<TABLE class=syntaxtable cellSpacing=0 cellPadding=0 width="100">SOAppointment</see>">
 <TBODY>
 <TR>
 <TH>Visual Basic</TH>

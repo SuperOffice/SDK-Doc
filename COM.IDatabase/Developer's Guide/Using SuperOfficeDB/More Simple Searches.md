@@ -3,7 +3,7 @@ uid: guidetMoreSimpleSearches
 title: More Simple Searches
 ---
 
-The functions [Find.AllMatches](SUPEROFFICEDBLib~SOFind~AllMatches.md) and [Find.FirstMatch](SUPEROFFICEDBLib~SOFind~FirstMatch.md) allow more general searches to be done, in the style of:
+The functions <see cref="SOFind.AllMatches">Find.AllMatches</see> and <see cref="SOFind.FirstMatch">Find.FirstMatch</see> allow more general searches to be done, in the style of:
 
 SELECT contact\_id FROM url
 WHERE url\_address LIKE’%superoffice%’

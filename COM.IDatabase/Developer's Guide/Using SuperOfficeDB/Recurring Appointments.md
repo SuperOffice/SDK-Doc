@@ -16,7 +16,7 @@ The recurrence rule system is exposed as a separate object.
     Appointment.Recurrence -&gt; IRecurrence (read-only)
     Appointment.IsRecurring -&gt; Variant Bool (read-only)
 
-[SORecurrence Object](SUPEROFFICEDBLib~SORecurrence.md) 
+<see cref="SuperOffice.COM.SuperOfficeDB.SORecurrence">SORecurrence Object</see> 
 
     UpdateMode  ERecurrenceUpdateMode
     Description  string  (read-only) (GetRecurrenceInfoText)

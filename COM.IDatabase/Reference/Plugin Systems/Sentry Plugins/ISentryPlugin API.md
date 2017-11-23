@@ -10,7 +10,7 @@ Your plug-in must implement this interface. This is what the sentry system insid
 
 The IDL definition looks like this.
 
-### VB: [GetTableList](SOPLUGINSENTRY2Lib~ISentryPlugin~GetTableList.md)(theTableNames() as Variant)
+### VB: <see cref="ISentryPlugin.GetTableList">GetTableList</see>(theTableNames() as Variant)
 C++: HRESULT GetTableList (SAFEARRAY\*\* TableNames);
 
 This function is called at the start to figure out what tables you are interested in filtering.
@@ -23,7 +23,7 @@ Example: contact, project, person, sale
 
  
 
-### VB: [GetProviderDetails](SOPLUGINSENTRY2Lib~ISentryPlugin~GetProviderDetails.md)(ByVal TableName As String, SupportFieldLevelSecurity As Boolean, NeedFullDataToWork As Boolean)
+### VB: <see cref="ISentryPlugin.GetProviderDetails">GetProviderDetails</see>(ByVal TableName As String, SupportFieldLevelSecurity As Boolean, NeedFullDataToWork As Boolean)
 C++: HRESULT GetProviderDetails(BSTR TableName, BOOL\* SupportFieldLevelSecurity, BOOL\* NeedFullDataToWork)
 
 Here you can inform CRM5 of the amount of data your plug-in needs to work, and whether you filter fields in the table or just a whole row at a time.

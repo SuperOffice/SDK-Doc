@@ -3,7 +3,7 @@ uid: startSimpleSearches
 title: Simple Searches
 ---
 
-We have made it easy to find Contacts, Persons and Projects using the [Find](SUPEROFFICEDBLib~SOFind.md) object. Basically the different functions wrap a simple
+We have made it easy to find Contacts, Persons and Projects using the <see cref="SuperOffice.COM.SuperOfficeDB.SOFind">Find</see> object. Basically the different functions wrap a simple
 "select id where name like ’xxx%’"  SQL query.
 
 Set list = db.Find.ContactsByName("SuperOffice")

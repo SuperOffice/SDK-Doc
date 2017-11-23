@@ -17,5 +17,5 @@ This will remove the first URL of the collection.
 
 ##PARAM: Index
 
-%url.id:SuperOfficeDB.Interop~SuperOffice.COM.SuperOfficeDB.IUrl~Id%
+<see cref="SuperOffice.COM.SuperOfficeDB.IUrl.Id">url.id</see>
 

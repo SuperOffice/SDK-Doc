@@ -23,7 +23,7 @@ The CRM client will not display appointments/documents/sales with bad status and
 
 There is an easy way to set all the values to something sensible:
 
-Use the [SetDefaults](SUPEROFFICEDBLib~SOContact~SetDefaults.md) method. This will save you wondering why the object won't display.  It is usually because you forgot to fill in a status or type field.
+Use the <see cref="SOContact.SetDefaults">SetDefaults</see> method. This will save you wondering why the object won't display.  It is usually because you forgot to fill in a status or type field.
 
 ```
 Set db = createObject("SuperOfficeDB.Database")

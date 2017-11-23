@@ -2,7 +2,7 @@
 ##SUMMARY
 
 
-If you call the GetRelation function with 0, it will create a new relation, like %Database.CreateRelation:SuperOfficeDB.Interop~SuperOffice.COM.SuperOfficeDB.DatabaseClass~CreateRelation%
+If you call the GetRelation function with 0, it will create a new relation, like <see cref="SuperOffice.COM.SuperOfficeDB.DatabaseClass.CreateRelation">Database.CreateRelation</see>
 
 
 

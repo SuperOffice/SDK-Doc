@@ -1,7 +1,7 @@
 
 ##SUMMARY
 
-A string representation of the RowType (see %SOActivityListItem.RowType:SuperOfficeDB.Interop~SuperOffice.COM.SuperOfficeDB.IActivityListItem~RowType% )
+A string representation of the RowType (see <see cref="SuperOffice.COM.SuperOfficeDB.IActivityListItem.RowType">SOActivityListItem.RowType</see> )
 
 
 ##VALUE

@@ -9,149 +9,149 @@ A summary of the new and changed COM APIs in 7.0
 
 **Database**
 
-[Password](SUPEROFFICEDBLib~Database~Password.md) - Obsolete, use SafeCredentials instead.
+<see cref="Database.Password">Password</see> - Obsolete, use SafeCredentials instead.
 
-[GetLocationList](SUPEROFFICEDBLib~Database~GetLocationList.md) - Return resources that are locations
+<see cref="Database.GetLocationList">GetLocationList</see> - Return resources that are locations
 
-[GetStagesForSaleType( item )](SUPEROFFICEDBLib~Database~GetStagesForSaleType.md) - For filtering the stages list correctly.
+<see cref="SuperOffice.COM.SuperOfficeDB.Database.GetStagesForSaleType">GetStagesForSaleType( item )</see> - For filtering the stages list correctly.
 
-[SafeCredentials](SUPEROFFICEDBLib~Database~SafeCredentials.md) - Ticket from NetServer - represents a login session.
+<see cref="Database.SafeCredentials">SafeCredentials</see> - Ticket from NetServer - represents a login session.
 
  
 
 **Contact, Person, Project, Sale, Appointment, Document**
 
-[ExternalFieldChanged](SUPEROFFICEDBLib~SOContact~ExternalFieldChanged.md) - Signal SOCRM that something has happened outside its world – will force a save on model object when AutoSave is triggered. Forces the main record to be updated when object is saved, even if no internal values have changed.
+<see cref="SOContact.ExternalFieldChanged">ExternalFieldChanged</see> - Signal SOCRM that something has happened outside its world – will force a save on model object when AutoSave is triggered. Forces the main record to be updated when object is saved, even if no internal values have changed.
 
-[ValidationMessage](SUPEROFFICEDBLib~SOContact~ValidationMessage.md) - Signal SOCRM that Save should be blocked on the model object because of some reason.
+<see cref="SOContact.ValidationMessage">ValidationMessage</see> - Signal SOCRM that Save should be blocked on the model object because of some reason.
 
-[AutoSaveOnFlush](SUPEROFFICEDBLib~SOContact~AutoSaveOnFlush.md) - Save changes when Flush is triggered
+<see cref="SOContact.AutoSaveOnFlush">AutoSaveOnFlush</see> - Save changes when Flush is triggered
 
-[AutoSaveOnChangeIdentity](SUPEROFFICEDBLib~SOContact~AutoSaveOnChangeIdentity.md) - Save changes when identity is changed.
+<see cref="SOContact.AutoSaveOnChangeIdentity">AutoSaveOnChangeIdentity</see> - Save changes when identity is changed.
 
  
 
 **Contact**
 
-[Contact.MergeTo( TargetContact )](SUPEROFFICEDBLib~SOContact~MergeTo.md) - Merge this contact with another
+<see cref="SuperOffice.COM.SuperOfficeDB.SOContact.MergeTo">Contact.MergeTo( TargetContact )</see> - Merge this contact with another
 
-[Contact.Copy( newName, new Dept )](SUPEROFFICEDBLib~SOContact~Copy.md) - Make a copy of this contact
+<see cref="SuperOffice.COM.SuperOfficeDB.SOContact.Copy">Contact.Copy( newName, new Dept )</see> - Make a copy of this contact
 
  
 
 **Person**
 
-[Person.MergeTo( TargetContact )](SUPEROFFICEDBLib~SOPerson~MergeTo.md) - Merge two persons
+<see cref="SuperOffice.COM.SuperOfficeDB.SOPerson.MergeTo">Person.MergeTo( TargetContact )</see> - Merge two persons
 
-[Person.MoveTo( newName, new Dept )](SUPEROFFICEDBLib~SOPerson~MoveTo.md) - Move a person to another contact
+<see cref="SuperOffice.COM.SuperOfficeDB.SOPerson.MoveTo">Person.MoveTo( newName, new Dept )</see> - Move a person to another contact
 
-[ChatAddresses](SUPEROFFICEDBLib~SOPerson~ChatAddresses.md) - e-mail addresses of type 1
+<see cref="SOPerson.ChatAddresses">ChatAddresses</see> - e-mail addresses of type 1
 
-[VoIPAddresses](SUPEROFFICEDBLib~SOPerson~VoIPAddresses.md) - e-mail addresses of type 2
+<see cref="SOPerson.VoIPAddresses">VoIPAddresses</see> - e-mail addresses of type 2
 
-[Urls](SUPEROFFICEDBLib~SOPerson~Urls.md) - homepage links and the like. Urls with person\_id set
+<see cref="SOPerson.Urls">Urls</see> - homepage links and the like. Urls with person\_id set
 
  
 
 **Associate**
 
-[Groups](SUPEROFFICEDBLib~SOAssociate~Groups.md) - List all groups user is member of
+<see cref="SOAssociate.Groups">Groups</see> - List all groups user is member of
 
  
 
 **Appointment**
 
-[Sale](SUPEROFFICEDBLib~SOAppointment~Sale.md) - The sale this appointment is linked to
+<see cref="SOAppointment.Sale">Sale</see> - The sale this appointment is linked to
 
-[SuggestedAppointmentId](SUPEROFFICEDBLib~SOAppointment~SuggestedAppointmentId.md) - This appointment came from a sales guide.
+<see cref="SOAppointment.SuggestedAppointmentId">SuggestedAppointmentId</see> - This appointment came from a sales guide.
 
  
 
 **Document** 
 
-[Sale](SUPEROFFICEDBLib~SODocument~Sale.md) - The sale this document is linked to
+<see cref="SODocument.Sale">Sale</see> - The sale this document is linked to
 
-[SuggestedDocumentId](SUPEROFFICEDBLib~SODocument~SuggestedDocumentId.md) - This document came from a sales guide
+<see cref="SODocument.SuggestedDocumentId">SuggestedDocumentId</see> - This document came from a sales guide
 
-[ExtRef](SUPEROFFICEDBLib~SODocument~ExtRef.md) - same as [Reference](SUPEROFFICEDBLib~SODocument~Reference.md)
+<see cref="SODocument.ExtRef">ExtRef</see> - same as <see cref="SODocument.Reference">Reference</see>
 
-[ArchiveProviderName](SUPEROFFICEDBLib~SODocument~ArchiveProviderName.md) - string version of ArchiveProvider
+<see cref="SODocument.ArchiveProviderName">ArchiveProviderName</see> - string version of ArchiveProvider
 
  
 
 **Project** 
 
-[Project.MergeTo( project )](SUPEROFFICEDBLib~SOProject~MergeTo.md)
+<see cref="SuperOffice.COM.SuperOfficeDB.SOProject.MergeTo">Project.MergeTo( project )</see>
 
-[Project.ActiveLinks](SUPEROFFICEDBLib~SOProject~ActiveLinks.md) – links to other projects, urls, documents etc
+<see cref="SOProject.ActiveLinks">Project.ActiveLinks</see> – links to other projects, urls, documents etc
 
  
 
 **ProjectMember**
 
-[ExternalFieldChanged](SUPEROFFICEDBLib~SOProjectMember~ExternalFieldChanged.md)
+<see cref="SOProjectMember.ExternalFieldChanged">ExternalFieldChanged</see>
 
-[ValidationMessage](SUPEROFFICEDBLib~SOProjectMember~ValidationMessage.md)
+<see cref="SOProjectMember.ValidationMessage">ValidationMessage</see>
 
  
 
 **Selection**
 
-[ESelectionType](SUPEROFFICEDBLib~Enumerations~ESelectionType_EN.md) enum changed! Static, Dynamic, Combination
+<see cref="Enumerations.ESelectionType_EN">ESelectionType</see> enum changed! Static, Dynamic, Combination
 
-[TargetTable](SUPEROFFICEDBLib~SOSelection~TargetTable.md) - what this is a selection of
+<see cref="SOSelection.TargetTable">TargetTable</see> - what this is a selection of
 
-[Completed](SUPEROFFICEDBLib~SOSelection~Completed.md) - is the selection marked as done?
+<see cref="SOSelection.Completed">Completed</see> - is the selection marked as done?
 
  
 
 **Sale**
 
-[ActiveLinks](SUPEROFFICEDBLib~SOSale~ActiveLinks.md)
+<see cref="SOSale.ActiveLinks">ActiveLinks</see>
 
-[CanBeCompleted](SUPEROFFICEDBLib~SOSale~CanBeCompleted.md)() – is the completed checkbox enabled? Requires status = lost or sold.
+<see cref="SOSale.CanBeCompleted">CanBeCompleted</see>() – is the completed checkbox enabled? Requires status = lost or sold.
 
-[PostItText](SUPEROFFICEDBLib~SOSale~PostItText.md)
+<see cref="SOSale.PostItText">PostItText</see>
 
-[NextDueDate](SUPEROFFICEDBLib~SOSale~NextDueDate.md)
+<see cref="SOSale.NextDueDate">NextDueDate</see>
 
-[ReasonStalled](SUPEROFFICEDBLib~SOSale~ReasonStalled.md) - mdo list item
+<see cref="SOSale.ReasonStalled">ReasonStalled</see> - mdo list item
 
-[ReasonSold](SUPEROFFICEDBLib~SOSale~ReasonSold.md) - mdo list item
+<see cref="SOSale.ReasonSold">ReasonSold</see> - mdo list item
 
-[ReasonLost](SUPEROFFICEDBLib~SOSale~ReasonLost.md) - mdo list item
+<see cref="SOSale.ReasonLost">ReasonLost</see> - mdo list item
 
-[ReopenDate](SUPEROFFICEDBLib~SOSale~ReopenDate.md)
+<see cref="SOSale.ReopenDate">ReopenDate</see>
 
-[SaleType](SUPEROFFICEDBLib~SOSale~SaleType.md) - mdo list item
+<see cref="SOSale.SaleType">SaleType</see> - mdo list item
 
-[Stage](SUPEROFFICEDBLib~SOSale~Stage.md) - mdo list item - valid stages vary according to SaleType - same as old Probability
+<see cref="SOSale.Stage">Stage</see> - mdo list item - valid stages vary according to SaleType - same as old Probability
 
-[GetSuggestedAppointments](SUPEROFFICEDBLib~SOSale~GetSuggestedAppointments.md)()
+<see cref="SOSale.GetSuggestedAppointments">GetSuggestedAppointments</see>()
 
-[GetSuggestedDocuments](SUPEROFFICEDBLib~SOSale~GetSuggestedDocuments.md)()
+<see cref="SOSale.GetSuggestedDocuments">GetSuggestedDocuments</see>()
 
  
 
 **Settings**
 
-[HasLicense](SUPEROFFICEDBLib~SOSettings~HasLicense.md)( licenseName ) – does user have access to license?
+<see cref="SOSettings.HasLicense">HasLicense</see>( licenseName ) – does user have access to license?
 
-[GetNumLicense](SUPEROFFICEDBLib~SOSettings~GetNumLicense.md)( licenseName ) – total number of licenses
+<see cref="SOSettings.GetNumLicense">GetNumLicense</see>( licenseName ) – total number of licenses
 
-[NetServerOverrides](SUPEROFFICEDBLib~SOSettings~NetServerOverrides.md) - return the NetServer config file settings needed to log in to the database.
+<see cref="SOSettings.NetServerOverrides">NetServerOverrides</see> - return the NetServer config file settings needed to log in to the database.
 
-[SuperofConfigPath](SUPEROFFICEDBLib~SOSettings~SuperofConfigPath.md) - return the path to the superoffice.config file
+<see cref="SOSettings.SuperofConfigPath">SuperofConfigPath</see> - return the path to the superoffice.config file
 
  
 
 **ActivityLinks**
 
-[AddProject](SUPEROFFICEDBLib~IActivityLinks~AddProject.md)
+<see cref="IActivityLinks.AddProject">AddProject</see>
 
-[RemoveProject](SUPEROFFICEDBLib~IActivityLinks~RemoveProject.md)
+<see cref="IActivityLinks.RemoveProject">RemoveProject</see>
 
-[Projects](SUPEROFFICEDBLib~IActivityLinks~Projects.md)
+<see cref="IActivityLinks.Projects">Projects</see>
 
  
 
@@ -175,9 +175,9 @@ Setting the password to “blah” is the same as saying
 
 **Admin**
 
-[AddSystemUser](SUPEROFFICEDBLib~SOAdmin~AddSystemUser.md)( name )
+<see cref="SOAdmin.AddSystemUser">AddSystemUser</see>( name )
 
-[AddAnonymousUser](SUPEROFFICEDBLib~SOAdmin~AddAnonymousUser.md)( name )
+<see cref="SOAdmin.AddAnonymousUser">AddAnonymousUser</see>( name )
 
                 You will need the appropriate admin license to create the user.
 
@@ -191,7 +191,7 @@ Setting the password to “blah” is the same as saying
 
 **Database**
 
-[StringResources](SUPEROFFICEDBLib~SOStringResources.md).FromId( id )
+<see cref="SuperOffice.COM.SuperOfficeDB.SOStringResources">StringResources</see>.FromId( id )
 
                 1234 -&gt; “bla bla”
 

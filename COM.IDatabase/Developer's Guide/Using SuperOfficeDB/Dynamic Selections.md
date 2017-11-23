@@ -9,14 +9,14 @@ Dynamic selections are handled just like selections in CRM 5. The only differenc
 
 You can define and edit dynamic selection criteria via COM.
 
-    [Selection.Type](SUPEROFFICEDBLib~SOSelection~Type.md)  enum: Static/Dynamic
-    [Selection.Criteria](SUPEROFFICEDBLib~SOSelection~Criteria.md)   collection of ICriterion – (read-only)
-    [Selection.Criteria.Add](SUPEROFFICEDBLib~SOCriteria~Add.md)
-    [Selection.Criteria.Remove](SUPEROFFICEDBLib~SOCriteria~Remove.md)
+    <see cref="SOSelection.Type">Selection.Type</see>  enum: Static/Dynamic
+    <see cref="SOSelection.Criteria">Selection.Criteria</see>   collection of ICriterion – (read-only)
+    <see cref="SOCriteria.Add">Selection.Criteria.Add</see>
+    <see cref="SOCriteria.Remove">Selection.Criteria.Remove</see>
 
  
 
-[SOCriterion](SUPEROFFICEDBLib~SOCriterion.md) 
+<see cref="SuperOffice.COM.SuperOfficeDB.SOCriterion">SOCriterion</see> 
 
 ```
     Fieldname  string  (e,g “contact.name” )

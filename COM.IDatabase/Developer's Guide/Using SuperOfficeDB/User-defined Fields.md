@@ -12,12 +12,12 @@ This is a property that lets you read user-defined field layouts and values with
 
 You will find UDef property on Contact, Person, Project, and Appointment, Document and Sale objects.
 
--   [Contact.Udef](SUPEROFFICEDBLib~SOContact~UDef.md)
--   [Person.Udef](SUPEROFFICEDBLib~SOPerson~UDef.md)
--   [Project.Udef](SUPEROFFICEDBLib~SOProject~UDef.md)
--   [Appointment.Udef](SUPEROFFICEDBLib~SOAppointment~UDef.md)
--   [Document.Udef](SUPEROFFICEDBLib~SODocument~UDef.md)
--   [Sale.Udef](SUPEROFFICEDBLib~SOSale~UDef.md)
+-   <see cref="SOContact.UDef">Contact.Udef</see>
+-   <see cref="SOPerson.UDef">Person.Udef</see>
+-   <see cref="SOProject.UDef">Project.Udef</see>
+-   <see cref="SOAppointment.UDef">Appointment.Udef</see>
+-   <see cref="SODocument.UDef">Document.Udef</see>
+-   <see cref="SOSale.UDef">Sale.Udef</see>
 
 You can access the user-defined fields through their name or by their field id. The names of the fields are listed in the Admin client, even when the label is hidden from the end-user.
 
@@ -88,7 +88,7 @@ You should check the field’s type before using the value. This will make your 
 
 This example assumes you've added at least one  udef field to contact, and published the layout.
 
-The example also assumes that the field is stored in field udcontactsmall.long01 -- field id 8961. If you need to find out what field id a particular field name corresponds to, you can use the [Database.Dictionary object](SUPEROFFICEDBLib~Database~Dictionary.md).
+The example also assumes that the field is stored in field udcontactsmall.long01 -- field id 8961. If you need to find out what field id a particular field name corresponds to, you can use the <see cref="SuperOffice.COM.SuperOfficeDB.Database.Dictionary">Database.Dictionary object</see>.
 
  
 

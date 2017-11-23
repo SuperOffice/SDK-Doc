@@ -35,16 +35,16 @@ i.e. even if the user can't normally edit the person's activities the activities
 New COM methods:
 ----------------
 
-[Contact.MergeTo](SUPEROFFICEDBLib~SOContact~MergeTo.md)( TargetContact )
+<see cref="SOContact.MergeTo">Contact.MergeTo</see>( TargetContact )
 
-[Contact.Copy](SUPEROFFICEDBLib~SOContact~Copy.md)( newName, new Dept )
-
- 
-
-[Person.MoveTo](SUPEROFFICEDBLib~SOPerson~MoveTo.md)(contact )
-
-[Person.MergeTo](SUPEROFFICEDBLib~SOPerson~MergeTo.md)( person)
+<see cref="SOContact.Copy">Contact.Copy</see>( newName, new Dept )
 
  
 
-[Project.MergeTo](SUPEROFFICEDBLib~SOProject~MergeTo.md)( project )
+<see cref="SOPerson.MoveTo">Person.MoveTo</see>(contact )
+
+<see cref="SOPerson.MergeTo">Person.MergeTo</see>( person)
+
+ 
+
+<see cref="SOProject.MergeTo">Project.MergeTo</see>( project )

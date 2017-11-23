@@ -1,5 +1,5 @@
 
 ##SUMMARY
 
-: %Admin.CreateRole:SuperOfficeDB.Interop~SuperOffice.COM.SuperOfficeDB.IAdmin~CreateRole%.
+: <see cref="SuperOffice.COM.SuperOfficeDB.IAdmin.CreateRole">Admin.CreateRole</see>.
 

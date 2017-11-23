@@ -14,7 +14,7 @@ places one record in the contact table, one in the phone and one in the url tabl
 
 You can run an import without human intervention once you have defined the mapping in the admin client by saving the mapping and re-running the import using the mapping you saved. The function looks like this:
 
-[Database.Import( "Filename.dsc" )](SUPEROFFICEDBLib~Database~Import.md)
+<see cref="SuperOffice.COM.SuperOfficeDB.Database.Import">Database.Import( "Filename.dsc" )</see>
 
 It reads the name of the file to import and the mapping of columns to table fields from the descFilename. In other words, you update the file and re-run the import. Unfortunately you cannot specify the name of the file to import with this function. The filename is baked into the description file.
 

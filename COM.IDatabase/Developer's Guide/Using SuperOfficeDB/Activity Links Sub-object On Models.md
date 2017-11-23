@@ -15,13 +15,13 @@ Currently we only support document-related links (i.e. you can't link activities
 
 The activity models expose a suitable links object:
 
--       [Appointment.ActivityLinks](SUPEROFFICEDBLib~SOAppointment~ActivityLinks.md) 
--       [Sale.ActivityLinks](SUPEROFFICEDBLib~SOSale~ActivityLinks.md) 
--       [Document.Links](SUPEROFFICEDBLib~SODocument~ActivityLinks.md)
+-       <see cref="SOAppointment.ActivityLinks">Appointment.ActivityLinks</see> 
+-       <see cref="SOSale.ActivityLinks">Sale.ActivityLinks</see> 
+-       <see cref="SODocument.ActivityLinks">Document.Links</see>
 
  
 
-The [SOActivityLinks](SUPEROFFICEDBLib~SOActivityLinks.md) object has the following operations:
+The <see cref="SuperOffice.COM.SuperOfficeDB.SOActivityLinks">SOActivityLinks</see> object has the following operations:
 
     AddDocument( Document )
     RemoveDocument( Document )

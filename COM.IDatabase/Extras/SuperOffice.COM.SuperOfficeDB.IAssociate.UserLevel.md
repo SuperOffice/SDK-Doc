@@ -2,7 +2,7 @@
 ##SUMMARY
 
 
-Obsolete - from SIX we use %roles:SuperOfficeDB.Interop~SuperOffice.COM.SuperOfficeDB.IAssociate~Role%. The associates userlevel, the same as set in the admin client. 
+Obsolete - from SIX we use <see cref="SuperOffice.COM.SuperOfficeDB.IAssociate.Role">roles</see>. The associates userlevel, the same as set in the admin client. 
 
 UserLevel: 
 

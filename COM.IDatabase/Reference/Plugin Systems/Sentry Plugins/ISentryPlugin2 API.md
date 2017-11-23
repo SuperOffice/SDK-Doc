@@ -10,7 +10,7 @@ ISentryPlugin2 API
 
  
 
-### HRESULT [Initialize](SOPLUGINSENTRY2Lib~ISentryPlugin2~Initialize.md)( \[in\] BSTR adoConnectionString, \[in\] BSTR prefix );
+### HRESULT <see cref="ISentryPlugin2.Initialize">Initialize</see>( \[in\] BSTR adoConnectionString, \[in\] BSTR prefix );
 
 Called at startup of the CRM5 or SIX application.
 
@@ -22,7 +22,7 @@ You can use this info to read extra data from the database that you might need t
 
  
 
-### HRESULT [GetTableRights](SOPLUGINSENTRY2Lib~ISentryPlugin2~GetTableRights.md)( long AssocId, long GroupId, 
+### HRESULT <see cref="ISentryPlugin2.GetTableRights">GetTableRights</see>( long AssocId, long GroupId, 
               long RecordId, BSTR Tablename, 
               SAFEARRAY(VARIANT)\* RecordData, 
               VARIANT\_BOOL\* o\_CanInsertRow, VARIANT\_BOOL\* o\_CanReadRow, VARIANT\_BOOL\* o\_CanUpdateRow, VARIANT\_BOOL\* o\_CanDeleteRow,
@@ -45,7 +45,7 @@ end if
 
  
 
-### HRESULT [GetFieldRights](SOPLUGINSENTRY2Lib~ISentryPlugin2~GetFieldRights.md)( long AssocId, long GroupId, 
+### HRESULT <see cref="ISentryPlugin2.GetFieldRights">GetFieldRights</see>( long AssocId, long GroupId, 
               long RecordId, BSTR TableName, 
               SAFEARRAY(VARIANT)\* RecordData, 
               SAFEARRAY(VARIANT)\* o\_FieldRights);

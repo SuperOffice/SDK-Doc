@@ -3,7 +3,7 @@ uid: guideDatabaseSettings
 title: Database Settings
 ---
 
-The [settings object](SUPEROFFICEDBLib~SOSettings.md) has properties that can tell you about the system’s serial numbers, path to document archive, data source etc.
+The <see cref="SuperOffice.COM.SuperOfficeDB.SOSettings">settings object</see> has properties that can tell you about the system’s serial numbers, path to document archive, data source etc.
 
 Set db = CreateObject( "SuperOfficeDb.Database")
 Db.Login "name", "pass"

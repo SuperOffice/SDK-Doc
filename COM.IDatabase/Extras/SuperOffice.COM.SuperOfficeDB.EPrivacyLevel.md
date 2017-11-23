@@ -2,6 +2,6 @@
 ##SUMMARY
 
 
-(see: %SODocument.Private:SuperOfficeDB.Interop~SuperOffice.COM.SuperOfficeDB.IDocument~Private% )
+<see cref="SuperOffice.COM.SuperOfficeDB.IDocument.Private">SODocument.Private</see>
 
 

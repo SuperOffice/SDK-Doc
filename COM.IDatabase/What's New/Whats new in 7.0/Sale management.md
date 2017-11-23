@@ -25,59 +25,59 @@ The new MDO lists are available via the existing list APIs.
 
 Sale
 
-                Database.GetListItem( [SOTable](SUPEROFFICEDBLib~Enumerations~SOTableId_EN.md) … )
+                Database.GetListItem( <see cref="Enumerations.SOTableId_EN">SOTable</see> … )
 
-                Database.GetListItems(  [SOTable](SUPEROFFICEDBLib~Enumerations~SOTableId_EN.md) … )
+                Database.GetListItems(  <see cref="Enumerations.SOTableId_EN">SOTable</see> … )
 
 -   SaleStage - same as old Probability, but now filtered according to the SaleType value.
 
  
 
-[Database.GetStagesForSaleType](SUPEROFFICEDBLib~Database~GetStagesForSaleType.md)( item )
+<see cref="Database.GetStagesForSaleType">Database.GetStagesForSaleType</see>( item )
 
 -          For filtering the stages list correctly.
 
  
 
-[Appointment.Sale](SUPEROFFICEDBLib~SOAppointment~Sale.md)-          The sale this appointment is linked to
+<see cref="SOAppointment.Sale">Appointment.Sale</see>-          The sale this appointment is linked to
 
-[Appointment.SuggestedAppointmentId](SUPEROFFICEDBLib~SOAppointment~SuggestedAppointmentId.md)
+<see cref="SOAppointment.SuggestedAppointmentId">Appointment.SuggestedAppointmentId</see>
 
 -          This appointment came from a sales guide
 
  
 
-[Document.Sale](SUPEROFFICEDBLib~SODocument~Sale.md)-          The sale this document is linked to
+<see cref="SODocument.Sale">Document.Sale</see>-          The sale this document is linked to
 
-[Document.SuggestedDocumentId](SUPEROFFICEDBLib~SODocument~SuggestedDocumentId.md)
+<see cref="SODocument.SuggestedDocumentId">Document.SuggestedDocumentId</see>
 
 -          This document came from a sales guide
 
  
 
-[Sale.ActiveLinks](SUPEROFFICEDBLib~SOSale~ActiveLinks.md)
+<see cref="SOSale.ActiveLinks">Sale.ActiveLinks</see>
 
-[Sale.CanBeCompleted](SUPEROFFICEDBLib~SOSale~CanBeCompleted.md)() – is the completed checkbox enabled for editing?
+<see cref="SOSale.CanBeCompleted">Sale.CanBeCompleted</see>() – is the completed checkbox enabled for editing?
 
-[Sale.PostItText](SUPEROFFICEDBLib~SOSale~PostItText.md)
+<see cref="SOSale.PostItText">Sale.PostItText</see>
 
-[Sale.NextDueDate](SUPEROFFICEDBLib~SOSale~NextDueDate.md)
+<see cref="SOSale.NextDueDate">Sale.NextDueDate</see>
 
-[Sale.ReasonStalled](SUPEROFFICEDBLib~SOSale~ReasonStalled.md)
+<see cref="SOSale.ReasonStalled">Sale.ReasonStalled</see>
 
-[Sale.ReasonSold](SUPEROFFICEDBLib~SOSale~ReasonSold.md)
+<see cref="SOSale.ReasonSold">Sale.ReasonSold</see>
 
-[Sale.ReasonLost](SUPEROFFICEDBLib~SOSale~ReasonLost.md)
+<see cref="SOSale.ReasonLost">Sale.ReasonLost</see>
 
-[Sale.ReopenDate](SUPEROFFICEDBLib~SOSale~ReopenDate.md)
+<see cref="SOSale.ReopenDate">Sale.ReopenDate</see>
 
-[Sale.SaleType](SUPEROFFICEDBLib~SOSale~SaleType.md)
+<see cref="SOSale.SaleType">Sale.SaleType</see>
 
-[Sale.Stage](SUPEROFFICEDBLib~SOSale~Stage.md)
+<see cref="SOSale.Stage">Sale.Stage</see>
 
-[Sale.GetSuggestedAppointments](SUPEROFFICEDBLib~SOSale~GetSuggestedAppointments.md)()
+<see cref="SOSale.GetSuggestedAppointments">Sale.GetSuggestedAppointments</see>()
 
-[Sale.GetSuggestedDocuments](SUPEROFFICEDBLib~SOSale~GetSuggestedDocuments.md)()
+<see cref="SOSale.GetSuggestedDocuments">Sale.GetSuggestedDocuments</see>()
 
  
 

@@ -7,12 +7,12 @@ title: Role-Based Security
 
 Roles need to be exposed on Associates and User objects.
 
-    [Associate.Role](SUPEROFFICEDBLib~SOAssociate~Role.md)  -&gt; SORole (read-only)
+    <see cref="SOAssociate.Role">Associate.Role</see>  -&gt; SORole (read-only)
     User.Role  -&gt; SORole (read/write)
 
 Roles can be read-only objects in this version – just expose the get functions on SRoleModel:
 
-**[SORole](SUPEROFFICEDBLib~SORole.md)**
+**<see cref="SuperOffice.COM.SuperOfficeDB.SORole">SORole</see>**
 
     Identity  (read-only)
     Name  (read-only)
@@ -21,8 +21,8 @@ Roles can be read-only objects in this version – just expose the get functions
     DataRight( SOTableId, ERelationshipToOwner ) -&gt; string ("CRUD" for full access, "R" for read-only.)
 
 Note the use of a string instead of an id to query the function rights.
-[SOTableId](SUPEROFFICEDBLib~Enumerations~SOTableId_EN.md) is an existing enum.
-[ERelationshipToOwner](SUPEROFFICEDBLib~Enumerations~EnRelationshipToOwner_EN.md) is a new enum.
+<see cref="Enumerations.SOTableId_EN">SOTableId</see> is an existing enum.
+<see cref="Enumerations.EnRelationshipToOwner_EN">ERelationshipToOwner</see> is a new enum.
 
 Function rights have unique string ids as well as an id – to make code easier to read, and portable across installations.
 

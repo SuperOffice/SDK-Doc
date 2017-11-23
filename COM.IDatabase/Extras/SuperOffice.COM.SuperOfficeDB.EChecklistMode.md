@@ -2,7 +2,6 @@
 ##SUMMARY
 
 
-
-(see: %Database.GetCheckList:SuperOfficeDB.Interop~SuperOffice.COM.SuperOfficeDB.DatabaseClass~GetChecklist% )
+<see cref="SuperOffice.COM.SuperOfficeDB.DatabaseClass.GetCheckList">Database.GetCheckList</see>
 
 

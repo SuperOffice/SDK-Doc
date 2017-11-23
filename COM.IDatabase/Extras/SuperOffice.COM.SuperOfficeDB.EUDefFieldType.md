@@ -1,5 +1,5 @@
 
 ##SUMMARY
 
-(see: %SOUdefField.FieldType:SuperOfficeDB.Interop~SuperOffice.COM.SuperOfficeDB.IUDefField~FieldType% )
+<see cref="SuperOffice.COM.SuperOfficeDB.IUDefField.FieldType">SOUdefField.FieldType</see>
 

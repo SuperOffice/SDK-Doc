@@ -15,7 +15,7 @@ This text may be copied to the notepad, and saved as a *.vbs file. Remember to c
 
 ##SEEALSO
 
-Target="SuperOfficeDB.Interop~SuperOffice.COM.SuperOfficeDB.EChecklistMode", Caption="EChecklistMode Enumeration"
+<see cref="SuperOffice.COM.SuperOfficeDB.EChecklistMode">EChecklistMode Enumeration</see>
 
 
 ##PARAM: i_assocId

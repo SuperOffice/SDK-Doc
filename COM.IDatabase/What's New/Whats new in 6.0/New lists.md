@@ -34,7 +34,7 @@ Example:
    Set item = db.GetListItem( enTableIntent, 1 )
    Msgbox item.name,,”Intent 1 name”
 
-[ListTextItem.Value](SUPEROFFICEDBLib~IListTextItem~Value.md)() supports the following new fields on existing lists:
+<see cref="IListTextItem.Value">ListTextItem.Value</see>() supports the following new fields on existing lists:
 
 **Task**
 

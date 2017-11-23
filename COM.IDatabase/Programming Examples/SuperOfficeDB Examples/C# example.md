@@ -9,7 +9,7 @@ The .net framework will automatically generate wrapper classes for you. The name
 
  
 
-The DatabaseClass represents the [Database](SUPEROFFICEDBLib~Database.md) object that you would normally create. You then use the COM API as you normally would.
+The DatabaseClass represents the <see cref="SuperOffice.COM.SuperOfficeDB.Database">Database</see> object that you would normally create. You then use the COM API as you normally would.
 
  
 

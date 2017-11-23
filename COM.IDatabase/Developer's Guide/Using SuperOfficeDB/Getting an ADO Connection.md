@@ -6,7 +6,7 @@ title: Getting an ADO Connection
 Once you are logged in to the database object, you can ask it for an ADO connection object. The database object will take care of logging in the connection for you.
 
 1. Create SuperOfficeDB object
-2. [GetADOConnection](SUPEROFFICEDBLib~Database~GetADOConnection.md) makes the connection object for you – there are no complicated parameters to remember.
+2. <see cref="Database.GetADOConnection">GetADOConnection</see> makes the connection object for you – there are no complicated parameters to remember.
 3. Execute an SQL command
 4. Navigate the result set as normal
 
@@ -41,4 +41,4 @@ Set app = CreateObject("SuperOffice.Application")
 Set db = app.Database
 Set objConn = db.GetADOConnection
 
-Instead, use the [GetADOConnectionString](SUPEROFFICEDBLib~Database~GetADOConnectionString.md) function to get the connection string, then use that to connect an ADO object you have made yourself.
+Instead, use the <see cref="Database.GetADOConnectionString">GetADOConnectionString</see> function to get the connection string, then use that to connect an ADO object you have made yourself.

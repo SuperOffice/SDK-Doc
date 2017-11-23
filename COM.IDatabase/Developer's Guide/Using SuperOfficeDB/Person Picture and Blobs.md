@@ -5,7 +5,7 @@ title: Person Picture and Blobs
 
 Pictures are get/set’able, and extractable via COM
 
-Pictures are currently supported on three objects: [Person.Picture](SUPEROFFICEDBLib~SOPerson~Picture.md), [Project.Picture](SUPEROFFICEDBLib~SOProject~Picture.md), and [StatusMonitor.Picture](SUPEROFFICEDBLib~SOStatusMonitor~Picture.md)
+Pictures are currently supported on three objects: <see cref="SOPerson.Picture">Person.Picture</see>, <see cref="SOProject.Picture">Project.Picture</see>, and <see cref="SOStatusMonitor.Picture">StatusMonitor.Picture</see>
 
  
 
@@ -43,7 +43,7 @@ This means we can write code like this:
 
 The blob system is also accessible from the Database object:
 
-[Database.ExportBlobToFile](SUPEROFFICEDBLib~Database~ExportBlobToFile.md) and [Database.ImportBlobFromFile](SUPEROFFICEDBLib~Database~ImportBlobFromFile.md)
+<see cref="Database.ExportBlobToFile">Database.ExportBlobToFile</see> and <see cref="Database.ImportBlobFromFile">Database.ImportBlobFromFile</see>
 
  
 

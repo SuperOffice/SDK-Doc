@@ -2,6 +2,6 @@
 ##SUMMARY
 
 
-(see: %SOPreference.Get:SuperOfficeDB.Interop~SuperOffice.COM.SuperOfficeDB.IPreference~Get% )
+<see cref="SuperOffice.COM.SuperOfficeDB.IPreference.Get">SOPreference.Get</see>
 
 

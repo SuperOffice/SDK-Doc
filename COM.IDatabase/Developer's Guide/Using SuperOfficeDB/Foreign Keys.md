@@ -28,7 +28,7 @@ id = contact.ForeignKey.Get("ERP","ERP","ERP-id")
 
 and you’ll get back 1234.
 
-You can search foreign keys using the [Database.Find.IdFromForeignKey()](SUPEROFFICEDBLib~SOFind~IdFromForeignKey.md) function.
+You can search foreign keys using the <see cref="SuperOffice.COM.SuperOfficeDB.SOFind.IdFromForeignKey">Database.Find.IdFromForeignKey()</see> function.
 
 i.e. Given ERP-id “1234”, what is the contact id in the SuperOffice database?
 
@@ -36,7 +36,7 @@ contactId = Database.Find.IdFromForeignKey("ERP", "ERP", "ERP-id", "1234", enTab
 
  
 
-In SuperOffice CRM 5 you will need to use the [Database.Find.FirstMatch( )](SUPEROFFICEDBLib~SOFind~FirstMatch.md) function since CRM 5 does not have the IdFromForeignKey function.
+In SuperOffice CRM 5 you will need to use the <see cref="SuperOffice.COM.SuperOfficeDB.SOFind.FirstMatch">Database.Find.FirstMatch( )</see> function since CRM 5 does not have the IdFromForeignKey function.
 
 contactId = Database.Find.FirstMatch("foreignkey", "recordid", "subvalue", "1234")
 

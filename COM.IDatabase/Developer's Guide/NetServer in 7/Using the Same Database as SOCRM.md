@@ -36,7 +36,7 @@ ContactRow c = ContactRow.GetFromIdxContactId(2);
 
 If you want to use NetServer directly, you will need to connect it to the same config file and settings that the SOCRM client is using.
 
-The way to do this is using the [Settings.SuperOfConfigPath](SUPEROFFICEDBLib~SOSettings~SuperofConfigPath.md) property and the [NetServerOverrides](SUPEROFFICEDBLib~SOSettings~NetServerOverrides.md) array.
+The way to do this is using the <see cref="SOSettings.SuperofConfigPath">Settings.SuperOfConfigPath</see> property and the <see cref="SOSettings.NetServerOverrides">NetServerOverrides</see> array.
 
  
 ```

@@ -10,7 +10,7 @@ We have added SAINT counters and values to the list as well.
 
 Again these functions require the SAINT license to be active in order to work.
 
-[SOFind](SUPEROFFICEDBLib~SOFind.md) - Added the following methods:
+<see cref="SuperOffice.COM.SuperOfficeDB.SOFind">SOFind</see> - Added the following methods:
 
     ContactsWithNumActivitiesCreatedTotal( type, intent, direction, operator, value )
     ContactsWithNumActivitiesCreatedPeriod( type, intent, direction, operator, value )

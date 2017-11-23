@@ -2,7 +2,7 @@
 ##SUMMARY
 
 
-Use with %Database.GetAssociate:SuperOfficeDB.Interop~SuperOffice.COM.SuperOfficeDB.DatabaseClass~GetAssociate% to get information on the user.
+Use with <see cref="SuperOffice.COM.SuperOfficeDB.DatabaseClass.GetAssociate">Database.GetAssociate</see> to get information on the user.
 
 
 

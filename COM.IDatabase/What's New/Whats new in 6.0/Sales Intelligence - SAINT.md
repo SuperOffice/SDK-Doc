@@ -15,6 +15,6 @@ The SAINT system allows these queries to be stored and matches can be flagged wi
 
  
 
-See the [Database.Admin.StatusMonitor](SUPEROFFICEDBLib~IStatusMonitor.md) object for reference information.
+See the <see cref="SuperOffice.COM.SuperOfficeDB.IStatusMonitor">Database.Admin.StatusMonitor</see> object for reference information.
 
 [Read more about SAINT](Saint%20Counters%20And%20Values.md)

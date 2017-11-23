@@ -35,4 +35,4 @@ User interface customization, scripting, events are covered in the Client GUI AP
 
  
 
-Go straight to the [Database Object](SUPEROFFICEDBLib~Database.md) reference.
+Go straight to the <see cref="SuperOffice.COM.SuperOfficeDB.Database">Database Object</see> reference.
