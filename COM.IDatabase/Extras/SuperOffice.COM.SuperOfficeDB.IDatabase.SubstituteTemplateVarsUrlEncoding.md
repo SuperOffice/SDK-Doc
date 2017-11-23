@@ -8,8 +8,10 @@
 
 ##SUMMARY
 
+This function will replace template variables in a string with the specified information, e.g. replace the &lt;name&gt; template variable with the text "SuperOffice AS". 
+If you want to create your own template systems, you can access our substitution engine using this function. This will fill the values based on the logged in user.
 
-<A href="guideTemplateVariables.html">Read more</A>
+[Read More](../Reference/Using template variables.md)
 
 
 

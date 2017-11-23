@@ -23,11 +23,11 @@ String - the text with the template variables replaced
 ##SUMMARY
 
 
-This function will replace template variables in a string with the specified information, e.g. replace the &lt;name&gt; template variable <NAME>with SuperOffice AS. If you want to create your own template systems, you can access our substitution engine using this function. This will fill the values based on the associate provided.
+This function will replace template variables in a string with the specified information, e.g. replace the &lt;name&gt; template variable with "SuperOffice AS". 
+If you want to create your own template systems, you can access our substitution engine using this function. This will fill the values based on the associate provided.
 
 
-<A href="guideTemplateVariables.html">Read more</A>
-
+[Read More](../Reference/Using template variables.md)
 
 
 ##PARAM: SourceString
