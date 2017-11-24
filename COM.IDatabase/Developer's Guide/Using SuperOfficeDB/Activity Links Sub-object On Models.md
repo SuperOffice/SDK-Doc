@@ -23,14 +23,15 @@ The activity models expose a suitable links object:
 
 The <see cref="SuperOffice.COM.SuperOfficeDB.SOActivityLinks">SOActivityLinks</see> object has the following operations:
 
-    AddDocument( Document )
-    RemoveDocument( Document )
-    Documents -&gt; Collection of Document model objects
+*    AddDocument( Document )
+*    RemoveDocument( Document )
+*    Documents -&gt; Collection of Document model objects
+
 Links are saved when the owner object is saved.
 
 Example:
 
-```
+```cs
     set appoint = db.GetAppoint( 123 )
     set doc = db.GetDocument( 456 )
     set sale = db.GetSale( 987 )

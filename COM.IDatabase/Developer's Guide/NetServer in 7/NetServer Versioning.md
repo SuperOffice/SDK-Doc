@@ -29,12 +29,12 @@ If you are deploying your plugin to a separate folder, you need to be careful wi
 For example, if you are running in a client that runs SOCRM 7.0.4003 then you should compile the plugin against NetServer 7.0.4003
 
 e.g. `ProgramFiles\\SuperOffice\\Client`
-```
+```cs
      SOCRM.EXE, SOCORE.DLL (7.0.4003), SODATABASE.DLL (7.0.4003), SODBIF32.DLL etc
 ```
 
 Your plugin is in ProgramFiles\\MyPlugin
-```
+```cs
      MYPLUGIN.DLL, SOCORE.DLL (7.0.3974), SODATABASE.DLL (7.0.3974), etc
 ```
 
@@ -49,7 +49,7 @@ The consequence is that you won't see the database connection that SOCRM has set
 To work around it you will need to make an **SOCRM.EXE.config** that redirects NetServer DLLs from the old version to the new version.
 Note that this **SOCRM.EXE.config** is not the same as the **SuperOffice.config** that contains the NetServer database configuration.
 
-```
+```xml
 <configuration>
   <runtime>
     <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">

@@ -10,7 +10,7 @@ Here we log in to the database directly, so the SOCRM application does not need 
 
 If the login fails, then isOk will be false and an error message is displayed.
 
-We use the <see cref="SuperOffice.COM.SuperOfficeDB.SOFind">Find</see> object to find the id for the contact named "SuperOffice ASA".
+We use the <see cref="SuperOffice.COM.SuperOfficeDB.IFind">Find</see> object to find the id for the contact named "SuperOffice ASA".
 
 We create an appointment and then call the <see cref="IAppointment.SetDefaults">SetDefaults</see> method to make sure it has some sensible values in it before we start tweaking its settings.
 
@@ -18,7 +18,7 @@ The Contact and Task type of the new appointment are set, as is the text of the 
 
 Finally we save the appointment to the database. You should be able to find the appointment in the diary or under the SuperOffice company.
 
-```
+```vb
 set soDb = CreateObject("SuperOfficeDB.Database")
 isOk = soDb.Login("user", "pass")
 if isOk Then

@@ -16,9 +16,9 @@ You can define and edit dynamic selection criteria via COM.
 
  
 
-<see cref="SuperOffice.COM.SuperOfficeDB.SOCriterion">SOCriterion</see> 
+<see cref="SuperOffice.COM.SuperOfficeDB.ICriterion">SOCriterion</see> 
 
-```
+```vb
     Fieldname  string  (e,g “contact.name” )
     UdefField  string  (e.g. "My udef field")
     ExtraId   long
@@ -30,7 +30,7 @@ You can define and edit dynamic selection criteria via COM.
 
 So we can say things like:
 
-```
+```vb
     Set defaultCat = db.GetListItem( enTableCategory, 7 )
     Set sel = db.CreateSelection
     sel.SetDefaults

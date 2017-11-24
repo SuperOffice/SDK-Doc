@@ -8,10 +8,10 @@ They are intended to make life easier for people to read the counters – since 
 These wrap the StatusMonitorAgent and the StatusMonitorModel, and the the CounterValue table.
 Access to the SAINT object requires that you have the SAINT site license. If the license is missing, then we set an error.
 
-    Contact.Counters      ICounters (read-only)
-    Project.Counters      ICounters (read-only)
+*    <see cref="IContact.Counters">Contact.Counters</see>      ICounters (read-only)
+*    <see cref="IProject.Counters">Project.Counters</see>      ICounters (read-only)
 
-```
+```cs
 ICounters : IDispatch
     NumSalesCreatedTotal( status, amountclass )   long  (read-only)
     NumSalesCreatedPeriod( status, amountclass )   long  (read-only)
@@ -29,7 +29,7 @@ ICounters : IDispatch
     ActiveValues       ICounterValues (read-only)
 ```
 
-```
+```cs
 ICounterValues : IDispatch
     \_NewEnum   IEnumDispatch – creates iterator object
     Item( variant )   ICounterValue - look up by name or id. Return Nothing if not found
@@ -37,7 +37,7 @@ ICounterValues : IDispatch
     Next    ICounterValue - internal iterator method
 ```
 
-```
+```cs
 ICounterValue : IDispatch
     Id    long  (read-only – primary key)
     Name    string  (read-only)
@@ -50,27 +50,24 @@ ICounterValue : IDispatch
     DefaultTaskType   IListTextItem (read-only)
 ```
 
-```
-Type  = new enum = allActivity, allAppointment, appointment, phone, task, allDocument, letter, fax, e-mail, mail merge
-- default to allActivity
-Status  = new enum = allSales, open, sold, lost  - default to allSales
-Intent   = list item ( NULL or id = 0 means all)  - default to NULL
-AmountClass  = list item ( NULL or id = 0 means all)  - default to NULL
-Direction  = new enum = any, incoming, outgoing   - default to any
-```
+* Type  = new enum = allActivity, allAppointment, appointment, phone, task, allDocument, letter, fax, e-mail, mail merge (default to allActivity)
+* Status  = new enum = allSales, open, sold, lost  - default to allSales
+* Intent   = list item ( NULL or id = 0 means all)  - default to NULL
+* AmountClass  = list item ( NULL or id = 0 means all)  - default to NULL
+* Direction  = new enum = any, incoming, outgoing   - default to any
 
 Intent and AmountClass are both list items.
 
 The basic Saint properties (NumSalesCreatedTotal etc) are all simply a matter of reading the right SAINT record from the database and returning the right field.
 e.g. cont.Counters.NumSalesCreatedTotal( enSaintAllSales )  is equivalent to
 
-```
+```sql
 Select totalReg from CounterValue Where contact\_id = 123 and sale\_status = 4 and  amountClassId = 0
 ```
 
 We should be able to say this:
 
-```
+```vb
     Set cont = db.GetContact( 123 )
     Set intent = db.GetListItem( enTableIntent, 1 )
     Set amount = db.GetListItem( enTableAmountClass, 2 )

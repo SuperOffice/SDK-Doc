@@ -7,9 +7,11 @@ Sometimes we want to add new companies or new appointments to the database. Inst
 
 The objects we get back from CreateThingy are very blank. Everything is 0 or "".
 
+```vb
 Set db = createObject("SuperOfficeDB.Database")
 db.Login "name", "pass"
 Set newContact = db.CreateContact
+```
 
 At this point, the newContact has no name, no our-contact associate, no category id, no number assigned (this may be required).
 
@@ -25,7 +27,7 @@ There is an easy way to set all the values to something sensible:
 
 Use the <see cref="IContact.SetDefaults">SetDefaults</see> method. This will save you wondering why the object won't display.  It is usually because you forgot to fill in a status or type field.
 
-```
+```vb
 Set db = createObject("SuperOfficeDB.Database")
 db.Login "name", "pass"
 Set newContact = db.CreateContact
@@ -47,7 +49,7 @@ There is one set of defaults for each appointment button at the bottom of the CR
  
 ![](../../images/toolbar-appointment.gif)
 
-```
+```vb
 Set db = CreateObject("SuperOfficeDB.Database")
 db.Login "name", "pass"
 Set newAppoint = db.CreateAppointment

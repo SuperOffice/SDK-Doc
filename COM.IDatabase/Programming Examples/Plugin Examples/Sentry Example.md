@@ -29,7 +29,7 @@ In order to use the example you need to
 
 The function in the plugin that does the work for us is this one:
 
-```
+```vb
 Private Sub SOSentryPlugin2\_GetTableRights(ByVal AssocId As Long, ByVal GroupId As Long, ByVal RecordId As Long, ByVal TableName As String, RecordData() As Variant, o\_CanInsertRow As Boolean, o\_CanReadRow As Boolean, o\_CanUpdateRow As Boolean, o\_CanDeleteRow As Boolean, o\_ToolTip As String)
     If TableName = "contact" And RecordId &gt; 0 Then
         Dim name As String
