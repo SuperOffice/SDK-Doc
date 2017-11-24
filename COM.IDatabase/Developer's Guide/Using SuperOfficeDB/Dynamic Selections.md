@@ -9,10 +9,10 @@ Dynamic selections are handled just like selections in CRM 5. The only differenc
 
 You can define and edit dynamic selection criteria via COM.
 
-    <see cref="ISelection.Type">Selection.Type</see>  enum: Static/Dynamic
-    <see cref="ISelection.Criteria">Selection.Criteria</see>   collection of ICriterion – (read-only)
-    <see cref="ICriteria.Add">Selection.Criteria.Add</see>
-    <see cref="ICriteria.Remove">Selection.Criteria.Remove</see>
+*   <see cref="ISelection.Type">Selection.Type</see>  enum: Static/Dynamic
+*   <see cref="ISelection.Criteria">Selection.Criteria</see>   collection of ICriterion – (read-only)
+*   <see cref="ICriteria.Add">Selection.Criteria.Add</see>
+*   <see cref="ICriteria.Remove">Selection.Criteria.Remove</see>
 
  
 
