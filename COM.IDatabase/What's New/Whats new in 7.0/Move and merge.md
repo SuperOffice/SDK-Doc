@@ -35,16 +35,16 @@ i.e. even if the user can't normally edit the person's activities the activities
 New COM methods:
 ----------------
 
-<see cref="SOContact.MergeTo">Contact.MergeTo</see>( TargetContact )
+<see cref="IContact.MergeTo">Contact.MergeTo</see>( TargetContact )
 
-<see cref="SOContact.Copy">Contact.Copy</see>( newName, new Dept )
-
- 
-
-<see cref="SOPerson.MoveTo">Person.MoveTo</see>(contact )
-
-<see cref="SOPerson.MergeTo">Person.MergeTo</see>( person)
+<see cref="IContact.Copy">Contact.Copy</see>( newName, new Dept )
 
  
 
-<see cref="SOProject.MergeTo">Project.MergeTo</see>( project )
+<see cref="IPerson.MoveTo">Person.MoveTo</see>(contact )
+
+<see cref="IPerson.MergeTo">Person.MergeTo</see>( person)
+
+ 
+
+<see cref="IProject.MergeTo">Project.MergeTo</see>( project )

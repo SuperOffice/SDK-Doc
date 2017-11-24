@@ -17,4 +17,4 @@ You can find more information about license servers in the SDK License sample fo
 
  
 
-You can use the <see cref="SOSettings.HasLicense">Settings.HasLicense</see>(name) function to check if a user has been assigned usage rights to a given license.
+You can use the <see cref="ISettings.HasLicense">Settings.HasLicense</see>(name) function to check if a user has been assigned usage rights to a given license.

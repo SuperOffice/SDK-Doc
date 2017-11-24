@@ -27,7 +27,7 @@ end if
 
  
 
-If we don't know the id, but know the name, then we can use the <see cref="SuperOffice.COM.SuperOfficeDB.SOFind">Find</see> object to find the id for a given name using <see cref="SOFind.FirstMatch">Find.FirstMatch</see> or <see cref="SOFind.ContactsByName">Find.ContactsByName</see> for example.
+If we don't know the id, but know the name, then we can use the <see cref="SuperOffice.COM.SuperOfficeDB.SOFind">Find</see> object to find the id for a given name using <see cref="IFind.FirstMatch">Find.FirstMatch</see> or <see cref="IFind.ContactsByName">Find.ContactsByName</see> for example.
 
  
 

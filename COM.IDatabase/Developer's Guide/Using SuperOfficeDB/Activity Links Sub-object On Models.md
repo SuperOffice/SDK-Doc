@@ -15,9 +15,9 @@ Currently we only support document-related links (i.e. you can't link activities
 
 The activity models expose a suitable links object:
 
--       <see cref="SOAppointment.ActivityLinks">Appointment.ActivityLinks</see> 
--       <see cref="SOSale.ActivityLinks">Sale.ActivityLinks</see> 
--       <see cref="SODocument.ActivityLinks">Document.Links</see>
+-       <see cref="IAppointment.ActivityLinks">Appointment.ActivityLinks</see> 
+-       <see cref="ISale.ActivityLinks">Sale.ActivityLinks</see> 
+-       <see cref="IDocument.ActivityLinks">Document.Links</see>
 
  
 

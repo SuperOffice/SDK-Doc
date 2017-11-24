@@ -21,13 +21,13 @@ A summary of the new and changed COM APIs in 7.0
 
 **Contact, Person, Project, Sale, Appointment, Document**
 
-<see cref="SOContact.ExternalFieldChanged">ExternalFieldChanged</see> - Signal SOCRM that something has happened outside its world – will force a save on model object when AutoSave is triggered. Forces the main record to be updated when object is saved, even if no internal values have changed.
+<see cref="IContact.ExternalFieldChanged">ExternalFieldChanged</see> - Signal SOCRM that something has happened outside its world – will force a save on model object when AutoSave is triggered. Forces the main record to be updated when object is saved, even if no internal values have changed.
 
-<see cref="SOContact.ValidationMessage">ValidationMessage</see> - Signal SOCRM that Save should be blocked on the model object because of some reason.
+<see cref="IContact.ValidationMessage">ValidationMessage</see> - Signal SOCRM that Save should be blocked on the model object because of some reason.
 
-<see cref="SOContact.AutoSaveOnFlush">AutoSaveOnFlush</see> - Save changes when Flush is triggered
+<see cref="IContact.AutoSaveOnFlush">AutoSaveOnFlush</see> - Save changes when Flush is triggered
 
-<see cref="SOContact.AutoSaveOnChangeIdentity">AutoSaveOnChangeIdentity</see> - Save changes when identity is changed.
+<see cref="IContact.AutoSaveOnChangeIdentity">AutoSaveOnChangeIdentity</see> - Save changes when identity is changed.
 
  
 
@@ -45,37 +45,37 @@ A summary of the new and changed COM APIs in 7.0
 
 <see cref="SuperOffice.COM.SuperOfficeDB.SOPerson.MoveTo">Person.MoveTo( newName, new Dept )</see> - Move a person to another contact
 
-<see cref="SOPerson.ChatAddresses">ChatAddresses</see> - e-mail addresses of type 1
+<see cref="IPerson.ChatAddresses">ChatAddresses</see> - e-mail addresses of type 1
 
-<see cref="SOPerson.VoIPAddresses">VoIPAddresses</see> - e-mail addresses of type 2
+<see cref="IPerson.VoIPAddresses">VoIPAddresses</see> - e-mail addresses of type 2
 
-<see cref="SOPerson.Urls">Urls</see> - homepage links and the like. Urls with person\_id set
+<see cref="IPerson.Urls">Urls</see> - homepage links and the like. Urls with person\_id set
 
  
 
 **Associate**
 
-<see cref="SOAssociate.Groups">Groups</see> - List all groups user is member of
+<see cref="IAssociate.Groups">Groups</see> - List all groups user is member of
 
  
 
 **Appointment**
 
-<see cref="SOAppointment.Sale">Sale</see> - The sale this appointment is linked to
+<see cref="IAppointment.Sale">Sale</see> - The sale this appointment is linked to
 
-<see cref="SOAppointment.SuggestedAppointmentId">SuggestedAppointmentId</see> - This appointment came from a sales guide.
+<see cref="IAppointment.SuggestedAppointmentId">SuggestedAppointmentId</see> - This appointment came from a sales guide.
 
  
 
 **Document** 
 
-<see cref="SODocument.Sale">Sale</see> - The sale this document is linked to
+<see cref="IDocument.Sale">Sale</see> - The sale this document is linked to
 
-<see cref="SODocument.SuggestedDocumentId">SuggestedDocumentId</see> - This document came from a sales guide
+<see cref="IDocument.SuggestedDocumentId">SuggestedDocumentId</see> - This document came from a sales guide
 
-<see cref="SODocument.ExtRef">ExtRef</see> - same as <see cref="SODocument.Reference">Reference</see>
+<see cref="IDocument.ExtRef">ExtRef</see> - same as <see cref="IDocument.Reference">Reference</see>
 
-<see cref="SODocument.ArchiveProviderName">ArchiveProviderName</see> - string version of ArchiveProvider
+<see cref="IDocument.ArchiveProviderName">ArchiveProviderName</see> - string version of ArchiveProvider
 
  
 
@@ -83,15 +83,15 @@ A summary of the new and changed COM APIs in 7.0
 
 <see cref="SuperOffice.COM.SuperOfficeDB.SOProject.MergeTo">Project.MergeTo( project )</see>
 
-<see cref="SOProject.ActiveLinks">Project.ActiveLinks</see> – links to other projects, urls, documents etc
+<see cref="IProject.ActiveLinks">Project.ActiveLinks</see> – links to other projects, urls, documents etc
 
  
 
 **ProjectMember**
 
-<see cref="SOProjectMember.ExternalFieldChanged">ExternalFieldChanged</see>
+<see cref="IProjectMember.ExternalFieldChanged">ExternalFieldChanged</see>
 
-<see cref="SOProjectMember.ValidationMessage">ValidationMessage</see>
+<see cref="IProjectMember.ValidationMessage">ValidationMessage</see>
 
  
 
@@ -99,49 +99,49 @@ A summary of the new and changed COM APIs in 7.0
 
 <see cref="Enumerations.ESelectionType_EN">ESelectionType</see> enum changed! Static, Dynamic, Combination
 
-<see cref="SOSelection.TargetTable">TargetTable</see> - what this is a selection of
+<see cref="ISelection.TargetTable">TargetTable</see> - what this is a selection of
 
-<see cref="SOSelection.Completed">Completed</see> - is the selection marked as done?
+<see cref="ISelection.Completed">Completed</see> - is the selection marked as done?
 
  
 
 **Sale**
 
-<see cref="SOSale.ActiveLinks">ActiveLinks</see>
+<see cref="ISale.ActiveLinks">ActiveLinks</see>
 
-<see cref="SOSale.CanBeCompleted">CanBeCompleted</see>() – is the completed checkbox enabled? Requires status = lost or sold.
+<see cref="ISale.CanBeCompleted">CanBeCompleted</see>() – is the completed checkbox enabled? Requires status = lost or sold.
 
-<see cref="SOSale.PostItText">PostItText</see>
+<see cref="ISale.PostItText">PostItText</see>
 
-<see cref="SOSale.NextDueDate">NextDueDate</see>
+<see cref="ISale.NextDueDate">NextDueDate</see>
 
-<see cref="SOSale.ReasonStalled">ReasonStalled</see> - mdo list item
+<see cref="ISale.ReasonStalled">ReasonStalled</see> - mdo list item
 
-<see cref="SOSale.ReasonSold">ReasonSold</see> - mdo list item
+<see cref="ISale.ReasonSold">ReasonSold</see> - mdo list item
 
-<see cref="SOSale.ReasonLost">ReasonLost</see> - mdo list item
+<see cref="ISale.ReasonLost">ReasonLost</see> - mdo list item
 
-<see cref="SOSale.ReopenDate">ReopenDate</see>
+<see cref="ISale.ReopenDate">ReopenDate</see>
 
-<see cref="SOSale.SaleType">SaleType</see> - mdo list item
+<see cref="ISale.SaleType">SaleType</see> - mdo list item
 
-<see cref="SOSale.Stage">Stage</see> - mdo list item - valid stages vary according to SaleType - same as old Probability
+<see cref="ISale.Stage">Stage</see> - mdo list item - valid stages vary according to SaleType - same as old Probability
 
-<see cref="SOSale.GetSuggestedAppointments">GetSuggestedAppointments</see>()
+<see cref="ISale.GetSuggestedAppointments">GetSuggestedAppointments</see>()
 
-<see cref="SOSale.GetSuggestedDocuments">GetSuggestedDocuments</see>()
+<see cref="ISale.GetSuggestedDocuments">GetSuggestedDocuments</see>()
 
  
 
 **Settings**
 
-<see cref="SOSettings.HasLicense">HasLicense</see>( licenseName ) – does user have access to license?
+<see cref="ISettings.HasLicense">HasLicense</see>( licenseName ) – does user have access to license?
 
-<see cref="SOSettings.GetNumLicense">GetNumLicense</see>( licenseName ) – total number of licenses
+<see cref="ISettings.GetNumLicense">GetNumLicense</see>( licenseName ) – total number of licenses
 
-<see cref="SOSettings.NetServerOverrides">NetServerOverrides</see> - return the NetServer config file settings needed to log in to the database.
+<see cref="ISettings.NetServerOverrides">NetServerOverrides</see> - return the NetServer config file settings needed to log in to the database.
 
-<see cref="SOSettings.SuperofConfigPath">SuperofConfigPath</see> - return the path to the superoffice.config file
+<see cref="ISettings.SuperofConfigPath">SuperofConfigPath</see> - return the path to the superoffice.config file
 
  
 
@@ -175,9 +175,9 @@ Setting the password to “blah” is the same as saying
 
 **Admin**
 
-<see cref="SOAdmin.AddSystemUser">AddSystemUser</see>( name )
+<see cref="IAdmin.AddSystemUser">AddSystemUser</see>( name )
 
-<see cref="SOAdmin.AddAnonymousUser">AddAnonymousUser</see>( name )
+<see cref="IAdmin.AddAnonymousUser">AddAnonymousUser</see>( name )
 
                 You will need the appropriate admin license to create the user.
 

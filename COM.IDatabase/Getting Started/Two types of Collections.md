@@ -16,8 +16,8 @@ Collections via Properties
 These are tightly-bound, short lists of small things.
 phone numbers, e-mail addresses etc:
 
-> <see cref="SOContact.Phones">SOContact.Phones</see>
-> <see cref="SOPerson.Emails">SOPerson.Emails</see>
+> <see cref="IContact.Phones">SOContact.Phones</see>
+> <see cref="IPerson.Emails">SOPerson.Emails</see>
 
 Accessing one of these properties will fetch all items in the list in one go, or will most likely operate on memory rather than the database.
 
@@ -29,9 +29,9 @@ These are used for getting the longer, more complex lists like the activity list
 
 The collection objects all use these functions: GetFirst and GetNext and EOF. They also support the enumeration API that Visual Basic and other scripting languages use.
 
-> <see cref="SOContact.GetPersons">SOContact.GetPersons</see>
+> <see cref="IContact.GetPersons">SOContact.GetPersons</see>
 > <see cref="Database.GetChecklist">Database.GetChecklist</see>
-> <see cref="SOContact.GetActivityList">SOContact.GetActivityList</see>
+> <see cref="IContact.GetActivityList">SOContact.GetActivityList</see>
 
 These collections will fetch one row at a time. If you just need the first 3 elements in the row, then we have just read three rows, not the entire checklist (which could be in the 100s)
 

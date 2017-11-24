@@ -7,8 +7,8 @@ title: Simplified Bookings And Invitations
 
 Adding appointments is now much easier -- the internal invitation handling code is now available through the COM api:
 
-    <see cref="SOAppointment.AddParticipant">Appointment.AddParticipant</see>( person or associate )
-    <see cref="SOAppointment.RemoveParticipant">Appointment.RemoveParticipant</see>( person or associate )
+    <see cref="IAppointment.AddParticipant">Appointment.AddParticipant</see>( person or associate )
+    <see cref="IAppointment.RemoveParticipant">Appointment.RemoveParticipant</see>( person or associate )
     <see cref="SuperOffice.COM.SuperOfficeDB.SOAppointment.GetParticipants">Appointment.GetParticipants(type)</see> -&gt; Collection containing Associate or Person objects (read-only list)
 
 The Add/remove participant functions figure out if the passed object is a person or an associate and act accordingly.
@@ -23,11 +23,11 @@ The returned list of appointments contains invitations that the user has not acc
 
 The programmer can then accept or reject the invitations using this call:
 
-    <see cref="SOAppointment.AcceptInvitation">Appointment.AcceptInvitation</see>( response )
+    <see cref="IAppointment.AcceptInvitation">Appointment.AcceptInvitation</see>( response )
 
 Response is a new enum: enReject = 0, enAccept = 1
 
 The Reason field is not used yet.
 
 Appointment booking conflicts can also be detected now:
-    <see cref="SOAppointment.HasConflict">Appointment.HasConflict</see> -&gt;  returns true if there is a conflict
+    <see cref="IAppointment.HasConflict">Appointment.HasConflict</see> -&gt;  returns true if there is a conflict

@@ -12,12 +12,12 @@ This is a property that lets you read user-defined field layouts and values with
 
 You will find UDef property on Contact, Person, Project, and Appointment, Document and Sale objects.
 
--   <see cref="SOContact.UDef">Contact.Udef</see>
--   <see cref="SOPerson.UDef">Person.Udef</see>
--   <see cref="SOProject.UDef">Project.Udef</see>
--   <see cref="SOAppointment.UDef">Appointment.Udef</see>
--   <see cref="SODocument.UDef">Document.Udef</see>
--   <see cref="SOSale.UDef">Sale.Udef</see>
+-   <see cref="IContact.UDef">Contact.Udef</see>
+-   <see cref="IPerson.UDef">Person.Udef</see>
+-   <see cref="IProject.UDef">Project.Udef</see>
+-   <see cref="IAppointment.UDef">Appointment.Udef</see>
+-   <see cref="IDocument.UDef">Document.Udef</see>
+-   <see cref="ISale.UDef">Sale.Udef</see>
 
 You can access the user-defined fields through their name or by their field id. The names of the fields are listed in the Admin client, even when the label is hidden from the end-user.
 

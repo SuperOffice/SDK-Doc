@@ -7,7 +7,7 @@ title: Role-Based Security
 
 Roles need to be exposed on Associates and User objects.
 
-    <see cref="SOAssociate.Role">Associate.Role</see>  -&gt; SORole (read-only)
+    <see cref="IAssociate.Role">Associate.Role</see>  -&gt; SORole (read-only)
     User.Role  -&gt; SORole (read/write)
 
 Roles can be read-only objects in this version – just expose the get functions on SRoleModel:

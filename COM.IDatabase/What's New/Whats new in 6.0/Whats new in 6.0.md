@@ -19,7 +19,7 @@ New objects:
 -   <see cref="SuperOffice.COM.SuperOfficeDB.SOFind">Find</see> object allows [searches on SAINT counters](Saint%20Counters%20And%20Values.md).
 -   <see cref="SuperOffice.COM.SuperOfficeDB.SOSelection">Selection</see> object allows [dynamic selections to be defined](Dynamic%20Selections.md).
 -   <see cref="SuperOffice.COM.SuperOfficeDB.SOAppointment">Appointments</see> support [invitations and responding to invitations](Simplified%20Bookings%20And%20Invitations.md) as well as [recurrence](Recurring%20Appointments.md).
--   Appointment, Sale, Document all support the <see cref="SOAppointment.ActivityLinks">ActivityLinks</see> object instead of the old DocumentLink.
+-   Appointment, Sale, Document all support the <see cref="IAppointment.ActivityLinks">ActivityLinks</see> object instead of the old DocumentLink.
 
 -   All model objects (Contact, Person, Project, Appointment, Sale, Document, Selection) have a <see cref="SuperOffice.COM.SuperOfficeDB.SOSentry">Sentry</see> property that can answer questions about permissions. 
 

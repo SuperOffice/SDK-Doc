@@ -9,7 +9,7 @@ A model is a record buffer that fetches sub-records on demand. It hides the SQL 
 
  
 
-A model contains one record at a time. You can load a different record into the model by using the <see cref="SOContact.ChangeIdentity">ChangeIdentity</see> method.
+A model contains one record at a time. You can load a different record into the model by using the <see cref="IContact.ChangeIdentity">ChangeIdentity</see> method.
 
 ```
 SOContact.ChangeIdentity( 3 )
@@ -44,7 +44,7 @@ buf.ChangeIdentity( 5 )           *’ imply save \#4*
 
 The theory behind the automatic save is that it is better to save changes than to lose them.  The user is less likely to be angry because we saved something than if we lost a change he had made.
 
-Note that a model will save automatically when you change identity or call the Save method.  If you want to forget the changes you’ve made to a model, use the <see cref="SOContact.CancelChanges">CancelChanges</see> method:
+Note that a model will save automatically when you change identity or call the Save method.  If you want to forget the changes you’ve made to a model, use the <see cref="IContact.CancelChanges">CancelChanges</see> method:
 
 ```
 set buf = DB.GetContact( 4 )      *’ set id=4*

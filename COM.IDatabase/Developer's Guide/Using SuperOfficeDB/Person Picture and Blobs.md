@@ -5,7 +5,7 @@ title: Person Picture and Blobs
 
 Pictures are get/set’able, and extractable via COM
 
-Pictures are currently supported on three objects: <see cref="SOPerson.Picture">Person.Picture</see>, <see cref="SOProject.Picture">Project.Picture</see>, and <see cref="SOStatusMonitor.Picture">StatusMonitor.Picture</see>
+Pictures are currently supported on three objects: <see cref="IPerson.Picture">Person.Picture</see>, <see cref="IProject.Picture">Project.Picture</see>, and <see cref="IStatusMonitor.Picture">StatusMonitor.Picture</see>
 
  
 
