@@ -12,7 +12,7 @@ If the login fails, then isOk will be false and an error message is displayed.
 
 We use the <see cref="SuperOffice.COM.SuperOfficeDB.SOFind">Find</see> object to find the id for the contact named "SuperOffice ASA".
 
-We create an appointment and then call the <see cref="SOAppointment.IModelBase_SetDefaults">SetDefaults</see> method to make sure it has some sensible values in it before we start tweaking its settings.
+We create an appointment and then call the <see cref="SOAppointment.SetDefaults">SetDefaults</see> method to make sure it has some sensible values in it before we start tweaking its settings.
 
 The Contact and Task type of the new appointment are set, as is the text of the appointment. Note that the Contact and Task properties take objects instead of ids.
 

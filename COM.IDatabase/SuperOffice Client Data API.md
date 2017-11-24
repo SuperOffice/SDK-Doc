@@ -16,7 +16,7 @@ This is the documentation of SuperOffice CRM 8.1 (16. november 2017)
 
 The part of the SDK focuses on the client-side COM components. You should be familiar with COM and a programming language that can use COM components, such as Visual Basic, Delphi or C\#.
 
-Find out [what is new](What's%20New.md)
+Find out [what is new](What's New/What's New.md)
 
 This section focuses on various plugin APIs and more complex programming topics:
 
