@@ -6,7 +6,7 @@ SortOrder: 1
 DefaultTopic: yes
 ---
 
-![](./images/devnet_logo_w100.gif)] ![](./images/expander-sdk-windata.jpg)
+![](./images/devnet_logo_w100.gif) ![](./images/expander-sdk-windata.jpg)
 Expander SDK: Windows Data API Documentation
 ============================================
 
