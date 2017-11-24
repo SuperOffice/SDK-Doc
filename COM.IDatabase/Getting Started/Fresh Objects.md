@@ -45,7 +45,7 @@ Note that appointment objects have three set default methods – one for each se
 
 There is one set of defaults for each appointment button at the bottom of the CRM 5 window.
  
-![](../images/toolbar-appointment.gif)
+![](../../images/toolbar-appointment.gif)
 
 ```
 Set db = CreateObject("SuperOfficeDB.Database")

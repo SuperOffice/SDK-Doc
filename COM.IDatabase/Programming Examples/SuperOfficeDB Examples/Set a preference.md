@@ -33,7 +33,7 @@ else
 
 Once the above code statement is executed the row will be added to the userpreference table and the calendar start date of the win application will be changed to “Sunday”.
 Following is and image of the row added to the userpreference table in the database.
-![](../images/PreferenceTableVisual.png) 
+![](../../images/PreferenceTableVisual.png) 
 Below is an image of the SuperOffice client when the calendar start date is “Sunday”.
 
-![](../images/PreferenceClientVisual.png)
+![](../../images/PreferenceClientVisual.png)

@@ -18,7 +18,7 @@ The recurrence rule system is exposed as a separate object.
 
 <see cref="SuperOffice.COM.SuperOfficeDB.SORecurrence">SORecurrence Object</see> 
 
-    UpdateMode  ERecurrenceUpdateMode
+    UpdateMode  ERecurrenceUpdateMode
     Description  string  (read-only) (GetRecurrenceInfoText)
     StartDate  DATE
     EndDate   DATE
@@ -32,10 +32,11 @@ The recurrence rule system is exposed as a separate object.
     RemoveDate( date ) - remove any random date from rule.
     ComputeDates()  -&gt; Collection of DATEs that recurrences fall on
 
- 
+
 
 So we can say things like this:
 
+```vb
     Set appnt = db.GetAppointment( 123 )
     appnt.Recurrence.AddDate( \#2005-03-14\# )
     appnt.Recurrence.Weekday( enDayTuesday ) = true
@@ -46,6 +47,7 @@ So we can say things like this:
     next
     msgbox “Recurs on “ & msg
     appnt.Save
+```
 
  
 
@@ -60,7 +62,7 @@ The new appointments are not created until you save the root appointment object.
 
 |                            |                                                                                                                                                                                                                                                                                                                                                                                        |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](../images/hs-caution.gif) | Modifying the start/end dates on recurring appointment after it has been saved is a bad idea. Changing the start/end time on a recurring appointment will work fine, but changing the date will only lead to confusion. Note that changing the start time on an appointment will trigger an update on all subsequence recurrences if you have set the update mode to this-and-forward. |
+| ![](../../images/hs-caution.gif) | Modifying the start/end dates on recurring appointment after it has been saved is a bad idea. Changing the start/end time on a recurring appointment will work fine, but changing the date will only lead to confusion. Note that changing the start time on an appointment will trigger an update on all subsequence recurrences if you have set the update mode to this-and-forward. |
 
  
 
@@ -71,20 +73,8 @@ Subpattern is a new enum: enSubPatternNone, enDailyWorkday, enDailyEveryDay, enD
 
 The enum values correspond to what you see in the pattern dialog.
 
-![Recurring Appointment dialog](../images/repeat%20dialog.gif)
+![Recurring Appointment dialog](../../images/repeat%20dialog.gif)
 
- 
+The sub-pattern should match the pattern. There is little error checking if you mix the wrong set.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><img src="images/hs-caution.gif" /></td>
-<td><p>The sub-pattern should match the pattern. There is little error checking if you mix the wrong set.</p>
-<p>i.e. you can set pattern = yearly and sub-pattern = dailyEveryDay and something strange will probably happen.</p></td>
-</tr>
-</tbody>
-</table>
+i.e. you can set pattern = yearly and sub-pattern = dailyEveryDay and something strange will probably happen.

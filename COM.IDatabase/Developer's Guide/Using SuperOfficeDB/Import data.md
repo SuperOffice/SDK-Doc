@@ -20,7 +20,7 @@ It reads the name of the file to import and the mapping of columns to table fiel
 
 You create a description file by using the SAVE button at the top of  the Import screen in the Admin client.
 
-![](../images/import-admin1.gif)
+![](../../images/import-admin1.gif)
 
  
 
@@ -30,7 +30,7 @@ Start the Admin client and go to the IMPORT screen.
 
 Click on the Import File button and find the EXPORTED-ROWS.TXT file
 
-![](../images/import-admin2.gif)
+![](../../images/import-admin2.gif)
  
 It should have three columns: name, phone, city
 
@@ -48,11 +48,11 @@ The [EXPORTED-ROWS.TXT](Files/exported-rows.txt) file looks like this:
 
 Map these columns to the right fields by selecting the field name and in the list and clicking on the MAP button. Or you can double-click on the field name. In the field mapping dialog, you need to find out which field in the database corresponds to which field in the file.
 
-![](../images/import-map-field.gif)
+![](../../images/import-map-field.gif)
 
 Once you have defined the field mappings, you need to define the duplicate handling. Select each field in the duplicate handling list and click on the “Update” button to display the duplicate handling dialog:
 
-![](../images/import-duplicates.gif) 
+![](../../images/import-duplicates.gif) 
 
 Once all the fields have a duplicate action defined, you are ready to run the import. If you do not define duplicate actions for all the fields, then the import will fail.
 
@@ -64,6 +64,7 @@ Make a note of the description file name. Remember where the .DSC file was saved
 
 Now we are going to run the import using the description file we created in the previous step.
 
+```vb
 Set db = CreateObject("SuperOfficeDB.Database")
 loginOk = db.Login("name","pass")
 if not loginOk then
@@ -72,8 +73,7 @@ if not loginOk then
 end if
 isOk = db.Import( "c:\\import.dsc" )
 MsgBox "isOk = " & isOk , 0, "File import status"
-
- 
+```
 
 The import should return TRUE.
 

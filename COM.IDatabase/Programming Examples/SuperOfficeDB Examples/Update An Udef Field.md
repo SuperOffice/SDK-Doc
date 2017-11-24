@@ -77,4 +77,4 @@ else
 
 After updating the user defined fields, retrieved data from the SIX contact page is shown as below. Note that the udef fields labels in the screen dump are the same as in the example udeffields\["**companyshorttext**"\].Value
 
-![](../images/UdefUpdate.JPG)
+![](../../images/UdefUpdate.JPG)

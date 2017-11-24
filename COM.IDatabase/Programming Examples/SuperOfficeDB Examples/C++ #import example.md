@@ -15,7 +15,7 @@ We use the rename("EOF","IsEOF") macro to avoid a naming collision with a built-
 
 The first example does a simple search, and shows how a SafeArray can be traversed in C++.
 
-[screenshot](../images/import%20demo.gif)
+[screenshot](../../images/import%20demo.gif)
 
  
 

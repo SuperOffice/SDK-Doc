@@ -7,7 +7,7 @@ The date manager parses and converts between various date formats:
 
  
 
-<span class="hs-onlineonly"><span class="copyCode" onclick="copyCode(this)" tabindex="0" onkeypress="CopyCode_CheckKey(this)" onmouseover="changeCopyCodeIcon(this,true)" onfocusin="changeCopyCodeIcon(this,true)" onmouseout="changeCopyCodeIcon(this,false)" onfocusout="changeCopyCodeIcon(this,false)"><img src="images/copycode.gif" class="copyCodeImage" />Copy Code</span></span>
+```vb
     set datemgr = wscript.createobject("SuperOffice.DateMgr")
     d = datemgr.DMYToDate(25,2,2001)
     l = datemgr.DateToLong(d)
@@ -51,9 +51,8 @@ The date manager parses and converts between various date formats:
     msg = msg & "year:" & datemgr.GetYear( l ) & chr(10)
     msg = msg & "FormatAsString(dddd MMM yyyy): " & datemgr.FormatAsString( lcid, d, "dddd MMM yyyy") & chr(10)
     msgbox msg
-
+```
  
-
-![](../images/DateMgr.png)
+![](../../images/DateMgr.png)
 
 This example shows how the date manager accepts dates in seconds-since-1970 and in COM DATE format.

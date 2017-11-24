@@ -21,7 +21,7 @@ You will find UDef property on Contact, Person, Project, and Appointment, Docume
 
 You can access the user-defined fields through their name or by their field id. The names of the fields are listed in the Admin client, even when the label is hidden from the end-user.
 
-![](../images/udef-admin-fields.gif)
+![](../../images/udef-admin-fields.gif)
 
  
 
@@ -35,7 +35,7 @@ i.e. “Remote Travel” and “remote travel: ” refer to the same field.
 
 The object you get back holds information about the field (the label, the field type, the size, x,y position on the screen, and the value of the field.
 
-![](../images/udef-contactcard.gif)
+![](../../images/udef-contactcard.gif)
 
 * How the udef field is displayed in the client*
 
@@ -43,6 +43,7 @@ The object you get back holds information about the field (the label, the field 
 
 ### Example
 
+```vb
 Set db = CreateObject("SuperOfficeDB.Database")
 db.Login "name", "pass"
 Set cont = db.GetContact(2)
@@ -51,6 +52,7 @@ for each udeffield in cont.Udef
 next
 cont.Udef("distributor") = "some guy"
 cont.Save
+```
 
 In this example we get contact record number two out of the database, and then we go through all the user-defined fields defined for contact and print out the label and the value associated with it.
 
@@ -64,14 +66,15 @@ If there is no field named “distributor” in the user-defined field layout fo
 
 If you have a field that contains a dropdown list, then the value it returns will not be a list item, but the list item id.
 
-![](../images/udef-listitem.gif)
+![](../../images/udef-listitem.gif)
 
 Together with the field's ListTableId you can get the list item you want:
 
+```vb
 set field = cont.Udef("Segment")
 set item = db.GetListItem( field.ListTableId, field.Value )
 print item.Id & " " & item.Text
-
+```
  
 
 ### Notes
@@ -91,7 +94,7 @@ This example assumes you've added at least one  udef field to contact, and publ
 The example also assumes that the field is stored in field udcontactsmall.long01 -- field id 8961. If you need to find out what field id a particular field name corresponds to, you can use the <see cref="SuperOffice.COM.SuperOfficeDB.Database.Dictionary">Database.Dictionary object</see>.
 
  
-
+```vb
 Set db = CreateObject("SuperOfficeDB.Database")
 loginOk = db.Login("name","pass")
 if not loginOk then
@@ -108,7 +111,7 @@ f.Value = 321
 contact.Save
 msg = msg & "new-value: " & f.Value & vbCrlf
 MsgBox msg,,"User-def"
-
+```
  
 
 You should try changing the value of the field and reading it out.

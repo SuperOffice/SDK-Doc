@@ -1,12 +1,12 @@
 ---
-uid: WhyhaveaspecialOLEDBprovider
+uid: guideOLEDBProvider
 title: Why have a special OLE DB provider
 ---
 
 
 ADO is Microsoft’s latest standard for talking to databases. It is a successor to ODBC, DAO, and RDS. ADO uses OLE-DB providers to talk to databases. 
 
-![](../images/ado-diagram.gif)
+![](../../images/ado-diagram.gif)
 
 ADO makes dealing with databases easy. It provides a standard high-level API, while the OLE-DB provider provides a low-level API for reading records. It’s fairly complex and pretty much everyone uses ADO instead.
 
@@ -24,11 +24,11 @@ Most software in the world is written with one customer, one installation in min
 
 SuperOffice uses a special database translator layer we call SODBIF (SuperOffice DataBase InterFace). The CRM client and the SDK rely on this to talk to the database. In order to make this database translator available to other systems we have created an OLE-DB provider which converts standard SQL to the special SQL variant needed by the database you are logged in to.
 
-![](../images/ADO-OLEDB-stack.png) 
+![](../../images/ADO-OLEDB-stack.png) 
 Our special OLE-DB provider does CRM database housekeeping for you.
 
-• counts record ids
-• timestamps all updates
-• updates transaction log
-• updates "magic" fields like soundex.
-• updates free text index automatically.
+* counts record ids
+* timestamps all updates
+* updates transaction log
+* updates "magic" fields like soundex.
+* updates free text index automatically.

@@ -13,8 +13,7 @@ Note that the language codes used by SuperOffice do not match the ISO codes used
 e.g. German is GE not DE. English is US not EN, and so on.
 
  
-
-<span class="hs-onlineonly"><span class="copyCode" onclick="copyCode(this)" tabindex="0" onkeypress="CopyCode_CheckKey(this)" onmouseover="changeCopyCodeIcon(this,true)" onfocusin="changeCopyCodeIcon(this,true)" onmouseout="changeCopyCodeIcon(this,false)" onfocusout="changeCopyCodeIcon(this,false)"><img src="images/copycode.gif" class="copyCodeImage" />Copy Code</span></span>
+```vb
     set resmgr = CreateObject("SuperOffice.ResMgr")
     resmgr.Initialize "C:\Program files\SuperOffice"
 
@@ -35,7 +34,9 @@ e.g. German is GE not DE. English is US not EN, and so on.
 
     txt = resmgr.get("no",11911)
     msgbox txt,,"NO 11911"
-
+```
  
 
-![](../images/ResMgr.png)  ![](../images/ResMgr2.png)
+![](../../images/ResMgr.png)  
+
+![](../../images/ResMgr2.png)

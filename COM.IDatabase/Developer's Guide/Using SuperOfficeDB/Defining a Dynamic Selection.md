@@ -41,23 +41,23 @@ newCriterion.Values.AddString("s");
 Once the SoCriteria object has been instantiated we can use its NewCriterion() method to create an Instance of the SoCriteria. The method requires the name of the column to which the criterion should apply and the operator to be used. The Values.AddString() method add the value that should be compared with the column. Once the criterion has been created we can assign the criteria object that been created to the selection.
 The created Selection can be seen on the SuperOffice Application as shown below.
  
-![](../images/DynamicSelection.png)
+![](../../images/DynamicSelection.png)
 
 Once the selection is saved the following tables are modified as well.
 Selection Table
-![](../images/DynamicSelectionTable.png)
+![](../../images/DynamicSelectionTable.png)
 
 SearchCriteria Table
-![](../images/DynamicSearchCriteriaTable.png)
+![](../../images/DynamicSearchCriteriaTable.png)
 
 SearchCriteriaGroup Table
 
-![](../images/DynamicSearchCriteriaGroupTable.png)
+![](../../images/DynamicSearchCriteriaGroupTable.png)
  
 SearchCriterion Table
 
-![](../images/DynamicSearchCriterionTable.png)
+![](../../images/DynamicSearchCriterionTable.png)
  
 SearchCriterionValue Table
 
-![](../images/DynamicSearchCriterionValueTable.png)
+![](../../images/DynamicSearchCriterionValueTable.png)

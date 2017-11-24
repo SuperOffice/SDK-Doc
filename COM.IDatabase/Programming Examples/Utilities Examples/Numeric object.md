@@ -8,7 +8,7 @@ The Numeric manager handles the parsing of strings containing numbers. The syste
 
  
 
-<span class="hs-onlineonly"><span class="copyCode" onclick="copyCode(this)" tabindex="0" onkeypress="CopyCode_CheckKey(this)" onmouseover="changeCopyCodeIcon(this,true)" onfocusin="changeCopyCodeIcon(this,true)" onmouseout="changeCopyCodeIcon(this,false)" onfocusout="changeCopyCodeIcon(this,false)"><img src="images/copycode.gif" class="copyCodeImage" />Copy Code</span></span>
+```vb
     set nummgr = createObject("SuperOffice.NumericMgr")
 
     msg = "testing numeric mgr" & chr(10)
@@ -36,7 +36,7 @@ The Numeric manager handles the parsing of strings containing numbers. The syste
     msg = msg & "FormatDoubleString " & f & "=" & nummgr.FormatDoubleString(lcid, f) & chr(10)
 
     msgbox msg
-
+```
  
 
-![](../images/NumericMgr.png)
+![](../../images/NumericMgr.png)

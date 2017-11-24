@@ -47,7 +47,7 @@ The Tables
 
 The foreign key table can point to any record. A user can have several different foreign keys registered on the same record, with different keys on different applications and devices.
 
- ![](../images/foreignkeys-db.gif)
+ ![](../../images/foreignkeys-db.gif)
 
  
 

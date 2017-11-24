@@ -19,9 +19,9 @@ The main new features in CRM 7 are (also take a look at the SO.Database.chm fi
 
 All wrapped in a new look and feel with attention to details
 
-![](../images/new-look-7.png)
+![](../../images/new-look-7.png)
 
-![](../images/so-nav-7.png)Examples:
+![](../../images/so-nav-7.png)Examples:
 
 -   Quick launch of mini panels
 -   Lock mini panel

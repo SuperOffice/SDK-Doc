@@ -8,4 +8,4 @@ Mail Archive Helper is a library that  you can use when writing a plugin to a
 
 The library is used by the Outlook and Notes mail links that SuperOffice provides.
 
-![](../images/ScreenCap7.png)
+![](../../images/ScreenCap7.png)

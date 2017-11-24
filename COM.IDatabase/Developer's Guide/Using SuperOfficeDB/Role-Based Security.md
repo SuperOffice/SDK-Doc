@@ -34,17 +34,17 @@ To see if the current user is allowed to run mail-merge we check if the user has
 
 The string id for this in the FunctionRight table is simply "allow-bulk-mailmerge"
 
-    Set curUser = db.GetAssociate( db.GetCurrentAssocId )
+```vb
+    Set curUser = db.GetAssociate( db.GetCurrentAssocId )
     canRun = curUser.Role.HasFunctionRight( "allow-bulk-mailmerge" )
-
+```
  
 
  
 
 If you had user admin permission, then you can use the Admin object to edit or add new roles:
 
- 
-
+```vb
     Set newRole = db.Admin.CreateRole( enRoleTypeEmployee, Nothing )
     newRole.Name = "My role"
     newRole.Description = "Read only role"
@@ -61,9 +61,9 @@ If you had user admin permission, then you can use the Admin object to edit or a
     newRole.DataRight( enTableProject, enRelToOtherGroup ) = "CRU"
     newRole.DataRight( enTableProject, enRelToOther ) = "CRU"
     newRole.Save
-
+```
  
 
 This API corresponds to the Role panel in the Admin client:
 
-![Admin Role panel](../images/admin%20role.gif)
+![Admin Role panel](../../images/admin%20role.gif)
