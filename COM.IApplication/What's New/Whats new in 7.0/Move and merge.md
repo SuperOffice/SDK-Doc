@@ -33,16 +33,16 @@ i.e. even if the user can't normally edit the person's activities the activities
 New COM methods:
 ----------------
 
-<span lang="EN-US" style="mso-ansi-language: EN-US" lang="EN-US">Contact.MergeTo( TargetContact )</span>
+Contact.MergeTo( TargetContact )
 
-<span lang="EN-US" style="mso-ansi-language: EN-US" lang="EN-US">Contact.Copy( newName, new Dept )</span>
+Contact.Copy( newName, new Dept )
 
 
 
-<span lang="EN-US" style="mso-ansi-language: EN-US" lang="EN-US"><span lang="EN-US" style="mso-ansi-language: EN-US" lang="EN-US">Person.MoveTo(contact )</span></span>
+Person.MoveTo(contact )
 
-<span lang="EN-US" style="mso-ansi-language: EN-US" lang="EN-US"><span lang="EN-US" style="mso-ansi-language: EN-US" lang="EN-US">Person.MergeTo( person)</span></span>
+Person.MergeTo( person)
 
-<span lang="EN-US" style="mso-ansi-language: EN-US" lang="EN-US"> </span>
+ 
 
-<span lang="EN-US" style="mso-ansi-language: EN-US" lang="EN-US"><span lang="EN-US" style="mso-ansi-language: EN-US" lang="EN-US">Project.MergeTo( project )</span></span>
+Project.MergeTo( project )
