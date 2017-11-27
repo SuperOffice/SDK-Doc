@@ -5,7 +5,7 @@ title: Customizing the Login screen and icons
 
 To make SuperOffice use custom bitmaps for the login and progress screens, do the following:
 
--   create an IMAGES folder below the  folder containing SOCRM.  [SoLoader](refIniSoloader.md) can help you do this automatically.
+-   create an IMAGES folder below the  folder containing SOCRM.  [SoLoader](@refIniSoloader.md) can help you do this automatically.
 -   Place images with the appropriate file names in the folder.
 
 
@@ -16,9 +16,8 @@ SuperOffice will automatically detect the image files and use them next time it 
 
 The image files should have names as described in this table:
 
-|                        |                                     |
-|------------------------|-------------------------------------|
 | **Filename**           | **Description**                     |
+|------------------------|-------------------------------------|
 | LoginCRM.bmp           | Login to SOCRM                      |
 | LoginCRMProgress.bmp   | Progress bar on SOCRM               |
 | LoginAdmin.bmp         | Login to SOADMIN                    |
@@ -32,7 +31,7 @@ The image files should have names as described in this table:
 
 
 
-In addition there are a couple of [SUPEROFFICE.INI](refIniSuperOffice.md) settings you can use to modify the text color used on the login/progress screens to better match the custom backgrounds:
+In addition there are a couple of [SUPEROFFICE.INI](@refIniSuperOffice) settings you can use to modify the text color used on the login/progress screens to better match the custom backgrounds:
 
 
 

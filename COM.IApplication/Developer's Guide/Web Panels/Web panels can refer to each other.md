@@ -13,14 +13,13 @@ Clicking on the **Go to Project** link will switch to the Project panel.
 ![Project web archive panel](../../images/web-proj-details.gif)
 
 
-
 The window names you define in the admin client can be used in the HTML you load a link into a specific panel.
 
 The &lt;A HREF="..."&gt; command can take a TARGET="..." parameter, which can specifiy which browser the link should be displayed in.
 
 You have two web panels: one with a window name "contact.cdetails" and another with the window name "project.pdetails" (the names are “cdetails” and “pdetails”, since they can’t both be called “details”).
 
-
+## Admin Web Panels
 
 ![Admin Web Application Dialog](../../images/web-cont-details-dialog.gif)
 
@@ -40,15 +39,13 @@ Add a Web page to upper or lower part of contact or project panels.
 
 Web page can be sent information about current contact, current person, current project using document template variables.
 
-i.e.  &lt;name&gt; = current contact name
+i.e. 
 
-&lt;orgn&gt;  = organization number
-
-&lt;cuid&gt;  = contact\_id
-
-&lt;pnam&gt;  = project name
-
-&lt;prid&gt;  = project id
+* &lt;name&gt; = current contact name
+* &lt;orgn&gt;  = organization number
+* &lt;cuid&gt;  = contact\_id
+* &lt;pnam&gt;  = project name
+* &lt;prid&gt;  = project id
 
 The admin documentation has the complete list.
 We put these template variables into the URL when we define the application in the Admin client.

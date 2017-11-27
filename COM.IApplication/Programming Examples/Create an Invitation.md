@@ -3,7 +3,7 @@ uid: CreateanInvitation
 title: Create an Invitation
 ---
 
-Examples are written using [Scripting Engine](refScriptingEngine.md). You can use the below code segment within any event (sub OnCurrentXXX), so once that particular event is fired it creates a new appointment with three invited persons. You should store the script file in the Scripts folder in SO\_ARC.
+Examples are written using [Scripting Engine](@refScriptingEngine). You can use the below code segment within any event (sub OnCurrentXXX), so once that particular event is fired it creates a new appointment with three invited persons. You should store the script file in the Scripts folder in SO\_ARC.
 
 This example shows us how we can create an Appointment and send Invitations to the invitees using SuperOffice Application Object.
 This text may be copied to the notepad, and saved as a \*.vbs file.

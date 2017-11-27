@@ -27,19 +27,15 @@ This turns into the following web panel request inside the client:
 
 This is the code to perform the authentication in NetServer
 
-``` MsoNormal
+```cs
 private void Page_Load(object sender, System.EventArgs e)
 {
     string associate = Request["Associate"];
     string secret = Request["Secret"];
-```
 
-``` MsoNormal
     SoSafeCredentials cred = new SoSafeCredentials();
     cred.Ticket = secret;
-```
 
-``` MsoNormal
     using (SoSession session = SoSession.Authenticate(cred))
      {
            if (session == null)

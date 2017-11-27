@@ -3,7 +3,7 @@ uid: CreateanAppointment
 title: Create an Appointment
 ---
 
-Examples are written using [Scripting Engine](refScriptingEngine.md). We can create a new appointment by using scripts. Below code segment shows the way to create a new appointment.  You can use the below code segment within any event, so once that particular event is fired it creates a new appointment. You should store the script file in the Scripts folder in SO\_ARC.
+Examples are written using [Scripting Engine](@refScriptingEngine). We can create a new appointment by using scripts. Below code segment shows the way to create a new appointment.  You can use the below code segment within any event, so once that particular event is fired it creates a new appointment. You should store the script file in the Scripts folder in SO\_ARC.
 
 Set soApnt = Database.CreateAppointment
 soApnt.SetDefaults

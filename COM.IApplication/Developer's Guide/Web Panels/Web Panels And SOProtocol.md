@@ -9,8 +9,9 @@ Web pages shown in web-panels can use SOProtocol links to manipulate the SuperOf
 
 For example, this link will display the Appointment dialog:
 
-&lt;a href="superoffice:contact.appointment"&gt;show appointment dialog&lt;/a&gt;
-
+```xml
+<a href="superoffice:contact.appointment">show appointment dialog</a>
+```
 
 
 The problem is that the link also re-loads the page, showing a blank page as well as showing the appointment dialog.
@@ -23,9 +24,9 @@ To hide the result, we use a hidden IFRAME to receive the blank page.
 
 
 
-&lt;a href="superoffice:contact.appointment" target="hiddenframe"&gt;show appointment dialog&lt;/a&gt;
-&lt;iframe name="hiddenframe" style="display:none"&gt;&lt;/iframe&gt;
-
-
+```xml
+<a href="superoffice:contact.appointment" target="hiddenframe">show appointment dialog</a>
+<iframe name="hiddenframe" style="display:none"></iframe>
+```
 
 You can now click the link, and the appointment dialog appears, and the web page remains unchanged.

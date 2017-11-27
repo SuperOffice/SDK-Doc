@@ -30,11 +30,15 @@ For example, if you are running in a client that runs SOCRM 7.0.4003 then you sh
 
 e.g. ProgramFiles\\SuperOffice\\Client
 
+```cmd
      SOCRM.EXE, SOCORE.DLL (7.0.4003), SODATABASE.DLL (7.0.4003), SODBIF32.DLL etc
+```
 
 Your plugin is in ProgramFiles\\MyPlugin
 
+```cmd
      MYPLUGIN.DLL, SOCORE.DLL (7.0.3974), SODATABASE.DLL (7.0.3974), etc
+```
 
 If you have compiled the plugin against a different version (for example 7.0.3974), then your plugin will run side-by-side with the NetServer that SOCRM has loaded.  This is by design - this is part of the .net way.
 

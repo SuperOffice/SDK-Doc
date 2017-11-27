@@ -3,7 +3,7 @@ uid: Updateaperson
 title: Update a person
 ---
 
-Examples are written using [Scripting Engine](refScriptingEngine.md). You can use the below code segment within any event, so once that particular event is fired it creates a new contact. You should store the script file in the Scripts folder in SO\_ARC.
+Examples are written using [Scripting Engine](@refScriptingEngine). You can use the below code segment within any event, so once that particular event is fired it creates a new contact. You should store the script file in the Scripts folder in SO\_ARC.
 
 We can update a Person using SuperOffice Application Object.
 This text may be copied to the notepad, and saved as a \*.vbs file under the name of the SoScriptingEvent called.

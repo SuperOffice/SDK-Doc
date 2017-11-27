@@ -3,7 +3,7 @@ uid: SearchforacontactwithagivenSAINTvalue
 title: Search for a contact with a given SAINT value
 ---
 
-Examples are written using [Scripting Engine](refScriptingEngine.md). You can use the below code segment within any event, so once that particular event is fired it creates a new appointment and invite. You should store the script file in the Scripts folder in SO\_ARC.
+Examples are written using [Scripting Engine](@refScriptingEngine). You can use the below code segment within any event, so once that particular event is fired it creates a new appointment and invite. You should store the script file in the Scripts folder in SO\_ARC.
 
 We can search for Contacts by using SAINT values using SuperOffice Application Object. Note - Saint requires a separate license.
 This text may be copied to the notepad, and saved as a \*.vbs file under the name of the SoScriptingEvent called.

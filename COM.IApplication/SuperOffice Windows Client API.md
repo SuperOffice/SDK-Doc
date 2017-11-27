@@ -16,10 +16,10 @@ This section focuses on user interface customization, scripting, events and the 
 
 Plug-ins and more complex programming topics are covered in the Data-Access APIs.
 
-Find out [what is new in SuperOffice CRM 7.1](What's%20new%20in%207.1.md).
+Find out [what is new in SuperOffice CRM 7.1](@Whatsnewin7.1).
 
 
-[Get started with using the SuperOffice Client SDK](getting_started.md)
+[Get started with using the SuperOffice Client SDK](@getting_started)
 
 [Common issues when upgrading from SIX](@Upgrading_from_SIX)
 

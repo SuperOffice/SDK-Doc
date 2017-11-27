@@ -6,7 +6,7 @@ title: What's new in 7.0
 The main new features in CRM 7 are (also take a look at the IDatabase help file for more information):
 
 -   New license system: user-levels are replaced by roles that the admin can define.
--   New [authentication system](Authentication.md): totally redesigned and rewritten in Seven
+-   New [authentication system](@Authentication): totally redesigned and rewritten in Seven
 -   [Sale management](@Sale_management)
 -   [Selections of anything](@Selections_of_anything). With shadow contacts you may now combine data in new and exiting ways.
 -   Easier installing and maintaining using MSI installer

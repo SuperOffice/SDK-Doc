@@ -3,7 +3,7 @@ uid: GetCategorylist
 title: Get Category list
 ---
 
-<span style="mso-ansi-language: EN-US; mso-fareast-language: EN-US">Examples are written using [Scripting Engine](refScriptingEngine.md)</span><span style="mso-ansi-language: EN-US; mso-fareast-language: EN-US">. You can use the below code segment within any event, so once that particular event is fired it lists all categories and their internal ids. You should store the script file in the Scripts folder in SO\_ARC.</span>
+<span style="mso-ansi-language: EN-US; mso-fareast-language: EN-US">Examples are written using [Scripting Engine](@refScriptingEngine)</span><span style="mso-ansi-language: EN-US; mso-fareast-language: EN-US">. You can use the below code segment within any event, so once that particular event is fired it lists all categories and their internal ids. You should store the script file in the Scripts folder in SO\_ARC.</span>
 
 <span style="mso-ansi-language: EN-US; mso-fareast-language: EN-US">This section tells us how we can retrieve the Category list using SuperOffice Application Object.</span>
 

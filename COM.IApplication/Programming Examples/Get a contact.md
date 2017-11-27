@@ -3,7 +3,7 @@ uid: Getacontact
 title: Get a contact
 ---
 
-To show contact entity data on the WinGui we have used [scripts](refScriptingEngine.md). By using the script we can show the data which are included in the contact entity. In here we will be discussing how we can display the name of the contact entity in WinGui.
+To show contact entity data on the WinGui we have used [scripts](@refScriptingEngine). By using the script we can show the data which are included in the contact entity. In here we will be discussing how we can display the name of the contact entity in WinGui.
 We store the scripts in a Scripts folder - in SO\_ARC\\SCRIPTS.
 We also need to enable scripting in the admin client and turn on this particular script before it will work.
 Newly added script file is OnEditContactClicked.vbs and it includes the script given below.

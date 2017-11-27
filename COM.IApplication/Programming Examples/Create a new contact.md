@@ -3,7 +3,7 @@ uid: Createanewcontact
 title: Create a new contact
 ---
 
-Examples are written using [Scripting Engine](refScriptingEngine.md). You can use the below code segment within any event, so once that particular event is fired it creates a new contact. You should store the script file in the Scripts folder in SO\_ARC.
+Examples are written using [Scripting Engine](@refScriptingEngine). You can use the below code segment within any event, so once that particular event is fired it creates a new contact. You should store the script file in the Scripts folder in SO\_ARC.
 
 How we can create a new Contact using SuperOffice Application Object.
 

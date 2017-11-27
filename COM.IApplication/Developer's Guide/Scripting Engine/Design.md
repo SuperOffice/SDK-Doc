@@ -12,6 +12,8 @@ The scripting panel does not appear if the database does not have an Expander li
 
 
 **On SOCRM application start:**
+
+```cs
     ScriptControlManager is initialized
     If Scripting is enabled
        ScriptControlManager searches SO\_Arc\\
@@ -23,8 +25,11 @@ The scripting panel does not appear if the database does not have an Expander li
           Next
        End if
      End if
+```
 
 **On event fired inside SOCRM:**
+
+```cs
     SOCRM notifies script system of an event
         Script system searches for script files that implement a matching function name.
             If a matching function name is found, then
@@ -35,6 +40,7 @@ The scripting panel does not appear if the database does not have an Expander li
             If SOEventPublisher is active Then
                  Call event publisher with event name and parameter.
             End if
+```
 
 ### Script Engine preference enabled
 
@@ -55,9 +61,7 @@ On application startup, the ScriptControlManager will use this preference to che
 There are two buttons in Admin Scripting panel, Edit and Validate.
 The Edit button will open the selected scriptfile in Windows default text editor (normally notepad), so the file is ready to be edited on the fly. After editing a script, the user can select the file in the file list and press ‘Validate’. The Script system will then check the script file for syntax errors and display the result in a messagebox, and in a textbox in the panel if an error occur.
 
-|                         |                                                                                                                                                             |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](../../images/hs-note.gif) | **NOTE**: This validation does not care about logical errors or programmatical flaws, it is a direct syntax checker and will only respond to syntax errors. |
+![](../../images/hs-note.gif) | **NOTE**: This validation does not care about logical errors or programmatical flaws, it is a direct syntax checker and will only respond to syntax errors. 
 
 
 
@@ -67,17 +71,20 @@ SCRENC.EXE
 Microsoft Script Encoder
 Turns
 
+```vb
   MsgBox "Hello world"
+```
 
 into
 
+```txt
   [\#@~^GQAAAA==\\ko$K6,JCV^GPSW.V9J~@\#@&JwcAAA](#@~%5EGQAAAA==/ko$K6,JCV%5EGPSW.V9J~@#@&JwcAAA)==^\#~@
+```
 
-
-  The source code of an encoded script will not be visible in the File contect box, and the edit box will only bring up the encoded script.
+The source code of an encoded script will not be visible in the File contect box, and the edit box will only bring up the encoded script.
 
 
 
 ### Debugging
 
-From SIX SR1 we will write error messages to the SuperOffice error logfile
+From SIX SR1 we write script error messages to the SuperOffice logfile.
