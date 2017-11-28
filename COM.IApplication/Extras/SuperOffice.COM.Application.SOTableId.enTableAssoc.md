@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableAssoc
+
+= 2
+

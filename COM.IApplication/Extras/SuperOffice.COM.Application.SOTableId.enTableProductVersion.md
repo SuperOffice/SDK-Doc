@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableProductVersion
+
+= 240
+

@@ -1,0 +1,5 @@
+
+##SUMMARY: enSelTypeDynamicAppointment
+
+Dynamic appointment
+

@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableStatusDef
+
+= 198
+

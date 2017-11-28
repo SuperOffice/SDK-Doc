@@ -1,0 +1,5 @@
+
+##SUMMARY: enSelTypeStaticAppointment
+
+Static appointment
+

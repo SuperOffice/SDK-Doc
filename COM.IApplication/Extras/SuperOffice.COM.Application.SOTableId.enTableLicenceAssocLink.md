@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableLicenceAssocLink
+
+= 238
+

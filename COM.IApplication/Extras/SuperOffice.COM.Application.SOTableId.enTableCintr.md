@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableCintr
+
+= 14
+

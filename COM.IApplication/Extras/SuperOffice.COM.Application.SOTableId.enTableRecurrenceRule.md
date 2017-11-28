@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableRecurrenceRule
+
+= 207
+

@@ -1,0 +1,5 @@
+
+##SUMMARY: enSelTypeStaticProject
+
+Static project
+

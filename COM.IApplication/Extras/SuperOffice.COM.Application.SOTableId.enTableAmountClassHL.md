@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableAmountClassHL
+
+= 227
+

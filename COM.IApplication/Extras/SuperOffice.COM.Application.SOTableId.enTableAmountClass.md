@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableAmountClass
+
+= 225
+

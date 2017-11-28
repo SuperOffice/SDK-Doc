@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableSearchCriterion
+
+= 203
+

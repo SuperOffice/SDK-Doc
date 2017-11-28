@@ -12,32 +12,35 @@ This uses the application object, which is tied to the running SOCRM.exe program
 
 Creating the application object will start SOCRM and start the login process if it is not already running, and prompt the user for a userid and password like normal login.
 
+```vb
 set soApp = CreateObject("SuperOffice.Application")
 currentName = soApp.CurrentContact.Name
 currentId = soApp.CurrentContact.Identity
 MsgBox currentId & "=" & currentName
+```
 
+### Getting the name of a specific company from the SuperOffice database
 
-
-Getting the name of a specific company from the SuperOffice database
 Here we log in to the database directly, so the SOCRM application does not need to be running for this to work.
 
 If the login fails, then isOk will be false and an error message is displayed.
 
 We get the record by using the record id. If we don't know the id, but know the name, then we can use the <see cref="IFind">Find</see> object to find the id for a given name using <see cref="IFind.FirstMatch">Find.FirstMatch</see> for example.
 
+
+```vb
 set soDb = CreateObject("SuperOfficeDB.Database")
 isOk = soDb.Login("user", "pass")
 if isOk Then
-   set theContact = soDb.GetContact( 123 )
+   contactId = soDB.Find.FirstMatch("contact", "contact_id", "name", "SuperOffice ASA")
+   set theContact = soDb.GetContact( contactId )
    id = theContact.Identity
    name = theContact.Name
    MsgBox currentId & "=" & currentName
 else
    MsgBox "Login failed"
 end if
-
-
+```
 
 ### Adding an appointment to SuperOffice without displaying the appointment dialog
 
@@ -53,11 +56,12 @@ The Contact and Task type of the new appointment are set, as is the text of the 
 
 Finally we save the appointment to the database. You should be able to find the appointment in the diary or under the SuperOffice company.
 
+```vb
 set soDb = CreateObject("SuperOfficeDB.Database")
 isOk = soDb.Login("user", "pass")
 if isOk Then
    enTableTask = 67                      ' constant that VBScript doesn't know about
-   contactId = soDB.Find.FirstMatch("contact", "contact\_id", "name", "SuperOffice ASA")
+   contactId = soDB.Find.FirstMatch("contact", "contact_id", "name", "SuperOffice ASA")
    set theContact = soDb.GetContact( contactId )
    set newAppoint = soDb.CreateAppointment
    newAppoint.SetDefaults
@@ -69,7 +73,7 @@ if isOk Then
 else
    MsgBox "Login failed"
 end if
-
+```
 
 
 ### Getting the current information from the running application
@@ -77,21 +81,25 @@ end if
 There are several different Current objects, and you may access  the current object even when the object is not visible.
 The objects correspond to major parts of the user interface.
 
-CurrentContact – company card
-CurrentPerson – contact dialog
-CurrentProject – project card
-CurrentAppointment – appointment dialog
-CurrentSale – sale dialog
-CurrentDocument – document dialog
-CurrentSelection – selection card
-CurrentRelation – relation dialog
+* <see cref="IApplication.CurrentContact">CurrentContact</see> – company card
+* <see cref="IApplication.CurrentPerson">CurrentPerson</see> – contact dialog
+* <see cref="IApplication.CurrentProject">CurrentProject</see> – project card
+* <see cref="IApplication.CurrentAppointment">CurrentAppointment</see> – appointment dialog
+* <see cref="IApplication.CurrentSale">CurrentSale</see> – sale dialog
+* <see cref="IApplication.CurrentDocument">CurrentDocument</see> – document dialog
+* <see cref="IApplication.CurrentSelection">CurrentSelection</see> – selection card
+* <see cref="IApplication.CurrentRelation">CurrentRelation</see> – relation dialog
 
-Current Contact is the current Contact object that you see in in the company card in  the application. When the Company card changes, it means that the Current Contact has changed.
+Current Contact is the current Contact object that you see in in the company card in  the application.
+When the Company card changes, it means that the Current Contact has changed.
 
 It has all the properties of a contact (name, department, phones, interests), and any changes you make to CurrentContact are immediately visible.
 
+```vb
 Set app = CreateObject("SuperOffice.Application")
 App.CurrentContact.ChangeIdentity(15)
 App.CurrentContact.Name = "Change the name"
+```
 
 Note that changing the current identity or modifying the current object will NOT switch the user interface to edit mode.
+You need to switch on the EDIT mode explicitly using the <see cref="ISoContext.EditMode">Context</see> object.

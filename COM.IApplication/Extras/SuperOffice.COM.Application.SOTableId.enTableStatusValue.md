@@ -1,0 +1,5 @@
+
+##SUMMARY: enTableStatusValue
+
+= 199
+

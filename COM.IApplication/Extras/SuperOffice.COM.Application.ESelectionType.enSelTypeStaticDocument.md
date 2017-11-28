@@ -1,0 +1,5 @@
+
+##SUMMARY: enSelTypeStaticDocument
+
+Static document
+

@@ -1,0 +1,8 @@
+
+
+##SUMMARY
+
+Boolean is equal
+
+
+

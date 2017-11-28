@@ -1,0 +1,5 @@
+
+##SUMMARY: enSelTypeStaticSale
+
+Static sale
+
