@@ -59,29 +59,14 @@ provided by SuperOffice.
 |oneOf |W+|Is one of|
 |notOneOf|W+|Is not one of|
 
-## RestrictionType 'date'
+## RestrictionType 'datetime' – both the date and time are used.
 | Name | ValueHint | Display Name |
 | ---- | ------ | ------ |
-|before|W|Before|
-|date|W|Equals|
-|after|W|After|
-|dateBetween|W;W|Between|
-|beforeToday|R|Before today|
-|today|R|Today|
-|afterToday|R|After today|
-|lastWeek|R;R|Last week|
-|thisWeek|R;R|This week|
-|nextWeek|R;R|Next week|
-|lastMonth|R;R|Last month|
-|thisMonth|R;R|This month|
-|nextMonth|R;R|Next month|
-|lastQuarter|R;R|Last quarter|
-|thisQuarter|R;R|This quarter|
-|nextQuarter|R;R|Next quarter|
-|thisHalf|R;R|This half|
-|thisYear|R;R|This year|
+|afterTime|W|After or equal to Datetime|
+|beforeTime|W|Before Datetime|
+|dateTime|W|Exact Datetime|
 
-## RestrictionType 'datetime'
+## RestrictionType 'date' – only the date part is used. 
 | Name | ValueHint | Display Name |
 | ---- | ------ | ------ |
 |before|W|Before|
