@@ -7,7 +7,7 @@ title: Role-Based Security
 
 This API corresponds to the Role panel in the Admin client:
 
-![Admin Role panel](Images/admin%20role.gif) 
+![Admin Role panel](../Images/admin%20role.gif) 
 
 The grid shown above corresponds to the DataRight rows for the role.
 

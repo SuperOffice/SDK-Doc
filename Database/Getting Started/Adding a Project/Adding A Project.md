@@ -9,17 +9,22 @@ Create a new project called ”Client SDK Work” and save it. (Click on the New
 
 You may be required to fill in several required fields, depending on the database you are using.
 
-![Registering a new Project](Images/so-project.gif)
+![Registering a new Project](../../Images/so-project.gif)
 
 Use your favorite query tool and try this query:
 
 ```SQL
- SELECT \* FROM project WHERE name = 'client sdk work'
+ SELECT * FROM project WHERE name = 'client sdk work'
 ```
 
 You should get one line back in the result window.
 
-The SuperOffice client has done quite a bit of work for us: it has added records to four different tables: Project, Text, UDProjectSmall, transaction log.
+The SuperOffice client has done quite a bit of work for us: it has added records to four different tables:
+
+* Project,
+* Text,
+* UDProjectSmall,
+* transaction log.
 
 It may also have indexed the name and description text into a free-text index – this depends on your setup.
 
