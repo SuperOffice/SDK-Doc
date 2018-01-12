@@ -28,7 +28,7 @@ Open ISQL, HakonClient or another tool like it.
 Select \* from addressformat where name like ‘Ger%’
 ```
 
-![](../Images/AddressFormat.JPG) 
+![](../Images/AddressFormat.jpg) 
 
 To copy street address to postal address, and reverse is done by updating the following in table addressformat.
 
