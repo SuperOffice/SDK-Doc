@@ -25,7 +25,7 @@ This is the queries that change this:
 Open ISQL, HakonClient or another tool like it.
 
 ```SQL
-Select \* from addressformat where name like ‘Ger%’
+Select * from addressformat where name like ‘Ger%’
 ```
 
 ![](../Images/AddressFormat.jpg) 
@@ -33,27 +33,27 @@ Select \* from addressformat where name like ‘Ger%’
 To copy street address to postal address, and reverse is done by updating the following in table addressformat.
 
 ```SQL
-update addressformat set address1\_zip =1024 where addressformat\_id=9
-update addressformat set address1\_zip =2048 where addressformat\_id=10
+update addressformat set address1_zip =1024 where addressformat_id=9
+update addressformat set address1_zip =2048 where addressformat_id=10
 
-update addressformat set city\_zip =1025 where addressformat\_id=9
-update addressformat set city\_zip =2049 where addressformat\_id=10
+update addressformat set city_zip =1025 where addressformat_id=9
+update addressformat set city_zip =2049 where addressformat_id=10
 
-update addressformat set zip\_zip =1026 where addressformat\_id=9
-update addressformat set zip\_zip =2050 where addressformat\_id=10
+update addressformat set zip_zip =1026 where addressformat_id=9
+update addressformat set zip_zip =2050 where addressformat_id=10
 ```
 
 To get it to look up the City or Zipcode information from the table ZipToCity:
 
 ```SQL
-update addressformat set address1\_zip = 0 where addressformat\_id=9
-update addressformat set address1\_zip = 0 where addressformat\_id=10
+update addressformat set address1_zip = 0 where addressformat_id=9
+update addressformat set address1_zip = 0 where addressformat_id=10
 
-update addressformat set zip\_zip = 257 where addressformat\_id=9
-update addressformat set city\_zip = 514 where addressformat\_id=9
+update addressformat set zip_zip = 257 where addressformat_id=9
+update addressformat set city_zip = 514 where addressformat_id=9
 
-update addressformat set zip\_zip = 258 where addressformat\_id=10
-update addressformat set city\_zip = 513 where addressformat\_id=10
+update addressformat set zip_zip = 258 where addressformat_id=10
+update addressformat set city_zip = 513 where addressformat_id=10
 ```
 
 Note that addressformat\_id = 9  have the Street address information (atype\_idx = 2), and addressformat\_id=10 have the postal address information (atype\_idx=1). To make them copy between the text entered (only when adding a new customer) you update the xxx\_zip value. If you take the number 1024 as HEX, it’s 400, 2048 in HEX is 800, and this tells the CRM client to copy between these lines.
