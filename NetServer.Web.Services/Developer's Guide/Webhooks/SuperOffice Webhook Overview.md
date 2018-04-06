@@ -257,6 +257,8 @@ Notifications are sent out in a fire-and-forget fashion and do not expect a resp
 
 Note that the event name, event id and signature are sent as HTTP headers, to help the recipient route and filter the notification without having to parse the body.
 
+__WebhookPayload Headers__
+
 | Header Name | Description                                                                              |
 |-------------|------------------------------------------------------------------------------------------|
 | X-SuperOffice-Event   | The event name, i.e. contact.created, project.changed.                         |
