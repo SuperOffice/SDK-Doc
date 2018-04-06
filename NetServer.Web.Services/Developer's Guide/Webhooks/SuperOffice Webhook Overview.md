@@ -262,6 +262,7 @@ Note that the event name, event id and signature are sent as HTTP headers, to he
 | X-SuperOffice-Event   | The event name, i.e. contact.created, project.changed.                         |
 | X-SuperOffice-EventId | A GUID that uniquely identifies this event.                                    |
 | X-SuperOffice-Retry   | The number of retries this webhook has been tried to be sent.                  |
+| X-SuperOffice-Signature | The hash/base64 encoded secret.                                              |
 
 ---
 
