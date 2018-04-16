@@ -1,3 +1,10 @@
+---
+uid: addArchiveRowClickAction
+title: Add Row Click Actions
+date: 2018-04-16
+SortOrder: 4
+---
+
 # How to Add Row Click Actions
 
 This article discusses how to add an action when a user single or double clicks an archive row.

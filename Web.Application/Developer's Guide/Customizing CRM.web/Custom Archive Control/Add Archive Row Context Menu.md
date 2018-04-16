@@ -1,3 +1,10 @@
+---
+uid: addArchiveRowContextMenu
+title: Add Archive Row Context Menu
+date: 2018-04-16
+SortOrder: 3
+---
+
 # Add Archive Row Context Menu
 
 This article discusses how to add a context menu to row elements in an archive control.

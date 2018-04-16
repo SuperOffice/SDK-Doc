@@ -1,3 +1,10 @@
+---
+uid: addArchiveActionButton
+title: Add an Archive Action Button
+date: 2018-04-16
+SortOrder: 5
+---
+
 # How to Add an Archive Action Button
 
 This article discusses how to add an action button to the toolbar of an archive control.

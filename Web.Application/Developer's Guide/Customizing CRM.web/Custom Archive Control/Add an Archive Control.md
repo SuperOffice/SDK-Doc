@@ -1,4 +1,11 @@
-# Add an Archive Control
+---
+uid: addArchiveControl
+title: Add an Archive Control
+date: 2018-04-16
+SortOrder: 2
+---
+
+# How to Add an Archive Control
 
 ![Archive Control](web-archive-control.png)
 
@@ -13,11 +20,11 @@ Archive Controls are comprised of the following components:
 
 This article discusses adding a new archive control with a header context menu and the requirements associated with that task.
 
-How to add a row context menu is discussed in the [Adding a Context Menu](web-archive-context-menu.md) page.
+How to add a row context menu is discussed in the [Adding a Context Menu](Add%20Archive%20Row%20Context%20Menu.md) page.
 
-How to add row single-click and double-click actions is discussed in the [Adding an Action Button](web-archive-row-click-action.md) page.
+How to add row single-click and double-click actions is discussed in the [Adding an Action Button](Add%20an%20Archive%20Action%20Button.md) page.
 
-How to add a toolbar action button is discussed in the [Adding an Action Button](web-archive-toolbar-button-action.md) page.
+How to add a toolbar action button is discussed in the [Adding an Action Button](Add%20an%20Archive%20Action%20Button.md) page.
 
 ## Configuration
 
