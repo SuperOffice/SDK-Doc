@@ -21,7 +21,6 @@ Lets start by looking at a webhook definition - what the Partner Application use
 
 A webhook subscription contains the follow properties:
 
-
 | Property Name | Description                                                                              |
 |---------------|------------------------------------------------------------------------------------------|
 | Name          | A name to distinguish events from one another.                                           |
@@ -257,7 +256,7 @@ Notifications are sent out in a fire-and-forget fashion and do not expect a resp
 
 Note that the event name, event id and signature are sent as HTTP headers, to help the recipient route and filter the notification without having to parse the body.
 
-__WebhookPayload Headers__
+### WebhookPayload Headers
 
 | Header Name | Description                                                                              |
 |-------------|------------------------------------------------------------------------------------------|
@@ -285,6 +284,7 @@ If the values match then you can be confident the webhook is a valid message tha
 Here is a validation example using C#.
 
 ``` CSharp
+
 /// <summary>
 /// Validates the X-SuperOffice-Signature webhook header value.
 /// </summary>
@@ -326,6 +326,7 @@ Here is a validation routine using Node/Javascript:
 You need to be careful to compute the hash based on the request string, and not a parsed and converted representation, since whitespace and line delimiters are significant. See this [article](https://sensecommerce.io/blog/validating-shopify-webhooks-node-js/) for an in-depth example using Express and Node.
 
 ``` javascript
+
 /**
 @signature is X-SuperOffice-Signature header value
 @secret is the stored shared secret
