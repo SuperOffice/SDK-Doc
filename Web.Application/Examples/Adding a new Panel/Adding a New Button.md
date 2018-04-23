@@ -20,8 +20,12 @@ The following example shows how we can add a button to the Navigator panel by ma
                 <!--Our Button code begins here-->
                 <control id="myPageButton" type="SoToolButton">
                   <caption>My Page</caption>
-                  <config>                    <onclick>javascript:PageUpdate('soprotocol:test','');</onclick>
-                    <ontextclick>javascript:dummy();</ontextclick>                    <passiveimage>images/Myimages/myButton1.jpg</passiveimage>                    <disabledimage>images/Myimages/myButton2.jpg</disabledimage>                    <selectedimage>images/Myimages/myButton3.jpg</selectedimage>
+                  <config>                    
+                    <onclick>javascript:PageUpdate('soprotocol:test','');</onclick>
+                    <ontextclick>javascript:dummy();</ontextclick>
+                    <passiveimage>images/Myimages/myButton1.jpg</passiveimage>
+                    <disabledimage>images/Myimages/myButton2.jpg</disabledimage>
+                    <selectedimage>images/Myimages/myButton3.jpg</selectedimage>
                     <hoverimage>images/Myimages/myButton4.jpg</hoverimage>
                     <width>70</width>
                     <textalign>right</textalign>
