@@ -10,7 +10,7 @@ Now that webhooks have been created and saved in SuperOffice, notifications can 
 | Event        | The name of the event.                           |
 | PrimaryKey         | The entity identity that was affected                                  |
 | Entity          | The type of entity that was affected, i.e. activity, associate, contact, person etc. |
-| ContectIdentifier       | Customer id for Online users: "Cust1234". Not used for On-site installations.                         |
+| ContextIdentifier       | Customer id for Online users: "Cust1234". Not used for On-site installations.                         |
 | ChangedByAssociateId    | Associate id of the user that triggered the event.                        |
 | WebhookName   | The given name of the webhook. |
 
