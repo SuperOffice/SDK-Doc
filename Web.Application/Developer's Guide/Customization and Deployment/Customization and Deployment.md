@@ -6,9 +6,9 @@ SortOrder: 1
 ---
 # Web Client Customizations
 
- Adding and modifying existing UI elements and their behaviors are all web client customizations third-parties are able to do by simply modifying the products configuration files. While possible, there are downsides to this approach. Product upgrades, for example, replaces all existing files and thereby wipe away all modified files.
+Adding or modifying existing UI elements, and associated behaviors, are all possible by simply modifying existing application configuration files. However, there are downsides to this approach, such as product upgrades that replaces all existing files and thereby wiping away all customizations.
 
-A better approach is to define a location not affected by ugrades where configuration overrides reside and adopted at runtime. The *client configuration provider* helps solve this problem.
+A better approach involves defining a location not affected by ugrades, where configuration overrides are placed and incorporated at runtime. The *client configuration provider* helps solve this problem.
 
 ## ClientConfigurationProvider
 
