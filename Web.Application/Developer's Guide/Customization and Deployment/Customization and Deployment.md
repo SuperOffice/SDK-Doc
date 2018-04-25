@@ -81,7 +81,7 @@ The __applicationname__ and __instancename__ must be the same as defined in the 
 
 This same folder structure is seen in the web client where it stores all configuration files.
 
-![Web Client Configuration Folder](/media/web-client-configuration-file-folders.png)
+![Web Client Configuration Folder](Customization%20and%20Deployment%20article_files/web-client-configuration-file-folders.png)
 
 Therefore, all customizations should reside in a folder path that adheres to the convention.
 
