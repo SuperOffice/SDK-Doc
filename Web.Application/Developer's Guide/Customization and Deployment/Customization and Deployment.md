@@ -6,23 +6,25 @@ SortOrder: 1
 ---
 # Web Client Customizations
 
-Adding or modifying existing UI elements, and associated behaviors, are all possible by simply modifying existing application configuration files. However, there are downsides to this approach, such as product upgrades that replaces all existing files and thereby wiping away all customizations.
+Customizing the web client is all made possible by modifying application XML SuperOffice Markup Language (SOML) files. To begin, it's as easy as navigating to the applications App_Data folder and opening one of the .config files that requires customizing. From click-actions to UI windows there are virtually limitless client customization capabilities.
 
-A better approach involves defining a location not affected by ugrades, where configuration overrides are placed and incorporated at runtime. The *client configuration provider* helps solve this problem.
+With regards to modifying existing application files, there are downsides to this approach. Product upgrades, for example, replaces all existing files and thereby wipe away all direct customizations.
 
-## ClientConfigurationProvider
+Client configuration options provide a better approach, with an ability to define a directory outside the installation directory where configuration overrides are placed. These override files are then discovered and incorporated at runtime. The *client configuration provider* solves this problem.
 
-Configuration options declared in the **ClientConfigurationProvider** element, located in the `web.config` file, tell the client where to locate customization files. ClientConfigurationProvider are listed below.
+## Client Configuration Provider
+
+Configuration options, located in the web.config file, are declared in the **ClientConfigurationProvider** element and tell the client where additional configuration files are located. This table lists all ClientConfigurationProvider options.
 
 |Options                | Description                                                 |
 |-----------------------|-------------------------------------------------------------|
-|CustomPath             | defines a path that contains configuration and merge files. |
-|CacheConfigurations    | determines if configuration is cached                       |
-|ValidateConfigurations | determines of GUI config data is validated at runtime.      |
+|CustomPath             | Defines a path that contains configuration and merge files. |
+|CacheConfigurations    | Determines if configuration is cached.                       |
+|ValidateConfigurations | Determines of GUI config data is validated at runtime.      |
 
-### CustomPath
+### Custom Path
 
-To begin custom customizing SuperOffice web add a custom path directive in the ClientConfigurationProvider element. The custom path key name must start with the text **CustomPath**, but can be longer is desired. Multiple custom paths are supported with additional entries, and the only requirement is each key must be unique.
+To begin, add a **CustomPath** directive in the ClientConfigurationProvider element. The custom path key name must start with the text **CustomPath** and can be suffixed when necessary to support multiple custom paths. The only requirement is each key must start with _CustomPath_ and be unique.
 
 ```xml
 
@@ -41,57 +43,33 @@ To begin custom customizing SuperOffice web add a custom path directive in the C
 
 ```
 
-It's recommended to separate custom paths based on a feature or third-party name to ensure no naming conflicts with existing or future customizations occur.
+Multiple custom paths are a means to organize and separate features and third-party integrations.
+
+Files in a custom path folder take precedence and override standard web-client configuration files. This means that if a file called **SoApplicationConfiguration.config** exists in a CustomPath, it will take priority and be used instead of the default **SoApplicationConfiguration.config** in the web applications installation folder.
+
+ Inside the custom path directory, there must be structured set of folders following the convention:
+
+`<CustomPath>\[applicationname]\[instancename]\`
+
+Where __applicationname__ and __instancename__ defaults are WebClient and Web, which may or may not be explicitly defined in the **Client** element.
 
 ```xml
-
 <SuperOffice>
     ...
-    <ClientConfigurationProvider>
-
-     <!-- add path to customization files -->
-      <add key ="CustomPath_Common" value ="C:\WebClient\Common" />
-      <add key ="CustomPath_Feature" value ="C:\WebFeature\MyFiles" />
-      <add key ="CustomPath_ThirdParty" value ="C:\Thirdparty\MyFiles" />
-
-      <!-- disable cache during development -->
-      <add key ="CacheConfigurations" value ="false" />
-
-    </ClientConfigurationProvider>
+    <Client applicationname="WebClient" instancename="Web">
     ...
-<SuperOffice>
-
+    </Client>
+    ...
+</SuperOffice>
 ```
 
-Files in custom path folders take precedence over all standard web-client configuration files. This means if a configuration file called **SoApplicationConfiguration.config** exists in a CustomPath, it will take priority and be used instead of the default **SoApplicationConfiguration.config** in the web applications installation folder.
-
-Be aware that when defining a custompath, you need to create a structured set of folders following the following convention - using the application name and instance name:
-
-`c:\MyPath\MyFiles\[applicationname]\[instancename]\[mynamedfolder]\Myconfig.config`
-
-The __applicationname__ and __instancename__ must be the same as defined in the `Client` element of the web.config. They may or may not be explicitly defined, but the defaults are WebClient and Web, respectively.
-
-```xml
-
-<Client applicationname="WebClient" instancename="Web">
-
-</Client>
-
-```
-
-This same folder structure is seen in the web client where it stores all configuration files.
+This default application configuration folder _App_Data_ has the same structure and is where all standard configuration files are installed. The *.config files in these folders make up the entire structure of the web client.
 
 ![Web Client Configuration Folder](Customization%20and%20Deployment%20article_files/web-client-configuration-file-folders.png)
 
-Therefore, all customizations should reside in a folder path that adheres to the convention.
+With regards to **CustomPath** subfolders, inside the WebClient\Web folders, the structure is not important. Because all subfolders are searched for configuration files, it's really personal-preference.
 
-```text
-CustomPath\applicationname\instancename
-```
-
-Subfolder structure is a personal-preference that does not matter to the platform; they are optional, but searched for files automatically.
-
-The following three examples demonstrate a few of, but not limited to, the possibilities.
+The following approaches demonstrate a few possibilities.
 
 Approach #1:
 
@@ -118,19 +96,15 @@ C:\Thirdparty\MyFiles\WebClient\Web\Dialogs\SoThirdPartyDialogPage.config
 C:\Thirdparty\MyFiles\WebClient\Web\Scripts\CustomScripts.js
 ```
 
-There really is no standard way you must configure subfolders, the just have to have the structure including the application and instance names.
+With regards to system files, if the decision is to use a copy of the original file in a custom path, try to use one common folder that is shared among third-parties to ensure one does not override the settings of another. That said, it's recommended to use a merge file instead.
 
-With regards to system files, if it is decided to use a copy of the original file in a custom path, try to use one common folder that is shared among third-parties to ensure one does not override the others settings. That said, it is recommended to use a merge file instead.
-
-All ".config" files with the same name will override existing files in the client, and all ".merge" files will be merged into the standard configuration at runtime.
-
-Merge files are a means to apply customizations with more granularity by, not overriding an entire file but, specifying where in an existing file an element should be adopted at runtime.
+Merge files are a means to apply customizations by, not overriding an entire file but, specifying where in an existing file a merge action is applied at runtime. There is more information about merge actions in the merge section below.
 
 ### CacheConfigurations
 
-There is a performance benefit to enabling CacheConfigurations, however, during development it makes more sense to turn this feature off. When set to false, saved configuration changes are immediately applied and observed in to UI - there is no need to do an IIS reset or issue a _flush_. There are however a few exceptions to this rule.
+There is a performance benefit to enabling CacheConfigurations, however, it makes more sense to turn this feature off during development. When set to false, configuration changes to UI elements are immediately applied and observed in the browser - there's no need to perform an IIS reset or issue a _flush_ SoProtocol. There are however a few exceptions to this rule.
 
-Caching works for all configuration files except system files. System files are read at application startup and held in memory. Any changes to these files do require an IIS reset.
+Caching works for all configuration files except system files. System files are cached during application startup and held in memory. Any changes to the files below do require an IIS reset.
 
 - SoApplicationConfiguration.config
 - SoAdminApplicationConfiguration.config
@@ -142,9 +116,7 @@ Caching works for all configuration files except system files. System files are 
 
 #### Archive Column Lists
 
-A quick note about **archive** elements. Once an archive provider is initialized with column definitions defined in configuration files, the column definitions are persisted like preferences in the _SUPERLISTCOLUMNSIZE_ table of the database.
-
-Any changes to the archive configuration will not be observed in the client until the corresponding records in the database are purged. To delete rows from the _SUPERLISTCOLUMNSIZE_ table, use the archive lists guiname field to issue the following delete query.
+A quick note about **archive** elements. Once an archive provider is initialized with column definitions in an _archive_ element, the column definitions are persisted like preferences in the _SUPERLISTCOLUMNSIZE_ table of the database. Any changes to the _archive_ configuration will not be observed in the client until the corresponding records in the database are purged. To delete rows from the _SUPERLISTCOLUMNSIZE_ table, use the _Archive_ attribute guiname value as the key with the following delete query.
 
 ```sql
 -- replace [guiname] with the real archive guiname
@@ -154,15 +126,13 @@ WHERE listOwner = '[guiname]'
 
 ### ValidateConfigurations
 
-SOML is XML that must conform to a well-defined schema. When set to true, **ValidateConfirations** will validate all configurations based on their schemas to ensure all markup is well-formed. Any errors are found are shown in the browser.
+SOML is XML that must conform to a well-defined schema. When set to true, **ValidateConfirations** will validate all configurations based on respective schemas to ensure all markup is well-formed. Any errors found are shown in the browser.
 
-## Configuration lifecycle
+## Configuration Lifecycle
 
-Client requests to the server use [soprotocol](web-client-soprotocol). The web server uses a module called SoProtocolModule to parse the soprotocol string, which inturn uses SuperStateManager to update any changed Current values. Changes are then used by the ContextFilter to modify the configuration.
+While navigating around in the client, incoming requests sent to the server are interpreted and rewritten into a SoProtocol URL. An HttpModule, called SoProtocolModule, parses the SoProtocol string and uses it to determine what to display on the page and what data to load into the page.
 
-When PageBuilder receives the configuration it has no knowledge of what to render and what to not render, therefore parts of the configuration that are not affected by changes are removed.
-
-In order to reduce response payload and enforce things such as user-rights, the entire page configuration must be parsed multiple times and fully built before the unchanged parts of the page are stripped away. The build process happens in several steps:
+To reduce the response payload and enforce things such as user-rights, SoProtocolModule uses the page framework to build the entire page configuration. Then based on the users context, the configuration is then parsed multiple times by various filters to strip away unchanged or unnecessary parts of the page. The build process happens in several steps:
 
 1. Fragments are resolved.
 2. Data driven configuration, such as WWW panels, are generated.
@@ -176,13 +146,13 @@ The following illustration shows how the configuration grows and then shrinks fr
 
 ## Merge Process
 
-While the system supports modifying configuration files copied directly from the application into a custom path folder, it's generally cleaner to instead use merge files. That is files with a .merge file extension.
+While the system supports modifying configuration files copied directly from the application into a custom path folder, it's generally cleaner to instead use merge files instead.
 
-Merge files make it easy to add, remove and replace configuration elements without touching the original application files.
+Merge files have a .merge file extension and make it easy to add, remove or replace configuration elements without touching the original application files.
 
-Regardless which course is taken, it's important to know how to target a specific location in a configuration file so that the customization appears in the application where it is expected.
+Regardless of approach, it's important to know how to target a specific location in a configuration file so that the customization appears in the application where it is expected.
 
-First and foremost, configuration files contain different element types and, based on the type, have different identifers to differentiate similar element types from one another. This is important in order to address what element is acted upon, and then where in the configuration. This table defines which element relies on which identifier to ensure uniqueness.
+Different elements tags use one or more attributes to ensure each element with the same tag has a unique identity. Having a unique element identity is important to resolve which element is affected. The following table maps which element relies on which identifier(s) to ensure uniqueness.
 
 | Parent | Element | Identifier | File(s)
 |------|------------|------|----|
@@ -198,11 +168,11 @@ First and foremost, configuration files contain different element types and, bas
 |menus**|menu|context, subcontext|SoMenuConfiguration|
 |objects|object|mappingname|SoObjectMapping|
 
-** Sometimes elements appear in multiple files.
+** Elements type appear in more than one configuration files.
 
 ### Merge Actions
 
-A **mergeaction** attribute is placed in the element to process. The following table lists what actions are available. Note that Insert is the default behavior when no **mergeaction** attribute is specified.
+A **mergeaction** attribute is used to determine which element to process. The following table lists what actions are available. *Insert is the default behavior* when no **mergeaction** attribute is specified.
 
 |command|description |
 |-------|------------|
@@ -220,23 +190,22 @@ The following snippet demonstrates how to add a new page to the application conf
 </applicationsettings>
 ```
 
-Keep in mind that not all elements are based on id, so keep that in mind when applying changes and refer to the element/identifier colums in the table above for guidance.
+Not all elements are based on id alone, so remember to use the correct element/identifier when applying changes.
 
 ## Page Configuration Files
 
-While element placement might not be important for system configuration files, modifying elements in a page or dialog file is very important and must be structured accordingly.
+While element placement might not be important for system configuration files, modifying elements in a page or dialog must be structured accordingly. A page contains cards, and cards contain views, and views contain controlgroups and so on, and knowing how to structure a merge definition is critical to successfully deploying a change.
 
-Knowing that a page contains cards, and cards contain views, and views contain controlgroups and so on, knowing how to structure a merge definition is critical to successfully deploying a change.
+There are two approaches to apply a configuration change: complete structure or using an xpath element. System files must use the complete structure approach, whole UI pages can use either one or both.
 
 ### Complete Structure Approach
 
-One way to define a merge file is to create the complete page structure down to the element with a mergeaction attribute. The web application, using this approach, can then accurately determine where and on which element the action must occur.
+Using the complete structure approach means creating a merge file with the complete page structure up to the element with a mergeaction attribute. Using this approach, the merge filter can accurately determine which element to process.
 
 The following example demonstrates how to replace a controlgroup in the SoContactPage configuration. Take notice how each id along the path is defined for the page, panel, card, view, and finally the controlgroup. Make sure to also include the **< pages >** root element.
 
-With this information, the web application is able to accurately locate the correct element in the configuration graph, and replace the existing controlgroup with an id equal to _maingroup_2_ with this one.
-
 ```xml
+<!-- SoContactPage.merge -->
 <pages>
   <page id ="ContactPage">
     <panels>
@@ -270,11 +239,13 @@ With this information, the web application is able to accurately locate the corr
 <pages>
 ```
 
+Without stating id values at each stage of the structure, the filter would not be unable to determine which page>panel>card>view>controlgroup path to replace and the merge would be ignored.
+
 ### XPath Element Approach
 
-Added in SuperOffice 8.1, the xpath element is a new approach for adding page elements. This is a powerful way to ensure that elements, even across fragments, are added.
+Added in SuperOffice 8.1, xpath is a new approach to add page elements. This approach even supports adding elements across fragments!
 
-_This capability only applies to the contents of pages, including dialogs, and **is not applicable to system files**._
+_This capability only applies to the contents of UI pages and dialogs and **is not applicable to system files**._
 
 ```xml
 <!-- Example: <filename>.merge                     
@@ -289,17 +260,19 @@ _This capability only applies to the contents of pages, including dialogs, and *
 </pages>
 ```
 
-Because pages can contain duplicate element ids at various nested levels, care must be taken to ensure no unusual side effects occur when using this approach. The potential for side effects was enough to deem this capability too powerful for replace and remove actions.
+Because pages can contain duplicate element ids at various nested levels, care must be taken when using this approach to ensure no unusual side effects occur. 
+
+_The potential for xpath side effects was enough to deem this capability too powerful for replace and remove actions._
 
 ## System Configuration Files
 
-System configuration files are the files that declare every application dependency, including web controls, currents, menu items and pages. These files essentially describe the skeleton of the entire web application.
+System configuration files declare every application dependency, including web controls, currents, menu items and pages. These files essentially describe the skeleton of the entire web application.
 
 This section includes merge file examples for a few system configuration files.
 
 ### SoApplicationConfiguration
 
-This file can contains definitions for:
+This file can contain declarations for:
 
 - pages and dialogs
 - currents
@@ -340,7 +313,7 @@ PageUpdate('soprotocol:CustomFeature','');
 
 ```
 
-A global SuperOffice method PageUpdate issues an SoProtocol string to the server. As stated earlier in this page, in addition to navigation and changing the viewed configutation, SoProtocol also updates currents. Get current's using SuperOffice.Util.getCurrentId.
+A global SuperOffice method PageUpdate issues an SoProtocol string to the server. As stated earlier in this page, in addition to navigation and changing the viewed configuration, SoProtocol also updates currents. Get current's using SuperOffice.Util.getCurrentId.
 
 ```javascript
 // JavaScript.
@@ -433,7 +406,7 @@ All linkinfo elements are uniquely identified by a combination of their attribut
 </linkinfos>
 ```
 
-Below is an example that demonstates adding a click handler, or linkinfo, that is linked to an archive control that exists on the customfeature page. It does the same thing so as to have a uniform behavior throughout the client application. The only difference is the type value prefix, a linkhint-prefix, which is explained in detail in the [Archive Control Row Client](/crm-client-web/web-common/web-archive-row-click-action.md) documentation.
+Below is an example that demonstrates how to add a click handler, or linkinfo, that is linked to an archive control that exists on the _customfeature_ page. It does the same thing so as to have a uniform behavior throughout the client application. The only difference is the type value prefix, a linkhint-prefix, which is explained in detail in the [Archive Control Row Client](/crm-client-web/web-common/web-archive-row-click-action.md) documentation.
 
 ```xml
 <!-- SoArchiveLinkInfoTypes.merge -->
