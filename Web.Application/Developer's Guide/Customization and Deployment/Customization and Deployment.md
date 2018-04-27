@@ -260,7 +260,7 @@ _This capability only applies to the contents of UI pages and dialogs and **is n
 </pages>
 ```
 
-Because pages can contain duplicate element ids at various nested levels, care must be taken when using this approach to ensure no unusual side effects occur. 
+Because pages can contain duplicate element ids at various nested levels, care must be taken when using this approach to ensure no unusual side effects occur.
 
 _The potential for xpath side effects was enough to deem this capability too powerful for replace and remove actions._
 
