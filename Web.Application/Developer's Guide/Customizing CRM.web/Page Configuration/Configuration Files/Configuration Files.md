@@ -196,6 +196,6 @@ Is to use _referenceWithIdUpdate_ and reference one file named:
 
 ## Conclusion
 
-This page introduced the folders of the web application that are used when building customizations or integration with SuperOffice CRM Web. It also introduced configuration files, briefly describing system configuration files and, in more detail, UI page configuration files.
+This page introduced web application folders used when building customizations or integration with SuperOffice CRM Web. It also introduced configuration files, briefly describing system configuration files and, in more detail, UI page configuration files.
 
 1. autolist
