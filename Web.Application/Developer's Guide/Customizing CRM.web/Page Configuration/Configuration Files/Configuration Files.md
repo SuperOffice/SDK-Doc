@@ -15,18 +15,20 @@ The following table describes all application folders likely to be affected by c
 |Folder| Description|
 |------|-------------|
 |App_Data|Contains all SuperOffice Markup Language (SOML) configuration files that constitute the entire application structure.  Change configuration files to suit your needs, i.e. add your own or edit existing pages. |
-|App_Themes| Contains all stylesheets used by the application. The use of themes also lets you change all of the design elements, like fonts, colors, etc in the entire application to e.g. fit your own corporate design. |
+|App_Themes| Contains all stylesheets used by the application. The use of themes also lets you change all of the design elements, like fonts, colors, etc. in the entire application to e.g. fit your own corporate design. |
 |Bin| Contains all application-dependent assemblies, from archive providers to web controls, as well as NetServer Service assemblies. |
 |Images| Contains all images used by SuperOffice CRM Web. Custom images should be placed in a subfolder inside.|
-|Javascripts| Contains all javascript (.js) files used by the application. Custom scripts should be placed in subfolders.|
+|Javascripts| Contains all JavaScript (.js) files used by the application. Custom scripts should be placed in subfolders.|
 
-Nearly all customizations alter at least one of the configuration files, so that is the best place to continue this discussion.
+Nearly all customizations involve changing at least one of the configuration files so that's the best place to continue this discussion.
 
 ## Configuration Files
 
 Some of the overall design goals of the SuperOffice web client are: create an application that is easy to extend, easy to transform and easy to validate. It must also be easy to read and easy to configure.
 
-SuperOffice has acheived these goals with the introduction of an XML format called SuperOffice Markup Language (SOML). SOML is XML that conforms to a well-defined schema that defines the entire web applications structure. SOML content is stored in files with a .config extension, often referred to in this page as configuration files. Sometimes, most often with third-party customizations or integrations, SOML is also found in files with a [.merge](web-client-deploy-merge-files) extension.
+SuperOffice has achieved these goals with an XML format called SuperOffice Markup Language (SOML). SOML conforms to a well-defined schema that defines the entire web applications structure. 
+
+SOML content is stored in files with a .config extension and referred to as configuration files. SOML is also found in files with a [.merge](web-client-deploy-merge-files) extension, usually associated with third-party customizations or integrations.
 
 Configuration files make up both the infrastructure components and User-Interface (UI) components of the application. Infrastructure components are a collection of files that represent the system itself and are referred to as system files.
 
