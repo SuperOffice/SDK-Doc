@@ -179,9 +179,9 @@ Looking further down in the file, there are more fragments declared using both *
 
 The difference between the two is that _reference_ is used when the element id is unique and the contents of the element reside in file that follows the naming convention _So[id][Element].config_.
 
-The attribute _referenceWithIdUpdate_, is used when more than one element of the same type wants to reference the same content. To avoid creating duplicate content in files _SoMoreMainHeaderGroupControlGroup.config_ and _SoInterestMainHeaderGroupControlGroup.config_, using _referenceWithIdUpdate_ means reference this file instead of using my id as the link.
+Because no elements of the same type can have the same id, The attribute _referenceWithIdUpdate_, is used when more than one element of the same type wants to reference the same content. To avoid creating duplicate content in files _SoMoreMainHeaderGroupControlGroup.config_ and _SoInterestMainHeaderGroupControlGroup.config_, using _referenceWithIdUpdate_ means reference this file instead of using my id as the link.
 
-Using the following image to illustrate the point, no matter what tab is selected in the main card, the contents of the MainHeaderGroup _controlgroup_ is shown. The same goes for the ContactButtonBar _controlgroup_ the same buttons are shown in all views.
+Using the following image to illustrate the point, no matter what tab is selected in the main card, the contents of the MainHeaderGroup _controlgroup_ and ContactButtonBar _controlgroup_ are shown in all views.
 
 ![web-client-company-main-card](web-client-company-main-card.png)
 
