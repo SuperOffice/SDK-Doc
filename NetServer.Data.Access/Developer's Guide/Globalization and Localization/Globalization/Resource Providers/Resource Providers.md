@@ -1,3 +1,9 @@
+---
+uid: resource_providers
+title: Resource Providers
+date: 2018-05-08
+SortOrder: 1
+---
 # Resource Providers
 
 Resource providers are a single mechanism to ask for text and receive it in any supported culture. A text resources uses a unique key that accesses a language specific value stored in a resources file, or satellite assembly.
@@ -26,7 +32,7 @@ The CRM.web application UI is decared in SuperOffice Markup Language (SOML) conf
 
 All resource providers must be compiled in .net assemblies. SuperOffice provider a base class in the _SuperOffice.Plugins.dll_, located in the __SuperOffice.Globalization__ namespace, called __ResourceDllProviderBase__, which makes it easy to get started.
 
-Implementations must decorate the class with the  __ResourceProvider__ attribute, which NetServer will use to discover and load at runtime. The first parameter must be a name that uniquely identifies your provider. The second parameter is a priority number that can force your provider to be called before others, and thus override already-existing stuff. This is not normally a recommended practice, however the lowest priority value is used first. SuperOffice default priority values are int.MaxValue divided by 2.
+Implementations must decorate the class with the  __ResourceProvider__ attribute, which NetServer will use to discover and load at runtime. The first parameter must be a name that uniquely identifies your provider. The second parameter is a priority number that can force your provider to be called before others, and thus override already-existing stuff. This is not normally a recommended practice, however the lowest priority value is used first. SuperOffice default priority values are int.MaxValue divided by 2. If another provider that includes the same resource names with a lower priority value, such as _int.MaxValue / 3_, it takes precedence and overrides default resources supplied by SuperOffice.
 
 The constructor expects two parameters; the name of the executing assembly and the name of the resx resource files that contains the language specific text resources.
 
