@@ -12,7 +12,7 @@ This is a helper class used to encode, parse and reformat culturally sensitive d
 
 As seen in the database, the record is stored as:
 
-![MDOListItem Dialog](../Localization_files/MDOListItemDatabaseRow.PNG)
+![MDOListItem Dialog](../Localization_files/MDOListItemDatabaseRow.png)
 
 Using CultureDataFormatter
 
