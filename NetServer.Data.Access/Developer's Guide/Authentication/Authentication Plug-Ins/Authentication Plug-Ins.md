@@ -1,6 +1,10 @@
-<properties date="2016-05-11"
-SortOrder="45"
-/>
+---
+uid: netserver-authentication-overview
+title: Authentication Overview
+date: 2018-05-08
+SortOrder: 7
+---
+# Authentication Plug-Ins
 
 This is the actual source code (stripped of comments to make it fit) of the authentication pipeline in NetServer. Included here so you can see what actually happens during authentication; a block of code equals any number of hand-waving words
 
