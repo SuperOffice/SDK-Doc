@@ -36,7 +36,7 @@ The Name and Value properties are just what they sound like; the name is a uniqu
 
 France, however, has 3 lines total, with the first and second lines containing just one field element and the third line containing two field elements.
 
-![Field array elements](../Localization_files/NSLocalizedFieldArray.png)<br
+![Field array elements](../Localization_files/NSLocalizedFieldArray.png)
 
 It's important to understand some company addresses contain only a postal address while others contain both postal and street addresses.
 
@@ -57,7 +57,7 @@ NSLocalizedField[][] fields = contactAddress.GetLocalizedAddress();
 
 for (Integer i=0; i < fields.length(); i++)
 {
-  for (Integer j=0; j<fields[i].length(); j++)
+  for (Integer j=0; j < fields[i].length(); j++)
   {
     print(fields[i][j].GetName() + " " + fields[i][j].GetValue());
   }
@@ -125,7 +125,7 @@ Map GetContactAddresses(NSContactEntity contact)
   Map addr;
   for (Integer i=0; i < fields.length(); i++)
   {
-    for (Integer j=0; j<fields[i].length(); j++)
+    for (Integer j=0; j < fields[i].length(); j++)
     {
       addr.insert(fields[i][j].GetName(), fields[i][j].GetValue());
     }
@@ -183,7 +183,7 @@ Map GetPersonAddresses(NSPersonEntity person)
   Map addr;
   for (Integer i=0; i < fields.length(); i++)
   {
-    for (Integer j=0; j<fields[i].length(); j++)
+    for (Integer j=0; j < fields[i].length(); j++)
     {
       addr.insert(fields[i][j].GetName(), fields[i][j].GetValue());
       print(fields[i][j].GetName() + " " + fields[i][j].GetValue());

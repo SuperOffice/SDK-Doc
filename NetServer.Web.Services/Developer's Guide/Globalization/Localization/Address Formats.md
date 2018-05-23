@@ -111,7 +111,7 @@ using (PersonAgent pa = new PersonAgent())
 }
 ```
 
-Since web service entities are POCO objects, they do not contain methods. Below, however, I have created two extension methods to get and set the address based on a generic Dictionary<string, string>. With this structure, it becomes easy to both read and write address fields, and persist those changes back to SuperOffice CRM.
+Since web service entities are POCO objects, they do not contain methods. Below, however, I have created two extension methods to get and set the address based on a generic Dictionary\<string, string>. With this structure, it becomes easy to both read and write address fields, and persist those changes back to SuperOffice CRM.
 
 The first thing is to define a set of Constants that represent each AddressType, as well as each address field name:
 
@@ -170,7 +170,7 @@ public static class AddressFieldExtensions
   /// </summary>
   /// <param name="contactEntity">The contact entity.</param>
   /// <returns>Key/Value pair of address field name and values.</returns>
-  public static Dictionary<string, string> GetAddress(this ContactEntity contactEntity)
+  public static Dictionary\<string, string> GetAddress(this ContactEntity contactEntity)
   {
       return new AddressHelper().GetAddressAsDictionary(contactEntity.Address);
   }
