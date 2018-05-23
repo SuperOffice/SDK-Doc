@@ -1,5 +1,5 @@
 ---
-uid: address_formats
+uid: addressFormats
 title: Address Formats
 date: 2018-05-08
 SortOrder: 2
