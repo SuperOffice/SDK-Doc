@@ -6,9 +6,6 @@ SortOrder="1" DefaultTopic="yes"
 Expander SDK: Server Data .net API
 ==================================
 
-Documentation for NetServer 8.0
-(Jun 2016)
-
 The SuperOffice Server Data API provides .net programmers with direct access to the database through four different abstractions. Web services are built in a separate API on top of these classes. The [corresponding **SuperOffice.NetServer.Core** Nuget package](https://www.nuget.org/packages/SuperOffice.NetServer.Core/) contains the assemblies needed to use these APIs. The web services are documented separately.
 
 From the most abstract to the most specific, the layers inside the Data API are:

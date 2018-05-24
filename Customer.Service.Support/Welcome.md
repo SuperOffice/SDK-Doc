@@ -6,9 +6,6 @@ SortOrder="1"
 Expander SDK:Customer Service API
 =================================
 
-Documentation for Customer Service (eJournal) 8.0 SR5
-(June 2017)
-
 Customer Service and Support (aka eJournal) has a several APIs.
 
 * Business Logic - a screen designer that lets you build and extend the eJournal system.

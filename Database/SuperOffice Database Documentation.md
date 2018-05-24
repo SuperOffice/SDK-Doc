@@ -6,12 +6,10 @@ title: SuperOffice Database Documentation
 SortOrder="1" DefaultTopic="yes"
 />
 
-[![](./Images/devnet_logo_w100.gif)](http://devnet.superoffice.com/)![](./Images/expander-sdk-db.jpg)
+[![Logo](./Images/devnet_logo_w100.gif)](http://devnet.superoffice.com/)![SDKLayout](./Images/expander-sdk-db.jpg)
 
 Expander SDK: Database Documentation
 ====================================
-
-This is the documentation for the SuperOffice 8.1 database.
 
 This manual describes the internal SuperOffice database. In particular, it explains the naming-conventions that are in use and how the individual database tables are related to each other.
 
