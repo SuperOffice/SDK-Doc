@@ -38,6 +38,3 @@ The following steps are recommended to increase security:
 
 1. Deactivate the default system user in the SoAdmin client.
 2. Create a new pair of database- and system user specifically for Sales and Marketing Web and Customer Service
-
----
-

@@ -78,7 +78,7 @@ The login dialog accepts Active Directory domain username and password.
 
 This is a ”safety valve” for users that are AD authenticated, but for any reason can’t succeed the integrated login phase.
 
-The idea is that _**if**_ users see a login dialog, then their «usual» user should work, whether that is a SuperOffice or AD user; which is why NetServer will accept both types of credentials in the username+password strings. 
+The idea is that _**if**_ users see a login dialog, then their «usual» user should work, whether that is a SuperOffice or AD user; which is why NetServer will accept both types of credentials in the username+password strings.
 
 The SuperOffice user is checked first, since that happens with a known speed (database lookup). AD user lookup **can** take a long time, if your server has a difficult relationship with the domain controller (think DMZ+firewalls+complicated setups).
 
@@ -114,10 +114,8 @@ These do not involve a browser, and need to access the Web Services and get work
 
 IIS Authentication can be used together with Services, but not in a Remote setup: the identity cannot be transferred that many times.  This is an MS design parameter, not changeable.
 
-## Two Server (Remote) Configuration 
+## Two Server (Remote) Configuration
 
 ![Two Servers](../EW%202010%20Authentication_files/image006.gif)
 
 The AD User’s identity transfers from the Browser to the Web Server, but the web server cannot transfer this identity on to the app server – the web server cannot prove to the app server that it knows the user’s identity. The web server can only prove the that web-browser knows the user’s identity.
-
----
