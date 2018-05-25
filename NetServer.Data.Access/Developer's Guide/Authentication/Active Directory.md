@@ -6,9 +6,9 @@ SortOrder: 5
 ---
 # Active Directory
 
-![AD Screen](../../EW%202010%20Authentication_files/image002.jpg)
+![AD Screen](../EW%202010%20Authentication_files/image002.jpg)
 
-![Auth Types](../../EW%202010%20Authentication_files/image003.jpg)
+![Auth Types](../EW%202010%20Authentication_files/image003.jpg)
 
 The user list is already filtered against current users – if you see someone in the list, it means that AD user is not currently bound to a SuperOffice user.
 
@@ -88,7 +88,7 @@ At the most basic level, what we want to achieve is to carry a set of credential
 
 This involves the client OS, Browser, IIS on the Web Server, our application (incl login page), IIS on the Application server, and finally our application on the application server.
 
-![Identity Tranferance](../../EW%202010%20Authentication_files/image004.gif)
+![Identity Tranferance](../EW%202010%20Authentication_files/image004.gif)
 
 Transfer-of-identity is complicated and dependent on all components. For instance, IE will automatically send your domain credentials to the Intranet Zone only, while Firefox won’t at all.
 
@@ -110,13 +110,13 @@ These do not involve a browser, and need to access the Web Services and get work
 
 ## Single Server Configuration
 
-![Single Server](../../EW%202010%20Authentication_files/image005.gif)
+![Single Server](../EW%202010%20Authentication_files/image005.gif)
 
 IIS Authentication can be used together with Services, but not in a Remote setup: the identity cannot be transferred that many times.  This is an MS design parameter, not changeable.
 
 ## Two Server (Remote) Configuration 
 
-![Two Servers](../../EW%202010%20Authentication_files/image006.gif)
+![Two Servers](../EW%202010%20Authentication_files/image006.gif)
 
 The AD User’s identity transfers from the Browser to the Web Server, but the web server cannot transfer this identity on to the app server – the web server cannot prove to the app server that it knows the user’s identity. The web server can only prove the that web-browser knows the user’s identity.
 
