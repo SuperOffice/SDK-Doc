@@ -67,7 +67,7 @@ Essentially, if your user is a domain user...
 
 Otherwise, type in domain username and password into the login dialog shown.
 
-The long list of if’s is not dictated by us, but mostly by Microsoft&trade; and other browser vendors.
+The long list of if’s is not dictated by us, but mostly by Microsoft and other browser vendors.
 
 ## AD Username\/Password
 
