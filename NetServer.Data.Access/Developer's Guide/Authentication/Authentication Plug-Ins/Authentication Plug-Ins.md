@@ -1,63 +1,59 @@
 ---
-uid: netserver-authentication-overview
-title: Authentication Overview
-date: 2018-05-08
+uid: netserver-authentication-plugins
+title: Authentication Plug-Ins
+date: 2018-05-29
 SortOrder: 7
 ---
 # Authentication Plug-Ins
 
 This is the actual source code (stripped of comments to make it fit) of the authentication pipeline in NetServer. Included here so you can see what actually happens during authentication; a block of code equals any number of hand-waving words
 
-```
-            List<SecurityToken> tokenList = new
-List<SecurityToken>(Tokens);
-            ISoSecurityTokenValidator[] preValidators =
-PluginFactory.Create<ISoSecurityTokenValidator>();
-            string reason = null;
-            foreach (ISoSecurityTokenValidator validator in
-preValidators)
+```csharp
+List<SecurityToken> tokenList = new List<SecurityToken>(Tokens);
+ISoSecurityTokenValidator[] preValidators = PluginFactory.Create<ISoSecurityTokenValidator>();
+
+string reason = null;
+
+foreach (ISoSecurityTokenValidator validator in preValidators)
+{
+    if (validator.TryValidateTokens(tokenList, out reason) == TokenValidationResult.Rejected)
+                    throw new SoSessionException("Failed to validate tokens: " + reason);
+}
+
+ ISoIdentityResolver[] resolvers = PluginFactory.Create<ISoIdentityResolver>();
+ ISoIdentityValidator[] postValidators = PluginFactory.Create<ISoIdentityValidator>();
+
+List<string> reasons = new List<string>();
+
+foreach (ISoIdentityResolver resolver in resolvers)
+{
+    ISoIdentity identity = resolver.ResolveIdentity(tokenList, dbConnection);
+
+    if (identity != null)
+    {
+        bool isValid = false;
+        bool isRejected = false;
+
+        foreach (ISoIdentityValidator validator in postValidators)
+        {
+            //string reason = null;
+            switch(validator.TryValidateIdentity(tokenList, identity, dbConnection, out reason))
             {
-                if (validator.TryValidateTokens(tokenList, out
-reason) == TokenValidationResult.Rejected)
-                    throw new SoSessionException("Failed to
-validate tokens: " + reason);
+                case TokenValidationResult.Valid:
+                    isValid = true;
+                    break;
+                case TokenValidationResult.Rejected:
+                    isRejected = true;
+                    reasons.Add(reason);
+                    continue;
             }
- 
-            ISoIdentityResolver[] resolvers =
-PluginFactory.Create<ISoIdentityResolver>();
-            ISoIdentityValidator[] postValidators =
-PluginFactory.Create<ISoIdentityValidator>();
- 
-            List<string> reasons = new List<string>();
-            foreach (ISoIdentityResolver resolver in resolvers)
-            {
-                ISoIdentity identity =
-resolver.ResolveIdentity(tokenList, dbConnection);
-                if (identity != null)
-                {
-                    bool isValid = false;
-                    bool isRejected = false;
-                    foreach (ISoIdentityValidator validator in
-postValidators)
-                    {
-                        //string reason = null;
-                        switch
-(validator.TryValidateIdentity(tokenList, identity, dbConnection,
-out reason))
-                        {
-                            case TokenValidationResult.Valid:
-                                isValid = true;
-                                break;
-                            case TokenValidationResult.Rejected:
-                                isRejected = true;
-                                reasons.Add(reason);
-                                continue;
-                        }
-                    }
-                    if (isRejected)
-                        continue;
-                    if (isValid)
-                        return identity;
-                }
-            }
+        }
+
+        if (isRejected)
+            continue;
+
+        if (isValid)
+            return identity;
+    }
+}
 ```

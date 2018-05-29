@@ -88,7 +88,7 @@ At the most basic level, what we want to achieve is to carry a set of credential
 
 This involves the client OS, Browser, IIS on the Web Server, our application (incl login page), IIS on the Application server, and finally our application on the application server.
 
-![Identity Tranferance](../EW%202010%20Authentication_files/image004.gif)
+![Identity Transference](../EW%202010%20Authentication_files/image004.gif)
 
 Transfer-of-identity is complicated and dependent on all components. For instance, IE will automatically send your domain credentials to the Intranet Zone only, while Firefox won’t at all.
 

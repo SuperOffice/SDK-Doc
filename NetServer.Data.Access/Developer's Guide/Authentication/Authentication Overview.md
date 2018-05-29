@@ -67,7 +67,7 @@ However, if you specify a username and password on the command line to the _Wind
 NetServer contains several authentication plugins, for as many different ways of authenticating
 
 * SoCredentials (ticket string)
-* Username+password (superoffice user, not AD)
+* Username+password (SuperOffice user, not AD)
 * Windows/AD user, who is a person (not System, Guest etc)
 * Impersonation identity
 * Anonymous identity
@@ -87,6 +87,6 @@ Each plugin looks for credentials it understands.
 
 ## Post Validator
 
-Each plugin can have a post-validator. Post-validators are called after a plugin resolves an identity and can block login if specific conditions are not met. This can be used to block based on any available knowledge.
+Each plugin can have a post-validator. Post-validator's are called after a plugin resolves an identity and can block login if specific conditions are not met. This can be used to block based on any available knowledge.
 
 The post-validator is interesting, for instance, where a company decided to have a policy stating that certain users are only allowed to log on during normal working hours. The plugin would then take the resolved identity, look at the clock and then return whether the user is able to login or not.
