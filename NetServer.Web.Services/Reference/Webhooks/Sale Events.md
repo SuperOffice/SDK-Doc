@@ -5,6 +5,9 @@ These webhook events are fired when sale rows are changed:
 * `sale.created`
 * `sale.changed`
 * `sale.deleted`
+* `sale.completed`
+* `sale.lost`
+* `sale.sold`
 
 # Webhook Callback Examples
 
