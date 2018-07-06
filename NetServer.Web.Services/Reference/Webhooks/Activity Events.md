@@ -8,6 +8,8 @@ These events are fired when appointment/document rows are changed:
 
 # Webhook Callback Examples
 
+Activity.created
+
 ```json
 Content-Type: application/json; charset=utf-8
 User-Agent: NetServer-Webhook/8.8.6684.1719
@@ -75,6 +77,8 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 }
 ```
 
+Activity.changed
+
 ```json
 {
   "EventId": "e87ac619-c864-4881-89eb-07ca5521ee2c",
@@ -96,6 +100,8 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 }
 ```
 
+Activity.deleted
+
 ```json
 {
   "EventId": "e87ac619-c864-4881-89eb-07ca5521ee2c",
@@ -110,3 +116,5 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 }
 ```
 
+-----------------
+See also: @webhook_overview

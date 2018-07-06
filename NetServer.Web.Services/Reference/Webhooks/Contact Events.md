@@ -8,6 +8,8 @@ These webhook events are fired when contact rows are changed:
 
 # Webhook Callback Examples
 
+Contact.Created
+
 ```json
 Content-Type: application/json; charset=utf-8
 User-Agent: NetServer-Webhook/8.8.6684.1719
@@ -66,6 +68,8 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 }
 ```
 
+Contact.changed
+
 ```json
 {
   "EventId": "8337ae4a-1dd6-40fd-8dc7-a050664a0af7",
@@ -87,6 +91,7 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 }
 ```
 
+Contact.Deleted
 
 ```json
 {
@@ -103,4 +108,4 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 ```
 
 -----------------
-See also: @webhook_overview 
+See also: @webhook_overview

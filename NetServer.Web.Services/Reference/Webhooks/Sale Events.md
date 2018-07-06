@@ -5,11 +5,13 @@ These webhook events are fired when sale rows are changed:
 * `sale.created`
 * `sale.changed`
 * `sale.deleted`
-* `sale.completed`
-* `sale.lost`
-* `sale.sold`
+* `sale.sold` - when sale status is changed to 'sold'
+* `sale.lost` - when sale status is changed to 'lost'
+* `sale.completed` - when sale.completed is changed to 'completed'
 
 # Webhook Callback Examples
+
+Sale.Created:
 
 ```json
 Content-Type: application/json; charset=utf-8
@@ -74,6 +76,7 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 }
 ```
 
+Sale.Changed:
 
 ```json
 {
@@ -99,18 +102,84 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 }
 ```
 
+Sale.Deleted:
 
 ```json
 {
-    "EventId":"88f91933-edce-4c1a-8ded-ade8e2f72434",
-    "Timestamp":"2018-04-05T08:28:01.5732501Z",
-    "Changes":[],
-    "Event":"sale.deleted",
-    "PrimaryKey":18,
-    "Entity":"sale",
-    "ContextIdentifier":"Cust54321",
-    "ChangedByAssociateId":5,
-    "WebhookName":"Name you provided"
+  "EventId":"88f91933-edce-4c1a-8ded-ade8e2f72434",
+  "Timestamp":"2018-04-05T08:28:01.5732501Z",
+  "Changes":[],
+  "Event":"sale.deleted",
+  "PrimaryKey":18,
+  "Entity":"sale",
+  "ContextIdentifier":"Cust54321",
+  "ChangedByAssociateId":5,
+  "WebhookName":"Name you provided"
 }
 ```
 
+Sale.Sold:
+
+```json
+{
+  "EventId":"88f91933-edce-4c1a-8ded-ade8e2f72434",
+  "Timestamp":"2018-04-05T08:28:01.5732501Z",
+  "Changes":[
+    "sale_id",
+    "status",
+    "updated",
+    "updated_associate_id"
+  ],
+  "Event":"sale.sold",
+  "PrimaryKey":18,
+  "Entity":"sale",
+  "ContextIdentifier":"Cust54321",
+  "ChangedByAssociateId":5,
+  "WebhookName":"Name you provided"
+}
+```
+
+Sale.Lost:
+
+```json
+{
+  "EventId":"88f91933-edce-4c1a-8ded-ade8e2f72434",
+  "Timestamp":"2018-04-05T08:28:01.5732501Z",
+  "Changes":[
+    "sale_id",
+    "status",
+    "updated",
+    "updated_associate_id"
+  ],
+  "Event":"sale.lost",
+  "PrimaryKey":18,
+  "Entity":"sale",
+  "ContextIdentifier":"Cust54321",
+  "ChangedByAssociateId":5,
+  "WebhookName":"Name you provided"
+}
+```
+
+Sale.Completed:
+
+```json
+{
+  "EventId":"88f91933-edce-4c1a-8ded-ade8e2f72434",
+  "Timestamp":"2018-04-05T08:28:01.5732501Z",
+  "Changes":[
+    "sale_id",
+    "done",
+    "updated",
+    "updated_associate_id"
+  ],
+  "Event":"sale.completed",
+  "PrimaryKey":18,
+  "Entity":"sale",
+  "ContextIdentifier":"Cust54321",
+  "ChangedByAssociateId":5,
+  "WebhookName":"Name you provided"
+}
+```
+
+-----------------
+See also: @webhook_overview

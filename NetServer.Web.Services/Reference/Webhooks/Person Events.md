@@ -5,8 +5,12 @@ These webhook events are fired when person rows are changed:
 * `person.created`
 * `person.changed`
 * `person.deleted`
+* `person.consented` - when a consent is added or changed.
+* `person.unconsented` - when a consent is removed or marked as withdrawn.
 
 # Webhook Callback Examples
+
+Person.created
 
 ```json
 Content-Type: application/json; charset=utf-8
@@ -83,6 +87,7 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 }
 ```
 
+Person.changed
 
 ```json
 {
@@ -107,6 +112,7 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 }
 ```
 
+Person.deleted
 
 ```json
 {
@@ -121,3 +127,45 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
     "WebhookName":"Name you provided"
 }
 ```
+
+Person.consented
+
+```json
+{
+  "EventId": "576086e3-5261-426b-a84b-26ca7f5b65e8",
+  "Timestamp": "2018-04-24T08:01:15.8506935Z",
+  "Changes": [
+    "consentperson_id",
+    "comment",
+    "updated_associate_id",
+    "consentSource_id",
+    "updated",
+    "legalBase_id"
+  ],
+  "Event": "person.consented",
+  "PrimaryKey": 18,
+  "Entity": "person",
+  "ContextIdentifier": "Cust1234",
+  "ChangedByAssociateId": 316,
+  "WebhookName":"Name you provided"
+}
+```
+
+Person.unconsented
+
+```json
+{
+    "EventId":"88f91933-edce-4c1a-8ded-ade8e2f72434",
+    "Timestamp":"2018-04-05T08:28:01.5732501Z",
+    "Changes":[],
+    "Event":"person.unconsented",
+    "PrimaryKey":18,
+    "Entity":"person",
+    "ContextIdentifier":"Cust54321",
+    "ChangedByAssociateId":5,
+    "WebhookName":"Name you provided"
+}
+```
+
+-----------------
+See also: @webhook_overview
