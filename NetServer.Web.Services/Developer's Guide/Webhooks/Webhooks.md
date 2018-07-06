@@ -60,13 +60,13 @@ Available event entities are: activity, associate, contact, person, project, pro
 
 | Create Events           | Changed Events          | Deleted Events          |Other Events        |
 |-------------------------|-------------------------|-------------------------|-------------------------|
-| activity.create         | activity.changed        | activity.deleted        |                         |
+| activity.created        | activity.changed        | activity.deleted        |                         |
 | associate.created       | associate.changed       | associate.deleted       |                         |
 | contact.created         | contact.changed         | contact.deleted         |                         |
 | document.created        | document.changed        | document.deleted        |document.edited*          |
 | person.created          | person.changed          | person.deleted          | person.consented*<br>person.unconsented* |
-| project.created         | project.changed         | projectmember.deleted   |                         |
-| projectmember.created   | projectmember.changed   | projectmember.deleted   | activity.deleted        |
+| project.created         | project.changed         | project.deleted         |                         |
+| projectmember.created   | projectmember.changed   | projectmember.deleted   |                         |
 | sale.created            | sale.changed            | sale.deleted            | sale.completed*<br>sale.lost*<br>sale.sold* |
 | salestakeholder.created | salestakeholder.changed | salestakeholder.deleted | activity.deleted        |
 
