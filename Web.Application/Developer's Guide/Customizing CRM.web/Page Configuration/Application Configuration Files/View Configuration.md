@@ -8,7 +8,7 @@ SortOrder: 5
 
 A view configuration file define the UI structure of a view and contains the layout of all controls in the view.
 
-![PageFramework](..\web-client-pagebuilder-framework2.png)
+![PageFramework](../web-client-pagebuilder-framework2.png)
 
 ```xml
 <!-- SoExampleView.config -->

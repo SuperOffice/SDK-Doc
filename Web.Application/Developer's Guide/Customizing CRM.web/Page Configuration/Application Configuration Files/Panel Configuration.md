@@ -12,7 +12,7 @@ Panels represent the main containers of a page and are the first elements to sup
 
 Each main entity page has four panels that define the upper menus, left navigator buttons, entity details and lower action buttons.
 
-![PageFramework](..\web-client-pagebuilder-framework2.png)
+![PageFramework](../web-client-pagebuilder-framework2.png)
 
 ```xml
 <!-- SoExamplePanel.config -->
