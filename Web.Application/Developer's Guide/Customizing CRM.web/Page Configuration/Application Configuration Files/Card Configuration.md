@@ -10,7 +10,7 @@ A card configuration file define the UI structure of a card and contains the lay
 
 Cards are placeholders inside panels and use layout positioning, and are responsible for invoking relevant datahandlers for save and delete actions.
 
-![PageFramework](\..\web-client-pagebuilder-framework2.png)
+![PageFramework](../web-client-pagebuilder-framework2.png)
 
 ```xml
 <!-- SoExampleCard.config -->
