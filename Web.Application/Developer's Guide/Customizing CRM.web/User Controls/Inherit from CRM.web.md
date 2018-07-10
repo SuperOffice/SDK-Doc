@@ -8,11 +8,12 @@ SuperOffice.CRM.Web.UI.Controls.UserControlBase. This will give you access to a 
 
 The next thing we want to do is to override the Initialize method. This method takes in an XML node as an argument, and will contain the settings you have specified in the &lt;config&gt; section of the configuration file for the page in which the user control resides.
 
+```csharp
 public override void Initialize(System.Xml.XmlNode config, string id)
-
-    {
+{
     base.Initialize(config, id);
-    }
+}
+```
 
 In the Initialize method you can e.g. show or hide parts of your user control, or change the set of columns to be retrieved, or whatever you want. This lets you use the same user control for different purposes, when e.g. getting data from the same tables, but with slightly different restrictions.
 

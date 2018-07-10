@@ -4,8 +4,6 @@ title: Web Client Customizations
 date: 2018-04-17
 SortOrder: 1
 ---
-# Web Client Customizations
-
 Customizing the web client is all made possible by modifying application XML SuperOffice Markup Language (SOML) files. To begin, it's as easy as navigating to the applications App_Data folder and opening one of the .config files that requires customizing. From click-actions to UI windows there are virtually limitless client customization capabilities.
 
 With regards to modifying existing application files, there are downsides to this approach. Product upgrades, for example, replaces all existing files and thereby wipe away all direct customizations.
@@ -33,10 +31,11 @@ To begin, add a **CustomPath** directive in the ClientConfigurationProvider elem
     <ClientConfigurationProvider>
 
      <!-- add path to customization files -->
-      <add key ="CustomPath_Common" value ="C:\WebClient\Common" />
-      <add key ="CustomPath_Feature" value ="C:\WebFeature\MyFiles" />
-      <add key ="CustomPath_ThirdParty" value ="C:\Thirdparty\MyFiles" />
-
+      <add key="CustomPath_Common"      value ="C:\WebClient\Common" />
+      <add key="CustomPath_Feature"     value ="C:\WebFeature\MyFiles" />
+      <add key="CustomPath_ThirdParty"  value ="C:\Thirdparty\MyFiles" />
+      <add key="CacheConfigurations"    value="false">
+      <add key="ValidateConfigurations" value="true">
     </ClientConfigurationProvider>
     ...
 <SuperOffice>
@@ -248,7 +247,7 @@ Added in SuperOffice 8.1, xpath is a new approach to add page elements. This app
 _This capability only applies to the contents of UI pages and dialogs and **is not applicable to system files**._
 
 ```xml
-<!-- Example: <filename>.merge                     
+<!-- Example: <filename>.merge
   Add a button to all pages that uses the navigationpanel fragment
  -->
 <pages>
