@@ -8,6 +8,8 @@ These events are fired when associate rows are changed:
 
 # Webhook Callback Examples
 
+Associate.created
+
 ```json
 Content-Type: application/json; charset=utf-8
 User-Agent: NetServer-Webhook/8.8.6684.1719
@@ -51,6 +53,8 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 }
 ```
 
+Associate.changed
+
 ```json
 {
   "EventId": "3e22506b-839a-4453-af17-634d6a626643",
@@ -69,6 +73,8 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
   "WebhookName": "Name you provided"
 }
 ```
+
+Associate.deleted
 
 ```json
 {

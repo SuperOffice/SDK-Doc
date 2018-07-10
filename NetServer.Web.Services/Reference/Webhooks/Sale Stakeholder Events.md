@@ -8,6 +8,8 @@ These webhook events are fired when salestakeholder rows are changed:
 
 # Webhook Callback Examples
 
+SaleStakeholder.created
+
 ```json
 Content-Type: application/json; charset=utf-8
 User-Agent: NetServer-Webhook/8.8.6684.1719
@@ -42,6 +44,7 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 
 ```
 
+SaleStakeholder.changed
 
 ```json
 {
@@ -64,6 +67,7 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 }
 ```
 
+SaleStakeholder.deleted
 
 ```json
 {
@@ -78,3 +82,6 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
     "WebhookName":"Name you provided"
 }
 ```
+
+-----------------
+See also: @webhook_overview 
