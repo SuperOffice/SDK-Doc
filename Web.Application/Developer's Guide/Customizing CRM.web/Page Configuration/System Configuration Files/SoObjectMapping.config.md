@@ -43,7 +43,7 @@ Looking at the SoNavigatorPanel.config file, the contents of which define all th
 
 ## Implicit Object Mapping
 
-An alternative approach to adding a type in the SoObjectMapping.config file is to in code decorate the class with the SoWebObject attribute, and inherit the IWebObject interface. The IWebObject doesn't contain any methods that must be implemeted, it's only for discoverability purposes by the plugin system. The SoWebObject parameter becomes the mappingname is used to reference the control in configuration files.
+An alternative approach to adding a type in the SoObjectMapping.config file is to in code decorate the class with the **SoWebObject** attribute, and inherit the **IWebObject** interface. The _IWebObject_ doesn't contain any methods that must be implemented, it's only for discoverability purposes by the plugin system. The _SoWebObject_ parameter becomes the mappingname is used to reference the control in configuration files.
 
 ``` csharp
 [SoWebObject("SoDialogSimpleCard")]
@@ -52,3 +52,22 @@ public class DialogSimpleCard :Card, IWebObject
     ...
 }
 ```
+
+### Applicable Implicit Types
+
+|Type | Description |
+|-----|-------------|
+|AjaxMethods| Server-side web methods invoked by AjaxMethodDispatcher.CallSync\|CallAsync.|
+|Control| AspNet web controls. |
+|IArchiveAction|Runs when an archive control is selected|
+|IArchiveControlDataFetcher|Use by SoArchive Control to invoke archive providers and return formatted results.|
+|ICard|A layout control inside a panel.|
+|IControlGroup|A layout control inside a view.|
+|IDataHandler|Acts as a controller that loads data, populates view models and saves changes. |
+|IFilter | User to remove items from display output. Filterbase and CustomCheckFilter. |
+|IMDOControlDataFetcher|Used by MDO Control to invoke MDO providers and return formatted results.|
+|IPanel|A layout control inside a page.|
+|IValidation|Used to validate a controls' state. |
+|IView|A layout control inside a card.|
+|IViewStateProvider| Used to get and set currents. |
+|UserControl| AspNet user controls.|
