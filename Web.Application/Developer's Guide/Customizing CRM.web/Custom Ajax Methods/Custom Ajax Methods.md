@@ -125,11 +125,11 @@ Since we wanted to create a follow-up appointment for a sale, we'll add a new bu
 
 Here is the declaration of the button in SoSalePage.config:
 
-```xml
+``` xml
 <control id="DevNetDemoButton" type="SoButton">
     <caption>Create Follow-Up</caption>
     <config>
-        <onclick>javascript:var appId = AjaxMethodDispatcher.CallSync('CustomizingSIXwebPart6.AjaxDemo.CreateFollowUp'); if (appId > 0) { Dialog.open('appointment','appointment\[dialog=stop\]?appointment\_id='+ appId,''); } else { Dialog.Information('Error', 'Failed to create new appointment', 'error'); }</onclick>
+        <onclick>javascript:var appId = AjaxMethodDispatcher.CallSync('CustomizingSIXwebPart6.AjaxDemo.CreateFollowUp'); if (appId > 0) { Dialog.open('appointment','appointment[dialog=stop]?appointment_id='+ appId,''); } else { Dialog.Information('Error', 'Failed to create new appointment', 'error'); }</onclick>
         <width>100</width>
     </config>
 </control>
