@@ -109,9 +109,15 @@ Like with all objects and control you want to add to CRM web, you will have to r
 
 The object type is _AjaxMethod_ and the MappingName, AssemblyName and ObjectName properties refer to the name you want to reference the object in CRM web, the name of the assembly (DLL), and the fully qualified name of the class, respectively.
 
-You also need to set the xusing\_ajaxnet property to true.
+You also need to set the xusing_ajaxnet property to true.
 
-<object type="AjaxMethod" mappingname="AjaxDemo" assemblyname="CustomizingSIXwebPart6" objectname="CustomizingSIXwebPart6.AjaxDemo" xusing\_ajaxnet="true"></object>
+```xml
+<object type="AjaxMethod"
+    mappingname="AjaxDemo"
+    assemblyname="CustomizingSIXwebPart6"
+    objectname="CustomizingSIXwebPart6.AjaxDemo"
+    xusing_ajaxnet="true"></object>
+```
 
 Alternatively, you can use implicit object mapping by decorating the Ajax class with the SoWebObject attribute, and inheriting the IWebObject interface. Read more about [Implicit Object Mapping](../Page%20Configuration/System%20Configuration%20Files/SoObjectMapping.config.md) in the Page Configuration section.
 
