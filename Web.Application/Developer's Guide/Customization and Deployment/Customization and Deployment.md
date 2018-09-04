@@ -34,8 +34,8 @@ To begin, add a **CustomPath** directive in the ClientConfigurationProvider elem
       <add key="CustomPath_Common"      value ="C:\WebClient\Common" />
       <add key="CustomPath_Feature"     value ="C:\WebFeature\MyFiles" />
       <add key="CustomPath_ThirdParty"  value ="C:\Thirdparty\MyFiles" />
-      <add key="CacheConfigurations"    value="false">
-      <add key="ValidateConfigurations" value="true">
+      <add key="CacheConfigurations"    value="false" />
+      <add key="ValidateConfigurations" value="true" />
     </ClientConfigurationProvider>
     ...
 <SuperOffice>
