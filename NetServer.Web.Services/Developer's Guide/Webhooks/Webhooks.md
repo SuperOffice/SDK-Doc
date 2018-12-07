@@ -357,6 +357,36 @@ function isValidWebHook(signature, secret, req, buf) {
 
 ```
 
+## Webhook Execution Context Requirements
+
+Webhook notifications execute in the context of the running application. When a user makes changes in the web client, such as updating a contact on the contact card, all changes occur within the context of the running web application. As long as webhooks is enabled in the web.config file, subscribers to the person.changed event will be notified that a person has been updated.
+
+```xml
+
+<Webhooks>
+    <add key="EnableWebhooks" value="true" />
+</Webhooks>
+
+```
+
+Actions performed by BulkUpdate, which is generally configured to execute out of process, will not likely send out notifications unless the BulkUpdateServer app.config file has enabled webhooks too.
+
+Alternatively, the web application can be configured to execute batch tasks in process.
+
+```xml
+
+<BatchService>
+  <add key="RunTasksInProcess" value="true" />
+</BatchService>
+
+```
+
+More information about [webhook configuration](https://community.superoffice.com/documentation/SDK/SO.NetServer.Data.Access/html/netserver_configuration_webhooks.htm).
+
+More information about [BatchService configuration](https://community.superoffice.com/documentation/SDK/SO.NetServer.Data.Access/html/netserver_configuration_batch_service.htm).
+
+More information about [Custom Proxy configuration](https://community.superoffice.com/documentation/SDK/SO.NetServer.Data.Access/html/netserver_configuration_customproxy.htm).
+
 ## Conclusion
 
 No longer must integrations poll SuperOffice and ask for the latest changes. SuperOffice Webhooks actively send messages to subscribers when events occur in a SuperOffice, and provide an opportunity for applications to react accordingly.
