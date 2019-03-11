@@ -7,6 +7,19 @@ You will need to provide some login information in order to use the SuperOffice 
 * SOTICKET authentication. Pass the SuperOffice ticket (7T:abc123==) without any encoding.
 * BEARER authentication. Online only. Pass along an access token (7A:abc123==) from SuperId.
 
+| Auth Type | Example  | On-site | Online |
+|-----------|----------|---------|--------|
+| No header |          |   x     |    x   |
+| Basic     | YWrtMdo= |   x     |        |
+| SOTicket  | 7T:xyz123abc== | x |    x   |
+| Bearer    | 8A:xyz123abc== |   |    x   |
+
+Basic is not allowed in **Online**, since all usernames and passwords must flow through SuperId to get a bearer access token.
+
+No header request means that you either:
+
+* have [IIS configured to handle identity](Integrated%20with%20Active%20Directory.md) so that you can log in with your Active Directory, or
+* that you send [an `X-XSRF-TOKEN` header](Re-use%20existing%20session.md) to prove that you have access to a logged in session.
 
 
 
