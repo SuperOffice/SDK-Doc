@@ -69,6 +69,7 @@ Available event entities are: activity, associate, contact, person, project, pro
 | projectmember.created   | projectmember.changed   | projectmember.deleted   |                         |
 | sale.created            | sale.changed            | sale.deleted            | sale.completed*<br>sale.lost*<br>sale.sold* |
 | salestakeholder.created | salestakeholder.changed | salestakeholder.deleted | activity.deleted        |
+| ticket.created          | ticket.changed          |                         |                         |
 
 ## Webhook Subscription
 
