@@ -6,11 +6,7 @@ Plugins are created using a Factory class. The Factory class creates the Plugin 
 
 A sentry plugin works out what information a particular user is allowed to see, and what the user can do with the information. A sentry plugin may rewrite the OSQL queries in order to get more information so it can make its decision.
 
- 
-
 1. autolist
-
- 
 
 A sentry plugin must look at the information available through the sentry’s lookup objects, and use these values to figure out whether the current user can see, edit or delete the data. In this way a sentry plugin should be stateless. The plugin may be called many times with different rows of information.
 
