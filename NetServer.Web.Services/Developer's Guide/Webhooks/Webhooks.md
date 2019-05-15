@@ -4,10 +4,10 @@ title: SuperOffice Webhooks Overview
 ---
 # SuperOffice Webhooks API
 
-| Platform | Service Version |
-|----------|---------|
-|Online    | v8.5    |
-|Onsite    | v8.5    |
+| Platform | Service Version | client / api|
+|----------|---------|---------|
+|Online    | v8.5    | web only, web services |
+|Onsite    | v8.5    | web only, NetServer core & services |
 
 ---
 
