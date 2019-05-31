@@ -28,7 +28,7 @@ The data configuration section contains four subsections for managing the databa
     <add key="DynamicLoadedDataBaseDriverPolicy" value="C:\Program Files\IBM\SQLLIB\BIN\netf11\policy.8.1.IBM.Data.DB2.dll" />
   </Database>
   <Explicit>
-    <add key="ExternalPersonAllowed" value="True" />
+    <add key="PartnerAllowed" value="True" />
     <add key="EmployeeAllowed" value="True" />
     <add key="SystemAllowed" value="True" />
     <add key="DBUser" value="" />
