@@ -31,18 +31,12 @@ The data configuration section contains four subsections for managing the databa
     <add key="PartnerAllowed" value="True" />
     <add key="EmployeeAllowed" value="True" />
     <add key="SystemAllowed" value="True" />
+    <add key="AnonymousAllowed" value="True" /> <!--  Added v8.5 -->
     <add key="DBUser" value="" />
     <add key="DBPassword" value="" />
     <add key="CommonDBConnection" value="True" />
   </Explicit>
-  <ImplicitAnonymous>
-    <add key="Allowed" value="False" />
-    <add key="DBUser" value="" />
-    <add key="DBPassword" value="" />
-    <add key="CommonDBConnection" value="True" />
-    <add key="SoUser" value="" />
-    <add key="SoPassword" value="" />
-  </ImplicitAnonymous>
+  <!-- <ImplicitAnonymous /> removed in v 8.5 -->
   <Session>
     <add key="Mode" value="Thread" />
     <add key="ReauthenticateOnDeserialization" value="false" />
@@ -79,21 +73,10 @@ Configuration section for authentication behavior when users are explicitly auth
 |------------|-|
 |PartnerAllowed|Is partner access allowed.|
 |EmployeeAllowed|Is employee access allowed. The default value is true.|
+|AnonymousAllowed|Is anonymous user access allowed. The default value is false.|
 |DBUser|Database user when running on behalf of explicitly authenticated users.|
 |DBPassword|Database user password.|
 |CommonDBConnection|Use the same connection string for all users, applying the common User and Password from this section, vs. using the one provided elsewhere. The default value is true.|
-
-### ImplicitAnonymous
-
-Configuration section for authentication behavior for users/connections that do not explicitly authenticate themselves. Informs NetServer of the database credentials that are used to login to the database when no user has explicitly authenticated. It also specifies the credentials for which Anonymous user to use to login to the database. To make use of this section, you must have the SuperOffice license key called Expander Key for Collaboration. This key enables the Anonymous user section of the SuperOffice application.
-
-|Name|Description|
-|------------|-|
-|Allowed|Is anonymous access allowed. Default value is false.|
-|DBUser|Database user when running on behalf of anonymous users.|
-|DBPass|Database user password when running on behalf of anonymous users.|
-|SoUser|SuperOffice user when running on behalf of anonymous users.|
-|SoPass|SuperOffice user password when running on behalf of anonymous users.|
 
 ### Session
 
