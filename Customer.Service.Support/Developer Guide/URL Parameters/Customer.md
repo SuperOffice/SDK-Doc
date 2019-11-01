@@ -8,20 +8,14 @@ Customer
 
 | Action      | Parameters                                                               |
 |-------------|--------------------------------------------------------------------------|
-|             | Parameters global for all actions                                        
-               custSessionKey                                                            
-               noCookies                                                                 
-               withFrame=1 | 0                                                           
-               templateFolder                                                            |
+|             | Parameters global for all actions<br>custSessionKey<br>noCookies<br>withFrame=1 / 0<br> templateFolder<br>|
 | register    |                                                                          |
 | newTicket   |                                                                          |
 | listTicket  | ticketId                                                                 |
-| listTickets | pageSize - The number of tickets pr page                                 
-               / page                                                                    |
+| listTickets | pageSize - The number of tickets per page                                |
 | addMessage  | ticketId                                                                 |
 | changeCust  |                                                                          |
-| safeParse   | includeId - the id string of the script                                  
-               key - The authentication key. This must be the same as set in the script  |
+| safeParse   | includeId - the id string of the script<br>key - The authentication key. This must be the same as set in the script |
 | specialForm | template - the name of the template to use.                              |
 
 Example
