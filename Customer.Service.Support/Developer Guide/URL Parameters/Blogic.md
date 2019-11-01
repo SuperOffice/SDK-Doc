@@ -8,8 +8,7 @@ Blogic
 
 | Action               | Parameters                                   |
 |----------------------|----------------------------------------------|
-| doScript             | id - The id of the script                    
-                        includeId - The includeId of the script       |
+| doScript             | id - The id of the script<br>includeId - The includeId of the script       |
 | editScript           | Same parameters as doScript                  |
 | doScreenDefintion    | Same parameters as ticket doScreenDefinition |
 | editScreenDefinition | Same parameters as doScreenDefinition        |
