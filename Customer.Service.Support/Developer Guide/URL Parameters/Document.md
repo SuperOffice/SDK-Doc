@@ -9,14 +9,10 @@ Document
 | Action         | Parameters |
 |----------------|------------|
 | find           |            |
-| listFolders    | focus      
-                  expandId    |
-| editDocument   | documentId 
-                  folderId    |
-| editKbCategory | parentId   
-                  id          |
-| editKbEntry    | categoryId 
-                  id          |
+| listFolders    | focus<br>expandId |
+| editDocument   | documentId<br>folderId |
+| editKbCategory | parentId<br>id |
+| editKbEntry    | categoryId<br>id |
 | viewKbEntry    | id         |
 
 Example
