@@ -13,4 +13,4 @@ To view/download an individual WSDLs, first select a version below to view the a
 
 To download all versions of all endpoint wsdl files, click the link below:
 
-[Download WSDL.zip](~/WSDL.zip)
+[Download WSDL.zip](../../WSDL.zip)
