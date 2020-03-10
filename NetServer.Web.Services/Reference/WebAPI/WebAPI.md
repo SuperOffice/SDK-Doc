@@ -11,7 +11,9 @@ returns a JSON object representing Contact 123.
 `POST api/v1/List/Category/Items`
 
 adds a new list item to the Category list.
-  ​
+
+[Download Web API Swagger File](https://community.superoffice.com/documentation/sdk/SO.NetServer.Web.Services/swagger/Swagger-v1-REST.json)
+
 
 # [Agents Web API](Agents/Agents.md) 
 
@@ -26,7 +28,7 @@ returns a JSON object representing Contact 123.
 
 adds a new list item to the Category list (assuming the list item entity parameter has been properly initialized).
 
-
+[Download Agent Swagger file](https://community.superoffice.com/documentation/sdk/SO.NetServer.Web.Services/swagger/Swagger-v1-Agents.json)
 
 The **REST** API is not as complete as the **Agents** API, but it should cover the most common use cases, and be easier to use and navigate.
 
@@ -36,3 +38,4 @@ Registering a webhook is covered in the [Webhook REST API](Rest/Webhook/Webhook.
 detail in the @webhook_overview.
 
 Webhook callback events are described in a separate section: @webhooks_ref
+
