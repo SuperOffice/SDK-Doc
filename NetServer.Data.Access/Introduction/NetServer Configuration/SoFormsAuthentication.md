@@ -27,6 +27,6 @@ The SoFormsAuthentication group contains configuration settings used to control 
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |IgnoreList|List of pages and folders the SoFormsAuthentication should ignore.|
 |Pages|List of pages. Should contain a dictionary with the following keys; LoginUrl and DefaultUrl, and optional LogoutUrl and PocketCrmLoginPage.|

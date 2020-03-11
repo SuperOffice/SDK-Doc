@@ -14,5 +14,5 @@ Configuration values related to TimeZone.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |ServiceUrl|URL for the TimeZone service.|

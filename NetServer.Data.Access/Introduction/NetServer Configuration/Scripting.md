@@ -16,7 +16,7 @@ Configuration values related to NetServer Service Scripting.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |ScriptPath|UNC path to directory containing .cs, .vb or .dll script files.|
 |EnableScripting|Determines whether scripts will be invoked when web service methods are called. Default value is true.|
 |TimeoutLimit|Number of milliseconds before a script times out. Default value is 20000.|

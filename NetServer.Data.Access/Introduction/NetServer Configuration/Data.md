@@ -50,7 +50,7 @@ The data configuration section contains four subsections for managing the databa
 Configuration values for database connectivity,  defines the location and database-vendor specific settings.
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |DatabaseMajor|Major name of database provider. Options are: MSSQL, Oracle, Sybase and DB2 (legacy only).|
 |DatabaseMinor|Version number of Database.|
 |Server|The server name where the database is located.|
@@ -70,7 +70,7 @@ Configuration values for database connectivity,  defines the location and databa
 Configuration section for authentication behavior when users are explicitly authenticated, typically by calling SoSession.Authenticate or the corresponding WCF service.
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |PartnerAllowed|Is partner access allowed.|
 |EmployeeAllowed|Is employee access allowed. The default value is true.|
 |AnonymousAllowed|Is anonymous user access allowed. The default value is false.|
@@ -83,7 +83,7 @@ Configuration section for authentication behavior when users are explicitly auth
  This section governs session handling - what is the scope/storage of the session state, etc
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |Mode|The mode of the session: Thread, Context, HttpContext, Process; maps to a class name that provides session storage.|
 |ReauthenticateOnDeserialization|A full re-authentication is carried out each time the session is de-serialized (e.g. from the session server).|
 

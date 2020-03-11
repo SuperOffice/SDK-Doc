@@ -17,7 +17,7 @@ Configuration settings used to manage SuperOffice Web Services.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |DefaultMode|Mode used for Service calls. Options are Local or Remote. Default value is Local.|
 |SwitchDefault|If Default mode is unsuccessful, default mode for the switch. Default value is Remote.|
 |SwitchFailover|Timeout before failover in seconds. Default value is 60.|

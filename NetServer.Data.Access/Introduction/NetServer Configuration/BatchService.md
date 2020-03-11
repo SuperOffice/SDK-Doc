@@ -18,7 +18,7 @@ Configuration values for the Windows batch task service (SoBatchService)
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |ServiceName|Returns the name of the service. This name is the one used to install the service under the service control manager in windows. If you want more than one of this service installed on the same machine, this setting must be unique for each service.|
 |MaxTasks|Maximum number of tasks to spawn simultaneously.|
 |CPUThreshold|CPU Threshold value in percentage. This value is used to check the computer's cpu load when spawning a new task. If the total cpu usage is above this value, no more tasks will be started even though max tasks has not been reached.|

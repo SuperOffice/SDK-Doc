@@ -15,7 +15,7 @@ Configure values related to webhooks - events broadcast to remote servers.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |EnableWebhooks|Broadcast events to remote servers. Default value is false.|
 |RequireHttps|Require webhooks target URLs use HTTPS protocol. Should only be turned off during development. Default value is true.|
 |ValidateHttps|Require valid public HTTPS certificates. Self-signed or expired certs on webhook target URLs are refused. Should only be turned off during development. Default value is true.|

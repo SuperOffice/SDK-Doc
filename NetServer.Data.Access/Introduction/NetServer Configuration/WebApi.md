@@ -17,7 +17,7 @@ Configuration values related to the WebApi web services.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |AuthorizeWithUsername|Allow WebAPI to authorize with username + password. Default value is true.|
 |AuthorizeWithTicket|Allow WebAPI to authorize with session tickets. Default value is true.|
 |AuthorizeWithImplicit|Allow WebAPI to authorize with implicit identity from IIS. Default value is true.|

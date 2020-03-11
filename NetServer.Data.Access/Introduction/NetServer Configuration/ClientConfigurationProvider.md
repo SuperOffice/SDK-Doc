@@ -15,7 +15,7 @@ Configuration for the Web Client configuration data provider.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |FilePath|File path for standard .config files.|
 |CacheConfigurations|Should GUI config data be cached?|
 |CacheUserPreferences|Should GUI config data be cached? Default value is true.|

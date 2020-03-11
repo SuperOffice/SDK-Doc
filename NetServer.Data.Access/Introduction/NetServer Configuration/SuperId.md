@@ -18,7 +18,7 @@ Configuration values for accessing SuperId.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |Url|Url to SuperId.|
 |TenantKey|A shared secret between SuperId and NetServer.|
 |TenantId|TenantId in SuperId.|

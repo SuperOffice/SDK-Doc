@@ -20,7 +20,7 @@ Mail component configuration options.
 ### Component
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |Reader|The Key used for mail reader.|
 |Sender|The Key used for mail sender.|
 |NumberOfDaysToDownload|Initial number of days to fetch mail for.|

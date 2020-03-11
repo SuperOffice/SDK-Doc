@@ -15,7 +15,7 @@ Configuration values related to client configuration, extension of ClientConfigu
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |ApplicationName|Web client application name - used to resolve page config files. Default value is WebClient. Do not change this value.|
 |ApplicationInstance|Web client instance name - used to resolve page config files. Default value is Web. Do not change this value.|
 |HelpFilesBaseUrl|Override the help files location - to support local deployments. |

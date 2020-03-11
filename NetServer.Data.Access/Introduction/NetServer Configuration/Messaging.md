@@ -16,7 +16,7 @@ Configuration values for SuperOffice.CRM.Messaging and the SoMessaging.dll.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |MessagingSoAuthentication|False will indicate process being authenticated with NetServer or Anonymous user.|
 |MessagingSoUser|SuperOffice user to authenticate with.|
 |MessagingSoPassword|Password for MessagingSoUser.|

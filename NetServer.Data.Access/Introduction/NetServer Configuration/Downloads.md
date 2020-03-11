@@ -15,7 +15,7 @@ Configuration values related to Downloads.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |WebSiteEndPoint|Public address of the web server, including protocol and port. Empty value will calculate a default value.|
 |NewTrayAppUrl|Public address of the url for showing download-page of new TrayApp. Empty value will calculate a default value.|
 |DownloadFolder|Folder of files to be downloaded to the client. Default value is ~/Download.|

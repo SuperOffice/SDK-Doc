@@ -9,7 +9,7 @@ SortOrder: 72
 Configuration for the Web Client CssSprite generator. Used by SuperOffice only.
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |Enabled| By enabling this feature an image is created, containing most icons used in the application. Default value is true.|
 |RootPath|Image path. Default value is Images\Seven.|
 |PersistentPath|Path to generated CssSprite file.|

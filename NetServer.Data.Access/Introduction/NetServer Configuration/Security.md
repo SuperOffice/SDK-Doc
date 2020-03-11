@@ -35,7 +35,7 @@ The security section group contains three configuration sections related to doma
 Configuration settings related to Active Directory domain.
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |Domain|Name of the domain for authentication.  Default domain is used when nothing is provided. The name of the domain or server for System.DirectoryServices.AccountManagement.ContextType.Domain context types, the machine name for System.DirectoryServices.AccountManagement.ContextType.Machine context types, or the name of the server and port hosting the System.DirectoryServices.AccountManagement.ContextType.ApplicationDirectory instance.|
 |Container|The container on the store to use as the root of the context. Default container is used when nothing is provided. All queries are performed under this root.|
 |User|The username used to connect to the store. If the username and password parameters are not configured, the default credentials of the current principal are used. Otherwise, both username and password must be configured, and the credentials they specify are used to connect to the store.|
@@ -47,7 +47,7 @@ Configuration settings related to Active Directory domain.
 Cryptography is used for encrypting and decrypting the user sessions.
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |SymmetricKey|The Key used in the Rijndael algorithm.|
 |SymmetricIV|The IV used in the Rijndael algorithm.|
 |SymmetricSecret|A secret phrase used as a signature.|
@@ -67,7 +67,7 @@ It is important to know that if your system is using a server cluster these valu
 Sentry configuration options.
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |Ignore|Ignore the Sentry mechanism, everything will be allowed. Default value is false.|
 
 ### SoPasswordCredentialPlugin
@@ -75,7 +75,7 @@ Sentry configuration options.
 SuperOffice password credentials plugin options.
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |DisableUseInternalAssociate|Disables SuperOffice-passwords for Internal associates (normal users). Default value is false.|
 |DisableUseSystemAssociate|Disables SuperOffice password for System associates. Default value is false.|
 |DisableUseExternalAssociate|Disables SuperOffice password for External associates. Default value is false.|

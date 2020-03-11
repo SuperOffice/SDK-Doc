@@ -15,7 +15,7 @@ Configuration values related to Reporter.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |ExePath|Contains the path to the folder where the file SoReporterExecuter.exe is located. Default value is _bin\\Reporter_|
 |Timeout|Timeout in milliseconds for the reporter process. Default value is 300000.|
 |ODBC|ODBC Datasource name to use when running Reporter.|

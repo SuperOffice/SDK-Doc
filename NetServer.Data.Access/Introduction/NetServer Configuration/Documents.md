@@ -19,7 +19,7 @@ Configuration used to access the SuperOffice documents. It is used by NetServer 
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |ArchivePath|Path for SO_ARC.  Even it the so arc is not used, default path for document template folder is calculated from this folder.|
 |ArchivePath1|Alternative/additional archive path to search for documents|
 |ArchivePath2|Alternative/additional archive path to search for documents|

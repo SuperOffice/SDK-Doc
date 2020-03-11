@@ -9,6 +9,6 @@ SortOrder: 84
 Configuration values for Pocket specific features.
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |AzureNotificationHubConnectionString|Connection string from Azure notification hub access policies.|
 |AzureNotificationHubName|The name of the Azure notification hub.|

@@ -15,7 +15,7 @@ Configuration section used to define SuperOffice CRM web service settings.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |AllowWebServiceRequests|Permit requests to web services.  This value is supported in the default SoWcfRequestInterceptor and can be overriden by making a custom SoWcfRequestInterceptorPlugin.|
 |WrapExceptions|Check if NetServer shall wrap and serialize exceptions, or leave it up to communication carrier (i.e. WCF).|
 |RemoveInvalidXMLText|If we should remove UTF-8 characters that are not valid XML. The Text table is the only place where this filter is active.|

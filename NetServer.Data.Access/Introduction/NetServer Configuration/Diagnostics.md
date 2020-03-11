@@ -30,7 +30,7 @@ Configuration of diagnostic logging tools.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |LogError|Determines whether error messages are logged. Default value is true.|
 |LogWarning|Determines whether warning messages are logged. Default value is false.|
 |LogInformation|Log general information. This includes successful SQL's passed to the database. Only permit this option while debugging a bug.  This will be a severe performance hit! Default value is false.|

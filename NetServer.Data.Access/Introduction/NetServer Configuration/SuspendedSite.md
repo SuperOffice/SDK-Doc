@@ -16,6 +16,6 @@ Configuration values related to Suspended state.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |suspended|The current state of the site.|
 |download_baseurl|Download base url.|

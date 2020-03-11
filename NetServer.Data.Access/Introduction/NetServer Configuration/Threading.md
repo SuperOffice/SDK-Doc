@@ -15,7 +15,7 @@ Configuration values related to threading.
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |MaxParellalThreads|Max parallel operations that is permitted to be run in parallel.  -1 is infinite. The default value is 30.|
 |DisableMultithreading|Determines whether NetServer should run in single threaded mode. Default is false.|
 |ForceMultithreading|Determines whether NetServer should force multi-threaded mode. Default is false.|

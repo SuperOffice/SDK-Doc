@@ -15,5 +15,5 @@ Configuration values for Feature Toggles; see the SuperOffice.FeatureToggles.dll
 ```
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |State|Contains key/value (feature name/true or false) pair elements that represent the features to toggle.|

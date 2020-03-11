@@ -9,7 +9,7 @@ SortOrder: 71
 Configuration for SuperOffice CRM Online. Used by SuperOffice only.
 
 |Name|Description|
-|------------|-|
+|------------|----|
 |Provider|The provider to use (office365/google)|
 |DispatcherUrl|The url to the SuperOffice Dispatcher service|
 |CloudUrl|The url to the SuperOffice cloud.|
