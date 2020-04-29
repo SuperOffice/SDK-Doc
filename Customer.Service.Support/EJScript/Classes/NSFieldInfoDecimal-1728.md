@@ -1,0 +1,11 @@
+---
+title: NSFieldInfoDecimal
+path: /EJScript/Classes/NSFieldInfoDecimal/Member functions
+intellisense: 1
+classref: 1
+sortOrder: 3504
+---
+
+
+
+
