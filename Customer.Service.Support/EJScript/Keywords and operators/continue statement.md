@@ -12,7 +12,7 @@ Causes the loop to skip the remainder of its body and immediately retest its con
 
 ###Example code:###
 
-
+```crmscript!
     for(Integer i = 0; i < 10; i++) {
       if(i == 3)
       {
@@ -22,5 +22,5 @@ Causes the loop to skip the remainder of its body and immediately retest its con
       }
       printLine("number: " + i.toString());
     }
-
+```
 
