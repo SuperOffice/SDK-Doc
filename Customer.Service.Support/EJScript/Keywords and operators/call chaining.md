@@ -12,7 +12,7 @@ Call chaining makes it possible to call functions inside other functions
 
 ###Example code:###
 
-
+```crmscript!
     Integer printNum(Integer a){
       print(a.toString());
       return a;
@@ -29,4 +29,4 @@ Call chaining makes it possible to call functions inside other functions
     
     addNumbers(); // Prints "0123456789 The sum is: 45"
 
-
+```

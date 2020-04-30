@@ -12,8 +12,9 @@ Assignments are used to assign values to variables.
 
 ###Example code:###
 
-
+```crmscript!
     Integer favouriteNumber;
     favouriteNumber = 12; // Assigns integer value 12 to favouriteNumber
-
+    print(favouriteNumber);
+```
 

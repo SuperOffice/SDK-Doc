@@ -4,7 +4,7 @@ path: /EJScript/NetServer examples/Get archive list items
 sortOrder: 9541
 ---
 
-
+```crmscript!
     // Here we use the ContactActivity archive provider to retrieve appointments
     
     String[] columns;
@@ -31,5 +31,5 @@ sortOrder: 9541
         print(col.getKey() + ": " + col.getVal() + "\n");
       }
     }
-
+```
 
