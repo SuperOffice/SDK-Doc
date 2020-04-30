@@ -12,7 +12,7 @@ A for loop will run as long as the condition given is true (e.g. i < 10)
 
 ###Example code:###
 
-
+```crmscript
     for(Integer i = 0; i < 10; i++) {
       if(i == 3)
       {
@@ -28,19 +28,17 @@ A for loop will run as long as the condition given is true (e.g. i < 10)
       }
       printLine("number: " + i.toString());
     }
-    
-
-
-
+```    
 
 
 ###Prints:###
 
+```
 number: 0
 number: 1
 number: 2
 Before Continue
 number: 4
 Before Break
-
+```
 
