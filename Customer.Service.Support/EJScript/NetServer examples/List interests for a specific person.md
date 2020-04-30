@@ -4,7 +4,7 @@ path: /EJScript/NetServer examples/List interests for a specific person
 sortOrder: 9542
 ---
 
-
+```crmscript!
     // Here we load in a person and list out the interest registered on that person
     
     Integer personId = 123;
@@ -21,5 +21,5 @@ sortOrder: 9542
     {
       print(interests[c].GetName() + "\n");
     }
-
+```
 

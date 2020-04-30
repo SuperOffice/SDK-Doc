@@ -4,7 +4,7 @@ path: /EJScript/NetServer examples/Access Red-letter days from SuperOffice
 sortOrder: 9539
 ---
 
-
+```crmscript!
     // check which days in the christmas period are holidays
     
     NSAppointmentAgent appointmentAgent;
@@ -22,5 +22,5 @@ sortOrder: 9539
       print(start.toString() + " is holiday: " + redLetterDays[n].GetRedLetterInformation().GetIsOwnCountryHoliday().toString() + "\n");
       start.addDay(1);
     }
-
+```
 

@@ -4,7 +4,7 @@ path: /EJScript/NetServer examples/Sales related to request and company
 sortOrder: 9543
 ---
 
-
+```crmscript!
     // This function will return true if the company connected to the ticket has open sales
     // if there is no company connected to the ticket, it returns false
     Bool hasOpenSales(Integer ticketId)
@@ -35,4 +35,4 @@ sortOrder: 9543
         return false;
     }
 
-
+```

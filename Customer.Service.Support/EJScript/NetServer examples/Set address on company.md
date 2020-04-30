@@ -4,7 +4,7 @@ path: /EJScript/NetServer examples/Set address on company
 sortOrder: 9544
 ---
 
-
+```crmscript!
     NSContactAgent newNSContactAgent;
     NSContactEntity getNSContactEntity = newNSContactAgent.GetContactEntity(companyId); // Load the contact you want to edit
     NSAddress getNSAddress = getNSContactEntity.GetAddress();
@@ -16,4 +16,4 @@ sortOrder: 9544
     getNSContactEntity.SetAddress(getNSAddress);
     newNSContactAgent.SaveContactEntity(getNSContactEntity);
 
-
+```

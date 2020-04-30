@@ -4,9 +4,11 @@ path: /EJScript/NetServer examples/User-defined fields
 sortOrder: 9545
 ---
 
-
-    // here we are looking up udef fields on a person, and we want to know metadata about the udef field, like the type and tooltip
-    // thus we need to first retrieve the metadata for udefs on persons , and then use this when we look up the udef fields on a person entity
+```crmscript!
+    // here we are looking up udef fields on a person, and we want 
+    // to know metadata about the udef field, like the type and tooltip
+    // thus we need to first retrieve the metadata for udefs on persons , 
+    // and then use this when we look up the udef fields on a person entity
     
     NSUserDefinedFieldInfoAgent udefAgent;
     
@@ -38,4 +40,4 @@ sortOrder: 9545
       Integer length = udefInfo.GetTextLength();
     }
 
-
+```

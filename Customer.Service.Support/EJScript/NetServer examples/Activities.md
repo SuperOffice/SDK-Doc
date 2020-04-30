@@ -4,7 +4,7 @@ path: /EJScript/NetServer examples/Activities
 sortOrder: 9540
 ---
 
-
+```crmscript!
     // here we find all activities on companies that has happened the last week
     
     NSContactAgent contactAgent;
@@ -27,5 +27,5 @@ sortOrder: 9540
     {
       print("At the time of " + activities[c].GetActionTime().toString() + ", " + activities[c].GetActivityPersonName() + " carried out an activity on the company " + activities[c].GetName() + "\n");
     }
-
+```
 
