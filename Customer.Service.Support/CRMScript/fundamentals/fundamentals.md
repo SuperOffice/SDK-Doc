@@ -1,5 +1,5 @@
 # Fundamentals
 
-A guide to CRMScrit basics.
+A guide to CRMScript basics.
 
 1. autolist
