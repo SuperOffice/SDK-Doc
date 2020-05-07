@@ -34,21 +34,21 @@ To **retrieve** the value, you simply refer to the variable name.
 
 To **change** (update) the value, you use another assign statement.
 
- ```crmscript!
+```crmscript!
  shoeSize = 42;
- ``` 
+``` 
 
- ## Variable names
+## Variable names
 
- You can label variables *almost* anything you want.
+You can label variables *almost* anything you want.
 
- * Lower-case and upper-case letters a-z, numbers, and underscore.
- * Names must be unique within their scope.
- * Names can't be any of the reserved words.
+* Lower-case and upper-case letters a-z, numbers, and underscore.
+* Names must be unique within their scope.
+* Names can't be any of the reserved words.
 
- ## Variable types
+## Variable types
 
- The basic built-in data types are:
+The basic built-in data types are:
 
 * Bool
 * Float
@@ -58,7 +58,7 @@ To **change** (update) the value, you use another assign statement.
 
 Also, you can create objects of all the built-in classes, for example DateTime or Company.
 
- ## Scope
+## Scope
 
 Scope determines where you variable is visible and can be used.
 
