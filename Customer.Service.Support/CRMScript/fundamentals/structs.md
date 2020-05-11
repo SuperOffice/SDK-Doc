@@ -1,13 +1,14 @@
-# Structs
+---
+title: Structs
+---
 
-A struct defines the kinds of data and the functionality their objects will have. This data structure enables you to create your own custom types by grouping together variables of other types and methods.
+A **struct** defines the kinds of data and the functionality their objects will have. This data structure enables you to create your own custom types by grouping together variables of other types and methods.
 
-You can think of a struct as a variable that can contain many values. Unlike arrays, which are limited to a single datatype, the struct can contain different datatypes and also methods.
+You can think of a struct as a variable that can contain many values. Unlike arrays, which are limited to a single datatype, the struct can contain different data types and also methods.
 
 Structs can also contain other structs, but not their own type. For example, you can't define a *node* struct and build a recursive tree of *nodes*.
 
-# Defining structs
-
+## Defining structs
 
 CRMScripts use immediate allocation. As with variables, methods must be declared before they are used.
 
@@ -31,7 +32,7 @@ struct Car {
 
 The keyword **this** refers to ownership. Here, the print statement targets the variable values of a specific instance of the struct. We also need to call the **toString** method because **modelYear** is a number.
 
-# Using structs
+## Using structs
 
 From the outside, you create an instance of the struct and then you can use **dot notation** to access its variables and methods.
 
@@ -39,11 +40,11 @@ From the outside, you create an instance of the struct and then you can use **do
 * structName.variableName
 
 ```crmscript!
-  Car myCar;
-  myCar.brand = "Volvo";
-  myCar.model = "XC60";
-  myCar.modelYear = 2019;
-  myCar.print();
+Car myCar;
+myCar.brand = "Volvo";
+myCar.model = "XC60";
+myCar.modelYear = 2019;
+myCar.print();
 ```
 
 This will output: Volvo XC60, 2019
