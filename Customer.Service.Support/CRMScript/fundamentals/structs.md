@@ -18,7 +18,7 @@ The definition has 3 parts:
 * the name of the struct
 * 1 or more statements enclosed in curly brackets, followed by a semi-colon
 
-```crmscript!
+```crmscript
 struct Car {
   String brand;
   String model;
@@ -39,7 +39,7 @@ From the outside, you create an instance of the struct and then you can use **do
 * structName.methodName
 * structName.variableName
 
-```crmscript!
+```crmscript
 Car myCar;
 myCar.brand = "Volvo";
 myCar.model = "XC60";
