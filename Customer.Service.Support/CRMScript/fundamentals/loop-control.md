@@ -2,7 +2,7 @@
 title: Loop control - break and continue
 ---
 
-CRMScript has several statements that can alter the flow of `for`, `while`, and `switch`code blocks. This comes in addition to the loop conditions.
+CRMScript has several statements that can alter the flow of `for` and `while` loops. This comes in addition to the loop conditions.
 
 ## Break statement
 
@@ -16,8 +16,8 @@ while(i < 10) {
   if(i == 5) {
     break;
   }
-  i++;
   printLine(i.toString());
+  i++;
 }
 ```
 
