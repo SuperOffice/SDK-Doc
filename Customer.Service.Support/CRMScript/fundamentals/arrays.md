@@ -168,10 +168,44 @@ If you specify the element, that's what's added. If you don't specify anything, 
 * pushFront()
 * pushFront(elem)
 
+```crmscript!
+String[] userPlans;
+userPlans.pushFront();
+printLine("Current length: " + userPlans.length().toString());
+userPlans.pushFront("Standard");
+printLine("Current length: " + userPlans.length().toString());
+
+for(Integer i = 0; i < userPlans.length(); i++) {
+  printLine("Contents of index " + i.toString() + ": " + userPlans[i]);
+}
+```
+
+In this example, we start by pushing an empty element, and then we push \"Standard\" before it. Notice how the length increases and that we are able to use \[pos\] to access even the empty element.
+
 **Add to back:**
+
+The `pushBack()` functions will **append** an element behind the current last element.
 
 * pushBack()
 * pushBack(elem)
+
+```crmscript!
+String[] userPlans;
+userPlans.pushBack();
+printLine("Current length: " + userPlans.length().toString());
+userPlans.pushBack("Service");
+userPlans.pushBack("Complete");
+printLine("Current length: " + userPlans.length().toString());
+
+for(Integer i = 0; i < userPlans.length(); i++) {
+  printLine("Contents of index " + i.toString() + ": " + userPlans[i]);
+}
+```
+
+In this example, we start by pushing an empty element, and then we push 2 strings to the back.
+
+> [!TIP]
+> Remember that you can also use the `insert()` function to add an element at a specific 
 
 #### Removing elements
 
@@ -180,12 +214,38 @@ You can pop elements from either the front or the back. The element which is pop
 * popFront() same as \[0\]
 * popBack() same as \[length() -1\]
 
+```crmscript!
+String[] userPlans;
+userPlans.pushBack("Standard");
+userPlans.pushBack("Sales");
+userPlans.pushBack("Marketing");
+userPlans.pushBack("Service");
+userPlans.pushBack("Complete");
+printLine("Current length: " + userPlans.length().toString());
+
+Integer i = 0;
+while(userPlans.length() > 0) {
+  printLine("Contents of index " + i.toString() + ": " + userPlans.popFront());
+  i++;
+}
+printLine("Current length: " + userPlans.length().toString());
+```
+
 > [!NOTE]
 >If the collection is empty, you will get an out-of-range exception
 
 ### Deleting all elements
 
 If you need to **reset** a collection, use `clear()` to remove all the elements. The length after this call will be 0.
+
+```crmscript!
+String[] userPlans;
+userPlans.pushBack("Standard");
+userPlans.pushBack("Sales");
+printLine("Current length: " + userPlans.length().toString());
+userPlans.clear();
+printLine("Current length: " + userPlans.length().toString());
+```
 
 If you want to do something with these elements before deletion, you should loop through and pop them instead.
 
