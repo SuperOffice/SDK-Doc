@@ -2,7 +2,7 @@
 title: Integer data type
 ---
 
-Integers are whole numbers without decimals. If you need to work with decimals, use the Float data type.
+Integers are positive and negative whole numbers without decimals. If you need to work with decimals, use the Float data type.
 
 ```crmscript
 Integer i = 42;
