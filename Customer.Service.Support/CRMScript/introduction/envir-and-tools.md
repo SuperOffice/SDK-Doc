@@ -1,5 +1,7 @@
 ---
 title: How do I create and run CRMScripts?
+uid: crmscript_howto
+SortOrder: 30
 ---
 
 To use CRMScripts in your SuperOffice environment, you need a subscription to Expander Services.
@@ -10,7 +12,7 @@ To use CRMScripts in your SuperOffice environment, you need a subscription to Ex
 
 You can use whatever code editor you prefer. For example, Visual Studio Code. You can even use Notepad.
 
-However, we recommend using the built-in editor in the SuperOffice admin client. This will give you coding assistance and syntax highlighting. You also have easy access to run the script as you develop it.
+However, we recommend using the built-in editor in the SuperOffice admin client. This will give you coding assistance and **syntax highlighting**. You also have easy access to run and debug the script as you develop it.
 
 ## Running CRMScripts
 
@@ -53,7 +55,7 @@ For SuperOffice CRM Online, this is available in the Sales and Service admin cli
 
 ### How do I get a sandbox?
 
-You need to register as a developer to get access to our environment.
+You need to [register as a developer](https://community.superoffice.com/en/developer/create-apps/resources/developer-registration/) to get access to our environment.
 This signs you up for a developer user account and creates a test tenant in SOD.
 
 ## Expander Services

@@ -1,5 +1,7 @@
 ---
 title: Getting started with CRMScript
+uid: crmscript_start
+SortOrder: 40
 ---
 
 When you are ready to start learning CRMScript:
@@ -20,6 +22,6 @@ To develop applications and scripts in our SOD environment is free. Required lic
 
 ## More resources
 
-* [database reference](https://community.superoffice.com/documentation/SDK/SO.Database/html/top_home.htm)
+* [Database reference](https://community.superoffice.com/documentation/SDK/SO.Database/html/top_home.htm)
 
-* [regular expression tool](https://regex101.com/)
+* [Regular expression tool](https://regex101.com/)
