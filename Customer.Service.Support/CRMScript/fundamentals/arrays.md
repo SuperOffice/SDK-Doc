@@ -103,7 +103,7 @@ userPlans.insert(1, "Marketing");
 
 ## Looping indexed collections
 
-You can use both [for](./for-loops.md) and [while](./while-loop.md) loops to iterate the collection.
+You can use both [for](./for-loops.md) and [while](./while-loops.md) loops to iterate the collection.
 
 > [!TIP]
 > Remember that you can use the `length()` function to determine the number of elements.
