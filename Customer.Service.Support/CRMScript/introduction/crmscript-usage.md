@@ -4,17 +4,27 @@ title: What can I do with CRMScript?
 
 ## Customize your own workflows and automation
 
+Scripts are a great way of automating processes in smart ways. For example,you can use CRMScript to improve your B2C customer service processes.
+
 ## Validate input
+
+Want to make sure users enter the correct data, even in user-defined fields? To block save if essential fields haven't been filled out? CRMScript lets you intercept, parse, and take action to reduce errors and improve data quality.
 
 ## Dynamically update content
 
+Change the available items in a drop-down based on what the user has already selected in another field.
+
 ## Run code in response to certain events on a website
+
+What should happen when a new ticket is registered or a sale is confirmed?
 
 ## Tailor the Customer Center
 
+In many cases, our standard pages will suffice. However, if you need something a bit more customized, you can tailor almost everything with CRMScripts. You can even run any script in SuperOffice from the customer care center, given that you have the ID and the key for the script.
+
 ## Explore the database without access to the SQL Server
 
-SearchEngine provides some excellent ways of deep-diving into the database without having to have some sort of remote session to the SQL Server.
+**SearchEngine** provides some excellent ways of deep-diving into the database without having a remote session to the SQL Server.
 
 ## Limitations
 
