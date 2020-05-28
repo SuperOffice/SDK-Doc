@@ -1,5 +1,7 @@
 ---
 title: What is CRMScript?
+uid: crmscript_def
+SortOrder: 10
 ---
 
 CRMScript is a light-weight, interpreted programming language with curly-bracket syntax. It is statically typed and supports object-oriented and imperative styles.
@@ -9,21 +11,23 @@ The CRMScript language is similar to JavaScript, with some traits of Python.
 ## An imperative programming style
 
 CRMScript uses **statements**, a sequence of steps describing exactly how to do something.
-The statements are grouped into sections called *code blocks*. This is very similar to the structured programming syntax of C. Unlike C, CRMScript is not compiled and doesn't use pointers.
+The statements are grouped into sections called *code blocks*.
+
+This is very similar to the structured programming syntax of C. However, unlike C, CRMScript is not compiled and doesn't use pointers.
 
 ## An object-oriented programming style
 
-CRMScript is object-oriented *to some extent*. The language has a wide variety of **built-in classes**, which you can create objects from and use their methods to manipulate data. However, you can't define your own classes. Thus, think of these as complex data types rather than templates to extend or inherit from.
+CRMScript is object-oriented *to some extent*. The language has a wide variety of **built-in classes**, which you can create objects from and use their methods to manipulate data. However, you can't define your own classes. Thus, think of these as **complex data types** rather than templates to extend or inherit from.
 
 You can still build custom data structures by defining [structs](../fundamentals/structs.md).
 
 ## A statically and strongly typed language
 
-Unlike most other scripting languages, incl JavaScript and Python, CRMSCript is **statically typed**. This means that you can't change the type of a variable after it has been declared. CRMScript associates the type with the variable's name, not its value.
+Unlike most other scripting languages, including JavaScript and Python, CRMSCript is **statically typed**. This means that you can't change the type of a variable after it has been declared. CRMScript associates the type with the variable's name, not its value.
 
 The language is also **strongly typed**, meaning there are restrictions to mixing values of different data types. For example, the `print()` function expects a String - if you pass an Integer as-is, you will get a type error.
 
-The types are checked *before* runtime. As a bonus, type errors are detected before the code is even run. Catching this group of errors immediately means you don't have to worry about them in production. It also gives a small performance boost, since there is less checking to do at runtime.
+The types are checked *before* runtime. As a bonus, type errors are detected before the code is even run. Catching this group of errors immediately means you don't have to worry about them in production. It also gives a small performance boost, because there is less checking to do at runtime.
 
 ## An interpreted scripting language
 

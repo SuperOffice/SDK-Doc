@@ -1,10 +1,12 @@
 ---
 title: What can I do with CRMScript?
+uid: crmscript_uc
+SortOrder: 20
 ---
 
-## Customize your own workflows and automation
+## Customize your workflows and automation
 
-Scripts are a great way of automating processes in smart ways. For example,you can use CRMScript to improve your B2C customer service processes.
+Scripts are a great way of automating processes in smart ways. For example, you can use CRMScript to improve your B2C customer service processes.
 
 ## Validate input
 
@@ -12,7 +14,7 @@ Want to make sure users enter the correct data, even in user-defined fields? To 
 
 ## Dynamically update content
 
-Change the available items in a drop-down based on what the user has already selected in another field.
+You can for example change the available items in a drop-down based on what the user has already selected in another field.
 
 ## Run code in response to certain events on a website
 
@@ -28,12 +30,12 @@ In many cases, our standard pages will suffice. However, if you need something a
 
 ## Limitations
 
-Because of security restrictions and performance considerations there are some things you can't do with CRMScripts.
+Because of security restrictions and performance considerations, there are some things you can't do with CRMScripts.
 
 * You can't put files on our online webserver (no upload or import of scripts).
 * You can't read from or write to physical files on our online webserver.
 * It is not allowed to run a script for more than 60 seconds.
 * Memory-intensive scripts are not allowed. Each script may not consume more than 8 MB of memory.
-* BulkUpdate API is unavailable because updates can take a long time.
+* The **BulkUpdate** API is unavailable because updates can take a long time.
 
 * ODBC endpoints are unavailable, which makes it technically impossible to access an Access-database from CRMScript. You can use Zapier instead.
