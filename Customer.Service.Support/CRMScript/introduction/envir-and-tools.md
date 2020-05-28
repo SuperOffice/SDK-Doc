@@ -16,7 +16,7 @@ However, we recommend using the built-in editor in the SuperOffice admin client.
 
 ## Running CRMScripts
 
-> [!WARNING]
+> [!WARN]
 > CRMScript is extremely powerful. Unless you are cautious, scripting could potentially damage the data in your system. Know what you are doing and always test in a closed environment first.
 
 **Pre-requisites:**
