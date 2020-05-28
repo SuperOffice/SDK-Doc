@@ -1,5 +1,6 @@
-<properties date="2016-06-24"
-SortOrder="2"
-/>
+---
+SortOrder: 2
+uid: intro
+---
 
 1. autolist
