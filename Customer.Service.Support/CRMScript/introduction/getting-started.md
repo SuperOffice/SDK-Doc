@@ -22,6 +22,8 @@ To develop applications and scripts in our SOD environment is free. Required lic
 
 ## More resources
 
+* [NetServer web service reference](https://community.superoffice.com/documentation/sdk/SO.NetServer.Web.Services/html/N_SuperOffice_CRM_Services.htm)
+
 * [Database reference](https://community.superoffice.com/documentation/SDK/SO.Database/html/top_home.htm)
 
 * [Regular expression tool](https://regex101.com/)

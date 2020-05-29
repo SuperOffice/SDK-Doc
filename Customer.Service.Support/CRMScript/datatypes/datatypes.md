@@ -1,5 +1,6 @@
 ---
 title: Data types
+SortOrder: 40
 ---
 
 An in-depth guide to CRMScript data types.

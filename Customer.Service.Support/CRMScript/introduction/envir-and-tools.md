@@ -21,12 +21,12 @@ However, we recommend using the built-in editor in the SuperOffice admin client.
 
 **Pre-requisites:**
 
-* An administrator account for the tenant
+* An administrator account for the tenant or installation
 * An Expander Services license
 
-### Where does CRMSCript run?
+### Where does CRMScript run?
 
-You need to run your scripts in an environment that has a CRMSCript **interpreter**.
+You need to run your scripts in an environment that has a CRMScript **interpreter**.
 For SuperOffice CRM Online, this is available in the Sales and Service admin clients.
 
 **In Sales:**
@@ -55,8 +55,9 @@ For SuperOffice CRM Online, this is available in the Sales and Service admin cli
 
 ### How do I get a sandbox?
 
-You need to [register as a developer](https://community.superoffice.com/en/developer/create-apps/resources/developer-registration/) to get access to our environment.
-This signs you up for a developer user account and creates a test tenant in SOD.
+You need to [register as a developer](https://community.superoffice.com/en/developer/create-apps/resources/developer-registration/) to get access to our online development environment.
+
+This signs you up for a developer user account and creates a test tenant in the SuperOffice Online Development (SOD) environment.
 
 ## Expander Services
 

@@ -1,6 +1,6 @@
 ---
 title: Fundamentals of CRMScript
-sortOrder: 95
+sortOrder: 20
 ---
 
 # Fundamentals
