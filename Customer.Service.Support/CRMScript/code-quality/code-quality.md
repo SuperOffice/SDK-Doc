@@ -1,5 +1,6 @@
 ---
 Title: Code quality
+SortOrder: 30
 ---
 
 A guide to creating high-quality scripts.
