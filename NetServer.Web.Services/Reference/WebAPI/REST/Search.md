@@ -70,16 +70,16 @@ Difference data types can have different operators. Each OData search page conta
 
 | Data type | Description                                                                 |
 |-----------|-----------------------------------------------------------------------------|
-| Boolean   | set                                                                         |
-| Numbers   | eq, ne, lt, gt, set, equals, greater, less, unequals, between               |
+| Bool      | set                                                                         |
+| Int, Decimal | eq, ne, lt, gt, set, equals, greater, less, unequals, between               |
 | String    | begins, between, contains, is, notBegins, notContains, isNot                |
 | Date      | before, date, after, between \| dateBetween                                 |
 | DateTime  | dateTime, beforeTime, afterTime                                             |
-| Days      | beforeToday, today, afterToday                                              |
-| Weeks     | lastWeek, thisWeek, nextWeek                                                |
-| Months    | lastMonth, thisMonth, nextMonth                                             |
-| Quarter   | lastQuarter, thisQuarter, nextQuarter                                       |
-| Year      | thisHalf, thisYear                                                          |
+| Unary (Days)| beforeToday, today, afterToday                                              |
+| Unary (Weeks) | lastWeek, thisWeek, nextWeek                                                |
+| Unary (Months) | lastMonth, thisMonth, nextMonth                                             |
+| Unary (Quarter) | lastQuarter, thisQuarter, nextQuarter                                       |
+| Unary (Year) | thisHalf, thisYear                                                          |
 | Associate | associateIsOneOf, associateIsNotOneOf, currentAssociate                     |
 | Lists     | equals, oneOf, notOneOf                                                     |
 
