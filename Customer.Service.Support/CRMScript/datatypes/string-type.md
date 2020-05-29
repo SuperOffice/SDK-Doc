@@ -1,5 +1,6 @@
 ---
 title: String data type
+uid: crmscript_type_string
 ---
 
 A text string is a sequence of characters written with quotes.

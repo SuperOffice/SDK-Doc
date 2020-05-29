@@ -1,5 +1,6 @@
 ---
 title: Time data type
+uid: crmscript_type_time
 ---
 
 **Time** is a complex data type representing the time of the day in hours, minutes, and seconds. The default value is now. ISO 8601 uses the 24-hour clock system.
