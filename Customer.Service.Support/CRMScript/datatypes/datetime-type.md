@@ -56,6 +56,33 @@ printLine(dt.toString("WDAY uke ISOW1","",days));
 
 If you don't include codes MONTH, WDAY, or both - use `toString(String format)` instead. If you include only 1 of them, send an empty string for the one you don't use.
 
+## String toString(Integer mode, Integer language, Bool 24HourMode)
+
+A variant of `toString()` that takes codes for mode and language as Integers and a boolean indicator for 12- or 24-hour clock.
+
+* true: use time in 24-hour mode
+* false: use time in 12-hour mode
+
+```crmscript!
+DateTime dt;
+printLine(dt.toString(6,1,true));
+```
+
+This will print today's date and the current time formatted similar to `toString()` without arguments, but with the month as a 3-letter abbreviation.
+
+**Mode:** \[0-16\], see end of this section
+
+**Languages:**
+
+| Code | Language  |
+|:----:|-----------|
+| 0    | Norwegian |
+| 1    | English   |
+| 2    | German    |
+| 3    | Swedish   |
+| 4    | Danish    |
+| 5    | Dutch     |
+
 ## Setting and updating date and time
 
 Date and time values are set relative to when the DateTime object was created.
@@ -261,7 +288,7 @@ print(dt.isNull().toString());
 
 ## Formatting options
 
-**Week numbers and year:**
+### Week numbers and year
 
 | Code   | Includes             | Number of digits    |
 |--------|----------------------|---------------------|
@@ -272,7 +299,7 @@ print(dt.isNull().toString());
 | YY2    | year                 | 2                   |
 | YY4    | year                 | 4                   |
 
-**Month and day:**
+### Month and day
 
 | Code | Includes | Number of digits |
 |------|----------|------------------|
@@ -290,7 +317,7 @@ print(dt.isNull().toString());
 > [!CAUTION]
 > WEEKDAY differs from the `getWeekDay()` method of the Date object where Monday has index 0! WDAY and MONTH do start at index 0, thus construct your lists so that the indexes line up.
 
-**Time:**
+### Time
 
 | Code | Includes            | Number of digits |
 |------|---------------------|------------------|
@@ -302,3 +329,36 @@ print(dt.isNull().toString());
 | SS2  | seconds             | 2                |
 
 **AMPM** returns either am or pm.
+
+### Modes
+
+| Code | Name             | Format                          | Example                         |
+|:----:|:-----------------|:--------------------------------|:--------------------------------|
+| 0    | modeNewDate      | YYYY-MM-DD                      | 2020-05-29                      |
+| 1    | modeNew2Min      | YYYY-MM-DD hh:mm                | 2020-05-29 13:37                |
+| 2    | modeNew2Sec      | YYYY-MM-DD hh:mm:ss             | 2020-05-29 13:37:42             |
+| 3    | modeTextDate     | DD. MMM YYYY (no)               | May 29. 2020                    |
+|      |                  | MMM DD. YYYY (en)               | 29. Mai 2020                    |
+| 4    | modeText2Min     | DD. MMM YYYY 11:23              | May 29. 2020 13:37              |
+| 5    | modeText2Sec     | DD. MMM YYYY 11:23:15           | May 29. 2020 13:37:42           |
+| 6    | modeText2MinLong | DD. MMM YYYY hh:mm (no)         | 29. Mai 2020 13:37              |
+|      |                  | MMM. DD. YYYY hh:mm (en)        | May 29. 2020 13:37              |
+| 7    | modeShort2Min    | MM/DD/YYYY hh:mm (no)           | 29/05/2020 13:37                |
+|      |                  | DD/MM/YYYY hh:mm (en)           | 05/29/2020 13:37                |
+| 8    | modeNumeric      | YYYYMMDDhhmmss                  | 20200529133742                  |
+| 9    | modeTime2Min     | hh:mm                           | 13:37                           |
+| 10   | modeTime2Sec     | hh:mm:ss                        | 13:37:42                        |
+| 11   | modeCompressed   | YYYYMMDDhhmmss                  | 20200529133942                  |
+| 12   | modeRFC1123      | ddd, DD MMM YY hh:mm:ss GMT     | Fri, 29 May 20 13:37:42 GMT     |
+| 13   | modeSoap         | YYYY-DD-MMThh:mm:ss             | 2020-05-29T13:37:42             |
+| 14   | modeRFC822       | ddd, DD MMM YYYY hh:mm:ss +hhmm | Fri, 29 May 2020 13:37:42 +0200 |
+| 15   | modeDateFirst    | MM.DD.YYYY hh.mm                | 29.05.2020 13:37                |
+| 16   | modeSlash2Min    | MM/DD/YYYY hh.mm                | 29/05/2020 13:37                |
+
+**Remarks:**
+
+* 12 is HTTP-date
+* 13 is SOAP standard formatting
+
+> [!CAUTION]
+> `toString()` **will not adjust to GMT**, so you will have to do it yourself!
