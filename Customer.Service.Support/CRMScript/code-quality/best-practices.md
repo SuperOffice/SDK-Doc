@@ -1,5 +1,7 @@
 ---
 title: CRMScript best practices
+uid: crmscript_best_practice
+SortOrder: 20
 ---
 
 ## Prefer readability

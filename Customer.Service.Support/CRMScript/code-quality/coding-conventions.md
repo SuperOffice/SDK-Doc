@@ -1,5 +1,7 @@
 ---
 title: CRMScript coding conventions
+uid: crmscript_conventions
+SortOrder: 10
 ---
 
 Always use the same conventions for all your CRMScripts. This will:
