@@ -1,5 +1,6 @@
 ---
 title: DateTime data type
+uid: crmscript_datetime
 ---
 
 **DateTime** is a complex data type representing a timestamp with both date and time elements on ISO format.The default value is now.
@@ -14,50 +15,6 @@ print(dt.toString());
 This will print today's date and the current time.
 
 ## Timestamps as strings
-
-### Formatting options
-
-**Week numbers and year:**
-
-| Code   | Includes             | Number of digits    |
-|--------|----------------------|---------------------|
-| ISOW1  | week number          | 1 or 2              |
-| ISOW2  | week number          | 2                   |
-| ISOWY2 | week number and year | week 1 or 2, year 2 |
-| ISOWY4 | week number and year | week 1 or 2, year 4 |
-| YY2    | year                 | 2                   |
-| YY4    | year                 | 4                   |
-
-**Month and day:**
-
-| Code | Includes | Number of digits |
-|------|----------|------------------|
-| MM1  | month    | 1 or 2           |
-| MM2  | month    | 2                |
-| DD1  | day      | 1 or 2           |
-| DD2  | day      | 2                |
-
-| Code     | Includes                  |
-|----------|---------------------------|
-| WEEKDAY  | weekday, with Monday as 1 |
-| MONTH    | name of month             |
-| WDAY     | name of weekday           |
-
-> [!CAUTION]
-> WEEKDAY differs from the `getWeekDay()` method of the Date object where Monday has index 0! WDAY and MONTH do start at index 0, thus construct your lists so that the indexes line up.
-
-**Time:**
-
-| Code | Includes            | Number of digits |
-|------|---------------------|------------------|
-| H24  | hours, 24-hour mode | 1 or 2           |
-| HH24 | hours, 24-hour mode | 2                |
-| H12  | hours, 12-hour mode | 1 or 2           |
-| HH12 | hours, 12-hour mode | 2                |
-| MI2  | minutes             | 2                |
-| SS2  | seconds             | 2                |
-
-**AMPM** returns either am or pm.
 
 ### String toString()
 
@@ -78,7 +35,7 @@ printLine(d.toString() + " " + t.toString());
 
 ### String toString(String format)
 
-A variant of `toString()` taking a string with formatting codes. You can also include white-space and punctuation marks.
+A variant of `toString()` that takes a string with formatting codes. You can also include white-space and punctuation marks.
 
 ```crmscript!
 DateTime dt;
@@ -89,11 +46,11 @@ This will print the current time as hh:mm in 12-hour mode and indicating whether
 
 ### String toString(String format, String months, String weekDays)
 
-A variant of `toString()` taking a string with formatting codes plus comma-separated lists of month and weekday names in your preferred language.
+A variant of `toString()` that takes a string with formatting codes plus comma-separated lists of month and weekday names in your preferred language.
 
 ```crmscript!
 DateTime dt;
-String days=",mandag,tirsdag,onsdag,torsdag,fredag,lørdag,søndag";
+String days="søndag,mandag,tirsdag,onsdag,torsdag,fredag,lørdag";
 printLine(dt.toString("WDAY uke ISOW1","",days));
 ```
 
@@ -104,7 +61,7 @@ If you don't include codes MONTH, WDAY, or both - use `toString(String format)` 
 Date and time values are set relative to when the DateTime object was created.
 
 * A positive increment indicates sometime in the future.
-* A negative value indicates sometime in teh past.
+* A negative value indicates sometime in the past.
 
 The amount must be provided as an Integer input parameter.
 
@@ -254,7 +211,7 @@ print(t.toString());
 
 ### Integer diff(DateTime otherDateTime)
 
-`diff()` returns the difference in number of seconds between 2 timestamps. The method subtracts the passed timestamp from the DateTime object you invoke `diff()` on.
+`diff()` returns the difference in the number of seconds between 2 timestamps. The method subtracts the passed timestamp from the DateTime object you invoke `diff()` on.
 
 ```crmscript!
 DateTime dt1;
@@ -301,3 +258,47 @@ CRMScript automatically initializes DateTime objects when declared to the curren
 DateTime dt;
 print(dt.isNull().toString());
 ```
+
+## Formatting options
+
+**Week numbers and year:**
+
+| Code   | Includes             | Number of digits    |
+|--------|----------------------|---------------------|
+| ISOW1  | week number          | 1 or 2              |
+| ISOW2  | week number          | 2                   |
+| ISOWY2 | week number and year | week 1 or 2, year 2 |
+| ISOWY4 | week number and year | week 1 or 2, year 4 |
+| YY2    | year                 | 2                   |
+| YY4    | year                 | 4                   |
+
+**Month and day:**
+
+| Code | Includes | Number of digits |
+|------|----------|------------------|
+| MM1  | month    | 1 or 2           |
+| MM2  | month    | 2                |
+| DD1  | day      | 1 or 2           |
+| DD2  | day      | 2                |
+
+| Code     | Includes                  |
+|----------|---------------------------|
+| WEEKDAY  | weekday, with Monday as 1 |
+| MONTH    | name of month             |
+| WDAY     | name of weekday           |
+
+> [!CAUTION]
+> WEEKDAY differs from the `getWeekDay()` method of the Date object where Monday has index 0! WDAY and MONTH do start at index 0, thus construct your lists so that the indexes line up.
+
+**Time:**
+
+| Code | Includes            | Number of digits |
+|------|---------------------|------------------|
+| H24  | hours, 24-hour mode | 1 or 2           |
+| HH24 | hours, 24-hour mode | 2                |
+| H12  | hours, 12-hour mode | 1 or 2           |
+| HH12 | hours, 12-hour mode | 2                |
+| MI2  | minutes             | 2                |
+| SS2  | seconds             | 2                |
+
+**AMPM** returns either am or pm.
