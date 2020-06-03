@@ -44,12 +44,17 @@ GET https://sod.superoffice.com/login/common/oauth/authorize?
 | ------------- | ------------------------------------------------------------ |
 | client_id     | **Required.** The Application Id assigned to your app when you registered it with SuperOffice. |
 | scope         | **Required.** Must be `openid`.                              |
-| redirect_uri  | **Required.** The redirect_uri of your app, where authentication responses are sent and received by your app. <br />It must exactly match one of the redirect_uris registered with SuperOffice. |
+| redirect_uri  | **Required.** The redirect_uri of your app, where authentication responses are sent and received by your app. <br/>It *must* exactly match one of the redirect_uris registered with SuperOffice. |
 | state         | **Recommended.** A value included in the request that is also returned in the token response. |
 | response_type | **Required.** Must include `code` for the authorization code flow. |
 | response_mode | **Optional.** Can be `fragment` and returns parameters in URI after hash #,or `form_data` and returns values in form data. |
 
 The user is then directed to the authentication server login screen, where they enter their credentials. An Identity Provider authenticates the user and asks for consent to access their resources on behalf of the Relying Party.
+
+```http!
+GET https://sod.superoffice.com/login/common/oauth/authorize?client_id=c789b7d98f3c496fb5aaa4b1a81ca11b&scope=openid&redirect_uri=http://localhost/DevNet-MvcIntegrationServerApp/callback&state=12345&response_type=code
+Accept: application/json
+```
 
 
 
@@ -58,7 +63,7 @@ The user is then directed to the authentication server login screen, where they 
 With consent given by the user, the SuperId server sends an authorization response message from its authorization endpoint. This redirects the user agent back to the relying party using the redirection URI provided earlier. This URI includes an authorization code and any state provided by the client earlier.
 
 ```http
-GET https://partnerapp/callback?
+GET https://localhost/DevNet-MvcIntegrationServerApp/callback?
   state=12345&
   code=o0NWI5leHdUflrjlTVVKqbSOt3n9Od0ZrBUq0nXFWKszyOdOZchk60fTf4pDWTFT
 ```
@@ -79,7 +84,7 @@ POST https://sod.superoffice.com/login/common/oauth/tokens?
   client_id=c789b7d98f3c496fb5aaa4b1a81ca11b&
   client_secret=83d0f3bcb9afbc7eb9d0682e9b86db52&
   code=o0NWI5leHdUflrjlTVVKqbSOt3n9Od0ZrBUq0nXFWKszyOdOZchk60fTf4pDWTFT&
-  redirect_uri=http://partnerapp/callback&
+  redirect_uri=http://localhost/DevNet-MvcIntegrationServerApp/callback&
   grant_type=authorization_code&
 ```
 
@@ -94,6 +99,13 @@ POST https://sod.superoffice.com/login/common/oauth/tokens?
 SuperId (the Identity provider) authenticates the client using the client ID and secret, and validates the redirect URI. When the grant type is set to authorization_code, the identity provider will validate the code parameter. Alternatively, the grant_type is set to refresh_token and the provider will validate the refresh_token parameter.
 
 If valid, the Identity Provider responds back with the ID token from the token endpoint. The response also includes an access token and an optional refresh token. The client validates the ID token, and if successful, the identity is proven and the Authorization Code flow is complete.
+
+```http!
+POST https://sod.superoffice.com/login/common/oauth/tokens?client_id=c789b7d98f3c496fb5aaa4b1a81ca11b&client_secret=83d0f3bcb9afbc7eb9d0682e9b86db52&code=o0NWI5leHdUflrjlTVVKqbSOt3n9Od0ZrBUq0nXFWKszyOdOZchk60fTf4pDWTFT&redirect_uri=http://localhost/DevNet-MvcIntegrationServerApp/callback&grant_type=authorization_code
+Content-Type: application/json
+Accept: application/json
+
+```
 
 **Post Response**
 
@@ -226,12 +238,12 @@ redirect_url=http://partnerapp/callback
 
 The response contains the token type, access token, expiration in seconds and identity token.
 
-```http
+```json
 {
-"token_type": "Bearer",
-"access_token": "8A:Cust12345.AZuHwfgrRZPHqdjhQyay34ggAgAA8z5BnSYUSk4U4sdfr1Bjzycu0S1NC+xvghQ4VoUz9r6xpF2YAOCj0rb3LWnjLqllp3fYk8h2sxwc8d+5nb5bzGvHLHJ1UIRk38Ye4dPpmLSr4B8UaYNc9gs4Wgfgxqtii+o5fcB7lbVaVLFGmjUj1jgtIzVKiAR9eyMiWXL3dWMg+WM2Y0MOTsUrSb10kXkJ4g3M4TvH3rV4HTK3ohToxUleYvFbarx/8jeO7oLJfn3nth8NGtd1lJ",
-"expires_in": 3600,
-"id_token": "eyJ0eFor_Demonstration_PurposeszI1NiIsIng1dCI6IkZyZjdqRC1hc0dpRnFBREdUbVRKZkVxMTZZdyJ9.For_Demonstration_PurposesbSIsImh0dHA6Ly9zY2hlbWVzLnN1cGVyb2ZmaWNlLm5ldC9pZGVudGl0eS9hGl0eS9uZXRzZXJ2ZXJfdXJsIjoiaHR0cHM6Ly9zb2Quc3VwZXJvZmZpY2UuY29tL0N1c3QyNjc1OS9SZW1vdGUvThrOFE3RG1CZ28iLCJpYXQiOiIxNTQ2NjEzMTk4IiwiaXNzIjoiaHR0cHM6Ly9zb2Quc3VwZXJvZmZpY2UuY29tqStzCXqhSjd1u7FjsJhqr1xGLDqLzkOm9_0v0nWFHESjBuPhFPIdt6lmcCuy48HGg5G0eM1_3h6SESsukXe0hNMqp3ZHjm5dCEoxE4HziLWSdRZIUa6tkP6wfHDHU_XUJu7PHo8Wx5aG9IBPZ_r1Xd8mgmt6g"
+  "token_type": "Bearer",
+  "access_token": "8A:Cust12345.AZuHwfgrRZPHqdjhQyay34ggAgAA8z5BnSYUSk4U4sdfr1Bjzycu0S1NC+xvghQ4VoUz9r6xpF2YAOCj0rb3LWnjLqllp3fYk8h2sxwc8d+5nb5bzGvHLHJ1UIRk38Ye4dPpmLSr4B8UaYNc9gs4Wgfgxqtii+o5fcB7lbVaVLFGmjUj1jgtIzVKiAR9eyMiWXL3dWMg+WM2Y0MOTsUrSb10kXkJ4g3M4TvH3rV4HTK3ohToxUleYvFbarx/8jeO7oLJfn3nth8NGtd1lJ",
+  "expires_in": 3600,
+  "id_token": "eyJ0eFor_Demonstration_PurposeszI1NiIsIng1dCI6IkZyZjdqRC1hc0dpRnFBREdUbVRKZkVxMTZZdyJ9.For_Demonstration_PurposesbSIsImh0dHA6Ly9zY2hlbWVzLnN1cGVyb2ZmaWNlLm5ldC9pZGVudGl0eS9hGl0eS9uZXRzZXJ2ZXJfdXJsIjoiaHR0cHM6Ly9zb2Quc3VwZXJvZmZpY2UuY29tL0N1c3QyNjc1OS9SZW1vdGUvThrOFE3RG1CZ28iLCJpYXQiOiIxNTQ2NjEzMTk4IiwiaXNzIjoiaHR0cHM6Ly9zb2Quc3VwZXJvZmZpY2UuY29tqStzCXqhSjd1u7FjsJhqr1xGLDqLzkOm9_0v0nWFHESjBuPhFPIdt6lmcCuy48HGg5G0eM1_3h6SESsukXe0hNMqp3ZHjm5dCEoxE4HziLWSdRZIUa6tkP6wfHDHU_XUJu7PHo8Wx5aG9IBPZ_r1Xd8mgmt6g"
 }
 ```
 

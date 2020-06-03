@@ -6,6 +6,7 @@ You will need to provide some login information in order to use the SuperOffice 
 * BASIC authentication: Base64 Encode SuperOffice username:password
 * SOTICKET authentication. Pass the SuperOffice ticket (7T:abc123==) without any encoding.
 * BEARER authentication. Online only. Pass along an access token (7A:abc123==) from SuperId.
+* NEGOTIATE / NTLM authentication. On-site only. Initiates an Active Directory user authentication.
 
 | Auth Type | Example  | On-site | Online |
 |-----------|----------|---------|--------|
@@ -13,18 +14,17 @@ You will need to provide some login information in order to use the SuperOffice 
 | Basic     | YWrtMdo= |   x     |        |
 | SOTicket  | 7T:xyz123abc== | x |    x   |
 | Bearer    | 8A:xyz123abc== |   |    x   |
+| Negotiate     |       |   x     |        |
 
 Basic is not allowed in **Online**, since all usernames and passwords must flow through SuperId to get a bearer access token.
 
-No header request means that you either:
+No `Authorize` header on a request means that you either:
 
 * have [IIS configured to handle identity](Integrated%20with%20Active%20Directory.md) so that you can log in with your Active Directory, or
 * that you send [an `X-XSRF-TOKEN` header](Re-use%20existing%20session.md) to prove that you have access to a logged in session.
 
 
-
 1. autolist
-
 
 
 
@@ -46,7 +46,7 @@ You must explicitly enable the authentication methods you want to use in the `we
 
 **AuthorizeWithTicket** enables SOTicket authentication.
 
-**AuthorizeWithImplicit** enables authentication with IIS identity. This method is not enabled in the Online environment.
+**AuthorizeWithImplicit** enables authentication with IIS identity. Means that your client has authenticated using Active Directory. This method is not enabled in the Online environment.
 
 **CORSEnable** turns on CORS headers, meaning that external sites must be listed in the CORSOrigin config in order to call the WebAPI. Default is on.
 
