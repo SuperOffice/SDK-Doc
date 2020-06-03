@@ -12,7 +12,7 @@ When you are ready to start learning CRMScript:
 
 * Adopt our [coding conventions](../code-quality/coding-conventions.md) and [best practices](../code-quality/best-practices.md).
 
-* Learn about error handling and debugging.
+* Learn about error handling and [debugging](../../Debugging/Debugging.md).
 
 * Ask your questions in the [forums](https://community.superoffice.com/en/developer/forum/rooms/superoffice-product-api-group/customer-service/).
 
