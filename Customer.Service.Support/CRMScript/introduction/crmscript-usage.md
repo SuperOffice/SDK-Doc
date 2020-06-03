@@ -24,7 +24,7 @@ What should happen when a new ticket is registered or a sale is confirmed?
 
 In many cases, our standard pages will suffice. However, if you need something a bit more customized, you can tailor almost everything with CRMScripts. You can even run any script in SuperOffice from the customer care center, given that you have the ID and the key for the script.
 
-## Explore the database without access to the SQL Server
+## Explore the database without access to the database server
 
 **SearchEngine** provides some excellent ways of deep-diving into the database without having a remote session to the SQL Server.
 
@@ -35,8 +35,8 @@ In many cases, our standard pages will suffice. However, if you need something a
 
 Because of security restrictions and performance considerations, there are some things you can't do with CRMScripts.
 
-* You can't put files on our online webserver (no upload or import of scripts).
-* You can't read from or write to physical files on our online webserver.
+* You can't put files on our **online** webserver (no upload or import of scripts).
+* You can't read from or write to physical files on our **online** webserver.
 * It is not allowed to run a script for more than 60 seconds.
 * Memory-intensive scripts are not allowed. Each script may not consume more than 8 MB of memory.
 * The **BulkUpdate** API is unavailable because updates can take a long time.
