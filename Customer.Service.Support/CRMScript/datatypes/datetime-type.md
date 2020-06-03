@@ -2,7 +2,7 @@
 title: DateTime data type
 ---
 
-**DateTime** is a complex data type representing a timestamp with both date and time elements on ISO format.The default value is now.
+**DateTime** is a complex data type representing a timestamp with both date and time elements on ISO format. The default value is now.
 
 Format: YYYY-MM-DD
 

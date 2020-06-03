@@ -37,5 +37,17 @@ Because of security restrictions and performance considerations, there are some 
 * It is not allowed to run a script for more than 60 seconds.
 * Memory-intensive scripts are not allowed. Each script may not consume more than 8 MB of memory.
 * The **BulkUpdate** API is unavailable because updates can take a long time.
-
 * ODBC endpoints are unavailable, which makes it technically impossible to access an Access-database from CRMScript. You can use Zapier instead.
+
+### Complete list of blacklisted data types
+
+The following data types are unsupported in CRMScript.
+
+1. NSAudienceAgent
+2. NSBulkUpdateAgent
+3. NSCRMScriptAgent
+4. NSDashboardAgent
+5. NSDatabaseAgent
+6. NSDatabaseTableAgent
+7. NSErpSyncAgent
+8. NSTrayAppAgent
