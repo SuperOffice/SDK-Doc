@@ -1,5 +1,6 @@
 ---
 title: Bool data type
+uid: crmscript_type_bool
 ---
 
 The logical or boolean data type of CRMScript is **Bool**.

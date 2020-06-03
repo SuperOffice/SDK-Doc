@@ -1,5 +1,6 @@
 ---
 title: Date data type
+uid: crmscript_type_date
 ---
 
 **Date** is a complex data type representing a day, month, and year on ISO format. The default value is now.

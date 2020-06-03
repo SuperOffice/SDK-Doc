@@ -28,6 +28,9 @@ In many cases, our standard pages will suffice. However, if you need something a
 
 **SearchEngine** provides some excellent ways of deep-diving into the database without having a remote session to the SQL Server.
 
+> [!CAUTION]
+> Searches may affect load. Ask only for the data you need. Don't ask for the entire database!
+
 ## Limitations
 
 Because of security restrictions and performance considerations, there are some things you can't do with CRMScripts.

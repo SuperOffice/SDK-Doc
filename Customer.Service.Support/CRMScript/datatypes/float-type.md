@@ -1,5 +1,6 @@
 ---
 title: Float data type
+uid: crmscript_type_float
 ---
 
 Floats are approximations of real numbers written with decimals. If you don't need to work with decimals, use the Integer data type.
@@ -15,7 +16,7 @@ Strings can have numeric content, but are always written in quotes.
 
 ### String toString(Integer decimals)
 
-`toString()` is one of the most frequently used methods, typically when you are going to output something. It returns a string representation of an Float.
+`toString()` is one of the most frequently used methods, typically when you are going to output something. It returns a string representation of a Float.
 
 > [!NOTE]
 > You must always specify how many decimal digits you want.
