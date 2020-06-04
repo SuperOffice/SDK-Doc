@@ -1,3 +1,7 @@
+---
+SortOrder: 3
+---
+
 ## How to search SuperOffice
 
 SuperOffice REST API's expose search endpoints that API consumers use to submit search queries.
