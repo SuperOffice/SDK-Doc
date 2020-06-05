@@ -30,7 +30,7 @@ The **condition** determines if the code inside the block will be run or not. It
 
 You can use both [conditional and logical operators](./operators.md) and also statements that evaluate to true or false.
 
-> [!WARNING]
+> [!WARN]
 > It is crucial that you **update the counter!** If not, your loop will run forever (or until it crashes the browser).
 
 ## Usage
