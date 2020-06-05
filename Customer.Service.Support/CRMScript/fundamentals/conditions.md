@@ -1,5 +1,5 @@
 ---
-title: if else and else if
+title: Control - if else and else if
 sortOrder: 90
 ---
 

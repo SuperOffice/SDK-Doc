@@ -1,5 +1,6 @@
 ---
 title: Loops - for
+sortOrder: 110
 ---
 
 A `for` loop is a control structure for repeating a block of code a number of times. It will run as long as the condition given is true.
