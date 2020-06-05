@@ -1,5 +1,6 @@
 ---
 title: Functions
+sortOrder: 60
 ---
 
 ## What is a function
@@ -137,9 +138,11 @@ print("The square of " +myNumber.toString()+ " is " + square(myNumber).toString(
 The basic built-in data types are:
 
 * Bool
+* Date
+* DateTime
 * Float
-* Generic
 * Integer
+* Map
 * String
 
-Also, you can return objects of all the built-in classes, for example DateTime or Company.
+Also, you can return objects of all the built-in classes, for example Company or Generic.

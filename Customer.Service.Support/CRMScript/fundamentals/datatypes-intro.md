@@ -1,5 +1,6 @@
 ---
 title: Introduction to data types
+sortOrder: 50
 ---
 
 A data type tells the computer what something **is** so that it can be processed properly.

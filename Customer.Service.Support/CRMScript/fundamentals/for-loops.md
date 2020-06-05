@@ -1,5 +1,5 @@
 ---
-title: For loops
+title: Loops - for
 ---
 
 A `for` loop is a control structure for repeating a block of code a number of times. It will run as long as the condition given is true.

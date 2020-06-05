@@ -1,5 +1,6 @@
 ---
 title: Code structure (syntax)
+sortOrder: 10
 ---
 
 CRMScript has a set of rules that dictate how you can and can't write your code. Conventions and best practices expand on the formal syntax.

@@ -1,5 +1,6 @@
 ---
-title: Loop control - break and continue
+title: Loops - break and continue
+sortOrder: 130
 ---
 
 CRMScript has several statements that can alter the flow of `for` and `while` loops. This comes in addition to the loop conditions.
@@ -40,5 +41,5 @@ for(Integer i = 1; i < 10; i++) {
 
 Based on the loop condition, this loop would print the numbers 1-9 in ascending order. However, due to the `continue` statement, when `i` equals 3 we short-circuit the loop and go directly to `i++`. Thus the loop will print all numbers 1-9 **except** 3.
 
-> [!WARNING]
+> [!WARN]
 > As always, it is crucial that you **update the counter** of `while` loops. Pay attention to where you place your update in relation to the `continue` statement!

@@ -1,5 +1,6 @@
 ---
-title: Try...catch 
+title: Control - try...catch 
+sortOrder: 100
 ---
 
 CRMScript has a set of special statements to handle error-situations in your own scripts and react accordingly. This gives you the opportunity to recover, or fail gracefully instead of crashing.

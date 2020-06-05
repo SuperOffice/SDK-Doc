@@ -1,5 +1,6 @@
 ---
-title: While loops
+title: Loops - while
+sortOrder: 120
 ---
 
 A `while` loop is a control structure for repeating a block of code as long as the condition given is true.

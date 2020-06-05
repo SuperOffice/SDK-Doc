@@ -1,5 +1,6 @@
 ---
 title: Indexed collections
+sortOrder: 80
 ---
 
 An array is a special variable that can store more than 1 value at the same time. It can be 1-dimensional like a list, 2-dimensional like a spreadsheet, 3-dimensional like a cube, or multidimensional. The length and number of dimensions is virtually unlimited.
@@ -205,7 +206,7 @@ for(Integer i = 0; i < userPlans.length(); i++) {
 In this example, we start by pushing an empty element, and then we push 2 strings to the back.
 
 > [!TIP]
-> Remember that you can also use the `insert()` function to add an element at a specific 
+> Remember that you can also use the `insert()` function to add an element at a specific index.
 
 #### Removing elements
 

@@ -1,5 +1,6 @@
 ---
-title: CRMScript reserved words
+title: Reserved words
+sortOrder: 20
 ---
 
 The following reserved words can't be used in CRMScript as variables, structs, or function names:
