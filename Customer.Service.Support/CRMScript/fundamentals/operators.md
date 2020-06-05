@@ -1,5 +1,6 @@
 ---
 title: Operators
+sortOrder: 40
 ---
 
 ## CRMScript assignment operators
@@ -68,7 +69,7 @@ The logical operators are commonly used with boolean values and variables (Bool)
 | Operator | Description | Use              |
 |:--------:|-------------|------------------|
 | &&       | logical AND | expr1 && expr2   |
-| \|\|     | logical OR  | expr1 \|\| expr2 |
+| ![or](../../images/operator-logical-or.png)     | logical OR  | expr1 ![or](../../images/operator-logical-or.png) expr2 |
 | !        | logical NOT | !expr            |
 
 ## Operator precedence

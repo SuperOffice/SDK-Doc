@@ -1,5 +1,6 @@
 ---
-title: Conditions if else and else if
+title: if else and else if
+sortOrder: 90
 ---
 
 **Conditional statements** are one of the key control structures in CRMScript. They are used do different tasks based on whether the condition evaluates as true or false.

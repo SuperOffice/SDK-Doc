@@ -1,5 +1,6 @@
 ---
 title: Basic troubleshooting
+sortOrder: 150
 ---
 
 ## What went wrong?

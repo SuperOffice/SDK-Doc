@@ -205,7 +205,7 @@ for(Integer i = 0; i < userPlans.length(); i++) {
 In this example, we start by pushing an empty element, and then we push 2 strings to the back.
 
 > [!TIP]
-> Remember that you can also use the `insert()` function to add an element at a specific 
+> Remember that you can also use the `insert()` function to add an element at a specific index.
 
 #### Removing elements
 
