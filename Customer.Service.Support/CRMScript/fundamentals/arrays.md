@@ -141,7 +141,7 @@ for (Integer x = 0; x < 5; x++) {
 
 for (Integer x = 0; x < 5; x++) {
   for (Integer y = 0; y < 5; y++) {
-    print("\(" + coordinates [x][y] + "\)\t");
+    print("(" + coordinates [x][y] + ")\t");
   }
   print("\n");
 }

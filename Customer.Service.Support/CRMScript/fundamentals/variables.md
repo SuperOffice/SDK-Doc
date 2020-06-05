@@ -13,7 +13,7 @@ You start by **declaring** a variable with its type followed by you chosen name 
 Integer shoeSize;
 ```
 
-In CRMScript, variables *must* be declared with a specific type (for example Integer, Bool, Float, String, or Generic). They must also be declared *before* they are used. If you refer to a variable that is declared later, you will get an error.
+In CRMScript, variables *must* be declared with a specific type (for example Integer, Bool, Float, String, or DateTime). They must also be declared *before* they are used. If you refer to a variable that is declared later, you will get an error.
 
 ## Assignment
 
