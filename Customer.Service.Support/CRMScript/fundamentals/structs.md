@@ -54,7 +54,7 @@ This will output: Volvo XC60, 2019
 
 Method chaining is a pattern where multiple functions are called on the same object consecutively. Using the same object reference, multiple functions can be invoked. It increases the readability of the code and means less redundancy.
 
-```!crmscript
+```crmscript!
 struct Car {
   String brand;
   String model;
