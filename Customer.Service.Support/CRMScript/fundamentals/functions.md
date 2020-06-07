@@ -1,5 +1,6 @@
 ---
 title: Functions
+uid: crmscript_fundamentals_functions
 sortOrder: 60
 ---
 

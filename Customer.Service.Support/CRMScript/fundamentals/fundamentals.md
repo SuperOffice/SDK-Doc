@@ -1,5 +1,6 @@
 ---
 title: Fundamentals of CRMScript
+uid: crmscript_fundamentals
 sortOrder: 20
 ---
 

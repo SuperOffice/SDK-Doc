@@ -1,5 +1,6 @@
 ---
 title: Introduction to data types
+uid: crmscript_fundamentals_datatypes_intro
 sortOrder: 50
 ---
 

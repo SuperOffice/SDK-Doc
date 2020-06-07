@@ -1,5 +1,6 @@
 ---
 title: Reserved words
+uid: crmscript_fundamentals_reserved_words
 sortOrder: 20
 ---
 

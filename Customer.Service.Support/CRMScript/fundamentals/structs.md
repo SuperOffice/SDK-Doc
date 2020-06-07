@@ -1,5 +1,6 @@
 ---
 title: Structs
+uid: crmscript_fundamentals_structs
 sortOrder: 70
 ---
 

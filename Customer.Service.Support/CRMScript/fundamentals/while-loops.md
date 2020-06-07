@@ -1,5 +1,6 @@
 ---
 title: Loops - while
+uid: crmscript_fundamentals_loops_while
 sortOrder: 120
 ---
 

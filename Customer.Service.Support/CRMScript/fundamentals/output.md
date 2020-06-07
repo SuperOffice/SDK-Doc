@@ -1,5 +1,6 @@
 ---
 title: Write output
+uid: crmscript_fundamentals_write_output
 sortOrder: 140
 ---
 

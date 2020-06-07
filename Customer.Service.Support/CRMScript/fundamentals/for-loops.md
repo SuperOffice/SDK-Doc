@@ -1,5 +1,6 @@
 ---
 title: Loops - for
+uid: crmscript_fundamentals_loops_for
 sortOrder: 110
 ---
 
