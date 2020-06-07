@@ -1,9 +1,10 @@
 ---
 title: Basic troubleshooting
+uid: crmscript_fundamentals_troubleshooting
 sortOrder: 150
 ---
 
-## What went wrong?
+## When an error occurs
 
 Here are some common mistakes to watch out for:
 

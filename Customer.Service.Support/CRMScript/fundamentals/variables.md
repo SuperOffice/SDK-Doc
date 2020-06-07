@@ -1,5 +1,6 @@
 ---
 title: Variables
+uid: crmscript_fundamentals_variables
 sortOrder: 30
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Loops - break and continue
+uid: crmscript_fundamentals_loops_break_continue
 sortOrder: 130
 ---
 

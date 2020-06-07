@@ -1,5 +1,6 @@
 ---
 title: Control - try...catch 
+uid: crmscript_fundamentals_try_catch
 sortOrder: 100
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Code structure (syntax)
+uid: crmscript_fundamentals_syntax
 sortOrder: 10
 ---
 

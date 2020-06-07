@@ -1,5 +1,6 @@
 ---
 title: Operators
+uid: crmscript_fundamentals_operators
 sortOrder: 40
 ---
 
