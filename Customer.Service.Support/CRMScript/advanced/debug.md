@@ -1,6 +1,7 @@
 ---
 title: Debugging CRMScript
 uid: crmscript_advanced_debug
+SortOrder: 20
 ---
 
 There are several ways to debug CRMScripts:
