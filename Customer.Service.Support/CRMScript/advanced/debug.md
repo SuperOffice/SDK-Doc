@@ -59,7 +59,7 @@ Use `log()` as you would use `print()`.
 > [!TIP]
 > You can customize logging by adding the following URL fragment: */CustIDxxxxxCS/scripts/ticket.fcgi?action=debug*
 
-**Read log:** *online.superoffice.com/Custxxxxx/CS/scripts/rms.fcgi?_sf=0&action=newLog*
+**Read log:** `online.superoffice.com/Custxxxxx/CS/scripts/rms.fcgi?_sf=0&action=newLog`
 
 ### Onsite - logfile
 
@@ -75,8 +75,8 @@ log("The next leap year is 2024");
 The log files are located in the CS install directory, for example, *E:\SuperOffice\Customer Service\log*
 
 * Directly: */bin/rms.exe?action=newLog*
-* In browser with fcgi: *rms.fcgi?action=dumpWarningLog&date=\<date\>*
-* In browser with exe: *rms.exe?action=dumpWarningLog&date=\<date\>*
+* In browser with fcgi: *rms.fcgi?action=dumpWarningLog&date=&lt;date&gt;*
+* In browser with exe: *rms.exe?action=dumpWarningLog&date=&lt;date&gt;*
 
 ## printDebug()
 
