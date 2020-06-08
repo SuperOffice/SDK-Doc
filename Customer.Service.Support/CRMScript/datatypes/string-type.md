@@ -13,6 +13,55 @@ String myLocation = 'Oslo';
 String onion = "The 'onion' has many layers.";
 ```
 
+## Constructors
+
+### String String(String value)
+
+Pass a `String` to copy into a new object.
+
+```crmscript!
+String squash = "yellow crook neck";
+String favSquash = String(squash);
+String winterSquash = String("butternut");
+printLine("Summer favorite: " + favSquash + "\nFall favorite: " + winterSquash);
+```
+
+### String String(Byte[] byteArray)
+
+Pass a byte array to build a new `String` object.
+
+```crmscript!
+String fallTreat = "Roasted pumpkin seeds are awesome";
+Byte[] secret = fallTreat.toByteArray();
+String jackO = String(secret);
+printLine(jackO);
+```
+
+> [!NOTE]
+> This constructor doesn't support Unicode.
+
+### String String(Byte[] byteArray, String codepage)
+
+Same as above, but also takes a [code page identifier](https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers).
+
+### String String(NSStream byteArray)
+
+Pass a byte array from an NSStream to build a new `String` object.
+
+```crmscript!
+String hot = "Ghost";
+NSStream stream = decodeBase64AsStream(encodeBase64(hot.toByteArray()));
+String hotPepper = String(stream);
+printLine("Insanely hot chili pepper: " + hotPepper);
+```
+
+> [!NOTE]
+> This constructor doesn't support Unicode.
+
+### String String(NSStream byteArray, String codepage)
+
+Same as above, but also takes a [code page identifier](https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers).
+
 ## Special characters
 
 Some characters are part of the CRMScript syntax and must be escaped with a backslash. These are:
