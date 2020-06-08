@@ -1,6 +1,6 @@
 ---
 title: searchEngine
-uid: searchengine-intro
+uid: search_engine
 ---
 
 ## An in-depth guide to the CRMScript searchEngine

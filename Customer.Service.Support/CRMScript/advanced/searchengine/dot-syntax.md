@@ -1,5 +1,6 @@
 ---
 title: Dot-syntax
+uid: search_engine_dot_syntax
 SortOrder: 20
 ---
 

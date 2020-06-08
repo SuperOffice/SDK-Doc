@@ -1,6 +1,6 @@
 ---
 title: Insert, update, and delete
-uid: se-db-actions
+uid: search_engine_db_actions
 SortOrder: 60
 ---
 
