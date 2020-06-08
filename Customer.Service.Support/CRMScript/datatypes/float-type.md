@@ -10,6 +10,41 @@ Integer i = 42;
 Float f = 3.14;
 ```
 
+## Constructors
+
+### Float Float(Float value)
+
+Pass a `Float` to copy into a new object.
+
+```crmscript!
+Float m = 3.14;
+Float pi = Float(m);
+Float e = Float(2.71);
+printLine(pi.toString(2) + ", " + e.toString(2));
+```
+
+### Float Float(Integer value)
+
+Pass an `Integer` and have it converted to a `Float` object.
+
+```crmscript!
+Integer n = 10;
+Float discount = Float(n);
+Float vat = Float(25);
+printLine(discount.toString(1) + ", " + vat.toString(2));
+```
+
+### Float Float(String number)
+
+Pass a `String` containing a decimal number. The constructor will parse the text and create a `Float` object.
+
+```crmscript!
+String o = "1.618";
+Float phi = Float(o);
+Float twoSquared = Float("1.4142");
+printLine(phi.toString(1) + ", " + twoSquared.toString(2));
+```
+
 ## Numeric strings
 
 Strings can have numeric content, but are always written in quotes.
@@ -26,7 +61,6 @@ Float pi = 3.14159;
 for(Integer i = 0; i < 6; i++) {
   printLine(pi.toString(i));
 }
-
 ```
 
 ## Math operators

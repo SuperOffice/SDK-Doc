@@ -14,6 +14,29 @@ print(t.toString());
 
 This will print the current time.
 
+## Constructors
+
+### Time Time(Time time)
+
+Pass a `Time` object to copy into a new object.
+
+```crmscript!
+Time t;
+Time prev = Time(t);
+printLine(prev.toString());
+```
+
+### Time Time(String time)
+
+Pass a `String` containing a timestamp on format **HH:MM:SS**. The constructor will parse the text and create a `Time` object.
+
+```crmscript!
+String noon = "12:00:00";
+Time lunch = Time(noon);
+Time dailyMeeting = Time("08:00:00");
+printLine(lunch.toString() + "\n" + dailyMeeting.toString());
+```
+
 ## Time as strings
 
 ### String toString()
