@@ -1,6 +1,6 @@
 ---
 title: Exploring search results
-uid: uid: search_engine_results
+uid: search_engine_results
 SortOrder: 50
 ---
 
