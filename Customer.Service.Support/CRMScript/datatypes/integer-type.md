@@ -11,6 +11,31 @@ Integer i = 42;
 Float f = 3.14;
 ```
 
+## Constructors
+
+### Integer Integer(Integer value)
+
+Pass an `Integer` to copy into a new object.
+
+```crmscript!
+Integer i = 42;
+Integer j = Integer(i);
+Integer k = Integer(256);
+printLine(j.toString() + ", " + k.toString());
+```
+
+### Integer Integer(String value)
+
+Pass a `String` containing a number. The constructor will parse the text and create an `Integer` object.
+
+```crmscript!
+String s = "1729";
+Integer ramanujan = Integer(s);
+Integer favOfSheldon = Integer("73");
+printLine("Ramanujan's number: " + ramanujan.toString());
+printLine("Sheldon Cooper's favorite number: " + favOfSheldon.toString());
+```
+
 ## Numeric strings
 
 Strings can have numeric content, but are always written in quotes.

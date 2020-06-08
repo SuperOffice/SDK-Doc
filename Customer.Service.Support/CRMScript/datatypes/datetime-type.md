@@ -15,6 +15,43 @@ print(dt.toString());
 
 This will print today's date and the current time.
 
+## Constructors
+
+### DateTime DateTime(DateTime dt)
+
+Pass a `DateTime` object to copy into a new object.
+
+```crmscript!
+DateTime dt;
+DateTime past = DateTime(dt);
+printLine(past.toString());
+```
+
+### DateTime DateTime(Integer year, Integer month, Integer mday,Integer hour,Integer min,Integer sec)
+
+Specify all elements of a DateTime individually. The constructor automatically calculates the weekday.
+
+```crmscript!
+DateTime schoolEnds = DateTime(2020,06,22,11,0,0);
+printLine(schoolEnds.toString());
+```
+
+### DateTime DateTime(String p0)
+
+Pass a `String` containing date and time on format one of the listed formats. The constructor will parse the text and create a `DateTime` object.
+
+* YYYY-MM-DD HH:MM:SS
+* YYYY-MM-DD HH:MM - automatically sets sec = 0
+* YYYYMMDDHHMMSS - mysql.timestamp
+* YYYY-MM-DD - automatically sets the time to 23:59:59 or 0:0:0 depending on endOfDay setting
+* an empty string or "0" - sets stamp to Jan 1. 1970 00:00:00
+* YYYY-MM-DD HH:MM:SS:XXX - isNull()
+
+```crmscript!
+DateTime graduation = DateTime("2020-06-22 11:00");
+printLine(graduation.toString());
+```
+
 ## Timestamps as strings
 
 ### String toString()

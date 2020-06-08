@@ -15,6 +15,29 @@ print(d.toString());
 
 This will print today's date.
 
+## Constructors
+
+### Date Date(Date p0)
+
+Pass a `Date` object to copy into a new object.
+
+```crmscript!
+Date d;
+Date next = Date(d);
+printLine(next.toString());
+```
+
+### Date Date(String date)
+
+Pass a `String` containing a date on format **YYYY-MM-DD**. The constructor will parse the text and create a `Date` object.
+
+```crmscript!
+String newYearsDay = "2020-01-01";
+Date q1 = Date(newYearsDay);
+Date birthDay = ("2011-01-13");
+printLine(q1.toString() + "\n" + birthDay.toString());
+```
+
 ## Dates as strings
 
 ### String toString()

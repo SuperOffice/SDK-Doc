@@ -9,6 +9,19 @@ Variables of this type can only have 2 values: **true** or **false** and are com
 
 Aside from testing the value, you can't do much except to convert it to a number or a string.
 
+## Constructors
+
+### Bool Bool(Bool value)
+
+Pass a `Bool` to copy into a new object.
+
+```crmscript!
+Bool isWellFormed = true;
+Bool isValid = Bool(isWellFormed);
+Bool isCertified = Bool(false);
+printLine("Valid: " + isValid.toString() + "\t Certified: " + isCertified.toString();
+```
+
 ## Integer toInteger()
 
 Will return an integer representation of the boolean value.
