@@ -4,6 +4,8 @@ uid: search_engine_run
 SortOrder: 40
 ---
 
+Things to think about when executing a query.
+
 ## Pre-run preparations
 
 Before you run the SearchEngine query, you need to consider these 3 questions and possibly add some code:
@@ -14,7 +16,7 @@ Before you run the SearchEngine query, you need to consider these 3 questions an
 
 * Do you want the results in a specific format or is the default sufficient? This determines which flavor of `execute()` you call.
 
-### Void bypassNetServer(Bool p0)
+## Void bypassNetServer(Bool p0)
 
 All queries are by default now sent via NetServer. `bypassNetServer()` allows you to circumvent NetServer and go directly to the database.
 
@@ -46,13 +48,13 @@ se.bypassNetServer(true);
 > [!CAUTION]
 > Be aware of any security implications! You are running queries outside sentry restrictions, and might get access to data not intended for your eyes.
 
-### Void setCallBack(String functionName)
+## Void setCallBack(String functionName)
 
 Register you CRMScript function to convert data values as they come back. The function must be declared before calling `setCallBack()`.
 
-## Run
+**Run**
 
-### Integer execute()
+## Integer execute()
 
 Must be called to get the results.
 
@@ -75,11 +77,11 @@ The following formats are available:
 * HTML table
 * JSON (with or without JSONBuilder)
 
-### Void executeInto(StringMatrix matrix)
+## Void executeInto(StringMatrix matrix)
 
 Runs the query and returns a 2-dimensional string array. This is one of the built-in classes/complex data types of CRMScript.
 
-### String executeTextTable()
+## String executeTextTable()
 
 Runs the query and returns a text-formatted table in a continuous string.
 
@@ -101,7 +103,7 @@ printLine(se.executeTextTable());
 > [!NOTE]
 > `executeTextTable()` will have some overhead for large result sets!
 
-### String executeHTMLTable()
+## String executeHTMLTable()
 
 Runs the query and returns an HTML formatted table in a continuous string.
 
@@ -122,7 +124,7 @@ Result:
 
 (Line breaks have been added for presentation. They are not there in the result set.)
 
-### String executeJSON()
+## String executeJSON()
 
 Runs the query and returns a JSON formatted string. If you wish better control with the resulting JSON, use `executeToJSONBuilder()` instead.
 
@@ -139,7 +141,7 @@ This example will produce JSON looking something like this:
 [{"sale.sale_id":"1","sale.heading":"SalgAAAA","sale.amount":"500"},...
 ```
 
-### Void executeToJSONBuilder(JSONBuilder jb, String fields, String arrayName)
+## Void executeToJSONBuilder(JSONBuilder jb, String fields, String arrayName)
 
 Runs the query and passes the result through a JSONBuilder. This gives you more control over the resulting JSON.
 

@@ -4,7 +4,7 @@ uid: search_engine_db_actions
 SortOrder: 60
 ---
 
-## Other query types
+Other query types.
 
 ### Integer insert()
 
