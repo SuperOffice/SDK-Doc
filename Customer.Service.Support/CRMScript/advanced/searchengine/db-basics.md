@@ -1,6 +1,6 @@
 ---
 title: Database basics
-uid: db-basics
+uid: search_engine_basics
 SortOrder: 10
 ---
 
@@ -28,22 +28,20 @@ Foreign and primary keys explicitly define the direct relationships between tabl
 As a general principle, the SuperOffice database is very lax.
 
 * There are no declared constraints on tables.
-* Referential integrity is not enforced strictly.
-* The structure would make a computer science professor or system administrator shudder.
-
+* Referential integrity is not strictly enforced.
 * We break the 3rd normal form (a database design principle) by storing both the `contact_id` and the `person_id` in the appointment to make the database more efficient.
 
 ### SuperOffice view of the world
 
 SuperOffice has 5 important things:
 
-* **Companies**
+* **Companies** in code and database references referred to as *contact*.
+* **Associates** are SuperOffice users - employees of the company
 * **Projects**
-* Users - employees of the company (**associates**)
-* Stuff that employees do with companies and projects (**activities**)
-  * Documents that are written
-  * Appointments
-  * Sales and opportunities
+* **Activities** are things employees do with companies and projects
+  * Created documents
+  * Created appointments
+  * Created sales and opportunities
 * **Tickets** from Service are linked to persons who may or may not belong to a company.
 
 You can [read more about the main tables](https://community.superoffice.com/documentation/SDK/SO.Database/html/TheMainTables.htm) in the developer documentation.
@@ -88,7 +86,7 @@ To benefit from the combined data from related tables, they must be **joined** t
 
 ## Queries
 
-When you add fields and criteria to searchEngine, you actually build an SQL query. This is a complete SELECT statement, which specifies:
+When you add fields and criteria to SearchEngine, you actually build an SQL query. This is a complete SELECT statement, which specifies:
 
 * the columns and tables to fetch data from
 * conditions that the data must meet
@@ -108,7 +106,3 @@ SELECT select_list
 ## Indexes
 
 If you need fast access to a table's rows, it is possible to create an index, a separate structure over selected columns. It is an efficient way to retrieve data, but adds complexity and cost to changing data. An analog equivalent would be the alphabetic list of topics with page-references you find at the back of an encyclopedia.
-
-## Mirroring
-
-[Database mirroring](https://community.superoffice.com/en/developer/create-apps/concepts/integration-services/database-mirroring/) is an API feature that applications can use for local processing when real-time data is not the most important consideration. It's not a standalone product.

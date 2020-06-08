@@ -1,5 +1,6 @@
 ---
 title: Data types
+uid: crmscript_datatypes
 SortOrder: 40
 ---
 

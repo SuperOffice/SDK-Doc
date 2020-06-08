@@ -1,6 +1,6 @@
 ---
 title: Running a query
-uid: se-run
+uid: search_engine_run
 SortOrder: 40
 ---
 

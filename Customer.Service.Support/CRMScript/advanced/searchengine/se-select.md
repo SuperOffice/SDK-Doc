@@ -1,6 +1,6 @@
 ---
 title: Building a query
-uid: se-select
+uid: search_engine_select
 SortOrder: 30
 ---
 
