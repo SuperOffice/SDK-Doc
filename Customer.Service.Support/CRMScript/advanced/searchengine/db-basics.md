@@ -106,3 +106,5 @@ SELECT select_list
 ## Indexes
 
 If you need fast access to a table's rows, it is possible to create an index, a separate structure over selected columns. It is an efficient way to retrieve data, but adds complexity and cost to changing data. An analog equivalent would be the alphabetic list of topics with page-references you find at the back of an encyclopedia.
+
+An index can only be added to database table columns in onsite installations, where customers have direct access to the database server. Indexes can, however, be added to extra fields both in onsite and online in the extra field settings.
