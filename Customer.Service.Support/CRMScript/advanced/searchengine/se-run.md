@@ -2,8 +2,9 @@
 title: Running a query
 SortOrder: 40
 ---
-
 # Running a query
+
+Things to think about when submitting queries.
 
 ## Pre-run preparations
 
@@ -92,11 +93,11 @@ printLine(se.executeTextTable());
 ```
 
 ```text
----------------------------------------
-|sale.sale_id|sale.heading|sale.amount|
----------------------------------------
-|1           |SalgAAAA    |500        |
-|2           |SalgFAAF    |220000     |
+- - - - - - - - - - - - - - - - - - - -
+ sale.sale_id|sale.heading|sale.amount
+- - - - - - - - - - - - - - - - - - - -
+ 1            SalgAAAA     500        
+ 2            SalgFAAF     220000     
 ```
 
 > [!NOTE]
