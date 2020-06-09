@@ -1,10 +1,8 @@
 ---
 title: Running a query
+uid: search_engine_run
 SortOrder: 40
 ---
-# Running a query
-
-Things to think about when submitting queries.
 
 ## Pre-run preparations
 
@@ -34,6 +32,15 @@ Before you make the call, you must also set the **registry value** (reg_id = 235
 
 ```sql
 UPDATE crm7.registry SET value = 1 WHERE reg_id = 235
+```
+
+Accomplish the same using CRMScript.
+
+```crmscript
+SearchEngine se;
+se.addData("registry.value", "1");
+se.addCriteria("registry.reg_id", "equals", "235");
+se.update();
 ```
 
 Since you can't bypass security in CRM Online, you can only use this bypass mechanism onsite.
