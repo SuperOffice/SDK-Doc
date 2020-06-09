@@ -1,10 +1,9 @@
 ---
 title: Running a query
-uid: search_engine_run
 SortOrder: 40
 ---
 
-Things to think about when executing a query.
+# Running a query
 
 ## Pre-run preparations
 
