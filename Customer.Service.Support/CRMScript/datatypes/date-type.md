@@ -34,7 +34,7 @@ Pass a `String` containing a date on format **YYYY-MM-DD**. The constructor will
 ```crmscript!
 String newYearsDay = "2020-01-01";
 Date q1 = Date(newYearsDay);
-Date birthDay = ("2011-01-13");
+Date birthDay = Date("2011-01-13");
 printLine(q1.toString() + "\n" + birthDay.toString());
 ```
 
