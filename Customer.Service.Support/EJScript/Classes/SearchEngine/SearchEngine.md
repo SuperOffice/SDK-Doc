@@ -6,10 +6,9 @@ classref: 1
 sortOrder: 8979
 ---
 
-The searchEngine is originally made for searching and fetching data from the eJournal database. Thereby its name.
+The SearchEngine is originally made for searching and fetching data from the eJournal database. Thereby its name.
 Has later been extended with features for inserting and updating rows.
-The searchEngine is a tool for building up sql-queries, by adding fields, criterias and data.
-
+The SearchEngine is a tool for building up sql-queries, by adding fields, criteria and data.
 
 ###The fields must be given on the following form:###
 starttablename.fieldname, for example "ticket.title"
