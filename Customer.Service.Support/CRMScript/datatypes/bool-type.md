@@ -19,7 +19,7 @@ Pass a `Bool` to copy into a new object.
 Bool isWellFormed = true;
 Bool isValid = Bool(isWellFormed);
 Bool isCertified = Bool(false);
-printLine("Valid: " + isValid.toString() + "\t Certified: " + isCertified.toString();
+printLine("Valid: " + isValid.toString() + "\t Certified: " + isCertified.toString());
 ```
 
 ## Integer toInteger()
