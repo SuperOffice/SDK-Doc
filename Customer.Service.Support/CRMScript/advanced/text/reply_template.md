@@ -3,21 +3,38 @@ title: Reply templates
 uid: crmscript_reply_template
 ---
 
-A *reply template* is a blueprint for an email. It consists of regular text and template variables. This, could for example be a signature template:
+A *reply template* is a blueprint for an email. It consists of regular text and template variables.
+
+**Example email confirmation template:**
 
 ```text
-Best Regards,
-{auth}
-{atit}
-{onam}
-Address: {opad}, {ozip} {ocit}
-Phone: {audp}
-Mobile phone: {aupc}
-{auem}
-{owww}
+Hi [[fullname]]
+
+Thank you for registering on our Customer Centre.
+
+Please click on the following link to complete registration.
+
+[[confirmUrl]]
+
+Best regards
+[[config.companyName]]
 ```
 
-[Check out more examples](https://community.superoffice.com/documentation/help/en/crm/8.5/webhelpadmin/index.htm#t=Template_variables_examples.htm)
+**Example new request assignment template:**
+
+```text
+You have been assigned request no. [[ticket.id]]. The URL of the request is:
+
+[[ticket.url]]
+
+Title...........: [[ticket.title]]
+Posted by........: [[ticket.author]]
+Category.........: [[ticket.category.fullname]]
+Security level....: [[ticket.slevel]]
+Customer........: [[ticket.custName]]
+E-mail.............: [[ticket.custEmail]]
+Company.......: [[ticket.custCompany]]
+```
 
 ### Template components
 
@@ -46,9 +63,9 @@ Many templates are available in several languages.
 
 ## Template variables
 
-A *template variable* is a named placeholder that you can put in a document- or email template. When the template is applied, the variable is substituted with the actual value. For example, {auth} translates to the sender's 1st and last name. This lets you automate the personalization of content.
+A *template variable* is a named placeholder that you can put in a document- or email template. When the template is applied, the variable is substituted with the actual value. For example, {customer.firstname} translates to the customer's 1st name. This lets you automate the personalization of content.
 
-Use the embedded help to [look up specific template variables](https://community.superoffice.com/documentation/help/en/crm/8.5/webhelpadmin/index.htm#t=Template_variables.htm%23bc-2&rhtocid=2_1)
+Use the embedded help to [look up specific template variables](https://community.superoffice.com/documentation/help/EN/CRM/8.5/UserHelp/index.htm#t=Service%2Ftopics%2FTemplate_variables.html)
 
 > [!NOTE]
 > The date and time in template variables are controlled by the PC's system clock.
