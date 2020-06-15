@@ -110,6 +110,17 @@ This will print today's date and the current time formatted similar to `toString
 
 **Mode:** \[0-16\], see end of this section
 
+Try the following snippet to view output of all modes.
+
+```crmscript!
+DateTime dt;
+Integer i = 0;
+while (i < 17){
+printLine(dt.toString(i,1,true));
+i++;
+}
+```
+
 **Languages:**
 
 | Code | Language  |
