@@ -12,7 +12,6 @@ Sets a named field to the given value. Look up names in the reference section do
 
 > [!NOTE]
 > Both parameters are strings! Remember to use quotes even for IDs.
->
 > You must call `save()` after setting all applicable values to actually create or update the message.
 
 ```crmscript!
