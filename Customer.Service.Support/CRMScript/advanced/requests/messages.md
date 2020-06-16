@@ -1,6 +1,7 @@
 ---
 title: Messages
 uid: crmscript_messages
+SortOrder: 20
 ---
 
 ## Create and update messages
@@ -91,7 +92,7 @@ m.load(2);
 print(m.getValue("timeCharge").toString());
 ```
 
-### Integer[] getAttachments()
+### Integer\[\] getAttachments()
 
 Fetches the ID of all attachments connected to the message.
 
