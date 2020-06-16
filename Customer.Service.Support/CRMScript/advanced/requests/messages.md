@@ -1,6 +1,7 @@
 ---
 title: Messages
 uid: crmscript_messages
+SortOrder: 20
 ---
 
 ## Create and update messages
@@ -10,15 +11,13 @@ uid: crmscript_messages
 Sets a named field to the given value. Look up names in the reference section down below, or check out the [class reference](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/EJScript-Classes-Message-setValue.htm).
 
 > [!NOTE]
-> Both parameters are strings! Remember to use quotes even for IDs.
->
+> Both parameters are strings! Remember to use quotes even for IDs. <br>
 > You must call `save()` after setting all applicable values to actually create or update the message.
 
 ```crmscript!
 Message m;
 m.setValue("emailHeader", "Test");
 m.setValue("body", "This is a test");
-m.save();
 print(m.save().toString());
 ```
 
@@ -32,6 +31,7 @@ Connects 1 or more attachments to the message. Attachments are identified by the
 ```crmscript
 Message m;
 m.setValue("ticketId","4");
+m.save();
 Vector v;
 v.parseString("1,4,7",",");
 m.setAttachments(v);
@@ -91,7 +91,7 @@ m.load(2);
 print(m.getValue("timeCharge").toString());
 ```
 
-### Integer[] getAttachments()
+### Integer\[\] getAttachments()
 
 Fetches the ID of all attachments connected to the message.
 

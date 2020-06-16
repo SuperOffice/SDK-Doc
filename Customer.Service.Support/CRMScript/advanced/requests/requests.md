@@ -1,6 +1,7 @@
 ---
 title: Requests
 uid: crmscript_requests
+SortOrder: 10
 ---
 
 **Requests** are the core of SuperOffice Service. You:
@@ -16,7 +17,7 @@ Different companies have different routines for request handling and may use Sup
 
 ### Scenario 1: The customer submits the request by email
 
-1. The customer emails support@company.com or fills out a form in a user-support portal.
+1. The customer emails `support@company.com` or fills out a form in a user-support portal.
 2. The customer gets an **automatic reply** letting them know the inquiry is received.
 3. The system automatically **turns the inquiry into a request** in SuperOffice Service.
 4. The request goes to a request handler, who reads through it.

@@ -1,7 +1,7 @@
 ---
 title: Text
 uid: crmscript_text
-SortOrder: 20
+SortOrder: 30
 ---
 
 ## An in-depth guide to the CRMScript text features
