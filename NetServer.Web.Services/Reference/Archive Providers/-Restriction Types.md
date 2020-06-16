@@ -76,17 +76,13 @@ provided by SuperOffice.
 |beforeToday|R|Before today|
 |today|R|Today|
 |afterToday|R|After today|
-|lastWeek|R;R|Last week|
-|thisWeek|R;R|This week|
-|nextWeek|R;R|Next week|
-|lastMonth|R;R|Last month|
-|thisMonth|R;R|This month|
-|nextMonth|R;R|Next month|
-|lastQuarter|R;R|Last quarter|
-|thisQuarter|R;R|This quarter|
-|nextQuarter|R;R|Next quarter|
-|thisHalf|R;R|This half|
-|thisYear|R;R|This year|
+|thisPeriod|Period|This 1=day/2=week/3=month/4=quarter/5=year|
+|thisAndNext|W:int;Period|This and the next N day/week/month/quarter/year|
+|nextPeriod|W:int;Period|The next N day/week/month/quarter/year|
+|thisAndPrevious|W:int;Period|This and the previous N day/week/month/quarter/year|
+|previousPeriod|W:int;Period|This and the previous N day/week/month/quarter/year|
+|thisPreviousAndNext|Period|The current and the previous and next 1=day/2=week/3=month/4=quarter/5=year|
+
 
 ## RestrictionType 'unlimitedDate'
 | Name | ValueHint | Display Name |
@@ -98,6 +94,17 @@ provided by SuperOffice.
 |beforeToday|R|Before today|
 |today|R|Today|
 |afterToday|R|After today|
+|thisPeriod|Period|This 1=day/2=week/3=month/4=quarter/5=year|
+|thisAndNext|W:int;Period|This and the next N day/week/month/quarter/year|
+|nextPeriod|W:int;Period|The next N day/week/month/quarter/year|
+|thisAndPrevious|W:int;Period|This and the previous N day/week/month/quarter/year|
+|previousPeriod|W:int;Period|This and the previous N day/week/month/quarter/year|
+|thisPreviousAndNext|Period|The current and the previous and next 1=day/2=week/3=month/4=quarter/5=year|
+
+## Old date restrictons / 8.x and earlier
+
+| Name | ValueHint | Display Name |
+| ---- | ------ | ------ |
 |lastWeek|R;R|Last week|
 |thisWeek|R;R|This week|
 |nextWeek|R;R|Next week|
