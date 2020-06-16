@@ -76,7 +76,7 @@ t.save("audio",true, true);
 Adds 1 or more customer IDs to the list of secondary customers.
 
 > [!TIP]
-> A vector is a 1-dimensional list of String objects.
+> A [vector](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/EJScript-Classes-Vector-Vector.htm) is a 1-dimensional list of String objects.
 
 ```crmscript
 Ticket t;
