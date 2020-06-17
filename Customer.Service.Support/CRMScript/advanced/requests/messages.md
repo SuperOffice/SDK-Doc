@@ -18,7 +18,6 @@ Sets a named field to the given value. Look up names in the reference section do
 Message m;
 m.setValue("emailHeader", "Test");
 m.setValue("body", "This is a test");
-m.save();
 print(m.save().toString());
 ```
 
@@ -32,6 +31,7 @@ Connects 1 or more attachments to the message. Attachments are identified by the
 ```crmscript
 Message m;
 m.setValue("ticketId","4");
+m.save();
 Vector v;
 v.parseString("1,4,7",",");
 m.setAttachments(v);
