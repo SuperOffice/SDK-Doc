@@ -38,6 +38,21 @@ m.setAttachments(v);
 m.save();
 ```
 
+### Void addHeader(String type, String value)
+
+Adds a display header to the message. Not to be confused with email header!
+
+Display headers are shown at the **View request** page when listing messages.
+
+Commonly used types are *To*, *Cc*, *Bcc*, and *SMS*. The corresponding value would then be the recipients as a comma-separated list.
+
+```crmscript
+Message m;
+m.load(1);
+m.addHeader("To","post@company.com");
+m.save();
+```
+
 ### Integer save()
 
 Saves a new or updated message and returns its ID.
@@ -68,6 +83,52 @@ A  variant of `save()` with a setting for controlling processing:
 Message m;
 m.setValue("createdBy","1");
 m.save("Need to follow up",true);
+```
+
+## Use a reply template
+
+### Void toParser(Parser parser)
+
+Passes relevant data from the message to the parser.
+
+* message.id
+* message.slevel, message.slevelInteger (as text in the active user's language and as number)
+* message.createdAt, message.createdAtRaw (formats *DD. MMM YYYY, kl. hh:mm* and *YYYY-MM-DD hh:mm:ss*)
+* message.author
+* message.header
+* message.body, message.bodyPlain, message.bodyHtml
+* message.messageCategory (Message: 0, Bounce: 1, OutboxFailed: 2
+* message.mailSorter (mail filter applied to incoming message)
+* message.x_myextrafield (extrafield value)
+
+```crmscript!
+Message m;
+m.setValue("body", "Thank you, mr. Data!");
+m.setValue("type", "html");
+
+Parser p;
+m.toParser(p);
+printLine("Body passed to parser: " + p.getVariable("message.body",0));
+
+ReplyTemplate rt;
+rt.load(19);
+String htmlBody = rt.getHtmlBody(2);
+
+m.setValue("bodyHtml" , p.parseString(htmlBody));
+
+printLine("\nHTML body of message after parsing:\n\n" + m.getValue("bodyHtml"));
+```
+
+Read more about [the parser](../text/parser.md) and [reply templates](../text/reply_template.md).
+
+### Void convertInlineImages()
+
+Converts any inline images from content ID (cid:) to standard HTTP.
+
+```crmscript
+Message m;
+m.convertInlineImages();
+m.save();
 ```
 
 ## Get message info
@@ -104,6 +165,71 @@ while(attachments.length() > 0) {
 }
 ```
 
+### Send message
+
+### Void saveInvolved(String emailAddress)
+
+Keeps track of recipients that are not necessarily customers on the request.
+
+The list of involved is used to show address suggestions in the **Add message** screen.
+
+```crmscript
+Message m;
+m.saveInvolved("post@company.com");
+```
+
+### Void saveInvolved(Vector emailAdresses)
+
+Same as above, except you can specify a list of email addresses rather than just 1.
+
+### Bool send(Vector to, Vector cc, Vector bcc)
+
+Sends an email version of the message to the main contacts on the parent ticket.
+
+If sending for some reason fails, `send()` will return **false**.
+
+```crmscript!
+Message m;
+m.setValue("createdBy","1");
+m.save();
+Vector to;
+Vector cc;
+Vector bcc;
+to.parseString("cto@company.no",",");
+cc.parseString("teamlead@company.no",",");
+bcc.parseString("cto@competitor.no",",");
+
+Bool sent = m.send(to,cc,bcc);
+printLine(sent.toString());
+```
+
+### Bool send(Vector to, Vector cc, Vector bcc, String subject)
+
+A variant of `send()` where you can specify the subject.
+
+```crmscript
+m.send(to,cc,bcc,"Recruitment");
+```
+
+### Bool send(Vector to, Vector cc, Vector bcc, String subject, String bodyHeading)
+
+A variant of `send()` where you can specify the subject and also a  heading for the body part.
+
+```crmscript
+m.send(to,cc,bcc,"Recruitment","");
+```
+
+> [!TIP]
+> For no heading, pass an empty string. To use the default heading, pass **null** (same as omitting the string).
+
+### Bool sendSms(Vector to)
+
+Sends an SMS version of the message to the numbers listed.
+
+### Void sendFacebook()
+
+Sends a Facebook version of the message.
+
 ## Reference
 
 ### Frequently used values
@@ -120,7 +246,7 @@ while(attachments.length() > 0) {
 | bodyHtml     | html_body    | The html body for the message (if any)                      |
 | emailHeader  | email_header | Raw text header                                             |
 
-For a complete list of fields, see the [database reference](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-ej_message.htm)
+For a complete list of fields, see the [database reference](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-ej_message.htm).
 
 ### Timestamp values
 
