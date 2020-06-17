@@ -8,7 +8,7 @@ SortOrder: 30
 
 ```crmscript!
 SearchEngine se;
-se.addField("category.name");
+se.addField("ej_category.name");
 printLine(se.executeTextTable());
 ```
 
@@ -16,7 +16,7 @@ printLine(se.executeTextTable());
 
 ```crmscript!
 SearchEngine se;
-se.addField("Priority.name");
+se.addField("ej_priority.name");
 printLine(se.executeTextTable());
 ```
 
@@ -35,3 +35,34 @@ printLine(se.executeTextTable());
 
 > [!TIP]
 > List tags by their ID as a comma-separated string.
+
+### List all tickets with a given status
+
+```crmscript!
+SearchEngine se;
+se.addFields("ticket", "id,title,cust_id.contact_id.associate_id");
+se.addCriteria("ticket.status", "OperatorEquals", "1");
+printLine(se.executeTextTable());
+```
+
+This snippet lists all **active** tickets. Change the last argument to `addCriteria()` to filter on other statuses.
+
+## Find people
+
+### Find "Our contact" on the company for the customer connected to the ticket
+
+There is not a direct route from a ticket to an associate. You need to step through the tables in the following order using the foreign keys:
+
+* Ticket (cust_id)
+* Person (contact_id)
+* Contact (associate_id)
+* Associate
+
+```crmscript
+SearchEngine se;
+se.addField("ticket.cust_id.contact_id.associate_id");
+se.addCriteria("ticket.id", "OperatorEquals", "1");
+se.execute();
+```
+
+This snippet fetches the associate ID of "Our contact" form ticket 1.
