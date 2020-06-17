@@ -108,6 +108,177 @@ t.load(2);
 print(t.getValue("ticketStatus"));
 ```
 
+## Accept ticket
+
+Accepting or assigning a ticket means to update `ownedBy`. You might also want to update the status and the last modified timestamps.
+
+```crmscript
+Ticket t;
+t.load(1);
+
+if (t.getValue("ownedBy") == "1") {
+  t.setValue("ownedBy", "7");
+  t.setValue("ticketStatus", "1");
+  String now = getCurrentDateTime().toString();
+  t.setValue("lastChanged", now);
+  t.setValue("dbiLastModified", now);
+  t.save();
+}
+```
+
+### Bool notifyEmail(Integer replyTemplateId)
+
+Sends a notification email to the owner of the ticket.
+
+Call `notifyEmail()` when you create a new ticket, add a new message to a ticket, and similar events.
+
+Pass the ID of a suitable [reply template](../text/reply_template.md).
+
+```crmscript
+Ticket t;
+t.setValue("title", "No audio");
+t.setValue("ownedBy", "3");
+t.save();
+t.notifyEmail(8);
+```
+
+## Add a message to ticket
+
+```crmscript
+Ticket t;
+t.load(1);
+
+String owner = t.getValue("ownedBy");
+
+if (owner == "1") {
+  t.setValue("ticketStatus", "1");
+  Message m;
+  m.setValue("ticketId", t.getValue("id"));
+  m.setValue("createdAt", getCurrentDateTime().toString());
+  m.setValue("createdBy", getActiveUser().getValue("id"));
+  m.setValue("type", "1");
+  m.setValue("author", "System");
+  m.setValue("slevel", "1");
+  m.setValue("body", "Remember to set owner");
+  m.setValue("important", "true");
+  m.save();
+  t.save();
+}
+```
+
+## Delegate
+
+If a request handler is unable to resolve the issue, they can:
+
+* pass the ticket to a colleague
+* forward the ticket to an external party
+* delegate and let the system pick the next owner
+
+### Ask a colleague for help
+
+1. Reassign the ticket.
+2. Add an internal message with your question.
+3. Update the last modified timestamps.
+4. Optionally add the ticket to the previous owner's favorites list, as a reminder to follow up.
+
+### Forward to an external party
+
+A common scenario when you need to get advice from a sub-supplier.
+
+> [!TIP]
+> Use the contact's (customer's) email address as the sender so that any answer from the recipient will be sent directly to the contact and not back to SuperOffice Service.
+
+#### Bool sendMessages(String subject, StringMatrix recipients, Bool fromCust, String messages, Integer msgId, String comment)
+
+Forwards the listed messages. In the generated email, the comment is inserted at the top and followed by the messages, each separated by a line.
+
+| Parameter  | Description                             |
+|------------|-----------------------------------------|
+| subject    | ticket.title or similar                 |
+| recipients | Format: to / pipesign / name / email    |
+| fromCust   | The sender's email address              |
+| messages   | A comma-separated list of message IDs   |
+| msgId      | ID of added "forward" message or -1     |
+| comment    | A note preceding the forwarded messages |
+
+**Recipients example:**
+To \| John Doe \<john.doe@john.doe> Cc \| Jane Doe \<jane.doe@jane.doe>
+
+### Void delegate()
+
+Delegates a ticket to a user according to the rules of the ticket's category.
+
+> [!NOTE]
+> You must call `save()` to do the action.
+
+```crmscript
+Ticket t;
+t.load(2);
+t.delegate();
+t.save();
+```
+
+### Void delegate(Integer notUser)
+
+A variant of `delegate()` that lets you exclude a user from the pool of possible assignees.
+For example if the 2nd owner also passes on the ticket and you want to avoid re-assigning to the original owner.
+
+```crmscript
+Ticket t;
+t.load(2);
+t.delegate(4);
+t.save();
+```
+
+## Postpone tickets
+
+Sometimes you need to put tickets on the back-burner.
+
+```crmscript
+Ticket t;
+t.load(3);
+t.setValue("status", "3");
+DateTime now = getCurrentDateTime();
+t.setValue("lastChanged", now.toString());
+t.setValue("dbiLastModified", now.toString());
+
+Message m;
+m.setValue("ticketId", t.getValue("id"));
+m.setValue("createdAt", t.getValue("lastChanged"));
+m.setValue("createdBy", t.getValue("ownedBy"));
+m.setValue("slevel", "1");
+m.setValue("body", "Expecting fix in next patch");
+m.save();
+t.setValue("activate", now.moveToMonthEnd().toString());
+t.save();
+t.notifyEmail(5);
+```
+
+## Close tickets
+
+After responding to a request, you can set its status to **Closed**.
+
+Typical scenarios:
+
+* the case is resolved
+* you have forwarded the ticket to an external party, who will handle and complete the request
+
+```crmscript
+Ticket t;
+t.load(1);
+t.setValue("status", "2");
+t.save();
+```
+
+## Delete tickets
+
+> [!WARN]
+> In general, we don't recommended deleting requests. It is usually preferable to add a comment and/or tag and mark it as closed.
+
+Deleting a ticket will also delete all messages and attachments linked to it!
+
+However, you may be required to delete a request to comply with your company's privacy policy. Proceed with caution! Use the same statements as for closing a ticket, just change the status code from 2 to 4.
+
 ## Reference
 
 ### Frequently used ticket values
@@ -133,7 +304,7 @@ For a complete list of fields, see the [database reference](https://community.su
 | activate       | activate        | When to activated a postponed ticket                    |
 | createdAt      | created_at      | When the ticket was created                             |
 | repliedAt      | replied_at      | When the 1st external message was added                 |
-| stopEscalation | stop_escalation | The headline of the ticket, String                      |
+| stopEscalation | stop_escalation |                       |
 | readStatus     | read_status     | Has the owner has read the ticket? (red, yellow, green) |
 | deadline       | deadline        | The deadline of the ticket                              |
 | timeToClose    | time_to_close   | Minutes between create and close                        |
