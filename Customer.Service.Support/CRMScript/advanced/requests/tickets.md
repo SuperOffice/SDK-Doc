@@ -11,7 +11,7 @@ SortOrder: 10
 Sets a named field to the given value. Look up names in the reference section down below, or check out the [class reference](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/EJScript-Classes-Ticket-setValue.htm).
 
 > [!NOTE]
-> Both parameters are strings! Remember to use quotes even for IDs.
+> Both parameters are strings! Remember to use quotes even for IDs. <br>
 > You must call `save()` after setting all applicable values to actually create or update the ticket.
 
 ```crmscript!
