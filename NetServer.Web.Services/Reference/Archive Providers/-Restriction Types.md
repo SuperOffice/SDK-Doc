@@ -13,6 +13,15 @@ provided by SuperOffice.
     R=Read Only, W=Writeable, +=one or more values (multi-select)
 * **Display Name**: the english name you would show in the GUI if you converted the resource id to a string.
 
+Period in date restrictions
+
+* day = 1
+* week = 2
+* month = 3
+* quarter = 4
+* year = 5
+
+
 ## RestrictionType 'bool' 
 | Name | ValueHint | Display Name |
 | ---- | ------ | ------ |
@@ -76,17 +85,13 @@ provided by SuperOffice.
 |beforeToday|R|Before today|
 |today|R|Today|
 |afterToday|R|After today|
-|lastWeek|R;R|Last week|
-|thisWeek|R;R|This week|
-|nextWeek|R;R|Next week|
-|lastMonth|R;R|Last month|
-|thisMonth|R;R|This month|
-|nextMonth|R;R|Next month|
-|lastQuarter|R;R|Last quarter|
-|thisQuarter|R;R|This quarter|
-|nextQuarter|R;R|Next quarter|
-|thisHalf|R;R|This half|
-|thisYear|R;R|This year|
+|thisPeriod|Period|This 1=day/2=week/3=month/4=quarter/5=year|
+|thisAndNext|W:int;Period|This and the next N day/week/month/quarter/year|
+|nextPeriod|W:int;Period|The next N, excluding current day/week/month/quarter/year|
+|thisAndPrevious|W:int;Period|This and the previous N day/week/month/quarter/year|
+|previousPeriod|W:int;Period|The previous excluding current N day/week/month/quarter/year|
+|thisPreviousAndNext|Period|The current and the previous and next 1=day/2=week/3=month/4=quarter/5=year|
+
 
 ## RestrictionType 'unlimitedDate'
 | Name | ValueHint | Display Name |
@@ -98,6 +103,50 @@ provided by SuperOffice.
 |beforeToday|R|Before today|
 |today|R|Today|
 |afterToday|R|After today|
+|thisPeriod|Period|This 1=day/2=week/3=month/4=quarter/5=year|
+|thisAndNext|W:int;Period|This and the next N day/week/month/quarter/year|
+|nextPeriod|W:int;Period|The next N day/week/month/quarter/year|
+|thisAndPrevious|W:int;Period|This and the previous N day/week/month/quarter/year|
+|previousPeriod|W:int;Period|This and the previous N day/week/month/quarter/year|
+|thisPreviousAndNext|Period|The current and the previous and next 1=day/2=week/3=month/4=quarter/5=year|
+
+## RestrictionType intArray / Tags
+| Name | ValueHint | Display Name |
+| ---- | ------ | ------ |
+|intArrayAllOf|W+|Has all|
+|intArrayNotAllOf|W+|Missing all|
+|intArrayOneOf|W+|Has any|
+|intArrayNotAnyOf|W+|Missing any|
+
+
+## Examples
+
+Restriction for a person firstname begins with A
+
+     new ArchiveRestrictionInfo("firstName", "begins", "A")
+
+Restriction for a personId 123
+
+     new ArchiveRestrictionInfo("personId", "=", 123)
+
+Restriction for a registered date = today
+
+     new ArchiveRestrictionInfo("registered", "today")
+
+Restriction for a registered date this or last month
+
+     new ArchiveRestrictionInfo("registered", "thisAndPrevious", 1, 3)
+
+Restriction for both tags 12 and 13
+
+     new ArchiveRestrictionInfo("registered", "intArrayAllOf", CultureDataFormatter.EncodeIntArr(12,13))
+
+
+
+## Old date restrictons / 8.x and earlier
+
+| Name | ValueHint | Display Name |
+| ---- | ------ | ------ |
 |lastWeek|R;R|Last week|
 |thisWeek|R;R|This week|
 |nextWeek|R;R|Next week|
