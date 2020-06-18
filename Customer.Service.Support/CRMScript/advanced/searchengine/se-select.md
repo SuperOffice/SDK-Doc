@@ -63,7 +63,7 @@ If you have multiple criteria, you can group and order them by giving each a **p
 
 This is the basic variant of `addCriteria()` and it's often used when you need only 1 condition. It compares `field` to `value` using the operator.
 
-**Comparison operators** are listed in the reference section at the end of this page. Remember that the operator and value must correspond to an be appropriate for the field type.
+**Comparison operators** are listed in the reference section at the end of this page. Remember that the operator and value must correspond to and be appropriate for the field type.
 
 If the comparison evaluates to **true** and there are no other criteria or restrictions, the row is added to the search result. In other words, you restrict the inclusion of a row based on a field.
 
