@@ -85,7 +85,20 @@ m.setValue("createdBy","1");
 m.save("Need to follow up",true);
 ```
 
+### Edit message
+
+For obvious reasons, you should not alter the text in a message after the fact.
+
+However, you might need to edit some properties for bookkeeping or compliance. For example:
+
+* Time spent (accumulates)
+* Invoicing info
+* Access level (internal/external)
+* Attachments (removal might be required)
+
 ## Use a reply template
+
+You can save time by using a reply template as your basis.
 
 ### Void toParser(Parser parser)
 
