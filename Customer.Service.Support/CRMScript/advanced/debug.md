@@ -60,7 +60,9 @@ Use `log()` as you would use `print()`.
 > [!TIP]
 > You can customize logging by adding the following URL fragment: */CustIDxxxxxCS/scripts/ticket.fcgi?action=debug*
 
-**Read log:** `online.superoffice.com/Custxxxxx/CS/scripts/rms.fcgi?_sf=0&action=newLog`
+**Read log:**
+
+Beside your profile picture, select the **hamburger menu**, then select **System design**. Under *System design* select **Debug log** to open the Search log screen.
 
 ### Onsite - logfile
 
