@@ -36,8 +36,8 @@ As a general principle, the SuperOffice database is very lax.
 SuperOffice has 5 important things:
 
 * **Companies** in code and database references referred to as *contact*.
-* **Associates** are SuperOffice users - employees of the company
-* **Projects**
+* **Associates** are SuperOffice users - employees of the company.
+* **Projects** are a type of activity that usually involves several stakeholders and various types of other activities.
 * **Activities** are things employees do with companies and projects
   * Created documents
   * Created appointments
