@@ -1,7 +1,7 @@
 ---
 title: Samples
 uid: crmscript_request_samples
-SortOrder: 30
+SortOrder: 40
 ---
 
 ## List available categories
