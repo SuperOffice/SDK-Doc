@@ -166,6 +166,126 @@ if (owner == "1") {
 }
 ```
 
+> [!TIP]
+> Complex requests can take a lot of time to solve and involve a lot of communication between the customer and multiple request handlers. To keep track of messages, you can flag them as important: `setValue("important", "true")`.
+
+## Reply to customer
+
+In request handling, your most important task is to respond to inquiries.
+Replies should be visible to the customer, thus you need to set `slevel` of the message to **2** (External).
+
+### String buildEmailSubject()
+
+Creates a string with the email tag, the ticket ID, and its title.
+
+```crmscript!
+Ticket t;
+t.setValue("title", "External sensors not working");
+t.setValue("category", "1");
+t.save();
+printLine(t.buildEmailSubject());
+```
+
+### String getMailFrom()
+
+Determines and returns the most appropriate from-address, when sending an email on a ticket.
+
+```crmscript!
+Ticket t;
+t.setValue("title", "Unable to go to warp speed");
+t.setValue("category", "1");
+t.save();
+printLine(t.getMailFrom());
+```
+
+### String getOwnerEmail()
+
+Creates a string with the ticket's owner formatted as *"Name" \<email-addr>*.
+
+```crmscript!
+Ticket t;
+t.setValue("title", "Where is my order?");
+t.setValue("ownedBy", "0");
+t.setValue("category", "1");
+t.save();
+printLine(t.getOwnerEmail());
+```
+
+### String getOwnerSms()
+
+Creates a string with the ticket owner's cellphone number.
+
+```crmscript!
+Ticket t;
+t.load(7);
+printLine(t.getOwnerSms());
+```
+
+### String getInvolvedOnly()
+
+Looks up all involved customers and returns a comma-separated list of their email addresses. **Involved** means that the customer has received a message on the ticket, but they are not listed as a customer on this ticket.
+
+```crmscript
+Ticket t;
+t.load(3);
+printLine(t.getInvolvedOnly());
+```
+
+## Using reply templates
+
+You can save time by using a reply template as your basis.
+
+### Void toParser(Parser theParser)
+
+Passes relevant data from the ticket to the parser. Strings such as title and author are formatted as HTML.
+
+```crmscript!
+Ticket t;
+t.load(3);
+
+Parser p;
+t.toParser(p);
+
+ReplyTemplate rt;
+rt.load(20);
+
+String output = p.parseString(rt.getHtmlBody(2));
+print(output);
+```
+
+Read more about [the parser](../text/parser.md) and [reply templates](../text/reply_template.md).
+
+### Void toParserRaw(Parser theParser)
+
+Same as `toParser()` but produces plain text and not HTML.
+
+## Priority and escalation
+
+### Void checkEscalating(Integer action)
+
+Runs a check according to the ticket's priority and the given action. Based on the result, 1 of the following happens:
+
+* escalation stops
+* escalation restarts
+* escalation continues
+
+You can specify the following actions:
+
+| Value | Action                |
+|:-----:|:----------------------|
+| 0     | ActionRead            |
+| 1     | ActionChangedOwner    |
+| 2     | ActionNewInfo         |
+| 3     | ActionClosed          |
+| 4     | ActionChangedPriority |
+| 5     | ActionNew             |
+
+```crmscript
+Ticket t;
+t.load(8);
+t.checkEscalating(4);
+```
+
 ## Delegate
 
 If a request handler is unable to resolve the issue, they can:
@@ -235,10 +355,11 @@ t.save();
 Sometimes you need to put tickets on the back-burner.
 
 ```crmscript
+DateTime now = getCurrentDateTime();
+
 Ticket t;
 t.load(3);
 t.setValue("status", "3");
-DateTime now = getCurrentDateTime();
 t.setValue("lastChanged", now.toString());
 t.setValue("dbiLastModified", now.toString());
 
@@ -249,10 +370,49 @@ m.setValue("createdBy", t.getValue("ownedBy"));
 m.setValue("slevel", "1");
 m.setValue("body", "Expecting fix in next patch");
 m.save();
+
 t.setValue("activate", now.moveToMonthEnd().toString());
 t.save();
 t.notifyEmail(5);
 ```
+
+## Split and merge
+
+If 1 request contains multiple questions, you can split the request.
+
+Sometimes, you will for example see that the customer initially asks a technical question, but then uses the opportunity to raise an invoicing query as well.
+
+Other times, the situation is reversed: multiple contacts in the same company have reported the same technical issue (via phone, email). You can then merge these duplicates into 1 request.
+
+There's no `split()` or `merge()` method, but you can write your own logic. Here's how.
+
+### Split requests
+
+Pre-requisite: ID of the original ticket and the message you want to split out is known.
+
+1. Load the original ticket.
+2. Create a new ticket and copy key data from the original.
+3. Set `connected_id` in the new ticket to the original ID.
+4. Set a suitable title and category.
+5. Copy the message with the new question to the new ticket.
+6. Modify the original ticket to reflect the split.
+7. Save both tickets and resume processing.
+
+> [!TIP]
+> You can also split a message.
+
+### Merge requests
+
+1. Load both requests.
+2. Copy all contacts and messages from the duplicate into the target.
+3. Select which request data to keep. If you want to keep the value from the duplicate, copy this into the target ticket (overwrite).
+4. Set `connected_id` in both tickets for a bidirectional relationship.
+5. Update the last modified timestamps and similar settings.
+6. Set the status of the duplicate ticket to **5** (Merged/Linked).
+7. Save both tickets and resume processing.
+
+> [!TIP]
+> To filter SearchEngine results for merged tickets, include criteria to exclude tickets with status equals 5.
 
 ## Close tickets
 
@@ -273,7 +433,7 @@ t.save();
 ## Delete tickets
 
 > [!WARN]
-> In general, we don't recommended deleting requests. It is usually preferable to add a comment and/or tag and mark it as closed.
+> In general, we don't recommend deleting requests. It is usually preferable to add a comment and/or tag and mark it as closed.
 
 Deleting a ticket will also delete all messages and attachments linked to it!
 
