@@ -391,12 +391,11 @@ There's no `split()` or `merge()` method, but you can write your own logic. Here
 Pre-requisite: ID of the original ticket and the message you want to split out is known.
 
 1. Load the original ticket.
-2. Create a new ticket and copy key data from the original.
-3. Set `connected_id` in the new ticket to the original ID.
-4. Set a suitable title and category.
-5. Copy the message with the new question to the new ticket.
-6. Modify the original ticket to reflect the split.
-7. Save both tickets and resume processing.
+1. Create a new ticket and copy *essential* data from the original.
+1. Set a suitable title and category.
+1. Copy the message with the new question to the new ticket.
+1. Modify the original ticket to reflect the split.
+1. Save both tickets and resume processing.
 
 > [!TIP]
 > You can also split a message.
