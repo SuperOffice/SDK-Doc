@@ -7,8 +7,8 @@ The `Parser` class is a **template engine**. Use an instance to set template var
 
 ```crmscript!
 Parser p;
-p.setVariable("firstName", "Tony");
-p.setVariable("lastName", "Yates");
+p.setVariable("firstName", "John");
+p.setVariable("lastName", "Smith");
 
 String output = p.parseString("Hello [[firstName]] [[lastName]]!\n");
 
@@ -47,7 +47,7 @@ If this variable already has a value, the old value will be overwritten with the
 
 ```crmscript
 Parser p;
-p.setVariable("firstName", "Tony");
+p.setVariable("firstName", "John");
 ```
 
 ### Void addVariable(String field, String value)
