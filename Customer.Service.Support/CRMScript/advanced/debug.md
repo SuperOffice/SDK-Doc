@@ -58,7 +58,7 @@ log("2020 is a leap year");
 Use `log()` as you would use `print()`.
 
 > [!TIP]
-> You can customize logging by adding the following URL fragment: */CustIDxxxxxCS/scripts/ticket.fcgi?action=debug*
+> You can customize logging by adding the following URL fragment: <br/> */scripts/ticket.fcgi?_sf=0&action=searchTable&table=log_events*
 
 **Read log:**
 
@@ -77,9 +77,10 @@ log("The next leap year is 2024");
 **Read log:**
 The log files are located in the CS install directory, for example, *E:\SuperOffice\Customer Service\log*
 
-* Directly: */bin/rms.exe?action=newLog*
-* In browser with fcgi: *rms.fcgi?action=dumpWarningLog&date=&lt;date&gt;*
-* In browser with exe: *rms.exe?action=dumpWarningLog&date=&lt;date&gt;*
+In browser with fcgi:
+
+* *scripts/ticket.fcgi?_sf=0&action=searchTable&table=log_events*
+* *scripts/rms.fcgi?action=dumpWarningLog&date=&lt;date&gt;*
 
 ## printDebug()
 
