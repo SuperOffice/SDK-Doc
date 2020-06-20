@@ -53,9 +53,9 @@ Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
         Dim path As String = "http://" + "localhost:50804" + "" + Request.ApplicationPath
         _url = String.Format("{0}/default.aspx", path)
 
-        '-----------------------------------------------------------------
+        ' - - - - - - - - - - - - - - - - - - - - - -
         ' SECTION 1 : Retrieve Activity information
-        '-----------------------------------------------------------------
+        ' - - - - - - - - - - - - - - - - - - - - - -
 
         ' Setting the Parameters that needs to be passed to Agent method and retrieve activity information
 
@@ -99,9 +99,9 @@ Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
              columns, archiveSrtOrd, restrictions, entities, page, _
              pageSize)
 
-        '-----------------------------------------------------------------
+        ' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         ' SECTION 2 : Generate the feed XML with retrieved activity data
-        '-----------------------------------------------------------------
+        ' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         ' iterate over the activity collection
         For Each listItem As ArchiveListItem In activitytItems
