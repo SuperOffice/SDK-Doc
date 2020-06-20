@@ -28,7 +28,7 @@ Here is an example of how the base RSS feed template appears.
 
 An XML stylesheet, which is referenced on the first line in the example above, formats how the feed is displayed. The stylesheet will be discussed later in the article. Let’s take a look at how the activity is generated and passed to the feed.
 
-```vb
+```vbnet
 Imports SuperOffice
 Imports SuperOffice.CRM.Services
 Imports System.Collections.Generic
