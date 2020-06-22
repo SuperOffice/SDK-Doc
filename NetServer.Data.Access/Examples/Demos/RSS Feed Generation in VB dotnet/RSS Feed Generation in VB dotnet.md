@@ -20,4 +20,4 @@ The following screenshot shows how the link to the feed displayed when valid use
 
 ---
 
-**See Also:** [source code (zip)](RSSFeedFinalVB.zip)
+**See Also:**: [source code (zip)](https://community.superoffice.com/globalassets/global/devnetfiles/codeexamples/rssfeedfinalvb.zip)

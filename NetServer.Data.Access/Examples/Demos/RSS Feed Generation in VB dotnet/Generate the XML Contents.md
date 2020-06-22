@@ -26,11 +26,9 @@ Here is an example of how the base RSS feed template appears.
 </rss>
 ```
 
-Here is the referenced [code behind file](./PageCodeBehind.vb).
-
 An XML stylesheet, which is referenced on the first line in the example above, formats how the feed is displayed. The stylesheet will be discussed later in the article. Let’s take a look at how the activity is generated and passed to the feed.
 
-The above code segment uses the SuperOffice.CRM.ArchiveLists.ActivityArchiveProvider to retrieve the activities registered by another user on the current user’s contact.
+The [code example](https://community.superoffice.com/globalassets/global/devnetfiles/codeexamples/rssfeedfinalvb.zip) uses the SuperOffice.CRM.ArchiveLists.ActivityArchiveProvider to retrieve the activities registered by another user on the current user’s contact.
 
 Section 1 shows how the parameters required by GetArchiveListByColumns are created, i.e. the columns to be included in the selection. Section 1 also defines the search restrictions and the entities to be included in the search. Next, an IArchiveAgent object is retrieved using the AgentFactory. GetArchiveListByColumns method is then invoked to get the activity information.
 
