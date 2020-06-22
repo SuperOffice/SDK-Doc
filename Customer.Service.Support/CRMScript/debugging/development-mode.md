@@ -13,7 +13,7 @@ Historically it wasn't possible to execute CRMScript modules. Now there exists t
 
 ## Debugging modules
 
-These two environment variables are only set when the script is executed, and are accessed using getVariable("*variableName*")).
+These two environment variables are only set when the script is executed inside the code editor. They are accessed using getVariable("*variableName*")) method.
 
 When the **Execute script** button is clicked, the engine sets **developmentMode** to true and the **includeId** to the includeId of the current script.
 
