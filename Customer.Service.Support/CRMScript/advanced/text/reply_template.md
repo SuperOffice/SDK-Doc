@@ -70,6 +70,24 @@ Use the embedded help to [look up specific template variables](https://community
 > [!NOTE]
 > The date and time in template variables are controlled by the PC's system clock.
 
+### Template types and entities
+
+| Template type              | Customer,<br/> Company | User | Ticket | Message | Config | Other |
+|----------------------------|:---------:|:----:|:------:|:-------:|:------:|:-------------------|
+| new request,<br/> edit request,<br/> add message | x   | x       | x      |      | x     |     |
+| autoreply                  | x         |      | x      |         |        |                    |
+| email filter               | x         |      | x      |         | x      |                    |
+| on incoming email          | x         |      | x      |         | x      | ticket.lastMessage |
+| notify: new request        | x         |      | x      | x       | x      | ticket.lastMessage |
+| notify: open requests      | x         |      | x      |         | x      | ticket.lastMessage |
+| notify: new message        | x         |      | x      | x       | x      |                    |
+| notify activated request,<br/>escalated request,<br/>re-assigned request | x | | x | | x |     |
+| new customer contacts      | x<br/> (customer only) |   |   |         |        | custPassword,<br/> to,<br/> from |
+| send password<br/> to customer contacts | x<br/> (customer only) | | | | x     | to,<br/> from      |
+| format FAQ questions       | x         |      | x      |         |        | faq.question,<br/> faq.answer |
+
+[List of parser variables](https://community.superoffice.com/en/technical/documentation/older-versions/documentation-7/cs/parser-variables/) for each entity.
+
 ## How to use a reply template in CRMScript
 
 1. Declare and load the template
