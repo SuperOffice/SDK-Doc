@@ -1,7 +1,7 @@
 ---
 title: Basic troubleshooting
-uid: crmscript_fundamentals_troubleshooting
-sortOrder: 150
+uid: crmscript_debug_troubleshooting
+sortOrder: 50
 ---
 
 ## When an error occurs
