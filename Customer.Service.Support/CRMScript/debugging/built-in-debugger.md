@@ -30,5 +30,16 @@ The left side will show the code, and the right side will show variables, info, 
 
 * Stop execution of the script
 
-> [!TIP]
-> If you have an **onsite** tenant: call `enableDebug(String)` in the script with ID matching value set in */bin/rms.exe?action=debug*, then call `debugWait()`. This opens the **Debug** panel.<br/>Parameters set in the **Debug** panel are stored in browser cookies and apply to your session only. This lets you debug without disturbing other users and avoids crowding the log files.
+> [!CAUTION]
+> Use the debugger with care. Otherwise, the server will soon become swamped with processes running scripts in debug mode.
+
+## Debug panel (onsite)
+
+If you have an **onsite** tenant:
+
+1. Call `enableDebug(String)` in the script with ID matching value set in */bin/rms.exe?action=debug*.
+2. Then call `debugWait()` (consider it a breakpoint). This opens the **Debug** panel.
+
+Parameters set in the **Debug** panel are stored in browser cookies and apply to your session only. This lets you debug without disturbing other users and avoids crowding the log files.
+
+If the script is run from another browser (where the ID is different or not set), it will run as normal, ignoring all calls to `enableDebug()` and `debugWait()`. This allows you to debug in a "hot" environment.
