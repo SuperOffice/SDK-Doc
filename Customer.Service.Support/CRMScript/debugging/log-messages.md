@@ -10,6 +10,10 @@ You can write to and inspect the system log. The date format is **YYYY-MM-DD**.
 
 This is the new log, kept in the database.
 
+Messages are written to the log immediately: if your script should crash, everything logged up to that point is preserved.
+
+The database log also works for scripts that redirect and for scripts that run in the background.
+
 **Write to log:** Void log(String msg)
 
 ```crmscript
