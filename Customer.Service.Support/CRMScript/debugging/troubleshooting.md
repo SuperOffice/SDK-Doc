@@ -14,7 +14,6 @@ Here are some common mistakes to watch out for:
 * Using a single equal sign to check equality
 * Trying to print something that is not a String and forgetting `.toString()`
 * Missing or misplaced parenthesis or curly brace
-* Trying to access an uninitialized array index / overstepping array boundaries
+* Trying to access an uninitialized array index or overstepping array boundaries
 * Treating 0-based indexes as if they started on 1
 * Creating never-ending loops
-
