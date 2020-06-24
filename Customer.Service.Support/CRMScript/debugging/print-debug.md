@@ -17,3 +17,17 @@ Here's how:
 3. Run script.
 
 The pop-up is not visible to regular users, but it will show up in your browser.
+
+### Usage - custom screen
+
+Call `printDebug()` in any of the scripts that will be run when creating the screen and its elements to display the text in a pop-up window.
+
+### Usage - button-script
+
+Button-scripts usually result in a redirect and not in a screen. Thus you will not get any messages from `printDebug()`.
+
+However, you can use the following workaround to debug a button-script:
+
+1. Temporarily deactivate the redirect.
+2. You will be returned to the same screen, and now get the pop-up with any `printDebug()` messages in the buffer.
+3. Enable the redirect when you are done.
