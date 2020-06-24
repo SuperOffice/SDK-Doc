@@ -17,4 +17,3 @@ Here are some common mistakes to watch out for:
 * Trying to access an uninitialized array index / overstepping array boundaries
 * Treating 0-based indexes as if they started on 1
 * Creating never-ending loops
-
