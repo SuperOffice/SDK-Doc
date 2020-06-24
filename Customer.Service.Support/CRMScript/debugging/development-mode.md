@@ -6,18 +6,22 @@ SortOrder: 40
 
 CRMScript modules are scripts imported into other scripts files by using the #included directive.
 
-Historically it wasn't possible to execute CRMScript modules. Now there exists two environment variables script writers use to invoke and debug module scripts.
+Historically, you couldn't run CRMScript modules. Now, script writers can use environment variables to invoke and debug module scripts:
 
 * developmentMode
 * includeId
 
 ## Debugging modules
 
-These two environment variables are only set when the script is executed inside the code editor. They are accessed using getVariable("*variableName*")) method.
+`developmentMode` and `includeId` are set only when the script is run inside the code editor. To access them, call `getVariable()`. For example:
 
-When the **Execute script** button is clicked, the engine sets **developmentMode** to true and the **includeId** to the includeId of the current script.
+```crmscript
+getVariable("includeId");
+```
 
-This allows you to include some global code in your CRMScript like this:
+When the **Execute script** button is clicked, the engine sets `developmentMode*` to **true** and `includeId` to the includeId of the current script.
+
+This lets you incorporate global code in your CRMScript:
 
 ```crmscript
 // my global script
@@ -36,6 +40,6 @@ if (getVariable("developmentMode") == "true" && getVariable("includeId") == "foo
 }
 ```
 
-Now when editing your module library, only the part inside the if statement is executed by the **Execute script** click event.
+* When editing your module library, only the part inside the `if` statement is run by the **Execute script** click event.
 
-When this library is included in some other production code and executed, the code above will not be executed.
+* When the library is included in production code, the debug code is not run when the production code is.

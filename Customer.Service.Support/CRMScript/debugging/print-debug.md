@@ -1,5 +1,5 @@
 ---
-title: Print Debug
+title: Print debug
 uid: crmscript_debug_print_debug
 SortOrder: 30
 ---
