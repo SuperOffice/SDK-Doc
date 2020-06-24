@@ -4,11 +4,9 @@ uid: crmscript_debug_log_messages
 SortOrder: 20
 ---
 
-## Log messages
-
 You can write to and inspect the system log. The date format is **YYYY-MM-DD**.
 
-### Online - database log
+## Online - database log
 
 This is the new log, kept in the database.
 
@@ -27,7 +25,7 @@ Use `log()` as you would use `print()`.
 
 Beside your profile picture, select the **hamburger menu**, then select **System design**. Under *System design* select **Debug log** to open the Search log screen.
 
-### Onsite - logfile
+## Onsite - logfile
 
 This is the old log, kept locally on disk.
 
