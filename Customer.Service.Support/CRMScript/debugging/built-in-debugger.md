@@ -31,4 +31,4 @@ The left side will show the code, and the right side will show variables, info, 
 * Stop execution of the script
 
 > [!TIP]
-> If you have an **onsite** tenant: call `enableDebug(String)` in the script with ID matching value set in */bin/rms.exe?action=debug*, then call `debugWait()`. This opens the **Debug** panel.
+> If you have an **onsite** tenant: call `enableDebug(String)` in the script with ID matching value set in */bin/rms.exe?action=debug*, then call `debugWait()`. This opens the **Debug** panel.<br/>Parameters set in the **Debug** panel are stored in browser cookies and apply to your session only. This lets you debug without disturbing other users and avoids crowding the log files.
