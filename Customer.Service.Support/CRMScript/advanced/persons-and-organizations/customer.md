@@ -8,7 +8,7 @@ The **Customer** CRMScript class represents the following entities:
 
 * Real-life: a customer (person) that may or may not work for a company or organization
 * SuperOffice UI: contact
-* Database table: pe                                            rson
+* Database table: person
 
 > [!NOTE]
 > All associates (internal employees) have a corresponding person record.
