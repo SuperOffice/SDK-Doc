@@ -47,4 +47,4 @@ for (Integer i = 0; i < array.length(); i++) {
 This is a more compact structure that and handles the indexing for you. It is also faster!
 
 > [!NOTE]
-> Basic types, such as String, are passed by value, while all other types are passed by reference. This is standard CRMScript behavior. Therefore, inside a `foreach` loop, you can update complex collections only, not basic types.
+> The foreach statement is used to iterate through the array to get the information that you want, but can not be used to add or remove items from the source array to avoid unpredictable side effects. <br/><br/> Arrays of intrinsic types, such as String or Integer, are passed by value, while an array or a struct is passed by reference. Therefore, while inside a `foreach` loop, you can update a struct property, but not a String value.
