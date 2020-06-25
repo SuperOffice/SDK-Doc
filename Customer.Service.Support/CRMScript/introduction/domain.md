@@ -28,3 +28,14 @@ You can [read more about the main tables](https://community.superoffice.com/docu
 * Companies and projects are not time-specific, but are linked to activities in time.
 
 The appointment table contains foreign keys to all the other important tables, plus a date field (ActiveDate).
+
+## Context-sensitive labels
+
+| Real-world term | UI        | Database table  | CRMScript class |
+|-----------------|-----------|-----------------|-----------------|
+| company<br/>organization | company | contact  | Company         |
+| person          | contact<br/>associate |     |                 |
+| customer        | contact   | person          | Customer        |
+| employee        | associate | associate       |                 |
+| user account    | user      | ejuser          | User            |
+| database owner  | tenant    | Company         |                 |
