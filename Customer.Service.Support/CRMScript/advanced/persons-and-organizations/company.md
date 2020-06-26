@@ -83,27 +83,38 @@ print(c.getValue("name"));
 
 Addresses are commonly formatted according to local conventions.
 
-### LocalizedField[][] getFormattedAddress()
+### NSLocalizedField[][] getFormattedAddress()
 
 Fetches the formatted address of the company.
+
+```crmscript!
+Company c;
+c.load(2);
+NSLocalizedField[][] address;
+address = c.getFormattedAddress();
+
+for (Integer i = 0; i < address.length(); i++) {
+  for (Integer j = 0; j < address[i].length(); j++) {
+    print(address[i][j].GetLabel() + ":" + address[i][j].GetName() + ":" + address[i][j].GetValue() + ":" + address[i][j].GetTooltip() + ":" + address[i][j].GetValueLength().toString() + ":" + address[i][j].GetAddressType() + " ");
+  }
+  print("\n");
+}
+```
+
+### Void setFormattedAddress(NSLocalizedField[][] addr)
+
+Sets the formatted address of the company.
 
 ```crmscript
 Company c;
 c.load(2);
-LocalizedField[][] address = c.getFormattedAddress();
+NSLocalizedField[][] address;
+address[0][0].SetValue("NO-" + address[0][0].GetValue());
+c.setFormattedAddress(address);
+c.save();
 ```
 
-### NSLocalizedField[][] getFormattedAddress()
-
-Same as above with NetServer type.
-
-### Void setFormattedAddress(LocalizedField[][] addr)
-
-Sets the formatted address of the company.
-
-### Void setFormattedAddress(NSLocalizedField[][] addr)
-
-Same as above with NetServer type.
+Adds "NO-" to the 1st address field.
 
 ## Security
 
