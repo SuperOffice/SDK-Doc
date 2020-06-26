@@ -109,6 +109,18 @@ The **activeuser** table holds info about currently signed-in users. Use it to l
 > [!WARN]
 > Changing this table **might prevent users from signing in!** Fixing it requires intervention by SuperOffice support. Consider it a read-only table!
 
+## Parser variables
+
+Calling `toParser()` will load fields, prefix them with *user*, and make them available to templates.
+
+```crmscript!
+Parser p;
+User u;
+u.load(2);
+u.toParser(p);
+printLine(p.getVariable("user.username", 0));
+```
+
 ## Reference
 
 ### Frequently used values

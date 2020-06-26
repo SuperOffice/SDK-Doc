@@ -198,6 +198,21 @@ c.logout();
 
 Logs out a customer.
 
+## Parser variables
+
+Calling `toParser()` will load fields, prefix them with *customer*, and make them available to templates.
+
+> [!NOTE]
+> Repeated calls will overwrite rather than append the values in the Parser instance.
+
+```crmscript!
+Parser p;
+Customer c;
+c.load(4);
+c.toParser(p);
+printLine(p.getVariable("customer.name", 0));
+```
+
 ## Reference
 
 ### Frequently used values

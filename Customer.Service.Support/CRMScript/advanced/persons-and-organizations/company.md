@@ -155,6 +155,31 @@ Bool b = c.checkFieldRights("contact", "read");
 print(b.toString());
 ```
 
+## Parser variables
+
+Calling `toParser()` will load the following fields and make them available to templates:
+
+* company.id
+* company.name
+* company.note
+* company.domain
+* company.phone
+* company.fax
+* company.adr
+* company.ourContact
+* company.primaryContact.id
+* company.primaryContact.email
+
+See the **connected persons* table for a description of `ourContact` and `primaryContact`.
+
+```crmscript!
+Parser p;
+Company c;
+c.load(2);
+c.toParser(p);
+printLine(p.getVariable("company.name", 0));
+```
+
 ## Reference
 
 ### Frequently used values
