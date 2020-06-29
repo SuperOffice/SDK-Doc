@@ -403,11 +403,11 @@ Pre-requisite: ID of the original ticket and the message you want to split out i
 ### Merge requests
 
 1. Load both requests.
-2. Copy all contacts and messages from the duplicate into the target.
-3. Select which request data to keep. If you want to keep the value from the duplicate, copy this into the target ticket (overwrite).
-4. Set `connected_id` in both tickets for a bidirectional relationship.
-5. Update the last modified timestamps and similar settings.
-6. Set the status of the duplicate ticket to **5** (Merged/Linked).
+2. Copy all contacts and messages from the source into the target.
+3. Select which request data to keep. If you want to keep the value from the source, copy this into the target ticket (overwrite).
+4. Set source ticket `connect_id` field equal to the target ticket id.
+5. Set the status of the source ticket to **5** (Merged/Linked).
+6. Update any other important settings on the target ticket.
 7. Save both tickets and resume processing.
 
 > [!TIP]
