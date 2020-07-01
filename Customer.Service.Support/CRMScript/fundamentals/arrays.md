@@ -1,5 +1,5 @@
 ---
-title: Indexed collections
+title: Arrays
 uid: crmscript_fundamentals_arrays
 sortOrder: 80
 ---
