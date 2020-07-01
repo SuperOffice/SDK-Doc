@@ -9,10 +9,11 @@ SuperOffice has 5 important things:
 * **Companies** in code and database references referred to as *contact*.
 * **Associates** are SuperOffice users - employees of the company.
 * **Projects** are a type of activity that usually involves several stakeholders and various types of other activities.
-* **Activities** are things employees do with companies and projects
-  * Created documents
-  * Created appointments
-  * Created sales and opportunities
+* **Activities** are things employees do with companies, contacts, projects, diary and sales.
+  * appointments of various task types
+  * documents
+  * mailings and form submissions
+  * chat sessions
 * **Tickets** from Service are linked to persons who may or may not belong to a company.
 
 You can [read more about the main tables](https://community.superoffice.com/documentation/SDK/SO.Database/html/TheMainTables.htm) in the developer documentation.
