@@ -1,6 +1,6 @@
 ---
 title: Working with ...
-SortOrder: 90
+SortOrder: 80
 uid: crmscript_explore
 ---
 
