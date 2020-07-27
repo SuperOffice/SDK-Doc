@@ -81,23 +81,101 @@ for(Integer i = 0; i < appointmentList.length(); i++) {
 }
 ```
 
-### Create appointment
+## Create appointment
 
-### Update appointment
+You'll need an **NSAppointmentAgent** to create, populate, and save a new appointment. Use 1 of these methods as a starting point, and look up more options in the API reference.
 
-...
+* NSAppointmentEntity CreateDefaultAppointmentEntity()
+* NSAppointmentEntity CreateDefaultAppointmentEntityByType(Integer type)
+* NSAppointmentEntity CreateDefaultAppointmentEntityByTypeAndAssociate(Integer type, Integer associateId)
 
-### Move appointment
+Example: block out 2 hours starting now for a team lunch.
 
-...
+```crmscript
+DateTime start;
+DateTime end;
+end.addHour(2);
 
-### Delete appointment
+NSAppointmentAgent appointmentAgent;
+NSAppointmentEntity newAppointment = appointmentAgent.CreateDefaultAppointmentEntityByTypeAndAssociate(7, 1);
 
-...
+newAppointment.SetActiveDate(start);
+newAppointment.SetStartDate(start);
+newAppointment.SetEndDate(end);
+newAppointment.SetDescription("Team lunch");
 
-### Mark as complete
+newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
+```
+
+## Update appointment
+
+### NSAppointment UpdateAppointment(Integer p0, DateTime p1, DateTime p2, Integer p3, Integer p4, Integer associateId)
+
+Change the description, for example to add an agenda:
+
+```crmscript
+NSAppointmentAgent appointmentAgent;
+DateTime now;
+
+NSAppointment appointment = appointmentAgent.GetAppointment(146);
+appointment.SetDescription("Agenda:\n1. Welcome \n2. Annual report \n Election \n Misc");
+appointmentAgent.UpdateAppointment(146, now, now, 0, 0, 1);
+```
+
+## Move appointment
+
+Again, we're using `UpdateAppointment()` - this time to reschedule.
+
+Postpone an existing appointment by 1 week:
+
+```crmscript
+NSAppointmentAgent appointmentAgent;
+
+NSAppointment appointment = appointmentAgent.GetAppointment(142);
+
+DateTime start = appointment.GetStartDate();
+DateTime end = appointment.GetEndDate();
+
+appointmentAgent.UpdateAppointment(142, start.addDay(7), end.addDay(7), 0, 0, 1);
+```
+
+## Delete appointment
+
+### Void DeleteAppointmentEntity(Integer appointmentEntityId)
+
+```crmscript
+NSAppointmentAgent appointmentAgent;
+appointmentAgent.DeleteAppointmentEntity(142);
+```
+
+## Mark as complete
+
+*Completed* means that the status is **3**.
+
+### Void SetCompleted(Integer Completed)
+
+```crmscript
+NSAppointmentAgent appointmentAgent;
+
+NSAppointmentEntity appointment = appointmentAgent.GetAppointmentEntity(77);
+appointment.SetCompleted(3);
+```
+
+### Integer GetCompleted()
 
 You can't edit completed follow-ups until you have undone their Completed status!
+
+Use `GetCompleted()` to check the status. Toggle it to **0** to do your edits and then toggle it back if applicable.
+
+```crmscript
+NSAppointmentAgent appointmentAgent;
+
+NSAppointmentEntity e = appointmentAgent.GetAppointmentEntity(77);
+
+if (e.GetCompleted() == 3) {
+  e.SetCompleted(0);
+}
+```
 
 ## Resources
 
