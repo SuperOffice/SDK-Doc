@@ -17,7 +17,7 @@ An *appointment* is a type of **follow-up** with a defined start and end time, s
 **Also:**
 
 * Appointments can be single events or part of a recurring series.
-* Overdue and completed appointments will be in the todo list in addition to the calendar.
+* Overdue and completed appointments will be in the todo list in addition to in the calendar.
 * Appointments involving a resource and/or additional participants are called **bookings** (or group reservation).
 * Appointments can be created by the owner or assigned/delegated to an associate.
 
@@ -26,10 +26,41 @@ An *appointment* is a type of **follow-up** with a defined start and end time, s
 > [!TIP]
 > You can only retrieve appointments for persons that are SuperOffice users (associates). The signed-in user must also have permission to view those appointments. Otherwise, an exception is thrown.
 
+### NSAppointment[] GetAppointmentList(Integer[] p0)
+
+Fetches a collection of appointments corresponding to a list of IDs.
+
+```crmscript!
+Integer[] appointmentIDs;
+appointmentIDs.pushFront(84);
+appointmentIDs.pushFront(86);
+appointmentIDs.pushFront(88);
+NSAppointmentAgent appointmentAgent;
+NSAppointment[] appointmentList = appointmentAgent.GetAppointmentList(appointmentIDs);
+
+for(Integer i = 0; i < appointmentList.length(); i++) {
+  print("ID: " + appointmentList[i].GetAppointmentId().toString());
+  printLine("\t At: " + appointmentList[i].GetStartDate().toString() + " to " + appointmentList[i].GetEndDate().toString());
+}
+```
+
 ### NSAppointment[] GetPersonDiary(Integer personId, DateTime startTime, DateTime endTime, Integer count)
 
 Fetches a limited number of appointments within a time range for the given person.
 `GetPersonDiary()` will ignore appointments not shown in the user's diary.
+
+```crmscript!
+NSAppointmentAgent appointmentAgent;
+DateTime start;
+DateTime end;
+
+NSAppointment[] appointmentList = appointmentAgent.GetPersonDiary(5, start.addMonth(-6), end, 10);
+
+for(Integer i = 0; i < appointmentList.length(); i++) {
+  print("ID: " + appointmentList[i].GetAppointmentId().toString());
+  printLine("\t At: " + appointmentList[i].GetStartDate().toString() + " to " + appointmentList[i].GetEndDate().toString());
+}
+```
 
 > [!TIP]
 > Set `count` to -1 to not restrict the collection of appointments retrieved.
@@ -37,6 +68,18 @@ Fetches a limited number of appointments within a time range for the given perso
 ### NSAppointment[] GetPersonAppointments(Integer personId, Bool includeProjectAppointments, DateTime startTime, DateTime endTime, Integer count)
 
 Same as `GetPersonDiary()`, but will also include all appointments in projects that the user is a member of if set to **true**.
+
+```crmscript!
+NSAppointmentAgent appointmentAgent;
+DateTime start;
+DateTime end;
+
+NSAppointment[] appointmentList = appointmentAgent.GetPersonAppointments(5, true, start.addMonth(-6), end, 5);
+
+for(Integer i = 0; i < appointmentList.length(); i++) {
+  printLine("ID: " + appointmentList[i].GetAppointmentId().toString());
+}
+```
 
 ### Create appointment
 
@@ -84,7 +127,7 @@ Delegation is the act of assigning a follow-up **to someone else**. This means t
 
 | Status | Description                                                 |
 |:------:|:------------------------------------------------------------|
-| 11     | Appointment has been assigned to user (initial status)      |
+| 11     | Appointment has been assigned to a user (initial status)    |
 | 12     | User has seen, but not accepted or declined the appointment |
 | 13     | User has declined the assigned appointment                  |
 

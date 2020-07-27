@@ -21,6 +21,9 @@ In SuperOffice CRM, *follow-up* is a collective term for **appointments**, **pho
 | task/todo   |            |          |            | x        | todo list | follow-up w/ no start time | reminder for stuff due by a specific time |
 | call        | x          |          | x          |          | todo list | phone call  |         |
 
+> [!NOTE]
+> Overdue appointments will by default also appear in the todo list!<br />Logged phone calls will also appear in the calendar.
+
 ## Follow-ups vs. activities
 
 Follow-ups are part of a broader group of entities labeled **activities**:
@@ -36,11 +39,11 @@ Follow-ups are part of a broader group of entities labeled **activities**:
 * chat sessions
 
 > [!NOTE]
-> It is important to understand the distinction between activities and follow-ups. When you get data from the [appointment table](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-appointment.htm) or use the CRMScript [NSAppointment class](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/EJScript-Classes-NSAppointment-NSAppointment.htm), it is crutial that you pay attention to the **type** field.
+> It is important to understand the distinction between activities and follow-ups. When you get data from the [appointment table](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-appointment.htm) or use the CRMScript [NSAppointment class](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/EJScript-Classes-NSAppointment-NSAppointment.htm), it is crucial that you pay attention to the **type** field.
 
 ## Follow-ups vs. other entities
 
-When working with follow-ups, data will often intersect with the following entities.
+When working with follow-ups, data will often intersect with the following entities:
 
 * [company](../../advanced/persons-and-organizations/company.md) (contact table)
 * [contact](../../advanced/persons-and-organizations/customer.md) (person table)
