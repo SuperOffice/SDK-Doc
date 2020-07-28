@@ -111,32 +111,32 @@ newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
 
 ### NSAppointment UpdateAppointment(Integer p0, DateTime p1, DateTime p2, Integer p3, Integer p4, Integer associateId)
 
-Change the description, for example to add an agenda:
+Change the description, for example, to add an agenda:
 
 ```crmscript
 NSAppointmentAgent appointmentAgent;
-DateTime now;
+NSAppointmentEntity appointment = appointmentAgent.GetAppointmentEntity(146);
 
-NSAppointment appointment = appointmentAgent.GetAppointment(146);
-appointment.SetDescription("Agenda:\n1. Welcome \n2. Annual report \n Election \n Misc");
-appointmentAgent.UpdateAppointment(146, now, now, 0, 0, 1);
+appointment.SetDescription("Agenda: 1. Welcome 2. Annual report 3. Election 4. Misc");
+appointmentAgent.SaveAppointmentEntity(appointment);
 ```
 
 ## Move appointment
 
-Again, we're using `UpdateAppointment()` - this time to reschedule.
-
-Postpone an existing appointment by 1 week:
+Postpone an existing appointment by 1 week (reschedule):
 
 ```crmscript
 NSAppointmentAgent appointmentAgent;
 
-NSAppointment appointment = appointmentAgent.GetAppointment(142);
+NSAppointmentEntity a = appointmentAgent.GetAppointmentEntity(146);
 
-DateTime start = appointment.GetStartDate();
-DateTime end = appointment.GetEndDate();
+DateTime start = a.GetStartDate();
+a.SetStartDate(start.addDay(7));
 
-appointmentAgent.UpdateAppointment(142, start.addDay(7), end.addDay(7), 0, 0, 1);
+DateTime end = a.GetEndDate();
+a.SetEndDate(end.addDay(7));
+
+a = appointmentAgent.SaveAppointmentEntity(a);
 ```
 
 ## Delete appointment
@@ -157,8 +157,9 @@ appointmentAgent.DeleteAppointmentEntity(142);
 ```crmscript
 NSAppointmentAgent appointmentAgent;
 
-NSAppointmentEntity appointment = appointmentAgent.GetAppointmentEntity(77);
-appointment.SetCompleted(3);
+NSAppointmentEntity a = appointmentAgent.GetAppointmentEntity(77);
+a.SetCompleted(3);
+appointmentAgent.SaveAppointmentEntity(a);
 ```
 
 ### Integer GetCompleted()
@@ -174,6 +175,7 @@ NSAppointmentEntity e = appointmentAgent.GetAppointmentEntity(77);
 
 if (e.GetCompleted() == 3) {
   e.SetCompleted(0);
+  appointmentAgent.SaveAppointmentEntity(e);
 }
 ```
 
