@@ -97,6 +97,98 @@ for(Integer i = 0; i < appointmentList.length(); i++) {
 > [!TIP]
 > Set `motherId` to **0** unless you're working with [meeting invitations](./invitations.md).
 
+## Create repeating follow-ups
+
+1. Create the [appointment](./appointment.md), [call](./call.md), [meeting](./invitations.md), or [task](./task.md) as usual.
+2. Set recurrence info.
+3. Save the follow-up.
+
+```crmscript
+NSAppointmentAgent appointmentAgent;
+NSAppointmentEntity newAppointment = appointmentAgent.CreateDefaultAppointmentEntityByTypeAndAssociate(7, 1);
+
+newAppointment.SetDescription("Morning coffee");
+
+NSRecurrenceInfo r = appointmentAgent.CreateDefaultRecurrence();
+newAppointment.SetRecurrence(r);
+
+newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
+```
+
+### NSRecurrenceInfo CreateDefaultRecurrence()
+
+```crmscript!
+NSAppointmentAgent appointmentAgent;
+NSRecurrenceInfo r = appointmentAgent.CreateDefaultRecurrence();
+
+printLine("Start: " + r.GetStartDate().toString());
+printLine("Pattern: " + r.GetPattern().toString());
+```
+
+> [!TIP]
+> Alternatively use `CreateDefaultRecurrenceByDate()` to the date that the recurring pattern should start.
+
+### Repeat at standard interval
+
+To repeat at a standard interval (daily, weekly, monthly, yearly), call `SetPattern()` with value \[1-4\]. See the reference section for details.
+
+This example creates a 10-minute daily coffee break at 14:00 starting August 1st.
+
+```crmscript
+DateTime start = String("2020-08-01 14:00").toDateTime();
+DateTime end = start;
+end.addMin(10);
+DateTime stop = start;
+stop.moveToYearEnd();
+
+NSAppointmentAgent appointmentAgent;
+NSAppointmentEntity newAppointment = appointmentAgent.CreateDefaultAppointmentEntityByTypeAndAssociate(7, 1);
+
+newAppointment.SetStartDate(start);
+newAppointment.SetEndDate(end);
+newAppointment.SetDescription("coffee break");
+
+NSRecurrenceInfo r = appointmentAgent.CreateDefaultRecurrence();
+r.SetPattern(1);
+r.SetIsRecurrence(true);
+r.SetRecurrenceEndType(1);
+r.SetStartDate(start);
+r.SetEndDate(stop);
+
+NSRecurrenceDayPattern p;
+p.SetPattern(1);
+r.SetDayPattern(p);
+
+newAppointment.SetRecurrence(r);
+newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
+```
+
+### Repeat at user-defined interval
+
+### Repeat at selected dates
+
+You can also manually create a list of selected dates that don't follow a pattern.
+
+### Repeat until
+
+You can choose to stop after a specific number of times or after a specific date.
+
+## Edit repeating follow-ups
+
+### Change 1 repetition
+
+Change only this instance, the change will not affect other times
+
+### Change all future repetitions
+
+Change all future instances including this one, the change will apply to this follow-up in the future as well.
+
+## Stop repeating follow-ups
+
+When you stop a recurrence, all repetitions of the follow-up **after the occurrence you edit** are deleted.
+
+If you cancel the recurrence of the 1st in a series, the pattern is deleted and the follow-up becomes a single appointment/call/task.
+
 ## Reference
 
 ### NSRecurrenceInfo
