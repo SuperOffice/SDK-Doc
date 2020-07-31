@@ -165,29 +165,143 @@ newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
 
 ### Repeat at user-defined interval
 
+Example: hourly reminders throughout the working day
+
+```crmscript
+NSRecurrenceInfo r;
+r.SetPattern(5);
+
+DateTime now;
+NSRecurrenceDate[] dates;
+for (Integer i =  0; i < 8; +++) {
+  NSRecurrenceDate d;
+  d.SetDate(now);
+  d.SetDescription("Stretch and have some water");
+  dates.pushBack(d);
+  d.addHour(1);
+}
+
+r.SetDates(dates);
+```
+
 ### Repeat at selected dates
 
 You can also manually create a list of selected dates that don't follow a pattern.
+
+```crmscript
+NSRecurrenceInfo r;
+r.SetPattern(5);
+
+DateTime[] selectedDates;
+selectedDates.pushBack(String("2020-08-17").toDateTime());
+selectedDates.pushBack(String("2020-09-21").toDateTime());
+selectedDates.pushBack(String("2020-11-16").toDateTime());
+selectedDates.pushBack(String("2021-01-04").toDateTime());
+
+NSRecurrenceDate[] dates;
+for (Integer i =  0; i < selectedDates.length(); +++) {
+  NSRecurrenceDate d;
+  d.SetDate(selectedDates[i]);
+  d.SetDescription("Planning - daycare closed");
+  dates.pushBack(d);
+}
+
+r.SetDates(dates);
+```
 
 ### Repeat until
 
 You can choose to stop after a specific number of times or after a specific date.
 
+**Repeat 10 times:**
+
+```crmscript
+NSRecurrenceInfo r;
+r.SetRecurrenceEndType(2);
+r.SetRecurrenceCounter(10);
+```
+
+**Repeat until end of next month:**
+
+```crmscript
+DateTime d;
+d.moveToMonthEnd();
+d.addMonth(1);
+NSRecurrenceInfo r;
+r.SetRecurrenceEndType(1);
+r.SetEndDate(d);
+```
+
 ## Edit repeating follow-ups
 
 ### Change 1 repetition
 
-Change only this instance, the change will not affect other times
+Change only this instance, the change will not affect other times.
+
+Postponing the current follow-up by 2 hours:
+
+```crmscript
+Integer aId = 234;
+
+NSAppointmentAgent appointmentAgent;
+NSAppointmentEntity a = appointmentAgent.GetAppointmentEntity(aId);
+
+NSRecurrenceInfo r = a.GetRecurrence();
+
+if (r.GetIsRecurrence()) {
+  r.SetStartDate(r.GetStartDate().addHour(2));
+  newAppointment.SetRecurrence(r);
+  newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
+}
+```
 
 ### Change all future repetitions
 
-Change all future instances including this one, the change will apply to this follow-up in the future as well.
+Change all future instances including this one - the change will apply to this follow-up in the future as well.
+
+```crmscript
+Integer aId = 234;
+DateTime now;
+
+NSAppointmentAgent appointmentAgent;
+NSAppointmentEntity a = appointmentAgent.GetAppointmentEntity(aId);
+
+NSRecurrenceInfo r = a.GetRecurrence();
+
+if (r.GetIsRecurrence()) {
+  NSAppointment[] appointmentList = appointmentAgent.GetAppointmentRecords(0,r.GetRecurrenceId());
+
+  for(Integer i = 0; i < appointmentList.length(); i++) {
+    if (appointmentList[i].GetStartDate().diff(now) > 0) {
+      NSAppointmentEntity futureAppointment = appointmentAgent.GetAppointmentEntity(appointmentList[i].GetAppointmentId());
+      // set changes here
+      futureAppointment = appointmentAgent.SaveAppointmentEntity(futureAppointment);
+    }
+  }
+}
+```
 
 ## Stop repeating follow-ups
 
 When you stop a recurrence, all repetitions of the follow-up **after the occurrence you edit** are deleted.
 
 If you cancel the recurrence of the 1st in a series, the pattern is deleted and the follow-up becomes a single appointment/call/task.
+
+```crmscript
+Integer aId = 234;
+DateTime now;
+
+NSAppointmentAgent appointmentAgent;
+NSAppointmentEntity a = appointmentAgent.GetAppointmentEntity(aId);
+
+NSRecurrenceInfo r = a.GetRecurrence();
+if (r.GetIsRecurrence()) {
+  r.SetIsRecurrence(false);
+  r.SetPattern(0);
+  a.SetRecurrence(r);
+  a = appointmentAgent.SaveAppointmentEntity(a);
+}
+```
 
 ## Reference
 
