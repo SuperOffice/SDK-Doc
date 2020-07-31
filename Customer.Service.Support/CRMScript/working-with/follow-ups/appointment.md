@@ -24,7 +24,7 @@ An *appointment* is a type of **follow-up** with a defined start and end time, s
 ## Get appointments
 
 > [!TIP]
-> You can only retrieve appointments for persons that are SuperOffice users (associates). The signed-in user must also have permission to view those appointments. Otherwise, an exception is thrown.
+> You can only retrieve appointments for persons that are SuperOffice users ([associates](../persons-and-organizations/employees.md)). The signed-in user must also have permission to view those appointments. Otherwise, an exception is thrown.
 
 ### NSAppointment[] GetAppointmentList(Integer[] p0)
 
@@ -85,9 +85,9 @@ for(Integer i = 0; i < appointmentList.length(); i++) {
 
 You'll need an **NSAppointmentAgent** to create, populate, and save a new appointment. Use 1 of these methods as a starting point, and look up more options in the API reference.
 
-* NSAppointmentEntity CreateDefaultAppointmentEntity()
-* NSAppointmentEntity CreateDefaultAppointmentEntityByType(Integer type)
-* NSAppointmentEntity CreateDefaultAppointmentEntityByTypeAndAssociate(Integer type, Integer associateId)
+* `CreateDefaultAppointmentEntity()`
+* `CreateDefaultAppointmentEntityByType(Integer type)`
+* `CreateDefaultAppointmentEntityByTypeAndAssociate(Integer type, Integer associateId)`
 
 Example: block out 2 hours starting now for a team lunch.
 
@@ -280,6 +280,9 @@ newAppointment.SetParticipants(participants);
 
 newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
 ```
+
+> [!TIP]
+> You can also [invite persons to the meeting](./invitations.md)).
 
 ## Delegation
 
