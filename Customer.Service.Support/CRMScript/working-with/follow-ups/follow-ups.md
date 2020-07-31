@@ -13,7 +13,7 @@ In the UI, both are closely linked to the **Diary** screen.
 
 ## Three types of follow-ups
 
-In SuperOffice CRM, *follow-up* is a collective term for **appointments**, **phone calls**, and **tasks** . These entities are always tied to an associate and have some form of time reference.
+In SuperOffice CRM, *follow-up* is a collective term for **appointments**, **phone calls**, and **tasks** . These entities are always tied to an [associate](../persons-and-organizations/employees.md) and have some form of [time](../../datatypes/datetime-type.md) reference.
 
 | type        | start time | end time | duration   | deadline | displayed | description | example |
 |-------------|:----------:|:--------:|:----------:|:--------:|-----------|-------------|---------|
@@ -29,9 +29,9 @@ In SuperOffice CRM, *follow-up* is a collective term for **appointments**, **pho
 Follow-ups are part of a broader group of entities labeled **activities**:
 
 * follow-ups
-  * appointment
-  * task
-  * call
+  * [appointment](./appointment.md)
+  * [task](./task.md)
+  * [call](./call.md)
 * documents
   * document
   * email
