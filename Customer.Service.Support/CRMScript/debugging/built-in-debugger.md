@@ -6,12 +6,6 @@ SortOrder: 10
 
 SuperOffice CRM has an integrated graphic debugger. Use it to step through scripts.
 
-## What is debug mode?
-
-When a script runs in debug mode, it will wait for status changes from the debugger. If nothing happens for 5 minutes, the script will resume and run to its end.
-
-The script will normally freeze after each statement and poll the database frequently to check for a flag telling it to execute the next statement.
-
 ## How to run in debug mode
 
 1. Go to **CRMScripts** in the Admin client.
