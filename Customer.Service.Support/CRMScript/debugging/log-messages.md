@@ -4,11 +4,11 @@ uid: crmscript_debug_log_messages
 SortOrder: 20
 ---
 
-You can write to and inspect the system log. The date format is **YYYY-MM-DD**.
-
 ## Online - database log
 
-This is the new log, kept in the database.
+You can write to and inspect the system log. 
+
+The date format is **YYYY-MM-DD**.
 
 Messages are written to the log immediately: if your script should crash, everything logged up to that point is preserved.
 
