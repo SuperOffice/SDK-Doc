@@ -1,5 +1,5 @@
 ---
-title: RSS Results
+title: Formatting RSS in XSLT
 uid: rss_feed_vb_dotnet_results
 SortOrder: 40
 ---
