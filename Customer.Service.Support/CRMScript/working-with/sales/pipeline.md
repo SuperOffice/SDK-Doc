@@ -71,6 +71,41 @@ NSSaleAgent saleAgent;
 NSSale[] saleList = saleAgent.GetSaleList(saleIds);
 ```
 
+## Statistics
+
+### NSSaleSummary GetSummaryByAssociate(Integer associateId, DateTime start, DateTime end)
+
+This example fetches the number of sold, lost, and open sales for an associate since January 01, 2020.
+
+```crmscript!
+DateTime start = String("2020-01-01").toDateTime();
+DateTime end;
+
+NSSaleAgent saleAgent;
+NSSaleSummary summary = saleAgent.GetSummaryByAssociate(1, start, end);
+
+printLine("Sold: " + summary.GetSold().toString() + "\tLost: " + summary.GetLost().toString() + "\tOpen: " + summary.GetOpen().toString());
+```
+
+### NSSaleSummary GetSummaryByContact(Integer contactId, DateTime start, DateTime end)
+
+This example fetches the number of sales and the total amount for a company from the time it was registered until now.
+
+```crmscript!
+Integer contactId = 1;
+
+NSContactAgent contactAgent;
+NSContact contact = contactAgent.GetContact(contactId);
+
+DateTime start = contact.GetCreatedDate();
+DateTime end;
+
+NSSaleAgent saleAgent;
+NSSaleSummary summary = saleAgent.GetSummaryByContact(contactId, start, end);
+
+printLine("Sold: " + summary.GetSold().toString() + "\tTotal: " + summary.GetSoldTotalBaseCurrency().toString());
+```
+
 ## Prioritize your most urgent or valuable opportunities
 
 What constitutes the hottest sales opportunities is up to you. But here's a few options to create a shortlist.
