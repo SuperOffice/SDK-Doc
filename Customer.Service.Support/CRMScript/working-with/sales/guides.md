@@ -63,3 +63,57 @@ NSSaleTypeEntity type = listAgent.GetSaleTypeEntity(1);
 
 printLine("This sale will auto advance: " + type.GetIsAutoAdvance().toString());
 ```
+
+## Suggested activities
+
+Suggested activities are just that  - **suggested**. They're blueprints that can be used to create actual follow-ups and documents.
+
+The blueprints sit in the intersection between sale types and stages. A sale type can have many stages, and a stage can apply to multiple sale types. The [SaleTypeStageLink table](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-SaleTypeStageLink.htm) connects them all.
+
+### List available suggestions
+
+```crmscript!
+SearchEngine se;
+se.addFields("SuggestedAppointment", "SuggestedAppointment_id,name,saleTypeStageLinkId");
+print(se.executeTextTable());
+```
+
+### Create follow-up from suggestion
+
+All you need is 3 IDs, and then calling `CreateDefaultAppointmentEntityFromSaleSuggestion()` will do the magic for you!
+
+* ID of the suggested appointment
+* ID of the sale
+* ID of the owner (associate)
+
+```crmscript
+NSAppointmentAgent appointmentAgent;
+NSAppointmentEntity newAppointment = appointmentAgent.CreateDefaultAppointmentEntityFromSaleSuggestion(3,4,false,5);
+newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
+```
+
+## Reference
+
+### SaleTypeStageLink
+
+| Field                | Description       |
+|:---------------------|:------------------|
+| SaleTypeStageLink_id | ID                |
+| saleType_id          | Link to sale type |
+| stageId              | Link to stage     |
+| rank                 | sort order        |
+
+### SuggestedAppointment
+
+| Field                   | Description                               |
+|:------------------------|:------------------------------------------|
+| SuggestedAppointment_id | ID                                        |
+| name                    | name of blueprint shown in guide          |
+| rank                    | sort order                                |
+| saleTypeStageLinkId     | anchor for sale guide items               |
+| task_id                 | type of the suggested appointment         |
+| daysFuture              | when the appointment should be scheduled  |
+| duration                | in minutes                                |
+| text                    | The suggested text of the new appointment |
+
+For a complete list of fields, see the [database reference](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-SuggestedAppointment.htm).
