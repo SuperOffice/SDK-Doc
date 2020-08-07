@@ -44,6 +44,14 @@ A *sale type* is a named set of reuseable info that will help you standardize th
 * percentages for discount and profit
 * stages
 
+**List available types:**
+
+```crmscript!
+SearchEngine se;
+se.addFields("SaleType", "SaleType_Id,name");
+print(se.executeTextTable());
+```
+
 ## Sales guides
 
 Using a *guide* will simplify and structure the sales process for the sales staff with suggestions for which follow-ups to do and which documents to create at each stage.
