@@ -55,6 +55,18 @@ for(Integer i = 0; i < stages.length(); i++) {
 > [!NOTE]
 > The ID and rank of a stage are not necessarily identical!
 
+### Get stages without using the sale type
+
+```crmscript
+NSMDOAgent a;
+
+NSMDOListItem[] saleprob = a.GetList("saleprobability",false,"",false);
+
+for(Integer i = 0; i < saleprob.length(); i++) {
+  printLine(saleprob[i].GetId().toString() + "\t" + saleprob[i].GetName());
+}
+```
+
 ### Bool GetIsAutoAdvance()
 
 ```crmscript!
@@ -91,6 +103,34 @@ NSAppointmentAgent appointmentAgent;
 NSAppointmentEntity newAppointment = appointmentAgent.CreateDefaultAppointmentEntityFromSaleSuggestion(3,4,false,5);
 newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
 ```
+
+### Create a suggestion and link it to a stage
+
+You can also create your own blueprints and load default values into them.
+
+This example creates a suggestion called *Read specification* with a duration of 2 hours. It then links it to an **NSSaleTypeStageLink** with ID 1.
+
+```crmscript!
+NSAppointmentAgent appointmentAgent;
+NSSuggestedAppointmentEntity myBlueprint = appointmentAgent.CreateDefaultSuggestedAppointmentEntity();
+
+myBlueprint.SetName("Read specification");
+
+TimeSpan t;
+t.set(0, 0, 2, 0, 0);
+myBlueprint.SetDuration(t);
+
+NSSaleTypeStageLink link;
+link.SetProbId(1);
+link.SetSaleTypeId(1);
+link.SetSaleTypeStageLinkId(1);
+myBlueprint.SetSaleTypeStageLink(link);
+
+myBlueprint = appointmentAgent.SaveSuggestedAppointmentEntity(myBlueprint);
+```
+
+> [!TIP]
+> If you re-run the query for SuggestedAppointment, you'll find the new blueprint and its ID in the result.
 
 ## Reference
 
