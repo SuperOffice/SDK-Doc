@@ -1,7 +1,7 @@
 ---
 title: Persons and organizations
 uid: crmscript_persons_and_org
-SortOrder: 05
+SortOrder: 10
 ---
 
 ## An in-depth guide to working with persons and organizations
