@@ -94,6 +94,31 @@ doc = agent.SaveDocumentEntity(doc);
 printLine(doc.GetDocumentId().toString());
 ```
 
+### Set document properties for people and organizations
+
+You can choose whether to use an agent to get associate, contact, and person objects by their ID or to create the objects and set the ID.
+
+```crmscript
+NSDocumentAgent agent;
+NSDocumentEntity doc = agent.GetDocumentEntity(2);
+
+NSAssociate owner;
+owner.SetAssociateId(13);
+doc.SetAssociate(owner);
+
+NSContact c;
+c.SetContactId(2);
+doc.SetContact(c);
+
+NSPersonAgent personAgent;
+NSPerson p = personAgent.GetPerson(5);
+doc.SetPerson(p);
+
+doc = agent.SaveDocumentEntity(doc);
+```
+
+Read more about [working with persons and organizations](../persons-and-organizations/persons-and-organizations.md).
+
 ## Change document properties
 
 > [!NOTE]
