@@ -119,6 +119,30 @@ doc = agent.SaveDocumentEntity(doc);
 
 Read more about [working with persons and organizations](../persons-and-organizations/persons-and-organizations.md).
 
+## Link document to an appointment
+
+```crmscript
+NSDocumentAgent agent;
+NSDocumentEntity doc = agent.GetDocumentEntity(2);
+
+NSAppointmentAgent appAgent;
+NSAppointmentEntity a = appAgent.CreateDefaultAppointmentEntity();
+
+a.SetDescription(doc.GetHeader());
+a.SetContact(doc.GetContact());
+
+NSLink link;
+link.SetEntityName("document");
+link.SetId(doc.GetDocumentId());
+
+NSLink[] links;
+links.pushBack(link);
+
+a.SetLinks(links);
+
+appAgent.SaveAppointmentEntity(a);
+```
+
 ## Change document properties
 
 > [!NOTE]
