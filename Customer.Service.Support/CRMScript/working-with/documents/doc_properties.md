@@ -143,6 +143,33 @@ a.SetLinks(links);
 appAgent.SaveAppointmentEntity(a);
 ```
 
+## Suggested documents
+
+Suggested documents are just that  - **suggested**. They're blueprints that can be used to create actual documents, and are commonly used for [sales guides](../sales/guides.md) and project guides.
+
+> [!NOTE]
+> Don't confuse suggested documents for [document templates](./doc_templates.md).
+
+### List available suggestions
+
+```crmscript!
+SearchEngine se;
+se.addFields("SuggestedDocument", "SuggestedDocument_id,name,saleTypeStageLinkId,projectTypeStatusLinkId");
+print(se.executeTextTable());
+```
+
+### Create document from suggestion
+
+All you need is the ID of the suggested document, and then calling `CreateDefaultDocumentEntityFromSuggestion()` will do the magic for you!
+
+```crmscript!
+NSDocumentAgent agent;
+NSDocumentEntity doc = agent.CreateDefaultDocumentEntityFromSuggestion(3);
+doc = agent.SaveDocumentEntity(doc);
+
+printLine(doc.GetDocumentId().toString() + "\t" + doc.GetHeader());
+```
+
 ## Change document properties
 
 > [!NOTE]
