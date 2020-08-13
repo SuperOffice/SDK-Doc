@@ -83,7 +83,7 @@ DateTime end;
 NSDocument[] docList = docAgent.GetContactDocumentsByTemplateType(4, start.addMonth(-6), end, 10, 106);
 ```
 
-> [! TIP]
+> [!TIP]
 > To retrieve for a person rather than a contact, use `GetPersonDocumentsByTemplateHeading()` or `GetPersonDocumentsByTemplateType()`.
 
 ## Template variables
