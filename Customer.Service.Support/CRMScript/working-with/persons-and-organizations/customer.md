@@ -213,6 +213,23 @@ c.toParser(p);
 printLine(p.getVariable("customer.name", 0));
 ```
 
+## List interests for a person
+
+```crmscript!
+Void viewPersonInterests(Integer personId) {
+  NSPersonAgent personAgent;
+  NSPersonEntity p = personAgent.GetPersonEntity(personId);
+
+  NSSelectableMDOListItem[] interests = p.GetInterests();
+
+  for (Integer i = 0; i < interests.length(); i++) {
+    printLine(interests[i].GetName());
+  }
+}
+
+viewPersonInterests(5);
+```
+
 ## Reference
 
 ### Frequently used values
