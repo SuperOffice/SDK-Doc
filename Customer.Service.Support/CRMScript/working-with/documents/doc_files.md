@@ -4,7 +4,7 @@ SortOrder: 20
 uid: crmscript_doc_files
 ---
 
-The physical document is tied to the NSDocumentEntity and stored in the document archive.
+The physical document is tied to the [**NSDocumentEntity**](./doc_properties.md) and stored in the document archive.
 
 ## Create physical document from template
 
@@ -22,7 +22,7 @@ Which template to use is set in the document properties.
 * uiCulture (used to select a template of the appropriate language, for example, "en-US" or "nb-NO")
 
 > [!TIP]
-> If set to **0**, the company, person, appointment, sale, and project will default to the values set in the document properties.
+> If set to **0**, the company, person, appointment, sale, and project IDs will default to the values set in the document properties.
 
 ```crmscript
 NSDocumentAgent agent;
@@ -81,7 +81,7 @@ printLine(changeFileExtension(3, ".pdf"));
 
 In SuperOffice CRM, many people are creating, editing, and reading documents at any given time. If multiple users are editing the same document at the same time, they risk overwriting each other's data. To prevent this from happening, SuperOffice CRM will lock a document when it is being edited by a user. Other users can still open the document, but only in read-only mode.
 
-**Find out whether the document is checked out:**
+### Is the document checked out
 
 ```crmscript!
 NSDocumentAgent agent;
@@ -89,7 +89,7 @@ NSCheckoutInfo info = agent.GetCheckoutState(2);
 printLine(info.GetState().toString() + "\t" + info.GetName());
 ```
 
-**Check out:**
+### Check out
 
 ```crmscript
 String[] returnTypes;
@@ -97,7 +97,7 @@ NSDocumentAgent agent;
 agent.CheckoutDocument(2, returnTypes);
 ```
 
-**Undo (abandon) a checkout:**
+### Undo (abandon) a checkout
 
 ```crmscript
 String[] returnTypes;
@@ -105,7 +105,7 @@ NSDocumentAgent agent;
 agent.UndoCheckoutDocument(2, returnTypes);
 ```
 
-**Check in:**
+### Check in
 
 If the document or plug-in supports versioning, you can provide a description and metadata for a specific version when you check it in.
 
@@ -119,24 +119,25 @@ agent.CheckinDocument(2, returnTypes, "updated copyright", meta);
 
 ## Edit physical document - online
 
-File operations are unavailable in CRM Online. All updates happen through document plug-ins using a url referring to the actual document.
+File operations are unavailable in CRM Online. All updates happen through document plug-ins using a URL referring to the actual document.
 
 > [!TIP]
-> To update just the document properties, [update the NSDocumentEntity](./doc_properties.md).
+> To update only the document properties, [update the NSDocumentEntity](./doc_properties.md).
 
-### Get url
+### Get URL
 
 ```crmscript!
 NSDocumentAgent agent;
-String url = agent.GetDocumentUrl(2, "", true);
+Integer docId = 2;
+String url = agent.GetDocumentUrl(docId, "", true);
 printLine(url);
 ```
 
-This example gets a writable url for the latest version of document 2.
+This example gets a writable URL for the latest version of document 2.
 
-## Edit physical document - onsite
+## Edit physical document - ONSITE ONLY
 
-This is a 3-step process: download, modify, upload
+This is a 3-step process: download, modify, upload.
 
 ### Download document
 
@@ -191,7 +192,7 @@ How you go about changing the document locally is completely up to you!
 
 ### Upload document
 
-For **new** SuperOffice documents based on a local file, you must create and save the NSDocumentEntity before uploading.
+For **new** SuperOffice documents based on a local file, you must **create and save the NSDocumentEntity before uploading**.
 
 For **modified** documents, you must ensure that the document's status is not **Completed**. Set it to **0** to enable upload.
 To overwrite an existing file with the same name stored in the document archive, set the last parameter of `SetDocumentStream()` to **true**.

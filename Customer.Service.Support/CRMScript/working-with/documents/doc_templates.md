@@ -40,18 +40,9 @@ You're also less likely to have to deal with wonky documents originating from th
 
 Brand-wise, you don't have to concern yourself with marketing style guides, because they're built into the templates.
 
-## Template types
+## Find templates
 
-| Type   | Description |
-|:------:|:------------|
-| 0      | unknown     |
-| 2      | document    |
-| 3      | email       |
-| 4      | fax         |
-
-Types 1, 5, and 6 are not used for *document* templates.
-
-## List all document templates with SearchEngine
+### List all document templates with SearchEngine
 
 SuperOffice includes some standard templates. You can find them as well as custom templates with SearchEngine.
 
@@ -62,14 +53,14 @@ se.addCriteria("DocTmpl.record_type", "Equals", "2", "and", 0);
 print(se.executeTextTable());
 ```
 
-## Fetch all templates
+### Fetch all templates with the list agent
 
 ```crmscript
 NSListAgent listAgent;
 NSDocumentTemplate[] templateList = listAgent.GetDocumentTemplates();
 ```
 
-Or from the MDOAgent:
+### Fetch tempolate info with the MDO agent
 
 ```crmscript
 NSMDOAgent mdoAgent;
@@ -89,7 +80,7 @@ doc.SetDocumentTemplate(tpl);
 doc = agent.SaveDocumentEntity(doc);
 ```
 
-## Use template as a filter when retrieving documents
+## Filter documents by template
 
 Like many MDO lists, templates can be grouped by headings, which get their labels from the [Heading table](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-Heading.htm).
 
@@ -179,6 +170,17 @@ print(result);
 > Use an empty `cultureName` string to accept whatever current culture is set on the server. However, in multi-national organizations with a single server, set an appropriate value to avoid surprises.
 
 ## Reference
+
+### Template types
+
+| Type   | Description |
+|:------:|:------------|
+| 0      | unknown     |
+| 2      | document    |
+| 3      | email       |
+| 4      | fax         |
+
+Types 1, 5, and 6 are not used for *document* templates.
 
 ### Frequently used fields
 

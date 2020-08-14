@@ -173,16 +173,16 @@ printLine(doc.GetDocumentId().toString() + "\t" + doc.GetHeader());
 ## Change document properties
 
 > [!NOTE]
-> The `NSDocumentEntity` can't be changed if the document is marked as **Completed**.<br />Use `GetCompleted()` to check the status. Toggle it to **0** to do your edits and then toggle it back if applicable.
+> The `NSDocumentEntity` can't be changed if the document is marked as **Completed**.<br />Use `GetCompleted()` to check the status. Toggle it to **0** to do your edits and then toggle it back if necessary.
 
 ```crmscript
-NSDocumentAgent docAgent;
+NSDocumentAgent agent;
 
-NSDocumentEntity doc = docAgent.GetDocumentEntity(2);
+NSDocumentEntity doc = agent.GetDocumentEntity(2);
 
 if (doc.GetCompleted() == 3) {
   doc.SetCompleted(0);
-  doc = docAgent.SaveDocumentEntity(doc);
+  doc = agent.SaveDocumentEntity(doc);
 }
 ```
 
@@ -211,10 +211,3 @@ For a complete list of fields, see the [database reference](https://community.su
 
 > [!TIP]
 > Both `our_ref` and `your_ref` are strings.
-
-### Timestamp values
-
-| Field         | Description                                              |
-|:--------------|:---------------------------------------------------------|
-| registered    | UtcDateTime of registration                              |
-| updated       | UtcDateTime of last update                               |
