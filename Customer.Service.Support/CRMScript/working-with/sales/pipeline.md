@@ -49,6 +49,22 @@ NSSaleAgent saleAgent;
 NSSale[] saleList = saleAgent.GetUpcomingSales(-1,-1);
 ```
 
+## Check if a contact has open sales
+
+```crmscript
+Bool hasOpenSales(Integer contactId) {
+  NSSaleAgent saleAgent;
+  DateTime from;
+  DateTime to;
+
+  NSSaleSummary summary = saleAgent.GetSummaryByContact(contactId, from.addDay(-30), to);
+  
+  return summary.GetOpen() > 0;
+}
+
+print(hasOpenSales(2).toString());
+```
+
 ## Get sales for associate
 
 To call `GetSaleList()`, we need to create the list of sale IDs 1st.
