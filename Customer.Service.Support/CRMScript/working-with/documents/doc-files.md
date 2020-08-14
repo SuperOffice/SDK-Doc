@@ -4,7 +4,7 @@ SortOrder: 20
 uid: crmscript_doc_files
 ---
 
-The physical document is tied to the [**NSDocumentEntity**](./doc_properties.md) and stored in the document archive.
+The physical document is tied to the [**NSDocumentEntity**](./doc-properties.md) and stored in the document archive.
 
 ## Create physical document from template
 
@@ -122,7 +122,7 @@ agent.CheckinDocument(2, returnTypes, "updated copyright", meta);
 File operations are unavailable in CRM Online. All updates happen through document plug-ins using a URL referring to the actual document.
 
 > [!TIP]
-> To update only the document properties, [update the NSDocumentEntity](./doc_properties.md).
+> To update only the document properties, [update the NSDocumentEntity](./doc-properties.md).
 
 ### Get URL
 

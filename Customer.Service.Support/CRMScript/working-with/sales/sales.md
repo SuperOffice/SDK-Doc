@@ -4,7 +4,7 @@ uid: crmscript_sales
 SortOrder: 40
 ---
 
-A sale process typically consists of different stages. For each stage, you have certain activities and perhaps documents that need to be completed. With every activity and every stage completed, you will get closer to closing the sale.
+A sale process typically consists of different stages. For each stage, you have certain activities and perhaps documents that need to be completed. With every activity and every stage completed, you will get closer to [closing the sale](./lost-or-sold.md).
 
 ## Key info
 
@@ -54,7 +54,7 @@ print(se.executeTextTable());
 
 ## Sales guides
 
-Using a *guide* will simplify and structure the sales process for the sales staff with suggestions for which follow-ups to do and which documents to create at each stage.
+[Using a *guide*](./guides) will simplify and structure the sales process for the sales staff with suggestions for which follow-ups to do and which documents to create at each stage.
 
 ## Status of a sale
 

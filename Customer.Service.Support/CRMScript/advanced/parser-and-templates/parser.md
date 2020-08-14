@@ -15,7 +15,7 @@ String output = p.parseString("Hello [[firstName]] [[lastName]]!\n");
 print(output);
 ```
 
-This example defines the template and its variables inline. You can also use a [reply template](./reply_template.md).
+This example defines the template and its variables inline. You can also use a [reply template](./reply-template.md).
 
 ## List available variables
 

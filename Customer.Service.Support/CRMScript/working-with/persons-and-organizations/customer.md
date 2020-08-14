@@ -47,8 +47,8 @@ c.save();
 
 Saves a new or updated customer and returns its ID.
 
-* If the ID is set before calling `save()`, it is an update.
-* If the ID is empty, it is a create.
+* If the ID is set before calling `save()`, it's an update.
+* If the ID is empty, it's a create.
 
 ```crmscript
 Customer c;
@@ -76,7 +76,7 @@ c.load(2);
 Brings up the customer that is owned by the agent and matching the external key.
 
 > [!CAUTION]
-> `loadFromAgentAndKey()`might overwrite existing values!
+> `loadFromAgentAndKey()` might overwrite existing values!
 
 ### String getValue(String colName)
 
@@ -172,7 +172,7 @@ print(b.toString());
 
 ### String makeSalutation()
 
-`makeSalutation()` creates a greeting appropriate for the customer. The string can be used in the beginning of a document or email.
+`makeSalutation()` creates a greeting appropriate for the customer. The string can be used at the beginning of a document or email.
 
 ```crmscript!
 Customer c;
@@ -200,7 +200,7 @@ Logs out a customer.
 
 ## Parser variables
 
-Calling `toParser()` will load fields, prefix them with *customer*, and make them available to templates.
+Calling `toParser()` will load fields, prefix them with *customer*, and make them available to [templates](../../advanced/parser-and-templates/reply-template.md).
 
 > [!NOTE]
 > Repeated calls will overwrite rather than append the values in the Parser instance.

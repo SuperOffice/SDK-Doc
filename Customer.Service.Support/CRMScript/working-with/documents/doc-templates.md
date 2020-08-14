@@ -17,10 +17,10 @@ With regards
 {atit}
 ```
 
-For the end-user, these templates behave similar to the service [reply template](../../advanced/parser-and-templates/reply_template.md). However, how you work with them in CRMScript is different.
+For the end-user, these templates behave similar to the service [reply template](../../advanced/parser-and-templates/reply-template.md). However, how you work with them in CRMScript is different.
 
 > [!CAUTION]
-> Template-based documents are only as good as the quality of your CRM data. It is vital that all customer details are kept up to date. A template won't fix bad input.
+> Template-based documents are only as good as the quality of your CRM data. It's vital that all customer details are kept up to date. A template won't fix bad input.
 
 The **DocTmpl** database table represents an MDO list. The corresponding CRMScript carrier classes are `NSDocumentTemplate`and `NSDocumentTemplateEntity`.
 
@@ -60,7 +60,7 @@ NSListAgent listAgent;
 NSDocumentTemplate[] templateList = listAgent.GetDocumentTemplates();
 ```
 
-### Fetch tempolate info with the MDO agent
+### Fetch template info with the MDO agent
 
 ```crmscript
 NSMDOAgent mdoAgent;

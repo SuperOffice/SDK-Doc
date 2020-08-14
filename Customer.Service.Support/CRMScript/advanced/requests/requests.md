@@ -31,7 +31,7 @@ Different companies have different routines for request handling and may use Sup
 3. The request handler sends a response to the customer.
 4. The request handler closes the request and proceeds to deal with other requests.
 
-In both scenarios, if the request handler is unable to ful    fil the request on their own, they can either:
+In both scenarios, if the request handler is unable to fulfil the request on their own, they can either:
 
 * Ask a colleague
 * Get help from outside the organization, for example for a sub-contractor or supplier

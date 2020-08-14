@@ -4,7 +4,7 @@ uid: crmscript_request_logs
 SortOrder: 30
 ---
 
-The system logs all noteworthy actions and changes pertaining to tickets. You can also add your own  log entries.
+The system logs all noteworthy actions and changes pertaining to tickets. You can also add your own log entries.
 
 ## Write a message to the ticket log
 
@@ -32,7 +32,7 @@ t.log("SuperStar RequestHandler", "I can handle anything and anyone!");
 
 ## Search the log
 
-When inspecting logs, the CRMScript SearchEngine is your best friend. Here's some info commonly filtered on:
+When inspecting logs, the CRMScript [SearchEngine](../searchengine/searchengine.md) is your best friend. Here's some info commonly filtered on:
 
 * ticket_id
 * message_id

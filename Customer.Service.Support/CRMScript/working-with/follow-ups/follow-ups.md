@@ -45,10 +45,10 @@ Follow-ups are part of a broader group of entities labeled **activities**:
 
 When working with follow-ups, data will often intersect with the following entities:
 
-* [company](../../advanced/persons-and-organizations/company.md) (contact table)
-* [contact](../../advanced/persons-and-organizations/customer.md) (person table)
+* [company](../persons-and-organizations/company.md) (contact table)
+* [contact](../persons-and-organizations/customer.md) (person table)
 * project
-* sale
+* [sale](../sales/leads.md)
 
 ## In this section
 

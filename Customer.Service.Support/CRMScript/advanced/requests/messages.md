@@ -132,7 +132,7 @@ m.setValue("bodyHtml" , p.parseString(htmlBody));
 printLine("\nHTML body of message after parsing:\n\n" + m.getValue("bodyHtml"));
 ```
 
-Read more about [the parser](../text/parser.md) and [reply templates](../text/reply_template.md).
+Read more about [the parser](../parser-and-templates/parser.md) and [reply templates](../parser-and-templates/reply-template.md).
 
 ### Void convertInlineImages()
 

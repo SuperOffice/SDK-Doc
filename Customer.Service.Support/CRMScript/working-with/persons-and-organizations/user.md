@@ -34,8 +34,8 @@ u.save();
 
 Saves a new or updated user and returns its ID.
 
-* If the ID is set before calling `save()`, it is an update.
-* If the ID is empty, it is a create.
+* If the ID is set before calling `save()`, it's an update.
+* If the ID is empty, it's a create.
 
 ```crmscript!
 User u;
@@ -111,7 +111,7 @@ The **activeuser** table holds info about currently signed-in users. Use it to l
 
 ## Parser variables
 
-Calling `toParser()` will load fields, prefix them with *user*, and make them available to templates.
+Calling `toParser()` will load fields, prefix them with *user*, and make them available to [templates](../../advanced/parser-and-templates/reply-template.md).
 
 ```crmscript!
 Parser p;

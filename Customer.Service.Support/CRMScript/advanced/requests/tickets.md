@@ -132,7 +132,7 @@ Sends a notification email to the owner of the ticket.
 
 Call `notifyEmail()` when you create a new ticket, add a new message to a ticket, and similar events.
 
-Pass the ID of a suitable [reply template](../text/reply_template.md).
+Pass the ID of a suitable [reply template](../parser-and-templates/reply-template.md).
 
 ```crmscript
 Ticket t;
@@ -253,7 +253,7 @@ String output = p.parseString(rt.getHtmlBody(2));
 print(output);
 ```
 
-Read more about [the parser](../text/parser.md) and [reply templates](../text/reply_template.md).
+Read more about [the parser](../parser-and-templates/parser.md) and [reply templates](../parser-and-templates/reply-template.md).
 
 ### Void toParserRaw(Parser theParser)
 

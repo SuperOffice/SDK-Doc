@@ -4,7 +4,7 @@ uid: crmscript_sale-guide
 SortOrder: 40
 ---
 
-Some sale types have an associated sales guide. For those types, it si important to understand stages and working with suggested activities.
+Some sale types have an associated sales guide. For those types, it's important to understand stages and working with suggested activities.
 
 ## Check if sale is connected to a guide
 
@@ -27,7 +27,7 @@ else {
 
 ## Stages
 
-Each stage has a set of suggested activities. There is also a setting controlling whether the sale will automatically advance to the next stage when the last guided activity in a stage is completed.
+Each stage has a set of **suggested activities**. There is also a setting controlling whether the sale will automatically advance to the next stage when the last guided activity in a stage is completed.
 
 The sequence of the stages is determined by the **rank** of each stage.
 
@@ -103,6 +103,9 @@ NSAppointmentAgent appointmentAgent;
 NSAppointmentEntity newAppointment = appointmentAgent.CreateDefaultAppointmentEntityFromSaleSuggestion(3,4,false,5);
 newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
 ```
+
+> [!TIP]
+> You can also [create documents from suggestions](../documents/doc-properties.md).
 
 ### Create a suggestion and link it to a stage
 

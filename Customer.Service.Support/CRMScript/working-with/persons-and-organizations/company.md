@@ -174,7 +174,7 @@ print(b.toString());
 
 ## Parser variables
 
-Calling `toParser()` will load the following fields and make them available to templates:
+Calling `toParser()` will load the following fields and make them available to [templates](../../advanced/parser-and-templates/reply-template.md):
 
 * company.id
 * company.name
@@ -199,7 +199,7 @@ printLine(p.getVariable("company.name", 0));
 
 ## Activities
 
-You can also use the contact agent to check what's going on.
+You can also use the [contact agent](../ns-agents-and-carriers.md) to check what's going on.
 
 ### GetMyActiveContacts
 
@@ -278,4 +278,4 @@ For a complete list of fields, see the [database reference](https://community.su
 | 32    | person updated     |
 
 > [!TIP]
-> To request more than 1 action type, summarize the values. **63** means include all.
+> To request more than 1 action type, summarize the values. **63** means **include all**.

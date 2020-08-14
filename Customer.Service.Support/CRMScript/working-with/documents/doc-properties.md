@@ -148,7 +148,7 @@ appAgent.SaveAppointmentEntity(a);
 Suggested documents are just that  - **suggested**. They're blueprints that can be used to create actual documents, and are commonly used for [sales guides](../sales/guides.md) and project guides.
 
 > [!NOTE]
-> Don't confuse suggested documents for [document templates](./doc_templates.md).
+> Don't confuse suggested documents for [document templates](./doc-templates.md).
 
 ### List available suggestions
 
