@@ -116,6 +116,23 @@ c.save();
 
 Adds "NO-" to the 1st address field.
 
+### Set address using the contact agent
+
+```crmscript
+NSContactAgent contactAgent;
+NSContactEntity contact = contactAgent.GetContactEntity(2);
+
+NSAddress address = contact.GetAddress();
+
+NSLocalizedField[][] localAdr = address.GetLocalizedAddress();
+localAdr[1][0].SetValue("Götabergsgatan 22");
+localAdr[2][0].SetValue("Götabergsgatan 22");
+
+address.SetLocalizedAddress(localAdr);
+contact.SetAddress(address);
+contactAgent.SaveContactEntity(contact);
+```
+
 ## Security
 
 Don't assume that a user has access to everything. It is good practice to look up access rights before revealing or altering company information.
