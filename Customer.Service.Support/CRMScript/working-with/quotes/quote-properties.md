@@ -8,6 +8,35 @@ Quotes are what connects products to a sale. You must [record a sale](../sales/l
 
 Each quote belongs to a single sale. And there's only 1 quote per sale.
 
+## Retrieve quote info
+
+To view basic info, use `NSQuote`. To view (and possibly update) complex info, use `NSQuoteEntity`.
+
+### NSQuote GetQuote(Integer quoteId)
+
+```crmscript
+NSQuoteAgent qa;
+NSQuote quote = qa.GetQuote(1);
+```
+
+### NSQuote GetQuoteFromSaleId(Integer saleId)
+
+```crmscript
+NSQuoteAgent qa;
+NSQuote quote = qa.GetQuoteFromSaleId(4);
+```
+
+### NSQuoteEntity GetQuoteEntity(Integer quoteId)
+
+```crmscript
+NSQuoteAgent qa;
+NSQuoteEntity quoteEntity = qa.GetQuoteEntity(1);
+```
+
+### NSQuoteEntity GetQuoteEntityFromSaleId(Integer saleId)
+
+Variant of `GetQuoteEntity()` that uses a sale ID to find the quote.
+
 ## Create quote
 
 You can either create a quote from scratch or copy an existing quote from another sale.
@@ -31,6 +60,17 @@ NSQuoteAgent qa;
 NSQuoteEntity quote = qa.CreateAndSaveQuoteFromSale(4,5);
 
 printLine(quote.GetSaleId().toString());
+```
+
+## Delete quote
+
+> [!CAUTION]
+> Always check before deleting. There might be legal and/or financial reasons to keep a quote in the system.
+
+```crmscript
+Integer quoteId = 42;
+NSQuoteAgent qa;
+qa.DeleteQuote(quoteId);
 ```
 
 ## References
