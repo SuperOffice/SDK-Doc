@@ -55,12 +55,17 @@ printLine(quote.GetQuoteId().toString());
 
 ### NSQuoteEntity CreateAndSaveQuoteFromSale(Integer copyFromSaleId, Integer copyToSaleId)
 
+ The quote is copied with its products and alternatives.
+
 ```crmscript!
 NSQuoteAgent qa;
 NSQuoteEntity quote = qa.CreateAndSaveQuoteFromSale(4,5);
 
 printLine(quote.GetSaleId().toString());
 ```
+
+> [!NOTE]
+> The sale you copy the quote **from** must have the same [currency](../sales/currency.md) as the sale you are copying it **to**.
 
 ## Update quote
 
@@ -109,7 +114,7 @@ for(Integer i = 0; i < versionList.length(); i++) {
 
 ### NSQuoteVersion CreateAndSaveQuoteVersion(Integer quoteVersionId)
 
-Creates a new version based on another version of the same quote.
+Creates a new version based on another version of the same quote. This is your only option when you want to edit a sent quote.
 
 ```crmscript
 NSQuoteAgent qa;
