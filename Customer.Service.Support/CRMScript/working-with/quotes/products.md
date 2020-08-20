@@ -1,7 +1,7 @@
 ---
 title: Products and price lists 
 uid: crmscript_products
-SortOrder: 20
+SortOrder: 30
 ---
 
 Each product belongs to a single price list. A price list can either be cached from an ERP system or set up in SuperOffice CRM.
