@@ -62,10 +62,82 @@ NSQuoteEntity quote = qa.CreateAndSaveQuoteFromSale(4,5);
 printLine(quote.GetSaleId().toString());
 ```
 
+## Update quote
+
+Updates to a quote mostly target the [alternatives and quote lines](./quote-alternatives.md). You will, however, see some changes to the quote properties when dealing with quote documents and placing orders.
+
+## Versions
+
+There may be multiple versions of a quote, but only 1 of them is **active** at any time.
+Each version will have 1 or more [alternatives](./quote-alternatives.md), which in turn will have 1 or more quote lines.
+
+When updating quotes, you'll always be working on the latest version.
+
+### Find the latest version
+
+```crmscript!
+NSQuoteAgent qa;
+NSQuote quote = qa.GetQuote(1);
+Integer versionNumber = quote.GetActiveQuoteVersionId();
+
+printLine("Active version: " + versionNumber.toString());
+```
+
+### NSQuoteVersion GetQuoteVersion(Integer quoteVersionId)
+
+Fetches a specific version.
+
+```crmscript!
+NSQuoteAgent qa;
+NSQuoteVersion version = qa.GetQuoteVersion(1);
+
+printLine(version.GetExpirationDate().toString());
+```
+
+### NSQuoteVersion[] GetQuoteVersions(Integer quoteId)
+
+Fetches all quote versions for a sale.
+
+```crmscript!
+NSQuoteAgent qa;
+NSQuoteVersion[] versionList = qa.GetQuoteVersions(1);
+
+for(Integer i = 0; i < versionList.length(); i++) {
+  printLine(versionList[i].GetRank().toString() + " |\t" + versionList[i].GetState().toString());
+}
+```
+
+### NSQuoteVersion CreateAndSaveQuoteVersion(Integer quoteVersionId)
+
+Creates a new version based on another version of the same quote.
+
+```crmscript
+NSQuoteAgent qa;
+NSQuoteVersion version = qa.CreateAndSaveQuoteVersion(1);
+```
+
+### Update version
+
+This example extends the expiration date by 1 week:
+
+```crmscript
+NSQuoteAgent qa;
+NSQuoteVersion version = qa.GetQuoteVersion(1);
+
+version.SetExpirationDate(version.GetExpirationDate().addDays(7));
+
+version = qa.SaveQuoteVersion(version);
+
+printLine("New expiration date: " + version.GetExpirationDate().toString());
+```
+
+> [!TIP]
+> Remember to call `SaveQuoteVersion()` whenever you update a version!
+
 ## Delete quote
 
 > [!CAUTION]
-> Always check before deleting. There might be legal and/or financial reasons to keep a quote in the system.
+> Always check before deleting. There might be legal and/or financial reasons to keep quote info in the system.
 
 ```crmscript
 Integer quoteId = 42;
@@ -90,20 +162,6 @@ qa.DeleteQuote(quoteId);
 
 For a complete list of fields, see the [database reference](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-Quote.htm).
 
-### Frequently used QuoteAlternative fields
-
-| Field                | Description                               |
-|:---------------------|:------------------------------------------|
-| quotealternative_id  | ID                                        |
-| QuoteVersionId       | the version the alternative belongs to    |
-| Name                 | label for UI                              |
-| VAT                  | as calculated amount                      |
-| EarningPercent       | in percent of total                       |
-| EarningAmount        | as amount                                 |
-| TotalPrice           | calculated                                |
-
-For a complete list of fields, see the [database reference](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-QuoteAlternative.htm).
-
 ### Frequently used QuoteVersion fields
 
 | Field                | Description                               |
@@ -118,20 +176,6 @@ For a complete list of fields, see the [database reference](https://community.su
 | Rank                 | the version number                        |
 
 For a complete list of fields, see the [database reference](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-QuoteVersion.htm).
-
-### Frequently used QuoteLine fields
-
-| Field                | Description                               |
-|:---------------------|:------------------------------------------|
-| quoteline_id         | ID                                        |
-| QuoteAlternativeId   | the alternative this line belongs to      |
-| Name                 | product name                              |
-| Code                 | the product code or article number        |
-| Rank                 | for sorting                               |
-
-The line will also include **information duplicated from the product** (rather than referenced).
-
-For a complete list of fields, see the [database reference](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-QuoteLine.htm).
 
 ### State
 
