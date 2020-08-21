@@ -12,7 +12,7 @@ To create an order, you have to select which alternative to use.
 
 ```crmscript!
 NSQuoteAgent qa;
-Integer quoteAlternativeId = 1;
+Integer quoteAlternativeId = 9;
 NSPluginUrlResponse order = qa.PlaceOrder(quoteAlternativeId, true, "256", "fall campaign", "ENG");
 
 if (order.GetIsOk()) {
@@ -55,7 +55,7 @@ This example prints the 1st 20 characters of the stream.
 
 ```crmscript!
 NSQuoteAgent qa;
-NSQuoteEntity quote = qa.GetQuoteEntity(1);
+NSQuoteEntity quote = qa.GetQuoteEntity(11);
 printLine(quote.GetAcceptedQuoteAlternativeId().toString());
 ```
 
@@ -63,7 +63,7 @@ printLine(quote.GetAcceptedQuoteAlternativeId().toString());
 
 ```crmscript!
 NSQuoteAgent qa;
-NSQuoteEntity quote = qa.GetQuoteEntity(1);
+NSQuoteEntity quote = qa.GetQuoteEntity(11);
 printLine(quote.GetPoNumber());
 ```
 
@@ -71,7 +71,7 @@ printLine(quote.GetPoNumber());
 
 ```crmscript!
 NSQuoteAgent qa;
-NSQuoteEntity quote = qa.GetQuoteEntity(1);
+NSQuoteEntity quote = qa.GetQuoteEntity(11);
 NSQuoteVersion version = qa.GetQuoteVersion(quote.GetActiveQuoteVersionId());
 Integer state = version.GetState();
 
@@ -90,7 +90,7 @@ else {
 
 ```crmscript
 NSQuoteAgent qa;
-NSQuoteEntity quote = qa.GetQuoteEntity(1);
+NSQuoteEntity quote = qa.GetQuoteEntity(11);
 
 NSSaleEntity sale = saleAgent.GetSaleEntity(quote.GetSaleId());
 sale.SetStatus(2);

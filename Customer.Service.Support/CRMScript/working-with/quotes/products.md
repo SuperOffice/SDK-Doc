@@ -22,7 +22,7 @@ printLine(priceList.GetName() + ": " + priceList.GetCurrency());
 
 ### Get multiple price lists from quote connection
 
-You've got several variants of `GetPriceList()`, which all return `NSPriceList[]` and take the ID of a quote connection as the 1st argument.
+You've got several variants of `GetPriceList()`, which all return `NSPriceList[]` and take the **ID of a quote connection** as the 1st argument.
 
 | Method                          | Currency     | Only active | Include upcoming/expired |
 |:--------------------------------|:-------------|:-----------:|:------------------------:|
@@ -34,7 +34,7 @@ You've got several variants of `GetPriceList()`, which all return `NSPriceList[]
 ```crmscript!
 NSQuoteAgent qa;
 
-NSPriceList[] priceLists = qa.GetActivePriceLists(1, "GBP");
+NSPriceList[] priceLists = qa.GetActivePriceLists(1, "NOK");
 
 for(Integer i = 0; i < priceLists.length(); i++) {
   printLine(priceLists[i].GetName());

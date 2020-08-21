@@ -9,7 +9,7 @@ In sales, a quote allows a prospective buyer to see the **costs of selected prod
 For you as a CRMScript developer, working with quotes means that:
 
 * you won't have to worry about miscalculating
-* the sales details are automatically updated
+* the sales details can be automatically updated
 
 ## ERP
 

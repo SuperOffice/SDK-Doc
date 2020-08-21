@@ -17,7 +17,7 @@ The estimated sales amount for the sale (forecast) is obtained from the total am
 
 ```crmscript!
 NSQuoteAgent qa;
-NSQuoteAlternative[] listOfAlternatives = qa.GetQuoteVersion(1).GetQuoteAlternatives();
+NSQuoteAlternative[] listOfAlternatives = qa.GetQuoteVersion(8).GetQuoteAlternatives();
 
 for(Integer i = 0; i < listOfAlternatives.length(); i++) {
   printLine(listOfAlternatives[i].GetName() + " |\t" + listOfAlternatives[i].GetStatus().toString());
@@ -28,7 +28,7 @@ for(Integer i = 0; i < listOfAlternatives.length(); i++) {
 
 ```crmscript!
 NSQuoteAgent qa;
-NSQuoteAlternative alt = qa.GetQuoteAlternative(2);
+NSQuoteAlternative alt = qa.GetQuoteAlternative(6);
 
 printLine(alt.GetTotalPrice().toString(2));
 ```
@@ -117,7 +117,7 @@ qa.DeleteQuoteAlternative(quoteAlternativeId);
 ```crmscript!
 NSQuoteAgent qa;
 Integer quoteAlternativeId = 2;
-NSQuoteLine[] lines = qa.GetQuoteLines(2);
+NSQuoteLine[] lines = qa.GetQuoteLines(quoteAlternativeId);
 
 for(Integer i = 0; i < lines.length(); i++) {
   printLine(lines[i].GetTotalPrice().toString(2) + " , discount= " + lines[i].GetDiscountAmount().toString(2));
@@ -128,7 +128,7 @@ for(Integer i = 0; i < lines.length(); i++) {
 
 ```crmscript
 NSQuoteAgent qa;
-NSQuoteLine line = qa.GetQuoteLine(2);
+NSQuoteLine line = qa.GetQuoteLine(3);
 
 printLine(line.GetUnitCost().toString(2));
 ```

@@ -6,11 +6,13 @@ SortOrder: 10
 
 Quotes are what connects products to a sale. You must [record a sale](../sales/leads.md) **before** you can add a quote. Also, [products](./products.md) must have been registered before you can add them to a quote.
 
-Each quote belongs to a single sale. And there's only 1 quote per sale.
+> [!NOTE]
+> Each quote belongs to a single sale. And there's only 1 quote per sale.
 
 ## Retrieve quote info
 
-To view basic info, use `NSQuote`. To view (and possibly update) complex info, use `NSQuoteEntity`.
+* To view basic info, use `NSQuote`.
+* To view (and possibly update) complex info, use `NSQuoteEntity`.
 
 ### NSQuote GetQuote(Integer quoteId)
 
@@ -23,7 +25,7 @@ NSQuote quote = qa.GetQuote(1);
 
 ```crmscript
 NSQuoteAgent qa;
-NSQuote quote = qa.GetQuoteFromSaleId(4);
+NSQuote quote = qa.GetQuoteFromSaleId(69);
 ```
 
 ### NSQuoteEntity GetQuoteEntity(Integer quoteId)
@@ -35,17 +37,17 @@ NSQuoteEntity quoteEntity = qa.GetQuoteEntity(1);
 
 ### NSQuoteEntity GetQuoteEntityFromSaleId(Integer saleId)
 
-Variant of `GetQuoteEntity()` that uses a sale ID to find the quote.
+A variant of `GetQuoteEntity()` that uses a sale ID to find the quote.
 
 ## Create quote
 
-You can either create a quote from scratch or copy an existing quote from another sale.
+You can either create a quote **from scratch or copy** an existing quote from another sale.
 
 ### NSQuoteEntity CreateAndSaveQuote(Integer saleId, Integer connectionId, String firstAlternativeName)
 
 ```crmscript!
 NSQuoteAgent qa;
-NSQuoteEntity quote = qa.CreateAndSaveQuote(4,1,"basic gardening supplies");
+NSQuoteEntity quote = qa.CreateAndSaveQuote(72,1,"basic gardening supplies");
 
 printLine(quote.GetQuoteId().toString());
 ```
@@ -59,7 +61,7 @@ printLine(quote.GetQuoteId().toString());
 
 ```crmscript!
 NSQuoteAgent qa;
-NSQuoteEntity quote = qa.CreateAndSaveQuoteFromSale(4,5);
+NSQuoteEntity quote = qa.CreateAndSaveQuoteFromSale(67,73);
 
 printLine(quote.GetSaleId().toString());
 ```
@@ -69,7 +71,7 @@ printLine(quote.GetSaleId().toString());
 
 ## Update quote
 
-Updates to a quote mostly target the [alternatives and quote lines](./quote-alternatives.md). You will, however, see some changes to the quote properties when dealing with quote documents and placing orders.
+Updates to a quote mostly target the [alternatives and quote lines](./quote-alternatives.md). You will, however, see some changes to the quote properties when dealing with [quote documents](./quote-document.md) and [placing orders](./quote-order.md).
 
 ## Versions
 
@@ -82,7 +84,7 @@ When updating quotes, you'll always be working on the latest version.
 
 ```crmscript!
 NSQuoteAgent qa;
-NSQuote quote = qa.GetQuote(1);
+NSQuote quote = qa.GetQuote(2);
 Integer versionNumber = quote.GetActiveQuoteVersionId();
 
 printLine("Active version: " + versionNumber.toString());
@@ -94,7 +96,7 @@ Fetches a specific version.
 
 ```crmscript!
 NSQuoteAgent qa;
-NSQuoteVersion version = qa.GetQuoteVersion(1);
+NSQuoteVersion version = qa.GetQuoteVersion(3);
 
 printLine(version.GetExpirationDate().toString());
 ```
@@ -105,7 +107,7 @@ Fetches all quote versions for a sale.
 
 ```crmscript!
 NSQuoteAgent qa;
-NSQuoteVersion[] versionList = qa.GetQuoteVersions(1);
+NSQuoteVersion[] versionList = qa.GetQuoteVersions(5);
 
 for(Integer i = 0; i < versionList.length(); i++) {
   printLine(versionList[i].GetRank().toString() + " |\t" + versionList[i].GetState().toString());
@@ -118,7 +120,7 @@ Creates a new version based on another version of the same quote. This is your o
 
 ```crmscript
 NSQuoteAgent qa;
-NSQuoteVersion version = qa.CreateAndSaveQuoteVersion(1);
+NSQuoteVersion version = qa.CreateAndSaveQuoteVersion(2);
 ```
 
 ### Update version
@@ -127,7 +129,7 @@ This example extends the expiration date by 1 week:
 
 ```crmscript
 NSQuoteAgent qa;
-NSQuoteVersion version = qa.GetQuoteVersion(1);
+NSQuoteVersion version = qa.GetQuoteVersion(3);
 
 version.SetExpirationDate(version.GetExpirationDate().addDays(7));
 
@@ -145,7 +147,7 @@ printLine("New expiration date: " + version.GetExpirationDate().toString());
 > Always check before deleting. There might be legal and/or financial reasons to keep quote info in the system.
 
 ```crmscript
-Integer quoteId = 42;
+Integer quoteId = 13;
 NSQuoteAgent qa;
 qa.DeleteQuote(quoteId);
 ```
