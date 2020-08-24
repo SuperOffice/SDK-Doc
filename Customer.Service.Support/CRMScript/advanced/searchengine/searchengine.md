@@ -14,4 +14,9 @@ When you [construct a query](./se-select.md), the SearchEngine automatically joi
 
 All queries are sent to NetServer instead of directly to the database. This ensures that sentry rules are followed. It is possible to circumvent this behavior, but if you do, you need to handle any security implications yourself.
 
+> [!NOTE]
+> Udefs and interests are not available through SearchEngine! You need to access these through NetServer entities.<br />If SearchEngine is your only option or you need to be able to profile these fields, they could be synchronized to an extra field with a regular task.
+
+## In this section
+
 1. autolist

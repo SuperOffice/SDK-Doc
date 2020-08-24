@@ -230,6 +230,9 @@ Void viewPersonInterests(Integer personId) {
 viewPersonInterests(5);
 ```
 
+> [!TIP]
+> To print only the selected interests, add a condition: `if (interests[i].GetSelected())`.
+
 ## Reference
 
 ### Frequently used values
