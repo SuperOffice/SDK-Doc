@@ -6,7 +6,7 @@ SortOrder: 20
 
 ## Online - database log
 
-You can write to and inspect the system log. 
+You can write to and inspect the system log.
 
 The date format is **YYYY-MM-DD**.
 
@@ -14,7 +14,7 @@ Messages are written to the log immediately: if your script should crash, everyt
 
 The database log also works for scripts that redirect and for scripts that run in the background.
 
-**Write to log:** Void log(String msg)
+**Write to log:** `Void log(String msg)`
 
 ```crmscript
 log("2020 is a leap year");
@@ -27,13 +27,13 @@ Use `log()` as you would use `print()`.
 
 **Read log:**
 
-Beside your profile picture, select the **hamburger menu**, then select **System design**. Under *System design* select **Debug log** to open the Search log screen.
+Beside your profile picture, select the **hamburger menu**, then select **System design**. Click **Debug log** to open the **Search log** screen.
 
 ## Onsite - logfile
 
 This is the old log, kept locally on disk.
 
-**Write to log:** Void logMessage(String p0)
+**Write to log:** `Void logMessage(String p0)`
 
 ```crmscript
 log("The next leap year is 2024");
