@@ -192,8 +192,6 @@ How you go about changing the document locally is completely up to you!
 
 ### Upload document
 
-For **new** SuperOffice documents based on a local file, you must **create and save the NSDocumentEntity before uploading**.
-
 For **modified** documents, you must ensure that the document's status is not **Completed**. Set it to **0** to enable upload.
 To overwrite an existing file with the same name stored in the document archive, set the last parameter of `SetDocumentStream()` to **true**.
 
@@ -213,6 +211,25 @@ stream.SetStream(f.readBinary());
 doc = agent.SetDocumentStream(doc, stream, true);
 
 f.close();
+```
+
+> [!TIP]
+> For robust code, consider placing the file operations in an `if` statement.
+
+For **new** SuperOffice documents based on a local file, you must **create and save the NSDocumentEntity before uploading**.
+
+Simply replace the line `NSDocumentEntity doc = agent.GetDocumentEntity(docId);` with the following code:
+
+```crmscript
+NSDocumentEntity doc = agent.CreateDefaultDocumentEntity();
+
+doc.SetName(path);
+doc.SetHeader(path);
+doc.SetDate(getCurrentDateTime());
+doc.SetDescription("document uploaded from CRMScript");
+NSAssociateAgent aAgent;
+doc.SetAssociate(aAgent.GetAssociate(1));
+doc = agent.SaveDocumentEntity(doc);
 ```
 
 ## Delete physical document
