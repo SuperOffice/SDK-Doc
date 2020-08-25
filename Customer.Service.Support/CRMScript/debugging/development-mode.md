@@ -4,9 +4,9 @@ uid: crmscript_debug_development_mode
 SortOrder: 40
 ---
 
-CRMScript modules are scripts imported into other scripts files by using the #included directive.
+CRMScript modules are scripts imported into other scripts files by using the `#included` directive.
 
-Historically, you couldn't run CRMScript modules. Now, script writers can use environment variables to invoke and debug module scripts:
+Historically, you couldn't run CRMScript modules. Now, scriptwriters **can use environment variables** to invoke and debug module scripts:
 
 * developmentMode
 * includeId

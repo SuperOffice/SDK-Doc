@@ -61,3 +61,12 @@ print(se.executeTextTable());
 ```
 
 This will print the ID and title of any merged tickets updated sometime during the current week.
+
+## Database entries
+
+For each change to a ticket, new entries are added to both the **ticket_log_action** table and the **ticket_log_change** table.
+
+| Table             | Entries                                 | Enum      |
+|:------------------|:----------------------------------------|:----------|
+| ticket_log_action | 1 entry with the timestamp              | [LogAction](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-ticket_log_action.htm) |
+| ticket_log_change | 1 entry for each value that has changed | [LogChange](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-ticket_log_change.htm) |

@@ -11,6 +11,15 @@ By *work with* we mean CRUD operations: create, read, update, and delete. A **se
 > [!TIP]
 > In CRMScript, all NetServer classes are prefixed NS and their methods typically follow Pascal-case naming conventions.
 
+## Authentication
+
+When using NetServer, the SCMScript runs as the **currently signed in user**.
+
+For background tasks such as email import, scheduled tasks and data exchange (DBI), the script runs as a **system user**. 
+
+> [!NOTE]
+> Sentry will apply to your CRMScripts.
+
 ## Agent and carrier software pattern
 
 The agent and carrier pattern separates data from actions:
@@ -19,6 +28,13 @@ The agent and carrier pattern separates data from actions:
 * Carriers are containers of content (data)
 
 All NetServer services are called through an agent. To get your hands on data, you must go through the appropriate agent.
+
+A few services are not reachable through CRMScript. These exceptions are:
+
+* AudienceAgent
+* EmailAgent
+* FileManagerAgent
+* TrayAppAgent
 
 ## Agents
 
@@ -42,7 +58,11 @@ Here's how it works:
 * `DeleteEntity()`
 
 > [!TIP]
-> The corresponding CRMScript class is labeled NS\[Businessarea\]Agent.
+> The corresponding CRMScript class is labeled NS\[Businessarea\]Agent. For example, NSPersonAgent, NSContactAgent, and NSAppointmentAgent.
+
+### Declaration
+
+CRMScript treats an agent as any other object, except agents don't have a **state**. Thus, you need to declare each agent only once.
 
 ## Carriers
 
@@ -86,3 +106,16 @@ printLine("Updated name: " + personAgent.GetPerson(5).GetFullName());
 
 > [!TIP]
 > Remember to call `save()` to push the changes back to the database!
+
+### Declaration
+
+**Declared carrier objects are NOT initialized!**
+This is especially important for objects that use enumerations, because those objects will contain illegal values. If you try to access them, NetServer will throw an exception.
+
+> [!TIP]
+> To create a new "blank" entity, use the `CreateDefaultEntity()` method. Then set at least enums.
+
+Use Get and Set to access attributes of entities.
+
+* Get methods return another carrier or a [basic type](../fundamentals/fundamentals.md)
+* Set methods take a carrier or basic type as argument
