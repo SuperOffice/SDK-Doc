@@ -44,6 +44,9 @@ for(Integer i = 0; i < appointmentList.length(); i++) {
 }
 ```
 
+> [!TIP]
+> You can also use the [archive agent](../crmscript-archiveagent.md) to fetch appointments.
+
 ### NSAppointment[] GetPersonDiary(Integer personId, DateTime startTime, DateTime endTime, Integer count)
 
 Fetches a limited number of appointments within a time range for the given person.
