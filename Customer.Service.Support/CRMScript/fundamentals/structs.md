@@ -86,3 +86,138 @@ You can achieve the same functionality in CRMScript by returning the current ins
 In the code above, the function `brand` returns the current executing context back from the function call. The next function then executes on this context (referring to the same instance), and invokes the other functions associated with the struct.
 
 Each of the functions returns the current execution context. The functions can be chained together because the previous execution returns results that can be processed further.
+
+## Built-in Methods
+
+### fromXMLNode
+
+Populates a struct from an XMLNode.
+
+Only supports the following element datatypes:
+
+* Bool
+* Float
+* Integer
+* String
+* struct
+
+Date and DateTime is not supported. JSON does not support these either.
+
+Example:
+
+```crmscript!
+struct Hello {
+  String who;
+  Void setWho(String who) {
+    this.who = who;
+  }
+  Void print() {
+    printLine("Hello " + this.who);
+  }
+};
+
+XMLNode xml = parseXML("<root><who>World</who></root>");
+
+Hello h;
+h.fromXMLNode(xml);
+h.print();
+
+//prints Hello World
+
+```
+
+Common Patterns:
+
+As JSON has become the preferred transfer representation, it's common for structs to implement ways to be populated by a JSON string, and to write itself out as a JSON string.
+
+Below are a couple common methods structs implement to facilitate reading and writing a struct using JSON.
+
+```crmscript
+struct Hello {
+  String who;
+  Void setWho(String who) {
+    this.who = who;
+  }
+  Void print() {
+    printLine("Hello " + this.who);
+  }
+  Void fromJson(String json) {
+    this.fromXMLNode(parseJSON(json));
+  }
+  String toJson() {
+    JSONBuilder jb;
+    this.toJson(jb);
+    return jb.getString();
+  }
+};
+```
+
+### toJson
+
+Populates a JSONBuilder from a struct.
+
+Only supports the following item datatypes:
+
+* Bool
+* Float
+* Integer
+* String
+* struct
+
+Date and DateTime is not supported. JSON does not support these either.
+
+Example:
+```crmscript!
+struct Hello {
+  String who;
+  Void setWho(String who) {
+    this.who = who;
+  }
+  Void print() {
+    printLine("Hello " + this.who);
+  }
+};
+
+JSONBuilder jsBuilder;
+Hello h;
+
+h.setWho("World");
+h.toJson(jsBuilder);
+
+print(jsBuilder.getString());
+
+//prints {"who": "World"}
+```
+
+Common Patterns:
+
+As JSON has become the preferred transfer representation, it's common for structs to implement ways to be populated by a JSON string, and to write itself out as a JSON string.
+
+Below are a couple common methods structs implement to facilitate reading and writing a struct using JSON.
+
+```crmscript
+struct Hello {
+  String who;
+  Void setWho(String who) {
+    this.who = who;
+  }
+  Void print() {
+    printLine("Hello " + this.who);
+  }
+  Void fromJson(String json) {
+    this.fromXMLNode(parseJSON(json));
+  }
+  String toJson() {
+    JSONBuilder jb;
+    this.toJson(jb);
+    return jb.getString();
+  }
+};
+
+Hello h;
+h.setWho("John");
+
+printLine(h.toJson());
+
+// prints {"who": "John"}
+```
