@@ -6,19 +6,16 @@ SortOrder: 10
 
 A *user-defined* field (udef) is a custom field that you add to an existing SuperOffice database table. You can extend the following entities:
 
-* company
-* contact
-* document
-* follow-up
+* [company](../../working-with/persons-and-organizations/company.md)
+* [contact](../../working-with/persons-and-organizations/customer.md)
+* [documents](../../working-with/documents/documents.md)
+* [follow-up](../../working-with/follow-ups/follow-ups.md)
 * project
-* sale
+* [sale](../../working-with/sales/sales.md)
 
 There are 8 different types of user defined fields: Number, Decimal, Short text, Long text, Date, Unlimited date, Checkbox, and List (drop-down).
 
-User-defined fields are managed in the SuperOffice CRM Admin client, in the **Fields** screen. After the initial set-up, the custom fields become available in the **More** tab of that entity *in the Sales client*. You can also select up to 3 fields that will be included on the main card.
-
-> [!NOTE]
-> You will **not** see these in the Service client!
+User-defined fields are managed in the SuperOffice CRM Admin client, in the **Fields** screen.
 
 ## Storage
 
@@ -44,9 +41,10 @@ Each entity that supports user-defined fields can have up to **119 custom fields
 | String[40]  | 40       | short text and unlimited date    |
 | String[200] | 9        | long text                        |
 
-> [!NOTE] When all String[40] fields are taken, the system will use String[200] from the corresponding UDXXXLarge table. This will decrease the available number of fields for the long text type fields.
+> [!NOTE]
+> When all String[40] fields are taken, the system will use String[200] from the corresponding UDXXXLarge table. This will decrease the available number of fields for the long text type fields.
 
-## Index
+## Indexed fields
 
 Indexing is good for user experience and performance. The 1st 4 fields of each data type are reserved for indexes.
 
@@ -68,7 +66,7 @@ column ID = table ID * 256 + column offset
 
 column offset = column ID % (table ID * 256)
 
-## Prog ID
+## Prog IDs
 
 The prog ID is used to identify user-defined fields for an entity. The format is **text:number**.
 
@@ -141,6 +139,9 @@ printLine(d.toString());
 5. Click **Save**.
 6. Optionally adjust the layout and/or set the field to be shown on the 1st page of the selected screen.
 7. Continue adding fields. Click **Publish** when you're done.
+
+> [!TIP]
+> You can select up to 3 fields that will be included on the main card.
 
 ## Convert field type
 

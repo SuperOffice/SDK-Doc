@@ -7,20 +7,18 @@ SortOrder: 30
 An *extra field* is a custom field that you add to an existing SuperOffice database table **in Service**. You can extend the following entities:
 
 * category
-* company
-* contact
+* [company](../../working-with/persons-and-organizations/company.md)
+* [contact](../../working-with/persons-and-organizations/customer.md)
 * FAQ category and entry
-* message
-* request
-* user
+* [message](../requests/messages.md)
+* [request](../requests/tickets.md)
+* [user](../../working-with/persons-and-organizations/user.md)
 * your [custom tables](./extra-tables.md)
 
-Extra fields are managed in SuperOffice Service, in the **Tables** screen. After the initial set-up, these fields are available in the **Extra fields** tab of those entities *in the Service client*. If you can't see the **Extra fields**, it's because that entity doesn't have any extra fields.
-
-With some configuration, you can also [add extra fields to the **Details** tab](https://community.superoffice.com/en/search/#/faq/113644).
+Extra fields are managed in SuperOffice Service, in the **Tables** screen.
 
 > [!NOTE]
-> You will **not** see these in the Sales client out of the box! Extra fields on company or contact are **not the same** as user-defined fields on those entities!
+> Extra fields on company or contact are **not the same** as user-defined fields on those entities!
 
 ## Extra field types
 
@@ -87,6 +85,10 @@ If you add a field with database name *x_field* to the **ticket** table, the val
 | params             | various parameters for the field (string)                |
 
 For a complete list of properties, see the [database reference](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-extra_fields.htm).
+
+## Create extra field
+
+See instructions under [extra tables](./extra-tables.md).
 
 ## List all extra fields
 
