@@ -37,6 +37,30 @@ printLine(g);
 > [!NOTE]
 > If the variable name is unknown, an [exceptions](../fundamentals/try-catch.md) is thrown.
 
+## Down-casting
+
+You can convert a Generic variable to these basic types.
+
+* Bool GenericToBool(Generic generic)
+* Integer GenericToInteger(Generic generic)
+* Float GenericToFloat(Generic generic)
+* String GenericToString(Generic generic)
+* DateTime GenericToDateTime(Generic generic)
+* Date GenericToDate(Generic generic)
+* Time GenericToTime(Generic generic)
+* TimeSpan GenericToTimeSpan(Generic generic)
+* Byte GenericToByte(Generic generic)
+* Generic[] GenericToArray(Generic generic)
+
+Together with `getTypeName()`, these methods can be used to create an explicit typed variable.
+
+```crmscript
+Generic g = getCurrentDateTime();
+if (getTypeName(g)) {
+  DateTime dt = GenericToDateTime(g);
+}
+```
+
 ## Generic and arrays
 
 ### Integer getTypeDimensions(Generic generic)
@@ -87,6 +111,21 @@ if (typeIsStruct(p)) {
 > [!NOTE]
 > This is the names, **not the actual values**. To get those, call `getGenericValue()` using the member names.
 
+```crmscript!
+struct Person {
+  String name;
+  Integer age;
+};
+
+Person p;
+
+String[] members = getStructMembers(p);
+
+foreach (String s in members) {
+  printLine(s);
+}
+```
+
 ### Generic getGenericValue(Generic struct, String name)
 
 A variant of `getGenericValue()` that returns a variable from the run-time environment **inside a struct** given its name and independent of its type.
@@ -128,26 +167,134 @@ The value **must be formatted** according to the constructor of that type. Speci
 > [!TIP]
 > In combination with `getStructMembers()` and `getGenericValue()`, this function can be used to iterate a struct and set all its members programmatically instead of having to explicit hard-code each of them.
 
-## Down-casting
+### Print contents of struct for extra table
 
-You can convert a Generic variable to these basic types.
-
-* Bool GenericToBool(Generic generic)
-* Integer GenericToInteger(Generic generic)
-* Float GenericToFloat(Generic generic)
-* String GenericToString(Generic generic)
-* DateTime GenericToDateTime(Generic generic)
-* Date GenericToDate(Generic generic)
-* Time GenericToTime(Generic generic)
-* TimeSpan GenericToTimeSpan(Generic generic)
-* Byte GenericToByte(Generic generic)
-* Generic[] GenericToArray(Generic generic)
-
-Together with `getTypeName()`, these methods can be used to create an explicit typed variable.
+In this scenario, we've created an extra table called **Building**. It has multiple extra fields of different types.
 
 ```crmscript
-Generic g = getCurrentDateTime();
-if (getTypeName(g)) {
-  DateTime dt = GenericToDateTime(g);
+Struct Building {
+  Integer id;
+  String name;
+  String address;
+  Date acquired;
+  Date next_service;
+  Integer floors;
+  Bool has_janitor;
+  Bool is_rented;
+  Float value;
+  Time opens;
+  Time closes;
+};
+```
+
+So instead of defining a `print()` method in the struct, with 1 printLine() for every member, and manually converting each value to a string like this:
+
+```crmscript
+Void print() {
+  printLine("id: " + this.id.toString());
+  printLine("name: " + this.name);
+  //...
+  printLine("value: " + this.value.toString(2));
+  //...
+}
+```
+
+You can define a `printGeneric()` method and leverage the Generic struct methods:
+
+```crmscript
+Void printGeneric() {
+  String[] members = getStructMembers("Building");
+  foreach(String field in members) {
+    Generic g = getGenericValue(this, field);
+    printLine(field + ": " + convertGenericToString(g));
+  }
+}
+```
+
+### Parse from Json to Struct
+
+In this scenario, still using our **Building** extra table, we'd like to to parse from Json into a struct.
+
+**Without Generic:**
+
+```crmscript
+Building Building(String json) {
+  Building b;
+  XMLNode root = parseJSON(json);
+
+  b.id = root.getValueFromPath("id").toInteger();
+  b.name = root.getValueFromPath("name");
+  //...
+  b.is_rented = root.getValueFromPath("is_rented").toBool();
+  b.value = root.getValueFromPath("id").toFloat();
+  //...
+  return b;
+}
+```
+
+**With Generic:**
+
+```crmscript
+Building BuildingGeneric(String json) {
+  Building b;
+  XMLNode root = parseJSON(json);
+
+  String[] members = getStructMembers("Building");
+
+  foreach(String field in members) {
+    Generic g = getGenericValue(b, field);
+    String value = root.getValueFromPath(field);
+    setGenericFromString(g, value);
+  }
+  
+  return b;
+}
+```
+
+Notice how this method doesn't have to know anything about the Building table. No variable names, no data types, and not even how many there are.
+
+### Load from database to Struct
+
+In this scenario, still using our **Building** extra table, we'd like to load data from the database into a struct.
+
+**Without Generic:**
+
+```crmscript
+Building Building(Integer id) {
+  Building b;
+  SearchEngine se;
+  se.addField("y_building.id");
+  //...
+  se.addCriteria("y_building.id", "Equals", id.toString());
+  se.execute();
+  if(!se.eof()) {
+    b.id = se.getField("y_building.id").toInteger();
+    //...
+  }
+  
+  return b;
+}
+```
+
+**With Generic:**
+
+```crmscript
+Building BuildingGeneric(Integer id) {
+  Building b;
+  SearchEngine se;
+  String[] members = getStructMembers("Building");
+  
+  foreach(String field in members) {
+    se.addField("y_building." + extraFieldName(field));
+    se.addCriteria("y_building.id", "Equals", id.toString());
+    se.execute();
+    if(!se.eof()) {
+    foreach(String field in members) {
+      Generic g = getGenericValue(b, field);
+      String value = se.getField("y_building." + extraFieldName(field));
+      setGenericFromString(g, value);
+    }
+  }
+  return b;
 }
 ```
