@@ -4,7 +4,7 @@ uid: crmscript_extra_tables
 SortOrder: 20
 ---
 
-SuperOffice Expander Services gives you the the possibility to [create extra tables](./extra-tables.md) in the database. Instantly, these 3rd party tables will be available for standard CRUD operations in SuperOffice Service. You need to set up a web panel to access them from the Sales client.
+SuperOffice Expander Service License gives you the the possibility to [create extra tables](./extra-tables.md) in the database. Instantly, these 3rd party tables will be available for standard CRUD operations in SuperOffice Service. You need to set up a web panel to access them from the Sales client.
 
 However, an empty table is not very useful. So you have to set up fields for the new table and then you can populate with data.
 

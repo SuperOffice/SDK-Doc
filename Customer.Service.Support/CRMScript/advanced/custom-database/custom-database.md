@@ -4,12 +4,6 @@ uid: crmscript_custom_db
 SortOrder: 40
 ---
 
-## Continuous Database
-
-*Continuous Database* (CD) is the SuperOffice process for instrumenting incremental changes toward the SuperOffice database. It's based on principles set forth by evolutionary database design and **enables changes in a continuous way**.
-
-Both SuperOffice and 3rd parties can continuously update a database schema that reflects ever-changing business requirements. [Read more](https://community.superoffice.com/en/content/.content/database/continuous-database/).
-
 ## Ways to customize
 
 There are 3 ways to customize the database schema:
@@ -35,10 +29,13 @@ With some configuration, you can also [add extra fields to the **Details** tab](
 
 ## Requirements
 
-* SuperOffice Expander Services license (which you already have for CRMScripts)
+* SuperOffice Expander Services license
 * SuperOffice 8.1 or newer
 * NetServer must be restarted every time you change the schema
   * If Travel is activated, a new Travel database must also be generated
+
+> [!NOTE]
+> [Continuous Database (CD)](https://community.superoffice.com/en/content/.content/database/continuous-database/) is available onsite only.
 
 ## API support
 

@@ -52,20 +52,6 @@ You have to mark the checkbox when creating the field to allow it to be indexed.
 
 If you choose not to index at all, you're essentially wasting 16 fields! Thus, the max number of custom fields is reduced to 103.
 
-## Field IDs
-
-Every table can be identified by an integer value. For example, company = 1. This is the **table ID**.
-
-Likewise, every column in a table has its own ID. This is the **column ID**, and it is calculated based on the table ID and an offset.
-
-### Calculate column ID
-
-column ID = table ID * 256 + column offset
-
-### Calculate offset
-
-column offset = column ID % (table ID * 256)
-
 ## Prog IDs
 
 The prog ID is used to identify user-defined fields for an entity. The format is **text:number**.
