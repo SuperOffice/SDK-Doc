@@ -23,9 +23,7 @@ User-defined fields (udefs for short) belong in SuperOFfice CRM, while extra tab
 | extra field        | Service<br />the **Tables** screen | **Extra fields** tab of entity | no | database table of entity (table.x_field) |
 
 > [!NOTE]
-> You will **not** see user-defined fields in Service, and reversely, you will not see extra fields in CRM. Unless you develop custom screens or web panels, that is.
-
-With some configuration, you can also [add extra fields to the **Details** tab](https://community.superoffice.com/en/search/#/faq/113644).
+> You will **not** see user-defined fields in Service, and reversely, you will not see extra fields in CRM. Unless you develop custom screens or web panels, that is. (With some configuration, you can also add extra fields to the **Details** tab.)
 
 ## Requirements
 

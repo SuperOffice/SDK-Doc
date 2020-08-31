@@ -182,3 +182,34 @@ if (se.select() > 0) {
   seSort.update();
 }
 ```
+
+## Add extra fields to the Details tab
+
+Scenario: you've added an extra field to a company (contact table) conveying whether or not it has a support contract and you want to display that info when viewing a request.
+
+### Display extra field for you
+
+1. In Service, open a request.
+2. Click the tool icon in the request header *or* in the **Details tab**, depending where you want to place the new field.
+3. In the **Edit element profile** dialog, locate the **New field** setting.
+4. Enter a name (UI label) and select your field.
+5. Optionally, select the appropriate styling options.
+6. Click **OK** to save the settings.
+
+> [!TIP]
+> You can also group fields, add headers for groups, and change the sizes of columns.
+
+### Display extra field for role
+
+To make the field visible to others than yourself, you'll need to create a profile.
+
+1. In Service, click the hamburger menu and select **Profile**.
+2. Select **System screens**, then click **View ticket**, point to **ticketinfo**, and then click **New common profile**.
+3. In the **Edit element profile** dialog, do steps 3-6 of *Display extra field for you*.
+4. Click the hamburger menu again and select **Roles**.
+5. Select a role (who should be able to see the field in the request screen).
+6. In the **Edit role screen**, select the **Profile** tab.
+7. From the **New element profile** list, select the profile you just created.
+8. Click **OK** to save the settings.
+
+All users who have this role will now be able to see the extra field in the **Details** tab in all their requests.
