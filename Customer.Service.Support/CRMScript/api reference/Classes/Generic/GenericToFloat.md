@@ -1,9 +1,9 @@
 ---
 title: Float GenericToFloat(Generic generic)
-path: /EJScript/Global functions/Float GenericToFloat(Generic generic)
+path: /EJScript/Classes/Generic/Member functions/Float GenericToFloat(Generic generic)
 intellisense: 1
 langref: 1
-sortOrder: 9344
+sortOrder: 60
 keywords: GenericToFloat(Generic)
 ---
 
@@ -14,5 +14,3 @@ Explicit downcast from a generic to a Float. If the generic does not represent t
 
 * **generic:** Generic The variable to downcast
 * **Returns:** Float The variable as a Float
-
-

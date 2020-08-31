@@ -1,9 +1,9 @@
 ---
 title: DateTime GenericToDateTime(Generic generic)
-path: /EJScript/Global functions/DateTime GenericToDateTime(Generic generic)
+path: /EJScript/Classes/Generic/Member functions/DateTime GenericToDateTime(Generic generic)
 intellisense: 1
 langref: 1
-sortOrder: 9336
+sortOrder: 50
 keywords: GenericToDateTime(Generic)
 ---
 
@@ -14,5 +14,3 @@ Explicit downcast from a generic to a DateTime. If the generic does not represen
 
 * **generic:** Generic The variable to downcast
 * **Returns:** DateTime The variable as a DateTime
-
-

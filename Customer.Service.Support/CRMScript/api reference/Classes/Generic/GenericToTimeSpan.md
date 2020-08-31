@@ -1,9 +1,9 @@
 ---
 title: TimeSpan GenericToTimeSpan(Generic generic)
-path: /EJScript/Global functions/TimeSpan GenericToTimeSpan(Generic generic)
+path: /EJScript/Classes/Generic/Member functions/TimeSpan GenericToTimeSpan(Generic generic)
 intellisense: 1
 langref: 1
-sortOrder: 9491
+sortOrder: 160
 keywords: GenericToTimeSpan(Generic)
 ---
 
@@ -14,5 +14,3 @@ Explicit downcast from a generic to a TimeSpan. If the generic does not represen
 
 * **generic:** Generic The variable to downcast
 * **Returns:** TimeSpan The variable as a TimeSpan
-
-

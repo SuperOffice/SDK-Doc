@@ -1,9 +1,9 @@
 ---
 title: Date GenericToDate(Generic generic)
-path: /EJScript/Global functions/Date GenericToDate(Generic generic)
+path: /EJScript/Classes/Generic/Member functions/Date GenericToDate(Generic generic)
 intellisense: 1
 langref: 1
-sortOrder: 9330
+sortOrder: 40
 keywords: GenericToDate(Generic)
 ---
 
@@ -14,5 +14,3 @@ Explicit downcast from a generic to a Date. If the generic does not represent th
 
 * **generic:** Generic The variable to downcast
 * **Returns:** Date The variable as a Date
-
-
