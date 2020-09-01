@@ -1,10 +1,10 @@
 ---
-title: 3rd party tables
+title: Third-party tables
 uid: crmscript_extra_tables
 SortOrder: 20
 ---
 
-SuperOffice Expander Service License gives you the the possibility to [create extra tables](./extra-tables.md) in the database. Instantly, these 3rd party tables will be available for standard CRUD operations in SuperOffice Service. You need to set up a web panel to access them from the Sales client.
+SuperOffice Expander Service License gives you the the possibility to [create extra tables](./extra-tables.md) in the database. Instantly, these third-party tables will be available for standard CRUD operations in SuperOffice Service. You need to set up a web panel to access them from the Sales client.
 
 However, an empty table is not very useful. So you have to set up fields for the new table and then you can populate with data.
 
@@ -49,7 +49,7 @@ The prefixes ensure that what you create don't conflict with future SuperOffice 
 3. Set table properties:
     * Enter a *name* to be used as label.
     * Enter a *database field* beginning with **y_** to identify it in the schema.
-    * Optionally set other properties.
+    * Optionally set other properties. See the [user guide](https://community.superoffice.com/Documentation/Help/en/CRM/8.5/UserHelp/Service/topics/blogic.listExtraTables.editExtraTable.html) for details.
 4. Click **OK** to save the new table (runs `create table y_mynewtable ...`).
 5. Add fields to your new table. (See next task for details.)
 6. Optionally adjust table properties such as sort order.

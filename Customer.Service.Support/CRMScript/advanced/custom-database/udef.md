@@ -46,7 +46,7 @@ Each entity that supports user-defined fields can have up to **119 custom fields
 
 ## Indexed fields
 
-Indexing is good for user experience and performance. The 1st 4 fields of each data type are reserved for indexes.
+Indexing is good for user experience and performance. The first 4 fields of each data type are reserved for indexes.
 
 You have to mark the checkbox when creating the field to allow it to be indexed. You can mark up to 4 fields in each of the 4 data types (Long, Double String[40], String[200]) for each entity. For example, you can index 4 numbers and 4 decimals for a contact, however you can't at the same time also index a date - because all Long index slots are taken by the numbers.
 
@@ -123,7 +123,7 @@ printLine(d.toString());
 3. Enter a name and select a type.
 4. Optionally set other field properties, such as whether it is mandatory or should be indexed.
 5. Click **Save**.
-6. Optionally adjust the layout and/or set the field to be shown on the 1st page of the selected screen.
+6. Optionally adjust the layout and/or set the field to be shown on the first page of the selected screen.
 7. Continue adding fields. Click **Publish** when you're done.
 
 > [!TIP]
