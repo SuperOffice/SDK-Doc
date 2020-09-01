@@ -231,7 +231,7 @@ Same as above, but you can specify the type of query:
 
 ## What's next?
 
-You now know how to build a SearchEngine query, look at the generated SQL, gauge the size of the search result, and limit it if need be. It is now time to turn to [executing the query](./se-run.md).
+You now know how to build a SearchEngine query, look at the generated SQL, gauge the size of the search result, and limit it if need be. It is now time to turn to [executing the query](xref:search_engine_run).
 
 ## Reference
 

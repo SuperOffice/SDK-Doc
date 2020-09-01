@@ -7,13 +7,13 @@ SortOrder: 30
 An *extra field* is a custom field that you add to an existing SuperOffice database table **in Service**. You can extend the following entities:
 
 * category
-* [company](../../working-with/persons-and-organizations/company.md)
-* [contact](../../working-with/persons-and-organizations/customer.md)
+* [company](xref:crmscript-class-company)
+* [contact](xref:crmscript-class-customer)
 * FAQ category and entry
-* [message](../requests/messages.md)
-* [request](../requests/tickets.md)
-* [user](../../working-with/persons-and-organizations/user.md)
-* your [custom tables](./extra-tables.md)
+* [message](xref:crmscript_messages)
+* [request](xref:crmscript_tickets)
+* [user](xref:crmscript-class-user)
+* your [custom tables](xref:crmscript_extra_tables)
 
 Extra fields are managed in SuperOffice Service, in the **Tables** screen.
 
@@ -56,11 +56,11 @@ Database tables are connected with foreign keys (FK). These are the field types 
 
 1. Open the **Tables** screen, hover the table you want to alter and click **New field**.
 2. Select the relation type for the the entity you want to connect to and click **OK**.
-3. [Set field properties](./extra-tables.md).
+3. [Set field properties](xref:crmscript_extra_tables).
 4. Click **OK** to save the FK.
 5. Click **Restart NetServer** to apply the changes.
 
-For example, to connect all incoming service requests to a specific sale, you can add an extra field of type sale relation to [requests](../requests/tickets.md) (ticket table). To list connected requests when viewing a sale in SuperOffice CRM, you'll need to build a web panel.
+For example, to connect all incoming service requests to a specific sale, you can add an extra field of type sale relation to [requests](xref:crmscript_tickets) (ticket table). To list connected requests when viewing a sale in SuperOffice CRM, you'll need to build a web panel.
 
 ## Storage
 
@@ -88,7 +88,7 @@ For a complete list of properties, see the [database reference](https://communit
 
 ## Create extra field
 
-See instructions under [extra tables](./extra-tables.md).
+See instructions under [extra tables](xref:crmscript_extra_tables).
 
 ## List all extra fields
 

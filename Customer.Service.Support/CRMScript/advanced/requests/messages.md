@@ -8,7 +8,7 @@ SortOrder: 20
 
 ### Void setValue(String colName, String value)
 
-Sets a named field to the given value. Look up names in the reference section down below, or check out the [class reference](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/EJScript-Classes-Message-setValue.htm).
+Sets a named field to the given value. Look up names in the reference section down below, or check out the [class reference](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/CRMScript-Classes-Message-setValue.htm).
 
 > [!NOTE]
 > Both parameters are strings! Remember to use quotes even for IDs. <br>
@@ -132,7 +132,7 @@ m.setValue("bodyHtml" , p.parseString(htmlBody));
 printLine("\nHTML body of message after parsing:\n\n" + m.getValue("bodyHtml"));
 ```
 
-Read more about [the parser](../parser-and-templates/parser.md) and [reply templates](../parser-and-templates/reply-template.md).
+Read more about [the parser](xref:crmscript_parser) and [reply templates](xref:crmscript_reply_template).
 
 ### Void convertInlineImages()
 

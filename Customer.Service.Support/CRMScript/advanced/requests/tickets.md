@@ -8,7 +8,7 @@ SortOrder: 10
 
 ### Void setValue(String colName, String value)
 
-Sets a named field to the given value. Look up names in the reference section down below, or check out the [class reference](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/EJScript-Classes-Ticket-setValue.htm).
+Sets a named field to the given value. Look up names in the reference section down below, or check out the [class reference](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/CRMScript-Classes-Ticket-setValue.htm).
 
 > [!NOTE]
 > Both parameters are strings! Remember to use quotes even for IDs. <br>
@@ -76,7 +76,7 @@ t.save("audio",true, true);
 Adds 1 or more customer IDs to the list of secondary customers.
 
 > [!TIP]
-> A [vector](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/EJScript-Classes-Vector-Vector.htm) is a 1-dimensional list of String objects.
+> A [vector](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/CRMScript-Classes-Vector-Vector.htm) is a 1-dimensional list of String objects.
 
 ```crmscript
 Ticket t;
@@ -100,7 +100,7 @@ t.load(1);
 
 ### String getValue(String colName)
 
-Fetches the value from a named field. Look up names in the reference section down below, or check out the [class reference](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/EJScript-Classes-Ticket-getValue.htm).
+Fetches the value from a named field. Look up names in the reference section down below, or check out the [class reference](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/CRMScript-Classes-Ticket-getValue.htm).
 
 ```crmscript!
 Ticket t;
@@ -132,7 +132,7 @@ Sends a notification email to the owner of the ticket.
 
 Call `notifyEmail()` when you create a new ticket, add a new message to a ticket, and similar events.
 
-Pass the ID of a suitable [reply template](../parser-and-templates/reply-template.md).
+Pass the ID of a suitable [reply template](xref:crmscript_reply_template).
 
 ```crmscript
 Ticket t;
@@ -253,7 +253,7 @@ String output = p.parseString(rt.getHtmlBody(2));
 print(output);
 ```
 
-Read more about [the parser](../parser-and-templates/parser.md) and [reply templates](../parser-and-templates/reply-template.md).
+Read more about [the parser](xref:crmscript_parser) and [reply templates](xref:crmscript_reply_template).
 
 ### Void toParserRaw(Parser theParser)
 

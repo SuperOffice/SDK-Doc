@@ -4,7 +4,7 @@ uid: crmscript_extra_tables
 SortOrder: 20
 ---
 
-SuperOffice Expander Service License gives you the the possibility to [create extra tables](./extra-tables.md) in the database. Instantly, these third-party tables will be available for standard CRUD operations in SuperOffice Service. You need to set up a web panel to access them from the Sales client.
+SuperOffice Expander Service License gives you the the possibility to create extra tables in the database. Instantly, these third-party tables will be available for standard CRUD operations in SuperOffice Service. You need to set up a web panel to access them from the Sales client.
 
 However, an empty table is not very useful. So you have to set up fields for the new table and then you can populate with data.
 
@@ -85,7 +85,7 @@ You can now open the table in the UI to add content to it **or** populate it via
 
 ### With CRMScript
 
-Using [SearchEngine](../searchengine/searchengine.md) and `addData()`, you set up the row and then do an insert.
+Using [SearchEngine](xref:crmscript_search_engine) and `addData()`, you set up the row and then do an insert.
 
 This example adds a row to the *y_equipment* table with values for the *x_label* and *x_manufacturer* fields.
 
