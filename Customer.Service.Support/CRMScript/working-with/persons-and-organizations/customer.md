@@ -17,7 +17,7 @@ The **Customer** CRMScript class represents the following entities:
 
 ### Void setValue(String field, String value)
 
-Sets a named field to the given value. Look up names in the reference section down below, or check out the [class reference](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/EJScript-Classes-Customer-setValue.htm).
+Sets a named field to the given value. Look up names in the reference section down below, or check out the [class reference](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/CRMScript-Classes-Customer-setValue.htm).
 
 > [!NOTE]
 > Both parameters are strings! Remember to use quotes even for IDs. <br>
@@ -200,7 +200,7 @@ Logs out a customer.
 
 ## Parser variables
 
-Calling `toParser()` will load fields, prefix them with *customer*, and make them available to [templates](../../advanced/parser-and-templates/reply-template.md).
+Calling `toParser()` will load fields, prefix them with *customer*, and make them available to [templates](xref:crmscript_reply_template).
 
 > [!NOTE]
 > Repeated calls will overwrite rather than append the values in the Parser instance.

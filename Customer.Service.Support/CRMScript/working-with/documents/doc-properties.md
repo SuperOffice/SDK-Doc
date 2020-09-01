@@ -117,7 +117,7 @@ doc.SetPerson(p);
 doc = agent.SaveDocumentEntity(doc);
 ```
 
-Read more about [working with persons and organizations](../persons-and-organizations/persons-and-organizations.md).
+Read more about [working with persons and organizations](xref:crmscript_persons_and_org).
 
 ## Link document to an appointment
 
@@ -145,10 +145,10 @@ appAgent.SaveAppointmentEntity(a);
 
 ## Suggested documents
 
-Suggested documents are just that  - **suggested**. They're blueprints that can be used to create actual documents, and are commonly used for [sales guides](../sales/guides.md) and project guides.
+Suggested documents are just that  - **suggested**. They're blueprints that can be used to create actual documents, and are commonly used for [sales guides](xref:crmscript_sale-guide) and project guides.
 
 > [!NOTE]
-> Don't confuse suggested documents for [document templates](./doc-templates.md).
+> Don't confuse suggested documents for [document templates](xref:crmscript_doc_templates).
 
 ### List available suggestions
 

@@ -95,11 +95,11 @@ for(Integer i = 0; i < appointmentList.length(); i++) {
 ```
 
 > [!TIP]
-> Set `motherId` to **0** unless you're working with [meeting invitations](./invitations.md).
+> Set `motherId` to **0** unless you're working with [meeting invitations](xref:crmscript_invitations).
 
 ## Create repeating follow-ups
 
-1. Create the [appointment](./appointment.md), [call](./call.md), [meeting](./invitations.md), or [task](./task.md) as usual.
+1. Create the [appointment](xref:crmscript_appointments), [call](xref:crmscript_calls), [meeting](xref:crmscript_invitations), or [task](xref:crmscript_taskss) as usual.
 2. Set recurrence info.
 3. Save the follow-up.
 

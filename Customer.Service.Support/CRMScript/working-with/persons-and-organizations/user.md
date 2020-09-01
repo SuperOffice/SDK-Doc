@@ -17,7 +17,7 @@ The **User** CRMScript class represents the following entities:
 
 ### Void setValue(String column, String Value)
 
-Sets a named field to the given value. Look up names in the reference section down below, or check out the [class reference](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/EJScript-Classes-User-setValue.htm).
+Sets a named field to the given value. Look up names in the reference section down below, or check out the [class reference](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/CRMScript-Classes-User-setValue.htm).
 
 > [!NOTE]
 > Both parameters are strings! Remember to use quotes even for IDs. <br>
@@ -111,7 +111,7 @@ The **activeuser** table holds info about currently signed-in users. Use it to l
 
 ## Parser variables
 
-Calling `toParser()` will load fields, prefix them with *user*, and make them available to [templates](../../advanced/parser-and-templates/reply-template.md).
+Calling `toParser()` will load fields, prefix them with *user*, and make them available to [templates](xref:crmscript_reply_template).
 
 ```crmscript!
 Parser p;
@@ -167,4 +167,4 @@ Notifications (pop-up warnings) to the user are controlled by a bitmask.
 | 9     | Hotlist (filter)       |
 | 10    | Custom                 |
 
-Learn more about [tickets](../requests/tickets.md).
+Learn more about [tickets](xref:crmscript_tickets).

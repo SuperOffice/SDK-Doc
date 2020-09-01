@@ -17,7 +17,7 @@ With regards
 {atit}
 ```
 
-For the end-user, these templates behave similar to the service [reply template](../../advanced/parser-and-templates/reply-template.md). However, how you work with them in CRMScript is different.
+For the end-user, these templates behave similar to the service [reply template](xref:crmscript_reply_template). However, how you work with them in CRMScript is different.
 
 > [!CAUTION]
 > Template-based documents are only as good as the quality of your CRM data. It's vital that all customer details are kept up to date. A template won't fix bad input.

@@ -20,9 +20,9 @@ The document **files** we are dealing with here are stored in a central reposito
 Documents are part of a broader group of entities labeled **activities**:
 
 * follow-ups
-  * [appointment](./appointment.md)
-  * [task](./task.md)
-  * [call](./call.md)
+  * [appointment](xref:crmscript_appointments)
+  * [task](xref:crmscript_tasks)
+  * [call](xref:crmscript-calls)
 * documents
   * document (this section)
   * email
@@ -30,7 +30,7 @@ Documents are part of a broader group of entities labeled **activities**:
 * chat sessions
 
 > [!NOTE]
-> It is important to understand the distinction between activities and documents. When you get data from the [appointment table](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-appointment.htm) or use the CRMScript [NSAppointment class](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/EJScript-Classes-NSAppointment-NSAppointment.htm), it is crucial that you pay attention to the **type** field.
+> It is important to understand the distinction between activities and documents. When you get data from the [appointment table](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-appointment.htm) or use the CRMScript [NSAppointment class](https://community.superoffice.com/documentation/SDK/SO.Customer.Service.Support/html/CRMScript-Classes-NSAppointment-NSAppointment.htm), it is crucial that you pay attention to the **type** field.
 
 There's always a corresponding appointment record for a document. You can navigate the relation between them in both directions. Each document-type appointment record has a corresponding document record - always. However, the document-type appointments are not visible in the UI and they should not be mistaken for **linked activities**.
 
@@ -38,11 +38,11 @@ There's always a corresponding appointment record for a document. You can naviga
 
 When working with documents, data will often intersect with the following entities:
 
-* [company](../persons-and-organizations/company.md) (contact table)
-* [contact](../persons-and-organizations/customer.md) (person table)
-* [follow-ups](../follow-ups/follow-ups.md) (appointment table)
+* [company](xref:crmscript-class-company) (contact table)
+* [contact](xref:crmscript-class-customer) (person table)
+* [follow-ups](xref:crmscript_followups) (appointment table)
 * project
-* [sale](../sales/sales.md)
+* [sale](xref:crmscript_sales)
 
 ## In this section
 
