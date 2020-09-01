@@ -69,7 +69,8 @@ if (getTypeName(g)) {
 
 ```crmscript!
 Integer[][] i;
-printLine(getTypeDimensions(i));
+printLine(getTypeDimensions(i).toString());
+
 ```
 
 > [!NOTE]
