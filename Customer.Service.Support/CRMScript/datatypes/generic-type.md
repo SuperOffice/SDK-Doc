@@ -56,9 +56,10 @@ Together with `getTypeName()`, these methods can be used to create an explicit t
 
 ```crmscript
 Generic g = getCurrentDateTime();
-if (getTypeName(g)) {
+if (getTypeName(g) == "DateTime") {
   DateTime dt = GenericToDateTime(g);
 }
+
 ```
 
 ## Generic and arrays
