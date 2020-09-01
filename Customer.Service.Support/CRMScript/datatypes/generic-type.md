@@ -133,7 +133,8 @@ A variant of `getGenericValue()` that returns a variable from the run-time envir
 ```crmscript
 Person p;
 p.age = 42;
-Generic g = getGenericValue(person, "age");
+Generic g = getGenericValue(p, "age");
+
 ```
 
 > [!NOTE]
