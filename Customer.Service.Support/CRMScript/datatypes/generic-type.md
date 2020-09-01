@@ -6,7 +6,7 @@ sortOrder: 80
 
 Generic is the base type of all other intrinsic CRMScript data types. Any variable can be up-casted to Generic.
 
-There's a close connection between Generic and [structs](../fundamentals/structs.md).
+There's a close connection between Generic and [structs](../fundamentals/structs.md):
 
 * simpler iteration of variables (struct members)
 * easier to access and set new variables in structs
@@ -65,7 +65,7 @@ if (getTypeName(g)) {
 
 ### Integer getTypeDimensions(Generic generic)
 
-`getTypeDimensions()` returns the number of array dimensions for a variable. The argument is automatically be up-casted to a Generic.
+`getTypeDimensions()` returns the number of array dimensions for a variable. The argument is automatically up-casted to a Generic.
 
 ```crmscript!
 Integer[][] i;
@@ -77,7 +77,7 @@ printLine(getTypeDimensions(i));
 
 ## Generic and structs
 
-These examples build on the following struct:
+The following examples build on this Person struct:
 
 ```crmscript
 struct Person {
@@ -92,7 +92,7 @@ struct Person {
 
 Check whether a variable is a struct or not. The argument is automatically be up-casted to a Generic.
 
-```crmscript
+```crmscript!
 struct Person {
   String name;
   Integer age;
@@ -131,13 +131,8 @@ foreach (String s in members) {
 A variant of `getGenericValue()` that returns a variable from the run-time environment **inside a struct** given its name and independent of its type.
 
 ```crmscript
-struct Person {
-  String name;
-  Integer age;
-};
-
-Person person;
-person.age = 42;
+Person p;
+p.age = 42;
 Generic g = getGenericValue(person, "age");
 ```
 
@@ -262,11 +257,14 @@ In this scenario, still using our **Building** extra table, we'd like to load da
 ```crmscript
 Building Building(Integer id) {
   Building b;
+  
   SearchEngine se;
   se.addField("y_building.id");
   //...
+  
   se.addCriteria("y_building.id", "Equals", id.toString());
   se.execute();
+  
   if(!se.eof()) {
     b.id = se.getField("y_building.id").toInteger();
     //...
@@ -288,11 +286,13 @@ Building BuildingGeneric(Integer id) {
     se.addField("y_building." + extraFieldName(field));
     se.addCriteria("y_building.id", "Equals", id.toString());
     se.execute();
-    if(!se.eof()) {
+  }  
+  
+  if(!se.eof()) {
     foreach(String field in members) {
       Generic g = getGenericValue(b, field);
       String value = se.getField("y_building." + extraFieldName(field));
-      setGenericFromString(g, value);
+      setGenericFromString(g, value);  
     }
   }
   return b;
