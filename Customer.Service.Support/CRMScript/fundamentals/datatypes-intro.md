@@ -24,7 +24,7 @@ CRMScript has 2 types of numbers:
 * Integer (without decimals)
 * Float (with decimals)
 
-You can the [arithmetic operators](./operators.md) to do basic math.
+You can the [arithmetic operators](xref:crmscript_fundamentals_operators) to do basic math.
 
 ```crmscript
 Integer a = 5;
@@ -36,7 +36,7 @@ Integer sum = a + b;
 
 A text string is a sequence of characters written with quotes.
 
-You can use the [concatenation operator](./operators.md) to join multiple strings.
+You can use the [concatenation operator](xref:crmscript_fundamentals_operators) to join multiple strings.
 
 ```crmscript
 String myCompany = "Super" + "Office";

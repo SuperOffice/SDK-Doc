@@ -32,7 +32,7 @@ foreach (String s in mTwain) {
 
 The statement in the parenthesis initializes the iterator variable for the loop. The iterator must be declared as the same type as the collection. For example, if your array is of type String, then the iterator must be a string as well.
 
-You can loop through any type of collection with `foreach`, even your own [structs](./structs.md).
+You can loop through any type of collection with `foreach`, even your own [structs](xref:crmscript_fundamentals_structs).
 
 ## Usage
 

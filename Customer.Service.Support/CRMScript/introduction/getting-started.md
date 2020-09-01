@@ -6,13 +6,13 @@ SortOrder: 40
 
 When you are ready to start learning CRMScript:
 
-* Explore the topics in the [Fundamentals](../fundamentals/fundamentals.md) section. Try out the interactive script snippets for yourself. You can modify the code and run it to see the effects.
+* Explore the topics in the [Fundamentals](xref:crmscript_fundamentals) section. Try out the interactive script snippets for yourself. You can modify the code and run it to see the effects.
 
-* Familiarize yourself with the [simple data types](../datatypes/datatypes.md).
+* Familiarize yourself with the [simple data types](xref:crmscript_datatypes).
 
-* Adopt our [coding conventions](../code-quality/coding-conventions.md) and [best practices](../code-quality/best-practices.md).
+* Adopt our [coding conventions](xref:crmscript_conventions) and [best practices](xref:crmscript_best_practice).
 
-* Learn about error handling and [debugging](../../Debugging/Debugging.md).
+* Learn about error handling and [debugging](xref:crmscript_debugging).
 
 * Ask your questions in the [forums](https://community.superoffice.com/en/developer/forum/rooms/superoffice-product-api-group/customer-service/).
 

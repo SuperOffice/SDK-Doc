@@ -19,7 +19,7 @@ This is very similar to the structured programming syntax of C. However, unlike 
 
 CRMScript is object-oriented *to some extent*. The language has a wide variety of **built-in classes**, which you can create objects from and use their methods to manipulate data. However, you can't define your own classes. Thus, think of these as **complex data types** rather than templates to extend or inherit from.
 
-You can still build custom data structures by defining [structs](../fundamentals/structs.md).
+You can still build custom data structures by defining [structs](xref:crmscript_fundamentals_structs).
 
 ## A statically and strongly typed language
 

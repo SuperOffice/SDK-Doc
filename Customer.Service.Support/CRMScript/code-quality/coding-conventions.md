@@ -89,7 +89,7 @@ Don't use tabs for indentation.
 
 Avoid lines longer than 80 characters.
 
-If a statement doesn't fit on 1 line, you can break it after an [operator](../fundamentals/operators.md) or a comma. Use +4 spaces indentation for the wrapped (continued) lines.
+If a statement doesn't fit on 1 line, you can break it after an [operator](xref:crmscript_fundamentals_operators) or a comma. Use +4 spaces indentation for the wrapped (continued) lines.
 
 **Exceptions:**
 
