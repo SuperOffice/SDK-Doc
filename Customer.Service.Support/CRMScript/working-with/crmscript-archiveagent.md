@@ -6,7 +6,7 @@ uid: crmscript_archiveagent
 
 ## Get NSArchiveListItem
 
-This example uses the **ContactActivity** archive provider to retrieve [appointments](./follow-ups/appointment.md).
+This example uses the **ContactActivity** archive provider to retrieve [appointments](xref:crmscript_appointments).
 
 ```crmscript!
 String[] columns;

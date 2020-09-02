@@ -12,7 +12,7 @@ The definition has 3 parts:
 * a condition enclosed in parentheses
 * 1 or more statements enclosed in curly brackets
 
-This definition is very similar to the [if statement](./conditions.md). The key difference is that with `if`, the code block is run 0 or exactly 1 time. With `while`, the code block is run 0 or more times.
+This definition is very similar to the [if statement](xref:crmscript_fundamentals_if_else). The key difference is that with `if`, the code block is run 0 or exactly 1 time. With `while`, the code block is run 0 or more times.
 
 ```crmscript!
 Integer i = 1;
@@ -29,7 +29,7 @@ In this example, the counter `i` must be less than 10. The loop will be repeated
 
 The **condition** determines if the code inside the block will be run or not. It is tested at the beginning of each pass through the loop. If it evaluates to **true**, the enclosed statements are run. If it evaluates to **false**, the loop will terminate and we go to the 1st statement *after* the loop.
 
-You can use both [conditional and logical operators](./operators.md) and also statements that evaluate to true or false.
+You can use both [conditional and logical operators](xref:crmscript_fundamentals_operators) and also statements that evaluate to true or false.
 
 > [!WARN]
 > It is crucial that you **update the counter!** If not, your loop will run forever (or until it crashes the browser).

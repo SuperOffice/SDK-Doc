@@ -70,7 +70,7 @@ a = appointmentAgent.SaveAppointmentEntity(a);
 
 Before you can track responses, you need to fetch the main appointment and all its descendants. You can then explore the invitation status of each appointment.
 
-In this example, we check and print the response for each attendee using a String array. You can look up status codes in the reference section at the end of this page and on the [appointments page](./appointment.md).
+In this example, we check and print the response for each attendee using a String array. You can look up status codes in the reference section at the end of this page and on the [appointments page](xref:crmscript_appointments).
 
 ```crmscript!
 String[15] state;
@@ -147,7 +147,7 @@ appointmentAgent.Accept(242,0);
 
 ### Make changes
 
-Attendees may change only the priority, alarm, and completed fields. The rest is the responsibility of the meeting organizer. Updates are covered for [appointments](./appointment.md) in general.
+Attendees may change only the priority, alarm, and completed fields. The rest is the responsibility of the meeting organizer. Updates are covered for [appointments](xref:crmscript_appointments) in general.
 
 ## Reference
 

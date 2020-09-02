@@ -1,17 +1,17 @@
 ---
 title: User-defined fields explained
-uid: crmscript_udef_explained
+uid: crmscript_udef
 SortOrder: 10
 ---
 
 A *user-defined* field (udef) is a custom field that you add to an existing SuperOffice database table. You can extend the following entities:
 
-* [company](../../working-with/persons-and-organizations/company.md)
-* [contact](../../working-with/persons-and-organizations/customer.md)
-* [documents](../../working-with/documents/documents.md)
-* [follow-up](../../working-with/follow-ups/follow-ups.md)
+* [company](xref:crmscript-class-company)
+* [contact](xref:crmscript-class-customer)
+* [documents](xref:crmscript_docs)
+* [follow-up](xref:crmscript_followups)
 * project
-* [sale](../../working-with/sales/sales.md)
+* [sale](xref:crmscript_sales)
 
 There are 8 different types of user defined fields: Number, Decimal, Short text, Long text, Date, Unlimited date, Checkbox, and List (drop-down).
 
@@ -70,7 +70,7 @@ For example, "[D:2020.08.27]".
 
 ### Convert DateTime to SuperDate
 
-For [DateTime](../../datatypes/datetime-type.md), you can use its built-in formatting options of `toString()`.
+For [DateTime](xref:crmscript_datatypes_datetime), you can use its built-in formatting options of `toString()`.
 
 ```crmscript!
 String toSuperDate( DateTime dt ) {
@@ -83,7 +83,7 @@ printLine(toSuperDate(now));
 
 ### Convert Date to SuperDate
 
-For [Date](../../datatypes/date-type.md), you need to format the string yourself.
+For [Date](xref:crmscript_datatypes_date), you need to format the string yourself.
 
 ```crmscript!
 String toSuperDate( Date d ) {
@@ -156,7 +156,7 @@ For example, a number can be converted to a decimal and a short text. (And it's 
 
 ## Get all user-defined fields from entity
 
-`GetUserDefinedFields()` retrieves all registered user-defined fields from an entity. Here, we use the [contact](../../working-with/persons-and-organizations/customer.md) entity.
+`GetUserDefinedFields()` retrieves all registered user-defined fields from an entity. Here, we use the [contact](xref:crmscript-class-customer) entity.
 
 > [!TIP]
 > **Map** is a collection of key-value pairs. The key is **not the label** you gave the field! It's the **prog ID**!

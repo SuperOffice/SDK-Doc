@@ -172,7 +172,7 @@ c.toParser(p);
 
 ## Run template through the parser
 
-This is where the magic happens and the template variables are substituted. The [parser](./parser.md) is described in-depth elsewhere.
+This is where the magic happens and the template variables are substituted. The [parser](xref:crmscript_parser) is described in-depth elsewhere.
 
 ```crmscript
 subject = p.parseString(subject);

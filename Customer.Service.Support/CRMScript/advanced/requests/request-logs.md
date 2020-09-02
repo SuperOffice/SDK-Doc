@@ -32,7 +32,7 @@ t.log("SuperStar RequestHandler", "I can handle anything and anyone!");
 
 ## Search the log
 
-When inspecting logs, the CRMScript [SearchEngine](../searchengine/searchengine.md) is your best friend. Here's some info commonly filtered on:
+When inspecting logs, the CRMScript [SearchEngine](xref:search_engine) is your best friend. Here's some info commonly filtered on:
 
 * ticket_id
 * message_id
