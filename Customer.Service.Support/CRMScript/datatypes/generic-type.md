@@ -6,7 +6,7 @@ sortOrder: 80
 
 Generic is the base type of all other intrinsic CRMScript data types. Any variable can be up-casted to Generic.
 
-There's a close connection between Generic and [structs](../fundamentals/structs.md):
+There's a close connection between Generic and [structs](xref:crmscript_fundamentals_structs):
 
 * simpler iteration of variables (struct members)
 * easier to access and set new variables in structs
@@ -31,11 +31,11 @@ printLine(getTypeName(getCurrentDateTime()));
 ```crmscript!
 Integer age = 42;
 Generic g = getGenericValue("age");
-printLine(g);
+printLine(GenericToInteger(g).toString());
 ```
 
 > [!NOTE]
-> If the variable name is unknown, an [exceptions](../fundamentals/try-catch.md) is thrown.
+> If the variable name is unknown, an [exceptions](xref:crmscript_fundamentals_try_catch) is thrown.
 
 ## Down-casting
 
@@ -121,7 +121,7 @@ struct Person {
 
 Person p;
 
-String[] members = getStructMembers(p);
+String[] members = getStructMembers(getTypeName(p));
 
 foreach (String s in members) {
   printLine(s);
@@ -140,7 +140,7 @@ Generic g = getGenericValue(p, "age");
 ```
 
 > [!NOTE]
-> If the variable name is unknown or you're not referencing a struct, an [exceptions](../fundamentals/try-catch.md) is thrown.
+> If the variable name is unknown or you're not referencing a struct, an [exceptions](xref:crmscript_fundamentals_try_catch) is thrown.
 
 ### String convertGenericToString(Generic generic)
 
@@ -150,8 +150,8 @@ This works for all **basic** types. Complex types might can't be serialized as e
 
 ```crmscript!
 Integer age = 42;
-Generic g = convertGenericToString(age);
-printLine(g);
+String s = convertGenericToString(age);
+printLine(s);
 ```
 
 ### Void setGenericFromString(Generic generic, String value)
