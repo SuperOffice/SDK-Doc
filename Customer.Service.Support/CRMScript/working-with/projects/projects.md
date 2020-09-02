@@ -65,6 +65,25 @@ Using a *guide* will simplify and structure the process for the project manager 
 | 4      | stopped     |
 | 5      | closing     |
 
+**To get an updated list:**
+
+```crmscript!
+NSListAgent listAgent;
+NSProjectStatus[] statuses = listAgent.GetProjectStatuses();
+
+foreach (NSProjectStatus[] s in statuses) {
+  printLine(s.GetId().toString() + " " s.getValue().toString());
+}
+```
+
+Or:
+
+```crmscript!
+SearchEngine se;
+se.addFields("ProjStatus", "ProjStatus_id,name");
+print(se.executeTextTable());
+```
+
 ## Projects vs. other entities
 
 When working with projects, data will often intersect with the following entities:
