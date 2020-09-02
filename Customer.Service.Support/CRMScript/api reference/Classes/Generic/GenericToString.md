@@ -1,9 +1,9 @@
 ---
 title: String GenericToString(Generic generic)
-path: /EJScript/Global functions/String GenericToString(Generic generic)
+path: /EJScript/Classes/Generic/Member functions/String GenericToString(Generic generic)
 intellisense: 1
 langref: 1
-sortOrder: 9417
+sortOrder: 130
 keywords: GenericToString(Generic)
 ---
 
@@ -14,5 +14,3 @@ Explicit downcast from a generic to a String. If the generic does not represent 
 
 * **generic:** Generic The variable to downcast
 * **Returns:** String The variable as a String
-
-

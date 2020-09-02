@@ -1,9 +1,9 @@
 ---
 title: Integer GenericToInteger(Generic generic)
-path: /EJScript/Global functions/Integer GenericToInteger(Generic generic)
+path: /EJScript/Classes/Generic/Member functions/Integer GenericToInteger(Generic generic)
 intellisense: 1
 langref: 1
-sortOrder: 9358
+sortOrder: 100
 keywords: GenericToInteger(Generic)
 ---
 
@@ -12,5 +12,3 @@ Explicit downcast from a generic to an Integer. If the generic does not represen
 
 * **generic:** Generic The variable to downcast
 * **Returns:** Integer The variable as an Integer
-
-

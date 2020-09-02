@@ -1,9 +1,9 @@
 ---
 title: Time GenericToTime(Generic generic)
-path: /EJScript/Global functions/Time GenericToTime(Generic generic)
+path: /EJScript/Classes/Generic/Member functions/Time GenericToTime(Generic generic)
 intellisense: 1
 langref: 1
-sortOrder: 9487
+sortOrder: 150
 keywords: GenericToTime(Generic)
 ---
 
@@ -14,5 +14,3 @@ Explicit downcast from a generic to a Time. If the generic does not represent th
 
 * **generic:** Generic The variable to downcast
 * **Returns:** Time The variable as a Time
-
-
