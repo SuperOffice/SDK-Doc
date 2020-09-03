@@ -1,7 +1,7 @@
 ---
 title: Project members
 uid: crmscript_project_members
-SortOrder: 30
+SortOrder: 20
 ---
 
 A project always has a project manager or owner. In addition, it can have (and usually has) project members. These are stored in the **projectmember** table.

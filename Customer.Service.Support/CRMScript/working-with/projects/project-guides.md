@@ -1,7 +1,7 @@
 ---
 title: Guides
 uid: crmscript_project-guides
-SortOrder: 40
+SortOrder: 30
 ---
 
 Some project types have an associated project guide. For those types, it's important to understand stages and working with suggested activities.
