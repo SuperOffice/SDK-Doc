@@ -34,7 +34,7 @@ print(newProject.GetProjectId().toString());
 
 ### NSProject[] GetProjectList(Integer[] p0)
 
-To call `GetProjectList()`, we need to create the list of project IDs first.
+To call `GetProjectList()`, we need to create the list of **project IDs** first.
 
 In this example, we use [SearchEngine](xref:crmscript_search_engine) to get the ID of all projects headed by a specific associate and not marked as *done*.
 
@@ -59,7 +59,7 @@ NSProject[] projectList = agent.GetProjectList(projectIds);
 
 ### NSProject[] GetProjectsFromContact(Integer contactId)
 
-A company is implicitly linked to a project when at least 1 person in that organization is a member of that project.
+A company is implicitly linked to a project when at least 1 [person](xref:crmscript-class-customer) in that [organization](xref:crmscript-class-company) is a [member](xref:crmscript_project_members) of that project.
 
 ```crmscript!
 Integer contactId = 4;
@@ -92,7 +92,7 @@ p = agent.SaveProjectEntity(p);
 
 ## Ending a project
 
-In the end, regardless of whether you followed a project guide or not, a project is either **completed** or **stopped**. It is time to wrap things up and at the same time make sure the project manager and others can learn from it either way.
+In the end, regardless of whether you followed a [project guide](xref:crmscript_project-guides) or not, a project is either **completed** or **stopped**. It is time to wrap things up and at the same time make sure the project manager and others can learn from it either way.
 
 | Status | Description |
 |:------:|:------------|

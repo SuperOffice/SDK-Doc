@@ -40,7 +40,7 @@ printLine(p.GetProjectType().GetValue());
 A *project type* is a named set of reuseable info that will help you standardize the process. Aside from the name and ID, you'll find info such as:
 
 * the expected duration
-* whether a project guide is available
+* whether a [project guide](xref:crmscript_project-guides) is available
 * stages
 
 **List available types:**
@@ -53,7 +53,7 @@ print(se.executeTextTable());
 
 ## Project guides
 
-Using a *guide* will simplify and structure the process for the project manager with suggestions for which follow-ups to do and which documents to create at each stage.
+Using a [*guide*](xref:crmscript_project-guides) will simplify and structure the process for the project manager with suggestions for which [follow-ups](xref:crmscript_followups) to do and which [documents](xref:crmscript-docs) to create at each stage.
 
 ## Status of a project
 
@@ -90,6 +90,7 @@ When working with projects, data will often intersect with the following entitie
 
 * [company](xref:crmscript-class-company) (contact table)
 * [contact](xref:crmscript-class-customer) (person table)
+* [documents](xref:crmscript-docs)
 * [follow-ups](xref:crmscript_followups) (appointment table)
 * [sales](xref:crmscript_sales)
 

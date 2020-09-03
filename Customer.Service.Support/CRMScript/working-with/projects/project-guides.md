@@ -4,7 +4,7 @@ uid: crmscript_project-guides
 SortOrder: 30
 ---
 
-Some project types have an associated project guide. For those types, it's important to understand stages and working with suggested activities.
+Some **project types** have an associated project guide. For those types, it's important to understand stages and working with suggested activities.
 
 ## Check if project is connected to a guide
 
@@ -22,6 +22,9 @@ else {
   printLine("This project does not have a guide.");
 }
 ```
+
+> [!NOTE]
+> `GetProjectType()` returns an NSProjectType object, while you need an NSProjectTypeEntity object to call `GetHasGuide()`. You can use the list agent to do the "conversion".
 
 ## Stages
 
@@ -58,7 +61,7 @@ printLine("This sale will auto advance: " + type.GetIsAutoAdvance().toString());
 
 ## Suggested activities
 
-Suggested activities are just that  - **suggested**. They're blueprints that can be used to create actual follow-ups and documents.
+Suggested activities are just that  - **suggested**. They're blueprints that can be used to create actual [follow-ups](xref:crmscript_followups) and  [documents](xref:crmscript-docs).
 
 The blueprints sit in the intersection between project types and stages. A project type can have many stages, and a stage can apply to multiple project types. The [ProjectTypeStatusLink table](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-ProjectTypeStatusLink.htm) connects them all.
 
