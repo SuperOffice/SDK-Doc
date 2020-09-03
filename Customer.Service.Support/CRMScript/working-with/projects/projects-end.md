@@ -21,11 +21,11 @@ NSProjectAgent agent;
 NSProjectEntity p = agent.GetProjectEntity(2);
 
 p.SetEndDate(getCurrentDateTime());
-p.SetCompleted(true;)
+p.SetCompleted(true);
 
 NSProjectStatus status;
-status.SetValue(3);
-sale.SetProjectStatus(status);
+status.SetValue("3");
+p.SetProjectStatus(status);
 
 p = agent.SaveProjectEntity(p);
 ```

@@ -10,9 +10,10 @@ Some project types have an associated project guide. For those types, it's impor
 
 ```crmscript!
 NSProjectAgent agent;
+NSListAgent listAgent;
 
 NSProjectEntity p = agent.GetProjectEntity(4);
-NSProjectType type = p.GetProjectType();
+NSProjectTypeEntity type = listAgent.GetProjectTypeEntity(p.GetProjectType().GetId());
 
 if (type.GetHasGuide()) {
   printLine("This project has a guide!");

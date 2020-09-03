@@ -71,8 +71,8 @@ Using a *guide* will simplify and structure the process for the project manager 
 NSListAgent listAgent;
 NSProjectStatus[] statuses = listAgent.GetProjectStatuses();
 
-foreach (NSProjectStatus[] s in statuses) {
-  printLine(s.GetId().toString() + " " s.getValue().toString());
+foreach (NSProjectStatus s in statuses) {
+  printLine(s.GetId().toString() + " " + s.GetValue());
 }
 ```
 

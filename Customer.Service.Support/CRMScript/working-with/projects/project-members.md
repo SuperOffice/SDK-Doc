@@ -23,13 +23,13 @@ printLine(member.GetFullName());
 
 ### NSProjectMember[] GetProjectMembers(Integer projectId)
 
-```crmscript
-Integer projectId = 2;
+```crmscript!
+Integer projectId = 1;
 NSProjectAgent agent;
 NSProjectMember[] memberList = agent.GetProjectMembers(projectId);
 
 foreach (NSProjectMember m in memberList) {
-  printLine(member.GetLastname());
+  printLine(m.GetLastname());
 }
 ```
 
@@ -38,25 +38,25 @@ foreach (NSProjectMember m in memberList) {
 ```crmscript!
 NSProjectAgent agent;
 
-Integer projectIds[];
-projectIds.pushBack(7);
+Integer[] projectIds;
+projectIds.pushBack(1);
 projectIds.pushBack(3);
 projectIds.pushBack(42);
 
-NSProjectMember[] memberList = agent.GetProjectMembers(projectIds);
+NSProjectMember[] memberList = agent.GetProjectMembersById(projectIds);
 ```
 
 ### Get members from current project
 
 ```crmscript
 NSProjectAgent agent;
-NSProjectEntity p = projectAgent.GetProjectEntity(1);
+NSProjectEntity p = agent.GetProjectEntity(1);
 NSProjectMember[] memberList = p.GetProjectMembers();
 ```
 
 ## Register a member
 
-```crmscript
+```crmscript!
 NSProjectAgent agent;
 NSProjectMember member = agent.CreateDefaultProjectMember();
 
@@ -65,6 +65,8 @@ member.SetProjectId(4);
 member.SetProjectMemberTypeId(2);
 
 member = agent.SaveProjectMember(member);
+
+printLine(member.GetProjectmemberId().toString());
 ```
 
 ### List available roles
@@ -81,9 +83,9 @@ print(se.executeTextTable());
 
 ```crmscript
 NSProjectAgent agent;
-NSProjectMember member = agent.GetProjectMember(7);
+NSProjectMember member = agent.GetProjectMember(4);
 
-Integer projectId = 4;
+Integer projectId = 1;
 
 NSProjectMember[] memberList;
 memberList.pushBack(member);
@@ -113,7 +115,7 @@ For example, a person has retired from the company and you need to clean up the 
 ```crmscript
 NSProjectAgent agent;
 
-Integer memberIds[];
+Integer[] memberIds;
 memberIds.pushBack(5);
 memberIds.pushBack(17);
 memberIds.pushBack(23);
@@ -128,7 +130,7 @@ Removes members from a selected project.
 ```crmscript
 NSProjectAgent agent;
 
-Integer memberIds[];
+Integer[] memberIds;
 memberIds.pushBack(5);
 
 agent.DeleteProjectMembers(8,memberIds);
