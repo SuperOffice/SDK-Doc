@@ -40,7 +40,7 @@ printLine(p.GetProjectType().GetValue());
 A *project type* is a named set of reuseable info that will help you standardize the process. Aside from the name and ID, you'll find info such as:
 
 * the expected duration
-* whether a [project guide](xref:crmscript_project-guides) is available
+* whether a [project guide](@crmscript_project-guides) is available
 * stages
 
 **List available types:**
