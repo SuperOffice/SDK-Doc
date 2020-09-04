@@ -30,7 +30,7 @@ print(newProject.GetProjectId().toString());
 ## Get selected projects
 
 > [!TIP]
-> You can only retrieve projects for persons that are SuperOffice users ([associates](xref:crmscript-employees.<br/>The signed-in user must also have permission to view those projects. Otherwise, an exception is thrown.
+> You can only retrieve projects for persons that are SuperOffice users ([associates](@crmscript-employees)).<br/>The signed-in user must also have permission to view those projects. Otherwise, an exception is thrown.
 
 ### NSProject[] GetProjectList(Integer[] p0)
 
