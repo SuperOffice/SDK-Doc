@@ -36,7 +36,7 @@ print(newProject.GetProjectId().toString());
 
 To call `GetProjectList()`, we need to create the list of **project IDs** first.
 
-In this example, we use [SearchEngine](xref:crmscript_search_engine) to get the ID of all projects headed by a specific associate and not marked as *done*.
+In this example, we use [SearchEngine](@crmscript_search_engine) to get the ID of all projects headed by a specific associate and not marked as *done*.
 
 ```crmscript
 String associateId = "5";
