@@ -92,7 +92,7 @@ p = agent.SaveProjectEntity(p);
 
 ## Ending a project
 
-In the end, regardless of whether you followed a [project guide](xref:crmscript_project-guides) or not, a project is either **completed** or **stopped**. It is time to wrap things up and at the same time make sure the project manager and others can learn from it either way.
+In the end, regardless of whether you followed a [project guide](@crmscript_project-guides) or not, a project is either **completed** or **stopped**. It is time to wrap things up and at the same time make sure the project manager and others can learn from it either way.
 
 | Status | Description |
 |:------:|:------------|
