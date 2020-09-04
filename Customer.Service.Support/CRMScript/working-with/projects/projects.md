@@ -88,11 +88,11 @@ print(se.executeTextTable());
 
 When working with projects, data will often intersect with the following entities:
 
-* [company](xref:crmscript-class-company) (contact table)
-* [contact](xref:crmscript-class-customer) (person table)
-* [documents](xref:crmscript-docs)
-* [follow-ups](xref:crmscript_followups) (appointment table)
-* [sales](xref:crmscript_sales)
+* [company](@crmscript-class-company) (contact table)
+* [contact](@crmscript-class-customer) (person table)
+* [documents](@crmscript-docs)
+* [follow-ups](@crmscript_followups) (appointment table)
+* [sales](@crmscript_sales)
 
 ## In this section
 
