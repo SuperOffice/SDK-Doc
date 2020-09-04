@@ -53,7 +53,7 @@ print(se.executeTextTable());
 
 ## Project guides
 
-Using a [*guide*](xref:crmscript_project-guides) will simplify and structure the process for the project manager with suggestions for which [follow-ups](xref:crmscript_followups) to do and which [documents](xref:crmscript-docs) to create at each stage.
+Using a [*guide*](@crmscript_project-guides) will simplify and structure the process for the project manager with suggestions for which [follow-ups](@crmscript_followups) to do and which [documents](@crmscript-docs) to create at each stage.
 
 ## Status of a project
 
