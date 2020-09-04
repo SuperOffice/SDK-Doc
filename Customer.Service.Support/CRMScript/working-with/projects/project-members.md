@@ -7,7 +7,8 @@ SortOrder: 20
 A project always has a project manager or owner. In addition, it can have (and usually has) project members. These are stored in the **projectmember** table.
 
 > [!TIP]
-> Read about [working with persons](xref:crmscript-class-customer).
+> Read about [working with persons](@crmscript-class-customer).
+
 
 ## View project member info
 
