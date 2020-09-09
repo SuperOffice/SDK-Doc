@@ -1,21 +1,15 @@
 ---
-title: Address Book
-path: /Blogic/Screen Elements/Address Book
-sortOrder: 11
+title: Address book
+uid: blogic_address_book
+sortOrder: 1
 ---
 
+This element organizes the address book in a tree view.
 
-This html element organizes the address book in a tree view.
+## Functions
 
+### getFieldValue(String field)
 
+### setFieldValue(String field, Map value)
 
-functions:
-
-
-    setFieldValue(String p_field, map p_value)
-    
-    getFieldValue(String p_field)
-    
-    toInteger()
-
-
+### toInteger()

@@ -1,82 +1,69 @@
 ---
 title: Anchor line
-path: /Blogic/Screen Elements/Anchor line
-sortOrder: 12
+uid: blogic_anchor_line
+sortOrder: 1
 ---
 
-This element will display a horizontal line of clickable url's, as the one viewed at the top of the list ticket screen.
+This element will display a horizontal line of clickable URLs.
 
+## Configuration values
 
+| Value             | Description                  |
+|:------------------|:-----------------------------|
+| table             | set to get a default set of URLs (from v.4.0)<br/>ticket, customer, person, company, cust_company, contact             |
+| items             | array of items to display    |
+| items.length      | number of items              |
+| items.n.label     | the label of item n          |
+| items.n.url       | the URL of item n            |
+| items.n.appendId  | whether to append the active ID to the URL (Bool) |
+| iconUrl           | custom icon to use (v. 4.0)  |
+| items.n.target    | target of the URL (optional) |
+| items.n.alt       | alternative text (optional)  |
+| items.n.special   | whether to check for special links (Bool) |
 
-###The configuration will accept the following values:###
+## Example
 
-
- - <b>"table"</b>: from version 4.0 this value can be set to one of the following to get a default set of Urls
-     - <b>"ticket"</b>
-     - <b>"customer"</b>
-     - <b>"person"</b>
-     - <b>"company"</b>
-     - "cust\_company"
-     - <b>"contact"</b>
-
-
-
- - <b>"items"</b>: array of items to display
-     - "items.n.label": The label of item n.
-     - "items.n.url": The url of item n.
-     - "items.n.appendId": If true, then the URL will have the active ID appended to it.
-     - <b>"iconUrl"</b>: adds custom icons to the url with iconUrl, version 4.0
-     - "items.n.target": The (optional) target of the URL
-     - "items.n.alt": The (optional) alternative text of the URL
-     - "items.n.special" checks for special links
-
-
-
-
-
-###Example:###
-    
-
-table = customer - will have Edit Customer, New Ticket, Send Password, List Invoices and Connect Customer urls.
+```crmscript
+table = customer
 items.length = 2
 items.0.label = New ticket
 items.0.url = /bin/ticket?action=newTicket
 items.1.label = New customer
 items.1.url = /bin/ticket?action=newCustomer
 items.0.iconUrl = /doc/icons/clickme.gif
+```
 
-From version 3.1.8 you can add keyboard shortcuts to the labels.
-If you write : "items.0.label = &New ticket", then the label will be New Ticket, with an underscore under N. When pressing Alt+n the link will be opened.
+Will have Edit Customer, New Ticket, Send Password, List Invoices, and Connect Customer URLs.
 
+## Functions
 
+### getFieldValue(String)
 
-###Functions:###
+| Value             | Description                         |
+|:------------------|:------------------------------------|
+| numEntries        | the number of anchors in the line   |
+| entry.x.icon      | the icon of entry x                 |
+| entry.x.label     | the label of entry x                |
+| entry.x.url       | the URL of entry x                  |
+| entry.x.target    | the target of entry x               |
+| entry.x.warningMessage | the warning message of entry x |
+| entry.x.disabled  | whether the entry x is deactivated, 1=yes, 0=no |
 
+### setFieldValue(String, Map)
 
- - setFieldValue(string, Map)
-    - <b>"addEntry"</b>: will add an entry with
-        - <b>"label"</b>
-        - <b>"url"</b>
-        - <b>"target"</b>
-        - <b>"alt"</b>
-        - <b>"icon"</b>
-        - <b>"index"</b>
-        - <b>"warningMessage"</b>
-        - <b>"disabled"</b>
-        - <b>"onClick"</b>
-    - <b>"delEntry"</b>: will delete the entry or group:
-        - <b>"index"</b>
-        - <b>"group"</b>
+**addEntry:** will add an entry with:
 
+* label
+* url
+* target
+* alt
+* icon
+* index
+* warningMessage
+* disabled
+* onClick
 
+**delEntry:** will delete the entry or group
 
- - `getFieldValue(string)`:
-        - <b>"numEntries"</b>: returns the number of anchors in the line
-        - "entry.x.icon": returns the icon of entry x
-        - "entry.x.label": returns the label of entry x
-        - "entry.x.url": returns the url of entry x
-        - "entry.x.target": returns the target of entry x
-        - "entry.x.warningMessage": returns the warning message of entry x
-        - "entry.x.disabled": returns if the entry x is disabled. 1 if disabled, else 0
-
-
+* index
+* group

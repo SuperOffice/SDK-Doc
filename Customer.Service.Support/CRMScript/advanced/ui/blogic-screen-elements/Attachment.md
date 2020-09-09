@@ -1,36 +1,41 @@
 ---
 title: Attachment
-path: /Blogic/Screen Elements/Attachment
-sortOrder: 13
+uid: blogic_attachment
+sortOrder: 1
 ---
 
+This element adds the attachment field to your screen.
 
-This element adds the attachment field to your screen, similar to the one found under "new request" in Customer Service.
-   
-**The configuration will accept the following configuration values:**   
+## Configuration values
 
+| Value             | Description                             |
+|:------------------|:----------------------------------------|
+| multiple          | allows uploading of several attachments |
+| noHardDelete      | will not delete the actual attachment from the database, only from the attachment component |
 
+## Example
 
- - <b>"multiple"</b>: Will allow uploading of several attachments.
- - <b>"noHardDelete"</b>: Will not delete the actual attachment from the database, just from the attachment component.
+```crmscript
+multiple = true
+```
 
+## Functions
 
+### setValue(String)
 
+The string should contain a comma-separated list of attachment IDs
 
+### setFieldValue("addAttachment", Map)
 
-###Example:###
-    
-    multiple = true
-    
+The map should contain a key named **attachmentId** and the value of the attachment ID.
 
+> [!TIP]
+> To add multiple attachments, use `setFieldValue` once for each attachment.
 
+### toInteger()
 
-###Functions:###
+Returns the ID of a field.
 
+### toString()
 
- - "toInteger()" returns the id of one field
- - "toString()" returns a comma-separated list of all ids of all attachments.
- - "setValue(string)" - the string should contain a comma-separated list of attachment ids
- - "setFieldValue("addAttachment", map)" -  the map should contain the key "attachmentId" and the value of the attachment id. To add several attachments use setFieldValue several times.
-
-
+Returns a comma-separated list with IDs of all attachments.

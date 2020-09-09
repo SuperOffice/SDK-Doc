@@ -1,25 +1,24 @@
 ---
 title: Button
-path: /Blogic/Screen Elements/Button
-sortOrder: 15
+uid: blogic_button
+sortOrder: 2
 ---
 
+The `button` element adds a clickable button to your screen. Used to submit forms and offer standard button functionality.
 
-   
-**This element adds a clickable button to your screen with the following configuration values:**   
+## Configuration values
 
+| Value   | Description    |
+|:--------|:---------------|
+| title   | name of button |
+| onClick | JavaScript called when the button is pressed |
 
+## Functions
 
- - <b>"title"</b>: Name of button
- - <b>"onClick"</b>: Javascript that will be called when button is pressed
+### getFieldValue()
 
+Returns the field.
 
+### setFieldValue(String, Map)
 
-
-###Functions:###
-
-
- - "getFieldValue()" returns the field
- - "setFieldValue(string, Map)": can set clicked value if the field is "script".
-
-
+Sets clicked value if the field is *script*.

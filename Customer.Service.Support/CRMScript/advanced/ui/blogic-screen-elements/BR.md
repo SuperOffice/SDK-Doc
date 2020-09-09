@@ -1,10 +1,11 @@
 ---
 title: BR
-path: /Blogic/Screen Elements/BR
-sortOrder: 14
+uid: blogic_br
+sortOrder: 2
 ---
 
+The `br` element creates an HTML line-break on the screen.
 
-This element creates a html break on the screen.
-
-
+```html
+<br/>
+```
