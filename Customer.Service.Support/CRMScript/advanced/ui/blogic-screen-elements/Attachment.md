@@ -21,11 +21,11 @@ multiple = true
 
 ## Functions
 
-### setValue(String)
+### setValue(String ids)
 
 The string should contain a comma-separated list of attachment IDs
 
-### setFieldValue("addAttachment", Map)
+### setFieldValue("addAttachment", Map values)
 
 The map should contain a key named **attachmentId** and the value of the attachment ID.
 

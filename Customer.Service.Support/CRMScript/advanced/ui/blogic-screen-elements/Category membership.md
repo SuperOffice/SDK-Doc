@@ -1,33 +1,29 @@
 ---
 title: Category membership
-path: /Blogic/Screen Elements/Category membership
-sortOrder: 17
+uid: blogic_category_membership
+sortOrder: 3
 ---
 
-This element is used to visualize and possible change the category membership for the users.
+This element is used to visualize and possibly change the category membership of users.
 
+## Configuration values
 
+| Value      | Description    |
+|:-----------|:---------------|
+| categoryId | will load the membership for the specified category |
+| noWeights  | whether to show the weights for each user (Bool)    |
 
-###The configuration will accept the following values:###
+## Functions
 
+### getFieldValue(String field)
 
- - "categoryId": will load the membership for the specified category
- - <b>"noWeights"</b>: if set to True, the control will not show the weights for each user
+| Field      | Description    |
+|:-----------|:---------------|
+| members    | a comma-separated string with the user ID of each member       |
+| user id    | the weight of a user ID, or **-1** if the user is not a member |
 
+### setFieldValue(String action, Map values)
 
-
-
-###Functions:###
-
-
- - `getFieldValue(field)`:
-    - <b>"members"</b>: will return a comma separated string with the user id for each member
-    - "user id": will return the weight of the specified user id, -1 if the user is not a member
-
-
-
- - setFieldValue(field, Map):
-    - <b>"saveMemberships"</b>: Will save the members to the specified category.
-        - Use a map with field "categoryId" and the category id as the value.
-
-
+| Field      | Description    |
+|:-----------|:---------------|
+| saveMemberships | saves the members to the specified category<br/>the map should contain a key = "categoryId" with value = the category ID |

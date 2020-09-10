@@ -32,15 +32,15 @@ buttons.length = 3
 
 ## Functions
 
-### setFieldValue(String, Map)
+### setFieldValue(String field, Map value)
 
 **addButton:**
 
-name
-label
-warning
-iconUrl
-className
+* name
+* label
+* warning
+* iconUrl
+* className
 
 > [!NOTE]
 > The name of the buttons must be mapped to the scripts that might be run for the current screen.

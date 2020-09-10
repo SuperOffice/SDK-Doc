@@ -15,10 +15,10 @@ The `button` element adds a clickable button to your screen. Used to submit form
 
 ## Functions
 
-### getFieldValue()
+### getFieldValue(String field)
 
 Returns the field.
 
-### setFieldValue(String, Map)
+### setFieldValue(String field, Map value)
 
-Sets clicked value if the field is *script*.
+Sets the selcted value if the field is *script*.

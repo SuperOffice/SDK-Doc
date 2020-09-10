@@ -16,7 +16,7 @@ This element will display a horizontal line of clickable URLs.
 | items.n.label     | the label of item n          |
 | items.n.url       | the URL of item n            |
 | items.n.appendId  | whether to append the active ID to the URL (Bool) |
-| iconUrl           | custom icon to use (v. 4.0)  |
+| items.n.iconUrl   | custom icon to use (v. 4.0)  |
 | items.n.target    | target of the URL (optional) |
 | items.n.alt       | alternative text (optional)  |
 | items.n.special   | whether to check for special links (Bool) |
@@ -37,9 +37,9 @@ Will have Edit Customer, New Ticket, Send Password, List Invoices, and Connect C
 
 ## Functions
 
-### getFieldValue(String)
+### getFieldValue(String field)
 
-| Value             | Description                         |
+| Field             | Description                         |
 |:------------------|:------------------------------------|
 | numEntries        | the number of anchors in the line   |
 | entry.x.icon      | the icon of entry x                 |
@@ -49,21 +49,9 @@ Will have Edit Customer, New Ticket, Send Password, List Invoices, and Connect C
 | entry.x.warningMessage | the warning message of entry x |
 | entry.x.disabled  | whether the entry x is deactivated, 1=yes, 0=no |
 
-### setFieldValue(String, Map)
+### setFieldValue(String action, Map values)
 
-**addEntry:** will add an entry with:
-
-* label
-* url
-* target
-* alt
-* icon
-* index
-* warningMessage
-* disabled
-* onClick
-
-**delEntry:** will delete the entry or group
-
-* index
-* group
+| Action   | Map keys               | Description                         |
+|:---------|:-----------------------|:------------------------------------|
+| addEntry | label<br/>url<br/>target<br/>alt<br/>icon<br/>index<br/>warningMessage<br/>disabled<br/>onClick | Adds an entry |
+| delEntry | index<br/>group | Deletes the entry or group |

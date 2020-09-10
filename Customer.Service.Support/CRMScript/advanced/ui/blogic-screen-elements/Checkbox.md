@@ -1,28 +1,27 @@
 ---
 title: Checkbox
-path: /Blogic/Screen Elements/Checkbox
-sortOrder: 19
+uid: blogic_checkbox
+sortOrder: 3
 ---
-
 
 Adds a checkbox to your screen.
 
+## Configuration values
 
+| Value       | Description                         |
+|:------------|:------------------------------------|
+| suffixLabel | optional label, displayed to the right of the checkbox |
 
+## Functions
 
-###Configuration values:###
+### setValue(String isSelected)
 
+Marks the checkbox as selected ("1") or unselected ("0").
 
- - "suffixLabel" - Optional label placed to the right of the checkbox.
+### toBool()
 
+Return the value of the checkbox, true or false.
 
+### toString()
 
-
-###Configuration functions:###
-
-
-- "toBool()" will return the value of the checkbox, true or false.
-- "toString()" will return "1" or "0".
-- "setValue()" will accept "1" or "0".
-
-
+Returns "1" or "0".

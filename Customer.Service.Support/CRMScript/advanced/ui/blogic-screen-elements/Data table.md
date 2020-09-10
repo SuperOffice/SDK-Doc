@@ -1,215 +1,185 @@
 ---
 title: Data table
-path: /Blogic/Screen Elements/Data table
-sortOrder: 22
+uid: blogic_data_table
+sortOrder: 4
 ---
 
-Please use this element instead of static tables, etc.
+This is a new version of the old screen element `Table` with additional features.
 
-This is a new version of the old Screen element "Table", but with more features.
-When giving databasefields and criterias, the table is automatically filled with data.
+When giving database fields and criteria, the table is automatically filled with data.
 
+> [!NOTE]
+> Please use this element instead of static tables, or similar.
 
+## Configuration values
 
-###The following configuration values are required:###
+### Fields
 
+| Value              | Required | Description                                    |
+|:-------------------|:--------:|:-----------------------------------------------|
+| fields.n.label     | x        | The header of column n                         |
+| fields.n chop      | x        | The max count of characters in column n        |
+| fields.n.footerFunction | x   |                                                |
+| fields.n.field     | x        | The database field for column n                |
+| fields.n.function  | x        | Used together with fields.n.functionParams     |
+| fields.n.functionParams | x   | Used together with fields.n.function           |
+| fields.n.hidden    |          | Whether to hide column n (true=yes)            |
+| fields.n.selectRow |          | Whether to add a checkbox to the row (true=yes) |
+| fields.length      |          | Count of fields                                |
 
- - "fields"
-    - "fields.n.label": the header of column n
-    - "fields.n chop": set this to max count of characters in column n
-    - "fields.n.footerFunction"
-   
-**Either:**   
-    - "fields.n.field": the database field for column n
-   
-**Or:**   
-    - "fields.n.function"
-        - "fields.n.functionParams"
+> [!NOTE]
+> It is mandatory to set either `fields.n.field` OR both `fields.n.function` and `fields.n.functionParams`.
 
+### Criteria
 
+Criteria constrain which data to have in the table.
 
+| Value               | Description                    |
+|:--------------------|:-------------------------------|
+| criteria.n.operator | The operator for this criteria |
+| criteria.n.field    | The database field for this criteria |
+| criteria.n.rowOperator | The operator between this and the next criteria |
+| criteria.n.indent   | How many parentheses surround this criteria |
+| criteria.length     | The total number of criteria. Must be given even if there is only 1 |
+| criteria.n.value    | The value for criteria n |
+| criteria.n.valueId  | Whether to automatically set the value to the screen's `entryId` (true=yes) |
 
-###Optional values on fields:###
+> [!NOTE]
+> Criteria must contain either `value` or `valueId`. Use one or the other, but not both for the same criteria.
 
+### Sort order and grouping (optional)
 
- - "fields.n.hidden": true if column n should be hidden
- - "fields.n.selectRow": set this to true if you want this column to contain checkboxes.
- - "fields.length": Count of fields
+| Value              | Description                    |
+|:-------------------|:-------------------------------|
+| orders.n.column    | The database field to sort on  |
+| orders.n.direction | The sort order<br/>0 = ascending, 1 = descending
+| orders.n.orderByInteger |                           |
+| orders.length      | Number of colums to sort on    |
+| groups.n.column    | The database field to group by |
+| groups.n.direction |                                |
+| groups.n.orderByInteger |                           |
+| groups.length      | Number of groups               |
 
+### Optional config
 
+| Value              | Description                                                               |
+|:-------------------|:--------------------------------------------------------------------------|
+| maxHeight          | The maximum height of the table in pixels                                 |
+| pageSize           | The number of rows to show on a single page. If the result has more rows than pageSize, pagination links are are added. |
+| width              | The width of the table (for example, 100%, 150 px)                        |
+| limit              | The maximum count of rows to list                                         |
+| url                | A URL. Must be the same for the entire row                                |
+| distinct           | The database field that will be distinct in the result                    |
+| dbDistinct         | Same as distinct, but the calculation is done by the database.            |
+| orderColumn        | The database field that will have the default order                       |
+| orderAsc           | The sort order<br/>true = ascending, false = descending                   |
+| showTicketStatus   | Whether to visually indicate ticket status                                |
+| showContactColors  | Whether to user text color (Bool)<br/>grey = deleted, red/black = stopped |
+| showPersonColors   | Whether to user text color (Bool)<br/> grey = retired                     |
+| newItemCommandField | Adds a button at the bottom of the table. For the company screen:<br/>ticket.cust_id (action add new request to customer )<br/>person.contact_id (action add new person to company)                              |
+| colorField         | Information about the color of the row                                    |
+| colorFieldCodes    |                                                                           |
+| profileBaseTable   |                                                                           |
+| table              |                                                                           |
+| linkUrl            |                                                                           |
+| linkAppendField    | The database field to append to the end of the URL. Must be a field in a column |
+| baseUrl            |                                                                           |
+| appendField        |                                                                           |
+| callbackInit       | The name of the function that initializes the SearchEngine<br/>Located in Body tab |
+| callbackDisplay    | The name of the function that processes the result<br/>Located in Body tab |
+| callbackSort       | The name of the function that sorts the result<br/>Located in Body tab    |
 
+**A word about ticket status:**
+If your table contains a column ticket.status and showTicketStatus is set, each tickets will have an icon showing it's status. Urgent tickets are also highlighted.
 
-###To constrain which data to have in the table:###
+## Functions
 
+Data table is inherited from `StaticGrid`. You can use `setFieldValue()` and `getFieldValue()` as described for [StaticGrid](@blogic_static_grid)
 
- - "criteria"
-    - "criteria.n.operator": the operator for criteria n
-    - "criteria.n.field": the database field for criteria n
-    - "criteria.n.rowOperator": operator between criteria n and the next criteria.
-    - "criteria.n.indent": the count of parenthesis surrounding the criteria
-    - "criteria.length": count of criterias. Must be given even if there is only one criteria
-   
-**Either:**   
-    - "criteria.n.value": the value for criteria n
-   
-**Or:**   
-    - "criteria.n.valueId" if true, then value is automatically set to the screen's entryId. Criteria must contain either value or valueId
+## Example
 
+In this example, the data table contains requests with ID less than 50.
+The table lists the title, the owner's username, and the status.
+The ID is a hidden field.
 
+```crmscript
+fields.0.field = ticket.title
+fields.0.label = Tittel
+fields.1.field = ticket.owned_by.username
+fields.1.label = Eier
+fields.2.field = ticket.id
+fields.2.hidden = true
+fields.3.field = ticket.status
+fields.3.label = Status
+fields.length = 4
 
+criteria.0.field = ticket.id
+criteria.0.indent = 0
+criteria.0.operator = OperatorLt
+criteria.0.rowOperator = OperatorAnd
+criteria.0.value = 50
+criteria.length = 1
 
-###Orders and groups are optional:###
+showTicketStatus = true
+url = ticket.exe?action=listTicket&ticketId=
+```
 
+Now, lets **change the colors** of the rows: 
 
- - "orders.n.column": the database field to order
- - "orders.n.direction": the direction to order, 0 is ascending, 1 is descending
- - "orders.n.orderByInteger"
- - "orders.length": count of orders
+* We add a new hidden field to store the value of the colors. You can use any field not already in the table. Remember to update `fields.length`.
+* Then we tie in callback functions to do the magic.
 
+**Config:**
 
-
- - "groups.n.column": the database field to group by
- - "groups.n.direction"
- - "groups.n.orderByInteger"
- - "groups.length": count of groups
-
-
-
-
-###The following values are optional:###
-
-
- - "maxHeight": set this to the count of pixels for maximum height of the table
- - <b>"pageSize"</b>: set this to the count of rows on each side in the table. If the result contains more rows than pageSize, there will be links at the bottom of the table with next page and previous page.
- - <b>"width"</b>: set this to the width of the table 100%, 150 px, ..
- - <b>"limit"</b>: set this to the maximum count of rows to list.
- - <b>"url"</b>: set this to the url. The same url on the entire row.
- - <b>"distinct"</b>: the database field that will be distinct in the result
- - <b>"dbDistinct"</b>: the database field that will be distinct in the result (The distinct operation is done by the database)
- - <b>"orderColumn"</b>: the database field that will have the default order
- - <b>"orderAsc"</b>: if true then default order is ascending, else it will be descending
- - <b>"showTicketStatus"</b>: If you set this to true, and your table contains a column ticket.status, then the entries in this will get an envelope on their left who are blue, yellow or red according to the read status of the ticket. The text will be bold if the read status is yellow or red.
- - <b>"showContactColors"</b>: If you set this to true, the text color is grey if the contact is deleted, and the color is red/black if the contact is stopped.
- - <b>"showPersonColors"</b>: If you set this to true, the text color is grey for persons that is retired. Only use this if you are listing persons.
- - <b>"newItemCommandField"</b>: Use this to add a commandbutton at the bottom of the table. These two are used in the tables in the company screen:
-     - "ticket.cust\_id"  gives a button to add a new request to that customer
-     - "person.contact\_id" gives a button to add a new person to the company
- - <b>"colorField"</b>: The field that have the information about the color of the row.
- - <b>"colorFieldCodes"</b>
- - <b>"profileBaseTable"</b>:
- - <b>"table"</b>
- - <b>"linkUrl"</b>
- - <b>"linkAppendField"</b> the database field to append to the end of the url. Must be a field in a column
- - <b>"baseUrl"</b>
- - <b>"appendField"</b>
-
-
-Can be combined with callback functions that change the value of a field. This will be explained further down the page.
-
-
- - "callbackInit": the name of a function written in the body pane for initialising the SearchEngine that is working behind the table.
- - <b>"callbackDisplay"</b>: the name of a function written in the body pane that can manipulate the resulting fields that are listed in the table.
- - <b>"callbackSort"</b>: the name of a function written in the body pane that can sort the resulting rows that are listed in the table.
-
-
-NOTE: this class is inherited from StaticGrid, which means that all setFieldValue and getFieldValue functions for StaticGrid also will work on this one.
-
-
-Example on these three functions will be given at the end of this section.
-
-Example of a data table containing requests where the request's id is less than 50. The table is listing the title, the owner's username and the status. The id is a hidden field.
-
-
-    fields.0.field = ticket.title
-    fields.0.label = Tittel
-    fields.1.field = ticket.owned_by.username
-    fields.1.label = Eier
-    fields.2.field = ticket.id
-    fields.2.hidden = true
-    fields.3.field = ticket.status
-    fields.3.label = Status
-    fields.length = 4
-    
-    criteria.0.field = ticket.id
-    criteria.0.indent = 0
-    criteria.0.operator = OperatorLt
-    criteria.0.rowOperator = OperatorAnd
-    criteria.0.value = 50
-    criteria.length = 1
-    
-    showTicketStatus = true
-    url = ticket.exe?action=listTicket&ticketId=
-    
-
-For manipulating the colors of the rows and the output of other fields, this is an example for doing that. We continue with the example above.
-
-We add another field that will be hidden, to store the value of the colors.
-Which field we choose is not importent but it can not be a field that is already in the table. We have to change fields.length from 4 to 5.
-
+```crmscript
 fields.4.hidden = true
+fields.4.field = ticket.author
+fields.length = 5
 
-    fields.4.field = ticket.author
-    fields.length = 5
-    
-
-
-
-###Then adding the names of the functions:###
-callbackDisplay = formatDisplayField
+colorField = ticket.author
 callbackInit = init
+callbackDisplay = formatDisplayField
+```
 
-    colorField = ticket.author
-    
+**Callback functions (in the Body tab):**
 
-Here is the code added in the body pane
+```crmscript
 
+// Set up the SearchEngine as you like.
+Void init(SearchEngine se) {
+  se.addField("ticket.owned_by");
+}
 
-    Void init(SearchEngine se)
-    {
-      // Here you can manipulate the SearchEngine as you like.
-      se.addField("ticket.owned_by");
-    }
-    
-    String formatDisplayField(SearchEngine se, String field)
-    {
-
-  /* Here we add a text on the owner's column for the users that have
-  status not present */
-
-      if(field == "ticket.owned_by.username")
-      {
-        User u;
-        u.load(se.getField("ticket.owned_by").toInteger());
-        if (u.getValue("status") == "2")
-          return se.getField(field) + " : Ikke tilstede";
-        else
-          return se.getField(field);
-      }
-
-  /* This is an unfortunate side-effect of using callback functions. You have to
-  translate status ids to text */
-
-      else if(field == "ticket.status")
-      {
-        if(se.getField("ticket.status").toInteger() == 1)
-          return "Open";
-        else if (se.getField("ticket.status").toInteger() == 2)
-          return "Closed";
-        else if (se.getField("ticket.status").toInteger() == 3)
-          return "Postponed";
-        else if (se.getField("ticket.status").toInteger() == 4)
-          return "Deleted";
-      }
-      else if (field == "ticket.author")
-      {
-        // Here we change the colorfield according to the ticket's status
-        if(se.getField("ticket.status").toInteger() == 1)
-          return "#8888FF";
-        else
-          return "#FF8888";
-      }
-      // default, return the field unchanged.
+String formatDisplayField(SearchEngine se, String field) {
+  // Add a text on the owner's column for the users that have status not present
+  if(field == "ticket.owned_by.username") {
+    User u;
+    u.load(se.getField("ticket.owned_by").toInteger());
+    if (u.getValue("status") == "2")
+      return se.getField(field) + " : Ikke tilstede";
+    else
       return se.getField(field);
-    }
-
-
+  }
+  
+  // Translate status ids to text
+  else if(field == "ticket.status") {
+    if(se.getField("ticket.status").toInteger() == 1)
+      return "Open";
+    else if (se.getField("ticket.status").toInteger() == 2)
+      return "Closed";
+    else if (se.getField("ticket.status").toInteger() == 3)
+      return "Postponed";
+    else if (se.getField("ticket.status").toInteger() == 4)
+      return "Deleted";
+  }
+  else if (field == "ticket.author") {
+    // Change the colorfield according to the ticket's status
+    if(se.getField("ticket.status").toInteger() == 1)
+      return "#8888FF";
+    else
+      return "#FF8888";
+  }
+  // default, return the field unchanged.
+  return se.getField(field);
+}
+```
