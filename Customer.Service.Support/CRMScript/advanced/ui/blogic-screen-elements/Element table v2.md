@@ -1,51 +1,65 @@
 ---
 title: Element table v2
-path: /Blogic/Screen Elements/Element table v2
-sortOrder: 29
+uid: blogic_element_table_2
+sortOrder: 5
 ---
 
+This is a **layout element**. It can contain other elements, which will be laid out in a grid. The children are laid out in a tabular fashion, starting in the top-left corner. When all columns in the current row are filled, the next child element starts a new row.
 
-This element is a layout element that can be used to lay out its children on the screen. The children are laid out in a tabular fashion, starting in the top-left corner, and then wrapping to the next row when all columns in the current row have been filled. All rows and columns can be sized in pixels, percentage or "dynamic" (divide remaining space). Furthermore, each cell can have additional padding on all sides. The whole table supports cellpadding (padding on all cells), and cellspacing (space between cells, but not between cells and the outer border of the table). Each cell can also contain a header.
+> [!NOTE]
+> The number of rows will expand dynamically if there are more children than initial space.
 
+* Each cell can have a header.
+* Each cell can have additional padding on all sides.
+* The whole table supports cell padding (inside cells), and cell spacing (between cells). Padding is always set in pixels.
 
+> [!NOTE]
+> Cell spacing doesn't create space between cells and outer table edges!
 
+**Sizing:**
 
-###The element supports the following attributes:###
+* Exact - pixels (px)
+* Relative - percent (%)
+* Dynamic -divide remaining space (*)
 
+## Configuration values
 
- - <b>"rows"</b>, "columns": The initial size of the table. Note that the number of rows will expand dynamically if there are more children than initial space.
- - <b>"border"</b>: If true, then a border will be drawn outside the table and between the cells.
- - <b>"cellspacing"</b>: The number of pixels between two cells, both horizontally and vertically. Note: this value does not create space between cells and outer table edges.
- - <b>"cellpadding"</b>: The number of pixels to pad each cell on each side. Will also pad against outer table edges.
- - <b>"row"</b>: This is an optional array which allows you to set size and padding for each row. Use row.length to specify length of array.
- - "row.n.size": The vertical size of row n. Use '%' to indicate a relative size, or 'px' to indicate exact size, or '*' to indicate dynamic size (evenly shared between all dynamic rows)
- - "row.n.paddingTop": Top padding in pixels for all cells in this row.
- - "row.n.paddingBottom": Bottom padding in pixels for all cells in this row.
- - <b>"column"</b>: This is an optional array which allows you to set size and padding for each column. Use column.length to specify length of array.
- - "column.n.size": Sam as row.n.size, but specifies horizontal size.
- - "column.n.paddingLeft": Left padding in pixels for all cells in this column.
- - "column.n.paddingRight": Right padding in pixels for all cells in this column.
+| Value                 | Description                                            |
+|:----------------------|:-------------------------------------------------------|
+| rows                  | Initial size                                           |
+| columns               | Initial size                                           |
+| border                | Whether to outline the table and each cell (Bool)      |
+| cellspacing           | Pixels between neighboring cells, both horizontally and vertically |
+| cellpadding           | Pixels of padding on each side of a cell and the table outer edges |
+| row                   | Array with size and padding for each row (optional)    |
+| row.length            | Number of rows (in array)                              |
+| row.n.size            | Height of row n (specify unit)                         |
+| row.n.paddingTop      | Top padding for all cells in this row                  |
+| row.n.paddingBottom   | Bottom padding for all cells in this row               |
+| column                | Array with size and padding for each column (optional) |
+| column.length         | Number of columns (in array)                           |
+| column.n.size         | Width of column (specify units)                        |
+| column.n.paddingLeft  | Left padding for all cells in this column              |
+| column.n.paddingRight | Right padding for all cells in this column             |
+| margin                | Outer margin for all 4 table sides                     |
+| marginLeft            | Outer margin - left                                    |
+| marginTop             | Outer margin - top                                     |
+| marginRight           | Outer margin - right                                   |
+| marginBottom          | Outer margin - bottom                                  |
 
+> [!TIP]
+> Setting margin for a specific side (top,bottom,left,right) overwrites the generic *margin*.
 
-From version 8, the following attributes are supported for setting an outer margin:
+### Config for immediate child elements
 
+You can define these config values for the children, and they will be picked up by the layout table and applied.
 
- - "margin": Set margin for all 4 sides. Or set margin individually for one side (overrides "margin"):
-     - <b>"marginLeft"</b>
-     - <b>"marginTop"</b>
-     - <b>"marginRight"</b>
-     - <b>"marginBottom"</b>
-
-
-The element will pick up certain attributes from its immediate children. I.e. you can define these config values for the children, and they will be picked up by the layout table and applied.
-
-
- - "layout.label": If this value is set, we will print a header above the child element.
- - "layout.colspan": If this value is set, the child may span multiple columns.
- - "layout.rowspan": If this value is set, the child may span multiple rows.
- - "layout.paddingLeft": left padding of only this child in pixels
- - "layout.paddingRight": right padding of only this child in pixels
- - "layout.paddingTop": top padding of only this child in pixels
- - "layout.paddingBottom": bottom padding of only this child in pixels.
-
-
+| Value                | Description                                       |
+|:---------------------|:--------------------------------------------------|
+| layout.label         | Add header to this child                          |
+| layout.colspan       | Whether the child may span multiple columns       |
+| layout.rowspan       | Whether the child may span multiple rows          |
+| layout.paddingLeft   | Left padding of this child                        |
+| layout.paddingTop    | Top padding of this child                         |
+| layout.paddingRight  | Right padding of this child                       |
+| layout.paddingBottom | Bottom padding of this child                      |

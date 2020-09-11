@@ -10,6 +10,6 @@ This element organizes the address book in a tree view.
 
 ### getFieldValue(String field)
 
-### setFieldValue(String field, Map value)
+### setFieldValue(String field, Map values)
 
 ### toInteger()

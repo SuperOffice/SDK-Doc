@@ -32,7 +32,7 @@ buttons.length = 3
 
 ## Functions
 
-### setFieldValue(String field, Map value)
+### setFieldValue(String action, Map values)
 
 **addButton:**
 

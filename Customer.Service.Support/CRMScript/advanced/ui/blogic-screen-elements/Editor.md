@@ -1,24 +1,25 @@
 ---
 title: Editor
-path: /Blogic/Screen Elements/Editor
-sortOrder: 25
+uid: blogic_editor
+sortOrder: 5
 ---
 
 This element adds a text editor to your screen with common text editor features.
-Unless specified the size is width: 400 and height:100.
 
+**Default size:** width: 400, height: 100
 
+## Configuration values
 
-###The following configuration values are available:###
+| Value         | Description                   |
+|:--------------|:------------------------------|
+| width         | Sets the width of the editor  |
+| height        | Sets the height of the editor |
+| notEmpty      | Whether to show an error message if submitting with no text in the editor (true=yes) |
 
+### setValue()
 
- - "width": sets the width of the editor
- - <b>"height"</b>: sets the height of the editor
- - <b>"notEmpty"</b>: if set to true, an error message is given on submitting if there is no text in the editor
+Set the contents of the editor.
 
+### toString()
 
-
- - `toString()`: Will return the content (which may contain HTML).
- - `setValue()`: Will set the content of the editor.
-
-
+Returns the contents. May contain HTML.

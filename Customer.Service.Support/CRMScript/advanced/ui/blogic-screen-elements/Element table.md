@@ -1,41 +1,41 @@
 ---
 title: Element table
-path: /Blogic/Screen Elements/Element table
-sortOrder: 28
+uid: blogic_element_table
+sortOrder: 5
 ---
 
-This element is a layout element, containing other elements. The elements will be laid out in a table.
+This is a **layout element**. It can contain other elements, which will be laid out in a grid (1 row).
 
+## Configuration values
 
+| Value         | Description                                   |
+|:--------------|:----------------------------------------------|
+| columns       | The number of columns in the grid             |
+| verticalSpace | Whether to add vertical space between elements (true=yes) |
+| cellspacing   | Space between cells in the grid (in pixels)   |
+| cellpadding   | Padding inside a cell (in pixels)             |
+| width         | The width of the table (in percent or pixels) |
 
-###The element accepts the following configuration values:###
+### Config for immediate child elements
 
+You can set and position a labels, config vertical space, and config dynamic resizing (v. 4.2.21/4.4.2) for each immediate child of the element table.
 
- - "columns": The number of columns in the table.
- - <b>"verticalSpace"</b>: If true, then elements will be separated vertically with some space.
- - <b>"cellspacing"</b>: The number of pixels of cellspacing in the table.
- - <b>"cellpadding"</b>: The number of pixels of cellpadding in the table.
- - <b>"width"</b>: The width of the table in % or pixels.
+| Value                         | Description                                       |
+|:------------------------------|:--------------------------------------------------|
+| label                         | UI label in grid                                  |
+| labelPos                      | positions element<br/>above or left (default)     |
+| verticalSpace                 | full: unlimited vertical space (full-size)<br/>rest: resize element to remaining vertical space |
+| sizeAttributes_blockSetHeight | Set to true to prevent vertical resizing          |
+| sizeAttributes_blockSetWidth  | Set to true to prevent horizontal resizing        |
+| sizeAttributes_minHeight      | Sets the min height the element can be resized to |
+| sizeAttributes_maxHeight      | Sets the max height the element can be resized to |
+| sizeAttributes_absoluteHeight | Sets a fixed height for this element              |
+| sizeAttributes_minWidth       | Sets the min width the element can be resized to  |
+| sizeAttributes_maxWidth       | Sets the min width the element can be resized to  |
+| sizeAttributes_absoluteWidth  | Sets a fixed width for this element               |
 
+> [!NOTE]
+> If multiple child elements have verticalSpace=rest, the remaining space will be divided equally.
 
-Children attributes: The following attributes will be picked up from immediate children. Note, these attributes must be in the configuration of the child, not the table.
-
-
-* "label": The label used to the left or top of the element.
-* "labelPos": "above" wil adjust label on top of element, otherwise to the left.
-* "verticalSpace": "full" will allow this element to be full size, i.e. not limited vertically. The value "rest" will resize this element to whatever vertical space is left. If more than one element in a table has the "rest" value, then they will share remaining space equally.
-
-
-As of version 4.2.21 or 4.4.2, we support the following attributes for an immediate child of an layout table which are used to control the dynamic resize model. Note; this only applies to child elements which support dynamic resizing. Several elements do not support dynamic resizing, and will consequently ignore these attributes.
-
-
-* "sizeAttributes\_blockSetHeight": if true, then this element will not be resized vertically.
-* "sizeAttributes\_blockSetWidth": if true, then this element will not be resized horizontally.
-* "sizeAttributes\_minHeight": if set, then the height of the element will not be set to less than this value.
-* "sizeAttributes\_maxHeight": if set, then the height of the element will not be set to more than this value.
-* "sizeAttributes\_absoluteHeight": if set, then the height of the element will be set to this value.
-* "sizeAttributes\_minWidth": if set, then the width of the element will not be set to less than this value.
-* "sizeAttributes\_maxWidth": if set, then the width of the element will not be set to more than this value.
-* "sizeAttributes\_absoluteWidth": if set, then the width of the element will be set to this value.
-
-
+> [!NOTE]
+> Size attributes apply only to child elements that support dynamic resizing. If not supported, these attributes will be ignored.
