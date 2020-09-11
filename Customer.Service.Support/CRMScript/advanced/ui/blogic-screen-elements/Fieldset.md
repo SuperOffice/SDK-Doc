@@ -1,14 +1,15 @@
 ---
 title: Fieldset
-path: /Blogic/Screen Elements/Fieldset
-sortOrder: 31
+uid: blogic_fieldset
+sortOrder: 6
 ---
 
-A Fieldset is a group element (needs a matching GroupEnd element). It defines the beginning of a group of elements.
+## Configuration values
 
+This is a **group element**. It defines the beginning of a group of elements and requires a matching group end element.
 
- - <b>"title"</b>: the title of the group (which will be displayed as a label)
- - <b>"useOverFlow"</b>: bool
- - <b>"design"</b>: can be set to"dialog"
-
-
+| Value       | Description            |
+|:------------|:-----------------------|
+| title       | UI label of the group  |
+| useOverFlow | Bool                   |
+| design      | Ban be set to "dialog" |

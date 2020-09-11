@@ -1,9 +1,7 @@
 ---
 title: HR
-path: /Blogic/Screen Elements/HR
-sortOrder: 35
+uid: blogic_hr
+sortOrder: 8
 ---
 
-This element displays a horizontal line on the screen.
-
-
+The `hr` element displays a horizontal line on the screen.

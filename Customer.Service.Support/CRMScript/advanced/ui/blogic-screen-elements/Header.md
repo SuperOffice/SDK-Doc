@@ -1,32 +1,27 @@
 ---
 title: Header
-path: /Blogic/Screen Elements/Header
-sortOrder: 34
+uid: blogic_header
+sortOrder: 8
 ---
 
 This element displays a sub-header.
 
+## Configuration values
 
+| Value       | Description                             |
+|:------------|:----------------------------------------|
+| heading     | If true, then this is a main header     |
+| div         | If true, then use a div for this header |
+| title       | The title                               |
+| url         | A url (makes it into a link)            |
+| target      | The target for the url                  |
+| alt         | Alt for the url                         |
+| bgcolor     | Background color                        |
 
-###It supports the following configuration values:###
+## Example
 
-
- - <b>"heading"</b>: If true, then this is a main header.
- - <b>"div"</b>: If true, then use a div for this header.
- - <b>"title"</b>: The title.
- - <b>"url"</b>: A url (makes it into a link)
- - <b>"target"</b>: The target for the url.
- - <b>"alt"</b>: Alt for the url.
- - <b>"bgcolor"</b>: Background color.
-
-
-
-
-
-###Example:###
-    
-    heading = true
-    title = Support
-    bgcolor = blue
-
-
+```crmscript
+heading = true
+title = Support
+bgcolor = blue
+```

@@ -1,100 +1,84 @@
 ---
 title: FCK Editor
-path: /Blogic/Screen Elements/FCK Editor
-sortOrder: 30
+uid: blogic_fck_Editor
+sortOrder: 6
 ---
 
+This element allows you to create HTML formatted messages. You can insert images, tables, paragraphs, and so on.
 
-This html element allows you to create messages with html, where you can
-insert images tables, paragraphs etc.
+Learn more:
 
+* See the [FCK editor user guide](http://docs.fckeditor.net/FCKeditor_2.x/Users_Guide) for how to work with this editor.
+* See the [FCK editor API reference](http://docs.fckeditor.net/FCKeditor\_2.x/Developers\_Guide/Configuration/Configuration\_Options) for available config values.
 
+## Configuration values
 
-    See http://docs.fckeditor.net/FCKeditor_2.x/Users_Guide for a guide on using the FCK editor
-    
+| Value             | Default | Description                                     |
+|:------------------|:--------|:------------------------------------------------|
+| FCKConfig         |         | Passes config values to the FCK editor          |
+| valueId           |         | Whether ticket ID is set to entry ID (true=yes) |
+| actionType        |         | 0 = new request<br/>1 = add message<br/> 2 = edit request |
+| showInsertText    | true    | Whether to show the control for inserting reply templates, FAQ entries, or previous messages below the editor |
+| plainText         | false   | Whether to shows a simple textarea with no options |
+| width             | 100%    |                                                 |
+| height            | 100%    |                                                 |
+| contactRecipientsName |     | The name of the contact recipients elements.<br/>This will ensure that parser variables in reply templates uses the correct customer (the one selected with the radio button). |
+| notEmpty          |         |                                                 |
+| toolbar           |         |                                                 |
 
+> [!NOTE] Browsers that don't support the FCKEditor (Opera) must have plaintext = true.
 
+> [!TIP]
+> For the CK editor to fill out the screen vertically, the config variable **verticalSpace = rest** must be set. If it's inside a pane the `Panes` element must also have this config variable.
 
-###The FCK editor has the following configuration values:###
+## Functions
 
+### getFieldValue(String field)`
 
- - "valueId": If true, ticket id is set to entry id
- - <b>"actionType"</b>: 0 means new request, 1 means add message, 2 means edit request.
- - <b>"showInsertText"</b>: default true. Shows control for inserting reply templates, FAQ entries or previous messages into editor
- - <b>"plainText"</b>: default false, except for browsers that don't support FCKEditor (Opera). If true, shows a simple textarea with no options.
- - <b>"width"</b>: default is 100%
- - <b>"height"</b>: default is 100%
- - <b>"contactRecipientsName"</b>: Set this to the name of the contact recipients elements. This will ensure that parser variables in reply templates uses the correct customer (the one selected with the radio button)
- - <b>"notEmpty"</b>
- - <b>"toolbar"</b>
- - All FCK configurable values starting with FCKConfig can also be used. See docs.fckeditor.net
+| Value         | Description                                  |
+|:--------------|:---------------------------------------------|
+| attachmentIds | IDs of attachments as a comma-separated list |
+| plainText     | true if the editor is set to plaintext mode  |
 
+### setValue(string)
 
+Sets the content of the editor to value.
 
+### setFieldValue(String, Map)
 
-###Functions:###
+| Action                 | Map keys               | Description   |
+|:-----------------------|:-----------------------|:--------------|
+| config                 |                        | Semicolon-separated config values for the editor<br/>Will overwrite existing config.|
+| selectInsertTextValues | ticketId<br/>faqAccess<br/>customerId<br/>userId<br/>attachmentIds | Passes config to element "Select Insert Text". |
 
+**faqAccess:**
 
- - setFieldValue(string, Map)
-     - <b>"config"</b>: Configuration values for FCK editor, separated by semicolons. Will overwrite existing config. See http://docs.fckeditor.net/FCKeditor\_2.x/Developers\_Guide/Configuration/Configuration\_Options for possible values.
-     - <b>"selectInsertTextValues"</b>: Will pass on configuration values to element "Select Insert Text"
-         - <b>"ticketId"</b>
-         - <b>"faqAccess"</b> (default is KB\_ACCESS_PUBLIC\_AUTHENTICATED (3), others: KB\_ACCESS_PRIVATE 1, KB\_ACCESS_INTERNAL 2, KB\_ACCESS_PUBLIC 4)
-         - <b>"customerId"</b>
-         - <b>"userId"</b>
-         - <b>"attachmentIds"</b>
+* 1 KB_ACCESS_PRIVATE
+* 2 KB_ACCESS_INTERNAL
+* 3 KB_ACCESS_PUBLIC_AUTHENTICATED (default)
+* 4 KB_ACCESS_PUBLIC
 
+### toString()
 
+Returns the contents of the editor.
 
- - `getFieldValue(String field)`
-     - <b>"attachmentIds"</b>: returns ids of attachments as a comma-separated list
-     - <b>"plainText"</b>: returns true if the editor is set to plaintext mode
+## Nesting
 
+The `FCK editor` element must be inside an `Element table`. Otherwise it will not fill out the width of the page. This is especially important when the editor is located inside a `Pane` element together with other elements.
 
+**Correct nesting:**
 
- - `setValue(string)` - sets the content of the editor
+All elements inside the pane are "wrapped" in the element table.
 
-
-
- - `toString()` - returns the content of the editor
-
-
-
-
-The FCK editor element must be inside an elementtable, or it will not fill out the width of the page. This is especially important when the editor is inside a pane element together with other elements, all the elements must be inside an elementtable which again is inside the pane element.
-
-
-
-###The element overview should look like this:###
-
-    1   Element table
-    2   - - Panes
-    3   - - - - Pane
-    4   - - - - - - Element table               (All elements inside the pane is "wrapped" in the element table)
-    5   - - - - - - - - FCK Editor
-    6   - - - - - - - - Contact and recipient control
-    7   - - - - - - Group end
-    8   - - - - Group end
-    9   - - Group end
-    10   Group end
-    
-
-
-
-###And not look like this:###
-
-    1   Element table
-    2   - - Panes
-    3   - - - - Pane
-    4   - - - - - - FCK Editor               (The FCK editor is not inside an element table, it will not resize correctly)
-    5   - - - - - - Contact and recipient control
-    6   - - - - Group end
-    7   - - Group end
-    8   Group end
-    
-    
-
-For the FCK editor to fill out the screen verticalle, the config variable "verticalSpace = rest" must be set.
-If it is inside a pane the Panes element must also have this config variable.
-
-
+```html
+<ElementTable>
+  <Panes>
+    <Pane>
+      <ElementTable>
+        <FCKEditor>
+        <ContactAndRecipient>
+      <GroupEnd>
+    <GroupEnd>
+  <GroupEnd>
+<GroupEnd>
+```

@@ -13,18 +13,18 @@ Learn more:
 ## Configuration values
 
 | Value             | Default | Description                             |
-|:------------------|:--------|:-------------------------------|
-| CKConfig          |         | Passes config values to the CK editor |
+|:------------------|:--------|:----------------------------------------|
+| CKConfig          |         | Passes config values to the CK editor   |
 | actionType        |         | 0 = new request<br/>1 = add message<br/> 2 = edit request |
 | valueId           |         | Whether ticket ID is set to entry ID (true=yes) |
-| attachmentName    |         | The name of the attachment element. |
+| attachmentName    |         | The name of the attachment element.     |
 | contactRecipientsName |     | The name of the contact recipients elements.<br/>This will ensure that parser variables in reply templates uses the correct customer (the one selected with the radio button). |
 | showInsertText    | true    | Whether to show the control for inserting reply templates, FAQ entries, or previous messages below the editor |
 | plainText         | false   | Whether to shows a simple textarea with no options |
-| hasAttachments    | true    | Whether the editor may add attachments |
+| hasAttachments    | true    | Whether the editor may add attachments   |
 | hasSlevel         | true    | Whether access level may be set for editor entry |
 | hasTimeSpent      | true    | Whether to shows time spent on editor entry |
-| noBorder          | true    | Whether to remove the border of the editor.<br />Useful to hide border if the editor is placed in an element table with other elements. |
+| noBorder          | true    | Whether to remove the border of the editor.<br />Useful to hide border if the editor is placed in an element table with other elements.  |
 
 **A word about attachments:**
 Naming the attachment element will ensure that if `showInsertText` is **true**, the attachments will be shown in an `Attachments` element.

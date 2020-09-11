@@ -1,69 +1,55 @@
 ---
 title: HtmlGrid
-path: /Blogic/Screen Elements/HtmlGrid
-sortOrder: 36
+uid: blogic_htmlgrid
+sortOrder: 8
 ---
 
-This element is the oldest grid version that allows you to create an htmlgrid.
+This element is the oldest grid version that allows you to create an HMTL grid.
 
+## Configuration values
 
+| Value         | Description                                  |
+|:--------------|:---------------------------------------------|
+|  hasCheckbox  | the grid will output a checkbox row          |
+|  checkboxLeft | the checkbox row will be left aligned        |
+|  persistent   | the grid will retain values between requests |
+|  width        | the width of the grid                        |
 
-###The following configuration values are available:###
+### Headers
 
+| Value           | Description |
+|:----------------|:------------|
+| headers.n.label |             |
+| headers.n.url   |             |
+| headers.n.flags |             |
+| headers.n.width |             |
 
- - <b>"hasCheckbox"</b> - the grid will output a checkbox row
- - <b>"checkboxLeft"</b> - the checkbox row will be left aligned
- - <b>"persistent"</b> - the grid will retain values between requests
- - <b>"width"</b> - the width of the grid
+### Rows
 
+| Value                   | Description |
+|:------------------------|:------------|
+| rows.n.id               |             |
+| rows.n.columns          |             |
+| rows.n.columns.i.label  |             |
+| rows.n.columns.i.url    |             |
+| rows.n.columns.i.flags  |             |
+| rows.n.columns.i.target |             |
 
+## Functions
 
- - <b>"headers"</b>
-    - "headers.n.label":
-    - "headers.n.url":
-    - "headers.n.flags":
-    - "headers.n.width":
+### getFieldValue(string)
 
+* rows
+* all
+* row.n.checked
+* row.n.column.label
+* row.n.id
 
+### setFieldValue(String, Map)
 
- - <b>"rows"</b>
-    - "rows.n.id":
-    - "rows.n.columns":
-    - "rows.n.columns.i.label"
-    - "rows.n.columns.i.url"
-    - "rows.n.columns.i.flags"
-    - "rows.n.columns.i.target"
-
-
-
- - setFieldValue(string, Map)
-    - <b>"addHeader"</b>: Adds a header. Map populated by:
-        - <b>"label"</b>
-        - <b>"url"</b>
-        - <b>"flags"</b>
-        - <b>"width"</b>
-    - <b>"addRow"</b>: Adds a row. Map populated by:
-        - <b>"unique"</b>
-        - <b>"id"</b>
-        - <b>"checked"</b>
-    - <b>"addCell"</b>: adds a cell. Map populated by:
-        - <b>"label"</b>
-        - <b>"url"</b>
-        - <b>"flags"</b>
-        - <b>"target"</b>
-    - <b>"deleteChecked"</b>
-
-
-
-
-###Functions:###
-
-
- - `getFieldValue(string)`
-    - <b>"rows"</b>
-    - <b>"all"</b>
-    - "row.n.checked"
-    - "row.n.column.label"
-    - "row.n.id"
-
-
+| Action   | Map keys                           | Description   |
+|:---------|:-----------------------------------|:--------------|
+| addHeader| label<br/>url<br/>flags<br/>width  | Adds a header |
+| addRow   | unique<br/>id<br/>checked          | Adds a row    |
+| addCell  | label<br/>url<br/>flags<br/>target | Adds a cell   |
+| deleteChecked |                               |               |

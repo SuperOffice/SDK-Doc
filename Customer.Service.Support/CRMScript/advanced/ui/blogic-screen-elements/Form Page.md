@@ -1,62 +1,45 @@
 ---
 title: Form Page
-path: /Blogic/Screen Elements/Form Page
-sortOrder: 32
+uid: blogic_form_page
+sortOrder: 6
 ---
-
 
 This element is a standard root frame used in a lot of screens.
 
+## Configuration values
 
+| Value             | Description                             |
+|:------------------|:----------------------------------------|
+| label             | |
+| iconUrl           | |
 
+## Functions
 
-###This element has the following configuration values:###
+### setFieldValue(String action, Map values)
 
+| Action   | Map keys               | Description   |
+|:---------|:-----------------------|:--------------|
+| addButton| name<br/>label<br/>style<br/>warning | |
 
-- "label"
-- <b>"iconUrl"</b>
+#### Styles
 
+* StyleNormal
+* StyleGreen
+* StyleBlue
+* StyleRed
+* StyleLargeBlue
+* StyleLargeGreen
+* StyleSmall
+* StyleIconOnly
 
+#### Example
 
+```crmscript
+Map m;
+m.insert("name", "testButton");
+m.insert("label", "Button");
+m.insert("style", "StyleGreen");
+m.insert("warning", "Are you sure?");
 
-###Functions:###
-
-
-- setFieldValue(String field, Map \<String, String>)
-  - <b>"addButton"</b>
-    - <b>"name"</b>
-    - <b>"label"</b>
-    - <b>"style"</b>
-    - <b>"warning"</b>
-  - <b>"label"</b>
-
-
-
-
-###Styles available:###
-
-
-- StyleNormal
-- StyleGreen
-- StyleBlue
-- StyleRed
-- StyleLargeBlue
-- StyleLargeGreen
-- StyleSmall
-- StyleIconOnly
-
-
-
-
-
-###Example code:###
-
-    Map m;
-    m.insert("name", "testButton");
-    m.insert("label", "Button");
-    m.insert("style", "StyleGreen");
-    m.insert("warning", "Are you sure?");
-    
-    fp.setFieldValue("addButton", m);
-
-
+fp.setFieldValue("addButton", m);
+```
