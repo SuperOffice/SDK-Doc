@@ -6,7 +6,7 @@ sortOrder: 1
 
 This element will display a horizontal line of clickable URLs.
 
-## Configuration values
+|## Configuration
 
 | Value             | Description                  |
 |:------------------|:-----------------------------|

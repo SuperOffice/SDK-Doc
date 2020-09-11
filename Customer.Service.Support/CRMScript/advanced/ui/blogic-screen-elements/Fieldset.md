@@ -4,7 +4,7 @@ uid: blogic_fieldset
 sortOrder: 6
 ---
 
-## Configuration values
+|## Configuration
 
 This is a **group element**. It defines the beginning of a group of elements and requires a matching group end element.
 

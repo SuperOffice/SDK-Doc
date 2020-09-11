@@ -1,19 +1,17 @@
 ---
 title: Language menu
-path: /Blogic/Screen Elements/Language menu
-sortOrder: 40
+uid: blogic_language_menu
+sortOrder: 12
 ---
 
+This element is used as a dictionary to check the spelling in an input field.
 
-This HtmlElement is used as a dictionary to check the spelling in an input field.
+## Functions
 
+### setValue()
 
+Sets the language word.
 
+### getValue()
 
-###The following configuration functions are available:###
-
-
- - `setValue()`: sets the language word
- - `getValue()`: returns the word.
-
-
+Returns the word.

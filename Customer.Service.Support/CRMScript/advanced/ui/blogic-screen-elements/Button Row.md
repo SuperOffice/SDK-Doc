@@ -6,7 +6,7 @@ sortOrder: 2
 
 This element adds a row of clickable buttons to your screen.
 
-## Configuration values
+|## Configuration
 
 | Value             | Description                    |
 |:------------------|:-------------------------------|

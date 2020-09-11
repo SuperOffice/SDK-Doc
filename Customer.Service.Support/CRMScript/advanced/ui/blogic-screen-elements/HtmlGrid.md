@@ -6,7 +6,7 @@ sortOrder: 8
 
 This element is the oldest grid version that allows you to create an HMTL grid.
 
-## Configuration values
+|## Configuration
 
 | Value         | Description                                  |
 |:--------------|:---------------------------------------------|

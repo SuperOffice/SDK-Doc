@@ -16,7 +16,7 @@ This element will use the JavaScript **charts** library to create a chart.
 | annotation | Optional text to annotate a datapoint (v. 8.2)<br/>Overwritten if set multiple times |
 | delta      | The value to add or subtract from the current value |
 
-## Configuration values
+|## Configuration
 
 | Value   | Description                             |
 |:--------|:----------------------------------------|

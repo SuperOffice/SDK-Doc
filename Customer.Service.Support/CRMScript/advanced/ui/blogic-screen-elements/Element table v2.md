@@ -22,7 +22,7 @@ This is a **layout element**. It can contain other elements, which will be laid 
 * Relative - percent (%)
 * Dynamic -divide remaining space (*)
 
-## Configuration values
+|## Configuration
 
 | Value                 | Description                                            |
 |:----------------------|:-------------------------------------------------------|

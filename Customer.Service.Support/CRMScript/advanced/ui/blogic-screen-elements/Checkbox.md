@@ -6,7 +6,7 @@ sortOrder: 3
 
 Adds a checkbox to your screen.
 
-## Configuration values
+|## Configuration
 
 | Value       | Description                         |
 |:------------|:------------------------------------|

@@ -10,7 +10,7 @@ Learn more:
 * See the [CK editor user guide](http://docs.cksource.com/CKEditor_3.x/Users_Guide) for how to work with this editor.
 * See the [CK editor API reference](http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html) for available config values.
 
-## Configuration values
+|## Configuration
 
 | Value             | Default | Description                             |
 |:------------------|:--------|:----------------------------------------|

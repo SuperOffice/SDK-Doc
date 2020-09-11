@@ -1,19 +1,20 @@
 ---
 title: MessageGrid
-path: /Blogic/Screen Elements/MessageGrid
-sortOrder: 43
+uid: blogic_message_grid
+sortOrder: 13
 ---
 
+This element will display ticket messages in a grid including a checkbox.
 
-   
-**This element will display ticket messages in a grid including a checkbox. The element supports one configuration item:**   
+> [!NOTE]
+> If you don't set a ticket ID, the entryId is used.
 
+## Configuration
 
+| Value              | Description         |
+|:-------------------|:--------------------|
+| ticketId           | If set, the messages on this ticket is put into the grid |
 
-- <b>"ticketId"</b>: If this is set, the messages on this ticket is put into the grid. If no ticketId is set, the entryId is used as ticketId.
+This element can be useful in screens such as **forward ticket** where we want to select messages in a ticket.
 
-
-This element can be useful in screens like "forward ticket" or similar, where we want to select messages in a ticket.
-Retrieve the selected messageIds in a commasepareted string with .toString().
-
-
+Retrieve the selected message IDs in a comma-separated string with `toString()`.

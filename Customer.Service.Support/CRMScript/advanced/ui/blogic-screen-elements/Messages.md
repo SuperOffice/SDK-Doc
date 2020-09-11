@@ -1,37 +1,39 @@
 ---
 title: Messages
-path: /Blogic/Screen Elements/Messages
-sortOrder: 44
+uid: blogic_messages
+sortOrder: 13
 ---
 
 This element will display the messages for a ticket.
 
+## Configuration
 
+| Value           | Description                                      |
+|:----------------|:-------------------------------------------------|
+| ticketId        | The ticket to list messages from                 |
+| limit           | The max number of messages to show (v. 4.0)      |
+| showChange      | Whether to display changed lines (Bool) (v. 4.0) |
+| blockQuickReply |                                                  |
+| where           | additional criteria (v. 3.1.5)                   |
 
-###The message element supports the following configuration items:###
+> [!NOTE]
+> The element must have a ticket ID to show messages for. If you don't set a ticket ID, the entryId CGI variable is used. If that variable is empty, **no messages will be shown**.
 
+### Deprecated from v. 4.2
 
- - <b>"ticketId"</b>: without a ticketId the id will be taken from the cgi variable entryId, if it exists. If it does not, no messages will be shown as the element must have a ticket id to show messages for.
- - <b>"limit"</b>: limit the number of messages returned. From version 4.0
- - <b>"showChange"</b>: if true, then the element will display changed lines. From version 4.0
- - <b>"blockQuickReply"</b>:
+* descending
+* previewImages
+* showForward
 
+## Example
 
-One can also set extra criterias for message (example), from version 3.1.5:
-
-    fields.0.field = message.id
-    fields.length = 1
-    where.0.critPriority = 0
-    where.0.field = message.id
-    where.0.operator = OperatorLte
-    where.0.rowOperator = OperatorAnd
-    where.0.value = 60
-    where.length = 1
-    
-
-These configuration values are deprecated from version 4.2 and will have no effect:
-"showForward": If true, the it will display forward lines.
-"previewImages": If true, then it will display images inline.
-"descending": If true, then messages will be display by descending id/age.
-
-
+```crmscript
+fields.0.field = message.id
+fields.length = 1
+where.0.critPriority = 0
+where.0.field = message.id
+where.0.operator = OperatorLte
+where.0.rowOperator = OperatorAnd
+where.0.value = 60
+where.length = 1
+```

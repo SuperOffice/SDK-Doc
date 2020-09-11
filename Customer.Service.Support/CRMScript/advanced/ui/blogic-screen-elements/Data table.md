@@ -11,7 +11,7 @@ When giving database fields and criteria, the table is automatically filled with
 > [!NOTE]
 > Please use this element instead of static tables, or similar.
 
-## Configuration values
+|## Configuration
 
 ### Fields
 

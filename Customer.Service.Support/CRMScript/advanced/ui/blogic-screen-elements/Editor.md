@@ -8,7 +8,7 @@ This element adds a text editor to your screen with common text editor features.
 
 **Default size:** width: 400, height: 100
 
-## Configuration values
+|## Configuration
 
 | Value         | Description                   |
 |:--------------|:------------------------------|

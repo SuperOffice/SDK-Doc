@@ -6,7 +6,7 @@ sortOrder: 6
 
 This element is a standard root frame used in a lot of screens.
 
-## Configuration values
+|## Configuration
 
 | Value             | Description                             |
 |:------------------|:----------------------------------------|

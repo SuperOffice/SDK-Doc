@@ -1,10 +1,9 @@
 ---
 title: MDO list
-path: /Blogic/Screen Elements/MDO list
-sortOrder: 42
+uid: blogic_mdolist
+sortOrder: 13
 ---
 
+This element creates an MDO drop-down for any of the available lists in SuperOffice CRM.
 
-This element creates a MDO dropdown for any of the available lists in SuperOffice CRM. You need to supply the parameter "list" to specify what list you want, e.g. "PersInt".
-
-
+You need to supply the `list` parameter to specify which list you want, for example "PersInt".

@@ -1,40 +1,41 @@
 ---
 title: List box
-path: /Blogic/Screen Elements/List box
-sortOrder: 41
+uid: blobic_listbox
+sortOrder: 12
 ---
 
+This element adds a drop-down menu to your screen.
 
-This element adds a drop down menu to your screen.
+|## Configuration
 
+| Value              | Description         |
+|:-------------------|:--------------------|
+| options.length     | The number of items |
+| options.i.value    |                     |
+| options.i.name     |                     |
+| options.i.selected | If true, will set the option as selected by default (v. 7.5SR1) |
+| JavaScript         | HTML code           |
 
+## Example
 
+```html
+JavaScript = onblur="alert('Wow! You changed it!');"
+```
 
-###The following configuration values are available:###
+## Functions
 
+### setFieldValue(String, Map) (v.7.0 SR1)
 
- - "options.length": The number of items.
- - "options.i.value"
- - "options.i.name"
- - "options.i.selected": From 7.5SR1. If true, will set the option as selected by default.
- - javascript = \<html code>
+| Action | Map keys       | Description        |
+|:-------|:---------------|:-------------------|
+| add    | name<br/>value |                    |
+| remove | value          | Remove all options with the given value |
+| clear  |                | Remove all options |
 
+### toString()
 
-Example of \<html code>:
+Converts the selected value to a string.
 
-    javascript = onblur="alert('Wow! You changed it!');"
-    
+### toInteger()
 
-
-
- - setFieldValue(string, Map): From 7.0 SR1 the function setFieldValue is supported.
-    - <b>"add"</b>
-         - <b>"name"</b>
-         - <b>"value"</b>
-    - <b>"remove"</b>: Remove all options with the given value
-         - <b>"value"</b>
-    - <b>"clear"</b>: Remove all options
- - `toString()` returns the selected value
- - `toInteger()` returns the selected value
-
-
+Converts the selected value to a number.
