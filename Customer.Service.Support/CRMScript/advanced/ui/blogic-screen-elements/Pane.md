@@ -1,9 +1,13 @@
 ---
 title: Pane
-path: /Blogic/Screen Elements/Pane
-sortOrder: 45
+uid: blogic_pane
+sortOrder: 16
 ---
 
-A pane must be directly inside "Panes". A pane is a group element, and must be ended with a GroupEnd element. The title of the pane can be specified with the "title" configuration item.
+This is a **group element**. It defines the beginning of a group of elements and requires a matching group end element.
 
+A pane must be placed directly inside `Panes"`.
 
+## Configuration
+
+The title of the pane can be specified with `title`.

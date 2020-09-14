@@ -1,46 +1,36 @@
 ---
 title: Planner
-path: /Blogic/Screen Elements/Planner
-sortOrder: 50
+uid: blogic_planner
+sortOrder: 16
 ---
 
-This element will display a planner (day schedule style). It may contain one or more columns, which may represent several days (constructing e.g. a week schedule), several people, etc.
+This element will display a planner (day schedule style).
 
+It can contain one or more columns, which may represent multiple days, multiple people, and so on.
 
+## Configuration
 
-###The planner supports the following configuration items:###
+| Value              | Description                  |
+|:-------------------|:-----------------------------|
+| startHour          | The initial start of the day <br />For example, "8" for 08:00 |
+| exactPosition      | Granularity:<br/>true = use exact start and end of follow-up (minutes)<br />false = round follow-up down to nearest half hour |
+| roundUpAppointment | Whether to round up to nearest half hour instead of down<br/>ignored if exactPosition = true |
+| overlappingAppointments | How to display overlapping follow-ups<br />true = draw overlapping<br />false = draw side-by-side |
+| hourSize           | Vertical space for 1 hour (in pixels)<br />Default = 40 |
+| editEntryUrl       | The base URL to redirect to for editing an entry |
+| newEntryUrl        | The base URL to redirect to for creating a new entry (when dragging in the planner) |
 
+## Functions
 
- - "startHour": The hour the planner should scroll to initially (e.g. "8" for 08:00).
- - <b>"exactPosition"</b>: If true appointments will be drawn exactly for its minutes. If false it's rounded down to nearest half hour
- - <b>"roundUpAppointment"</b>: If true appointments are rounded up to nearest half hour instead of down (no effect if exactPosition is true)
- - <b>"overlappingAppointments"</b>: If true appointments that share time will be drawn overlapping. If false they will be drawn side to side.
- - <b>"hourSize"</b>: Height in pixels of hour. Default 40.
- - <b>"editEntryUrl"</b>: The base url to redirect to for editing an entry.
- - <b>"newEntryUrl"</b>: The base url to redirect to for creating a new entry (when dragging in the planner).
+### setFieldValue(String field, Map values)
 
+| Action   | Map keys               | Description                         |
+|:---------|:-----------------------|:------------------------------------|
+| addDay   | id<br />header<br />highlightStart<br />highlightStop | Adds a day to the calender |
+| addAppointment | start<br />stop<br />id<br />body | Adds a follow-up to the calender |
+| roundUpAppointment | value | Whether to round up duration to nearest half hour |
+| overlappingAppointments | value | Whether to let follow-ups will overlap if one ends after another's start time
+| hourSize | | Height in pixels per hour. Minimum height is 30 |
+| exactPosition | value | If true, positions start and stop times exactly. If false, times are set to nearest half hour |
 
-
-
-###Functions:###
-
-
- - setFieldValue(string, Map):
-     - "addDay(id, header, highlightStart, highlightStop)": Adds a day to the calender.
-        - <b>"id"</b>
-        - <b>"header"</b>
-        - <b>"highlightStart"</b> and "highlightStop". These fields are used for specifying the "light" area in the planner, normally indicating business hours (e.g. 09:00 to 17:00).
-     - "addAppointment(start, stop, id, body)": Adds an appointment to the calender.
-        - <b>"start"</b>: start time
-        - <b>"stop"</b>: end time
-        - <b>"id"</b>
-        - <b>"body"</b>
-     - <b>"roundUpAppointment"</b>: If true, rounds up appointments to nearest half hour
-        - <b>"value"</b> == "true"
-     - <b>"overlappingAppointments"</b>: If true, appointments will overlap if one ends after another appointment's start time
-        - <b>"value"</b> == "true"
-     - <b>"hourSize"</b>: Height in pixels per hour. Minimum height is 30.
-     - "exactPosition()": If true, positions start and stop times exactly. If false, times are set to nearest half hour.
-        - <b>"value"</b> == "true"
-
-
+These fields are used for specifying the "light" area in the planner, normally indicating business hours (for example, 09:00 to 17:00).

@@ -1,51 +1,52 @@
 ---
 title: Recipients
-path: /Blogic/Screen Elements/Recipients
-sortOrder: 52
+uid: blogic_recipients
+sortOrder: 18
 ---
 
+This element is used to specify email recipients.
 
+## Configuration
 
-###This element is used to specify email recipients. It will accept the following boolean values, which specify which lines to show:###
+The following boolean values specify which lines to show:
 
+* copyToAll
+* copyToCreatedBy
+* copyToCustomer
+* copyToEab
+* copyToOther
+* copyToOwner
+* copyToSelf
 
-- <b>"copyToAll"</b>
-- <b>"copyToCreatedBy"</b>
-- <b>"copyToCustomer"</b>
-- <b>"copyToEab"</b>
-- <b>"copyToOther"</b>
-- <b>"copyToOwner"</b>
-- <b>"copyToSelf"</b>
-- <b>"ticketId"</b>: may be set to specify the related ticket. This will affect the values in "copyToOwner", etc.
+In addition, `ticketId` may be set to specify the related ticket. This will affect the values in `copyToOwner`, and similar.
 
+## Example
 
+```crmscript
+copyToAll = false
+copyToCreatedBy = false
+copyToCustomer = false
+copyToEab = true
+copyToOther = true
+copyToOwner = false
+copyToSelf = true
+```
 
+## Functions
 
+### getFieldValue()
 
-###Example:###
-    
-    copyToAll = false
-    copyToCreatedBy = false
-    copyToCustomer = false
-    copyToEab = true
-    copyToOther = true
-    copyToOwner = false
-    copyToSelf = true
-    
+| Value                  | Description                                          |
+|:-----------------------|:-----------------------------------------------------|
+| to                     | Returns a properly formatted string of To-recipients |
+| cc                     | CC recipients                                        |
+| bcc                    | Bcc recipients                                       |
+| sms                    | Comma-separated SMS recipients                       |
+| isCopyToAnyCustomerSet | Whether a customer is among the recipients<br />1=yes, 0=no |
 
+### setFieldValue(String, Map)
 
-
-###Functions:###
-
-
- - `getFieldValue()`:
-    - <b>"to"</b>: Will return a properly formated string of To-receipients.
-    - <b>"cc"</b>: CC recipients.
-    - <b>"bcc"</b>: Bcc recipients.
-    - <b>"sms"</b>: Comma separated SMS recipients.
-    - <b>"isCopyToAnyCustomerSet"</b>: "1" if a customer is among the recipients, otherwise "0".
- - setFieldValue(string, Map):
-    - <b>"addCustomers"</b>: Adds customers with id's specified in the comma-separated list in the value "ids".
-    - <b>"setDefaultToCustomer"</b>: Enables the checkbox in front of the customer line.
-
-
+| Value                | Description                                        |
+|:---------------------|:---------------------------------------------------|
+| addCustomers         | Adds customers with IDs specified in the comma-separated list in the value `ids` |
+| setDefaultToCustomer | Enables the checkbox in front of the customer line |

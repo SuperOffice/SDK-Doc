@@ -1,31 +1,27 @@
 ---
 title: Textarea
-path: /Blogic/Screen Elements/Textarea
-sortOrder: 88
+uid: blogic_textarea
+sortOrder: 20
 ---
 
+This element creates an input field that can span several lines.
 
-This element creates a text area, i.e. a input field which may span several lines.
+## Configuration
 
+| Value      | Description                                          |
+|:-----------|:-----------------------------------------------------|
+| notEmpty   | If true, then the value of the text area cannot be empty |
+| readOnly   | If true, then the value cannot be changed |
+| maxLength  | The max number of characters the text area can contain |
+| cols       | The width of the text area (in characters) |
+| rows       | The height of the text area (in characters) |
 
+## Functions
 
+### setValue()
 
-###The element supports the following configuration values:###
+Sets the initial contents of the text area.
 
+### toString()
 
- - <b>"notEmpty"</b>: If true, then the value of the text area cannot be empty.
- - <b>"readOnly"</b>: If true, then the value cannot be changed.
- - <b>"maxLength"</b>: The max number of characters the text area can contain
- - <b>"cols"</b>: The width of the text area (in characters).
- - <b>"rows"</b>: The height of the text area (in characters).
-
-
-
-
-###Functions:###
-
-
- - `setValue()` sets the initial contents of the text area.
- - `toString()` returns the value of the text area.
-
-
+Returns the value of the text area.

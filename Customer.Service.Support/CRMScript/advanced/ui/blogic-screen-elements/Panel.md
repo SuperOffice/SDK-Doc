@@ -1,16 +1,13 @@
 ---
 title: Panel
-path: /Blogic/Screen Elements/Panel
-sortOrder: 46
+uid: blogic_panel
+sortOrder: 16
 ---
 
 This element will add a white background to the screen.
 
+## Configuration
 
-
-###It has the following configuration values:###
-
-
- - "noPadding": displays a white background without internal padding
-
-
+| Value             | Description                     |
+|:------------------|:--------------------------------|
+| noPadding         | Whether to use internal padding |

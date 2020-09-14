@@ -1,42 +1,25 @@
 ---
-title: Tree Explorer
-path: /Blogic/Screen Elements/Tree Explorer
+title: Tree explorer
+uid: blogic_tree_explorer
 sortOrder: 90
 ---
 
+This element lists information in a tree view. The tree is capable of expanding or collapsing.
 
-This element lists information in a tree view, the tree is capable of expanding or collapsing.
+## Configuration
 
+## Functions
 
+### setFieldValue(String, Map values)
 
+| Action    | Map keys               | Description                                    |
+|:----------|:-----------------------|:-----------------------------------------------|
+| add2Entry | id<br/>parent.id<br/>onclick<br/>href<br/>name<br/>tooltip<br/>target<br/>order<br/>leaf<br/>icon<br/>icon.contentType<br/>icon.filename | Adds an entry to the tree |
+| addLink   | href<br/>target<br/>tooltip<br/>icon<br/>icon.contentType<br/>icon.filename | Adds a new link |
+| set       |                        | Sets various fields |
 
-###The following configuration function is available:###
-
-
- - setFieldValue(string, Map):
-     - "add2Entry" an entry is added into the tree with the following values:
-            - <b>"id"</b>
-            - "parent.id"
-            - <b>"onclick"</b>
-            - <b>"href"</b>
-            - <b>"name"</b>
-            - <b>"tooltip"</b>
-            - <b>"target"</b>
-            - <b>"order"</b>
-            - <b>"leaf"</b>
-            - <b>"icon"</b>
-            - "icon.contentType"
-            - "icon.filename"
-    - <b>"addLink"</b>: a new link is added with the following values:
-            - <b>"href"</b>
-            - <b>"target"</b>
-            - <b>"tooltip"</b>
-            - <b>"icon"</b>
-            - "icon.contentType"
-            - "icon.filename"
-    - <b>"set"</b>: the following configurations are possible:
-            - setSortByName(map["sortbyName"])
-            - setPruneEmptyFolders(map["pruneEmptyFolders"].toInteger() == 1)
-            - setExpandId(map["expandId"])
-
-
+```crmscript
+setSortByName(map["sortbyName"]);
+setPruneEmptyFolders(map["pruneEmptyFolders"].toInteger() == 1);
+setExpandId(map["expandId"]);
+```

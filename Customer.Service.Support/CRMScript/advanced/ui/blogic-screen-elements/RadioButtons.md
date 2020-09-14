@@ -1,71 +1,52 @@
 ---
 title: RadioButtons
-path: /Blogic/Screen Elements/RadioButtons
-sortOrder: 51
+uid: blogic_radiobuttons
+sortOrder: 18
 ---
 
+Adds radio-buttons to your screen.
 
-   
-**Adds radiobuttons to your screen. The following configuration values are available:**   
+## Configuration
 
+* buttons.value
+* buttons.label
+* buttons.checked
 
+## Example
 
-- "buttons.value"
-- "buttons.label"
-- "buttons.checked"
+```crmscript
+buttons.0.value = lunch
+buttons.0.label = Lunch
+buttons.0.checked = true
+buttons.1.value = dinner
+buttons.1.label = Dinner
+buttons.length = 2
+```
 
+## Functions
 
+### getValue()
 
+Returns the value of the checked button.
 
+### toString()
 
-###Configuration example:###
-    
-    buttons.0.value = lunch
-    buttons.0.label = Lunch
-    buttons.0.checked = true
-    buttons.1.value = dinner
-    buttons.1.label = Dinner
-    buttons.length = 2
-    
+Converts the value of the checked button to a string.
 
+### setFieldValue("addButton", Map)
 
+For adding buttons.
 
-###Functions:###
+```crmscript
+values.insert("value", <buttonValue>);
+values.insert("label",< buttonLabel>);
+values.insert("checked", <buttonChecked> (0 or 1) );
+```
 
+### setFieldValue("setChecked", Map)
 
-- `getValue()`: returns the value of the checked button.
-- `toString()`: works just like `getValue()`.
+For setting the checked button.
 
-
-
-
-###For adding buttons:###
-
-
-- setFieldValue("addButton", Map)
-
-
-
-
-###Map values:###
-
-    values.insert("value", <buttonValue>);
-    values.insert("label",< buttonLabel>);
-    values.insert("checked", <buttonChecked> (0 or 1) );
-    
-
-
-
-###For setting the checked button:###
-
-
-- setFieldValue("setChecked", Map)
-
-
-
-
-###Map values:###
-
-    values.insert("buttonValue", value of button to be checked);
-
-
+```crmscript
+values.insert("buttonValue", value of button to be checked);
+```
