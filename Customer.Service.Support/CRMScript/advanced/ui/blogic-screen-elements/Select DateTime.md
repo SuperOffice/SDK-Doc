@@ -1,28 +1,24 @@
 ---
 title: Select DateTime
-path: /Blogic/Screen Elements/Select DateTime
-sortOrder: 64
+uid: blogic_select_datetime
+sortOrder: 19
 ---
 
+This element is used to input a DateTime.
 
-This element is used to input a date-time.
+## Configuration
 
+| Value              | Description                  |
+|:-------------------|:-----------------------------|
+| mayBeNull          | If true, then the element accepts an empty date. Otherwise, a valid date must be supplied |
+| empty              | Same as mayBeNull |
 
+## Functions
 
+### setValue()
 
-###The element accepts the following configuration values:###
+Sets the selected DateTime. The date must be on a standard format, such as YYYY-MM-DD HH:MI:SS. Other formats are also recognized.
 
+### toString()
 
-- "mayBeNull": if true, then the element accepts an empty date. Otherwise, a valid date must be supplied.
-- <b>"empty"</b>: same as mayBeNull
-
-
-
-
-###Functions:###
-
-
-- `setValue()` Sets the selected date-time. The date must be on a standard format, such as YYYY-MM-DD HH:MI:SS. Other formats are also recognized.
-- `toString()` Returns the selected date as a YYYY-MM-DD HH:MI:SS string.
-
-
+Returns the selected date as a YYYY-MM-DD HH:MI:SS string.

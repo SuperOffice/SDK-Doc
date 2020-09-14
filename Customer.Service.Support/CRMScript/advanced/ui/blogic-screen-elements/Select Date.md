@@ -1,28 +1,24 @@
 ---
 title: Select Date
-path: /Blogic/Screen Elements/Select Date
+uid: blogic_select_Date
 sortOrder: 63
 ---
 
-
 This element is used to input a date.
 
+## Configuration
 
+| Value              | Description                  |
+|:-------------------|:-----------------------------|
+| mayBeNull          | If true, the element accepts an empty date. Otherwise, a valid date must be supplied |
+| empty              |The same as mayBeNull |
 
+## Functions
 
-###It accepts the following configuration values:###
+### setValue()
 
+Sets the selected date. The date must be on a standard format, such as YYYY-MM-DD. Other formats are also recognized.
 
-- "mayBeNull": If true, then the element accepts an empty date. Otherwise, a valid date must be supplied.
-- <b>"empty"</b>: The same as "mayBeNull".
+### toString()
 
-
-
-
-###Functions:###
-
-
-- `setValue()`: sets the selected date. The date must be on a standard format, such as YYYY-MM-DD. Other formats are also recognized.
-- `toString()`: returns the selected date as a YYYY-MM-DD string.
-
-
+Returns the selected date as a YYYY-MM-DD string.

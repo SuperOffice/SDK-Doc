@@ -1,10 +1,7 @@
 ---
 title: Select project
-path: /Blogic/Screen Elements/Select project
-sortOrder: 71
+uid: blogic_select_project
+sortOrder: 19
 ---
 
-
 This element can be used to select a CRM project.
-
-

@@ -1,13 +1,9 @@
 ---
 title: Select contact business
-path: /Blogic/Screen Elements/Select contact business
-sortOrder: 58
+uid: blogic_select_contact business
+sortOrder: 19
 ---
 
-
-This element is a dropdown menu that allows for selection of company business.
-
+This element is a drop-down menu that allows for selection of company business.
 
 There are no configurable values.
-
-

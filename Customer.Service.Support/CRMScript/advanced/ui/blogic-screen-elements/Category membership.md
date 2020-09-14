@@ -6,7 +6,7 @@ sortOrder: 3
 
 This element is used to visualize and possibly change the category membership of users.
 
-|## Configuration
+## Configuration
 
 | Value      | Description    |
 |:-----------|:---------------|

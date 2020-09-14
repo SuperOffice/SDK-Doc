@@ -6,7 +6,7 @@ sortOrder: 2
 
 The `button` element adds a clickable button to your screen. Used to submit forms and offer standard button functionality.
 
-|## Configuration
+## Configuration
 
 | Value   | Description    |
 |:--------|:---------------|

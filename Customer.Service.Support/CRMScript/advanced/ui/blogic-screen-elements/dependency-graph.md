@@ -1,33 +1,38 @@
 ---
-title: AcyclicGraph
-path: /Blogic/Screen Elements/AcyclicGraph
-sortOrder: 10
+title: Dependency graph
+uid: blogic_dependency_graph
+sortOrder: 4
 ---
 
 This element displays the dependency in a project graphically.
 
+Also known as **AcyclicGraph** element.
 
+## Configuration
 
-###The following configuration values are available:###
+| Value             | Description |
+|:------------------|:------------|
+| createRelationUrl | URL         |
+| editRelationUrl   | URL         |
 
+## Functions
 
- - <b>"createRelationUrl"</b>
- - <b>"editRelationUrl"</b>
+### setFieldValue(String, Map)
 
+Adds either a node or a dependency.
 
+**addNode:**
 
- - setFieldValue(string, Map):  adds either a node or a dependency
-    - <b>"addNode"</b>
-        - <b>"dependentOf"</b>: a comma-separated list of integers corresponding to other nodes.
-        - <b>"id"</b>: integer identifying this node
-        - <b>"htmlContent"</b>: content of this node in HTML
-        - <b>"color"</b>: color of this node in HTML
-    - <b>"addDependency"</b>
-        - <b>"dependentOf"</b>: integer of a node
-        - <b>"relationId"</b>: integer of a node
-    - <b>"createRelationUrl"</b>
-        - <b>"url"</b>
-    - <b>"editRelationUrl"</b>
-        - <b>"url"</b>
+| Value       | Description                     |
+|:------------|:--------------------------------|
+| dependentOf | a comma-separated list of nodes (Integer) |
+| id          | ID of node                      |
+| htmlContent | HTML formatted contents of node |
+| color       | HTML color value for node       |
 
+**addDependency:**
 
+| Value       | Description                 |
+|:------------|:----------------------------|
+| dependentOf | ID of target node (Integer) |
+| relationId  | ID of self                  |

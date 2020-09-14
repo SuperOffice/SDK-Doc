@@ -6,7 +6,7 @@ sortOrder: 5
 
 This is a **layout element**. It can contain other elements, which will be laid out in a grid (1 row).
 
-|## Configuration
+## Configuration
 
 | Value         | Description                                   |
 |:--------------|:----------------------------------------------|

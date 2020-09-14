@@ -6,7 +6,7 @@ sortOrder: 9
 
 This element will display a grid of information fields where the values can be ordered in groups. The information is based on a query to the database.
 
-|## Configuration
+## Configuration
 
 | Value         | Description                                     |
 |:--------------|:------------------------------------------------|

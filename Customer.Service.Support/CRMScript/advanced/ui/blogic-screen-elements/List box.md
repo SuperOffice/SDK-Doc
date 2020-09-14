@@ -6,7 +6,7 @@ sortOrder: 12
 
 This element adds a drop-down menu to your screen.
 
-|## Configuration
+## Configuration
 
 | Value              | Description         |
 |:-------------------|:--------------------|

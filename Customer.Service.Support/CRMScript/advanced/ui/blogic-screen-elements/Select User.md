@@ -1,34 +1,36 @@
 ---
 title: Select User
-path: /Blogic/Screen Elements/Select User
-sortOrder: 81
+uid: blogic_select_user
+sortOrder: 19
 ---
 
 This element is used to select a user in the system.
 
+## Configuration
 
+| Value             | Description                  |
+|:------------------|:-----------------------------|
+| AddNone           | If true, then the value "none" is available in the drop-down |
+| AddNotDelegated   | If true, then the value "(not delegated)" is available |
+| AddDelegate       | If true, then the value "(Automatically assigned)" is available. From 3.0.11 |
+| AddAll            | If true, then the value "all users" are available |
+| AddNoValue        | If true, then empty is available |
+| AddActiveUser     | If true, then the value "(Active user)" is available in the drop-down |
+| AddNotPresent     | If true, then include users set as "Not present |
+| RemoveNone        | If true, then the blank value is removed from the drop-down |
+| AddDeleted        | If true, then deleted deleted users are available |
+| AddReadOnly       | If true, then users with read only status are available|
 
-###The following configuration values are available:###
+## Functions
 
+### setValue()
 
- - <b>"AddNone"</b>: If true, then the value "none" is available in the drop down
- - <b>"AddNotDelegated"</b>: If true, then the value "(not delegated)" is available.
- - <b>"AddDelegate"</b>: If true, then the value "(Automatically assigned)" is available. From 3.0.11
- - <b>"AddAll"</b>: If true, then the value "all users" are available
- - <b>"AddNoValue"</b>: If true, then empty is available
- - <b>"AddActiveUser"</b>: If true, then the value "(Active user)" is available in the drop down
- - <b>"AddNotPresent"</b>: If true, then include users set as "Not present"
- - <b>"RemoveNone"</b>: If true, then the blank value is removed from the drop down
- - <b>"AddDeleted"</b>: If true, then deleted deleted users are available
- - <b>"AddReadOnly"</b>: If true, then users with read only status are available
+Sets the user from the supplied ID.
 
+### toString()
 
+Return the IS of the selected entry.
 
+### toInteger()
 
-###Functions:###
-
-
- - `setValue()`: Will set the user from the supplied id.
- - `toString()` or `toInteger()`: will return the id of the selected entry.
-
-
+Return the IS of the selected entry.

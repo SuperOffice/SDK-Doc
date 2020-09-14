@@ -8,7 +8,7 @@ This element allows you to add an entity menu to a screen.
 
 A default configured menu is available for customers and companies. These menus contain items that allow you to edit the entity, create new ones, merge the entity with others and send password.
 
-|## Configuration
+## Configuration
 
 | Value      | Description       |
 |:-----------|:------------------|

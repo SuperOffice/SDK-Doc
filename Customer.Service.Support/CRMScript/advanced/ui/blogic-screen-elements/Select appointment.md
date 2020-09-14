@@ -1,9 +1,7 @@
 ---
 title: Select appointment
-path: /Blogic/Screen Elements/Select appointment
-sortOrder: 55
+uid: blogic_select_appointment
+sortOrder: 19
 ---
 
 This element can be used to select a CRM appointment.
-
-

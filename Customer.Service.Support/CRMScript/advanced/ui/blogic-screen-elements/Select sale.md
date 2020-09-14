@@ -1,9 +1,7 @@
 ---
 title: Select sale
-path: /Blogic/Screen Elements/Select sale
-sortOrder: 75
+uid: blogic_select_sale
+sortOrder: 19
 ---
 
 This element can be used to select a Sale.
-
-

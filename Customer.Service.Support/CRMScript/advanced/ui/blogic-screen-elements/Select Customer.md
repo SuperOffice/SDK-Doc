@@ -1,30 +1,34 @@
 ---
 title: Select Customer
-path: /Blogic/Screen Elements/Select Customer
-sortOrder: 61
+uid: blogic_select_customer
+sortOrder: 19
 ---
 
-This element adds the "Select Customer" field to your screen, the same feature that is available under new request in eJournal.
+This element adds the **Select Customer** field to your screen, the same feature that is available under new request.
 
+## Configuration
 
+| Value              | Description                    |
+|:-------------------|:-------------------------------|
+| notEmpty           | Will not allow an empty choice |
 
-###The following configuration values are available:###
+### Selecting customers
 
+It's possible to define the columns used to select a customer in reg_id=226 (v. 4.9).
 
-- "notEmpty": Will not allow an empty choice
-
-
-
-
-###Functions:###
-
-
-- `setValue()` sets the selected customer with the given id.
-- `toInteger()` returns the selected customer id.
-- `toString()` returns the selected customer id.
-
-
-From 4.9, it is possible to define the columns used to select a customer in reg\_id=226. The syntax is as follows:
+**Syntax:**
 [displayField:searchField:op:label],[displayField:searchField:op:label],[displayField:searchField:op:label]
 
+## Functions
 
+### setValue()
+
+Sets the selected customer with the given ID.
+
+### toInteger()
+
+Returns the selected customer ID.
+
+### toString()
+
+Returns the selected customer ID.

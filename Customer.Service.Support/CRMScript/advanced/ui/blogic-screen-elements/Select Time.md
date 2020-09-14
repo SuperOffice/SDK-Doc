@@ -1,27 +1,23 @@
 ---
 title: Select Time
-path: /Blogic/Screen Elements/Select Time
-sortOrder: 79
+uid: blogic_select_time
+sortOrder: 19
 ---
-
 
 This element is used to get time as input.
 
+## Configuration
 
+| Value             | Description                  |
+|:------------------|:-----------------------------|
+| minInc            | Can be used to set a minute based gap between each allowable entry (making the drop-down smaller)<br/>For example, minInc="15", you get 15-minute increments - 4 options per hour. |
 
+## Functions
 
-###The following configuration values are available:###
+### setValue()
 
+Sets the value from a string with format "HH:MI:SS".
 
- - "minInc": can be used to set a minute based gap between each allowable entry (making the dropdown smaller), e.g. by setting "15", one gets 4 options per hour.
+### toString()
 
-
-
-
-###Functions:###
-
-
- - `setValue()` sets the value from a string with format "HH:MI:SS".
- - `toString()` returns the value in the same format.
-
-
+Returns the value in the same format.

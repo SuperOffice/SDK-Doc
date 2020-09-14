@@ -11,7 +11,7 @@ Learn more:
 * See the [FCK editor user guide](http://docs.fckeditor.net/FCKeditor_2.x/Users_Guide) for how to work with this editor.
 * See the [FCK editor API reference](http://docs.fckeditor.net/FCKeditor\_2.x/Developers\_Guide/Configuration/Configuration\_Options) for available config values.
 
-|## Configuration
+## Configuration
 
 | Value             | Default | Description                                     |
 |:------------------|:--------|:------------------------------------------------|

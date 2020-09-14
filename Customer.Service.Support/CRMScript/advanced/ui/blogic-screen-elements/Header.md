@@ -6,7 +6,7 @@ sortOrder: 8
 
 This element displays a sub-header.
 
-|## Configuration
+## Configuration
 
 | Value       | Description                             |
 |:------------|:----------------------------------------|

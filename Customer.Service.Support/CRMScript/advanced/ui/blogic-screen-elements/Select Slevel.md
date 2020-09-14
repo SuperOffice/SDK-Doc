@@ -1,17 +1,17 @@
 ---
 title: Select Slevel
-path: /Blogic/Screen Elements/Select Slevel
-sortOrder: 76
+uid: blogic_select_slevel
+sortOrder: 19
 ---
 
-This element is a dropdown containing the available security levels (internal and external).
+This element is a drop-down containing the available security levels (internal and external).
 
+## Functions
 
+### toIntger()
 
-###The following configuration values are available:###
+Return 1 for internal or 2 for external.
 
+### setValue()
 
- - `toIntger()`: will return 1 for internal or 2 for external.
- - `setValue()` sets the value, 1 for internal or 2 for external.
-
-
+Sets the value, 1 for internal or 2 for external.

@@ -6,7 +6,7 @@ sortOrder: 3
 
 This is a complex element used to represent customers connected to a request. It also handles mail recipients.
 
-|## Configuration
+## Configuration
 
 | Value           | Description |
 |:----------------|:------------|

@@ -1,26 +1,22 @@
 ---
 title: Select Reply Template
-path: /Blogic/Screen Elements/Select Reply Template
-sortOrder: 73
+uid: blogic_select_reply_template
+sortOrder: 19
 ---
-
 
 This element is used to select a reply template or a reply template folder.
 
+## Configuration
 
+| Value             | Description                  |
+|:------------------|:-----------------------------|
+| onlyLeafNodes     | If set to true, only leaf nodes may be selected. |
 
+## Functions
 
-###The following configuration values are available:###
+### getString()
 
+Returns the ID of the selected node.
 
-- "onlyLeafNodes": if set to true only leaf nodes may be selected.
-
-
-
-
-###Functions:###
-
-
-- `getString()` will return the id of the selected node. Folders will return "folder." plus id, while reply templates will return only the id.
-
-
+> [!NOTE]
+> Folders will return "folder." plus ID, while reply templates will return only the ID.

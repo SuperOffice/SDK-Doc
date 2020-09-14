@@ -6,7 +6,7 @@ sortOrder: 1
 
 This element adds the attachment field to your screen.
 
-|## Configuration
+## Configuration
 
 | Value             | Description                             |
 |:------------------|:----------------------------------------|

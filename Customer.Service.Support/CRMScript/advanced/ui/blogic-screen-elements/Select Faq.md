@@ -1,23 +1,28 @@
 ---
 title: Select Faq
-path: /Blogic/Screen Elements/Select Faq
-sortOrder: 66
+uid: blogic_select_faq
+sortOrder: 19
 ---
 
 This element is used to select an entry from the FAQ database.
 
-The element takes a config value accessLevel for minimum access level (all entries with higher access level will be returned), with possible values:
+## Configuration
 
+| Value              | Description                  |
+|:-------------------|:-----------------------------|
+| accessLevel        | The minimum access level     |
 
- - "1": for private entries
- - "2": for internal entries
- - "3": for public authenticated entries
- - "4": for public not authenticated entries
+### Access levels
 
+* 1: private entries
+* 2: internal entries
+* 3: public authenticated entries (default)
+* 4: public not authenticated entries
 
-If not set, 3 is set as default, so public authenticated and not authenticated entries will be returned.
+When you set a specific access level, all FAQ entries with that and higher level will be returned.
 
+## Functions
 
- - `getValue()`: will return the id of the FAQ entry.
+### getValue()
 
-
+Returns the ID of the FAQ entry.

@@ -1,20 +1,21 @@
 ---
 title: Select Customers
-path: /Blogic/Screen Elements/Select Customers
-sortOrder: 62
+uid: blogic_select_customers
+sortOrder: 19
 ---
 
-This element adds the select customer fields to your screen. This element allows you to add more than one contactperson.
+This element adds the select customer fields to your screen. This element allows you to add more than one contact person.
 
+## Functions
 
+### getFieldValue()
 
-###The following configuration functions are available:###
--getFieldValue():
+all: will return a list of all recipients.
 
+### setFieldValue(String, Map)
 
-    - "all": will return a list of all recipients.
-- setFieldValue(string, map):
-    - <b>"addCustomer"</b>: will add a single customer, with the id specified in "id".
-- `toString()`: will return a comma-separated list of the id's of the customers.
+addCustomer": will add a single customer, with the ID specified in "id".
 
+### toString()
 
+Returns a comma-separated list of the ID's of the customers.

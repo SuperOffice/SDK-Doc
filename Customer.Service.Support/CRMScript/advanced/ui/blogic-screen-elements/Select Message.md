@@ -1,35 +1,32 @@
 ---
 title: Select Message
-path: /Blogic/Screen Elements/Select Message
-sortOrder: 68
+uid: blogic_select_message
+sortOrder: 19
 ---
 
+This HTML element lets the user select a message from a ticket
 
-This html element lets the user select a message from a ticket
+## Configuration
 
+| Value    | Description                                |
+|:---------|:-------------------------------------------|
+| ticketId | The ID of the ticket to list messages from |
+| addNone  | If true, none is added as a select value   |
 
+## Functions
 
+### setFieldValue(String, Map)
 
-###Possible configuration variables:###
+| Action   | Map keys       | Description                              |
+|:---------|:---------------|:-----------------------------------------|
+| add      | name<br/>value |                                          |
+| remove   | value          | Removes all options with the given value |
+| clear    |                | Removes all options                      |
 
+### toString()
 
- - <b>"ticketId"</b>: The id of the ticket to list messages from
- - <b>"addNone"</b>: If true, none is added as a select value
+Returns the selected value.
 
+### toInteger()
 
-
-
-###Functions:###
-
-
- - setFieldValue(string, Map)
-    - <b>"add"</b>
-         - <b>"name"</b>
-         - <b>"value"</b>
-    - <b>"remove"</b>: Remove all options with the given value
-         - <b>"value"</b>
-    - <b>"clear"</b>: Remove all options
- - `toString()` returns the selected value
- - `toInteger()` returns the selected value
-
-
+Returns the selected value.

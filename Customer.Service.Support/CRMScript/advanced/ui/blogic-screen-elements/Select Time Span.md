@@ -1,44 +1,38 @@
 ---
 title: Select Time Span
-path: /Blogic/Screen Elements/Select Time Span
-sortOrder: 80
+uid: blogic_select_timespan
+sortOrder: 19
 ---
 
+This element adds a text input encoding the time-span in a string and a popup that lets you select time-spans with drop-down menus for hours, minutes, and so on.
 
-This element adds a text input encoding the timespan in a string and a popup that lets you select timespans with drop down menus for hours, minutes, etc.
+The time-spans that can be selected are set to true in the config.
 
+| Value           | Description |
+|:----------------|:------------|
+| days            |             |
+| hours           |             |
+| minutes         |             |
+| seconds         |             |
+| empty           |             |
+| negatives       |             |
+| enableStartStop | If true, the element can be started and stopped and will count seconds if started |
+| returnMinutes   | If true, `toInteger()` will return the time-span in minutes instead of seconds
+| maxNum          |             |
+| minJumps        |             |
 
-The timespans that can be selected are set to true in the config.
+## Example
 
+This will create a TimeSpan where hours and minutes can be selected. 24 hours are selectable in the drop-down menu for hours, while every 15 minutes can be selected. These can also be set negative.
 
- - <b>"days"</b>
- - <b>"hours"</b>
- - <b>"minutes"</b>
- - <b>"seconds"</b>
- - <b>"empty"</b>
- - <b>"negatives"</b>
- - <b>"enableStartStop"</b>: If true, the element can be started and stopped and will count seconds if started
- - <b>"returnMinutes"</b>: If true, `toInteger()` will return the timespan in minutes instead of seconds
- - <b>"maxNum"</b>
- - <b>"minJumps"</b>
+```crmscript
+days = false
+hours = true
+minutes = true
+seconds = false
 
+negatives = true
 
-
-
-
-###Config example:###
-    
-    days = false
-    hours = true
-    minutes = true
-    seconds = false
-    
-    negatives = true
-    
-    maxNum = 24
-    minJumps = 15
-    
-
-This will make a timespan where hours and minutes can be selected. 24 hours are selectable in the drop down menu for hours, while every 15 minutes can be selected. These can also be set negative.
-
-
+maxNum = 24
+minJumps = 15
+```

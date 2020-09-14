@@ -1,11 +1,9 @@
 ---
 title: Select contact category
-path: /Blogic/Screen Elements/Select contact category
-sortOrder: 59
+uid: blogic_select_contact_category
+sortOrder: 19
 ---
 
-This element is a dropdown menu that allows for selection of company categories.
+This element is a drop-down menu that allows for selection of company categories.
 
 There are no configurable values.
-
-

@@ -1,13 +1,9 @@
 ---
 title: ejScript
-path: /Blogic/Screen Elements/ejScript
-sortOrder: 26
+uid: blogic_ejscript
+sortOrder: 5
 ---
 
+The `body` config element may contain a CRMScript. The script can print any HTML to the screen using the `print()` function.
 
-The config element "body" may contain an ejScript, which may print any HTML to the screen using the `print()` function.
-
-
-From version 4.11 all config variables for this element are available through the `getVariable()` function.
-
-
+All configuration variables can be retrieved with `getVariable()` (v. 4.11).

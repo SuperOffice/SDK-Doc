@@ -1,39 +1,43 @@
 ---
 title: Select Ticket Status
-path: /Blogic/Screen Elements/Select Ticket Status
-sortOrder: 78
+uid: blogic_select_ticket_status
+sortOrder: 19
 ---
-
 
 This element displays statuses (active, closed, postponed)  in a combobox, and thus differs from HtmlTicketStatus.
 
+## Configuration
 
-The following configuration values are available.
+| Value             | Description                  |
+|:------------------|:-----------------------------|
+| defaultAddMessage | If true, the default status for adding messages for this user is set |
+| addDeleted        | Add deleted status |
+| default           | Default status to be selected |
+| valueId           | If true then entry IF is used as ticket ID |
+| ticketId          | Ticket ID to get status from |
+| category          | Sets default status to the one for new ticket for this user for the given category |
+| filterIds         | |
 
+## Functions
 
- - "defaultAddMessage": If true, the default status for adding messages for this user is set.
- - <b>"addDeleted"</b>: Add deleted status
- - <b>"default"</b>: Default status to be selected
- - <b>"valueId"</b>: If true then entry id is used as ticket id
- - <b>"ticketId"</b>: Ticket id to get status from
- - <b>"category"</b>: Sets default status to the one for new ticket for this user for the given category
- - <b>"filterIds"</b>:
+### getFieldValue(String field)
 
+| Value    | Description         |
+|:---------|:--------------------|
+| activate | The activation date |
+| status   | The status          |
 
+### setValue(String)
 
+### setFieldValue("set", Map values)
 
-###Functions:###
+| Value             | Description                  |
+|:------------------|:-----------------------------|
+| status            | Choose status |
+| activate          | If postpone" is chosen an activation date can be set through this value |
 
+### toString()`
 
- - setFieldValue("set", Map):
-    - <b>"status"</b>: Choose status
-    - <b>"activate"</b>: if postpone" is chosen an activation date can be set through this value
- - `getFieldValue(String)`
-    - <b>"activate"</b>: returns the activation date
-    - <b>"status"</b>: returns the status
- - `setValue(string)`
- - `toString()`
- - `toInteger()`
- - `toDate()`
+### toInteger()`
 
-
+### toDate()`

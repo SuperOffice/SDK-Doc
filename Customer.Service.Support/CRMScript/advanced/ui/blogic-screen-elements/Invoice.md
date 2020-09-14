@@ -8,7 +8,7 @@ This element is used for listing and adding invoice lines (such as the one in ed
 
 It has a grid for the lines, and some input fields for adding a new line.
 
-|## Configuration
+## Configuration
 
 | Value        | Description                           |
 |:-------------|:--------------------------------------|
