@@ -9,26 +9,22 @@ sortOrder: 522
 
 Class for representing a key->value map. Both key and value are strings.
 
+When using the constructor, the key-value pairs must be separated by "\n". Don't add space between \n and the 1st character of the key!
 
+## Example code
 
+```crmscript
+Map m = Map("foo = bar\n2+2 = 4\ntestNumber = 3");
 
-###Example code:###
+m.insert("test", "someValue");
+m.remove("testNumber");
+printLine(m.exists("testNumber").toString());
 
-
-    Map m = Map("foo = bar, 2+2 = 4, testNumber = 3");
-    
-    m.insert("test", "someValue");
-    m.remove("testNumber");
-    printLine(m.exists("testNumber").toString());
-    
-    m.first();
-    while (!m.eof()){
-      printLine(m.getKey() + " = " + m.getVal());
-      m.next();
-    }
-
-
-
+m.first();
+while (!m.eof()){
+  printLine(m.getKey() + " = " + m.getVal());
+  m.next();
+}
+```
 
 1. autolist
-
