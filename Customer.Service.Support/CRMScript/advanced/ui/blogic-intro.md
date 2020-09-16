@@ -6,41 +6,46 @@ SortOrder: 50
 
 **Blogic** is a system for designing screens and displaying content in SuperOffice Service.
 
-## Scripts
-
-The defined scripts. Edit, or Add new scripts here.
-
-## Screens
-
-Definition of screens and their layout
-
 ## Screen choosers
 
-Here a ejScript can be added to several eJournal display screens. This script can then redirect to a new blogic screen, or perform other actions.
+A **screen chooser** is a CRMScript that redirects to a custom screen or performs other actions. It can, for example, do calculations before displaying the screen.
 
-To perform a redirect use the setVariable("url", url-to-redirect-to);
+The Screen choosers are organized in a folder structure based on where in the system they are run from.
 
-Note that the redirection happens after the screen chooser has finished executing and not instant when the url variable is set.
+To redirect, call `setVariable("url", String url)` with the new URL you want to redirect **to**.
 
-Remember to resend GET/POST variables if needed.
+> [!NOTE]
+> The actual redirect happens **after the entire script has run**, not when calling `setVariable()`.<br/>Remember to resend GET/POST variables if needed.
 
-## Scheduled tasks
+### Creating a screen chooser
 
-Here you can set a ejScript script to execute at specified times. A script may for instance walk through new customers, and create some statistic, and send an email to someone.
+1. Sign in to SuperOffice Service.
+2. From the hamburger menu, select **System Design** and then select **ScreenChoosers**.
+3. Select the screen you want to redirect **from**.
+4. Enter a description (what and why) and set it to enabled.
+5. Write your script and click **OK**.
 
-In scheduled tasks there are no special variables available (using getVariable)
+## Creating a custom screen
 
-## Extra menus
+1. Sign in to SuperOffice Service.
+2. From the hamburger menu, select **System Design** and then select **Screens**.
+3. Click **New screen**.
+4. Enter screen properties and click **OK**.
+    * Name is mandatory. You can call it whatever you like, but keep in mind that it becomes the heading on your screen.
+    * ID string is an optional friendly name. It's considered best practice to set it.
+5. Add elements.
+6. Click **OK** to save your screen.
+7. Toggle preview to test your current screen.
 
-Here, functionality in ejScripts can be connected to menu items as specified. Menu items can be connected to the menu of "Status", "View request", "View company", and "View Customer".
+### Adding an element
 
-"Url" might be "/bin/blogic.exe?action=doScript&id=3&entryId=" if you want to run ejScript number 3 (In scripts), and append the variable entryId.
+1. Click **New element**.
+2. Select an element type and enter element properties.
+3. Add config in the **Simple values** tab.
+4. Click **Apply**.
+5. Select the **Creation script tab.
+6. Set which data to display by extending the script.
+7. Click **Apply**.
 
-Target might be "main" - the html frame to which the output goes, or not filled out in a frame-less design.
-
-If you check the option "Append id", the id of the item you are looking at (request, company, etc.)
-
-From version 3.1.8 you can keyboard shortcuts to the items in the extra menus.
-This is done by adding & before the character you want to be the access key.
-
-Example: "M&y contacts" will yield the label My contacts with an underscore under y. If you press Alt+y, then this will be like clicking the link.
+> [!TIP]
+> Click **Apply** after selecting an element type. This adds information the selected element to the **Help** tab.
