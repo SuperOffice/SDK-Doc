@@ -5,11 +5,12 @@ sortOrder: 69
 ---
 
 This element is used for selecting several relations (i.e. primary id's from a table). It is consequently quite similar to "Select relation", but is used when more than one relation is required. The relations are displayed in a grid.
+
 ## accepts the following configuration values
 
 * "FlagRadioForPrimary": If this field is set, then there will be a leftmost column with radio buttons for selecting the primary entry|"FlagCheckbox": If this field is set, then there will be a leftmost column with checkboxes for each row|"FlagOnlyOne": If this field is set, then this control will only allow one entry (use this control instead of "Select relation"). Available from 4.0|"FlagNotEmpty": If this field is set, then an empty relation is not allowed. Available from 4.0|"FlagNoNewButton": This this field is set, the no new button is added. Available from 4.2.21|"idField": The field containing the id-value for the relation|"limit": will set the limit of search results. Default is 25.
 
-###The query is specified against the database with the following array of fields
+## The query is specified against the database with the following array of fields
 
 * "column.length|"column.n.displayField": The database field to display in this column|"column.n.searchField": The database field to search for this column value|"column.n.operator": The operator used when searching this column, e.g. "OperatorBeginsWith", "OperatorEquals", "OperatorContains"|"column.n.label": The header for this column.
 ...and with the following criteria:

@@ -5,28 +5,9 @@ sortOrder: 16
 ---
 
 This element lets you display HTML text, including data from the database as parser-variables.
+The database query is defined using a [line-based query syntax](@crmscript_blogic_query_syntax).
 
-## Query syntax
-
-The database query is defined using a one-line query syntax.
-
-| Value                | Description                     |
-|:---------------------|:--------------------------------|
-| fields.length        | The number of fields to query   |
-| fields.n.field       | The field n to fetch            |
-| where.length         | The number of where conditions  |
-| where.n.field        | The field for where condition n |
-| where.n.operator     | The operator                    |
-| where.n.value        | The value                       |
-| where.n.valueId      | If set to true, then the active ID for the page will be used for the value |
-| where.n.rowOperator  | The row operator                |
-| where.n.critPriority | The indent of the row           |
-| order.length         | The number of order fields      |
-| order.n.field        | The field to order by           |
-| order.n.direction    | "asc" or "desc"                 |
-| limit                | Limits the number of found rows |
-
-Furthermore, the body fields contain the HTML text to use for the element.
+The body fields contain the HTML text to use for the element.
 
 The results from the query will be stored in the parser as the name of the queried fields, for example, "ticket.title", "ticket.id", "customer.display_name".
 
