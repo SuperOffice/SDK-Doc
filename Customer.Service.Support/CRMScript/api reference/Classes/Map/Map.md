@@ -7,7 +7,7 @@ sortOrder: 522
 ---
 
 
-Class for representing a key->value map. Both key and value are strings.
+The Map class represents a collection of key-value pairs. Both key and value are strings.
 
 When using the constructor, the key-value pairs must be separated by "\n". Don't add space between \n and the 1st character of the key!
 
