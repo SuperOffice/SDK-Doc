@@ -4,11 +4,13 @@ uid: blogic_fieldset
 sortOrder: 6
 ---
 
-## Configuration
-
 This is a **group element**. It defines the beginning of a group of elements and requires a matching group end element.
 
-| Value       | Description            |
+It places a `<fieldset>` tag around it’s children.
+
+## Configuration
+
+| Setting     | Description            |
 |:------------|:-----------------------|
 | title       | UI label of the group  |
 | useOverFlow | Bool                   |

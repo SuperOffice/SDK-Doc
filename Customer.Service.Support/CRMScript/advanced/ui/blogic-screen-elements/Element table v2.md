@@ -4,7 +4,9 @@ uid: blogic_element_table_2
 sortOrder: 5
 ---
 
-This is a **layout element**. It can contain other elements, which will be laid out in a grid. The children are laid out in a tabular fashion, starting in the top-left corner. When all columns in the current row are filled, the next child element starts a new row.
+The `Element table v2` is used for **layout**. It can contain other elements, which will be laid out in a grid.The children are laid out in a tabular fashion, starting in the top-left corner. When all columns in the current row are filled, the next child element starts a new row.
+
+This is a **group element**. It defines the beginning of a group of elements and requires a matching group end element.
 
 > [!NOTE]
 > The number of rows will expand dynamically if there are more children than initial space.
@@ -24,7 +26,7 @@ This is a **layout element**. It can contain other elements, which will be laid 
 
 ## Configuration
 
-| Value                 | Description                                            |
+| Setting               | Description                                            |
 |:----------------------|:-------------------------------------------------------|
 | rows                  | Initial size                                           |
 | columns               | Initial size                                           |
@@ -54,7 +56,7 @@ This is a **layout element**. It can contain other elements, which will be laid 
 
 You can define these config values for the children, and they will be picked up by the layout table and applied.
 
-| Value                | Description                                       |
+| Setting              | Description                                       |
 |:---------------------|:--------------------------------------------------|
 | layout.label         | Add header to this child                          |
 | layout.colspan       | Whether the child may span multiple columns       |

@@ -8,10 +8,10 @@ This element is a standard root frame used in a lot of screens.
 
 ## Configuration
 
-| Value             | Description                             |
-|:------------------|:----------------------------------------|
-| label             | |
-| iconUrl           | |
+| Setting | Description |
+|:--------|:------------|
+| label   |             |
+| iconUrl |             |
 
 ## Functions
 
@@ -32,7 +32,7 @@ This element is a standard root frame used in a lot of screens.
 * StyleSmall
 * StyleIconOnly
 
-#### Example
+## Example
 
 ```crmscript
 Map m;
