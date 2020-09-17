@@ -1,6 +1,6 @@
 ---
 title: FCK Editor
-uid: blogic_fck_Editor
+uid: blogic_fck_editor
 sortOrder: 6
 ---
 
@@ -13,7 +13,7 @@ Learn more:
 
 ## Configuration
 
-| Value             | Default | Description                                     |
+| Setting           | Default | Description                                     |
 |:------------------|:--------|:------------------------------------------------|
 | FCKConfig         |         | Passes config values to the FCK editor          |
 | valueId           |         | Whether ticket ID is set to entry ID (true=yes) |

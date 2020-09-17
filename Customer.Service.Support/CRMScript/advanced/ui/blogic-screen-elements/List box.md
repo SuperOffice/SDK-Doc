@@ -1,6 +1,6 @@
 ---
 title: List box
-uid: blobic_listbox
+uid: blogic_listbox
 sortOrder: 12
 ---
 
@@ -8,7 +8,7 @@ This element adds a drop-down menu to your screen.
 
 ## Configuration
 
-| Value              | Description         |
+| Setting            | Description         |
 |:-------------------|:--------------------|
 | options.length     | The number of items |
 | options.i.value    |                     |

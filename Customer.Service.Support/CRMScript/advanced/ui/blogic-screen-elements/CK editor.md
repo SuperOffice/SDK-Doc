@@ -12,7 +12,7 @@ Learn more:
 
 ## Configuration
 
-| Value             | Default | Description                             |
+| Setting           | Default | Description                             |
 |:------------------|:--------|:----------------------------------------|
 | CKConfig          |         | Passes config values to the CK editor   |
 | actionType        |         | 0 = new request<br/>1 = add message<br/> 2 = edit request |

@@ -10,7 +10,7 @@ A default configured menu is available for customers and companies. These menus 
 
 ## Configuration
 
-| Value      | Description       |
+| Setting    | Description       |
 |:-----------|:------------------|
 | entity     | customer, company |
 | entityMenu | customer, company |

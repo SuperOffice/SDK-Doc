@@ -1,6 +1,6 @@
 ---
 title: Related dropdowns
-uid: blogic_related dropdowns
+uid: blogic_related_dropdowns
 sortOrder: 18
 ---
 
@@ -13,7 +13,7 @@ A typical scenario is the selection of fields in related extra tables. For examp
 
 ## Configuration
 
-| Value            | Description                                          |
+| Setting          | Description                                          |
 |:-----------------|:-----------------------------------------------------|
 | printDownwards   | How to  list drop-downs<br/>true = list one per row<br/>false = list all in one row |
 | notEmptyDropdown | The last drop-down that can't be empty. Numbering starts at 0 |

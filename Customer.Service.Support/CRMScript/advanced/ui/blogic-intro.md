@@ -9,7 +9,7 @@ SortOrder: 50
 **Custom screens** are based on a set of [screen elements](@blogic_elements) (controls) such as text, date, grid, and CRMScript. There are 3 types of screen elements:
 
 * View elements: displays info (read-only)
-* Form elements: creates user interaction with input fields
+* Form elements: creates [user interaction](@crmscript_blogic_forms) with input fields
 * Group elements: creates a hierarchy of elements and determines the [layout of the screen](@crmscript_blogic_layout)
 
 With scripts, you can:

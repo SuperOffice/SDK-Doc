@@ -1,10 +1,10 @@
 ---
-title: RadioButtons
+title: Radio buttons
 uid: blogic_radiobuttons
 sortOrder: 18
 ---
 
-Adds radio-buttons to your screen.
+Adds radio buttons to your screen.
 
 ## Configuration
 

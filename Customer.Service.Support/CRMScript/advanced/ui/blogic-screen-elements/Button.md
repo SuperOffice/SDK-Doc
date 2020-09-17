@@ -8,9 +8,9 @@ The `button` element adds a clickable button to your screen. Used to submit form
 
 ## Configuration
 
-| Value   | Description    |
-|:--------|:---------------|
-| title   | name of button |
+| Setting | Description                                  |
+|:--------|:---------------------------------------------|
+| title   | name of button                               |
 | onClick | JavaScript called when the button is pressed |
 
 ## Functions
@@ -21,4 +21,4 @@ Returns the field.
 
 ### setFieldValue(String field, Map value)
 
-Sets the selcted value if the field is *script*.
+Sets the selected value if the field is *script*.

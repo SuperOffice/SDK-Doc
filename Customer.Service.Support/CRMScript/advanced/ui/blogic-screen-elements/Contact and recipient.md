@@ -8,7 +8,7 @@ This is a complex element used to represent customers connected to a request. It
 
 ## Configuration
 
-| Value           | Description |
+| Setting         | Description |
 |:----------------|:------------|
 | ticketId        |             |
 | noDefaultFields |             |

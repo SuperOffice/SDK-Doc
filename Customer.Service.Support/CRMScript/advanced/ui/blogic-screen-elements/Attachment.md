@@ -8,10 +8,10 @@ This element adds the attachment field to your screen.
 
 ## Configuration
 
-| Value             | Description                             |
-|:------------------|:----------------------------------------|
-| multiple          | allows uploading of several attachments |
-| noHardDelete      | will not delete the actual attachment from the database, only from the attachment component |
+| Setting      | Description                             |
+|:-------------|:----------------------------------------|
+| multiple     | Allows uploading of several attachments |
+| noHardDelete | Will not delete the actual attachment from the database, only from the attachment component |
 
 ## Example
 

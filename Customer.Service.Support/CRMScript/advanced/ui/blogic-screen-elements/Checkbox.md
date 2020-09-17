@@ -8,8 +8,8 @@ Adds a checkbox to your screen.
 
 ## Configuration
 
-| Value       | Description                         |
-|:------------|:------------------------------------|
+| Setting     | Description                                            |
+|:------------|:-------------------------------------------------------|
 | suffixLabel | optional label, displayed to the right of the checkbox |
 
 ## Functions

@@ -4,13 +4,13 @@ uid: blogic_invoice
 sortOrder: 9
 ---
 
-This element is used for listing and adding invoice lines (such as the one in editRequest).
+This element is used for listing and adding invoice lines (such as the one in Edit request).
 
 It has a grid for the lines, and some input fields for adding a new line.
 
 ## Configuration
 
-| Value        | Description                           |
+| Setting      | Description                           |
 |:-------------|:--------------------------------------|
 | rows.length  | Number of elements you want to change |
 | rows.i.id    | The ID of the invoice type to change  |
