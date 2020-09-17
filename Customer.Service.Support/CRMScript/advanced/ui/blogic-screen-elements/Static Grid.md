@@ -10,7 +10,7 @@ This element lets you create a static grid (table) where the contents is manuall
 
 The following settings are all boolean.
 
-| Value               | Description                                          |
+| Setting             | Description                                          |
 |:--------------------|:-----------------------------------------------------|
 | hideWhenEmpty       | Whether to hide the grid if it has no rows           |
 | persistent          | Whether to preserve grid contents between requests   |
@@ -23,26 +23,26 @@ The following settings are all boolean.
 
 Config for column headers.
 
-| Value                  | Description                                          |
-|:-----------------------|:-----------------------------------------------------|
-headers.length           | The number of columns or headers in the grid         |
-headers.i.selectRow      | If true, then this column will contain a checkbox that will specify which row is selected |
-headers.i.arrows         | If true, then this column will contain arrows for sorting the elements |
-headers.i.hidden         | If true, then this column will not be displayed |
-headers.i.left           | If true, the contents of this column will be left-justified |
-headers.i.center         | If true, the contents of this column will be centered |
-headers.i.right          | If true, the contents of this column will be right-justified |
-headers.i.orderByInteger | If true, the grid will sort by the numerical values in this column |
-headers.i.noSorting      | If true, this column will not be selectable for sorting |
-headers.i.textBox        | If true, this column will contain an editable text field |
-headers.i.dropDown       | If true, this column will contain a drop-down |
-headers.i.checkBox       | If true, then this column will contain a checkbox |
-headers.i.delete         | If true, this column will contain an icon that will remove the row when clicked |
-headers.i.containsHtml   | If true, the contents of this column will be parsed as straight HTML |
-headers.i.dragDrop       | If true, this column can drag rows up and down with the mouse |
-headers.i.icon           | If true, this column will be shown as an icon |
-headers.i.label          | The label of this column |
-headers.i.chop           |                          |
+| Setting                  | Description                                          |
+|:-------------------------|:-----------------------------------------------------|
+| headers.length           | The number of columns or headers in the grid         |
+| headers.i.selectRow      | If true, then this column will contain a checkbox that will specify which row is selected |
+| headers.i.arrows         | If true, then this column will contain arrows for sorting the elements |
+| headers.i.hidden         | If true, then this column will not be displayed |
+| headers.i.left           | If true, the contents of this column will be left-justified |
+| headers.i.center         | If true, the contents of this column will be centered |
+| headers.i.right          | If true, the contents of this column will be right-justified |
+| headers.i.orderByInteger | If true, the grid will sort by the numerical values in this column |
+| headers.i.noSorting      | If true, this column will not be selectable for sorting |
+| headers.i.textBox        | If true, this column will contain an editable text field |
+| headers.i.dropDown       | If true, this column will contain a drop-down |
+| headers.i.checkBox       | If true, then this column will contain a checkbox |
+| headers.i.delete         | If true, this column will contain an icon that will remove the row when clicked |
+| headers.i.containsHtml   | If true, the contents of this column will be parsed as straight HTML |
+| headers.i.dragDrop       | If true, this column can drag rows up and down with the mouse |
+| headers.i.icon           | If true, this column will be shown as an icon |
+| headers.i.label          | The label of this column |
+| headers.i.chop           |                          |
 
 ## Functions
 

@@ -15,17 +15,17 @@ When giving database fields and criteria, the table is automatically filled with
 
 ### Fields
 
-| Value              | Required | Description                                    |
-|:-------------------|:--------:|:-----------------------------------------------|
-| fields.n.label     | x        | The header of column n                         |
-| fields.n chop      | x        | The max count of characters in column n        |
-| fields.n.footerFunction | x   |                                                |
-| fields.n.field     | x        | The database field for column n                |
-| fields.n.function  | x        | Used together with fields.n.functionParams     |
-| fields.n.functionParams | x   | Used together with fields.n.function           |
-| fields.n.hidden    |          | Whether to hide column n (true=yes)            |
-| fields.n.selectRow |          | Whether to add a checkbox to the row (true=yes) |
-| fields.length      |          | Count of fields                                |
+| Setting            | Required | Description                                 |
+|:-------------------|:--------:|:--------------------------------------------|
+| fields.n.label     | x        | The header of column n                      |
+| fields.n chop      | x        | The max count of characters in column n     |
+| fields.n.footerFunction | x   |                                             |
+| fields.n.field     | x        | The database field for column n             |
+| fields.n.function  | x        | Used together with fields.n.functionParams  |
+| fields.n.functionParams | x   | Used together with fields.n.function        |
+| fields.n.hidden    |          | Whether to hide column n (Bool)             |
+| fields.n.selectRow |          | Whether to add a checkbox to the row (Bool) |
+| fields.length      |          | Count of fields                             |
 
 > [!NOTE]
 > It is mandatory to set either `fields.n.field` OR both `fields.n.function` and `fields.n.functionParams`.
@@ -34,15 +34,15 @@ When giving database fields and criteria, the table is automatically filled with
 
 Criteria constrain which data to have in the table.
 
-| Value               | Description                    |
-|:--------------------|:-------------------------------|
-| criteria.n.operator | The operator for this criteria |
-| criteria.n.field    | The database field for this criteria |
-| criteria.n.rowOperator | The operator between this and the next criteria |
-| criteria.n.indent   | How many parentheses surround this criteria |
-| criteria.length     | The total number of criteria. Must be given even if there is only 1 |
-| criteria.n.value    | The value for criteria n |
-| criteria.n.valueId  | Whether to automatically set the value to the screen's `entryId` (true=yes) |
+| Value               | Description                                                             |
+|:--------------------|:------------------------------------------------------------------------|
+| criteria.n.operator | The operator for this criteria                                          |
+| criteria.n.field    | The database field for this criteria                                    |
+| criteria.n.rowOperator | The operator between this and the next criteria                      |
+| criteria.n.indent   | How many parentheses surround this criteria                             |
+| criteria.length     | The total number of criteria. Must be given even if there is only 1     |
+| criteria.n.value    | The value of criterium n                                                |
+| criteria.n.valueId  | Whether to automatically set the value to the screen's `entryId` (Bool) |
 
 > [!NOTE]
 > Criteria must contain either `value` or `valueId`. Use one or the other, but not both for the same criteria.

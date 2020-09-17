@@ -8,7 +8,7 @@ This element will display a grid of information fields where the values can be o
 
 ## Configuration
 
-| Value         | Description                                     |
+| Setting       | Description                                     |
 |:--------------|:------------------------------------------------|
 | columns       | Number of columns                               |
 | header        | The header (value or field)                     |

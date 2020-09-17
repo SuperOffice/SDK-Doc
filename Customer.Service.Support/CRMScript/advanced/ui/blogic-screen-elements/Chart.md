@@ -18,7 +18,7 @@ This element will use the JavaScript **charts** library to create a chart.
 
 ## Configuration
 
-| Value   | Description                             |
+| Setting | Description                             |
 |:--------|:----------------------------------------|
 | type    | Area, areaspline, bar, bubble (v. 8.5R09), column, line, pie, or spline |
 | title   | The title on top of the chart           |

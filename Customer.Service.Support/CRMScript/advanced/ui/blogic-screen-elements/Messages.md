@@ -8,7 +8,7 @@ This element will display the messages for a ticket.
 
 ## Configuration
 
-| Value           | Description                                      |
+| Setting         | Description                                      |
 |:----------------|:-------------------------------------------------|
 | ticketId        | The ticket to list messages from                 |
 | limit           | The max number of messages to show (v. 4.0)      |

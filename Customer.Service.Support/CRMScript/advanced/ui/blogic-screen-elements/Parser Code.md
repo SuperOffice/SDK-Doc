@@ -4,7 +4,7 @@ uid: blogic_parser_code
 sortOrder: 16
 ---
 
-This element lets you display HTML text, including data from the database as parser-variables.
+This element lets you display HTML text, including data from the database as parser variables.
 The database query is defined using a [line-based query syntax](@crmscript_blogic_query_syntax).
 
 The body fields contain the HTML text to use for the element.

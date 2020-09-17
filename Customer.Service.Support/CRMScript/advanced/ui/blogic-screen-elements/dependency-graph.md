@@ -10,7 +10,7 @@ Also known as **AcyclicGraph** element.
 
 ## Configuration
 
-| Value             | Description |
+| Setting           | Description |
 |:------------------|:------------|
 | createRelationUrl | URL         |
 | editRelationUrl   | URL         |
@@ -23,12 +23,12 @@ Adds either a node or a dependency.
 
 **addNode:**
 
-| Value       | Description                     |
-|:------------|:--------------------------------|
+| Value       | Description                               |
+|:------------|:------------------------------------------|
 | dependentOf | a comma-separated list of nodes (Integer) |
-| id          | ID of node                      |
-| htmlContent | HTML formatted contents of node |
-| color       | HTML color value for node       |
+| id          | ID of node                                |
+| htmlContent | HTML formatted contents of node           |
+| color       | HTML color value for node                 |
 
 **addDependency:**
 

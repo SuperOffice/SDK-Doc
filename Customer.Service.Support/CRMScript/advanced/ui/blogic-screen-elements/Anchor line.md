@@ -8,9 +8,9 @@ This element will display a horizontal line of clickable URLs.
 
 ## Configuration
 
-| Value             | Description                  |
+| Setting           | Description                  |
 |:------------------|:-----------------------------|
-| table             | set to get a default set of URLs (from v.4.0)<br/>ticket, customer, person, company, cust_company, contact             |
+| table             | set to get a default set of URLs (v.4.0)<br/>ticket, customer, person, company, cust_company, contact             |
 | items             | array of items to display    |
 | items.length      | number of items              |
 | items.n.label     | the label of item n          |
