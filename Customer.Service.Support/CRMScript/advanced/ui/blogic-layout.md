@@ -16,6 +16,9 @@ The layout elements are:
 * Element table v2
 * Form page
 
+> [!TIP]
+> Use one of the element tables to put elements side-by-side.
+
 ## Calculating available space
 
 The available space for each element is calculated each time a user opens a custom screen.
@@ -27,6 +30,31 @@ The available space for each element is calculated each time a user opens a cust
 3. Each child reserves some space for itself. AND if a child is a container, it will tell its children how much they can use.
 
 4. The calculation continues until all elements in the hierarchy know how much space they can use.
+
+## Nesting
+
+How you **nest** elements determines the structure of your screen. It is crucial that you place **GroupEnd** elements after the last child in a container. A missing or misplaced `GroupEnd` will mess up your hierarchy.
+
+```html
+<ElementTable>
+  <Panes>
+    <Pane>
+      <ElementTable>
+        <CKEditor>
+        <ContactAndRecipient>
+      <GroupEnd>
+    <GroupEnd>
+  <GroupEnd>
+<GroupEnd>
+```
+
+When viewing the definition of a screen, you can hover an element in the tree and:
+
+* Add a new element directly after it
+* Duplicate an element
+* Move an element
+
+![Screen capture of move element button](../../images/move-element.png)
 
 ## Element group (Fieldset)
 
@@ -42,6 +70,21 @@ You can set the title of individual tabs.
 
 > [!NOTE]
 > Pane **doesn't handle layout of multiple children**. To place more than 1 view or form element on a tab, wrap them in another container such as Element table.
+
+### Example config
+
+**Panes:**
+
+```crmscript
+renderMode = visited
+verticalSpace = rest
+```
+
+**Pane:**
+
+```crmscript
+title = %lang("lang_ticket_viewCompany_tickets")%
+```
 
 ## Panel
 
