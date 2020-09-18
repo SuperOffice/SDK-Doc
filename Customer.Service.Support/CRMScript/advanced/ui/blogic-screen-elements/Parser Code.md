@@ -45,7 +45,7 @@ function EjScript_processResponse(p_xmlNode) {
 </script>
 
 <input type="text" name="myTestField" id="myTestField" value="">
-<input type="submit" name="testScript"  id="testScript" value="testScriptonClick="fetchStuff();return false;">
+<input type="submit" name="testScript"  id="testScript" value="testScriptonClick=" fetchStuff(); return false;">
 ```
 
 The function `EjScript_processResponse(p_xmlNode)` is called by the ajax framework, and if you have several such ajax based controls, you can test for a name match in the xml so you know what control to update.

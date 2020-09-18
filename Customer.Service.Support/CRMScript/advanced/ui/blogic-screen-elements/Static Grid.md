@@ -10,39 +10,39 @@ This element lets you create a static grid (table) where the contents is manuall
 
 The following settings are all boolean.
 
-| Setting             | Description                                          |
-|:--------------------|:-----------------------------------------------------|
-| hideWhenEmpty       | Whether to hide the grid if it has no rows           |
-| persistent          | Whether to preserve grid contents between requests   |
-| showTicketStatus    | Whether to show the ticket status (generic grids only) |
-| sortByArrows        | Whether to use headers with arrows for sorting       |
-| hideFooter          | Whether to print the footer                          |
+| Setting             | Description                                              |
+|:--------------------|:---------------------------------------------------------|
+| hideWhenEmpty       | Whether to hide the grid if it has no rows               |
+| persistent          | Whether to preserve grid contents between requests       |
+| showTicketStatus    | Whether to show the ticket status (generic grids only)   |
+| sortByArrows        | Whether to use headers with arrows for sorting           |
+| hideFooter          | Whether to print the footer                              |
 | setFocusOnLoad      | Whether to set focus to the grid when the page is loaded |
 
 ### Headers
 
 Config for column headers.
 
-| Setting                  | Description                                          |
-|:-------------------------|:-----------------------------------------------------|
-| headers.length           | The number of columns or headers in the grid         |
+| Setting                  | Description                                                            |
+|:-------------------------|:-----------------------------------------------------------------------|
+| headers.length           | The number of columns or headers in the grid                           |
 | headers.i.selectRow      | If true, then this column will contain a checkbox that will specify which row is selected |
 | headers.i.arrows         | If true, then this column will contain arrows for sorting the elements |
-| headers.i.hidden         | If true, then this column will not be displayed |
-| headers.i.left           | If true, the contents of this column will be left-justified |
-| headers.i.center         | If true, the contents of this column will be centered |
-| headers.i.right          | If true, the contents of this column will be right-justified |
-| headers.i.orderByInteger | If true, the grid will sort by the numerical values in this column |
-| headers.i.noSorting      | If true, this column will not be selectable for sorting |
-| headers.i.textBox        | If true, this column will contain an editable text field |
-| headers.i.dropDown       | If true, this column will contain a drop-down |
-| headers.i.checkBox       | If true, then this column will contain a checkbox |
+| headers.i.hidden         | If true, then this column will not be displayed                        |
+| headers.i.left           | If true, the contents of this column will be left-justified            |
+| headers.i.center         | If true, the contents of this column will be centered                  |
+| headers.i.right          | If true, the contents of this column will be right-justified           |
+| headers.i.orderByInteger | If true, the grid will sort by the numerical values in this column     |
+| headers.i.noSorting      | If true, this column will not be selectable for sorting                |
+| headers.i.textBox        | If true, this column will contain an editable text field               |
+| headers.i.dropDown       | If true, this column will contain a drop-down                          |
+| headers.i.checkBox       | If true, then this column will contain a checkbox                      |
 | headers.i.delete         | If true, this column will contain an icon that will remove the row when clicked |
-| headers.i.containsHtml   | If true, the contents of this column will be parsed as straight HTML |
-| headers.i.dragDrop       | If true, this column can drag rows up and down with the mouse |
-| headers.i.icon           | If true, this column will be shown as an icon |
-| headers.i.label          | The label of this column |
-| headers.i.chop           |                          |
+| headers.i.containsHtml   | If true, the contents of this column will be parsed as straight HTML   |
+| headers.i.dragDrop       | If true, this column can drag rows up and down with the mouse          |
+| headers.i.icon           | If true, this column will be shown as an icon                          |
+| headers.i.label          | The label of this column                                               |
+| headers.i.chop           |                                                                        |
 
 ## Functions
 
@@ -74,23 +74,23 @@ Config for column headers.
 
 ### setFieldValue(String field, Map values)
 
-| Action             | Map keys       | Description |
-|:-------------------|:---------------|:------------|
-| addHeader          | label<br/>flags<br/>chop<br />width | Adds a header |
-| addRow             | id<br/>url<br/>target<br/>flags<br/>color<br/>toolTip<br/>selected | Adds a row |
-| addRowUnique       | same as addRow | Adds a row with a unique ID |
-| addCell            | label<br/>sort<br/>url<br/>target<br/>flags<br/>toolTip | Adds a cell |
-| deleteSelectedRows |                | Deletes the selected rows |
-| clearSelectedRows  |                | Removes selected mark on the selected rows |
-| deleteRows         |                | Deletes all rows |
-| set                | pageSize<br/>flags<br/>maxHeight<br/>width<br/>allRowsCount<br/>selectedRows | Sets various fields |
-| defaultOrder       | column<br/>direction | Sets the column that by default orders the rows<br/>"asc" or "desc" |
-| setDropDownOptions.n |              | Sets the drop-down options for column n |
-| addCommand         | title<br/>url<br/>returnUrl<br/>idString<br/>menuIndex<br/>commandIndex | Adds a menu command with parameters (v. 4.5) |
-| addCommandMenu     | label<br/>title<br/>iconUrl<br/>idString<br>/url(v. 7.1) | Adds a menu (for commands) with parameters (v. 4.5)  |
-| deleteCommand      | idString       | Deletes commands (v. 4.5) |
-| deleteCommandMenu  | idString       | Deletes menus (v. 4.5)    |
-| addGroup           | column<br/>order | Adds groups (v. 8.4R07)<br/>descending or ascending (default) |
+| Action               | Map keys             | Description                                    |
+|:---------------------|:---------------------|:-----------------------------------------------|
+| addHeader            | label<br/>flags<br/>chop<br />width | Adds a header                   |
+| addRow               | id<br/>url<br/>target<br/>flags<br/>color<br/>toolTip<br/>selected | Adds a row |
+| addRowUnique         | same as addRow       | Adds a row with a unique ID                    |
+| addCell              | label<br/>sort<br/>url<br/>target<br/>flags<br/>toolTip | Adds a cell |
+| deleteSelectedRows   |                      | Deletes the selected rows                      |
+| clearSelectedRows    |                      | Removes selected mark on the selected rows     |
+| deleteRows           |                      | Deletes all rows                               |
+| set                  | pageSize<br/>flags<br/>maxHeight<br/>width<br/>allRowsCount<br/>selectedRows | Sets various fields |
+| defaultOrder         | column<br/>direction | Sets the column that by default orders the rows<br/>"asc" or "desc" |
+| setDropDownOptions.n |                      | Sets the drop-down options for column n        |
+| addCommand           | title<br/>url<br/>returnUrl<br/>idString<br/>menuIndex<br/>commandIndex | Adds a menu command with parameters (v. 4.5) |
+| addCommandMenu       | label<br/>title<br/>iconUrl<br/>idString<br>/url(v. 7.1) | Adds a menu (for commands) with parameters (v. 4.5)  |
+| deleteCommand        | idString            | Deletes commands (v. 4.5)                       |
+| deleteCommandMenu    | idString            | Deletes menus (v. 4.5)                          |
+| addGroup             | column<br/>order    | Adds groups (v. 8.4R07)<br/>descending or ascending (default) |
 
 menuIndex and commandIndex are optional zero-based indexes for placement.
 

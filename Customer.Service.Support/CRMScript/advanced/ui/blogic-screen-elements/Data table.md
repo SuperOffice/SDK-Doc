@@ -90,11 +90,11 @@ Criteria constrain which data to have in the table.
 | callbackSort       | The name of the function that sorts the result<br/>Located in Body tab    |
 
 **A word about ticket status:**
-If your table contains a column ticket.status and showTicketStatus is set, each tickets will have an icon showing it's status. Urgent tickets are also highlighted.
+If your table contains a column ticket.status and showTicketStatus is set, each tickets will have an icon showing its status. Urgent tickets are also highlighted.
 
 ## Functions
 
-Data table is inherited from `StaticGrid`. You can use `setFieldValue()` and `getFieldValue()` as described for [StaticGrid](@blogic_static_grid)
+Use `setFieldValue()` and `getFieldValue()` as described for [StaticGrid](@blogic_static_grid)
 
 ## Example
 
@@ -104,9 +104,9 @@ The ID is a hidden field.
 
 ```crmscript
 fields.0.field = ticket.title
-fields.0.label = Tittel
+fields.0.label = Title
 fields.1.field = ticket.owned_by.username
-fields.1.label = Eier
+fields.1.label = Owner
 fields.2.field = ticket.id
 fields.2.hidden = true
 fields.3.field = ticket.status
@@ -124,62 +124,15 @@ showTicketStatus = true
 url = ticket.exe?action=listTicket&ticketId=
 ```
 
-Now, lets **change the colors** of the rows: 
+### Using callbacks
 
-* We add a new hidden field to store the value of the colors. You can use any field not already in the table. Remember to update `fields.length`.
-* Then we tie in callback functions to do the magic.
-
-**Config:**
+* Add hidden fields to pass additional values to the functions
+* In the **Body** tab, write 2 functions, one for init and one for display
+* In the **Simple values** tab, set `callbackInit` and `callbackDisplay` to the function names.
 
 ```crmscript
-fields.4.hidden = true
-fields.4.field = ticket.author
-fields.length = 5
-
-colorField = ticket.author
 callbackInit = init
 callbackDisplay = formatDisplayField
 ```
 
-**Callback functions (in the Body tab):**
-
-```crmscript
-
-// Set up the SearchEngine as you like.
-Void init(SearchEngine se) {
-  se.addField("ticket.owned_by");
-}
-
-String formatDisplayField(SearchEngine se, String field) {
-  // Add a text on the owner's column for the users that have status not present
-  if(field == "ticket.owned_by.username") {
-    User u;
-    u.load(se.getField("ticket.owned_by").toInteger());
-    if (u.getValue("status") == "2")
-      return se.getField(field) + " : Ikke tilstede";
-    else
-      return se.getField(field);
-  }
-  
-  // Translate status ids to text
-  else if(field == "ticket.status") {
-    if(se.getField("ticket.status").toInteger() == 1)
-      return "Open";
-    else if (se.getField("ticket.status").toInteger() == 2)
-      return "Closed";
-    else if (se.getField("ticket.status").toInteger() == 3)
-      return "Postponed";
-    else if (se.getField("ticket.status").toInteger() == 4)
-      return "Deleted";
-  }
-  else if (field == "ticket.author") {
-    // Change the colorfield according to the ticket's status
-    if(se.getField("ticket.status").toInteger() == 1)
-      return "#8888FF";
-    else
-      return "#FF8888";
-  }
-  // default, return the field unchanged.
-  return se.getField(field);
-}
-```
+[Learn more about callbacks](@crmscript_blogic_view) in the CRMScript documentation

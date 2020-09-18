@@ -8,23 +8,23 @@ This element will display a grid of information fields where the values can be o
 
 ## Configuration
 
-| Setting       | Description                                     |
-|:--------------|:------------------------------------------------|
-| columns       | Number of columns                               |
-| header        | The header (value or field)                     |
-| headerIsField | Whether the header is a field (Bool)            |
-| headerChop    | Max number of characters to shown in the header |
-| width         | Width of element as HTML style<br/>For example 100% or 300px |
-| autoBreaks    | Whether to break columns will break (Bool)      |
-| autoUrl       | Whether to create automatic URLs for relevant fields (Bool) |
-| iconUrl       |                                                 |
-| iconHeader    |                                                 |
-| table         |                                                 |
-| showFavourite |                                                 |
-| entityIdField |                                                 |
-| statusMonitorFields.n.id |                                      |
-| statusMonitorFields.n.label |                                   |
-| column.n.width |                                                |
+| Setting        | Description                                     |
+|:---------------|:------------------------------------------------|
+| columns        | Number of columns                               |
+| header         | The header (value or field)                     |
+| headerIsField  | Whether the header is a field (Bool)            |
+| headerChop     | Max number of characters to shown in the header |
+| width          | Width of element as HTML style<br/>For example 100% or 300px |
+| autoBreaks     | Whether to break columns (Bool)                 |
+| autoUrl        | Whether to create automatic URLs for relevant fields (Bool)  |
+| iconUrl        |                                                 |
+| iconHeader     |                                                 |
+| table          |                                                 |
+| showFavourite  |                                                 |
+| entityIdField  |                                                 |
+| statusMonitorFields.n.id    |                                    |
+| statusMonitorFields.n.label |                                    |
+| column.n.width |                                                 |
 
 ### Where
 
@@ -39,20 +39,20 @@ This element will display a grid of information fields where the values can be o
 
 ### Group configuration
 
-| Value                       | Description                     |
-|:----------------------------|:--------------------------------|
-| groups.n.label              | Label of group n                |
-| groups.n.fields             | The number of fields in group n |
-| groups.n.fields.i.newColumn |                                 |
-| groups.n.fields.i.label     | Label of item i in group n      |
-| groups.n.fields.i.field     |                                 |
-| groups.n.fields.i.baseUrl   | | The URL of item i in group n  |
+| Value                         | Description                     |
+|:------------------------------|:--------------------------------|
+| groups.n.label                | Label of group n                |
+| groups.n.fields               | The number of fields in group n |
+| groups.n.fields.i.newColumn   |                                 |
+| groups.n.fields.i.label       | Label of item i in group n      |
+| groups.n.fields.i.field       |                                 |
+| groups.n.fields.i.baseUrl     | The URL of item i in group n    |
 | groups.n.fields.i.appendField | The field value to include to ULR of item i in group n |
-| groups.n.fields.i.function  |                                 |
-| groups.n.fields.i.chop      |                                 |
-| groups.n.fields.i.isHeader  |                                 |
-| groups.n.fields.i.isBold    |                                 |
-| groups.n.fields.i.nowrap    |                                 |
+| groups.n.fields.i.function    |                                 |
+| groups.n.fields.i.chop        |                                 |
+| groups.n.fields.i.isHeader    |                                 |
+| groups.n.fields.i.isBold      |                                 |
+| groups.n.fields.i.nowrap      |                                 |
 
 ### Fields at root configuration
 
