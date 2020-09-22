@@ -1,5 +1,5 @@
 ---
-title: Void addBinaryData(Byte[] p\_binaryData)
+title: Void addBinaryData(Byte[] p_binaryData)
 path: /EJScript/Classes/HTTP/Member functions/Void addBinaryData(Byte[] p_binaryData)
 intellisense: 1
 classref: 1
