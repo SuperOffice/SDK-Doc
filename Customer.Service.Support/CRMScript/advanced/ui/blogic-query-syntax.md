@@ -1,7 +1,7 @@
 ---
 title: Query syntax
 uid: crmscript_blogic_query_syntax
-sortOrder: 60
+sortOrder: 20
 ---
 
 Custom screens use a line-based query syntax that is specific to SuperOffice. You don't have to construct complicated SQL queries, which may vary from one database vendor to another.

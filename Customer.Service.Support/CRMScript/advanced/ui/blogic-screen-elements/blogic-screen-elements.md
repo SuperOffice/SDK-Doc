@@ -1,7 +1,7 @@
 ---
 title: Blogic screen elements
 uid: blogic_elements
-sortOrder: 9
+sortOrder: 100
 ---
 
 Screen elements are HTML like elements that can be used in a blogic screen.

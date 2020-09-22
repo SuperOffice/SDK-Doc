@@ -1,7 +1,7 @@
 ---
 title: Introduction to custom screens
 uid: crmscript_blogic_intro
-SortOrder: 50
+SortOrder: 10
 ---
 
 **Blogic** is a system for designing screens and displaying content in SuperOffice Service.

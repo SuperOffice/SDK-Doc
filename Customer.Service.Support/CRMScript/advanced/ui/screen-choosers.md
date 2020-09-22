@@ -1,7 +1,7 @@
 ---
 title: Screen choosers
 uid: crmscript_screen_choosers
-sortOrder: 70
+sortOrder: 40
 ---
 
 A **screen chooser** is a CRMScript that redirects to a custom screen or performs other actions. It can, for example, do calculations before displaying the screen.

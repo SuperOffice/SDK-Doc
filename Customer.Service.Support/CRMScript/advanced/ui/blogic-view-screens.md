@@ -1,7 +1,7 @@
 ---
 title: View screens
 uid: crmscript_blogic_view
-SortOrder: 70
+SortOrder: 12
 ---
 
 **View elements** displays read-only info. These elements may **not** contain children.
@@ -12,7 +12,7 @@ SortOrder: 70
 
 * [Link row (Anchor line)](@blogic_anchor_line): adds a horizontal line of clickable URLs (breadcrumbs)
 
-* [BR](@blogic_br): an HTML line-break (vertical space)
+* [BR](@blogic_br): adds an HTML line-break (vertical space)
 
 * [HR](@blogic_hr): adds a horizontal line
 
@@ -53,7 +53,7 @@ groups.length = 1
 
 In this example, there's 1 group with 2 fields.
 
-### HTML text with parser and database
+## HTML text with parser and database
 
 Adds HTML-formatted text, including data from the database as [parser variables](@crmscript_parser).
 
@@ -167,11 +167,11 @@ String formatDisplayField(SearchEngine se, String field) {
 }
 ```
 
-### Static grid
+## Static grid
 
 [Static grid](@blogic_static_grid) adds an empty static grid (table). You must add contents manually!
 
-### Chart
+## Chart
 
 [Chart](@blogic_chart) adds a chart using the JavaScript **charts** library.
 

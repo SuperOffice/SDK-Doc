@@ -1,21 +1,53 @@
 ---
 title: Screens with user input
 uid: crmscript_blogic_forms
-SortOrder: 70
+SortOrder: 14
 ---
 
 **Form elements** create user interaction through input fields. These elements may **not** contain children.
 
 ## Simple controls
 
-* [Button](@blogic_button): adds a clickable button to the screen
-* [Button row](@blogic_button_row)
 * [Checkbox](@blogic_checkbox): adds a checkbox to the screen
 * [Folder explorer](@blogic_tree_explorer)
 * [Language menu](@blogic_language_menu): spell-checker for input fields
 * [Radio button](@blogic_radiobuttons): adds a radio button to the screen
 * [Text](@blogic_text): adds a single-line text input field
 * [Text area](@blogic_textarea): adds an input field that can span several lines
+
+### Buttons
+
+When the user clicks a button in an interactive screen, something should happen. You have to create a CRMScript to describe that something.
+
+* [Button](@blogic_button): adds a clickable button to the screen
+* [Button row](@blogic_button_row)
+
+This example shows what happens when someone clicks **Cancel** in the **Edit ticket** screen.
+
+```crmscript
+String ticketId = getVariable("entryId");
+User u;
+u.load(getVariable("activeUser").toInteger());
+
+Integer actionType = getCgiVariable("actionType").toInteger();
+Bool newWindow;
+FHBitSet flags;
+flags.set(u.getValue("flags").toInteger());
+
+newWindow = flags.getBitNo(11);
+
+
+if (ticketId.toInteger() > 0) {
+  if (newWindow && (actionType == 1 || actionType == 2))
+    setVariable("url", "?action=doScreenDefinition&idString=ej_closeTicket&ticketId=" + ticketId);
+  else
+    setVariable("url", getProgram(1) + "?action=listTicketMessages&ticketId=" + ticketId);
+}
+else if (getCgiVariable("custId").toInteger() > 0)
+  setVariable("url", getProgram(1) + "?action=viewCustomer&id=" + getCgiVariable("custId"));
+else
+  setVariable("url", getProgram(1) + "?action=mainMenu");
+```
 
 ## Drop-downs
 

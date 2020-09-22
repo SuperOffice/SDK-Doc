@@ -1,7 +1,7 @@
 ---
 title: URL parameters
 uid: crmscript_url_parameters
-SortOrder: 110
+SortOrder: 60
 ---
 
 **URL parameters** lets you control SuperOffice Service using simple HTTP commands. These commands are similar to a REST API. However, they return a full HTML user interface, not JSON or XML as REST would return.
@@ -33,7 +33,7 @@ For example, `action=listTickets` or `action=doScript&id=123`.
 |:---------------------|:---------------------------------------------|
 | doScript             | id - The ID of the script<br/>includeId - The include ID of the script |
 | editScript           | Same as doScript                             |
-| doScreenDefintion    | id - The ID of the screen<br/>idString - the ID string of the screen |
+| doScreenDefintion    | id - The ID of the screen<br/>idString - the ID string of the screen   |
 | editScreenDefinition | Same as doScreenDefintion                    |
 
 > [!NOTE]

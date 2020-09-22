@@ -1,7 +1,7 @@
 ---
 title: Extra menus
 uid: crmscript_extra_menus
-SortOrder: 52
+SortOrder: 50
 ---
 
 **Extra menus** are buttons, menus, links, shortcuts, lists and so on that you can add to SuperOffice Service to make  something easily available. Specifically:

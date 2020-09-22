@@ -1,7 +1,7 @@
 ---
 title: Custom screen layout
 uid: crmscript_blogic_layout
-sortOrder: 70
+sortOrder: 16
 ---
 
 **Group elements** are containers - they create a hierarchy of elements and determine the layout of the screen.

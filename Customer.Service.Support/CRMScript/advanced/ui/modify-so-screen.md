@@ -1,7 +1,7 @@
 ---
 title: Modify existing screen
 uid: crmscript_modify_so_screen
-sortOrder: 70
+sortOrder: 18
 ---
 
 The standard SuperOffice screens are locked and can't be edited. These defaults will be overwritten each time the application is upgraded.

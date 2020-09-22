@@ -1,7 +1,7 @@
 ---
 title: Button scripts
 uid: crmscript_button_scripts
-SortOrder: 100
+SortOrder: 55
 ---
 
 A **button script** is a CRMScript that is referenced by its **includeId** and will be run when the user clicks a custom button. Setting it up is a simple 2-step process:
