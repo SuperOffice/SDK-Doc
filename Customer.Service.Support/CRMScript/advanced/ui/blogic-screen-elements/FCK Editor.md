@@ -28,8 +28,7 @@ Learn more:
 
 > [!NOTE] Browsers that don't support the FCKEditor (Opera) must have plaintext = true.
 
-> [!TIP]
-> For the CK editor to fill out the screen vertically, the config variable **verticalSpace = rest** must be set. If it's inside a pane the `Panes` element must also have this config variable.
+For the CK editor to fill out the screen vertically, the config variable **verticalSpace = rest** must be set. If it's inside a pane the `Panes` element must also have this config variable.
 
 ## Functions
 
@@ -48,7 +47,7 @@ Sets the content of the editor to value.
 
 | Action                 | Map keys               | Description   |
 |:-----------------------|:-----------------------|:--------------|
-| config                 |                        | Semicolon-separated config values for the editor<br/>Will overwrite existing config.|
+| config                 |                        | Semicolon-separated config values for the editor<br/>Will overwrite existing config. |
 | selectInsertTextValues | ticketId<br/>faqAccess<br/>customerId<br/>userId<br/>attachmentIds | Passes config to element "Select Insert Text". |
 
 **faqAccess:**
