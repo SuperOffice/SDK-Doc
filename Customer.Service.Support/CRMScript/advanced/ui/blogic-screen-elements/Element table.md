@@ -37,7 +37,4 @@ You can set and position a labels, config vertical space, and config dynamic res
 | sizeAttributes_absoluteWidth  | Sets a fixed width for this element               |
 
 > [!NOTE]
-> If multiple child elements have verticalSpace=rest, the remaining space will be divided equally.
-
-> [!NOTE]
-> Size attributes apply only to child elements that support dynamic resizing. If not supported, these attributes will be ignored.
+> If multiple child elements have verticalSpace=rest, the remaining space will be divided equally.<br/>Size attributes apply only to child elements that support dynamic resizing. If not supported, these attributes will be ignored.
