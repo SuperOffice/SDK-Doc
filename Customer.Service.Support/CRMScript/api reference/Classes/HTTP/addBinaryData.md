@@ -16,7 +16,7 @@ doing that. Normally, you also want to add a Content-Type header, indicating wha
 ###Parameter:###
 
 
- - p\_binaryData: An array of Bytes containing the binary data you want to apply to the request body
+ - p_binaryData: An array of Bytes containing the binary data you want to apply to the request body
 
 
 
