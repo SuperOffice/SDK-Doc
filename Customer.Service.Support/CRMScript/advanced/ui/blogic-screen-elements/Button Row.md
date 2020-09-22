@@ -8,14 +8,25 @@ This element adds a row of clickable buttons to your screen.
 
 ## Configuration
 
-| Value             | Description                    |
-|:------------------|:-------------------------------|
-| buttons.i.name    | adds a name to the ith button  |
-| buttons.i.label   | adds a value to the ith button |
-| buttons.i.warning | adds a warning message<br/>shown in a pop-up when the button is pressed |
-| buttons.i.iconurl | |
-| buttons.i.style   | |
-| align             | can be set to justify the button row <br/> left, center (default), right |
+| Value             | Description                                                             |
+|:------------------|:------------------------------------------------------------------------|
+| buttons.i.name    | Adds a name to the ith button                                           |
+| buttons.i.label   | Adds a value to the ith button                                          |
+| buttons.i.warning | Adds a warning message<br/>Shown in a pop-up when the button is pressed |
+| buttons.i.iconurl | Custom icon to use                                                      |
+| buttons.i.style   |                                                                         |
+| align             | Can be set to justify the row<br/>left, center (default), right         |
+
+### Styles
+
+* StyleNormal
+* StyleGreen
+* StyleBlue
+* StyleRed
+* StyleLargeBlue
+* StyleLargeGreen
+* StyleSmall
+* StyleIconOnly
 
 ## Example
 
@@ -34,13 +45,9 @@ buttons.length = 3
 
 ### setFieldValue(String action, Map values)
 
-**addButton:**
-
-* name
-* label
-* warning
-* iconUrl
-* className
+| Action    | Map keys               | Description                                            |
+|:----------|:-----------------------|:-------------------------------------------------------|
+| addButton | name<br/>label<br/>warning<br/>iconUrl<br/>className | Adds a button to the row |
 
 > [!NOTE]
 > The name of the buttons must be mapped to the scripts that might be run for the current screen.

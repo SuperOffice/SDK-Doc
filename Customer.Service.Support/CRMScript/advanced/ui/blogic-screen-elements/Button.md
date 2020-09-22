@@ -10,14 +10,14 @@ The `button` element adds a clickable button to your screen. Used to submit form
 
 | Setting | Description                                  |
 |:--------|:---------------------------------------------|
-| title   | name of button                               |
+| title   | Name of button                               |
 | onClick | JavaScript called when the button is pressed |
 
 ## Functions
 
 ### getFieldValue(String field)
 
-Returns the field.
+Returns a field.
 
 ### setFieldValue(String field, Map value)
 

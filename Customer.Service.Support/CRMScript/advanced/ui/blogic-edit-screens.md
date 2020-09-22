@@ -4,7 +4,106 @@ uid: crmscript_blogic_forms
 SortOrder: 14
 ---
 
-**Form elements** create user interaction through input fields. These elements may **not** contain children.
+**Form elements** create user interaction through input fields.
+
+* These elements may **not** contain children.
+* These elements should be located in a [Form Page element](@blogic_form_page)
+
+## Buttons
+
+Depending on which behavior you want, you can either add button elements (single or row) or configure the form page.
+
+### [Button](@blogic_button) element
+
+```crmscript
+button.title = "Click bait"
+button.onClick = onclick="alert('Wow! You actually clicked it!');"
+```
+
+### [Button row](@blogic_button_row) element
+
+```crmscript
+buttons.0.name = ok
+buttons.0.label = Ok
+buttons.1.name = cancel
+buttons.1.label = Cancel
+buttons.length = 2
+align = right
+```
+
+> [!NOTE]
+> The name of each button (*ok* and *cancel* in this case) must be mapped to scripts in the **Buttons** tab.
+
+### Configure the form page
+
+**Add button in Simple values tab:**
+
+```crmscript
+HtmlElement formPage;
+
+Map m;
+m.insert("name", "superButton");
+m.insert("label", "Pick me!");
+m.insert("style", "StyleGreen");
+m.insert("warning", "Are you sure?");
+
+formPage.setFieldValue("addButton", m);
+```
+
+**Add button in creation script:**
+
+This is useful when you need to set conditions for showing the button.
+
+```crmscript
+HtmlElement formPage;
+if (ticketId > 0 && ticket.getValue("status") != "4" && getActiveUser().isAdministrator() && getCgiVariable("actionType").toInteger() == 2) {
+  Map m;
+  m.insert("name", "delete");
+  m.insert("label", getLanguageVariable("delete"));
+  m.insert("warning", getLanguageVariable("sureDelete"));
+  m.insert("style", "red");
+  formPage.setFieldValue("addButton", m);
+}
+```
+
+> [!NOTE]
+> Regardless of whether you use simple values or the creation script, the name of the button must be mapped to a script in the **Buttons** tab.
+
+### Button actions
+
+When the user clicks a button in an interactive screen (form), something should happen. You have to create a CRMScript to describe that something.
+
+This example shows what happens when someone clicks **Cancel** in the **Edit ticket** screen.
+
+```crmscript
+String ticketId = getVariable("entryId");
+
+User u;
+u.load(getVariable("activeUser").toInteger());
+
+Integer actionType = getCgiVariable("actionType").toInteger();
+
+FHBitSet flags;
+flags.set(u.getValue("flags").toInteger());
+
+Bool newWindow = flags.getBitNo(11);
+
+
+if (ticketId.toInteger() > 0) {
+  if (newWindow && (actionType == 1 || actionType == 2)) {
+    setVariable("url", "?action=doScreenDefinition&idString=ej_closeTicket&ticketId=" + ticketId);
+  }
+  else {
+    setVariable("url", getProgram(1) + "?action=listTicketMessages&ticketId=" + ticketId);
+  }
+}
+else if (getCgiVariable("custId").toInteger() > 0) {
+  setVariable("url", getProgram(1) + "?action=viewCustomer&id=" + getCgiVariable("custId"));
+}
+else {
+  setVariable("url", getProgram(1) + "?action=mainMenu");
+}
+```
 
 ## Simple controls
 
@@ -14,40 +113,6 @@ SortOrder: 14
 * [Radio button](@blogic_radiobuttons): adds a radio button to the screen
 * [Text](@blogic_text): adds a single-line text input field
 * [Text area](@blogic_textarea): adds an input field that can span several lines
-
-### Buttons
-
-When the user clicks a button in an interactive screen, something should happen. You have to create a CRMScript to describe that something.
-
-* [Button](@blogic_button): adds a clickable button to the screen
-* [Button row](@blogic_button_row)
-
-This example shows what happens when someone clicks **Cancel** in the **Edit ticket** screen.
-
-```crmscript
-String ticketId = getVariable("entryId");
-User u;
-u.load(getVariable("activeUser").toInteger());
-
-Integer actionType = getCgiVariable("actionType").toInteger();
-Bool newWindow;
-FHBitSet flags;
-flags.set(u.getValue("flags").toInteger());
-
-newWindow = flags.getBitNo(11);
-
-
-if (ticketId.toInteger() > 0) {
-  if (newWindow && (actionType == 1 || actionType == 2))
-    setVariable("url", "?action=doScreenDefinition&idString=ej_closeTicket&ticketId=" + ticketId);
-  else
-    setVariable("url", getProgram(1) + "?action=listTicketMessages&ticketId=" + ticketId);
-}
-else if (getCgiVariable("custId").toInteger() > 0)
-  setVariable("url", getProgram(1) + "?action=viewCustomer&id=" + getCgiVariable("custId"));
-else
-  setVariable("url", getProgram(1) + "?action=mainMenu");
-```
 
 ## Drop-downs
 
