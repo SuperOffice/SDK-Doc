@@ -8,13 +8,18 @@ Adds radio buttons to your screen.
 
 ## Configuration
 
-* buttons.value
-* buttons.label
-* buttons.checked
+| Setting           | Description                                         |
+|:------------------|:----------------------------------------------------|
+| label             | UI label for the group of options                   |
+| buttons.length    | The number of items                                 |
+| buttons.i.value   | Value of option                                     |
+| buttons.i.label   | UI label of option                                  |
+| buttons.i.checked | If true, will set the option as selected by default |
 
 ## Example
 
 ```crmscript
+label = Meal
 buttons.0.value = lunch
 buttons.0.label = Lunch
 buttons.0.checked = true
@@ -29,24 +34,20 @@ buttons.length = 2
 
 Returns the value of the checked button.
 
+### setFieldValue(String action, Map values)
+
+| Action     | Map keys                    | Description                  |
+|:-----------|:----------------------------|:-----------------------------|
+| addButton  | label<br/>value<br/>checked | Adds a button                |
+| setChecked | label<br/>buttonValue       | Sets a button value (0 or 1) |
+
+```crmscript
+Map m;
+m.insert("label", "Red");
+m.insert("value", "red");
+m.insert("checked", "0" );
+```
+
 ### toString()
 
 Converts the value of the checked button to a string.
-
-### setFieldValue("addButton", Map)
-
-For adding buttons.
-
-```crmscript
-values.insert("value", <buttonValue>);
-values.insert("label",< buttonLabel>);
-values.insert("checked", <buttonChecked> (0 or 1) );
-```
-
-### setFieldValue("setChecked", Map)
-
-For setting the checked button.
-
-```crmscript
-values.insert("buttonValue", value of button to be checked);
-```

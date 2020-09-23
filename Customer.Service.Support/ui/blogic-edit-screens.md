@@ -105,12 +105,74 @@ else {
 }
 ```
 
+## [Checkboxes](@blogic_checkbox)
+
+A **checkbox** is an input element used to let a user select an option. It is shown as a square box that is ticked when activated.
+
+For example, you might want the user to accept terms or opt in before submitting the form.
+
+1. Add an element of type `checkbox` where you want it to appear.
+2. Set simple value `label` and optionally `suffixLabel`.
+
+```crmscript
+label = Crazy
+suffixLabel = I agree to use this experimental stuff
+```
+
+![Screen capture of checkbox](../images/crazy-checkbox.png)
+
+### Mark a checkbox
+
+To mark a checkbox in a script, call `setValue()`:
+
+```crmscript
+HtmlElement t;
+t.setValue("crazy", "1");
+```
+
+## [Radio button](@blogic_radiobuttons)
+
+A **radio button** is an input element used to let the user select only 1 option from a predefined set. The options in the set are mutually exclusive.
+
+1. Add an element of type `radiobuttons` where you want it to appear.
+2. Set simple value `label` and then specify each option. Remember to set `buttons.length` accordingly.
+
+For example, let's say we're picking t-shirt size:
+
+```crmscript
+label = Size
+buttons.0.value = small
+buttons.0.label = Small
+buttons.1.value = medium
+buttons.1.label = Medium
+buttons.1.checked = true
+buttons.1.value = large
+buttons.1.label = Large
+buttons.length = 3
+```
+
+![Screen capture of radio buttons](../images/size-radio-buttons.png)
+
+Next, we're adding another option and changing which option is selected in the creation script:
+
+```crmscript
+HtmlElement formPage;
+Map m;
+m.insert("label", "Child");
+m.insert("value", "child");
+formPage.setFieldValue("addButton", m);
+
+Map checked;
+checked.insert("value", "child");
+checked.insert("buttonValue", "1");
+
+formPage.setFieldValue("setChecked", checked);
+```
+
 ## Simple controls
 
-* [Checkbox](@blogic_checkbox): adds a checkbox to the screen
 * [Folder explorer](@blogic_tree_explorer)
 * [Language menu](@blogic_language_menu): spell-checker for input fields
-* [Radio button](@blogic_radiobuttons): adds a radio button to the screen
 * [Text](@blogic_text): adds a single-line text input field
 * [Text area](@blogic_textarea): adds an input field that can span several lines
 

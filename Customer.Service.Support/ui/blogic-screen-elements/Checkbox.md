@@ -8,9 +8,10 @@ Adds a checkbox to your screen.
 
 ## Configuration
 
-| Setting     | Description                                            |
-|:------------|:-------------------------------------------------------|
-| suffixLabel | optional label, displayed to the right of the checkbox |
+| Setting     | Description                                             |
+|:------------|:--------------------------------------------------------|
+| label       | UI label, displayed to the left of the box              |
+| suffixLabel | Optional description, displayed to the right of the box |
 
 ## Functions
 
