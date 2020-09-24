@@ -8,13 +8,14 @@ This element adds a drop-down menu to your screen.
 
 ## Configuration
 
-| Setting            | Description         |
-|:-------------------|:--------------------|
-| options.length     | The number of items |
-| options.i.value    |                     |
-| options.i.name     |                     |
+| Setting            | Description          |
+|:-------------------|:---------------------|
+| label              | UI label of the list |
+| options.length     | The number of items  |
+| options.i.value    | UI label of option   |
+| options.i.name     | ID of option         |
 | options.i.selected | If true, will set the option as selected by default (v. 7.5SR1) |
-| JavaScript         | HTML code           |
+| JavaScript         | HTML code            |
 
 ## Example
 
@@ -24,13 +25,13 @@ JavaScript = onblur="alert('Wow! You changed it!');"
 
 ## Functions
 
-### setFieldValue(String, Map) (v.7.0 SR1)
+### setFieldValue(String action, Map values) (v.7.0 SR1)
 
-| Action | Map keys       | Description        |
-|:-------|:---------------|:-------------------|
-| add    | name<br/>value |                    |
-| remove | value          | Remove all options with the given value |
-| clear  |                | Remove all options |
+| Action | Map keys       | Description                              |
+|:-------|:---------------|:-----------------------------------------|
+| add    | name<br/>value | Adds an option                           |
+| remove | value          | Removes all options with the given value |
+| clear  |                | Removes all options                      |
 
 ### toString()
 

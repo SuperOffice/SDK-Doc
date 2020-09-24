@@ -130,7 +130,7 @@ HtmlElement t;
 t.setValue("crazy", "1");
 ```
 
-## [Radio button](@blogic_radiobuttons)
+## [Radio buttons](@blogic_radiobuttons)
 
 A **radio button** is an input element used to let the user select only 1 option from a predefined set. The options in the set are mutually exclusive.
 
@@ -146,8 +146,8 @@ buttons.0.label = Small
 buttons.1.value = medium
 buttons.1.label = Medium
 buttons.1.checked = true
-buttons.1.value = large
-buttons.1.label = Large
+buttons.2.value = large
+buttons.2.label = Large
 buttons.length = 3
 ```
 
@@ -169,18 +169,160 @@ checked.insert("buttonValue", "1");
 formPage.setFieldValue("setChecked", checked);
 ```
 
+## Drop-downs
+
+A **drop-down** is an input element used to let the user select exactly 1 option from a list.
+
+### [List-box](@blogic_listbox)
+
+To add a custom drop-down list:
+
+1. Add an element of type `list box` where you want it to appear.
+2. Set simple value `label` and then specify each option. Remember to set `options.length` accordingly.
+
+```crmscript
+label = Size
+options.0.value = small
+options.0.name = Small
+options.1.value = medium
+options.1.name = Medium
+options.1.selected = true
+options.2.value = large
+options.2.name = Large
+options.length = 3
+```
+
+![Screen capture of list box](../images/size-list-box.png)
+
+Next, we're replacing an option in the creation script:
+
+```crmscript
+HtmlElement formPage;
+Map new;
+new.insert("name", "Child");
+new.insert("value", "child");
+formPage.setFieldValue("add", new);
+
+Map old;
+old.insert("value", "large");
+formPage.setFieldValue("remove", old);
+```
+
+### [MDO list](@blogic_mdolist)
+
+Adds a drop-down list with values from an MDO list. You must specify which list you want to use.
+
+```crmscript
+label = Project type
+list = projecttype
+```
+
+![Screen capture of MDO list](../images/projecttype-mdo-list.png)
+
+> [!TIP]
+> Use **NSMDOAgent** to get an overview of all available MDO lists. If you want it alphabetical, use a Map. If not, simply print the *name* in the `foreach` loop.
+
+```crmscript!
+NSMDOAgent agent;
+
+String[] listNames = agent.GetListNames();
+
+Map sortedListNames;
+
+foreach(String name in listNames) {
+  sortedListNames.insert(name, "");
+}
+
+sortedListNames.first();
+
+while (!sortedListNames.eof()) {
+  printLine(sortedListNames.getKey());
+  sortedListNames.next();
+}
+```
+
+### [Related drop-downs](@blogic_related_dropdowns)
+
+Adds a custom drop-down list where the options depend on the value selected in another drop-down.
+
+In **tree mode**, you get 1 drop-down with a multi-level list.
+
+![Screen capture of related drop-down, tree-mode](../images/related-dropdown-tree.png)
+
+In **list-mode**, you get n drop-downs, either side-by-side or in a vertical list. Each level has its own label.
+
+![Screen capture of related drop-down, list-mode](../images/related-dropdown-printdownwards.png)
+
+#### Example
+
+Let's assume we're creating 3 drop-downs:
+
+* request
+* customer
+* the customer's email
+
+Because the IDs of a request and a customer might be identical, we add a prefix c to customer IDs.
+
+**Simple values:**
+
+```crmscript
+label = Related
+notEmptyDropdown = 0
+selectFromTree = true
+```
+
+**Creation script of element:**
+
+```crmscript
+HtmlElement e;
+Map m;
+
+SearchEngine se;
+se.addFields("ticket","id,title");
+se.addCriteria("ticket.status", "OperatorLt", "4", "OperatorAnd", 0);
+se.addOrder("ticket.id", true);
+
+for (se.execute(); !se.eof(); se.next()) {
+  m.insert("id", se.getField(0));
+  m.insert("value",  se.getField(1));
+  m.insert("isFolder", "0");
+  e.setFieldValue("addNode", m);
+}
+
+m.clear();
+
+SearchEngine cust;
+cust.addFields("ticket_customers","ticket_id,customer_id.display_name,customer_id");
+cust.addCriteria("ticket_customers.ticket_id.status", "OperatorLt", "4", "OperatorAnd", 0);
+
+for (cust.execute(); !cust.eof(); cust.next()) {
+  m.insert("id", "c" + cust.getField(2));
+  m.insert("parent", cust.getField(0));
+  m.insert("value",  cust.getField(1));
+  m.insert("isFolder", "0");
+  e.setFieldValue("addNode", m);
+}
+
+m.clear();
+
+SearchEngine email;
+email.addFields("cust_email","cust_id,email");
+
+for (email.execute(); !email.eof(); email.next()) {
+  m.insert("id", email.getField(1));
+  m.insert("parent", "c" + email.getField(0));
+  m.insert("value",  email.getField(1));
+  m.insert("isFolder", "0");
+  e.setFieldValue("addNode", m);
+}
+```
+
 ## Simple controls
 
 * [Folder explorer](@blogic_tree_explorer)
 * [Language menu](@blogic_language_menu): spell-checker for input fields
 * [Text](@blogic_text): adds a single-line text input field
 * [Text area](@blogic_textarea): adds an input field that can span several lines
-
-## Drop-downs
-
-* [List-box](@blogic_listbox): adds a custom drop-down list
-* [MDO list](@blogic_mdolist): adds an MDO list, must specify which list you want to use
-* [Related drop-downs](@blogic_related_dropdowns)
 
 ## Editors
 

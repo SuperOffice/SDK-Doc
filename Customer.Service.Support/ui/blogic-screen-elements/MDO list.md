@@ -4,6 +4,18 @@ uid: blogic_mdolist
 sortOrder: 13
 ---
 
-This element creates an MDO drop-down for any of the available lists in SuperOffice CRM.
+This element creates a drop-down for any of the available MDO lists in SuperOffice CRM.
 
-You need to supply the `list` parameter to specify which list you want, for example "PersInt".
+## Configuration
+
+| Setting | Description                                |
+|:--------|:-------------------------------------------|
+| label   | UI label of the list                       |
+| list    | The MDO list to get drop-down options from |
+
+## Example
+
+```crmscript
+label = Project type
+list = projecttype
+```
