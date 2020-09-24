@@ -8,17 +8,27 @@ This element creates an input field that can span several lines.
 
 ## Configuration
 
-| Setting    | Description                                              |
-|:-----------|:---------------------------------------------------------|
-| notEmpty   | If true, then the value of the text area cannot be empty |
-| readOnly   | If true, then the value cannot be changed                |
-| maxLength  | The max number of characters the text area can contain   |
-| cols       | The width of the text area (in characters)               |
-| rows       | The height of the text area (in characters)              |
+| Setting   | Description                                        |
+|:----------|:---------------------------------------------------|
+| label     | UI label                                           |
+| maxLength | The max number of characters the field can contain |
+| cols      | The width of the text area (in characters)         |
+| rows      | The height of the text area (in characters)        |
+| notEmpty  | Whether the field can be empty (Bool)              |
+| readOnly  | Whether the field can be changed (Bool)            |
+
+## Example
+
+```crmscript
+label = Comments
+cols = 40
+rows = 5
+notEmpty = false
+```
 
 ## Functions
 
-### setValue()
+### setValue(String value)
 
 Sets the initial contents of the text area.
 

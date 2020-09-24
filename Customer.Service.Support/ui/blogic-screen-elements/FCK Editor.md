@@ -4,7 +4,9 @@ uid: blogic_fck_editor
 sortOrder: 6
 ---
 
-This element allows you to create HTML formatted messages. You can insert images, tables, paragraphs, and so on.
+This element allows you to create HTML-formatted messages. You can insert images, tables, paragraphs, and so on.
+
+Consider using the newer [CK editor](@blogic_ck_editor).
 
 Learn more:
 
@@ -13,33 +15,40 @@ Learn more:
 
 ## Configuration
 
-| Setting           | Default | Description                                     |
-|:------------------|:--------|:------------------------------------------------|
-| FCKConfig         |         | Passes config values to the FCK editor          |
-| valueId           |         | Whether ticket ID is set to entry ID (true=yes) |
-| actionType        |         | 0 = new request<br/>1 = add message<br/> 2 = edit request |
-| showInsertText    | true    | Whether to show the control for inserting reply templates, FAQ entries, or previous messages below the editor |
-| plainText         | false   | Whether to shows a simple textarea with no options |
-| width             | 100%    |                                                 |
-| height            | 100%    |                                                 |
-| contactRecipientsName |     | The name of the contact recipients elements.<br/>This will ensure that parser variables in reply templates uses the correct customer (the one selected with the radio button). |
-| notEmpty          |         |                                                 |
-| toolbar           |         |                                                 |
+| Setting               | Default | Description                                               |
+|:----------------------|:--------|:----------------------------------------------------------|
+| label                 |         | UI label                                                  |
+| FCKConfig             |         | Passes config values to the editor                        |
+| actionType            |         | 0 = new request<br/>1 = add message<br/> 2 = edit request |
+| valueId               |         | Whether ticket ID is set to entry ID (Bool)               |
+| verticalSpace         |         | Must be set to *rest* for the editor to fill the screen vertically |
+| contactRecipientsName |         | The name of the contact-recipients elements.<br/>Ensure that parser variables in reply templates use the customer selected with the radio button. |
+| showInsertText        | true    | Whether to show the control for inserting reply templates, FAQ entries, or previous messages below the editor |
+| width                 | 100%    |                                                           |
+| height                | 100%    |                                                           |
+| plainText             | false   | Whether to shows a simple textarea with no options        |
+| notEmpty              |         |                                                           |
+| toolbar               |         |                                                           |
 
-> [!NOTE] Browsers that don't support the FCKEditor (Opera) must have plaintext = true.
+> [!NOTE]
+> Browsers that don't support the FCKEditor (Opera) must have plaintext = true.
 
-For the CK editor to fill out the screen vertically, the config variable **verticalSpace = rest** must be set. If it's inside a pane the `Panes` element must also have this config variable.
+### Vertical space
+
+For the editor to fill out the screen vertically, the config variable **verticalSpace = rest** must be set.
+
+If the editor is inside a pane, the `Panes` element must also have this config variable.
 
 ## Functions
 
-### getFieldValue(String field)`
+### getFieldValue(String field)
 
 | Value         | Description                                  |
 |:--------------|:---------------------------------------------|
 | attachmentIds | IDs of attachments as a comma-separated list |
-| plainText     | true if the editor is set to plaintext mode  |
+| plainText     | Whether the editor runs in plain-text mode   |
 
-### setValue(string)
+### setValue(String value)
 
 Sets the content of the editor to value.
 
@@ -47,7 +56,7 @@ Sets the content of the editor to value.
 
 | Action                 | Map keys               | Description   |
 |:-----------------------|:-----------------------|:--------------|
-| config                 |                        | Semicolon-separated config values for the editor<br/>Will overwrite existing config. |
+| config                 |                        | Semicolon-separated config values for the editor<br/>Will overwrite existing config! |
 | selectInsertTextValues | ticketId<br/>faqAccess<br/>customerId<br/>userId<br/>attachmentIds | Passes config to element "Select Insert Text". |
 
 **faqAccess:**
@@ -63,7 +72,7 @@ Returns the contents of the editor.
 
 ## Nesting
 
-The `FCK editor` element must be inside an `Element table`. Otherwise it will not fill out the width of the page. This is especially important when the editor is located inside a `Pane` element together with other elements.
+The `FCK editor` element must be inside an `Element table`. Otherwise, it will not fill out the width of the page. This is especially important when the editor is located inside a `Pane` element together with other elements.
 
 **Correct nesting:**
 

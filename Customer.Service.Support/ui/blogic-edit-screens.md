@@ -400,13 +400,65 @@ folder.setFieldValue("set", m);
 
 ## Text
 
-* [Language menu](@blogic_language_menu): spell-checker for input fields
-* [Text](@blogic_text): adds a single-line text input field
-* [Text area](@blogic_textarea): adds an input field that can span several lines
+For alphanumeric input, you can choose either a single-line field, a multi-line field (area), or an editor.
 
-* [CK editor](@blogic_ck_editor)
-* [FCK editor](@blogic_fck_editor)
-* HTML editor: **deprecated**
+### [Text](@blogic_text)
+
+**Text** restricts you to 1 line, but allows you to place restrictions on size and expected contents.
+
+This example sets up a field that requires a decimal number (float):
+
+```crmscript
+label = Price
+notEmpty = true
+maxLength = 20
+size = 10
+placeholder = 0.00
+isNumber = true
+precision = 2
+minValue = 0
+maxValue = 9 999 999
+noRangeCheck = false
+```
+
+![Screen capture of text field](../images/text-isnumber.png)
+
+### [Text area](@blogic_textarea)
+
+For multi-line input fields, you need to specify the size of the area. You don't have option to place restrictions on expected content as you do for *Text* elements.
+
+```crmscript
+label = Comments
+cols = 40
+rows = 5
+notEmpty = false
+```
+
+### [Language menu](@blogic_language_menu)
+
+Displays a drop-down with different languages. Used by the spell-checker for input fields.
+
+![Screen capture of text field](../images/language-menu.png)
+
+### [CK editor](@blogic_ck_editor) and [FCK editor](@blogic_fck_editor)
+
+These editor elements let users create HTML-formatted messages. They can insert images, tables, paragraphs, and so on.
+
+> [!NOTE]
+> The **CK editor** is newer and what you should aim to use.
+
+The editor must be inside an `Element table`. It is often placed directly before a `ContactAndRecipient` element, but it doesn't have to be.
+
+```crmscript
+actionType = 0
+CKConfig.toolbarStartupExpanded = true
+label = Editor 1
+showInsertText = true
+valueId = true
+verticalSpace = rest
+```
+
+![Screen capture of CK editor](../images/ck-editor.png)
 
 ## Context-specific elements
 

@@ -8,7 +8,7 @@ This element is used as a dictionary to check the spelling in an input field.
 
 ## Functions
 
-### setValue()
+### setValue(String word)
 
 Sets the language word.
 

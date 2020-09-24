@@ -14,8 +14,9 @@ Screen elements are grouped by type in the UI:
 
 ## Deprecated elements
 
+* Editor (use CK editor)
 * Info Fields (use Info Fields v2)
-* PinEdit (see FCK editor)
+* PinEdit (use CK editor)
 * Send To
 * Table (use Data table)
 
