@@ -317,14 +317,92 @@ for (email.execute(); !email.eof(); email.next()) {
 }
 ```
 
-## Simple controls
+## [Folder explorer](@blogic_tree_explorer) (tree explorer)
 
-* [Folder explorer](@blogic_tree_explorer)
+A **folder explorer** sets up information in an expandable tree. Think of it as a manually crafted multi-level menu. You build the tree by adding nodes and setting parent ID to the direct ancestor - except for the root node.
+
+1. Add an element of type `folder explorer` where you want it to appear.
+2. Set simple value `label`.
+3. In the creation script, start by setting up the root node.
+4. Next, add level-2 children with `parent.id` set to the ID you chose for the root.
+5. Continue adding childe nodes at increasingly lower levels.
+
+**Simple values:**
+
+```crmscript
+label = Folder
+```
+
+**Creation script:**
+
+```crmscript
+HtmlElement folder;
+
+Map m;
+
+m.insert("id", "1");
+m.insert("onclick", "alert('test');");
+m.insert("href", "https://community.superoffice.com/en/");
+m.insert("name", "Community");
+m.insert("tooltip", "Super tooltip");
+m.insert("target", "_blank");
+m.insert("order", "desc");
+m.insert("leaf", "true");
+m.insert("icon", "false");
+
+Map link;
+link.insert("href", "https://www.superoffice.com//");
+link.insert("target", "_blank");
+link.insert("tooltip", "SuperOffice");
+
+folder.setFieldValue("addEntry", m);
+folder.setFieldValue("addLink", link);
+
+m.clear();
+
+m.insert("id", "2");
+m.insert("href", "https://community.superoffice.com/en/customer/");
+m.insert("name", "Customer");
+m.insert("target", "_blank");
+m.insert("leaf", "true");
+m.insert("parent.id", "1");
+
+folder.setFieldValue("addEntry", m);
+m.clear();
+
+m.insert("id", "3");
+m.insert("href", "https://community.superoffice.com/en/technical/");
+m.insert("name", "Technical");
+m.insert("target", "_blank");
+m.insert("leaf", "true");
+m.insert("parent.id", "1");
+
+folder.setFieldValue("addEntry", m);
+m.clear();
+
+m.insert("id", "4");
+m.insert("href", "https://community.superoffice.com/en/developer/");
+m.insert("name", "Developer");
+m.insert("target", "_blank");
+m.insert("leaf", "true");
+m.insert("parent.id", "1");
+
+folder.setFieldValue("addEntry", m);
+
+m.clear();
+m.insert("sortbyName", "true");
+m.insert("expandId", "1");
+m.insert("pruneEmptyFolders", "true");
+folder.setFieldValue("set", m);
+```
+
+![Screen capture of folder explorer](../images/folder-explorer-community.png)
+
+## Text
+
 * [Language menu](@blogic_language_menu): spell-checker for input fields
 * [Text](@blogic_text): adds a single-line text input field
 * [Text area](@blogic_textarea): adds an input field that can span several lines
-
-## Editors
 
 * [CK editor](@blogic_ck_editor)
 * [FCK editor](@blogic_fck_editor)
