@@ -10,12 +10,14 @@ This element adds the attachment field to your screen.
 
 | Setting      | Description                             |
 |:-------------|:----------------------------------------|
+| label        | UI label                                |
 | multiple     | Allows uploading of several attachments |
-| noHardDelete | Will not delete the actual attachment from the database, only from the attachment component |
+| noHardDelete | Whether to delete the actual attachment from the database, or only from the attachment component |
 
 ## Example
 
 ```crmscript
+label = Attachments
 multiple = true
 ```
 
@@ -23,11 +25,13 @@ multiple = true
 
 ### setValue(String ids)
 
-The string should contain a comma-separated list of attachment IDs
+The string should contain a comma-separated list of attachment IDs.
 
-### setFieldValue("addAttachment", Map values)
+### setFieldValue(String action, Map values)
 
-The map should contain a key named **attachmentId** and the value of the attachment ID.
+| Action        | Map keys     | Description                          |
+|:--------------|:-------------|:-------------------------------------|
+| addAttachment | attachmentId | Adds an attachment with the given ID |
 
 > [!TIP]
 > To add multiple attachments, use `setFieldValue` once for each attachment.

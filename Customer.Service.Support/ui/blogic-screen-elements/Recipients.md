@@ -8,7 +8,14 @@ This element is used to specify email recipients.
 
 ## Configuration
 
-The following boolean values specify which lines to show:
+| Setting  | Description                                                        |
+|:---------|:-------------------------------------------------------------------|
+| label    | UI label                                                           |
+| ticketId | The related ticket<br/>Affects the values in the *copyTo* settings |
+
+### Which lines to show
+
+The following **boolean** values specify which lines to show:
 
 * copyToAll
 * copyToCreatedBy
@@ -17,8 +24,6 @@ The following boolean values specify which lines to show:
 * copyToOther
 * copyToOwner
 * copyToSelf
-
-In addition, `ticketId` may be set to specify the related ticket. This will affect the values in `copyToOwner`, and similar.
 
 ## Example
 
@@ -34,19 +39,19 @@ copyToSelf = true
 
 ## Functions
 
-### getFieldValue()
+### getFieldValue(String field)
 
-| Value                  | Description                                          |
-|:-----------------------|:-----------------------------------------------------|
-| to                     | Returns a properly formatted string of To-recipients |
-| cc                     | CC recipients                                        |
-| bcc                    | Bcc recipients                                       |
-| sms                    | Comma-separated SMS recipients                       |
-| isCopyToAnyCustomerSet | Whether a customer is among the recipients<br />1=yes, 0=no |
+| Field                  | Description                                                     |
+|:-----------------------|:----------------------------------------------------------------|
+| to                     | Returns a properly formatted string of To-recipients            |
+| cc                     | CC recipients                                                   |
+| bcc                    | Bcc recipients                                                  |
+| sms                    | Comma-separated SMS recipients                                  |
+| isCopyToAnyCustomerSet | Whether 1 or more recipients are customers<br />1 = yes, 0 = no |
 
-### setFieldValue(String, Map)
+### setFieldValue(String action, Map values)
 
-| Value                | Description                                        |
-|:---------------------|:---------------------------------------------------|
-| addCustomers         | Adds customers with IDs specified in the comma-separated list in the value `ids` |
-| setDefaultToCustomer | Enables the checkbox in front of the customer line |
+| Action               |  Map keys | Description                                                   |
+|:---------------------|:----------|:--------------------------------------------------------------|
+| addCustomers         | ids       | Adds customers with IDs specified in the comma-separated list |
+| setDefaultToCustomer | id        | Enables the checkbox in front of the customer line            |

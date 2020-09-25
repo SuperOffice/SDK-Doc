@@ -12,6 +12,50 @@ There's a wide range of elements that add an input field to select an entity of 
 
 ## [Edit entity menu](@blogic_edit_entity_menu)
 
+### Default menu for customer
+
+**Simple values:**
+
+```crmscript
+entity = customer
+entityMenu = customer
+label = Entitymenu
+```
+
+![Screen capture of entity menu element](../images/entity-menu-element.png)
+
+### Custom menu
+
+**Creation script:**
+
+```crmscript
+HtmlElement em;
+Map m;
+
+m.insert("label", "VG");
+m.insert("iconUrl", "");
+m.insert("url", "http://www.vg.no");
+m.insert("target", "");
+em.setFieldValue("addMenu", m);
+m.clear();
+
+m.insert("label", "DN");
+m.insert("iconUrl", "");
+m.insert("url", "http://www.dn.no");
+m.insert("target", "");
+em.setFieldValue("addAnchor", m);
+m.clear();
+
+m.insert("label", "SuperOffice");
+m.insert("iconUrl", "");
+m.insert("url", "https://www.superoffice.com");
+m.insert("target", "");
+em.setFieldValue("addMenu", m);
+m.clear();
+```
+
+![Screen capture of custom entity menu](../images/entity-menu-custom.png)
+
 ## Requests
 
 ### [Message grid](@blogic_message_grid)
@@ -83,13 +127,35 @@ recipients.setFieldValue("addColumn", colMap)
 
 ### [Recipients](@blogic_recipients)
 
+```crmscript
+copyToAll = false
+copyToCreatedBy = true
+copyToCustomer = false
+copyToEab = false
+copyToOther = false
+copyToOwner = true
+copyToSelf = true
+label = Recipients 3
+ticketId = 1
+```
+
+![Screen capture of recipients element](../images/recipients-element.png)
+
 ### [Address book](@blogic_address_book)
 
 Organizes addresses in a tree view
 
 ### [Attachment](@blogic_attachment)
 
-Adds an attachment field to the screen
+Adds an attachment field to the screen.
+
+```crmscript
+label = Attachments
+multiple = true
+noHardDelete = true
+```
+
+![Screen capture of attachment element](../images/attachment-element.png)
 
 ## Sale
 
