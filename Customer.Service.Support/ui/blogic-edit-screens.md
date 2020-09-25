@@ -9,6 +9,8 @@ SortOrder: 14
 * These elements may **not** contain children.
 * These elements should be located in a [Form Page element](@blogic_form_page)
 
+This page covers the **basic** element types. [Entity specific form elements](@crmscript_blogic_forms_contextual) are covered separately.
+
 ## Buttons
 
 Depending on which behavior you want, you can either add button elements (single or row) or configure the form page.
@@ -459,20 +461,3 @@ verticalSpace = rest
 ```
 
 ![Screen capture of CK editor](../images/ck-editor.png)
-
-## Context-specific elements
-
-These form elements are specific to some SuperOffice entities.
-
-* [Address book](@blogic_address_book): organizes addresses in a tree view
-* [Attachment](@blogic_attachment): adds an attachment field to the screen
-* [Category membership](@blogic_category_membership): used to visualize (and change) which category a user belongs to
-* [Contact and recipient](@blogic_contact_and_recipient): represent customers connected to a request
-* [Edit entity menu](@blogic_edit_entity_menu)
-* [Invoice rows](@blogic_invoice)
-* [Message grid](@blogic_message_grid)
-* [Recipients](@blogic_recipients)
-
-## Select entity fields
-
-There's a wide range of elements that add an input field to select an entity of a specific type. For example, [Select company](@blogic_select_company) and [Select sale](@blogic_select_sale).
