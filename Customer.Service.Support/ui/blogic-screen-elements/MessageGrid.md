@@ -13,9 +13,10 @@ This element can be useful in screens such as **forward ticket** where we want t
 
 ## Configuration
 
-| Setting  | Description                                              |
-|:---------|:---------------------------------------------------------|
-| ticketId | If set, the messages on this ticket is put into the grid |
+| Setting  | Description                                            |
+|:---------|:-------------------------------------------------------|
+| label    | UI label                                               |
+| ticketId | Whether to add the messages on this ticket to the grid |
 
 ## Functions
 

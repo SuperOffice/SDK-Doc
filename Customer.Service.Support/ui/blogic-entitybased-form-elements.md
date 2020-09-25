@@ -14,9 +14,72 @@ There's a wide range of elements that add an input field to select an entity of 
 
 ## Requests
 
+### [Message grid](@blogic_message_grid)
+
+Displays the messages of a ticket in a grid. Each message has a check-box.
+
+```crmscript
+label = Messages
+ticketId = 3
+```
+
+![Screen capture of message grid element](../images/message-grid.png)
+
 ### [Contact and recipient](@blogic_contact_and_recipient)
 
-Represent customers connected to a request
+Represent customers connected to a request.
+
+**Creation script to set the ticket ID dynamically:**
+
+```crmscript
+Map config = getScreenElementConfig(screenElementIndex);
+config.insert("ticketId", getVariable("entryId"));
+
+addHtmlElement(getScreenElementId(screenElementIndex), getScreenElementName(screenElementIndex),
+  getScreenElementType(screenElementIndex), config);
+```
+
+**Creation script to override the default columns:**
+
+This removes the pre-defined columns (noDefaultFields) and adds columns for first name, last name, email, and phone.
+
+```crmscript
+HtmlElement recipients = addHtmlElement(getScreenElementId(screenElementIndex),
+  getScreenElementName(screenElementIndex),
+  getScreenElementType(screenElementIndex),
+  "ticketId = " + getCgiVariable("ticketId") + "\nlabel = Recipients\nnoDefaultFields = true\n");
+
+Map colMap;
+
+colMap.insert("displayField", "person.firstname");
+colMap.insert("searchField", "person.firstname");
+colMap.insert("operator", "OperatorBeginsWith");
+colMap.insert("label", "Firstname");
+recipients.setFieldValue("addColumn", colMap);
+
+colMap.clear();
+colMap.insert("displayField", "person.lastname");
+colMap.insert("searchField", "person.lastname");
+colMap.insert("operator", "OperatorBeginsWith");
+colMap.insert("label", "Lastname");
+recipients.setFieldValue("addColumn", colMap);
+colMap.clear();
+
+colMap.insert("displayField", "Email.email_address");
+colMap.insert("searchField", "Email.email_address");
+colMap.insert("operator", "OperatorBeginsWith");
+colMap.insert("label", "Email");
+recipients.setFieldValue("addColumn", colMap);
+colMap.clear();
+
+colMap.insert("displayField", "phone.phone");
+colMap.insert("searchField", "phone.phone");
+colMap.insert("operator", "OperatorBeginsWith");
+colMap.insert("label", "Phone");
+recipients.setFieldValue("addColumn", colMap)
+```
+
+![Screen capture of contact and recipients element](../images/contact-and-recipients-element.png)
 
 ### [Recipients](@blogic_recipients)
 
@@ -36,4 +99,15 @@ Adds an attachment field to the screen
 
 ### [Category membership](@blogic_category_membership)
 
-Used to visualize (and change) which category a user belongs to
+Used to visualize (and change) which category a user belongs to.
+
+```crmscript
+categoryId = 2
+label = Category
+noWeights = false
+```
+
+![Screen capture of category membership element](../images/category-membership.png)
+
+> [!TIP]
+> Read more about [working with users](@crmscript-class-user).
