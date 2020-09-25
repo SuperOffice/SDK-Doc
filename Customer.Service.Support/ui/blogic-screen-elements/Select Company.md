@@ -4,14 +4,14 @@ uid: blogic_select_company
 sortOrder: 19
 ---
 
-This element adds the **Select Company** field to your screen. This is the same feature that is available under new request.
+This element adds the **Select Company** field to your screen.
 
 ## Configuration
 
-| Value              | Description                    |
-|:-------------------|:-------------------------------|
-| notEmpty           | Will not allow an empty choice |
-| controlVersion     | Which control to use (v. 8.0<br/>1 = old, 2 = new |
+| Setting        | Description                                        |
+|:---------------|:---------------------------------------------------|
+| notEmpty       | Whether an empty choice is permitted               |
+| controlVersion | Which control to use (v. 8.0)<br/>1 = old, 2 = new |
 
 ### Selecting company
 
@@ -22,14 +22,14 @@ It's possible to define the columns used to select a company in reg_id=227 (v. 4
 
 ## Functions
 
-### setValue()
+### setValue(String id)
 
 Sets the selected company with the given ID.
 
 ### toInteger()
 
-Returns the selected company ID.
+Returns the selected company ID as a number.
 
 ### toString()
 
-Returns the selected company iID.
+Returns the selected company ID as a string.

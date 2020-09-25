@@ -1,21 +1,27 @@
 ---
-title: Select Customers
-uid: blogic_select_customers
+title: Select contacts
+uid: blogic_select_contacts
 sortOrder: 19
 ---
 
-This element adds the select customer fields to your screen. This element allows you to add more than one contact person.
+A variant of @blogic_select_contact that lets you select more than 1 contact person.
+
+Previously called *Select customer*.
 
 ## Functions
 
-### getFieldValue()
+### getFieldValue(String field)
 
-all: will return a list of all recipients.
+| Field | Description                      |
+|:------|:---------------------------------|
+| all   | Returns a list of all recipients |
 
 ### setFieldValue(String, Map)
 
-addCustomer": will add a single customer, with the ID specified in "id".
+| Action      | Map keys | Description                          |
+|:----------- |:---------|:-------------------------------------|
+| addCustomer | id       | Adds 1 contact with the specified ID |
 
 ### toString()
 
-Returns a comma-separated list of the ID's of the customers.
+Returns a comma-separated list of the IDs of the customers.

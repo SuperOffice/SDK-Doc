@@ -10,6 +10,28 @@ Some form elements are specific to SuperOffice entities.
 
 There's a wide range of elements that add an input field to select an entity of a specific type. For example, [Select company](@blogic_select_company) and [Select sale](@blogic_select_sale).
 
+![Screen capture of select entity drop-downs](../images/select-entity-dropdown.png)
+
+### Persons and organizations
+
+* @blogic_select_agent
+* @blogic_select_company
+* @blogic_select_contact_business
+* @blogic_select_contact_category
+* @blogic_select_contact and @blogic_select_contacts
+
+### Tickets
+
+* @blogic_select_category (for ticket)
+
+### Follow-ups
+
+* @blogic_select_appointment
+
+### Other
+
+* @blogic_select_crm_selection
+
 ## [Edit entity menu](@blogic_edit_entity_menu)
 
 ### Default menu for customer

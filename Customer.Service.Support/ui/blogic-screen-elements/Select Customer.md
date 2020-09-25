@@ -1,34 +1,36 @@
 ---
-title: Select Customer
-uid: blogic_select_customer
+title: Select contact
+uid: blogic_select_contact
 sortOrder: 19
 ---
 
-This element adds the **Select Customer** field to your screen, the same feature that is available under new request.
+This element adds the **Select contact** field to your screen.
+
+Previously called *Select customer*.
 
 ## Configuration
 
-| Value              | Description                    |
-|:-------------------|:-------------------------------|
-| notEmpty           | Will not allow an empty choice |
+| Setting  | Description                   |
+|:---------|:------------------------------|
+| notEmpty | Whether an empty choice is OK |
 
-### Selecting customers
+### Selecting a contact
 
-It's possible to define the columns used to select a customer in reg_id=226 (v. 4.9).
+It's possible to define the columns used to select a contact in reg_id=226 (v. 4.9).
 
 **Syntax:**
 [displayField:searchField:op:label],[displayField:searchField:op:label],[displayField:searchField:op:label]
 
 ## Functions
 
-### setValue()
+### setValue(String id)
 
-Sets the selected customer with the given ID.
+Sets the selected contact with the given ID.
 
 ### toInteger()
 
-Returns the selected customer ID.
+Returns the selected contact ID as a number.
 
 ### toString()
 
-Returns the selected customer ID.
+Returns the selected contact ID as a string.
