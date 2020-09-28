@@ -4,7 +4,7 @@ uid: blogic_edit_entity_menu
 sortOrder: 5
 ---
 
-This element adds an entity menu to a screen. Entity menus contain items that allow you to edit an entity, create a new entity, and merge the entity with others.
+This element adds an entity menu to a screen. Entity menus contain items that allow you to edit an entity, create a new entity, merge the entity with others.
 
 A default configured menu is available **for customers and companies**.
 

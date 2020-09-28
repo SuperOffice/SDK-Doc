@@ -8,29 +8,9 @@ Some form elements are specific to SuperOffice entities.
 
 ## Select entity fields
 
-There's a wide range of elements that add an input field to select an entity of a specific type. For example, [Select company](@blogic_select_company) and [Select sale](@blogic_select_sale).
+There's a wide range of elements that add a drop-down to select an entity of a specific type. For example, [Select company](@blogic_select_company) and [Select sale](@blogic_select_sale).
 
 ![Screen capture of select entity drop-downs](../images/select-entity-dropdown.png)
-
-### Persons and organizations
-
-* @blogic_select_agent
-* @blogic_select_company
-* @blogic_select_contact_business
-* @blogic_select_contact_category
-* @blogic_select_contact and @blogic_select_contacts
-
-### Tickets
-
-* @blogic_select_category (for ticket)
-
-### Follow-ups
-
-* @blogic_select_appointment
-
-### Other
-
-* @blogic_select_crm_selection
 
 ## [Edit entity menu](@blogic_edit_entity_menu)
 
@@ -78,7 +58,53 @@ m.clear();
 
 ![Screen capture of custom entity menu](../images/entity-menu-custom.png)
 
+## Persons and organizations
+
+**Selection drop-downs:**
+
+* @blogic_select_agent
+* @blogic_select_company
+* @blogic_select_contact_business
+* @blogic_select_contact_category
+* @blogic_select_contact and @blogic_select_contacts
+* @blogic_select_user
+
+### [Category membership](@blogic_category_membership) (for user)
+
+Used to visualize (and change) which category a user belongs to.
+
+```crmscript
+categoryId = 2
+label = Category
+noWeights = false
+```
+
+![Screen capture of category membership element](../images/category-membership.png)
+
+> [!TIP]
+> Read more about [working with users](@crmscript-class-user).
+
+## Follow-ups, dates, and time
+
+**Selection drop-downs:**
+
+* @blogic_select_appointment
+* @blogic_select_date
+* @blogic_select_datetime
+* @blogic_select_time
+* @blogic_select_timespan
+
 ## Requests
+
+**Selection drop-downs:**
+
+* @blogic_select_category (for ticket)
+* @blogic_select_priority (for ticket)
+* @blogic_select_message (from ticket)
+* @blogic_select_request_status
+* @blogic_select_faq
+* @blogic_select_reply_template
+* @blogic_select_insert_text
 
 ### [Message grid](@blogic_message_grid)
 
@@ -147,6 +173,8 @@ recipients.setFieldValue("addColumn", colMap)
 
 ![Screen capture of contact and recipients element](../images/contact-and-recipients-element.png)
 
+### [Request status](@blogic_select_ticket_status)
+
 ### [Recipients](@blogic_recipients)
 
 ```crmscript
@@ -179,23 +207,22 @@ noHardDelete = true
 
 ![Screen capture of attachment element](../images/attachment-element.png)
 
-## Sale
+## Sales and projects
+
+**Selection drop-downs:**
+
+* @blogic_select_sale
+* @blogic_select_project
 
 ### [Invoice rows](@blogic_invoice)
 
-## Users
+## Security and database
 
-### [Category membership](@blogic_category_membership)
+**Selection drop-downs:**
 
-Used to visualize (and change) which category a user belongs to.
-
-```crmscript
-categoryId = 2
-label = Category
-noWeights = false
-```
-
-![Screen capture of category membership element](../images/category-membership.png)
-
-> [!TIP]
-> Read more about [working with users](@crmscript-class-user).
+* @blogic_select_slevel
+* @blogic_select_crm_selection
+* @blogic_select_extra_field
+* @blogic_select_table
+* @blogic_select_relation
+* @blogic_select_multiple relations

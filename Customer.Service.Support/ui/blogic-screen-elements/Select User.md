@@ -8,29 +8,31 @@ This element is used to select a user in the system.
 
 ## Configuration
 
-| Value             | Description                  |
-|:------------------|:-----------------------------|
-| AddNone           | If true, then the value "none" is available in the drop-down |
-| AddNotDelegated   | If true, then the value "(not delegated)" is available |
-| AddDelegate       | If true, then the value "(Automatically assigned)" is available. From 3.0.11 |
-| AddAll            | If true, then the value "all users" are available |
-| AddNoValue        | If true, then empty is available |
-| AddActiveUser     | If true, then the value "(Active user)" is available in the drop-down |
-| AddNotPresent     | If true, then include users set as "Not present |
-| RemoveNone        | If true, then the blank value is removed from the drop-down |
-| AddDeleted        | If true, then deleted deleted users are available |
-| AddReadOnly       | If true, then users with read only status are available|
+The settings specify which users and options to add to the drop-down.
+
+| Setting         | Description                                         |
+|:----------------|:----------------------------------------------------|
+| AddNone         | Adds the value *None*                               |
+| RemoveNone      | Removes the blank value (None)                      |
+| AddNoValue      | Adds an empty entry (other/unset)                   |
+| AddNotDelegated | Adds the value *Not delegated*                      |
+| AddDelegate     | Adds the value *Automatically assigned* (v. 3.0.11) |
+| AddAll          | Adds the value *All users*                          |
+| AddActiveUser   | Adds the value *Active user*                        |
+| AddNotPresent   | Whether to include users with status = not present  |
+| AddReadOnly     | Whether to include users with status = read-only    |
+| AddDeleted      | Whether to include deleted users                    |
 
 ## Functions
 
-### setValue()
+### setValue(String id)
 
 Sets the user from the supplied ID.
 
 ### toString()
 
-Return the IS of the selected entry.
+Returns the ID of the selected user as a string.
 
 ### toInteger()
 
-Return the IS of the selected entry.
+Returns the ID of the selected user as a number.

@@ -4,14 +4,14 @@ uid: blogic_select_message
 sortOrder: 19
 ---
 
-This HTML element lets the user select a message from a ticket
+This element lets the user select a message from a ticket.
 
 ## Configuration
 
-| Value    | Description                                |
-|:---------|:-------------------------------------------|
-| ticketId | The ID of the ticket to list messages from |
-| addNone  | If true, none is added as a select value   |
+| Setting  | Description                                 |
+|:---------|:--------------------------------------------|
+| ticketId | The ID of the ticket to list messages from  |
+| addNone  | Whether to add none as a selectable value   |
 
 ## Functions
 
@@ -25,8 +25,8 @@ This HTML element lets the user select a message from a ticket
 
 ### toString()
 
-Returns the selected value.
+Returns the selected value as a string.
 
 ### toInteger()
 
-Returns the selected value.
+Returns the selected value as a number.

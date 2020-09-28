@@ -4,21 +4,21 @@ uid: blogic_select_datetime
 sortOrder: 19
 ---
 
-This element is used to input a DateTime.
+This element is used to input a [**DateTime**](@crmscript_datatypes_datetime).
 
 ## Configuration
 
-| Value              | Description                  |
-|:-------------------|:-----------------------------|
-| mayBeNull          | If true, then the element accepts an empty date. Otherwise, a valid date must be supplied |
-| empty              | Same as mayBeNull |
+| Setting   | Description                          |
+|:----------|:-------------------------------------|
+| mayBeNull | Whether the field is required (Bool) |
+| empty     | Whether the field is required (Bool) |
 
 ## Functions
 
-### setValue()
+### setValue(String dateTime)
 
-Sets the selected DateTime. The date must be on a standard format, such as YYYY-MM-DD HH:MI:SS. Other formats are also recognized.
+Sets the selected `DateTime`. The value must be formatted in a standard way, for example, YYYY-MM-DD HH:MI:SS.
 
 ### toString()
 
-Returns the selected date as a YYYY-MM-DD HH:MI:SS string.
+Returns the date as a string formatted as **YYYY-MM-DD HH:MI:SS**.

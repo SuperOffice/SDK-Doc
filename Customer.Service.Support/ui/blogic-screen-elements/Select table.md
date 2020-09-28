@@ -6,14 +6,14 @@ sortOrder: 19
 
 This element lets you choose a table from a tree selector.
 
-## Configuration values
+## Configuration
 
-| Value             | Description                  |
-|:------------------|:-----------------------------|
-| empty             | If true, an empty choice will be possible |
+| Setting | Description                          |
+|:--------|:-------------------------------------|
+| empty   | Whether this field can be left blank |
 
 ## Functions
 
-### setValue()
+### setValue(String value)
 
 ### toString()

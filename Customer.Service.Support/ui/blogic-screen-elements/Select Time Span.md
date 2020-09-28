@@ -6,24 +6,24 @@ sortOrder: 19
 
 This element adds a text input encoding the time-span in a string and a popup that lets you select time-spans with drop-down menus for hours, minutes, and so on.
 
+## Configuration
+
 The time-spans that can be selected are set to true in the config.
 
-| Value           | Description |
-|:----------------|:------------|
-| days            |             |
-| hours           |             |
-| minutes         |             |
-| seconds         |             |
-| empty           |             |
-| negatives       |             |
-| enableStartStop | If true, the element can be started and stopped and will count seconds if started |
-| returnMinutes   | If true, `toInteger()` will return the time-span in minutes instead of seconds
-| maxNum          |             |
-| minJumps        |             |
+| Setting         | Description                             |
+|:----------------|:----------------------------------------|
+| days            | Whether to add a drop-down for days     |
+| hours           | Whether to add a drop-down for hours    |
+| minutes         | Whether to add a drop-down for minutes  |
+| seconds         | Whether to add a drop-down for seconds  |
+| empty           | Whether the time-span can be left blank |
+| negatives       | Whether negative increments are allowed |
+| enableStartStop | Whether the element can be started and stopped (and count seconds if started) |
+| returnMinutes   | Whether `toInteger()` returns minutes or seconds (default) |
+| maxNum          | The upper limit of the time-span        |
+| minJumps        | The smallest increment of the time-span |
 
 ## Example
-
-This will create a TimeSpan where hours and minutes can be selected. 24 hours are selectable in the drop-down menu for hours, while every 15 minutes can be selected. These can also be set negative.
 
 ```crmscript
 days = false
@@ -36,3 +36,5 @@ negatives = true
 maxNum = 24
 minJumps = 15
 ```
+
+This configuration adds a set of drop-downs to select hours and minutes for the time-span. The user can select up to 24 hours and minutes in 15-minute increments.

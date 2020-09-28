@@ -5,36 +5,43 @@ sortOrder: 19
 ---
 
 This element is used to select a predefined text to insert into a message.
+
 Text can be selected from FAQ entries, reply templates, and previous messages.
 
 ## Configuration
 
-| Value              | Description                        |
-|:-------------------|:-----------------------------------|
-| htmlEditorName     | The name of an HTML editor element this element will be connected to |
-| customerId         | ID of customer to load into parser |
-| onlyLeafNodes      | Only leaf nodes can be selected    |
+| Setting        | Description                                                      |
+|:---------------|:-----------------------------------------------------------------|
+| htmlEditorName | The name of the editor element this element will be connected to |
+| customerId     | ID of customer to load into parser                               |
+| onlyLeafNodes  | Whether only leaf nodes can be selected                          |
 
 ## Functions
 
 ### toString()
 
-Returns the ID of the selected entry, prefixed with either "doc.", "faq.", or "msg." depending on the type of the selected entry.
+Returns the ID of the selected entry. The ID is prefixed depending on the type of the selected entry:
 
-### getFieldValue(string)
+* doc.
+* faq.
+* msg.
 
-Return the text of the selected entry
+### getFieldValue(String field)
+
+Returns the text of the selected entry.
 
 * selectedInsertText
-* attachmentIds"
+* attachmentIds
 
-### setFieldValue(string, values)
+### setFieldValue(String action, Map values)
 
 | Action   | Map keys               | Description                         |
 |:---------|:-----------------------|:------------------------------------|
 | selectInsertTextValues | ticketId<br/>faqAccess<br/>customerId<br/>userId<br/>attachmentIds | Sets different values. |
 
-These keys are used to determine which entries that can be selected. The screen must include a CGI variable named `actionType`, with the values 0, 1 or 2 for the this to automatically include messages, faqs, customer, and user parser variables.
+These keys are used to determine which entries can be selected.
+
+The screen must include a CGI variable named `actionType` and set to 0, 1, or 2 for messages, FAQs, and customer and user parser variables to be included automatically.
 
 **faqAccess:**
 

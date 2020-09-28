@@ -10,33 +10,37 @@ It can be used to select, for example, a customer, a user, an entry from an extr
 
 ## Configuration
 
-| Value              | Description                  |
-|:-------------------|:-----------------------------|
-| idField            | The column with the ID<br/>For example, ticket.id, customer.id) |
-| displayValueColumn | Which column in the display fields that should be displayed when the search dialog box is closed, and the element is "minimalized" |
-| orderField         | The field to use for sorting the search results |
-| orderDesc          | If true, then sort results descending |
-| limit              | The limit of returned hits (v.3.1.8) |
-| searchEmpty        | |
-| displayField       | The control may contain 1 or more displayFields (columns displayed from the search result) |
-| displayField.length| Used for more than 1 display field. |
-| displayField.n.field | Used for more than 1 display field. |
+| Setting              | Description                                                     |
+|:---------------------|:----------------------------------------------------------------|
+| idField              | The column with the ID<br/>For example, ticket.id, customer.id) |
+| displayValueColumn   | Which column in the display fields that should be displayed when the search dialog box is closed, and the element is minimized |
+| orderField           | The field to use for sorting the search results                 |
+| orderDesc            | The sort order<br/>true = descending                            |
+| limit                | Limits the search result (v.3.1.8)                              |
+| searchEmpty          |                                                                 |
+| displayField         | The control may contain 1 or more displayFields (columns displayed from the search result) |
+| displayField.length  | Used for more than 1 display field                              |
+| displayField.n.field | Used for more than 1 display field                              |
 
-Finally, the search may be restricted by "where" clauses:
+### Criteria
 
-* criteria.length": The number of where lines
-* criteria.n.field": The database field for criteria n
-* criteria.n.operator": The operator
-* criteria.n.value": The value
+Criteria constrain which data to have in the grid. This adds **where clauses**:
+
+| Value                  | Description                                                         |
+|:-----------------------|:--------------------------------------------------------------------|
+| criteria.n.operator    | The operator for this criterion<br/>For example,OperatorEquals      |
+| criteria.n.field       | The database field for this criterion                               |
+| criteria.length        | The total number of criteria. Must be given even if there is only 1 |
+| criteria.n.value       | The value of criterion n                                            |
 
 ## Functions
 
 ### setFieldValue()
 
-| Action          | Map keys | Description                          |
-|:----------------|:---------|:-------------------------------------|
-| addCriteria     | field<br/>operator<br/>values | Adds a criteria |
-| addDisplayField | field    | Adds a new display field             |
-| limit           |          | Set time limit of the returned hits (v. 3.1.8) |
+| Action          | Map keys | Description                                                           |
+|:----------------|:---------|:----------------------------------------------------------------------|
+| addCriteria     | field<br/>operator<br/>values | Adds a criteria                                  |
+| addDisplayField | field    | Adds a new display field                                              |
+| limit           |          | Set time limit of the returned hits (v. 3.1.8)                        |
 | setId           | id       | Set the id of the entry you want to be loaded as default (v. 3.1.8.8) |
-| clear           |          | Clears the selected value of the element (v. 4.2.21) |
+| clear           |          | Clears the selected value of the element (v. 4.2.21)                  |

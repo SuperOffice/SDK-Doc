@@ -4,14 +4,18 @@ uid: blogic_select_slevel
 sortOrder: 19
 ---
 
-This element is a drop-down containing the available security levels (internal and external).
+This element adds a drop-down containing the available security levels (internal and external).
+
+## Configuration
+
+No settings.
 
 ## Functions
 
 ### toIntger()
 
-Return 1 for internal or 2 for external.
+Returns 1 for internal or 2 for external.
 
-### setValue()
+### setValue(String value)
 
 Sets the value, 1 for internal or 2 for external.

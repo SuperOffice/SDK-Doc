@@ -8,9 +8,9 @@ This element is used to select a reply template or a reply template folder.
 
 ## Configuration
 
-| Value             | Description                  |
-|:------------------|:-----------------------------|
-| onlyLeafNodes     | If set to true, only leaf nodes may be selected. |
+| Setting       | Description                             |
+|:--------------|:----------------------------------------|
+| onlyLeafNodes | Whether only leaf nodes can be selected |
 
 ## Functions
 
@@ -19,4 +19,4 @@ This element is used to select a reply template or a reply template folder.
 Returns the ID of the selected node.
 
 > [!NOTE]
-> Folders will return "folder." plus ID, while reply templates will return only the ID.
+> If it is a folder, the ID is prefixed with "folder.".<br/>If it is a reply template, the returned string is just the ID.

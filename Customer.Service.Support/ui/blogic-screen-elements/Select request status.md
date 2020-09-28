@@ -4,33 +4,47 @@ uid: blogic_select_request_status
 sortOrder: 19
 ---
 
-This element includes a drop-down with all statuses and a calendar field for the date and time if the status selected is postponed.
+This element adds a **drop-down** with all statuses. It also adds a calendar field to pick the date and time for postponed requests.
 
 It is available in version 3.1.7.5
 
 ## Configuration
 
-| Value             | Description                  |
-|:------------------|:-----------------------------|
-| default           | The ID of the status you want as default |
-| ticketId          | If you set this value, the default status will be the status of the ticket. |
-| valueId           | If you set this to true, the entryId will be used as ticketId |
-| defaultAddMessage | If you set this to true and also set ticketId or valueId, the default status will be the same as for the standard add message screen. |
-| category          | The category of the ticket. If you set this category, the default status will be the same as in the standard new ticket screen, when this category is the standard category. This will only  apply if ticketId, valueId and default is not set. |
+| Setting           | Description                                                   |
+|:------------------|:--------------------------------------------------------------|
+| default           | The ID of the status you want as default                      |
+| ticketId          | Whether to use the status of the ticket as the default status |
+| valueId           | Whether to use entryId as ticketId                            |
+| defaultAddMessage | Whether to use the default status for adding messages for this user<br/>Used in combination with ticketId or valueId. |
+| category          | Whether to set the  default status to the one for new ticket for this user for the given category                     |
+
+### Default status
+
+If you set **category**, the default status will be the same as in the standard new ticket screen, when this category is the standard category.
+
+Category applies only if ticketId, valueId, and default are not set!
+
+If you set **defaultAddMessage**, the default status will be the same as in the standard add message screen.
+
+defaultAddMessage applies only if ticketId or valueId is set.
 
 ## Functions
 
 ### getFieldValue(String field)
 
-| Value             | Description                  |
-|:------------------|:-----------------------------|
+| Value             | Description                            |
+|:------------------|:---------------------------------------|
 | activate          | Returns the date in the calendar field |
-| status            | Returns the ID of the status |
+| status            | Returns the ID of the status           |
 
-### setFieldValue("set", Map values)
+### setFieldValue(Sting action, Map values)
 
-1. Set default status by inserting status and ID in the map.
-2. Set the calendar field by inserting activate and a date + time in the map.
+| Action | Map keys            | Description         |
+|:-------|:--------------------|:--------------------|
+| set    | activate<br/>status | Sets various values |
+
+1. Set the default status by inserting key = status and value = ID to the map.
+2. Set the calendar field by inserting key = activate and value = DateTime to the map.
 
 ```crmscript
 map.insert("status", "2");

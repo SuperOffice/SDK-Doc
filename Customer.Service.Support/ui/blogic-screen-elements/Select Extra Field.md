@@ -1,18 +1,18 @@
 ---
-title: Select Extra Field
+title: Select extra field
 uid: blogic_select_extra_field
 sortOrder: 19
 ---
 
-This elements is used to input the contents of an extra field. The input element depends on the field's type.
+This element is used to get input for an [extra field](@crmscript_extra_fields). The specifics of this element depend on the extra field's **type**.
 
 ## Configuration
 
-| Value    | Description                  |
-|:---------|:-----------------------------|
-| id       | The ID of the extra field    |
+| Setting  | Description                                                                      |
+|:---------|:---------------------------------------------------------------------------------|
+| id       | The ID of the extra field                                                        |
 | field    | The name of the extra field, incl. table name.<br/>For example, ticket.x_myfield |
-| notEmpty | If true, the field will not allow empty values
+| notEmpty | Whether the field can be left blank (required vs. optional)                      |
 
 ### Ticket relations
 
@@ -23,10 +23,10 @@ For ticket relations, it is possible to define the columns used to select a tick
 
 ## Functions
 
-Depending ofn the type of the field, the `setValue()` and `getValue()` methods will return the selected value (a date, the ID in a dropdown, a text value, and so on).
+Depending on the type of the field, the `setValue()` and `getValue()` methods will return the selected value. For example, a date, the ID in a drop-down, or a text value.
 
 ### getValue()
 
-### setValue()
+### setValue(String value)
 
 The flags of the extra field (such as **cannot be empty**) are used to specify the behavior of the field.

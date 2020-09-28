@@ -4,20 +4,28 @@ uid: blogic_select_time
 sortOrder: 19
 ---
 
-This element is used to get time as input.
+This element is used to get [**Time**](@crmscript_datatypes_time) as input.
 
 ## Configuration
 
-| Value             | Description                  |
-|:------------------|:-----------------------------|
-| minInc            | Can be used to set a minute based gap between each allowable entry (making the drop-down smaller)<br/>For example, minInc="15", you get 15-minute increments - 4 options per hour. |
+| Setting | Description                                         |
+|:--------|:----------------------------------------------------|
+| minInc  | Sets the gap in minutes between each allowable entry<br/>Fewer options per hour makes the drop-down smaller |
+
+## Example
+
+```crmscript
+minInc = 15
+```
+
+This setting gives you 15-minute increments - 4 options per hour.
 
 ## Functions
 
-### setValue()
+### setValue(String time)
 
-Sets the value from a string with format "HH:MI:SS".
+Sets the selected `Time`. The value must be formatted as **HH:MI:SS**.
 
 ### toString()
 
-Returns the value in the same format.
+Returns the time as a string formatted as **HH:MI:SS**.
