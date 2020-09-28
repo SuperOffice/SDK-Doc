@@ -71,8 +71,14 @@ Each line is interpreted independent of the other lines. Note that there's **no 
 
 Keys are automatically sorted alphabetically when you save an element.
 
-> [!NOTE]
-> Many elements have a **body**, which can be quite long. Settings for the element body are set in the **Body** tab, not the **Simple values** tab.
+### Body
+
+Many elements have a **body**, which can be quite long. Settings for the element body are set in the **Body** tab, not the **Simple values** tab.
+
+The body is a CRMScript. It can:
+
+* print any HTML to the screen using `print()`
+* retrieve any configuration variable using `getVariable()` (v. 4.11)
 
 ### Creation scripts
 

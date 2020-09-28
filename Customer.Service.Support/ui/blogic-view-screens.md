@@ -169,7 +169,7 @@ String formatDisplayField(SearchEngine se, String field) {
 
 ## Static grid
 
-[Static grid](@blogic_static_grid) adds an empty static grid (table). You must add contents manually!
+[Static grid](@blogic_static_grid) adds an empty static grid (table). You must add content manually!
 
 ## Chart
 
@@ -187,6 +187,61 @@ String formatDisplayField(SearchEngine se, String field) {
 
 ## Scripts
 
-* [ejScript](@blogic_ejscript): for the `body` config element
+The [Ejscript element](@blogic_ejscript_element) adds a completely custom element to your screen. Use CRMScript to set content and behavior.
 
-* [Ejscript element](@blogic_ejscript_element): a completely scriptable element
+### Example: add a heading
+
+```crmscript
+print("<b>" + getLanguageVariable("newTicketDesc") + "</b>");
+```
+
+Perhaps with some additional styling:
+
+```crmscript
+print("<div style='font-size:15pt;'>" + getLanguageVariable("msg1") + "</div>");
+```
+
+### Example: close ticket
+
+```crmscript
+print("<script>\n");
+print("$(document).on('ready', function() { if (top.opener && !top.opener.closed) top.opener.location.reload(true);\n");
+print("window.open('', '_self', ''); window.close();});\n");
+print("</script>\n");
+```
+
+### Example: resize element
+
+```crmscript
+String message = "Uninitialized message...";
+
+Void element_printOnLoadSection() {
+  print("alert('onload');");
+}
+
+
+Void element_printJavaScriptSection() {
+  print("function mySetSizeFunction(width, height) { document.getElementById('myElement').style.width width* 4; document.getElementById('myElement').style.height = height* 4; }\r\n");
+}
+
+Void element_printHeadSection() {
+  print("<style> .myElementStyleClass { border: black solid 2px; } </style>");
+}
+
+Void element_printBodySection() {
+  print("<div class='myElementClass' id='myElement'>" + message + "</div>");
+}
+
+String element_getSetSizeStatement() {
+  return "mySetSizeFunction(";
+}
+
+Void element_setValue(String value) {
+  message = value;
+}
+
+Void element_setFieldValue(String field, Map map) {
+  if (field == "setMessage")
+    message = map.get("message");
+}
+```
