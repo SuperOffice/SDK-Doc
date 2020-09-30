@@ -1,10 +1,10 @@
 ---
 title: Screen events and hook scripts
-uid: crmscript_screen_events_and_hook_scripts
+uid: screen_events_and_hook_scripts
 SortOrder: 30
 ---
 
-Screen events represent **steps in the process of loading CS screens** and displaying them to a user. By hooking into 1 of these events, you can do stuff at a specific point during loading. CRMScripts responding to screen events are called **hook scripts**, and they don't require changes to the standard screens.
+Screen events represent **steps in the process of loading Service screens** and displaying them to a user. By hooking into 1 of these events, you can do stuff at a specific point during loading. CRMScripts responding to screen events are called **hook scripts**, and they don't require changes to the standard screens.
 
 > [!TIP]
 > Triggers are another way to handle events and support both CRM and Service screens.

@@ -1,10 +1,10 @@
 ---
 title: URL parameters
-uid: crmscript_url_parameters
+uid: url_parameters
 SortOrder: 60
 ---
 
-**URL parameters** lets you control SuperOffice Service using simple HTTP commands. These commands are similar to a REST API. However, they return a full HTML user interface, not JSON or XML as REST would return.
+**URL parameters** let you control SuperOffice Service using simple HTTP commands. These commands are similar to a REST API. However, they return a full HTML user interface, not JSON or XML as REST would return.
 
 For example, this URL will open a list of tickets for the current user:
 
@@ -27,7 +27,7 @@ The 2nd component is the **endpoint**, specifying which program to run:
 
 For example, `action=listTickets` or `action=doScript&id=123`.
 
-## Blogic
+## bLogic
 
 | Action               | Parameters                                   |
 |:---------------------|:---------------------------------------------|
@@ -99,9 +99,7 @@ For example, `action=listTickets` or `action=doScript&id=123`.
 
 | Action        | Parameters                                                      |
 |:--------------|:----------------------------------------------------------------|
-| newLog        |                                                                 |
 | getAttachment | Use Attachment.getDownloadUrl to construct a valid query string |
-| about         |                                                                 |
 | debug         |                                                                 |
 
 ## Stat

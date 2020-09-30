@@ -6,6 +6,18 @@ SortOrder: 50
 
 A guide to interacting with and customizing the SuperOffice UI through CRMScript.
 
+## [Screen events and hook scripts](@screen_events_and_hook_scripts)
+
+* **Screen events** represent steps in the process of loading Service screens.
+
+* **Hook scripts** are event-driven CRMScripts that do stuff at a specific point during loading.
+
+## [Extra menus](@extra_menus) and [button scripts](@crmscript_button_scripts)
+
+* **Extra menus** let you make something easily available in SuperOffice Service. For example, a button that takes the user directly to a specific screen or a menu option that triggers a script.
+
+* **Button scripts** are CRMScripts that are referenced by their **includeId** and run when the user clicks a custom button.
+
 ## [Custom screens](@blogic_create_custom_screen) (bLogic)
 
 **bLogic** is a system for designing screens and displaying content in SuperOffice Service.
@@ -24,13 +36,16 @@ With scripts, you can:
 
 * construct and modify a screen that requires a more dynamic layout - for example, add an element only if the customer is of a specific category
 
-## In this section
+## [Screen choosers](@screen_choosers)
 
-* [Screen events and hook scripts](@crmscript_screen_events_and_hook_scripts)
-* [Screen choosers](@crmscript_screen_choosers)
-* [Extra menus](@crmscript_extra_menus)
-* [Button scripts](@crmscript_button_scripts)
-* [URL parameters](@crmscript_url_parameters)
+**Screen choosers** are CRMScripts that redirect to a custom screen (or perform other actions before loading a standard screen).
+
+## [URL parameters](@url_parameters)
+
+**URL parameters** let you control SuperOffice Service using simple HTTP commands.
+
+## Reference
+
 * [EventData](@crmscript_eventdata)
 * [HtmlElement](@crmscript_htmlelement)
 * [MainMenu](@crmscript_main_menu)

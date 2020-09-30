@@ -1,6 +1,6 @@
 ---
 title: Button scripts
-uid: crmscript_button_scripts
+uid: button_scripts
 SortOrder: 55
 ---
 
@@ -73,15 +73,15 @@ Next, we'll make the script available as a button in the **View request** screen
 
 To reference your script, its include ID must have been set. Edit your script if this setting is missing before you continue.
 
-Next, you construct the URL, which specifies to run blogic, invoke the **doScript** action, and pass the include ID.
+Next, you construct the URL, which specifies to run bBogic, invoke the **doScript** action, and pass the include ID.
 
 \<site>/\<custId>/CS/scripts/blogic.exe?action=doScript&includeId=\<myScript>
 
-Read more about [URL parameters](@crmscript_url_parameters).
+Read more about [URL parameters](@url_parameters).
 
 ## Adding the button
 
-To add the button, you must create an [extra menu](@crmscript_extra_menus) in SuperOffice Service:
+To add the button, you must create an [extra menu](@extra_menus) in SuperOffice Service:
 
 1. From the hamburger menu, select **System Design** and then select **Extra menus**.
 2. Expand *Top menu*, point to one of the folders, and click **New menu**.
