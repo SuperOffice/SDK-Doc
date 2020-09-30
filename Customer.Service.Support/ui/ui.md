@@ -6,9 +6,26 @@ SortOrder: 50
 
 A guide to interacting with and customizing the SuperOffice UI through CRMScript.
 
+## [Custom screens](@blogic_create_custom_screen) (bLogic)
+
+**bLogic** is a system for designing screens and displaying content in SuperOffice Service.
+
+Custom screens are based on a set of [screen elements](@blogic_add_screen_element) (controls) such as text, date, grid, and CRMScript.
+
+There are 3 types of screen elements:
+
+* View elements: [displays info](@crmscript_blogic_view) (read-only)
+* Form elements: creates [user interaction](@crmscript_blogic_forms) with input fields
+* Group elements: creates a hierarchy of elements and determines the [layout of the screen](@crmscript_blogic_layout)
+
+With scripts, you can:
+
+* process the form data of a screen - for example, to create a request or send an email
+
+* construct and modify a screen that requires a more dynamic layout - for example, add an element only if the customer is of a specific category
+
 ## In this section
 
-* [Custom screens](@crmscript_blogic_intro) (blogic)
 * [Screen events and hook scripts](@crmscript_screen_events_and_hook_scripts)
 * [Screen choosers](@crmscript_screen_choosers)
 * [Extra menus](@crmscript_extra_menus)
