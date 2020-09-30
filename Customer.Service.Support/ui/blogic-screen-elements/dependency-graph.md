@@ -4,7 +4,7 @@ uid: blogic_dependency_graph
 sortOrder: 4
 ---
 
-This element displays the dependency in a project graphically.
+This element displays the dependencies in a project graphically.
 
 Also known as **AcyclicGraph** element.
 
@@ -17,7 +17,7 @@ Also known as **AcyclicGraph** element.
 
 ## Functions
 
-### setFieldValue(String, Map)
+### setFieldValue(String action, Map values)
 
 Adds either a node or a dependency.
 
