@@ -14,9 +14,9 @@ Custom screens are based on a set of [screen elements](@blogic_add_screen_elemen
 
 There are 3 types of screen elements:
 
-* View elements: [displays info](@crmscript_blogic_view) (read-only)
-* Form elements: creates [user interaction](@crmscript_blogic_forms) with input fields
-* Group elements: creates a hierarchy of elements and determines the [layout of the screen](@crmscript_blogic_layout)
+* View elements: [display info](@blogic_view_elements) (read-only)
+* Form elements: create [user interaction](@blogic_form_elements) with input fields
+* Group elements: create a hierarchy of elements and determines the [layout of the screen](@blogic_layout)
 
 With scripts, you can:
 

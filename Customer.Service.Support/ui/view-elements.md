@@ -1,10 +1,13 @@
 ---
-title: View screens
-uid: crmscript_blogic_view
+title: Read-only screen elements
+uid: blogic_view_elements
 SortOrder: 12
 ---
 
-**View elements** displays read-only info. These elements may **not** contain children.
+**View elements** display read-only info.
+
+> [!NOTE]
+> These elements may **not contain children**!
 
 ## Visual components
 

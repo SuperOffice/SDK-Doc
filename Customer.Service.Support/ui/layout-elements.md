@@ -1,6 +1,6 @@
 ---
 title: Custom screen layout
-uid: crmscript_blogic_layout
+uid: blogic_layout
 sortOrder: 16
 ---
 

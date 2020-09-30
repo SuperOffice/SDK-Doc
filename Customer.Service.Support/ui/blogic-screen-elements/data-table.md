@@ -131,7 +131,7 @@ callbackInit = init
 callbackDisplay = formatDisplayField
 ```
 
-[Learn more about callbacks](@crmscript_blogic_view) in the CRMScript documentation
+[Learn more about callbacks](@blogic_view_elements) in the CRMScript documentation
 
 ## Functions
 

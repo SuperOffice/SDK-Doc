@@ -1,6 +1,6 @@
 ---
-title: Screens with user input
-uid: crmscript_blogic_forms
+title: Interactive screen elements
+uid: blogic_form_elements
 SortOrder: 14
 ---
 
@@ -9,7 +9,7 @@ SortOrder: 14
 * These elements may **not** contain children.
 * These elements should be located in a [Form Page element](@blogic_form_page)
 
-This page covers the **basic** element types. [Entity specific form elements](@crmscript_blogic_forms_contextual) are covered separately.
+This page covers the **basic** element types. [Entity specific form elements](@blogic_form_elements_per_entity) are covered separately.
 
 ## Buttons
 
@@ -427,7 +427,7 @@ noRangeCheck = false
 
 ### [Text area](@blogic_textarea)
 
-For multi-line input fields, you need to specify the size of the area. You don't have option to place restrictions on expected content as you do for *Text* elements.
+For multi-line input fields, you need to specify the size of the area. You can't place restrictions on expected content as you do for *Text* elements.
 
 ```crmscript
 label = Comments

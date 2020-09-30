@@ -1,6 +1,6 @@
 ---
-title: Screens with content specific user input
-uid: crmscript_blogic_forms_contextual
+title: Interactive screen elements - entity-specific
+uid: blogic_form_elements_per_entity
 SortOrder: 15
 ---
 

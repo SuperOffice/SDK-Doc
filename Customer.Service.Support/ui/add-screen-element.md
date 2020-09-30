@@ -4,7 +4,7 @@ uid: blogic_add_screen_element
 SortOrder: 11
 ---
 
-[Screen elements](@blogic_elements) (controls) are the building blocks of custom screens. They determine the [layout](@crmscript_blogic_layout), display [read-only info](@crmscript_blogic_view), and provide [user interaction](@crmscript_blogic_forms).
+[Screen elements](@blogic_elements) (controls) are the building blocks of custom screens. They determine the [layout](@blogic_layout), display [read-only info](@blogic_view_elements), and provide [user interaction](@blogic_form_elements).
 
 **Element properties** are a combination of settings (simple values) and CRMScripts.
 
