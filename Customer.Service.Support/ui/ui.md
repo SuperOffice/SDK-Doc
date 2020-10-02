@@ -44,6 +44,10 @@ With scripts, you can:
 
 **URL parameters** let you control SuperOffice Service using simple HTTP commands.
 
+## [Web panels](@web_panels)
+
+**Web panels** let you add webpages inside SuperOffice CRM.
+
 ## Reference
 
 * [EventData](@crmscript_eventdata)
