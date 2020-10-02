@@ -48,6 +48,10 @@ With scripts, you can:
 
 **Web panels** let you add webpages inside SuperOffice CRM.
 
+## [SOProtocol](@so_protocol)
+
+**SOProtocol** is a standard for defining URL short-cuts to SuperOffice entities. It lets you control the user interface without scripting and send users directly to the entry in question.
+
 ## Reference
 
 * [EventData](@crmscript_eventdata)
