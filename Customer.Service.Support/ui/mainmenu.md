@@ -15,27 +15,25 @@ Each group contains 1 or more **items**, which have their own label and a URL. T
 
 ### Position
 
-The groups are listed top to bottom based on a zero-based index. Items within a group have their own index, starting at 0.
+The groups are listed top to bottom based on a **zero-based index**. Items within a group have their own index, starting at 0.
 
 ## Create a main menu trigger script
 
-If you see a script with MainMenu in its name, you can either:
+If you see a script with MainMenu in its name, you can either **open** that for further customization, or **create a new** trigger script.
 
-* open that for further customization, or
-* create a new trigger script
-
-1. On the **CRMScript** page, select the **Triggers** tab.
-2. Click **New trigger(script)**.
-3. Type `main` in the search field and then select the **Main menu** trigger.
-4. Enter your script code and save.
-5. Refresh your browser to make sure the new menu is loaded.
+1. Sign in to the SuperOffice Admin client.
+2. Open the **CRMScript** page and select the **Triggers** tab.
+3. Click **New trigger(script)**.
+4. Type `main` in the search field and then select the **Main menu** trigger.
+5. Enter your script code and save.
+6. Refresh your browser to make sure the new menu is loaded.
 
 > [!NOTE]
 > Objects of type `MainMenu` are useful only when returned by `getMainMenu()`.
 
 ## Groups
 
-Groups are the level-1 entries in the menu.
+Groups are the level-1 entries of the menu.
 
 ### Integer getNumGroups()
 
@@ -114,7 +112,7 @@ if (menu.getGroupId(pos) == "my label") {
 
 ## Items
 
-Items are the level-2 entries in the menu.
+Items are the level-2 entries of the menu.
 
 ### Integer getNumItems(Integer group)
 
@@ -184,7 +182,7 @@ Removes the item at the given index from the group.
 
 ## Void clear()
 
-Empties the main menu. Useful if you want to build your own menu from scratch.
+Empties the main menu. Useful if you want to build your menu from scratch.
 
 ## Reference
 
@@ -193,8 +191,8 @@ Empties the main menu. Useful if you want to build your own menu from scratch.
 | Parameter | Description                           |
 |:----------|:--------------------------------------|
 | label     | UI label (ID)                         |
-| image     | location (URL)                        |
-| position  | within the main menu                  |
+| image     | Location (URL)                        |
+| position  | Within the main menu                  |
 | onClick   | JavaScript run when clicking the item |
 
 ### Item parameters
@@ -202,10 +200,10 @@ Empties the main menu. Useful if you want to build your own menu from scratch.
 | Parameter | Description                           |
 |:----------|:--------------------------------------|
 | label     | UI label (ID) the menu item           |
-| url       | action                                |
-| group     | the group this item belongs to        |
-| position  | within the group                      |
+| url       | Action                                |
+| group     | The group this item belongs to        |
+| position  | Within the group                      |
 | onClick   | JavaScript run when clicking the item |
-| itemId    | a programmatic ID                     |
-| target    | the target attribute of the link      |
-| iconUrl   | location of a custom icon             |
+| itemId    | A programmatic ID                     |
+| target    | The target attribute of the link      |
+| iconUrl   | Location of a custom icon             |
