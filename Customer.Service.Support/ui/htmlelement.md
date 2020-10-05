@@ -6,19 +6,61 @@ SortOrder: 80
 
 The CRMScript **HtmlElement** class represents HTML elements in the SuperOffice UI.
 
-## Types and values
+## Types
 
 ### String getTypeName()
 
+Returns the element type.
+
+> [!TIP]
+> Look up specific elements in the [bLogic screen element](@blogic_elements) reference.
+
+### Type conversion
+
+You can convert the value of an `HtmlElement` object to a string, number, or boolean:
+
+* Bool toBool()
+* Integer toInteger()
+* String toString()
+
+## Values
+
+### Void setFromCgi()
+
+Called when the element should find its values from the CGI variables. Commonly used for [screens containing forms](@blogic_form_elements).
+
 ### String getFieldValue(String field)
+
+Returns the value of a specific field.
 
 ### Void setFieldValue(String name, Map map)
 
+Sets 1 or more field values on an element.
+
+```crmscript
+HtmlElement formPage;
+
+Map m;
+m.insert("name", "superButton");
+m.insert("label", "Click me!");
+m.insert("style", "StyleGreen");
+
+formPage.setFieldValue("addButton", m);
+```
+
 ### Void setValue(String value)
+
+Sets the value of a specific element.
+
+```crmscript
+HtmlElement selectDate;
+selectDate.setValue("2020.09.10");
+```
 
 **Mark a checkbox:**
 
 ```crmscript
+HtmlElement t;
 t.setValue("x_boolean", "1")
 ```
 
@@ -26,40 +68,49 @@ t.setValue("x_boolean", "1")
 
 This will clear any selected values from elements that support this property.
 
-### Void setFromCgi()
-
-## Type conversion
-
-* Bool toBool()
-* Integer toInteger()
-* String toString()
-
 ## Messages
 
-### Void setErrorMessage(String errormessage)
+### Void setErrorMessage(String errorMessage)
+
+Sets an error message above the element if the form is posted.
+
+Used to inform users that something went wrong and attempt to help them out.
+
+```crmscript
+HtmlElement page = getHtmlElement("HtmlPage");
+page.setErrorMessage("This page contains an error");
+```
 
 ### Void setInfoMessage(String infoMessage)
 
+Sets an info message above the element if the form is posted.
+
+Used to display text of a purely informative nature.
+
 ## Element properties
-
-### Void setDisabled(Bool disable)
-
-whether the element should be invisible or not.
-
-### Void setNotEditable(Bool onOff)
-
-cause the element to be disabled/not editable for those elements that support this property
 
 ### Bool isEmpty()
 
-What this actually means varies from element type to element type. A list element should be empty if it has no rows, but a code element should be empty if it contains no text
+That an element is **empty** means different things depending on the element type. For example, a list element should be empty if it has no rows, but a code element should be empty if it contains no text.
 
-## Positioning
+### Void setDisabled(Bool invisible)
 
-### String getTabIndexString()
+Toggles whether the element is visible or invisible. Commonly used in combination with role-based access.
 
-The tab index determines the sequence of entering fields with the tab/shift-tab keys.
+### Void setNotEditable(Bool canEdit)
+
+Toggles whether the element can be edited (for those elements that support this property). Commonly used in combination with role-based access.
 
 ### Integer getNextTabIndex()
 
+The HTML **tabindex** attribute specifies the tab order of an element. It determines the sequence of entering fields with **Tab** or **Shift+Tab**.
+
+`getNextTabIndex()` increments the counter and returns the next valid index.
+
+### String getTabIndexString()
+
+Returns the tabulator index string of the element.
+
 ### String getTabIndexString(Bool noId)
+
+A variant of `getTabIndexString()` that omits element ID if it is the 1st element.
