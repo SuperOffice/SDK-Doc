@@ -8,7 +8,7 @@ Some form elements are specific to SuperOffice entities.
 
 ## Select entity fields
 
-There's a wide range of elements that add a drop-down to select an entity of a specific type. For example, [Select company](@blogic_select_company) and [Select sale](@blogic_select_sale).
+There's a wide range of elements that add a drop-down to select an entity of a specific type. For example, @blogic_select_company and @blogic_select_sale.
 
 ![Screen capture of select entity drop-downs](../images/select-entity-dropdown.png)
 
@@ -62,12 +62,12 @@ m.clear();
 
 **Selection drop-downs:**
 
-* @blogic_select_agent
-* @blogic_select_company
-* @blogic_select_contact_business
-* @blogic_select_contact_category
-* @blogic_select_contact and @blogic_select_contacts
-* @blogic_select_user
+* See @blogic_select_agent
+* See @blogic_select_company
+* See @blogic_select_contact_business
+* See @blogic_select_contact_category
+* See @blogic_select_contact and @blogic_select_contacts
+* See @blogic_select_user
 
 ### [Category membership](@blogic_category_membership) (for user)
 
