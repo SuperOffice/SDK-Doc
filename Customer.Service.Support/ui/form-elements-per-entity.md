@@ -62,12 +62,12 @@ m.clear();
 
 **Selection drop-downs:**
 
-* See ./blogic-screen-elements/select-agent
-* See ./blogic-screen-elements/select-company
-* See ./blogic-screen-elements/select-contact_business
-* See ./blogic-screen-elements/select-contact_category
-* See ./blogic-screen-elements/select-contact and ./blogic-screen-elements/select-contacts
-* See ./blogic-screen-elements/select-user
+* [Select agent](./blogic-screen-elements/select-agent.md)
+* [Select company](./blogic-screen-elements/select-company.md)
+* [Select contact business](./blogic-screen-elements/select-contact_business.md)
+* [Select contact category](./blogic-screen-elements/select-contact_category.md)
+* [Select contact](./blogic-screen-elements/select-contact.md) and [Select contacts](./blogic-screen-elements/select-contacts.md)
+* [Select user](./blogic-screen-elements/select-user.md)
 
 ### [Category membership](./blogic-screen-elements/category_membership.md) (for user)
 
@@ -88,23 +88,23 @@ noWeights = false
 
 **Selection drop-downs:**
 
-* ./blogic-screen-elements/select-appointment
-* ./blogic-screen-elements/select-date
-* ./blogic-screen-elements/select-datetime
-* ./blogic-screen-elements/select-time
-* ./blogic-screen-elements/select-timespan
+* [Select appointment](./blogic-screen-elements/select-appointment.md)
+* [Select date](./blogic-screen-elements/select-date.md)
+* [Select datetime](./blogic-screen-elements/select-datetime.md)
+* [Select time](./blogic-screen-elements/select-time.md)
+* [Select timespan](./blogic-screen-elements/select-timespan.md)
 
 ## Requests
 
 **Selection drop-downs:**
 
-* ./blogic-screen-elements/select-category (for ticket)
-* ./blogic-screen-elements/select-priority (for ticket)
-* ./blogic-screen-elements/select-message (from ticket)
-* ./blogic-screen-elements/select-request_status
-* ./blogic-screen-elements/select-faq
-* ./blogic-screen-elements/select-reply_template
-* ./blogic-screen-elements/select-insert_text
+* [Select category](./blogic-screen-elements/select-category.md) (for ticket)
+* [Select priority](./blogic-screen-elements/select-priority.md) (for ticket)
+* [Select message](./blogic-screen-elements/select-message.md) (from ticket)
+* [Select request status](./blogic-screen-elements/select-request_status.md)
+* [Select FAQ](./blogic-screen-elements/select-faq.md)
+* [Select reply template](./blogic-screen-elements/select-reply_template.md)
+* [Select insert text](./blogic-screen-elements/select-insert_text.md)
 
 ### [Message grid](./blogic-screen-elements/message_grid.md)
 
@@ -211,8 +211,8 @@ noHardDelete = true
 
 **Selection drop-downs:**
 
-* ./blogic-screen-elements/select-sale
-* ./blogic-screen-elements/select-project
+* [Select sale](./blogic-screen-elements/select-sale.md)
+* [Select project](./blogic-screen-elements/select-project.md)
 
 ### [Invoice rows](./blogic-screen-elements/invoice.md)
 
@@ -220,9 +220,9 @@ noHardDelete = true
 
 **Selection drop-downs:**
 
-* ./blogic-screen-elements/select-slevel
-* ./blogic-screen-elements/select-crm_selection
-* ./blogic-screen-elements/select-extra_field
-* ./blogic-screen-elements/select-table
-* ./blogic-screen-elements/select-relation
-* ./blogic-screen-elements/select-multiple relations
+* [Select slevel](./blogic-screen-elements/select-slevel.md)
+* [Select CRM selection](./blogic-screen-elements/select-crm_selection.md)
+* [Select extra field](./blogic-screen-elements/select-extra_field.md)
+* [Select table](./blogic-screen-elements/select-table.md)
+* [Select relation](./blogic-screen-elements/select-relation.md)
+* [Select relations](./blogic-screen-elements/select-multiple-relations.md)
