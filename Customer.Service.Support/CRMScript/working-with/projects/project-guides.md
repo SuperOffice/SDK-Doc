@@ -61,8 +61,7 @@ printLine("This sale will auto advance: " + type.GetIsAutoAdvance().toString());
 
 ## Suggested activities
 
-Suggested activities are just that  - **suggested**. They're blueprints that can be used to create actual [follow-ups](@crmscript_followups) and  [documents](@crmscript-docs).
-
+Suggested activities are just that  - **suggested**. They're blueprints that can be used to create actual [follow-ups](../follow-ups/follow-ups.md) and  [documents](../working-with/documents/documents.md).
 
 The blueprints sit in the intersection between project types and stages. A project type can have many stages, and a stage can apply to multiple project types. The [ProjectTypeStatusLink table](https://community.superoffice.com/documentation/SDK/SO.Database/html/Tables-ProjectTypeStatusLink.htm) connects them all.
 
@@ -89,7 +88,7 @@ newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
 ```
 
 > [!TIP]
-> You can also [create documents from suggestions](@crmscript_doc_properties).
+> You can also [create documents from suggestions](../working-with/documents/doc-properties.md).
 
 
 ### Create a suggestion and link it to a stage

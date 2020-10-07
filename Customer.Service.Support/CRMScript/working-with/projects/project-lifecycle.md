@@ -30,13 +30,13 @@ print(newProject.GetProjectId().toString());
 ## Get selected projects
 
 > [!TIP]
-> You can only retrieve projects for persons that are SuperOffice users ([associates](@crmscript-employees)).<br/>The signed-in user must also have permission to view those projects. Otherwise, an exception is thrown.
+> You can only retrieve projects for persons that are SuperOffice users ([associates](../persons-and-organizations/employees.md)).<br/>The signed-in user must also have permission to view those projects. Otherwise, an exception is thrown.
 
 ### NSProject[] GetProjectList(Integer[] p0)
 
 To call `GetProjectList()`, we need to create the list of **project IDs** first.
 
-In this example, we use [SearchEngine](@crmscript_search_engine) to get the ID of all projects headed by a specific associate and not marked as *done*.
+In this example, we use [SearchEngine](../../advanced/searchengine/searchengine.md) to get the ID of all projects headed by a specific associate and not marked as *done*.
 
 ```crmscript
 String associateId = "5";
@@ -59,7 +59,7 @@ NSProject[] projectList = agent.GetProjectList(projectIds);
 
 ### NSProject[] GetProjectsFromContact(Integer contactId)
 
-A company is implicitly linked to a project when at least 1 [person](@crmscript-class-customer) in that [organization](@crmscript-class-company) is a [member](@crmscript_project_members) of that project.
+A company is implicitly linked to a project when at least 1 [person](../persons-and-organizations/customer.md) in that [organization](../persons-and-organizations/company.md) is a [member](./project-members.md) of that project.
 
 ```crmscript!
 Integer contactId = 4;
@@ -92,7 +92,7 @@ p = agent.SaveProjectEntity(p);
 
 ## Ending a project
 
-In the end, regardless of whether you followed a [project guide](@crmscript_project-guides) or not, a project is either **completed** or **stopped**. It is time to wrap things up and at the same time make sure the project manager and others can learn from it either way.
+In the end, regardless of whether you followed a [project guide](./project-guides.md) or not, a project is either **completed** or **stopped**. It is time to wrap things up and at the same time make sure the project manager and others can learn from it either way.
 
 | Status | Description |
 |:------:|:------------|

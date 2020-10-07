@@ -40,7 +40,7 @@ printLine(p.GetProjectType().GetValue());
 A *project type* is a named set of reuseable info that will help you standardize the process. Aside from the name and ID, you'll find info such as:
 
 * the expected duration
-* whether a [project guide](@crmscript_project-guides) is available
+* whether a [project guide](./project-guides.md) is available
 * stages
 
 **List available types:**
@@ -53,7 +53,7 @@ print(se.executeTextTable());
 
 ## Project guides
 
-Using a [*guide*](@crmscript_project-guides) will simplify and structure the process for the project manager with suggestions for which [follow-ups](@crmscript_followups) to do and which [documents](@crmscript-docs) to create at each stage.
+Using a [*guide*](./project-guides) will simplify and structure the process for the project manager with suggestions for which [follow-ups](../working-with/follow-ups/follow-ups.md) to do and which [documents](../working-with/documents/documents.md) to create at each stage.
 
 ## Status of a project
 
@@ -88,11 +88,11 @@ print(se.executeTextTable());
 
 When working with projects, data will often intersect with the following entities:
 
-* [company](@crmscript-class-company) (contact table)
-* [contact](@crmscript-class-customer) (person table)
-* [documents](@crmscript-docs)
-* [follow-ups](@crmscript_followups) (appointment table)
-* [sales](@crmscript_sales)
+* [company](../persons-and-organizations/company.md) (contact table)
+* [contact](../persons-and-organizations/customer.md) (person table)
+* [documents](../working-with/documents/documents.md)
+* [follow-ups](../working-with/follow-ups/follow-ups.md) (appointment table)
+* [sales](../working-with/sales/sales.md)
 
 ## In this section
 
