@@ -6,9 +6,9 @@ SortOrder: 50
 
 A guide to interacting with and customizing the SuperOffice UI through CRMScript.
 
-## [Screen events and hook scripts](./screen-events.md)
+## Screen events and hook scripts
 
-* **Screen events** represent steps in the process of loading Service screens.
+* **[Screen events(./screen-events.md)** represent steps in the process of loading Service screens.
 
 * **Hook scripts** are event-driven CRMScripts that do stuff at a specific point during loading.
 
@@ -36,21 +36,21 @@ With scripts, you can:
 
 * construct and modify a screen that requires a more dynamic layout - for example, add an element only if the customer is of a specific category
 
-## [Screen choosers](./screen-choosers.md)
+## Screen choosers
 
-**Screen choosers** are CRMScripts that redirect to a custom screen (or perform other actions before loading a standard screen).
+**[Screen choosers](./screen-choosers.md)** are CRMScripts that redirect to a custom screen (or perform other actions before loading a standard screen).
 
-## [URL parameters](./url-parameters.md)
+## URL parameters
 
-**URL parameters** let you control SuperOffice Service using simple HTTP commands.
+**[URL parameters](./url-parameters.md)** let you control SuperOffice Service using simple HTTP commands.
 
-## [Web panels](./web-panels.md)
+## Web panels
 
-**Web panels** let you add webpages inside SuperOffice CRM.
+**[Web panels](./web-panels.md)** let you add webpages inside SuperOffice CRM.
 
-## [SOProtocol](./so-protocol.md)
+## SOProtocol
 
-**SOProtocol** is a standard for defining URL short-cuts to SuperOffice entities. It lets you control the user interface without scripting and send users directly to the entry in question.
+**[SOProtocol](./so-protocol.md)** is a standard for defining URL short-cuts to SuperOffice entities. It lets you control the user interface without scripting and send users directly to the entry in question.
 
 ## Reference
 
