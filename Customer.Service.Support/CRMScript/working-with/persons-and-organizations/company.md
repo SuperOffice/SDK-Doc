@@ -120,7 +120,7 @@ print(b.toString());
 
 ## Parser variables
 
-Calling `toParser()` will load the following fields and make them available to [templates](xref:crmscript_reply_template):
+Calling `toParser()` will load the following fields and make them available to [templates](../../advanced/parser-and-templates/reply-template.md):
 
 * company.id
 * company.name
@@ -144,11 +144,11 @@ printLine(p.getVariable("company.name", 0));
 ```
 
 > [!TIP]
-> Read more about [localized addresses](xref:crmscript_addresses).
+> Read more about [localized addresses](./addresses.md).
 
 ## Activities
 
-You can also use the [contact agent](xref:crmscript_netserver) to check what's going on.
+You can also use the [contact agent](../ns-agents-and-carriers.md) to check what's going on.
 
 ### GetMyActiveContacts
 

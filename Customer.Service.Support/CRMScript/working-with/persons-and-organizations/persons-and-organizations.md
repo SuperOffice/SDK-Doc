@@ -6,7 +6,7 @@ SortOrder: 10
 
 ## An in-depth guide to working with persons and organizations
 
-For a better understanding of this section, we recommend that you read [SuperOffice view of the world](xref:crmscript-domain).
+For a better understanding of this section, we recommend that you read [SuperOffice view of the world](../../introduction/domain.md).
 
 It is important to keep in mind that there's not a 1:1 mapping of labels and that you have to take context into account.
 

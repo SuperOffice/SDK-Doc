@@ -33,7 +33,7 @@ print("Registered new sale with ID " + newSale.GetSaleId().toString());
 
 ## Find company ID from ticket ID
 
-You might be picking up leads such as up-sells to existing customers from service tickets. Here's how to get the contact ID from the [ticket](xref:crmscript_tickets):
+You might be picking up leads such as up-sells to existing customers from service tickets. Here's how to get the contact ID from the [ticket](../../advanced/requests/tickets.md):
 
 ```crmscript
 Integer ticketId = 123;
@@ -74,7 +74,7 @@ The generic procedure is like this. The details are up to you.
 > [!NOTE]
 > The follow-up you created is an **NSAppointmentEntity**, but `SetAppointment()` takes an **NSAppointment**. You can't pass the saved follow-up directly, but need to fetch the corresponding slim version by ID.
 
-In this example, we use info from the sale to populate the new [follow-up](xref:crmscript_followups).
+In this example, we use info from the sale to populate the new [follow-up](../follow-ups/follow-ups.md).
 
 ```crmscript
 NSSaleAgent saleAgent;

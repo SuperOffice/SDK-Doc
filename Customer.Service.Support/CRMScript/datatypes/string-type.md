@@ -84,7 +84,7 @@ Some characters produce whitespace and can be used to structure your text. These
 
 ## Length
 
-The length of a text string is the number of characters in it, including whitespace. The 1st character is in position 0, similar to [arrays](xref:crmscript_fundamentals_arrays).
+The length of a text string is the number of characters in it, including whitespace. The 1st character is in position 0, similar to [arrays](../fundamentals/arrays.md).
 
 ### Integer getLength()
 

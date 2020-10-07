@@ -6,7 +6,7 @@ sortOrder: 80
 
 Generic is the base type of all other intrinsic CRMScript data types. Any variable can be up-casted to Generic.
 
-There's a close connection between Generic and [structs](xref:crmscript_fundamentals_structs):
+There's a close connection between Generic and [structs](../fundamentals/structs.md):
 
 * simpler iteration of variables (struct members)
 * easier to access and set new variables in structs
@@ -35,7 +35,7 @@ printLine(GenericToInteger(g).toString());
 ```
 
 > [!NOTE]
-> If the variable name is unknown, an [exceptions](xref:crmscript_fundamentals_try_catch) is thrown.
+> If the variable name is unknown, an [exceptions](../fundamentals/try-catch.md) is thrown.
 
 ## Down-casting
 
@@ -140,7 +140,7 @@ Generic g = getGenericValue(p, "age");
 ```
 
 > [!NOTE]
-> If the variable name is unknown or you're not referencing a struct, an [exceptions](xref:crmscript_fundamentals_try_catch) is thrown.
+> If the variable name is unknown or you're not referencing a struct, an [exceptions](../fundamentals/try-catch.md) is thrown.
 
 ### String convertGenericToString(Generic generic)
 

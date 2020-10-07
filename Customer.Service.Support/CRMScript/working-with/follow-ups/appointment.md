@@ -24,7 +24,7 @@ An *appointment* is a type of **follow-up** with a defined start and end time, s
 ## Get appointments
 
 > [!TIP]
-> You can only retrieve appointments for persons that are SuperOffice users ([associates](xref:crmscript-employees)). The signed-in user must also have permission to view those appointments. Otherwise, an exception is thrown.
+> You can only retrieve appointments for persons that are SuperOffice users ([associates](../persons-and-organizations/employees.md)). The signed-in user must also have permission to view those appointments. Otherwise, an exception is thrown.
 
 ### NSAppointment[] GetAppointmentList(Integer[] p0)
 
@@ -45,7 +45,7 @@ for(Integer i = 0; i < appointmentList.length(); i++) {
 ```
 
 > [!TIP]
-> You can also use the [archive agent](xref:crmscript_archiveagent) to fetch appointments.
+> You can also use the [archive agent](../crmscript-archiveagent.md) to fetch appointments.
 
 ### NSAppointment[] GetPersonDiary(Integer personId, DateTime startTime, DateTime endTime, Integer count)
 
@@ -209,7 +209,7 @@ for (Integer i = 0; i < redLetterDays.length(); i++)
 The `location` field is either a custom string or info from a booked resource.
 
 > [!TIP]
-> Remember that a **resource is an [associate of type 1](xref:crmscript-employees)** and that you should disregard the `person_id`.
+> Remember that a **resource is an [associate of type 1](../persons-and-organizations/employees.md)** and that you should disregard the `person_id`.
 
 When you book a resource, it's appointment is linked to the person's appointment using the `mother_id` field. There will be 2 distinct appointment IDs: 1 for the person and 1 for the resource!
 
@@ -285,7 +285,7 @@ newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
 ```
 
 > [!TIP]
-> You can also [invite persons to the meeting](xref:crmscript_invitations)).
+> You can also [invite persons to the meeting](./invitations.md)).
 
 ## Delegation
 

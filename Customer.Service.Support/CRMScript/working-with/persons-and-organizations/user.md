@@ -111,7 +111,7 @@ The **activeuser** table holds info about currently signed-in users. Use it to l
 
 ## Parser variables
 
-Calling `toParser()` will load fields, prefix them with *user*, and make them available to [templates](xref:crmscript_reply_template).
+Calling `toParser()` will load fields, prefix them with *user*, and make them available to [templates](../../advanced/parser-and-templates/reply-template.md).
 
 ```crmscript!
 Parser p;
@@ -154,7 +154,7 @@ printLine(p.getVariable("user.username", 0));
 
 ### Ticket notifications
 
-Notifications (pop-up warnings) to the user are controlled by a bitmask.
+Notifications (pop-up warnings) to the user are controlled by a bit mask.
 
 | Value | Description            |
 |:-----:|------------------------|
@@ -167,4 +167,4 @@ Notifications (pop-up warnings) to the user are controlled by a bitmask.
 | 9     | Hotlist (filter)       |
 | 10    | Custom                 |
 
-Learn more about [tickets](xref:crmscript_tickets).
+Learn more about [tickets](../../advanced/requests/tickets.md).

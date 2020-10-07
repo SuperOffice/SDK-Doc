@@ -20,9 +20,9 @@ The document **files** we are dealing with here are stored in a central reposito
 Documents are part of a broader group of entities labeled **activities**:
 
 * follow-ups
-  * [appointment](xref:crmscript_appointments)
-  * [task](xref:crmscript_tasks)
-  * [call](xref:crmscript-calls)
+  * [appointment](../follow-ups/appointment.md)
+  * [task](../follow-ups/task.md)
+  * [call](../follow-ups/call.md)
 * documents
   * document (this section)
   * email
@@ -38,11 +38,11 @@ There's always a corresponding appointment record for a document. You can naviga
 
 When working with documents, data will often intersect with the following entities:
 
-* [company](xref:crmscript-class-company) (contact table)
-* [contact](xref:crmscript-class-customer) (person table)
-* [follow-ups](xref:crmscript_followups) (appointment table)
+* [company](../persons-and-organizations/company.md) (contact table)
+* [contact](../persons-and-organizations/customer.md) (person table)
+* [follow-ups](../follow-ups/follow-ups.md) (appointment table)
 * project
-* [sale](xref:crmscript_sales)
+* [sale](../sales/sales.md)
 
 ## In this section
 

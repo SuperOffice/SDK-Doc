@@ -28,12 +28,12 @@ print(se.executeTextTable());
 
 When working with quotes, data will often intersect with the following entities:
 
-* [documents](xref:crmscript_docs)
-* [follow-ups](xref:crmscript_followups) (appointment table)
-* [company](xref:crmscript-class-company) (contact table)
-* [contact](xref:crmscript-class-customer) (person table)
+* [documents](../documents/documents.md)
+* [follow-ups](../follow-ups/follow-ups.md) (appointment table)
+* [company](../persons-and-organizations/company.md) (contact table)
+* [contact](../persons-and-organizations/customer.md) (person table)
 * project
-* [sale](xref:crmscript_sales)
+* [sale](../sales/sales.md)
 
 ## In this section
 

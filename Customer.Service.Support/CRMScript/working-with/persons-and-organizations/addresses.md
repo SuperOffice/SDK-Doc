@@ -6,7 +6,7 @@ SortOrder: 50
 
 Addresses are commonly formatted according to local conventions.
 
-Due to the dynamic nature of addresses, address fields in the SuperOffice UI appear differently depending on the selected country for any particular [company](xref:crmscript-class-company) or [person](xref:crmscript-class-customer).
+Due to the dynamic nature of addresses, address fields in the SuperOffice UI appear differently depending on the selected country for any particular [company](./company.md) or [person](./customer.md).
 
 SuperOffice data structures are generic to support multiple address variants. All address fields belong to a structure called `NSLocalizedAddress`.
 

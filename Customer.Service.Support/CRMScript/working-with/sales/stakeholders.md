@@ -33,7 +33,7 @@ if (stakeholder.GetPersonId() != 0) {
 }
 ```
 
-Read more about [working with organizations](xref:crmscript-class-company).
+Read more about [working with organizations](../persons-and-organizations/company.md).
 
 ## Individuals as stakeholders
 
@@ -61,7 +61,7 @@ if (stakeholder.GetPersonId() != 0) {
 }
 ```
 
-Read more about [working with persons](xref:crmscript-class-customer).
+Read more about [working with persons](../persons-and-organizations/customer.md).
 
 ## List all stakeholders of a sale
 

@@ -8,7 +8,7 @@ Each alternative can contain different products, numbers of products, prices, an
 
 The estimated sales amount for the sale (forecast) is obtained from the total amount for the **favorite alternative**.
 
-* Objects of type `NSQuoteAlternative` belonging to a specific quote [version](xref:crmscript_quote_properties).
+* Objects of type `NSQuoteAlternative` belonging to a specific quote [version](./quote-properties.md).
 * Objects of type `NSQuoteLine` belonging to a specific quote **alternative**.
 
 ## Get alternatives

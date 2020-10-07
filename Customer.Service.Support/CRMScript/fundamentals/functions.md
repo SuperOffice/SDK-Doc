@@ -103,7 +103,7 @@ Note that we are using the input parameter of `sayTheWord()` as a local variable
 
 ## Return
 
-Just like you can stop and jump out of for and while loops with a [break statement](xref:crmscript_fundamentals_loops_break_continue), you can stop and jump out of a function with a **return** statement. The control goes to the 1st statement after the function call.
+Just like you can stop and jump out of for and while loops with a [break statement](./loop-control.md), you can stop and jump out of a function with a **return** statement. The control goes to the 1st statement after the function call.
 
 ```crmscript!
 Void sayHello(){

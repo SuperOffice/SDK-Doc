@@ -8,9 +8,9 @@ SortOrder: 40
 
 There are 3 ways to customize the database schema:
 
-* [user-defined fields](xref:crmscript_udef) in Sales
-* [extra fields](xref:crmscript_extra_fields) on SuperOffice entities in Service
-* [extra tables](xref:crmscript_extra_tables) (aka 3rd party tables) in Service
+* [user-defined fields](./udef.md) in Sales
+* [extra fields](./extra-fields.md) on SuperOffice entities in Service
+* [extra tables](./extra-tables.md) (aka 3rd party tables) in Service
 
 ## User-defined fields vs. extra fields
 

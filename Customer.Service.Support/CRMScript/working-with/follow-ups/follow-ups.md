@@ -13,7 +13,7 @@ In the UI, both are closely linked to the **Diary** screen.
 
 ## Three types of follow-ups
 
-In SuperOffice CRM, *follow-up* is a collective term for **appointments**, **phone calls**, and **tasks** . These entities are always tied to an [associate](xref:crmscript-employees) and have some form of [time](../../datatypes/datetime-type.md) reference.
+In SuperOffice CRM, *follow-up* is a collective term for **appointments**, **phone calls**, and **tasks** . These entities are always tied to an [associate](../persons-and-organizations/employees.md) and have some form of [time](../../datatypes/datetime-type.md) reference.
 
 | type        | start time | end time | duration   | deadline | displayed | description | example |
 |-------------|:----------:|:--------:|:----------:|:--------:|-----------|-------------|---------|
@@ -29,9 +29,9 @@ In SuperOffice CRM, *follow-up* is a collective term for **appointments**, **pho
 Follow-ups are part of a broader group of entities labeled **activities**:
 
 * follow-ups
-  * [appointment](xref:crmscript_appointments)
-  * [task](xref:crmscript_tasks)
-  * [call](xref:crmscript_calls)
+  * [appointment](./appointment.md)
+  * [task](./task.md)
+  * [call](./call.md)
 * documents
   * document
   * email
@@ -45,10 +45,10 @@ Follow-ups are part of a broader group of entities labeled **activities**:
 
 When working with follow-ups, data will often intersect with the following entities:
 
-* [company](xref:crmscript-class-company) (contact table)
-* [contact](xref:crmscript-class-customer) (person table)
+* [company](../persons-and-organizations/company.md) (contact table)
+* [contact](../persons-and-organizations/customer.md) (person table)
 * project
-* [sale](xref:crmscript_sale-leads)
+* [sale](../working-with/sales/leads.md)
 
 ## In this section
 

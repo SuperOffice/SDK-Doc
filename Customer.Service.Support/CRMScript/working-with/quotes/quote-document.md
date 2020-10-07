@@ -57,5 +57,5 @@ if (state == 6 || state == 8 || state == 9) {
 
 ## See also
 
-* [working with documents](xref:crmscript_docs)
-* [template variables](xref:crmscript_doc_templates)
+* [working with documents](../documents/documents.md)
+* [template variables](../documents/doc-templates.md)

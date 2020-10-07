@@ -105,7 +105,7 @@ newAppointment = appointmentAgent.SaveAppointmentEntity(newAppointment);
 ```
 
 > [!TIP]
-> You can also [create documents from suggestions](xref:crmscript_doc_properties).
+> You can also [create documents from suggestions](../documents/doc_properties.md).
 
 ### Create a suggestion and link it to a stage
 

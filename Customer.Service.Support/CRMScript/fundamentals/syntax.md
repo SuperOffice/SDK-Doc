@@ -43,29 +43,29 @@ Structs and the built-in classes use pascal-case starting with an upper-case let
 ## Keywords
 
 Keywords are words that have special meaning in CRMScript and can't be used to name stuff in your code.
-Check the [list of reserved words](xref:crmscript_fundamentals_reserved_words) if in doubt.
+Check the [list of reserved words](./reserved.md) if in doubt.
 
 ## Statements
 
 Instructions are called *statements* and are separated by semicolons (`;`).
 Statements that should be executed together as a code block must be enclosed in a pair of curly braces {}.
 
-Expressions are combinations of values/[variables](xref:crmscript_fundamentals_variables) and [operators](xref:crmscript_fundamentals_operators).
+Expressions are combinations of values/[variables](./variables.md) and [operators](./operators.md).
 
 Types of statements:
 
-* [variable](xref:crmscript_fundamentals_variables) declaration
-* [assignment](xref:crmscript_fundamentals_operators)
-* [struct](xref:crmscript_fundamentals_structs) definition
-* [function](xref:crmscript_fundamentals_functions) definition and call
-* [for](xref:crmscript_fundamentals_loops_for) and [while](xref:crmscript_fundamentals_loops_while) loops
-* [conditional statements](xref:crmscript_fundamentals_if_else)
+* [variable](./variables.md) declaration
+* [assignment](./operators.md)
+* [struct](./structs.md) definition
+* [function](.(functions.md) definition and call
+* [for](./for-loops.md) and [while](./while-loops.md) loops
+* [conditional statements](./conditions.md)
 
 ## Text and numbers
 
 Text is written within double or single quotes. Numbers are written with or without decimals.
 
-Learn more about [data types](xref:crmscript_fundamentals_datatypes_intro).
+Learn more about [data types](./datatypes-intro.md).
 
 ## Comments
 

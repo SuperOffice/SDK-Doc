@@ -4,7 +4,7 @@ uid: crmscript_quote_properties
 SortOrder: 10
 ---
 
-Quotes are what connects products to a sale. You must [record a sale](xref:crmscript_sale-leads) **before** you can add a quote. Also, [products](xref:crmscript_products) must have been registered before you can add them to a quote.
+Quotes are what connects products to a sale. You must [record a sale](../working-with/sales/leads.md) **before** you can add a quote. Also, [products](../working-with/products/products.md) must have been registered before you can add them to a quote.
 
 > [!NOTE]
 > Each quote belongs to a single sale. And there's only 1 quote per sale.
@@ -67,16 +67,16 @@ printLine(quote.GetSaleId().toString());
 ```
 
 > [!NOTE]
-> The sale you copy the quote **from** must have the same [currency](xref:crmscript_products) as the sale you are copying it **to**.
+> The sale you copy the quote **from** must have the same [currency](./products.md) as the sale you are copying it **to**.
 
 ## Update quote
 
-Updates to a quote mostly target the [alternatives and quote lines](xref:crmscript_quote_alternatives). You will, however, see some changes to the quote properties when dealing with [quote documents](xref:crmscript_quote_document) and [placing orders](xref:crmscript_quote_order).
+Updates to a quote mostly target the [alternatives and quote lines](./quote-alternatives.md). You will, however, see some changes to the quote properties when dealing with [quote documents](./quote-document.md) and [placing orders](./quote-order.md).
 
 ## Versions
 
 There may be multiple versions of a quote, but only 1 of them is **active** at any time.
-Each version will have 1 or more [alternatives](xref:crmscript_quote_alternatives), which in turn will have 1 or more quote lines.
+Each version will have 1 or more [alternatives](./quote-alternatives.md), which in turn will have 1 or more quote lines.
 
 When updating quotes, you'll always be working on the latest version.
 

@@ -47,7 +47,7 @@ printLine(orderConfirmation.subString(0,20));
 This example prints the 1st 20 characters of the stream.
 
 > [!TIP]
-> Learn more about [strings](xref:crmscript_datatypes_string) and [documents](xref:crmscript_docs).
+> Learn more about [strings](../../datatypes/string-type.md) and [documents](../documents/documents.md).
 
 ## Order-related info you might want to set or check
 

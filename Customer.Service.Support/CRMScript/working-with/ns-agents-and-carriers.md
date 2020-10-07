@@ -117,5 +117,5 @@ This is especially important for objects that use enumerations, because those ob
 
 Use Get and Set to access attributes of entities.
 
-* Get methods return another carrier or a [basic type](xref:crmscript_fundamentals)
+* Get methods return another carrier or a [basic type](../fundamentals/fundamentals.md)
 * Set methods take a carrier or basic type as argument

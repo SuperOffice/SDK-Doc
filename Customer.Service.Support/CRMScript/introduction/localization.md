@@ -15,4 +15,4 @@ There's also an API to augment string resources throughout the platform.
 
 *Localization* is the process of translating an application's resources into localized versions for each culture that the application will support.
 
-Working with [formatted addresses](xref:crmscript_addresses) is an example of localized content.
+Working with [formatted addresses](../working-with/follow-ups/addresses.md) is an example of localized content.

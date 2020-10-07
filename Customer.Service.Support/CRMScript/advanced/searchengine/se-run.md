@@ -73,7 +73,7 @@ se.execute();
 
 If you need formatting, consider using one of the following methods instead.
 
-When you have your result, it is time to [explore the data](xref:search_engine_results).
+When you have your result, it is time to [explore the data](./se-results.md).
 
 ## Run and format the result
 

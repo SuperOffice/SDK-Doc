@@ -15,7 +15,7 @@ String output = p.parseString("Hello [[firstName]] [[lastName]]!\n");
 print(output);
 ```
 
-This example defines the template and its variables inline. You can also use a [reply template](xref:crmscript_reply_template).
+This example defines the template and its variables inline. You can also use a [reply template](./advanced/parser-and-templates/parser.md).
 
 ## List available variables
 

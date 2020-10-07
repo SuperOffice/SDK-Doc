@@ -200,7 +200,7 @@ Logs out a customer.
 
 ## Parser variables
 
-Calling `toParser()` will load fields, prefix them with *customer*, and make them available to [templates](xref:crmscript_reply_template).
+Calling `toParser()` will load fields, prefix them with *customer*, and make them available to [templates](../../advanced/parser-and-templates/reply-template.md).
 
 > [!NOTE]
 > Repeated calls will overwrite rather than append the values in the Parser instance.

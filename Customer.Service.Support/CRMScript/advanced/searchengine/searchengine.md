@@ -10,7 +10,7 @@ The SearchEngine is a tool for building SQL queries by adding fields, criteria, 
 
 It was initially created for searching and fetching data from the database. Thereby its name. Since then, it has been extended with features for inserting and updating rows.
 
-When you [construct a query](xref:search_engine_select), the SearchEngine automatically joins tables using [dot-syntax](xref:search_engine_dot_syntax) - for example `ticket.title`.
+When you [construct a query](./se-select.md), the SearchEngine automatically joins tables using [dot-syntax](./dot-syntax.md) - for example `ticket.title`.
 
 All queries are sent to NetServer instead of directly to the database. This ensures that sentry rules are followed. It is possible to circumvent this behavior, but if you do, you need to handle any security implications yourself.
 

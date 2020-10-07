@@ -9,7 +9,7 @@ SortOrder: 30
 Whether you're a sales rep who wants to see whether you have enough ongoing sales opportunities to reach their budget or a sales manager who wants to see how their team is performing, inspecting the pipeline provides valuable info.
 
 > [!TIP]
-> You can only retrieve sales for persons that are SuperOffice users ([associates](xref:crmscript-employees)). The signed-in user must also have permission to view those sales. Otherwise, an exception is thrown.
+> You can only retrieve sales for persons that are SuperOffice users ([associates](../persons-and-organizations/employees.md)). The signed-in user must also have permission to view those sales. Otherwise, an exception is thrown.
 
 ### NSSale[] GetSalesByDate(DateTime fromDate, DateTime toDate, Integer amountLimit, Integer status)
 

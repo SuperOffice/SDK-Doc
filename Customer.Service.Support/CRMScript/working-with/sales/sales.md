@@ -4,7 +4,7 @@ uid: crmscript_sales
 SortOrder: 40
 ---
 
-A sale process typically consists of different stages. For each stage, you have certain activities and perhaps documents that need to be completed. With every activity and every stage completed, you will get closer to [closing the sale](xref:crmscript_sale-done).
+A sale process typically consists of different stages. For each stage, you have certain activities and perhaps documents that need to be completed. With every activity and every stage completed, you will get closer to [closing the sale](./lost-or-sold.md).
 
 ## Key info
 
@@ -54,7 +54,7 @@ print(se.executeTextTable());
 
 ## Sales guides
 
-[Using a *guide*](xref:crmscript_sale-guide) will simplify and structure the sales process for the sales staff with suggestions for which follow-ups to do and which documents to create at each stage.
+[Using a *guide*](./guides.md) will simplify and structure the sales process for the sales staff with suggestions for which follow-ups to do and which documents to create at each stage.
 
 ## Status of a sale
 
@@ -70,9 +70,9 @@ print(se.executeTextTable());
 
 When working with sales, data will often intersect with the following entities:
 
-* [follow-ups](xref:crmscript_followups) (appointment table)
-* [company](xref:crmscript-class-company) (contact table)
-* [contact](xref:crmscript-class-customer) (person table)
+* [follow-ups](../follow-ups/follow-ups.md) (appointment table)
+* [company](../persons-and-organizations/company.md) (contact table)
+* [contact](../persons-and-organizations/customer.md) (person table)
 * project
 
 ## In this section
