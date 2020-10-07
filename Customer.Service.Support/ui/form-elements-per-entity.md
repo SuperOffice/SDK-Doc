@@ -12,7 +12,7 @@ There's a wide range of elements that add a drop-down to select an entity of a s
 
 ![Screen capture of select entity drop-downs](../images/select-entity-dropdown.png)
 
-## [Edit entity menu](./blogic-screen-elements/edit-entity-menu.md)
+## Element [Edit entity menu](./blogic-screen-elements/edit-entity-menu.md)
 
 ### Default menu for customer
 
@@ -69,7 +69,7 @@ m.clear();
 * [Select contact](./blogic-screen-elements/select-contact.md) and [Select contacts](./blogic-screen-elements/select-contacts.md)
 * [Select user](./blogic-screen-elements/select-user.md)
 
-### [Category membership](./blogic-screen-elements/category_membership.md) (for user)
+### Element [Category membership](./blogic-screen-elements/category_membership.md) (for user)
 
 Used to visualize (and change) which category a user belongs to.
 
@@ -106,7 +106,7 @@ noWeights = false
 * [Select reply template](./blogic-screen-elements/select-reply_template.md)
 * [Select insert text](./blogic-screen-elements/select-insert_text.md)
 
-### [Message grid](./blogic-screen-elements/message_grid.md)
+### Element [Message grid](./blogic-screen-elements/message_grid.md)
 
 Displays the messages of a ticket in a grid. Each message has a check-box.
 
@@ -117,7 +117,7 @@ ticketId = 3
 
 ![Screen capture of message grid element](../images/message-grid.png)
 
-### [Contact and recipient](./blogic-screen-elements/contact-and-recipient.md)
+### Element [Contact and recipient](./blogic-screen-elements/contact-and-recipient.md)
 
 Represent customers connected to a request.
 
@@ -173,9 +173,9 @@ recipients.setFieldValue("addColumn", colMap)
 
 ![Screen capture of contact and recipients element](../images/contact-and-recipients-element.png)
 
-### [Request status](./blogic-screen-elements/select-ticket-status.md)
+### Element [Request status](./blogic-screen-elements/select-ticket-status.md)
 
-### [Recipients](./blogic-screen-elements/recipients.md)
+### Element [Recipients](./blogic-screen-elements/recipients.md)
 
 ```crmscript
 copyToAll = false
@@ -191,11 +191,11 @@ ticketId = 1
 
 ![Screen capture of recipients element](../images/recipients-element.png)
 
-### [Address book](./blogic-screen-elements/address-book.md)
+### Element [Address book](./blogic-screen-elements/address-book.md)
 
 Organizes addresses in a tree view
 
-### [Attachment](./blogic-screen-elements/attachment.md)
+### Element [Attachment](./blogic-screen-elements/attachment.md)
 
 Adds an attachment field to the screen.
 
@@ -214,7 +214,7 @@ noHardDelete = true
 * [Select sale](./blogic-screen-elements/select-sale.md)
 * [Select project](./blogic-screen-elements/select-project.md)
 
-### [Invoice rows](./blogic-screen-elements/invoice.md)
+### Element [Invoice rows](./blogic-screen-elements/invoice.md)
 
 ## Security and database
 

@@ -107,9 +107,9 @@ else {
 }
 ```
 
-## [Checkboxes](./blogic-screen-elements/checkbox.md)
+## Checkboxes
 
-A **checkbox** is an input element used to let a user select an option. It is shown as a square box that is ticked when activated.
+A **[checkbox](./blogic-screen-elements/checkbox.md)** is an input element used to let a user select an option. It is shown as a square box that is ticked when activated.
 
 For example, you might want the user to accept terms or opt in before submitting the form.
 
@@ -132,9 +132,9 @@ HtmlElement t;
 t.setValue("crazy", "1");
 ```
 
-## [Radio buttons](./blogic-screen-elements/radio-buttons.md)
+## Radio buttons
 
-A **radio button** is an input element used to let the user select only 1 option from a predefined set. The options in the set are mutually exclusive.
+A **[radio button](./blogic-screen-elements/radio-buttons.md)** is an input element used to let the user select only 1 option from a predefined set. The options in the set are mutually exclusive.
 
 1. Add an element of type `radiobuttons` where you want it to appear.
 2. Set simple value `label` and then specify each option. Remember to set `buttons.length` accordingly.
@@ -175,7 +175,7 @@ formPage.setFieldValue("setChecked", checked);
 
 A **drop-down** is an input element used to let the user select exactly 1 option from a list.
 
-### [List-box](./blogic-screen-elements/list-box.md)
+### [List-box](./blogic-screen-elements/list-box.md) element
 
 To add a custom drop-down list:
 
@@ -210,7 +210,7 @@ old.insert("value", "large");
 formPage.setFieldValue("remove", old);
 ```
 
-### [MDO list](./blogic-screen-elements/mdo-list.md)
+### [MDO list](./blogic-screen-elements/mdo-list.md) element
 
 Adds a drop-down list with values from an MDO list. You must specify which list you want to use.
 
@@ -243,7 +243,7 @@ while (!sortedListNames.eof()) {
 }
 ```
 
-### [Related drop-downs](./blogic-screen-elements/related-drop-downs.md)
+### [Related drop-downs](./blogic-screen-elements/related-drop-downs.md) element
 
 Adds a custom drop-down list where the options depend on the value selected in another drop-down.
 
@@ -404,7 +404,7 @@ folder.setFieldValue("set", m);
 
 For alphanumeric input, you can choose either a single-line field, a multi-line field (area), or an editor.
 
-### [Text](./blogic-screen-elements/text.md)
+### [Text](./blogic-screen-elements/text.md) element
 
 **Text** restricts you to 1 line, but allows you to place restrictions on size and expected contents.
 
@@ -425,7 +425,7 @@ noRangeCheck = false
 
 ![Screen capture of text field](../images/text-isnumber.png)
 
-### [Text area](./blogic-screen-elements/textarea.md)
+### [Text area](./blogic-screen-elements/textarea.md) element
 
 For multi-line input fields, you need to specify the size of the area. You can't place restrictions on expected content as you do for *Text* elements.
 
@@ -436,7 +436,7 @@ rows = 5
 notEmpty = false
 ```
 
-### [Language menu](./blogic-screen-elements/language-menu.md)
+### [Language menu](./blogic-screen-elements/language-menu.md) element
 
 Displays a drop-down with different languages. Used by the spell-checker for input fields.
 
