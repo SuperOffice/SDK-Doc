@@ -64,7 +64,7 @@ Let's say we want to display some text at the top of the **Edit request** screen
 
 4. Save and preview the screen.
 
-![Screen capture of add element button](../../images/add-element.png)
+![Screen capture of add element button](../images/add-element.png)
 
 ## Settings
 

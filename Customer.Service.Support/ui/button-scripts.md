@@ -94,8 +94,8 @@ To add the button, you must create an [extra menu](./extra-menus.md) in SuperOff
 
 Continuing our example, we'll label our button *Get next request* and select the CRMScript, here named *Requests as queue*.
 
-![Screen capture of create extra menu](../../images/req-as-q-setup.png)
+![Screen capture of create extra menu](../images/req-as-q-setup.png)
 
 After saving, the new button is available on the **View request** screen. Clicking the button will runt the script and assign the next request according to our call-center model.
 
-![Screen capture of view request screen with button script](../../images/req-as-q-result.png)
+![Screen capture of view request screen with button script](../images/req-as-q-result.png)

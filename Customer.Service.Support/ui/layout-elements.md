@@ -54,7 +54,7 @@ When viewing the definition of a screen, you can hover an element in the tree an
 * Duplicate an element
 * Move an element
 
-![Screen capture of move element button](../../images/move-element.png)
+![Screen capture of move element button](../images/move-element.png)
 
 ## Element group (Fieldset)
 
