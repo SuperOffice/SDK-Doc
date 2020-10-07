@@ -4,7 +4,7 @@ uid: blogic_panes
 sortOrder: 16
 ---
 
-The `Panes` element is a container for 1 or more [`Pane`](@blogic_pane) elements.
+The `Panes` element is a container for 1 or more [`Pane`](../pane.md) elements.
 
 This is a **group element**. It defines the beginning of a group of elements and requires a matching group end element.
 

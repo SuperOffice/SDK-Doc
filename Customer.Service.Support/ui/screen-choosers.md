@@ -28,4 +28,4 @@ setVariable("url", getProgramTicket() + "&action=doScreenDefinition&idString=My_
 5. Write your script and click **OK**.
 
 > [!TIP]
-> You can use [URL parameters](@url_parameters) in your screen chooser.
+> You can use [URL parameters](./url-parameters.md) in your screen chooser.

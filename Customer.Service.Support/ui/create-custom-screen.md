@@ -4,7 +4,7 @@ uid: blogic_create_custom_screen
 SortOrder: 10
 ---
 
-**Custom screens** are based on a set of [screen elements](@blogic_elements) (controls) such as text, date, grid, and CRMScript.
+**Custom screens** are based on a set of [screen elements](./blogic-screen-elements/blogic-screen-elements.md) (controls) such as text, date, grid, and CRMScript.
 
 **Screen properties** are a combination of settings and CRMScripts.
 
@@ -14,10 +14,10 @@ SortOrder: 10
 2. From the hamburger menu, select **System Design** and then select **Screens**.
 3. Click **New screen**.
 4. Enter screen properties (name is mandatory) and click **OK**.
-5. [Add elements](@blogic_add_screen_element).
+5. [Add elements](./add-screen-element.md).
 6. Click **OK** to save your screen.
 7. Toggle preview to test your current screen.
-8. Set up a [screen chooser](@crmscript_screen_choosers).
+8. Set up a [screen chooser](./screen-choosers.md).
 
 > [!TIP]
 > You can set **hidden variables** to be saved when the screen is submitted so the next screen has access to them.
@@ -54,7 +54,7 @@ After you've created a copy of a system screen, you can edit the copy:
 
 ### Example
 
-Let's say we want to display some text at the top of the **Edit request** screen. To do this, we can add a **view** element of type [`Info fields v2`](@blogic_info_fields_2).
+Let's say we want to display some text at the top of the **Edit request** screen. To do this, we can add a **view** element of type [`Info fields v2`](./blogic-screen-elements/info-fields-2.md).
 
 1. While in edit mode, point to the main table and click **+** to add an element directly inside it.
 
@@ -87,4 +87,4 @@ You can use scripts to precalculate variables from for example a form entry or C
 | after setFromCgi          | A script run after the screen elements are assigned their values              |
 | run after everything else | A script run at the end, after code and scripts for any buttons have been run |
 
-Read more about [screen events](@screen_events_and_hook_scripts).
+Read more about [screen events](./screen_events.md).

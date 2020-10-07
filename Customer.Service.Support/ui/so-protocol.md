@@ -123,7 +123,7 @@ superoffice:contact.personarchive.main.activate?db_id=98765&contact_id=5
 
 ## Using SOProtocol in CRMScript
 
-In CRMScript, you can use `setNavigateTo()` and `getNavigateTo()` of the [EventData](@crmscript_eventdata) object to work with SOProtocol URLs.
+In CRMScript, you can use `setNavigateTo()` and `getNavigateTo()` of the [EventData](./eventdata.md) object to work with SOProtocol URLs.
 
 ```crmscript
 EventData ed = getEventData();

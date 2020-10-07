@@ -77,11 +77,11 @@ Next, you construct the URL, which specifies to run bBogic, invoke the **doScrip
 
 \<site>/\<custId>/CS/scripts/blogic.exe?action=doScript&includeId=\<myScript>
 
-Read more about [URL parameters](@url_parameters).
+Read more about [URL parameters](./url-parameters.md).
 
 ## Adding the button
 
-To add the button, you must create an [extra menu](@extra_menus) in SuperOffice Service:
+To add the button, you must create an [extra menu](./extra-menus.md) in SuperOffice Service:
 
 1. From the hamburger menu, select **System Design** and then select **Extra menus**.
 2. Expand *Top menu*, point to one of the folders, and click **New menu**.

@@ -131,7 +131,7 @@ callbackInit = init
 callbackDisplay = formatDisplayField
 ```
 
-[Learn more about callbacks](@blogic_view_elements) in the CRMScript documentation
+[Learn more about callbacks](../view-elements.md) in the CRMScript documentation
 
 ## Functions
 
@@ -183,4 +183,4 @@ callbackDisplay = formatDisplayField
 
 menuIndex and commandIndex are optional zero-based indexes for placement.
 
-**Flags** are the same as described for [StaticGrid](@blogic_static_grid).
+**Flags** are the same as described for [StaticGrid](./static-grid.md).

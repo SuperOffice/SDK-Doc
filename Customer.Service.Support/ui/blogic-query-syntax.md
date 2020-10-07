@@ -32,7 +32,7 @@ starttablename.fieldname
 ticket.title
 ```
 
-Read more about [joins and relations](@search_engine_dot_syntax).
+Read more about [joins and relations](../CRMScript/advanced/searchengine/dot-syntax.md).
 
 ## Criteria
 

@@ -58,13 +58,13 @@ When viewing the definition of a screen, you can hover an element in the tree an
 
 ## Element group (Fieldset)
 
-An [element group](@blogic_fieldset) creates a small inset frame around its children in the browser.
+An [element group](./blogic-screen-elements/fieldset.md) creates a small inset frame around its children in the browser.
 
 Use it to group related elements in a form.
 
 ## Panes and Pane
 
-A [Pane](@blogic_pane) creates a tab. The [`Panes` element](blogic_panes) is a container for 1 or more `Pane` elements. A pane must be placed directly inside `Panes`.
+A [Pane](./blogic-screen-elements/pane.md) creates a tab. The [`Panes` element](blogic-panes.md) is a container for 1 or more `Pane` elements. A pane must be placed directly inside `Panes`.
 
 You can set the title of individual tabs.
 
@@ -88,7 +88,7 @@ title = %lang("lang_ticket_viewCompany_tickets")%
 
 ## Panel
 
-A [Panel](@blogic_panel) adds a white background to the screen. Also known as the **white sheet**.
+A [Panel](./blogic-screen-elements/panel.md) adds a white background to the screen. Also known as the **white sheet**.
 
 Use panels to **improve readability**. Without a parent Panel or Pane, screen elements are placed directly on the default gray background.
 
@@ -97,7 +97,7 @@ Use panels to **improve readability**. Without a parent Panel or Pane, screen el
 
 ## Element table
 
-[Element table](@blogic_element_table) is one of the most central layout controls. It places its children in a 1-row grid.
+[Element table](./blogic-screen-elements/element-table.md) is one of the most central layout controls. It places its children in a 1-row grid.
 
 It does a double-pass over its children, figuring out how much space they require and allows the remaining to be dynamically resized to the remaining space.
 
@@ -115,7 +115,7 @@ Use the `verticalSpace` setting for example if you have a `Text area` or editor 
 
 ## Element table v2
 
-[Element table v2](@blogic_element_table_2) is an improved version of `Element table` that lets you lay out elements in a 2-dimensional grid.
+[Element table v2](./blogic-screen-elements/element-table-2.md) is an improved version of `Element table` that lets you lay out elements in a 2-dimensional grid.
 
 It allocates how much space each child gets. It **does not adjust** depending on how much space its children require.
 
@@ -142,6 +142,6 @@ You can also set `layout.colspan` and `layout.rowspan` on the **child** elements
 
 ## Form page
 
-A [Form page])(@blogic_form_page) is a standard root frame used in a lot of screens.
+A [Form page](./blogic-screen-elements/form-page.md) is a standard root frame used in a lot of screens.
 
 Use it to add a button to a form.

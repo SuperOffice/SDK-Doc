@@ -4,7 +4,7 @@ uid: blogic_select_contacts
 sortOrder: 19
 ---
 
-A variant of @blogic_select_contact that lets you select more than 1 contact person.
+A variant of ./blogic-screen-elements/select-contact that lets you select more than 1 contact person.
 
 Previously called *Select customer*.
 

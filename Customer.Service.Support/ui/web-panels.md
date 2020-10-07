@@ -74,7 +74,7 @@ The **display location** of a web panel is selected as *Visible in* when you def
 
 ### In Service
 
-In Service, web panels are called **extra browser tabs**. You can add the same type of content as for [extra menus](@extra_menus).
+In Service, web panels are called **extra browser tabs**. You can add the same type of content as for [extra menus](./extra-menus.md).
 
 1. Sign in to SuperOffice Service.
 2. From the hamburger menu, select **System Design** and then select **Web panels**.
@@ -86,7 +86,7 @@ In Service, web panels are called **extra browser tabs**. You can add the same t
 8. Test the result.
 
 > [!TIP]
-> Read more about [base programs and URL parameters](@url_parameters).
+> Read more about [base programs and URL parameters](./url-parameters.md).
 
 ## Url encoding
 
@@ -126,7 +126,7 @@ Here's how it works:
 2. Write the code of the target webpage so that it does something useful with the template variables.
 
 > [!TIP]
-> You can also pass template variables as **hidden variables** in your [custom screens](@blogic_create_custom_screen). And then do something like this in the suitable load or creation script:
+> You can also pass template variables as **hidden variables** in your [custom screens](./create-custom-screen.md). And then do something like this in the suitable load or creation script:
 
 ```crmscript
 User u;

@@ -48,7 +48,7 @@ Then we'll create a custom screen in SuperOffice Service and finally make the ta
 7. Click **Restart NetServer**.
 
 > [!TIP]
-> You can find detailed instructions and conventions in the [database customization](@crmscript_extra_tables) section.
+> You can find detailed instructions and conventions in the [database customization](../CRMScript/advanced/custom-database/extra-tables.md) section.
 
 **Table properties:**
 ![Screen capture of Equipment table properties](../images/tutorial-eqpt-table-properties.png)
@@ -118,7 +118,7 @@ menu.addItem("New unit", getProgram(1) + "&action=editExtraTableEntry&extraTable
 ![Screen capture of Equipment navigator button](../images/tutorial-eqpt-navigator-button.png)
 
 > [!TIP]
-> Read more about the [main menu](@crmscript_main_menu).
+> Read more about the [main menu](./mainmenu.md).
 
 ## Step 4 (optional): create a custom screen
 
@@ -136,7 +136,7 @@ When you're done, the tree should look like this:
     3. Copy the corresponding config into the **Simple values** tab.
     4. Click **Apply**. Then click **OK**.
 4. Toggle preview to test your current screen.
-5. Set up a [screen chooser](@crmscript_screen_choosers).
+5. Set up a [screen chooser](./screen-choosers.md).
 
 ![Screen capture of Equipment screen preview](../images/tutorial-eqpt-screen-preview.png)
 
@@ -206,7 +206,7 @@ url = ticket.exe?action=listTicket&ticketId=
 ```
 
 > [!TIP]
-> Read more about [custom screens](@blogic_create_custom_screen) and [adding elements](@blogic_add_screen_element).
+> Read more about [custom screens](./create-custom-screen.md) and [adding elements](./add-screen-element.md).
 
 ## Step 5: add table to Sales as a web panel
 
@@ -236,4 +236,4 @@ url = ticket.exe?action=listTicket&ticketId=
 | x_company=\<cuid>             | Pre-fills the company ID value in the New entry dialog |
 
 > [!TIP]
-> Read more about [web panels](@web_panels) and [URL parameters](@url_parameters).
+> Read more about [web panels](./web-panels.md) and [URL parameters](./url-parameters.md).

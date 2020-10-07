@@ -6,7 +6,7 @@ sortOrder: 69
 
 This element is used for selecting the primary ID from multiple tables.
 
-It is similar to [Select relation](@blogic_select_relation). However, it is used when **more than 1 relation** is required, and displays these in a **grid**.
+It is similar to [Select relation](./select-relation.md). However, it is used when **more than 1 relation** is required, and displays these in a **grid**.
 
 ## Configuration
 

@@ -19,7 +19,7 @@ EventData ed = getEventData();
 
 ## Type
 
-The types of events that can occur pertain to either [Service screen events](@creen_events_and_hook_scripts) (beforeSetFromCgi, afterSetFromCgi, beforePrint) or triggers.
+The types of events that can occur pertain to either [Service screen events](./screen-events.md) (beforeSetFromCgi, afterSetFromCgi, beforePrint) or triggers.
 
 ### Integer getType()
 
@@ -30,7 +30,7 @@ printLine(ed.getType().toString());
 
 ## Input values
 
-**Input values** are for getting available data - a **read** operation. You can either fetch a specific value or a [Map](@crmscript_datatypes_map) with all values.
+**Input values** are for getting available data - a **read** operation. You can either fetch a specific value or a [Map](../CRMScript/datatypes/map-type.md) with all values.
 
 ### String getInputValue(String inputValue)
 
@@ -182,7 +182,7 @@ if (sourceIds.exists(sourceId.toString())){
 
 ## Navigation
 
-Navigation uses [SOProtocol](@so_protocol) and [URL parameters](@url_parameters).
+Navigation uses [SOProtocol](./so-protocol.md) and [URL parameters](./url-parameters.md).
 
 ### String getNavigateTo()
 

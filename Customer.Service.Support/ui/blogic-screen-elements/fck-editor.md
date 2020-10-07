@@ -6,7 +6,7 @@ sortOrder: 6
 
 This element allows you to create HTML-formatted messages. You can insert images, tables, paragraphs, and so on.
 
-Consider using the newer [CK editor](@blogic_ck_editor).
+Consider using the newer [CK editor](./ck-editor.md).
 
 Learn more:
 

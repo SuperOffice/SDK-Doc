@@ -7,22 +7,22 @@ SortOrder: 14
 **Form elements** create user interaction through input fields.
 
 * These elements may **not** contain children.
-* These elements should be located in a [Form Page element](@blogic_form_page)
+* These elements should be located in a [Form Page element](./blogic-screen-elements/form-page.md)
 
-This page covers the **basic** element types. [Entity specific form elements](@blogic_form_elements_per_entity) are covered separately.
+This page covers the **basic** element types. [Entity specific form elements](./form-elements-per-entity.md) are covered separately.
 
 ## Buttons
 
 Depending on which behavior you want, you can either add button elements (single or row) or configure the form page.
 
-### [Button](@blogic_button) element
+### [Button](./blogic-screen-elements/button.md) element
 
 ```crmscript
 button.title = "Click bait"
 button.onClick = onclick="alert('Wow! You actually clicked it!');"
 ```
 
-### [Button row](@blogic_button_row) element
+### [Button row](./blogic-screen-elements/button-row.md) element
 
 ```crmscript
 buttons.0.name = ok
@@ -107,7 +107,7 @@ else {
 }
 ```
 
-## [Checkboxes](@blogic_checkbox)
+## [Checkboxes](./blogic-screen-elements/checkbox.md)
 
 A **checkbox** is an input element used to let a user select an option. It is shown as a square box that is ticked when activated.
 
@@ -132,7 +132,7 @@ HtmlElement t;
 t.setValue("crazy", "1");
 ```
 
-## [Radio buttons](@blogic_radiobuttons)
+## [Radio buttons](./blogic-screen-elements/radio-buttons.md)
 
 A **radio button** is an input element used to let the user select only 1 option from a predefined set. The options in the set are mutually exclusive.
 
@@ -175,7 +175,7 @@ formPage.setFieldValue("setChecked", checked);
 
 A **drop-down** is an input element used to let the user select exactly 1 option from a list.
 
-### [List-box](@blogic_listbox)
+### [List-box](./blogic-screen-elements/list-box.md)
 
 To add a custom drop-down list:
 
@@ -210,7 +210,7 @@ old.insert("value", "large");
 formPage.setFieldValue("remove", old);
 ```
 
-### [MDO list](@blogic_mdolist)
+### [MDO list](./blogic-screen-elements/mdo-list.md)
 
 Adds a drop-down list with values from an MDO list. You must specify which list you want to use.
 
@@ -243,7 +243,7 @@ while (!sortedListNames.eof()) {
 }
 ```
 
-### [Related drop-downs](@blogic_related_dropdowns)
+### [Related drop-downs](./blogic-screen-elements/related-drop-downs.md)
 
 Adds a custom drop-down list where the options depend on the value selected in another drop-down.
 
@@ -319,7 +319,7 @@ for (email.execute(); !email.eof(); email.next()) {
 }
 ```
 
-## [Folder explorer](@blogic_tree_explorer) (tree explorer)
+## [Folder explorer](./blogic-screen-elements/tree-explorer.md) (tree explorer)
 
 A **folder explorer** sets up information in an expandable tree. Think of it as a manually crafted multi-level menu. You build the tree by adding nodes and setting parent ID to the direct ancestor - except for the root node.
 
@@ -404,7 +404,7 @@ folder.setFieldValue("set", m);
 
 For alphanumeric input, you can choose either a single-line field, a multi-line field (area), or an editor.
 
-### [Text](@blogic_text)
+### [Text](./blogic-screen-elements/text.md)
 
 **Text** restricts you to 1 line, but allows you to place restrictions on size and expected contents.
 
@@ -425,7 +425,7 @@ noRangeCheck = false
 
 ![Screen capture of text field](../images/text-isnumber.png)
 
-### [Text area](@blogic_textarea)
+### [Text area](./blogic-screen-elements/textarea.md)
 
 For multi-line input fields, you need to specify the size of the area. You can't place restrictions on expected content as you do for *Text* elements.
 
@@ -436,13 +436,13 @@ rows = 5
 notEmpty = false
 ```
 
-### [Language menu](@blogic_language_menu)
+### [Language menu](./blogic-screen-elements/language-menu.md)
 
 Displays a drop-down with different languages. Used by the spell-checker for input fields.
 
 ![Screen capture of text field](../images/language-menu.png)
 
-### [CK editor](@blogic_ck_editor) and [FCK editor](@blogic_fck_editor)
+### [CK editor](./blogic-screen-elements/ck-editor.md) and [FCK editor](./blogic-screen-elements/fck-editor.md)
 
 These editor elements let users create HTML-formatted messages. They can insert images, tables, paragraphs, and so on.
 

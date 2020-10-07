@@ -30,13 +30,13 @@ Learn more:
 | plainText             | false   | Whether to shows a simple text area with no options                |
 
 **A word about attachments:**
-Naming the attachment element ensures that if `showInsertText` is **true**, the attachments will be shown in an [`Attachments`](@blogic_attachment) element.
+Naming the attachment element ensures that if `showInsertText` is **true**, the attachments will be shown in an [`Attachments`](./attachment.md) element.
 
 ### Vertical space
 
 For the editor to fill out the screen vertically, the config variable **verticalSpace = rest** must be set.
 
-If the editor is inside a pane, the [`Panes`](@blogic_panes) element must also have this config variable.
+If the editor is inside a pane, the [`Panes`](./panes.md) element must also have this config variable.
 
 ## Example
 
@@ -69,7 +69,7 @@ Returns the contents of the editor.
 
 ## Nesting
 
-The `CK editor` element must be inside an [`Element table`](@blogic_element_table). Otherwise, it will not fill out the width of the page.
+The `CK editor` element must be inside an [`Element table`](./element-table.md). Otherwise, it will not fill out the width of the page.
 This is especially important when the editor is located inside a `Pane` element together with other elements.
 
 **Correct nesting:**

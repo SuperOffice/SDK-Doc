@@ -38,7 +38,7 @@ Hook scripts are useful when you want to tweak a standard SuperOffice Service sc
 
 All screens in the system have a unique name (ID), for example, *lang_ticket_editCompany*. It can easily be identified by looking at the source of the page.
 
-You can interact with standard SuperOffice Service screens using [HtmlElement](@crmscript_htmlelement) methods. To access an element, call `getHtmlElement()`.
+You can interact with standard SuperOffice Service screens using [HtmlElement](./htmlelement.md) methods. To access an element, call `getHtmlElement()`.
 
 > [!CAUTION]
 > The names of screens as well as HTML elements **might change over time**. Stay up to date with UI changes to prevent your scripts from breaking. If you call `getHtmlElement()` with an unknown name, it returns a dummy element not used on that screen.
@@ -67,7 +67,7 @@ for (Integer i = 0; i < getNumHtmlElements(); i++) {
 ```
 
 > [!TIP]
-> Read more about [using printDebug()](@crmscript_debug_print_debug).
+> Read more about [using printDebug()](../CRMScript/debugging/print-debug.md).
 
 ## beforeSetFromCgi event
 
