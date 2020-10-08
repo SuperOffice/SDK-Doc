@@ -1,10 +1,12 @@
 ---
 title: Extra menus
 uid: extra_menus
-SortOrder: 50
+SortOrder: 20
 ---
 
-**Extra menus** are buttons, menus, links, shortcuts, lists and so on that you can add to SuperOffice Service to make something easily available. Specifically:
+**Extra menus** are buttons, menus, links, shortcuts, lists and so on that you can add to SuperOffice Service to make something easily available.
+
+## What can I add?
 
 * URLs: Links to web pages or to specific records in SuperOffice Service.
 * Screens: Shortcuts to specific screens.
@@ -25,9 +27,9 @@ SortOrder: 50
 * Under  *System settings > System design*
 * On the **New** button in the top bar.
 
-## Add function to menu button (Actions)
+## Add function to menu button (actions)
 
-To add a macro to the **Actions** button in the Company screen, Contact screen or Request screen, or Message tab:
+To add a macro to the **Actions** button in the Company screen, Contact screen, Request screen, or Message tab:
 
 1. Sign in to SuperOffice Service.
 2. From the hamburger menu, select **System Design** and then select **Extra menus**.
@@ -39,15 +41,15 @@ To add a macro to the **Actions** button in the Company screen, Contact screen o
 5. Click **OK**.
 6. Test the result.
 
-### Keyboard short-cuts (v. 3.1.8)
+### Keyboard shortcuts (v. 3.1.8)
 
-You can add keyboard short-cuts to the items in the extra menus by adding **&** before the character you want to be the access key. For example, "M&y contacts".
+You can add keyboard shortcuts to the items in the extra menus by adding an ampersand **&** before the character you want to be the access key. For example, "M&y contacts".
 
-The short-cut key will be shown with an underscore. To use the short-cut, press **Alt+ the selected character**. For example, Alt+y.
+The shortcut key will be shown with an underscore. To use the shortcut, press **Alt+ the selected character**. For example, Alt+y.
 
-### Return to same screen
+### Return to the same screen
 
-This option is handy when you add buttons that update something and you want to preserve the context.
+This option is handy when you add buttons that update something and you want to **preserve the context**.
 
 For example, if you create a button in the Request screen to change the category of the request, you also want to return to the same request after the button has been clicked.
 
@@ -70,17 +72,20 @@ If you link to an external website:
 * **Don't** check Return to same screen.
 * Set Target to "_blank".
 
+> [!TIP]
+> Read more about the [main menu](./mainmenu.md)
+
 ## Reference
 
 ### Menu properties
 
-| Property              | Description                                                             |
-|:----------------------|:------------------------------------------------------------------------|
-| Base program          | Adds URL to the selected base program.<br/>URL must start with &action= |
-| URL                   | The URL to be executed when the menu is clicked                         |
-| Append ID             | Appends the ID of the current entry to the end of the URL (bool)        |
+| Property              | Description                                                                  |
+|:----------------------|:-----------------------------------------------------------------------------|
+| Base program          | Adds URL to the selected base program.<br/>URL must start with &action=      |
+| URL                   | The URL to be executed when the menu is clicked                              |
+| Append ID             | Appends the ID of the current entry to the end of the URL (bool)             |
 | Return to same screen | Whether to return the users to the screen where the action was clicked<br/> If unchecked, users must do this manually |
 | Append usec           | Includes the NetServer session key<br/>Required for web panel authentication |
-| Target                | Which window the URL should open in<br/>"main": the html frame to which the output goes <br/>"_blank" : always open a new window/tab<br/>"customer" : open a separate window for this menu option or a group of menu options |
-| URL to icon           | Location of a custom icon for the extra menu                            |
-| Position              | The position of the extra menu<br/> 0 = top                             |
+| Target                | Which window the URL should open in<br/>"main": the html frame to which the output goes <br/>"_blank" : always open a new window/tab<br/>"customer" : open a separate window for this menu option or a group of menu options     |
+| URL to icon           | Location of a custom icon for the extra menu                                 |
+| Position              | The position of the extra menu<br/> 0 = top                                  |

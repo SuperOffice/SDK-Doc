@@ -1,10 +1,12 @@
 ---
 title: Button scripts
 uid: button_scripts
-SortOrder: 55
+SortOrder: 25
 ---
 
-A **button script** is a CRMScript that is referenced by its **includeId** and will be run when the user clicks a custom button. Setting it up is a simple 2-step process:
+A **button script** is a CRMScript that is referenced by its **includeId** and will be run when the user clicks a custom button.
+
+Setting it up is a simple 2-step process:
 
 1. Write your script and save it on the **CRMScript** page in SuperOffice Admin client.
 2. Add a button pointing to that script.
@@ -14,9 +16,10 @@ A **button script** is a CRMScript that is referenced by its **includeId** and w
 
 ## Creating the script
 
-1. Open the **CRMScript** page in the SuperOffice CRM Online admin client.
-2. Click **New script** and enter information. Don't forget the **include name**!
-3. Add your code to the **Script** tab and click **OK**.
+1. Sign in to the SuperOffice admin client.
+2. Open the **CRMScript** page.
+3. Click **New script** and enter information. Don't forget the **include name**!
+4. Add your code to the **Script** tab and click **OK**.
 
 ### Example: requests as queue
 
@@ -36,10 +39,10 @@ Let's assume your priorities are set up as follows:
 Your queue might look like this:
 
 * Request 1 created Monday at 13:00 with medium priority will get deadline Tuesday at 13:00.
-* Request 2 created Monday at 13:00 with high priority will get deadline Monday at 17:00.
-* Request 3, created Tuesday at 12:00 with high priority will get deadline Tuesday at 16:00.
+* Request 2 created Monday at 13:00 with a high priority will get deadline Monday at 17:00.
+* Request 3, created Tuesday at 12:00 with a high priority will get deadline Tuesday at 16:00.
 
-Picking based on deadline, request 1 will be picked before request 3, even if the latter has a higher priority.
+Picking based on a deadline, request 1 will be picked before request 3, even if the latter has a higher priority.
 
 Now, we can create a script that picks the most important request (open, unassigned) for a user (taking into account category membership) and assigns it to the current user. If no requests are available (empty queue), a simple message is displayed.
 
@@ -71,13 +74,14 @@ Next, we'll make the script available as a button in the **View request** screen
 
 ## Referencing the script
 
-To reference your script, its include ID must have been set. Edit your script if this setting is missing before you continue.
+To reference your script, its **include ID must have been set**. Edit your script if this setting is missing before you continue.
 
-Next, you construct the URL, which specifies to run bBogic, invoke the **doScript** action, and pass the include ID.
+Next, you construct the URL, which specifies to run bLogic, invoke the **doScript** action, and pass the include ID.
 
 \<site>/\<custId>/CS/scripts/blogic.exe?action=doScript&includeId=\<myScript>
 
-Read more about [URL parameters](./url-parameters.md).
+> [!TIP]
+> Read more about [URL parameters](./url-parameters.md).
 
 ## Adding the button
 
@@ -96,6 +100,6 @@ Continuing our example, we'll label our button *Get next request* and select the
 
 ![Screen capture of create extra menu](../images/req-as-q-setup.png)
 
-After saving, the new button is available on the **View request** screen. Clicking the button will runt the script and assign the next request according to our call-center model.
+After saving, the new button is available on the **View request** screen. Clicking the button will run the script and assign the next request according to our call-center model.
 
 ![Screen capture of view request screen with button script](../images/req-as-q-result.png)
