@@ -74,7 +74,7 @@ It might look something like this:
 
 1. Get a reference to the element by declaring a variable of type [`HtmlElement`](../htmlelement.md) and assigning the object returned by `addHtmlElement()`
 
-2. Create a `SearchEngine` object and [specify your query](....//CRMScript/advanced/searchengine/se-select.md).
+2. Create a `SearchEngine` object and [specify your query](../../CRMScript/advanced/searchengine/se-select.md).
 
 3. [Run the query](../../CRMScript/advanced/searchengine/se-run.md).
 

@@ -49,7 +49,7 @@ You can interact with standard SuperOffice Service screens using [HtmlElement](.
 2. Select **View source** in your browser.
 3. In the source, look for a line starting with *eventName*. This line tells you the unique name of this screen.
 
-**For example:** `eventName: "HtmlPage.lang_ticket_editCompany"`
+For example, *eventName: "HtmlPage.lang_ticket_editCompany"*
 
 ### List available elements
 

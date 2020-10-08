@@ -1,5 +1,5 @@
 ---
-title: Interactive screen elements
+title: Form elements
 uid: blogic_form_elements
 SortOrder: 40
 ---

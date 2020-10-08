@@ -1,5 +1,5 @@
 ---
-title: Interactive screen elements - entity-specific
+title: Form elements - entity-specific
 uid: blogic_form_elements_per_entity
 SortOrder: 45
 ---

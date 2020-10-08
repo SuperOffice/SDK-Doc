@@ -4,7 +4,7 @@ uid: blogic_select_time
 sortOrder: 19
 ---
 
-This element is used to get [**Time**](@crmscript_datatypes_time) as input.
+This element is used to get [Time](../../crmscript/datatypes/time-type.md). as input.
 
 ## Configuration
 

@@ -50,4 +50,4 @@ buttons.length = 3
 | addButton | name<br/>label<br/>warning<br/>iconUrl<br/>className | Adds a button to the row |
 
 > [!NOTE]
-> The name of the buttons [**must be mapped to scripts**](@crmscript_blogic_forms) that might be run for the current screen.
+> The name of the buttons **must be mapped to scripts** that might be run for the current screen.

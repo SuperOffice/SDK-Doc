@@ -4,7 +4,7 @@ uid: blogic_select_date
 sortOrder: 63
 ---
 
-This element is used to input a [**Date**](@crmscript_datatypes_date).
+This element is used to input a [Date](../../crmscript/datatypes/date-type.md).
 
 ## Configuration
 

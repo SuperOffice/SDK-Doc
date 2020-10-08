@@ -1,5 +1,5 @@
 ---
-title: Custom screen layout
+title: Layout elements
 uid: blogic_layout
 sortOrder: 50
 ---

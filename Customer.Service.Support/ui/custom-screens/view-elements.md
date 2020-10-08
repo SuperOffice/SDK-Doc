@@ -1,5 +1,5 @@
 ---
-title: Read-only screen elements
+title: View elements
 uid: blogic_view_elements
 SortOrder: 30
 ---
