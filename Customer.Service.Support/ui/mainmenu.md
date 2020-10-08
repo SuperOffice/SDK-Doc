@@ -1,7 +1,7 @@
 ---
 title: MainMenu
 uid: crmscript_main_menu
-SortOrder: 90
+SortOrder: 140
 ---
 
 The CRMScript **MainMenu** class is used to control the main (left-side) menu of SuperOffice CRM.

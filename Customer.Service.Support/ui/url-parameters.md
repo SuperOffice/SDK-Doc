@@ -1,7 +1,7 @@
 ---
 title: URL parameters
 uid: url_parameters
-SortOrder: 60
+SortOrder: 50
 ---
 
 **URL parameters** let you control SuperOffice Service using simple HTTP commands. These commands are similar to a REST API. However, they return a full HTML user interface, not JSON or XML as REST would return.
@@ -23,7 +23,7 @@ The 2nd component is the **endpoint**, specifying which program to run:
 * rms.exe
 * stat.exe
 
-3rd and last is the **query string**, specifying an action and possibly a list of parameters. Multiple parameters are separated with ampersand `&`.
+3rd and last is the **query string**, specifying an action and possibly a list of parameters. Multiple parameters are separated with an ampersand `&`.
 
 For example, `action=listTickets` or `action=doScript&id=123`.
 

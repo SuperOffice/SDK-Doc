@@ -1,7 +1,7 @@
 ---
 title: SOProtocol
 uid: so_protocol
-SortOrder: 300
+SortOrder: 70
 ---
 
 **SOProtocol** is a standard for defining URL short-cuts to SuperOffice entities. It lets you control the user interface without scripting and send users directly to the entry in question.
@@ -134,7 +134,7 @@ ed.setNavigateTo("soprotocol:sale.document?document_id=0");
 
 ### Go to web panel
 
-Let's say we've added a web panel with window name *erpinfo* to the Contact card, To reference it:
+Let's say we've added a [web panel](./web-panels.md) with window name *erpinfo* to the Contact card, To reference it:
 
 ```html
 superoffice:contact.www.erpinfo?contact_id=2

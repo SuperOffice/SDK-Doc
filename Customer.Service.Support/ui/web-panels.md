@@ -1,7 +1,7 @@
 ---
 title: Web panels
 uid: web_panels
-SortOrder: 200
+SortOrder: 60
 ---
 
 A **web panel** is a webpage that is displayed inside SuperOffice CRM.

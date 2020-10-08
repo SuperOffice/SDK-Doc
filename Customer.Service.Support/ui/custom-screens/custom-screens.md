@@ -1,5 +1,5 @@
 ---
-title: Create custom screen
+title: Custom screens
 uid: custom_screens
 SortOrder: 30
 ---

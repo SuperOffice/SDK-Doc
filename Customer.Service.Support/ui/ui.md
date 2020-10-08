@@ -30,6 +30,8 @@ There are 3 types of screen elements:
 * [Form elements](./custom-screens/form-elements.md): create user interaction with input fields
 * [Group elements](./custom-screens/layout-elements.md): create a hierarchy of elements and determine the layout of the screen
 
+These are listed in the [element reference](./blogic-screen-elements/blogic-screen-elements.md).
+
 With scripts, you can:
 
 * process the form data of a screen - for example, to create a request or send an email
@@ -52,9 +54,8 @@ With scripts, you can:
 
 **[SOProtocol](./so-protocol.md)** is a standard for defining URL short-cuts to SuperOffice entities. It lets you control the user interface without scripting and send users directly to the entry in question.
 
-## Reference
+## Classes
 
 * [EventData](./eventdata.md)
 * [HtmlElement](./htmlelement.md)
 * [MainMenu](./mainmenu.md)
-* [Screen element reference](./blogic-screen-elements/blogic-screen-elements.md)

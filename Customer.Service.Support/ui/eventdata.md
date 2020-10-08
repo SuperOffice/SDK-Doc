@@ -1,7 +1,7 @@
 ---
 title: EventData
 uid: crmscript_eventdata
-SortOrder: 70
+SortOrder: 100
 ---
 
 **EventData** gives you access to contextual information in an **event handler**. For example, the name of a created company or the amount of a sale.

@@ -1,10 +1,10 @@
 ---
-title: Blogic screen elements
+title: Element reference
 uid: blogic_elements
-sortOrder: 100
+sortOrder: 200
 ---
 
-Screen elements are HTML like elements that can be used in a blogic screen.
+Screen elements are HTML like elements that can be used in a bLogic screen.
 
 Screen elements are grouped by type in the UI:
 

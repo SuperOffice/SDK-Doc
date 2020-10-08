@@ -1,7 +1,7 @@
 ---
 title: Tutorial - custom database and UI
 uid: tutorial_custom_db_and_ui
-SortOrder:500
+SortOrder: 300
 ---
 
 In this tutorial, we'll create an extra table in the SuperOffice database to organize equipment units (inventory) and relate them to requests and companies.
@@ -159,7 +159,7 @@ verticalSpace = rest
 title =
 ```
 
-Set title for each pane identical to the element name.
+Set the title for each pane identical to the element name.
 
 **Info - simple values:**
 
@@ -208,12 +208,12 @@ url = ticket.exe?action=listTicket&ticketId=
 > [!TIP]
 > Read more about [custom screens](./custom-screens/custom-screens.md) and [adding elements](./custom-screens/add-screen-element.md).
 
-## Step 5: add table to Sales as a web panel
+## Step 5: add the table to Sales as a web panel
 
 1. Sign in to the SuperOffice CRM Admin client.
 2. Select **Lists**.
 3. Using the drop-down at the top, select **GUI - Web panel**. Then click **Add** (bottom left corner).
-4. Enter name (Equipment) and window name (ID).
+4. Enter a name (Equipment) and window name (ID).
 5. Enter URL and select URL encoding.
     * `<csti>?action=listTableEntries&table=y_equipment&field.0=y_equipment.x_company&value.0=<cuid>&x_company=<cuid>`
 6. Select display location *Section tab in Company Screen*.

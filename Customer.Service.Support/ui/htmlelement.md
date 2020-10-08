@@ -1,7 +1,7 @@
 ---
 title: HtmlElement
 uid: crmscript_htmlelement
-SortOrder: 80
+SortOrder: 120
 ---
 
 The CRMScript **HtmlElement** class represents HTML elements in the SuperOffice UI.
