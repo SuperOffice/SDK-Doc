@@ -8,33 +8,33 @@ A guide to interacting with and customizing the SuperOffice UI through CRMScript
 
 ## Screen events and hook scripts
 
-* **[Screen events(./screen-events.md)** represent steps in the process of loading Service screens.
+* **[Screen events](./screen-events.md)** represent steps in the process of loading Service screens.
 
 * **Hook scripts** are event-driven CRMScripts that do stuff at a specific point during loading.
 
-## [Extra menus](./extra-menus.md) and [button scripts](./button-scripts.md)
+## Extra menus and button scripts
 
-* **Extra menus** let you make something easily available in SuperOffice Service. For example, a button that takes the user directly to a specific screen or a menu option that triggers a script.
+* **[Extra menus](./extra-menus.md)** let you make something easily available in SuperOffice Service. For example, a button that takes the user directly to a specific screen or a menu option that triggers a script.
 
-* **Button scripts** are CRMScripts that are referenced by their **includeId** and run when the user clicks a custom button.
+* **[Button scripts](./button-scripts.md)** are CRMScripts that are referenced by their **includeId** and run when the user clicks a custom button.
 
-## [Custom screens](./create-custom-screen.md) (bLogic)
+## Custom screens (bLogic)
 
-**bLogic** is a system for designing screens and displaying content in SuperOffice Service.
+**bLogic** is a system for [designing screens](./create-custom-screen.md) and displaying content in SuperOffice Service.
 
 Custom screens are based on a set of [screen elements](./add-screen-element.md) (controls) such as text, date, grid, and CRMScript.
 
 There are 3 types of screen elements:
 
-* View elements: [display info](./view-elements.md) (read-only)
-* Form elements: create [user interaction](./form-elements.md) with input fields
-* Group elements: create a hierarchy of elements and determines the [layout of the screen](./layout-elements.md)
+* [View elements](./view-elements.md): display info (read-only)
+* [Form elements](./form-elements.md): create user interaction with input fields
+* [Group elements](./layout-elements.md): create a hierarchy of elements and determine the layout of the screen
 
 With scripts, you can:
 
 * process the form data of a screen - for example, to create a request or send an email
 
-* construct and modify a screen that requires a more dynamic layout - for example, add an element only if the customer is of a specific category
+* construct and modify a screen that requires a more dynamic layout - for example, to add an element only if the customer is of a specific category
 
 ## Screen choosers
 
