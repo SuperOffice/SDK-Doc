@@ -1,10 +1,10 @@
 ---
 title: Create custom screen
-uid: blogic_create_custom_screen
-SortOrder: 10
+uid: custom_screens
+SortOrder: 30
 ---
 
-**Custom screens** are based on a set of [screen elements](./blogic-screen-elements/blogic-screen-elements.md) (controls) such as text, date, grid, and CRMScript.
+**Custom screens** are based on a set of [screen elements](../blogic-screen-elements/blogic-screen-elements.md) (controls) such as text, date, grid, and CRMScript.
 
 **Screen properties** are a combination of settings and CRMScripts.
 
@@ -17,7 +17,7 @@ SortOrder: 10
 5. [Add elements](./add-screen-element.md).
 6. Click **OK** to save your screen.
 7. Toggle preview to test your current screen.
-8. Set up a [screen chooser](./screen-choosers.md).
+8. Set up a [screen chooser](../screen-choosers.md).
 
 > [!TIP]
 > You can set **hidden variables** to be saved when the screen is submitted so the next screen has access to them.
@@ -46,7 +46,7 @@ To modify one of the built-in screens, you need to:
 4. Point to the screen you want to copy and then click **Copy screen**.
     * You new screen is added to the list. It's name is the name of the original screen with the word *copy* added to it.
 
-### Edit copy of screen
+### Edit copy of a screen
 
 After you've created a copy of a system screen, you can edit the copy:
 
@@ -54,17 +54,17 @@ After you've created a copy of a system screen, you can edit the copy:
 
 ### Example
 
-Let's say we want to display some text at the top of the **Edit request** screen. To do this, we can add a **view** element of type [`Info fields v2`](./blogic-screen-elements/info-fields-2.md).
+Let's say we want to display some text at the top of the **Edit request** screen. To do this, we can add a **view** element of type [`Info fields v2`](../blogic-screen-elements/info-fields-2.md).
 
 1. While in edit mode, point to the main table and click **+** to add an element directly inside it.
 
-2. Select type and give the element a name so that you can get a reference to it afterwards in your script.
+2. Select type and give the element a name so that you can get a reference to it afterward in your script.
 
 3. Click **Edit screen** and extend the loading script (after setFromCgi) to pull data into your new field.
 
 4. Save and preview the screen.
 
-![Screen capture of add element button](../images/add-element.png)
+![Screen capture of add element button](../../images/add-element.png)
 
 ## Settings
 
@@ -87,4 +87,4 @@ You can use scripts to precalculate variables from for example a form entry or C
 | after setFromCgi          | A script run after the screen elements are assigned their values              |
 | run after everything else | A script run at the end, after code and scripts for any buttons have been run |
 
-Read more about [screen events](./screen_events.md).
+Read more about [screen events](../screen-events.md).

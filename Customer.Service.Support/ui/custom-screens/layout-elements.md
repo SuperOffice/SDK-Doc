@@ -1,7 +1,7 @@
 ---
 title: Custom screen layout
 uid: blogic_layout
-sortOrder: 16
+sortOrder: 50
 ---
 
 **Group elements** are containers - they create a hierarchy of elements and determine the layout of the screen.
@@ -54,22 +54,22 @@ When viewing the definition of a screen, you can hover an element in the tree an
 * Duplicate an element
 * Move an element
 
-![Screen capture of move element button](../images/move-element.png)
+![Screen capture of move element button](../../images/move-element.png)
 
 ## Element group (Fieldset)
 
-An [element group](./blogic-screen-elements/fieldset.md) creates a small inset frame around its children in the browser.
+An [element group](../blogic-screen-elements/fieldset.md) creates a small inset frame around its children in the browser.
 
 Use it to group related elements in a form.
 
 ## Panes and Pane
 
-A [Pane](./blogic-screen-elements/pane.md) creates a tab. The [`Panes` element](blogic-panes.md) is a container for 1 or more `Pane` elements. A pane must be placed directly inside `Panes`.
+A [Pane](../blogic-screen-elements/pane.md) creates a tab. The [`Panes` element](../blogic-screen-elements/blogic-panes.md) is a container for 1 or more `Pane` elements. A pane must be placed directly inside `Panes`.
 
 You can set the title of individual tabs.
 
 > [!NOTE]
-> Pane **doesn't handle layout of multiple children**. To place more than 1 view or form element on a tab, wrap them in another container such as Element table.
+> Pane **doesn't handle the layout of multiple children**. To place more than 1 view or form element on a tab, wrap them in another container such as Element table.
 
 ### Example config
 
@@ -88,16 +88,16 @@ title = %lang("lang_ticket_viewCompany_tickets")%
 
 ## Panel
 
-A [Panel](./blogic-screen-elements/panel.md) adds a white background to the screen. Also known as the **white sheet**.
+A [Panel](../blogic-screen-elements/panel.md) adds a white background to the screen. Also known as the **white sheet**.
 
 Use panels to **improve readability**. Without a parent Panel or Pane, screen elements are placed directly on the default gray background.
 
 > [!NOTE]
-> Panel **doesn't work with multiple children**. To place more than 1 element on a white background, wrap them in another container such as Element table.
+> Panel **doesn't work with multiple children**. To place more than 1 element on a white background, wrap them in another container such as **Element table**.
 
 ## Element table
 
-[Element table](./blogic-screen-elements/element-table.md) is one of the most central layout controls. It places its children in a 1-row grid.
+[Element table](../blogic-screen-elements/element-table.md) is one of the most central layout controls. It places its children in a 1-row grid.
 
 It does a double-pass over its children, figuring out how much space they require and allows the remaining to be dynamically resized to the remaining space.
 
@@ -115,18 +115,18 @@ Use the `verticalSpace` setting for example if you have a `Text area` or editor 
 
 ## Element table v2
 
-[Element table v2](./blogic-screen-elements/element-table-2.md) is an improved version of `Element table` that lets you lay out elements in a 2-dimensional grid.
+[Element table v2](../blogic-screen-elements/element-table-2.md) is an improved version of `Element table` that lets you lay out elements in a 2-dimensional grid.
 
 It allocates how much space each child gets. It **does not adjust** depending on how much space its children require.
 
-Use this for example to crete multiple areas in a dashboard.
+Use this for example to create multiple areas in a dashboard.
 
 > [!TIP]
 > You can nest multiple `Element table v2`.
 
 ### Rows and columns
 
-You should set the initial number of rows and columns. It is more important to get columns right. The number of rows will expand dynamically if there are more children than initial space.
+You should set the initial number of rows and columns. It is more important to get columns right. The number of rows will expand dynamically if there are more children than the initial space.
 
 You can then set the size of individual rows and columns. For example:
 
@@ -142,6 +142,6 @@ You can also set `layout.colspan` and `layout.rowspan` on the **child** elements
 
 ## Form page
 
-A [Form page](./blogic-screen-elements/form-page.md) is a standard root frame used in a lot of screens.
+A [Form page](../blogic-screen-elements/form-page.md) is a standard root frame used in a lot of screens.
 
 Use it to add a button to a form.

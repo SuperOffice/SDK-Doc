@@ -27,7 +27,7 @@ You can convert the value of an `HtmlElement` object to a string, number, or boo
 
 ### Void setFromCgi()
 
-Called when the element should find its values from the CGI variables. Commonly used for [screens containing forms](./blogic-screen-elements/form-elements.md).
+Called when the element should find its values from the CGI variables. Commonly used for [screens containing forms](./custom-screens/form-elements.md).
 
 ### String getFieldValue(String field)
 

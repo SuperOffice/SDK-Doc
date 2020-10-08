@@ -126,7 +126,7 @@ Here's how it works:
 2. Write the code of the target webpage so that it does something useful with the template variables.
 
 > [!TIP]
-> You can also pass template variables as **hidden variables** in your [custom screens](./create-custom-screen.md). And then do something like this in the suitable load or creation script:
+> You can also pass template variables as **hidden variables** in your [custom screens](./custom-screens/custom-screens.md). And then do something like this in the suitable load or creation script:
 
 ```crmscript
 User u;

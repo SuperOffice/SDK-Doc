@@ -1,10 +1,10 @@
 ---
 title: Add screen element
 uid: blogic_add_screen_element
-SortOrder: 11
+SortOrder: 10
 ---
 
-[Screen elements](./blogic-screen-elements/blogic-screen-elements.md) (controls) are the building blocks of custom screens. They determine the [layout](./blogic-screen-elements/layout-elements.md), display [read-only info](./blogic-screen-elements/view-elements.md), and provide [user interaction](./blogic-screen-elements/form-elements.md).
+**Screen elements** (controls) are the building blocks of custom screens. They determine the [layout](./layout-elements.md), display [read-only info](./view-elements.md), and provide [user interaction](./form-elements.md).
 
 **Element properties** are a combination of settings (simple values) and CRMScripts.
 
@@ -26,7 +26,7 @@ SortOrder: 11
 Most elements have configuration options. These are specific to the different types of elements (for example, title and name).
 
 > [!TIP]
-> You can look up available settings for a specific element under the *Configuration* heading in the [element reference](./blogic-screen-elements/blogic-screen-elements.md).
+> You can look up available settings for a specific element under the *Configuration* heading in the [element reference](../blogic-screen-elements/blogic-screen-elements.md).
 
 Each option is written as a **key-value** pair in the **Simple values** tab of the element.
 
@@ -36,7 +36,10 @@ key2 = value2
 key3 = value3
 ```
 
-Each line is interpreted independent of the other lines. Note that there's **no semicolon or comma at the end** of lines. You can use our [line-based query syntax](./blogic-query-syntax.md) to specify values.
+Each line is interpreted independently of the other lines. You can use our [line-based query syntax](./blogic-query-syntax.md) to specify values.
+
+> [!NOTE]
+> There's **no semicolon or comma at the end** of simple value lines.
 
 Keys are automatically sorted alphabetically when you save an element.
 
@@ -65,18 +68,20 @@ addHtmlElement(getScreenElementId(screenElementIndex),
   getScreenElementConfig(screenElementIndex));
 ```
 
-To extend the default code, you'll be using database queries and the functions supported by that element. It might look something like this:
+To extend the default code, you'll be using database queries and the functions supported by that element.
 
-1. Get a reference to the element by declaring a variable of type `HtmlElement` and assigning the object returned by `addHtmlElement()`
+It might look something like this:
 
-2. Create a `SearchEngine` object and [specify your query](../CRMScript/advanced/searchengine/se-select.md).
+1. Get a reference to the element by declaring a variable of type [`HtmlElement`](../htmlelement.md) and assigning the object returned by `addHtmlElement()`
 
-3. [Run the query](../CRMScript/advanced/searchengine/se-run.md).
+2. Create a `SearchEngine` object and [specify your query](....//CRMScript/advanced/searchengine/se-select.md).
 
-4. [Loop over the result](../CRMScript/advanced/searchengine/se-results.md). For each row:
-    * Create a [Map](../CRMScript/datatypes/map-type.md).
+3. [Run the query](../../CRMScript/advanced/searchengine/se-run.md).
+
+4. [Loop over the result](../../CRMScript/advanced/searchengine/se-results.md). For each row:
+    * Create a [Map](../../CRMScript/datatypes/map-type.md).
     * Add key-value pairs to the map.
-    * Add the map to the element using one of the elements functions.
+    * Add the map to the element using one of the element's functions.
 
 > [!TIP]
-> You can look up available functions for a specific element under the *Functions* heading in the [element reference](./blogic-screen-elements/blogic-screen-elements.md).
+> You can look up available functions for a specific element under the *Functions* heading in the [element reference](../blogic-screen-elements/blogic-screen-elements.md).

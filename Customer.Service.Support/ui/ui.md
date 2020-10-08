@@ -20,15 +20,15 @@ A guide to interacting with and customizing the SuperOffice UI through CRMScript
 
 ## Custom screens (bLogic)
 
-**bLogic** is a system for [designing screens](./create-custom-screen.md) and displaying content in SuperOffice Service.
+**bLogic** is a system for [designing screens](./custom-screens/custom-screens.md) and displaying content in SuperOffice Service.
 
-Custom screens are based on a set of [screen elements](./add-screen-element.md) (controls) such as text, date, grid, and CRMScript.
+Custom screens are based on a set of [screen elements](./custom-screens/add-screen-element.md) (controls) such as text, date, grid, and CRMScript.
 
 There are 3 types of screen elements:
 
-* [View elements](./view-elements.md): display info (read-only)
-* [Form elements](./form-elements.md): create user interaction with input fields
-* [Group elements](./layout-elements.md): create a hierarchy of elements and determine the layout of the screen
+* [View elements](./custom-screens/view-elements.md): display info (read-only)
+* [Form elements](./custom-screens/form-elements.md): create user interaction with input fields
+* [Group elements](./custom-screens/layout-elements.md): create a hierarchy of elements and determine the layout of the screen
 
 With scripts, you can:
 

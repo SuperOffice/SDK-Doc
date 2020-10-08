@@ -32,7 +32,7 @@ starttablename.fieldname
 ticket.title
 ```
 
-Read more about [joins and relations](../CRMScript/advanced/searchengine/dot-syntax.md).
+Read more about [joins and relations](../../CRMScript/advanced/searchengine/dot-syntax.md).
 
 ## Criteria
 
@@ -79,11 +79,11 @@ When reading the lines from top to bottom, add parentheses as follows:
 * Whenever the indent **increases** from a line to the next, add a **left** parenthesis.
 * Whenever the indent **decreases** from a line to the next, add a **right** parenthesis.
 
-## Blogic vs. CRMScript
+## bLogic vs. CRMScript
 
-How you format each line depends on whether you're in a CRMScript or configuring a blogic element.
+How you format each line depends on whether you're in a CRMScript or configuring a bLogic element.
 
-Different screen elements offer different functionality and use their own naming-conventions.
+Different screen elements offer different functionality and use their own naming conventions.
 
 ### Example
 

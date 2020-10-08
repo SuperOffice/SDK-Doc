@@ -1,13 +1,13 @@
 ---
 title: Interactive screen elements
 uid: blogic_form_elements
-SortOrder: 14
+SortOrder: 40
 ---
 
 **Form elements** create user interaction through input fields.
 
 * These elements may **not** contain children.
-* These elements should be located in a [Form Page element](./blogic-screen-elements/form-page.md)
+* These elements should be located in a [Form Page element](../blogic-screen-elements/form-page.md)
 
 This page covers the **basic** element types. [Entity specific form elements](./form-elements-per-entity.md) are covered separately.
 
@@ -15,14 +15,18 @@ This page covers the **basic** element types. [Entity specific form elements](./
 
 Depending on which behavior you want, you can either add button elements (single or row) or configure the form page.
 
-### [Button](./blogic-screen-elements/button.md) element
+### Button element
+
+The [button](../blogic-screen-elements/button.md) element adds a single button.
 
 ```crmscript
 button.title = "Click bait"
 button.onClick = onclick="alert('Wow! You actually clicked it!');"
 ```
 
-### [Button row](./blogic-screen-elements/button-row.md) element
+### Button row element
+
+The [button row](../blogic-screen-elements/button-row.md) element adds multiple buttons.
 
 ```crmscript
 buttons.0.name = ok
@@ -109,11 +113,11 @@ else {
 
 ## Checkboxes
 
-A **[checkbox](./blogic-screen-elements/checkbox.md)** is an input element used to let a user select an option. It is shown as a square box that is ticked when activated.
+A [checkbox](../blogic-screen-elements/checkbox.md) is an input element used to let a user select an option. It is shown as a square box that is ticked when activated.
 
 For example, you might want the user to accept terms or opt in before submitting the form.
 
-1. Add an element of type `checkbox` where you want it to appear.
+1. Add an element of type **checkbox** where you want it to appear.
 2. Set simple value `label` and optionally `suffixLabel`.
 
 ```crmscript
@@ -121,7 +125,7 @@ label = Crazy
 suffixLabel = I agree to use this experimental stuff
 ```
 
-![Screen capture of checkbox](../images/crazy-checkbox.png)
+![Screen capture of checkbox](../../images/crazy-checkbox.png)
 
 ### Mark a checkbox
 
@@ -134,9 +138,9 @@ t.setValue("crazy", "1");
 
 ## Radio buttons
 
-A **[radio button](./blogic-screen-elements/radio-buttons.md)** is an input element used to let the user select only 1 option from a predefined set. The options in the set are mutually exclusive.
+A [radio button](../blogic-screen-elements/radio-buttons.md) is an input element used to let the user select only 1 option from a predefined set. The options in the set are mutually exclusive.
 
-1. Add an element of type `radiobuttons` where you want it to appear.
+1. Add an element of type **radiobuttons** where you want it to appear.
 2. Set simple value `label` and then specify each option. Remember to set `buttons.length` accordingly.
 
 For example, let's say we're picking t-shirt size:
@@ -153,7 +157,7 @@ buttons.2.label = Large
 buttons.length = 3
 ```
 
-![Screen capture of radio buttons](../images/size-radio-buttons.png)
+![Screen capture of radio buttons](../../images/size-radio-buttons.png)
 
 Next, we're adding another option and changing which option is selected in the creation script:
 
@@ -175,11 +179,11 @@ formPage.setFieldValue("setChecked", checked);
 
 A **drop-down** is an input element used to let the user select exactly 1 option from a list.
 
-### [List-box](./blogic-screen-elements/list-box.md) element
+### List-box element
 
-To add a custom drop-down list:
+To add a [custom drop-down menu](../blogic-screen-elements/list-box.md):
 
-1. Add an element of type `list box` where you want it to appear.
+1. Add an element of type **list box** where you want it to appear.
 2. Set simple value `label` and then specify each option. Remember to set `options.length` accordingly.
 
 ```crmscript
@@ -194,7 +198,7 @@ options.2.name = Large
 options.length = 3
 ```
 
-![Screen capture of list box](../images/size-list-box.png)
+![Screen capture of list box](../../images/size-list-box.png)
 
 Next, we're replacing an option in the creation script:
 
@@ -210,16 +214,16 @@ old.insert("value", "large");
 formPage.setFieldValue("remove", old);
 ```
 
-### [MDO list](./blogic-screen-elements/mdo-list.md) element
+### MDO list element
 
-Adds a drop-down list with values from an MDO list. You must specify which list you want to use.
+Adds a [drop-down menu with values from an MDO list](../blogic-screen-elements/mdo-list.md). You must specify which list you want to use.
 
 ```crmscript
 label = Project type
 list = projecttype
 ```
 
-![Screen capture of MDO list](../images/projecttype-mdo-list.png)
+![Screen capture of MDO list](../../images/projecttype-mdo-list.png)
 
 > [!TIP]
 > Use **NSMDOAgent** to get an overview of all available MDO lists. If you want it alphabetical, use a Map. If not, simply print the *name* in the `foreach` loop.
@@ -243,17 +247,17 @@ while (!sortedListNames.eof()) {
 }
 ```
 
-### [Related drop-downs](./blogic-screen-elements/related-drop-downs.md) element
+### Related drop-downs element
 
-Adds a custom drop-down list where the options depend on the value selected in another drop-down.
+Adds a [custom drop-down menu](../blogic-screen-elements/related-drop-downs.md) where the options depend on the value selected in another drop-down.
 
 In **tree mode**, you get 1 drop-down with a multi-level list.
 
-![Screen capture of related drop-down, tree-mode](../images/related-dropdown-tree.png)
+![Screen capture of related drop-down, tree-mode](../../images/related-dropdown-tree.png)
 
 In **list-mode**, you get n drop-downs, either side-by-side or in a vertical list. Each level has its own label.
 
-![Screen capture of related drop-down, list-mode](../images/related-dropdown-printdownwards.png)
+![Screen capture of related drop-down, list-mode](../../images/related-dropdown-printdownwards.png)
 
 #### Example
 
@@ -319,11 +323,11 @@ for (email.execute(); !email.eof(); email.next()) {
 }
 ```
 
-## [Folder explorer](./blogic-screen-elements/tree-explorer.md) (tree explorer)
+## Folder explorer (tree explorer)
 
-A **folder explorer** sets up information in an expandable tree. Think of it as a manually crafted multi-level menu. You build the tree by adding nodes and setting parent ID to the direct ancestor - except for the root node.
+A [folder explorer](../blogic-screen-elements/tree-explorer.md) sets up information in an expandable tree. Think of it as a manually crafted multi-level menu. You build the tree by adding nodes and setting parent ID to the direct ancestor - except for the root node.
 
-1. Add an element of type `folder explorer` where you want it to appear.
+1. Add an element of type **folder explorer** where you want it to appear.
 2. Set simple value `label`.
 3. In the creation script, start by setting up the root node.
 4. Next, add level-2 children with `parent.id` set to the ID you chose for the root.
@@ -398,15 +402,15 @@ m.insert("pruneEmptyFolders", "true");
 folder.setFieldValue("set", m);
 ```
 
-![Screen capture of folder explorer](../images/folder-explorer-community.png)
+![Screen capture of folder explorer](../../images/folder-explorer-community.png)
 
 ## Text
 
 For alphanumeric input, you can choose either a single-line field, a multi-line field (area), or an editor.
 
-### [Text](./blogic-screen-elements/text.md) element
+### Text element
 
-**Text** restricts you to 1 line, but allows you to place restrictions on size and expected contents.
+[Text](../blogic-screen-elements/text.md) restricts you to 1 line, but allows you to place restrictions on size and expected contents.
 
 This example sets up a field that requires a decimal number (float):
 
@@ -423,11 +427,11 @@ maxValue = 9 999 999
 noRangeCheck = false
 ```
 
-![Screen capture of text field](../images/text-isnumber.png)
+![Screen capture of text field](../../images/text-isnumber.png)
 
-### [Text area](./blogic-screen-elements/textarea.md) element
+### Text area element
 
-For multi-line input fields, you need to specify the size of the area. You can't place restrictions on expected content as you do for *Text* elements.
+For [multi-line input fields](../blogic-screen-elements/textarea.md), you need to specify the size of the area. You can't place restrictions on expected content as you do for *Text* elements.
 
 ```crmscript
 label = Comments
@@ -436,18 +440,18 @@ rows = 5
 notEmpty = false
 ```
 
-### [Language menu](./blogic-screen-elements/language-menu.md) element
+### Language menu element
 
-Displays a drop-down with different languages. Used by the spell-checker for input fields.
+Displays a [drop-down with different languages](../blogic-screen-elements/language-menu.md). Used by the spell-checker for input fields.
 
-![Screen capture of text field](../images/language-menu.png)
+![Screen capture of text field](../../images/language-menu.png)
 
-### [CK editor](./blogic-screen-elements/ck-editor.md) and [FCK editor](./blogic-screen-elements/fck-editor.md)
+### CK editor and FCK editor
 
 These editor elements let users create HTML-formatted messages. They can insert images, tables, paragraphs, and so on.
 
 > [!NOTE]
-> The **CK editor** is newer and what you should aim to use.
+> The [CK editor](../blogic-screen-elements/ck-editor.md) is newer and what you should aim to use.
 
 The editor must be inside an `Element table`. It is often placed directly before a `ContactAndRecipient` element, but it doesn't have to be.
 
@@ -460,4 +464,4 @@ valueId = true
 verticalSpace = rest
 ```
 
-![Screen capture of CK editor](../images/ck-editor.png)
+![Screen capture of CK editor](../../images/ck-editor.png)

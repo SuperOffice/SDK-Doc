@@ -23,15 +23,15 @@ For example, *HtmlPage.lang_ticket_editCompany.afterSetFromCgi*.
 
 ### When to use a hook script
 
-Hook scripts are useful when you want to tweak a standard SuperOffice Service screen, but [building a custom screen](./create-custom-screen.md) is overkill for your minor modifications.
+Hook scripts are useful when you want to tweak a standard SuperOffice Service screen, but [building a custom screen](./custom-screens/custom-screen.md) is overkill for your minor modifications.
 
 > [!NOTE]
 > Hook scripts are run **every single time a particular screen loads!** Carefully consider the overhead you are introducing.
 
 ### When NOT to use a hook script
 
-* You need to [add or remove elements](./add-screen-element.md) (controls) on the screen
-* You need to [change the layout](./layout-elements.md) of elements
+* You need to [add or remove elements](./custom-screens/add-screen-element.md) (controls) on the screen
+* You need to [change the layout](./custom-screens/layout-elements.md) of elements
 * You're tailoring SuperOffice CRM
 
 ## Screen names and HTML elements
@@ -73,7 +73,7 @@ for (Integer i = 0; i < getNumHtmlElements(); i++) {
 
 Event to hook into to do stuff **before** all elements on the screen set their values from the CGI-data.
 
-Normally called only for [screens containing forms](./form-elements.md).
+Normally called only for [screens containing forms](./custom-screens/form-elements.md).
 
 **Include-ID:** *HtmlPage.SCREEN.beforeSetFromCgi*
 
@@ -81,7 +81,7 @@ Normally called only for [screens containing forms](./form-elements.md).
 
 Event to hook into to do stuff **after** all elements on the screen have set their values from the CGI-data.
 
-Normally called only for [screens containing forms](./form-elements.md).
+Normally called only for [screens containing forms](./custom-screens/form-elements.md).
 
 **Include-ID:** *HtmlPage.SCREEN.afterSetFromCgi*
 

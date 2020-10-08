@@ -206,7 +206,7 @@ url = ticket.exe?action=listTicket&ticketId=
 ```
 
 > [!TIP]
-> Read more about [custom screens](./create-custom-screen.md) and [adding elements](./add-screen-element.md).
+> Read more about [custom screens](./custom-screens/custom-screens.md) and [adding elements](./custom-screens/add-screen-element.md).
 
 ## Step 5: add table to Sales as a web panel
 
