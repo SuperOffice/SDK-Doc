@@ -57,4 +57,8 @@ When the event(s) happen (`contact.changed` for example), then the Target URL is
 }
 ```
 
+## CrmScript hooks
+
+Webhooks can also target CrmScripts by using the `Type: "crmscript"`. See @webhooks_crmscript for details.
+
 See also: @Reference-WebAPI-REST-Webhook-Webhook
