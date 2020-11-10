@@ -4,11 +4,11 @@ These events are fired when chat sessions and messages change:
 
 * `chatsession.created` - new session starts
 * `chatmessage.created` - new message added to chat
-* `chatsession.deleted`
+* `chatsession.changed` - session has changed state
 
 # Webhook Callback Examples
 
-chatsession.created
+ChatSession.Created
 
 ```json
 POST /webhook HTTP/1.1
@@ -63,19 +63,16 @@ ChatMessage.Created
 }
 ```
 
-Project.deleted
+ChatSession.changed
 
 ```json
 {
   "EventId": "e87ac619-c864-4881-89eb-07ca5521ee2c",
   "Timestamp": "2018-04-24T08:18:42.089895Z",
   "Changes": [],
-  "Values": {
-     "project_id": 178105
-   },
-  "Event": "project.deleted",
+  "Event": "chatsession.changed",
   "PrimaryKey": 178105,
-  "Entity": "project",
+  "Entity": "chatsession",
   "ContextIdentifier": "Default",
   "ChangedByAssociateId": 316,
   "WebhookName": "Name you provided"
