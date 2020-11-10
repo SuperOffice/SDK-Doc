@@ -4,6 +4,7 @@ These webhook events are fired when contact rows are changed:
 
 * `contact.created`
 * `contact.changed`
+* `contact.softdeleted` - when deleted
 * `contact.deleted`
 
 # Webhook Callback Examples
@@ -11,6 +12,7 @@ These webhook events are fired when contact rows are changed:
 Contact.Created
 
 ```json
+POST /webhook HTTP/1.1
 Content-Type: application/json; charset=utf-8
 User-Agent: NetServer-Webhook/8.8.6684.1719
 X-Superoffice-Event: contact.created
@@ -98,6 +100,10 @@ Contact.Deleted
   "EventId": "b24d9089-2d17-419a-a27c-0b0dbcfd58fb",
   "Timestamp": "2018-04-24T07:58:10.9923345Z",
   "Changes": [],
+  "Values": {
+     "associate_id": 4039840,
+     "contact_id": 994863
+   },
   "Event": "contact.deleted",
   "PrimaryKey": 994863,
   "Entity": "contact",

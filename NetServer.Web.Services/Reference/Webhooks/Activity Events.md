@@ -11,6 +11,7 @@ These events are fired when appointment/document rows are changed:
 Activity.created
 
 ```json
+POST /webhook HTTP/1.1
 Content-Type: application/json; charset=utf-8
 User-Agent: NetServer-Webhook/8.8.6684.1719
 X-Superoffice-Event: activity.created
@@ -107,6 +108,13 @@ Activity.deleted
   "EventId": "e87ac619-c864-4881-89eb-07ca5521ee2c",
   "Timestamp": "2018-04-24T08:18:42.089895Z",
   "Changes": [],
+  "Values": {
+     "appointment_id": 4039840,
+     "contact_id": 1234,
+     "person_id": 0,
+     "project_id": 178105,
+     "sale_id": 0
+   },
   "Event": "activity.deleted",
   "PrimaryKey": 4039840,
   "Entity": "activity",

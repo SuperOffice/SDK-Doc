@@ -11,6 +11,7 @@ These webhook events are fired when salestakeholder rows are changed:
 SaleStakeholder.created
 
 ```json
+POST /webhook HTTP/1.1
 Content-Type: application/json; charset=utf-8
 User-Agent: NetServer-Webhook/8.8.6684.1719
 X-Superoffice-Event: salestakeholder.created
@@ -74,6 +75,9 @@ SaleStakeholder.deleted
     "EventId":"88f91933-edce-4c1a-8ded-ade8e2f72434",
     "Timestamp":"2018-04-05T08:28:01.5732501Z",
     "Changes":[],
+    "Values": {
+      "sale_id": 4
+    },
     "Event":"salestakeholder.deleted",
     "PrimaryKey":18,
     "Entity":"salestakeholder",

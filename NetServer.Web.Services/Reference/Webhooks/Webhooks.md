@@ -1,5 +1,6 @@
 ---
 uid: webhooks_ref
+SortOrder: 0
 ---
 # Webhooks Reference
 
@@ -15,7 +16,7 @@ webhook receiver.
 To register a webhook: ****
 
 ``` json
-POST /api/v1/Webhook
+POST /api/v1/Webhook HTTP/1.1
 Content-Type: application/json
 
 {
@@ -51,6 +52,28 @@ When the event(s) happen (`contact.changed` for example), then the Target URL is
   "Event": "contact.changed",
   "PrimaryKey": 994863,
   "Entity": "contact",
+  "ContextIdentifier": "Cust1234",
+  "ChangedByAssociateId": 316,
+  "WebhookName":"Name you provided"
+}
+```
+
+## Delete events
+
+Since the item has been deleted, the delete event carriers the id values from the deleted object as part of the webhook payload.
+
+```json
+{
+  "Timestamp": "2018-04-24T07:50:50.6812131Z",
+  "Values": {
+    "sale_id": 994863,
+    "contact_id": 43,
+    "person_id": 64,
+    "project_id": 178105
+  },
+  "Event": "sale.deleted",
+  "PrimaryKey": 994863,
+  "Entity": "sale",
   "ContextIdentifier": "Cust1234",
   "ChangedByAssociateId": 316,
   "WebhookName":"Name you provided"

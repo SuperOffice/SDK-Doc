@@ -1,20 +1,20 @@
-# Project Events
+# Chat Events
 
-These events are fired when project rows are changed:
+These events are fired when chat sessions and messages change:
 
-* `project.created`
-* `project.changed`
-* `project.deleted`
+* `chatsession.created` - new session starts
+* `chatmessage.created` - new message added to chat
+* `chatsession.deleted`
 
 # Webhook Callback Examples
 
-Project.created
+chatsession.created
 
 ```json
 POST /webhook HTTP/1.1
 Content-Type: application/json; charset=utf-8
 User-Agent: NetServer-Webhook/8.8.6684.1719
-X-Superoffice-Event: project.created
+X-Superoffice-Event: chatsession.created
 X-Superoffice-Eventid: e87ac619-c864-4881-89eb-07ca5521ee2c
 X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 
@@ -22,60 +22,41 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
   "EventId": "e87ac619-c864-4881-89eb-07ca5521ee2c",
   "Timestamp": "2018-04-24T08:18:42.089895Z",
   "Changes": [
-    "project_id",
-    "text_id",
-    "tzLocationId",
-    "postitText_id",
-    "activeErpLinks",
-    "userdef2_id",
-    "status_idx",
-    "nmdAppointment_id",
-    "registered",
-    "endDate",
-    "type_idx",
-    "source",
-    "activeLinks",
-    "associate_id",
-    "group_id",
-    "done",
-    "soundEx",
-    "updated",
-    "userdef_id",
-    "updated_associate_id",
-    "project_number",
-    "nextMilestoneDate",
-    "updatedCount",
-    "registered_associate_id",
-    "name"
   ],
-  "Event": "project.created",
+  "Event": "chatsession.created",
   "PrimaryKey": 178105,
-  "Entity": "project",
+  "Entity": "chatsession",
   "ContextIdentifier": "Default",
   "ChangedByAssociateId": 316,
   "WebhookName": "Name you provided"
 }
 ```
 
-Project.changed
+ChatMessage.Created
 
 ```json
 {
   "EventId": "e87ac619-c864-4881-89eb-07ca5521ee2c",
   "Timestamp": "2018-04-24T08:18:42.089895Z",
   "Changes": [
-    "project_id",
-    "endDate",
-    "type_idx",
-    "associate_id",
-    "group_id",
-    "updated",
-    "updated_associate_id",
-    "updatedCount"
+    "chatSession.topicId",
+    "chatSession.userId",
+    "chatSession.customerId",
+    "chatSession.customerName",
+    "chatSession.customerEmail",
+    "chatSession.companyName",
+    "chatSession.customerPhone",
+    "chatMessage.sessionId",
+    "chatMessage.id",
+    "chatMessage.message",
+    "chatMessage.type",
+    "chatMessage.specialType",
+    "chatMessage.specialParam",
+    "chatMessage.author",
   ],
-  "Event": "project.changed",
+  "Event": "chatmessage.created",
   "PrimaryKey": 178105,
-  "Entity": "project",
+  "Entity": "chatmessage",
   "ContextIdentifier": "Default",
   "ChangedByAssociateId": 316,
   "WebhookName": "Name you provided"
@@ -90,9 +71,8 @@ Project.deleted
   "Timestamp": "2018-04-24T08:18:42.089895Z",
   "Changes": [],
   "Values": {
-    "associate_id": 4039840,
-    "project_id": 178105
-  },
+     "project_id": 178105
+   },
   "Event": "project.deleted",
   "PrimaryKey": 178105,
   "Entity": "project",

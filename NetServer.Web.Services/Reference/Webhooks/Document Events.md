@@ -3,15 +3,16 @@
 These events are fired when appointment/document rows are changed, or when document contents are changed:
 
 * `document.created`
-* `document.changed`
+* `document.changed` - document properties changed
 * `document.deleted`
-* `document.edited`
+* `document.edited` - document content has changed
 
 # Webhook Callback Examples
 
 Document.created
 
 ```json
+POST /webhook HTTP/1.1
 Content-Type: application/json; charset=utf-8
 User-Agent: NetServer-Webhook/8.8.6684.1719
 X-SuperOffice-Event: document.created
@@ -81,6 +82,10 @@ Document.deleted
   "EventId": "e87ac619-c864-4881-89eb-07ca5521ee2c",
   "Timestamp": "2018-04-24T08:18:42.089895Z",
   "Changes": [],
+  "Values": {
+     "document_id": 66,
+     "appointment_id": 69
+   },
   "Event": "document.deleted",
   "PrimaryKey": 66,
   "Entity": "document",

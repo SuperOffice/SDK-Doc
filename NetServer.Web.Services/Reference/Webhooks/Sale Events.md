@@ -9,11 +9,14 @@ These webhook events are fired when sale rows are changed:
 * `sale.lost` - when sale status is changed to 'lost'
 * `sale.completed` - when sale.completed is changed to 'completed'
 
+See also [Quote events](Quote Events.md)
+
 # Webhook Callback Examples
 
 Sale.Created:
 
 ```json
+POST /webhook HTTP/1.1
 Content-Type: application/json; charset=utf-8
 User-Agent: NetServer-Webhook/8.8.6684.1719
 X-Superoffice-Event: sale.created
@@ -109,6 +112,12 @@ Sale.Deleted:
   "EventId":"88f91933-edce-4c1a-8ded-ade8e2f72434",
   "Timestamp":"2018-04-05T08:28:01.5732501Z",
   "Changes":[],
+  "Values": {
+    "associate_id": 4039840,
+    "contact_id": 43,
+    "person_id": 64,
+    "project_id": 178105
+  },
   "Event":"sale.deleted",
   "PrimaryKey":18,
   "Entity":"sale",
