@@ -10,4 +10,7 @@ keywords: SetPrivate(Integer)
 
 Obsolete, but still maintained field for appointment privacy; denormalization of visiblefor status
 
+* Public=0
+* PrivateUser=1
+* PrivateGroup=2
 

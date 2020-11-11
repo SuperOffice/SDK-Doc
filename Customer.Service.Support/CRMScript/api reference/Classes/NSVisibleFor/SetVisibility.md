@@ -7,6 +7,7 @@ sortOrder: 8749
 keywords: SetVisibility(Integer)
 ---
 
+The visibility of the record - 0=All, 1=Associate, 2=Group
 
 * **Visibility:** Integer
 * **Returns:** Integer
