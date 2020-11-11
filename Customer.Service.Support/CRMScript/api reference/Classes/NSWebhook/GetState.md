@@ -1,6 +1,6 @@
 ---
-title: NSWebhookState GetState()
-path: /EJScript/Classes/NSWebhook/Member functions/NSWebhookState GetState()
+title: Integer GetState()
+path: /EJScript/Classes/NSWebhook/Member functions/Integer GetState()
 intellisense: 1
 classref: 1
 sortOrder: 8776
@@ -12,6 +12,6 @@ Webhook status - should we post events to the URL? 1=Active, 2=Stopped or 3=TooM
 
 
 
-* **Returns:** WebhookState
+* **Returns:** Integer
 
 
