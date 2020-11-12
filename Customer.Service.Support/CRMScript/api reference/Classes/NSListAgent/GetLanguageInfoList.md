@@ -7,7 +7,11 @@ sortOrder: 4205
 keywords: GetLanguageInfoList(Integer[])
 ---
 
+Gets an array of LanguageInfo objects.
 
+
+
+* **p0:** The identifiers of the LanguageInfo object
 * **Returns:** IntegerArray
 
 

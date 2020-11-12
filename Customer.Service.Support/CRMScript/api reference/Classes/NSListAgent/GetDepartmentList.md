@@ -7,7 +7,11 @@ sortOrder: 4176
 keywords: GetDepartmentList(Integer[])
 ---
 
+Gets an array of Department objects.
 
+
+
+* **p0:** The identifiers of the Department object
 * **Returns:** IntegerArray
 
 

@@ -7,6 +7,7 @@ sortOrder: 2477
 keywords: GetDocumentList(Integer[])
 ---
 
+Gets an array of Document objects.
 
 * **Returns:** IntegerArray
 

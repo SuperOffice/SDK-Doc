@@ -7,7 +7,10 @@ sortOrder: 4150
 keywords: GetCountryList(Integer[])
 ---
 
+Gets an array of Country objects.
 
+
+* **p0:** The identifiers of the Country object
 * **Returns:** IntegerArray
 
 

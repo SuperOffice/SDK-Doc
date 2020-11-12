@@ -7,7 +7,9 @@ sortOrder: 4127
 keywords: GetBusinessList(Integer[])
 ---
 
+Gets an array of Business objects.
 
+* **p0:** The identifiers of the Business object
 * **Returns:** IntegerArray
 
 

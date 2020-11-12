@@ -7,7 +7,11 @@ sortOrder: 4284
 keywords: GetReasonSoldList(Integer[])
 ---
 
+Gets an array of ReasonSold objects.
 
+
+
+* **p0:** The identifiers of the ReasonSold object
 * **Returns:** IntegerArray
 
 

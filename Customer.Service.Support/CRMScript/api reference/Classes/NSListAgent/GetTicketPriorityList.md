@@ -7,7 +7,11 @@ sortOrder: 4342
 keywords: GetTicketPriorityList(Integer[])
 ---
 
+Gets an array of TicketPriority objects.
 
+
+
+* **p0:** The identifiers of the TicketPriority object
 * **Returns:** IntegerArray
 
 

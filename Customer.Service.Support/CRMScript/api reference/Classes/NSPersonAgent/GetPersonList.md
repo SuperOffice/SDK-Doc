@@ -7,7 +7,11 @@ sortOrder: 4942
 keywords: GetPersonList(Integer[])
 ---
 
+Gets an array of Person objects.
 
+
+
+* **p0:** The identifiers of the Person object
 * **Returns:** IntegerArray
 
 

@@ -7,7 +7,11 @@ sortOrder: 4330
 keywords: GetTaskList(Integer[])
 ---
 
+Gets an array of Task objects.
 
+
+
+* **p0:** The identifiers of the Task object
 * **Returns:** IntegerArray
 
 

@@ -7,7 +7,11 @@ sortOrder: 4131
 keywords: GetCategoryList(Integer[])
 ---
 
+Gets an array of Category objects.
 
+
+
+* **p0:** The identifiers of the Category object
 * **Returns:** IntegerArray
 
 

@@ -7,7 +7,11 @@ sortOrder: 4287
 keywords: GetReasonStalledList(Integer[])
 ---
 
+Gets an array of ReasonStalled objects.
 
+
+
+* **p0:** The identifiers of the ReasonStalled object
 * **Returns:** IntegerArray
 
 

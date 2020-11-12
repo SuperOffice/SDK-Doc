@@ -7,7 +7,11 @@ sortOrder: 4323
 keywords: GetSourceList(Integer[])
 ---
 
+Gets an array of Source objects.
 
+
+
+* **p0:** The identifiers of the Source object
 * **Returns:** IntegerArray
 
 

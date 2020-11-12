@@ -7,7 +7,11 @@ sortOrder: 4250
 keywords: GetPositionList(Integer[])
 ---
 
+Gets an array of Position objects.
 
+
+
+* **p0:** The identifiers of the Position object
 * **Returns:** IntegerArray
 
 

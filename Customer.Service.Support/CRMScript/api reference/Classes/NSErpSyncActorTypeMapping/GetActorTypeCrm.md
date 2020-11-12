@@ -8,5 +8,15 @@ keywords: GetActorTypeCrm()
 ---
 
 
+The actor type (CRM side)
+* Unknown=0
+* Contact=1
+* Person=2
+* Project=3
+* Sale=4
+
+
+* **Returns:** Integer
+
 
 

@@ -7,7 +7,11 @@ sortOrder: 4160
 keywords: GetCurrencyList(Integer[])
 ---
 
+Gets an array of Currency objects.
 
+
+
+* **p0:** The identifiers of the Currency object
 * **Returns:** IntegerArray
 
 

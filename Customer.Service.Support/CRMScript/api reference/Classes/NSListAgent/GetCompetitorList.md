@@ -7,7 +7,10 @@ sortOrder: 4134
 keywords: GetCompetitorList(Integer[])
 ---
 
+Gets an array of Competitor objects.
 
+
+* **competitorIds:** The identifiers of the Competitor object
 * **Returns:** IntegerArray
 
 

@@ -7,7 +7,11 @@ sortOrder: 4255
 keywords: GetPriorityList(Integer[])
 ---
 
+Gets an array of Priority objects.
 
+
+
+* **p0:** The identifiers of the Priority object
 * **Returns:** IntegerArray
 
 

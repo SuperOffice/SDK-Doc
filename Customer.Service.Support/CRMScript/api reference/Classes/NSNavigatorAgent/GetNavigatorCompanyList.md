@@ -7,7 +7,11 @@ sortOrder: 4696
 keywords: GetNavigatorCompanyList(Integer[])
 ---
 
+Gets an array of NavigatorCompany objects.
 
+
+
+* **p0:** The identifiers of the NavigatorCompany object
 * **Returns:** IntegerArray
 
 

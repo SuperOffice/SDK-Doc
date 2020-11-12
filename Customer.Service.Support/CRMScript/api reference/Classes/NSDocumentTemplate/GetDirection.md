@@ -8,6 +8,7 @@ keywords: GetDirection()
 ---
 
 
-1 = incoming, 2 = outgoing, see EAppntDirection
+*1 = incoming, 2 = outgoing, see EAppntDirection
 
 
+* **Returns:** Integer

@@ -7,7 +7,11 @@ sortOrder: 4280
 keywords: GetReasonList(Integer[])
 ---
 
+Gets an array of Reason objects.
 
+
+
+* **p0:** The identifiers of the Reason object
 * **Returns:** IntegerArray
 
 

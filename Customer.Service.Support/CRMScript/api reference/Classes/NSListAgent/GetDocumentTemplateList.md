@@ -7,7 +7,11 @@ sortOrder: 4180
 keywords: GetDocumentTemplateList(Integer[])
 ---
 
+Gets an array of DocumentTemplate objects.
 
+
+
+* **p0:** The identifiers of the DocumentTemplate object
 * **Returns:** IntegerArray
 
 

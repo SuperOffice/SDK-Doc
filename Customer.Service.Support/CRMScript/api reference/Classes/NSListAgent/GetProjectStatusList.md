@@ -7,7 +7,11 @@ sortOrder: 4265
 keywords: GetProjectStatusList(Integer[])
 ---
 
+Gets an array of ProjectStatus objects.
 
+
+
+* **p0:** The identifiers of the ProjectStatus object
 * **Returns:** IntegerArray
 
 

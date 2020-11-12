@@ -7,7 +7,11 @@ sortOrder: 4234
 keywords: GetLocalizedTextList(Integer[])
 ---
 
+Gets an array of LocalizedText objects.
 
+
+
+* **p0:** The identifiers of the LocalizedText object
 * **Returns:** IntegerArray
 
 

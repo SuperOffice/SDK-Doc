@@ -7,7 +7,11 @@ sortOrder: 4168
 keywords: GetCustomerLanguageList(Integer[])
 ---
 
+Gets an array of CustomerLanguage objects.
 
+
+
+* **p0:** The identifiers of the CustomerLanguage object
 * **Returns:** IntegerArray
 
 

@@ -7,7 +7,11 @@ sortOrder: 4301
 keywords: GetSaleTypeList(Integer[])
 ---
 
+Gets an array of SaleType objects.
 
+
+
+* **p0:** The identifiers of the SaleType object
 * **Returns:** IntegerArray
 
 

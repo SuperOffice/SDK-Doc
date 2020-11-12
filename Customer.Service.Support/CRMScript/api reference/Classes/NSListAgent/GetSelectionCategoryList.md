@@ -7,7 +7,11 @@ sortOrder: 4320
 keywords: GetSelectionCategoryList(Integer[])
 ---
 
+Gets an array of SelectionCategory objects.
 
+
+
+* **p0:** The identifiers of the SelectionCategory object
 * **Returns:** IntegerArray
 
 
