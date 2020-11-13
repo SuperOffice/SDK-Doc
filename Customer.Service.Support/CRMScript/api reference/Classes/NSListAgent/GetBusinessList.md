@@ -9,7 +9,7 @@ keywords: GetBusinessList(Integer[])
 
 Gets an array of Business objects.
 
-* **p0:** The identifiers of the Business object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Business
+* **Returns:** Array of NSBusiness
 
 

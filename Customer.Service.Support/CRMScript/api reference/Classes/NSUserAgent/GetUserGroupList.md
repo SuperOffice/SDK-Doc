@@ -10,8 +10,7 @@ keywords: GetUserGroupList(Integer[])
 Gets an array of UserGroup objects.
 
 
-
-* **p_0:** The identifiers of the UserGroup object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for UserGroup
+* **Returns:** Array of NSUserGroup
 
 

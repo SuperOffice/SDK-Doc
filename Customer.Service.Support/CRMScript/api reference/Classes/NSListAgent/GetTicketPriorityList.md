@@ -10,8 +10,7 @@ keywords: GetTicketPriorityList(Integer[])
 Gets an array of TicketPriority objects.
 
 
-
-* **p0:** The identifiers of the TicketPriority object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for TicketPriority
+* **Returns:** Array of NSTicketPriority
 
 

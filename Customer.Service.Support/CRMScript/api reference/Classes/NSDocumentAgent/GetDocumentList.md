@@ -9,6 +9,7 @@ keywords: GetDocumentList(Integer[])
 
 Gets an array of Document objects.
 
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Document
+* **Returns:** Array of NSDocument
 
 

@@ -10,8 +10,7 @@ keywords: GetMrMrsList(Integer[])
 Gets an array of MrMrs objects.
 
 
-
-* **p0:** The identifiers of the MrMrs object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for MrMrs
+* **Returns:** Array of NSMrMrs
 
 

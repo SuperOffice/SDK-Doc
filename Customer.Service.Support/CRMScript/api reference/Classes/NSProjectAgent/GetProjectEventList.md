@@ -10,8 +10,7 @@ keywords: GetProjectEventList(Integer[])
 Gets an array of ProjectEvent objects.
 
 
-
-* **projectEventIds:** The identifiers of the ProjectEvent object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for ProjectEvent
+* **Returns:** Array of NSProjectEvent
 
 

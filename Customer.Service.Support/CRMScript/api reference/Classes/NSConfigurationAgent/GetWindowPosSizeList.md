@@ -8,6 +8,6 @@ keywords: GetWindowPosSizeList(Integer[])
 ---
 
 
-* **Returns:** IntegerArray
-
+* **p0:** IntegerArray of identifiers for WindowPosSize
+* **Returns:** Array of NSWindowPosSize
 

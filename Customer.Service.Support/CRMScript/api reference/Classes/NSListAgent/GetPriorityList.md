@@ -10,8 +10,7 @@ keywords: GetPriorityList(Integer[])
 Gets an array of Priority objects.
 
 
-
-* **p0:** The identifiers of the Priority object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Priority
+* **Returns:** Array of NSPriority
 
 

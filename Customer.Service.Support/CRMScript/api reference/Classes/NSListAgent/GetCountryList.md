@@ -10,7 +10,7 @@ keywords: GetCountryList(Integer[])
 Gets an array of Country objects.
 
 
-* **p0:** The identifiers of the Country object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Country
+* **Returns:** Array of NSCountry
 
 

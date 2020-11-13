@@ -8,6 +8,7 @@ keywords: GetConsentSourceList(Integer[])
 ---
 
 
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for ConsentSource
+* **Returns:** Array of NSConsentSource
 
 

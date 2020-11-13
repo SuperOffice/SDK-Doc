@@ -8,6 +8,7 @@ keywords: GetAssociateList(Integer[])
 ---
 
 
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Associate
+* **Returns:** Array of NSAssociate
 
 

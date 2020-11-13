@@ -10,8 +10,6 @@ keywords: GetTaskList(Integer[])
 Gets an array of Task objects.
 
 
-
-* **p0:** The identifiers of the Task object
-* **Returns:** IntegerArray
-
+* **p0:** IntegerArray of identifiers for Task
+* **Returns:** Array of NSTask
 

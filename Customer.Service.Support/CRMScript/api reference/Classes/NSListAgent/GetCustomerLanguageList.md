@@ -10,8 +10,7 @@ keywords: GetCustomerLanguageList(Integer[])
 Gets an array of CustomerLanguage objects.
 
 
-
-* **p0:** The identifiers of the CustomerLanguage object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for CustomerLanguage
+* **Returns:** Array of NSCustomerLanguage
 
 

@@ -10,8 +10,7 @@ keywords: GetRatingList(Integer[])
 Gets an array of Rating objects.
 
 
-
-* **p0:** The identifiers of the Rating object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Rating
+* **Returns:** Array of NSRating
 
 

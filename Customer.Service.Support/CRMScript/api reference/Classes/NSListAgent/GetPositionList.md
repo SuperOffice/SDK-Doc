@@ -10,8 +10,7 @@ keywords: GetPositionList(Integer[])
 Gets an array of Position objects.
 
 
-
-* **p0:** The identifiers of the Position object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Position
+* **Returns:** Array of NSPosition
 
 

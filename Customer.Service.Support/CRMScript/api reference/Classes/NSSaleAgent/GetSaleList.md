@@ -10,8 +10,7 @@ keywords: GetSaleList(Integer[])
 Gets an array of Sale objects.
 
 
-
-* **p_0:** The identifiers of the Sale object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Sale
+* **Returns:** Array of NSSale
 
 

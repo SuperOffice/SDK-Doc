@@ -11,7 +11,7 @@ Gets an array of Link objects.
 
 
 
-* **p0:** The identifiers of the Link object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Link
+* **Returns:** Array of NSLink
 
 

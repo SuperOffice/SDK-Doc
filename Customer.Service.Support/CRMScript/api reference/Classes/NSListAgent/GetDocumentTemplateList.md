@@ -10,8 +10,7 @@ keywords: GetDocumentTemplateList(Integer[])
 Gets an array of DocumentTemplate objects.
 
 
-
-* **p0:** The identifiers of the DocumentTemplate object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for DocumentTemplate
+* **Returns:** Array of NSDocumentTemplate
 
 

@@ -10,8 +10,7 @@ keywords: GetDepartmentList(Integer[])
 Gets an array of Department objects.
 
 
-
-* **p0:** The identifiers of the Department object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Department
+* **Returns:** Array of NSDepartment
 
 

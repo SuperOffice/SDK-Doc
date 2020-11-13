@@ -10,7 +10,7 @@ keywords: GetUserInfoList(Integer[])
 Gets an array of UserInfo objects.
 
 
-* **userInfoIds:** The identifiers of the UserInfo object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for UserInfo
+* **Returns:** Array of NSUserInfo
 
 

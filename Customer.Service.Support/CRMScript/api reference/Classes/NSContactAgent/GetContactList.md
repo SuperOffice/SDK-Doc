@@ -10,8 +10,5 @@ keywords: GetContactList(Integer[])
 Gets an array of Contact objects.
 
 
-
-* **contactIds:** The identifiers of the Contact object
-* **Returns:** IntegerArray
-
-
+* **contactIds:** IntegerArray of identifiers for Contact
+* **Returns:** Array of NSContact

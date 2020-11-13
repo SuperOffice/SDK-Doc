@@ -11,7 +11,7 @@ Gets an array of NavigatorCompany objects.
 
 
 
-* **p0:** The identifiers of the NavigatorCompany object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for NavigatorCompany
+* **Returns:** Array of NSNavigatorCompany
 
 

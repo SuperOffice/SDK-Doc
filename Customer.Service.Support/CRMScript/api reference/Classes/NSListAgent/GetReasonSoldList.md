@@ -11,7 +11,7 @@ Gets an array of ReasonSold objects.
 
 
 
-* **p0:** The identifiers of the ReasonSold object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for ReasonSold
+* **Returns:** Array of NSReasonSold
 
 

@@ -10,8 +10,7 @@ keywords: GetCurrencyList(Integer[])
 Gets an array of Currency objects.
 
 
-
-* **p0:** The identifiers of the Currency object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Currency
+* **Returns:** Array of NSCurrency
 
 

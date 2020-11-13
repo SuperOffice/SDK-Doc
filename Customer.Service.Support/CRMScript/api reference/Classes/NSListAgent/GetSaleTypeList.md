@@ -11,7 +11,7 @@ Gets an array of SaleType objects.
 
 
 
-* **p0:** The identifiers of the SaleType object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for SaleType
+* **Returns:** Array of NSSaleType
 
 

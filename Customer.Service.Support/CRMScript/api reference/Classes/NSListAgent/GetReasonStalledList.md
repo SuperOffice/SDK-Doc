@@ -10,8 +10,7 @@ keywords: GetReasonStalledList(Integer[])
 Gets an array of ReasonStalled objects.
 
 
-
-* **p0:** The identifiers of the ReasonStalled object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for ReasonStalled
+* **Returns:** Array of NSReasonStalled
 
 

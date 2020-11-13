@@ -10,8 +10,6 @@ keywords: GetSourceList(Integer[])
 Gets an array of Source objects.
 
 
-
-* **p0:** The identifiers of the Source object
-* **Returns:** IntegerArray
-
+* **p0:** IntegerArray of identifiers for Source
+* **Returns:** Array of NSSource
 

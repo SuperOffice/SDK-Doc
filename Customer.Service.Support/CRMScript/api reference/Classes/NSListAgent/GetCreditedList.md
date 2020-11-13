@@ -11,7 +11,6 @@ Gets an array of Credited objects.
 
 
 
-* **p0:** The identifiers of the Credited object
-* **Returns:** IntegerArray
-
+* **p0:** IntegerArray of identifiers for Credited
+* **Returns:** Array of NSCredited
 

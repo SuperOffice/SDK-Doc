@@ -8,6 +8,6 @@ keywords: GetAreaList(Integer[])
 ---
 
 
-* **Returns:** IntegerArray
-
+* **p0:** IntegerArray of identifiers for Area
+* **Returns:** Array of NSArea
 

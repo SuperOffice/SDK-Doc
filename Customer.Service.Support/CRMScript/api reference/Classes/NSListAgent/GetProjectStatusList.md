@@ -11,7 +11,6 @@ Gets an array of ProjectStatus objects.
 
 
 
-* **p0:** The identifiers of the ProjectStatus object
-* **Returns:** IntegerArray
-
+* **p0:** IntegerArray of identifiers for ProjectStatus
+* **Returns:** Array of NSProjectStatus
 

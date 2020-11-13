@@ -10,8 +10,7 @@ keywords: GetReasonList(Integer[])
 Gets an array of Reason objects.
 
 
-
-* **p0:** The identifiers of the Reason object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Reason
+* **Returns:** Array of NSReason
 
 

@@ -10,8 +10,7 @@ keywords: GetLanguageInfoList(Integer[])
 Gets an array of LanguageInfo objects.
 
 
-
-* **p0:** The identifiers of the LanguageInfo object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for LanguageInfo
+* **Returns:** Array of NSLanguageInfo
 
 

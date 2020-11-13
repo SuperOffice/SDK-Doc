@@ -11,7 +11,7 @@ Gets an array of ProjectType objects.
 
 
 
-* **p0:** The identifiers of the ProjectType object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for ProjectType
+* **Returns:** Array of NSProjectType
 
 

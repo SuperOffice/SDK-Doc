@@ -11,7 +11,7 @@ Gets an array of LocalizedText objects.
 
 
 
-* **p0:** The identifiers of the LocalizedText object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for LocalizedText
+* **Returns:** Array of NSLocalizedText
 
 

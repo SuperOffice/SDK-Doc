@@ -11,7 +11,6 @@ Gets an array of SelectionCategory objects.
 
 
 
-* **p0:** The identifiers of the SelectionCategory object
-* **Returns:** IntegerArray
-
+* **p0:** IntegerArray of identifiers for SelectionCategory
+* **Returns:** Array of NSSelectionCategory
 

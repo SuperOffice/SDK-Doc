@@ -10,8 +10,7 @@ keywords: GetProjectList(Integer[])
 Gets an array of Project objects.
 
 
-
-* **projectIds:** The identifiers of the Project object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Project
+* **Returns:** Array of NSProject
 
 

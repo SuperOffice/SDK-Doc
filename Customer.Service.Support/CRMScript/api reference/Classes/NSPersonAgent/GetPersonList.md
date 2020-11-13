@@ -11,7 +11,7 @@ Gets an array of Person objects.
 
 
 
-* **p0:** The identifiers of the Person object
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Person
+* **Returns:** Array of NSPerson
 
 
