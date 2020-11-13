@@ -10,4 +10,4 @@ keywords: GetPublishType()
 
 Type of publishing action, 0 = Unknown, 1 = to external persons
 
-
+* **Returns:** Integer

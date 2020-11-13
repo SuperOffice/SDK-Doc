@@ -7,7 +7,11 @@ sortOrder: 6940
 keywords: GetSaleList(Integer[])
 ---
 
+Gets an array of Sale objects.
 
+
+
+* **p_0:** The identifiers of the Sale object
 * **Returns:** IntegerArray
 
 

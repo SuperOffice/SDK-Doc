@@ -8,5 +8,9 @@ keywords: GetDurationUnit()
 ---
 
 
+Units for the duration
 
+
+
+* **Returns:** Integer
 

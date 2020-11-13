@@ -11,3 +11,6 @@ keywords: GetState()
 Normal = 0, Maximized = 1, Minimized = 2
 
 
+
+* **Returns:** Integer
+

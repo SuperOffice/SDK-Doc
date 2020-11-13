@@ -7,6 +7,13 @@ sortOrder: 8555
 keywords: GetJustification()
 ---
 
+Justification
+* Default=0
+* Left=1
+* Center=2
+* Right=3
 
+
+* **Returns:** Integer
 
 

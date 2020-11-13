@@ -7,7 +7,11 @@ sortOrder: 5589
 keywords: GetProjectEventList(Integer[])
 ---
 
+Gets an array of ProjectEvent objects.
 
+
+
+* **projectEventIds:** The identifiers of the ProjectEvent object
 * **Returns:** IntegerArray
 
 

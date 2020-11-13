@@ -7,7 +7,10 @@ sortOrder: 8511
 keywords: GetUserInfoList(Integer[])
 ---
 
+Gets an array of UserInfo objects.
 
+
+* **userInfoIds:** The identifiers of the UserInfo object
 * **Returns:** IntegerArray
 
 
