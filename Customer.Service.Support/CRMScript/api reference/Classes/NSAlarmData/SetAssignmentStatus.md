@@ -19,4 +19,3 @@ Status if this appointment is in the process of being assigned to someone else
 * **AssignmentStatus:** Integer
 * **Returns:** Void
 
-
