@@ -17,6 +17,5 @@ Status if this appointment is in the process of being assigned to someone else
 * Declined=13
 
 * **AssignmentStatus:** Integer
-* **Returns:** Integer
-
+* **Returns:** Void
 
