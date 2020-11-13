@@ -13,6 +13,6 @@ The sale's owner id
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

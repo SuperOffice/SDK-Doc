@@ -13,6 +13,6 @@ Id of the person causing the activity.
 
 
 * **ActivityPersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

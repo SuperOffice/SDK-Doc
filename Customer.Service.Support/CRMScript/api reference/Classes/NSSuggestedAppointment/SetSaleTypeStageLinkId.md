@@ -13,6 +13,6 @@ Link to saleTypeStageLink, the anchor for sale guide items. Either this OR proje
 
 
 * **SaleTypeStageLinkId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

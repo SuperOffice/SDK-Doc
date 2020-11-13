@@ -17,6 +17,6 @@ The type of booking the appointment represents
 
 
 * **BookingType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The Company name search type, e.g. BeginsWith, Contains, Endswith, Matches
 
 
 * **SearchModeCompany:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

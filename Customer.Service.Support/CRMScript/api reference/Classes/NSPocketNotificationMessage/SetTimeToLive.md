@@ -13,6 +13,6 @@ Specifies how many minutes the message should be valid
 
 
 * **TimeToLive:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

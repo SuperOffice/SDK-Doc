@@ -17,7 +17,7 @@ Has the pre-calculated (from ERP) price information been overridden, and how. If
 * EarningAmount=5
 
 * **p0:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 
 

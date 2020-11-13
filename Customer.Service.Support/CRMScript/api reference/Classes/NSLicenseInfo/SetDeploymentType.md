@@ -13,6 +13,6 @@ Type of deployment
 
 
 * **DeploymentType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

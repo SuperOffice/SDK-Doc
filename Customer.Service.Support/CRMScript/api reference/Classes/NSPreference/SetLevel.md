@@ -17,4 +17,4 @@ Preference level, using the standard enumerated type. Undefined is returned for 
 * PC=6
 
 * **p_0:** Integer
-* **Returns:** Integer
+* **Returns:** Void

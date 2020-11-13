@@ -13,6 +13,6 @@ How many selectionmembers (for progress bar calculations)
 
 
 * **MemberCount:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

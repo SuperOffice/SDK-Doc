@@ -13,6 +13,6 @@ Id of the record this favourite belongs to.
 
 
 * **RecordId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

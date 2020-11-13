@@ -13,6 +13,6 @@ The rank of the country
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Rank/Version number, starts at 1
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

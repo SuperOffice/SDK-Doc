@@ -13,6 +13,6 @@ Primary group membership, see UserGroupLink for secondary memberships
 
 
 * **GroupIdx:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

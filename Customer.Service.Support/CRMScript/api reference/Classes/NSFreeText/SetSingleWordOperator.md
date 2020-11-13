@@ -13,6 +13,6 @@ Starts with, contains or exact match
 
 
 * **SingleWordOperator:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

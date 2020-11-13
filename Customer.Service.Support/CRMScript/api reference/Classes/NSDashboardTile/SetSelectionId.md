@@ -13,6 +13,6 @@ The selection that defines the data filter/restrictions
 
 
 * **SelectionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

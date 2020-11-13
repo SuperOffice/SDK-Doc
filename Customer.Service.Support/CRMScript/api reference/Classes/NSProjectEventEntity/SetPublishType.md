@@ -11,4 +11,4 @@ keywords: SetPublishType(Integer)
 Type of publishing action, 0 = Unknown, 1 = to external persons
 
 * **p_0:** Integer
-* **Returns:** Integer
+* **Returns:** Void

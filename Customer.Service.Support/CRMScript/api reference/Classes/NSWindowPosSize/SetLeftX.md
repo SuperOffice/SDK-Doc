@@ -13,6 +13,6 @@ X of origin, left edge of widget
 
 
 * **LeftX:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

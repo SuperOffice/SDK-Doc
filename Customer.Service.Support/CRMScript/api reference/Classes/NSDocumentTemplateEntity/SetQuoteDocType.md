@@ -17,4 +17,4 @@ The role this document plays in the Quote system, if any
 * ConfirmationLines=5
 
 * **p0:** Integer
-* **Returns:** Integer
+* **Returns:** Void

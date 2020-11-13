@@ -13,6 +13,6 @@ Country of invoice address, typically copied from contact record
 
 
 * **InvoiceCountryId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The rank of the ListItem
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

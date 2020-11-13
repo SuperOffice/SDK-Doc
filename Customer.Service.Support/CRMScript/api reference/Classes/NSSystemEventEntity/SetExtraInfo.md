@@ -13,6 +13,6 @@ Extra information (area id for prototype rebuild, etc)
 
 
 * **ExtraInfo:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

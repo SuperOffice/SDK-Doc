@@ -13,6 +13,6 @@ The dashboard id
 
 
 * **DashboardId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

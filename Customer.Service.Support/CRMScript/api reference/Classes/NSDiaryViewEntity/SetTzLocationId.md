@@ -13,6 +13,6 @@ Default timezone location for this view
 
 
 * **TzLocationId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

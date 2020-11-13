@@ -13,6 +13,6 @@ Webhook status - should we post events to the URL? 1=Active, 2=Stopped or 3=TooM
 
 
 * **State:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

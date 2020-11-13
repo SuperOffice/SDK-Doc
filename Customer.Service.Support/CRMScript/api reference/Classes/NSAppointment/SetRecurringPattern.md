@@ -15,6 +15,6 @@ keywords: SetRecurringPattern(Integer)
 * Custom=5
 
 * **RecurringPattern:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

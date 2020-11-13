@@ -13,6 +13,6 @@ Which operation will be used? This is a read-only property
 
 
 * **Operation:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

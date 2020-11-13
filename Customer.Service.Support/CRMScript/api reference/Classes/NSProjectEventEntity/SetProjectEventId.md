@@ -13,6 +13,6 @@ Primary key
 
 
 * **ProjectEventId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

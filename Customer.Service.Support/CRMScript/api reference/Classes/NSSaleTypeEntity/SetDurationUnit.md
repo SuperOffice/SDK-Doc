@@ -24,6 +24,6 @@ Units for the duration (day, week, whatever)
 * Millenium=12
 
 * **p_0:** DurationUnit
-* **Returns:** Integer
+* **Returns:** Void
 
 

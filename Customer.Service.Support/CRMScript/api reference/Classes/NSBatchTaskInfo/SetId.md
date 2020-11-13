@@ -13,6 +13,6 @@ Id of the task.
 
 
 * **Id:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

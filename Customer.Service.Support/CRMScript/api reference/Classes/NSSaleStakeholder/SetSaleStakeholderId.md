@@ -13,6 +13,6 @@ Primary key
 
 
 * **SaleStakeholderId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

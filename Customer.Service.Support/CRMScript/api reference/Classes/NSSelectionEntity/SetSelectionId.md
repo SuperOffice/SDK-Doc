@@ -13,6 +13,6 @@ Primary key
 
 
 * **SelectionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

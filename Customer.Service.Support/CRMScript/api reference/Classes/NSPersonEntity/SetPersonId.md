@@ -13,6 +13,6 @@ Primary key
 
 
 * **PersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

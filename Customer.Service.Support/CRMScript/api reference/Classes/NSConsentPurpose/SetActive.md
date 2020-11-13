@@ -13,6 +13,6 @@ Is the consent purpose active or not
 
 
 * **Active:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

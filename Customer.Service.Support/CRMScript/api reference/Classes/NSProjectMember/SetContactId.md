@@ -13,6 +13,6 @@ Contact ID of person who is the project member
 
 
 * **ContactId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The reference to the ticket\_priority table.
 
 
 * **Priority:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

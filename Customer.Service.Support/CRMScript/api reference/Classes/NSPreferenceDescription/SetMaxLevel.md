@@ -13,5 +13,5 @@ Lowest allowed setting level, set by user, but not lower than sysMaxLevel
 
 
 * **p_0:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 

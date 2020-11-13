@@ -9,6 +9,6 @@ keywords: SetAddressType(Integer)
 
 
 * **AddressType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

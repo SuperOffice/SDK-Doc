@@ -13,6 +13,6 @@ Default Timespan value - number of minutes.
 
 
 * **DefaultValue:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

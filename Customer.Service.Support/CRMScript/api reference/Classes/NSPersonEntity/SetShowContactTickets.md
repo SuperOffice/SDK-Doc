@@ -13,6 +13,6 @@ Should tickets related to the company be shown to this person
 
 
 * **ShowContactTickets:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

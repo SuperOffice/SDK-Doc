@@ -13,6 +13,6 @@ Reference to definition
 
 
 * **RelationDefinitionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

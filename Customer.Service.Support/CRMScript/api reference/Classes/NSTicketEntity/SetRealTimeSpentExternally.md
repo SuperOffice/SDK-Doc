@@ -13,6 +13,6 @@ The total time (seconds) within 24x7 the ticket has been in a external waiting s
 
 
 * **RealTimeSpentExternally:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

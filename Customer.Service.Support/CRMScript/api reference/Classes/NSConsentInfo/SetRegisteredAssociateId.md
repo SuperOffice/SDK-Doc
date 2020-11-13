@@ -13,6 +13,6 @@ The ID of the associate who created this record
 
 
 * **RegisteredAssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

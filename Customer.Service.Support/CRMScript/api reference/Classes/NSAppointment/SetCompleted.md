@@ -13,6 +13,6 @@ The Completed state.
 
 
 * **Completed:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

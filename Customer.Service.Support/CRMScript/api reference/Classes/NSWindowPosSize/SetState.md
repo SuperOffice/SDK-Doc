@@ -13,6 +13,6 @@ Normal = 0, Maximized = 1, Minimized = 2
 
 
 * **p_0:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

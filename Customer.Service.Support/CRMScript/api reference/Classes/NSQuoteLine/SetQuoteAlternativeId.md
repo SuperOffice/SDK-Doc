@@ -13,6 +13,6 @@ The alternative this line is part of, the conceptual Parent in CRM database.
 
 
 * **QuoteAlternativeId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The email id of the email belonging to the appointment record belonging to this 
 
 
 * **EmailId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

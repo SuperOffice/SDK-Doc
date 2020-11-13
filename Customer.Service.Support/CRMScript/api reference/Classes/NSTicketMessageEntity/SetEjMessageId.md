@@ -13,6 +13,6 @@ The primary key (auto-incremented)
 
 
 * **EjMessageId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

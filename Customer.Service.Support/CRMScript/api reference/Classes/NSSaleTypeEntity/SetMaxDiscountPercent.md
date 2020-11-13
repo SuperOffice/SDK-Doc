@@ -13,6 +13,6 @@ The maximum discount in percent of total, if set, on quotes linked to sales of t
 
 
 * **MaxDiscountPercent:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -9,6 +9,6 @@ keywords: SetSilentAfter(Integer)
 
 
 * **SilentAfter:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

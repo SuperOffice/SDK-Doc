@@ -13,6 +13,6 @@ Custom DST start month, if 0 then parse startRule
 
 
 * **StartMonth:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Number of updates made to this record
 
 
 * **UpdatedCount:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

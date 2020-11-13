@@ -13,6 +13,6 @@ Sorting rank of this role in lists
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -20,5 +20,5 @@ The actor type (ERP side)
 * Sale=7
 
 * **p0:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 

@@ -13,6 +13,6 @@ Number of minutes bias relative to UTC time
 
 
 * **TZOffset:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

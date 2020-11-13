@@ -13,6 +13,6 @@ The application is shown in which state Minimized, Maximized or Restored
 
 
 * **ShowState:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

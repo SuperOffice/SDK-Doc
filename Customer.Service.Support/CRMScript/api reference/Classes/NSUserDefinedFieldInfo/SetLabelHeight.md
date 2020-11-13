@@ -13,6 +13,6 @@ label height in pixels, 0 = 'enough' (from font)
 
 
 * **LabelHeight:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

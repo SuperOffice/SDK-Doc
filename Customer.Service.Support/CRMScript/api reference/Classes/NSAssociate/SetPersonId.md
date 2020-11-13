@@ -13,6 +13,6 @@ Owning person record
 
 
 * **PersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

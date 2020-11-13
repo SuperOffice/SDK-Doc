@@ -13,6 +13,6 @@ Generation number of step
 
 
 * **StepNumber:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

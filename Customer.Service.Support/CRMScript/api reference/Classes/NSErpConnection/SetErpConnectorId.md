@@ -13,6 +13,6 @@ The connector that this connection should call
 
 
 * **ErpConnectorId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

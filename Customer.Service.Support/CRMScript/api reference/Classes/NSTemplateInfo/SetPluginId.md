@@ -13,6 +13,6 @@ ID of plugin that stores this template, so it can be retrieved
 
 
 * **PluginId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

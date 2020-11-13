@@ -21,5 +21,5 @@ Current state of this quote version.
 * Sold=9
 
 * **p_0:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 

@@ -13,6 +13,6 @@ The identity of the web panel
 
 
 * **WebPanelId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Maximum length for strings, if set. 0 means no restriction. (Though sooner or la
 
 
 * **MaxLength:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

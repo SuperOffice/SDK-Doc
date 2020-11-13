@@ -13,6 +13,6 @@ Size of attachment
 
 
 * **Size:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

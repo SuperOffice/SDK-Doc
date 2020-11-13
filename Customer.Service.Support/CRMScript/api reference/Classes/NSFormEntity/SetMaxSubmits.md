@@ -13,6 +13,6 @@ After this number of submits, the form will become inactive
 
 
 * **MaxSubmits:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Primary key
 
 
 * **UDefFieldId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

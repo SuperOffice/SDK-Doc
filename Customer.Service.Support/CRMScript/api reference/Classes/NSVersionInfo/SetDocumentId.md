@@ -13,6 +13,6 @@ The document Id that uniquely identifies the document within the SuperOffice dat
 
 
 * **DocumentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

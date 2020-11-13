@@ -13,6 +13,6 @@ The ID of the associate who last updated this record
 
 
 * **UpdatedAssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

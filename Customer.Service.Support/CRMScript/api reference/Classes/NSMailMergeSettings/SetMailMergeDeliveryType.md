@@ -13,6 +13,6 @@ How the merged document is delivered to the recipients.
 
 
 * **MailMergeDeliveryType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

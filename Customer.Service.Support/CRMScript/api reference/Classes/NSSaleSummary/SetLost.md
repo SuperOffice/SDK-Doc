@@ -13,6 +13,6 @@ Number of all lost within the period
 
 
 * **Lost:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

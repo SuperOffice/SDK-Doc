@@ -13,6 +13,6 @@ The mail template to use when automatically sending emails to new persons create
 
 
 * **MailTemplateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

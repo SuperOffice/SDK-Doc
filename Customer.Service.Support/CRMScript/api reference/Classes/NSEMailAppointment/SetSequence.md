@@ -13,6 +13,6 @@ Sequence number in ICS file.
 
 
 * **Sequence:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

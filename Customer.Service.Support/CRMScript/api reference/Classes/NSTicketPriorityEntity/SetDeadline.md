@@ -13,6 +13,6 @@ Deadline to add if escalated (minutes)
 
 
 * **Deadline:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

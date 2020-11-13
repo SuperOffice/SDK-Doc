@@ -18,6 +18,6 @@ Flag status of this mail (unread, replied, deleted )
 * Answered=32
 
 * **Flags:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

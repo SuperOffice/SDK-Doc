@@ -13,6 +13,6 @@ Probability of sale succeess in percent (0-100)
 
 
 * **Probability:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

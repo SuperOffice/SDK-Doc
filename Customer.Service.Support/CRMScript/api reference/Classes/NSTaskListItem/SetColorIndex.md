@@ -13,6 +13,6 @@ JAP
 
 
 * **ColorIndex:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Original primary user group of associate
 
 
 * **GroupIdx:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

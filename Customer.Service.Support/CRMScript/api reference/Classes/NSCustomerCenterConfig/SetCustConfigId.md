@@ -13,6 +13,6 @@ Primary key
 
 
 * **CustConfigId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

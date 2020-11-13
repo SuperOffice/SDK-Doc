@@ -13,6 +13,6 @@ If 0, the signOn Activity should go into the persons Our Contact; if not 0, this
 
 
 * **SignOffPersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

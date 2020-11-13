@@ -13,6 +13,6 @@ The total number of module licenses. In other words the number of free license a
 
 
 * **Total:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

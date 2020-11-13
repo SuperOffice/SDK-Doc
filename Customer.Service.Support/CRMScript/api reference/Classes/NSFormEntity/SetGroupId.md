@@ -13,6 +13,6 @@ The group which this form belongs to.
 
 
 * **GroupId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

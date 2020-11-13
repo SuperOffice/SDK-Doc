@@ -13,6 +13,6 @@ Status information for the quote version.
 
 
 * **Status:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

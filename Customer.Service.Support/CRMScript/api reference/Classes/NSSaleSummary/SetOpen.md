@@ -17,6 +17,6 @@ Number of all open within the period
 
 
 * **Open:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Length of the second counter period
 
 
 * **Period2:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

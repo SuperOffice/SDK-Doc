@@ -13,6 +13,6 @@ Primary key
 
 
 * **ForeignAppId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

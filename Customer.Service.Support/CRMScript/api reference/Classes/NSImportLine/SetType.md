@@ -13,6 +13,6 @@ Which entity type will be created? This is a read-only property
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

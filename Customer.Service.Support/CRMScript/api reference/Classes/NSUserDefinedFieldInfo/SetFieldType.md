@@ -13,6 +13,6 @@ Field type: 0 = leadtext only, 1 = Edit, 2 = CheckBox, 3 = dropdown, 4 = listbox
 
 
 * **FieldType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

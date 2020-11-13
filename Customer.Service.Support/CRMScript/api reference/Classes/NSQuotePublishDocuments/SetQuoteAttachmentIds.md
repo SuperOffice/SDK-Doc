@@ -13,6 +13,6 @@ Array of id's of any attachments (standard + custom for this version)
 
 
 * **QuoteAttachmentIds:** IntegerArray
-* **Returns:** IntegerArray
+* **Returns:** Void
 
 

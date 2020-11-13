@@ -13,6 +13,6 @@ The type of notification this is
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

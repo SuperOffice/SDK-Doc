@@ -13,6 +13,6 @@ size of prefix for Travel use of ths counter
 
 
 * **TravelPrefix:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

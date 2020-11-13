@@ -13,6 +13,6 @@ The id of the field that is using the lists. Readonly
 
 
 * **ErpFieldId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

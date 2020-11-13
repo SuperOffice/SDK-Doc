@@ -13,6 +13,6 @@ Primary key
 
 
 * **CurrencyId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

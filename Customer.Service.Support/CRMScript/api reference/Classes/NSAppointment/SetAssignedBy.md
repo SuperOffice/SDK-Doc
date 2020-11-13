@@ -13,6 +13,6 @@ Who (last) assigned this appointment to associate\_id?
 
 
 * **AssignedBy:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

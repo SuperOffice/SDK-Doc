@@ -13,6 +13,6 @@ The height of the widget
 
 
 * **Height:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

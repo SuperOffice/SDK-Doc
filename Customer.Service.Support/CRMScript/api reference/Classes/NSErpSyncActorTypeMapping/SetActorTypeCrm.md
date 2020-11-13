@@ -15,4 +15,4 @@ The actor type (CRM side)
 * Sale=4
 
 * **p0:** Integer
-* **Returns:** Integer
+* **Returns:** Void

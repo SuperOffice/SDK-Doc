@@ -13,6 +13,6 @@ The appointment status for this participant.
 
 
 * **ParticipantStatus:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

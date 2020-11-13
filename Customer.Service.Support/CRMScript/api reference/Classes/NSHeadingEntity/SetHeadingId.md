@@ -13,6 +13,6 @@ Primary key
 
 
 * **HeadingId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

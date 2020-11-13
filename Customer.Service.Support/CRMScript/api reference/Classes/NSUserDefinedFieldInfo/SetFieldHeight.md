@@ -13,6 +13,6 @@ field height in pixels, 0 = 'enough' (from font)
 
 
 * **FieldHeight:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

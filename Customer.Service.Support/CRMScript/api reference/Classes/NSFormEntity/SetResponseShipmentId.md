@@ -13,6 +13,6 @@ The id of the s\_shipment that is used to send the response mails
 
 
 * **ResponseShipmentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

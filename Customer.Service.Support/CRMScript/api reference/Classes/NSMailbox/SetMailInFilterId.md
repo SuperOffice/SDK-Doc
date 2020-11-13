@@ -13,6 +13,6 @@ The primary key (auto-incremented)
 
 
 * **MailInFilterId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The foreign key to the corresponding sale
 
 
 * **SaleId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

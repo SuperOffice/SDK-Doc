@@ -9,6 +9,6 @@ keywords: SetIsoNumber(Integer)
 
 
 * **IsoNumber:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

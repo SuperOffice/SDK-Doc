@@ -13,6 +13,6 @@ The identifier of the module license
 
 
 * **ModuleLicenseId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Line no on View Page 1, used if MDO flags are OFF. 0 = this field is not visible
 
 
 * **Page1LineNo:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

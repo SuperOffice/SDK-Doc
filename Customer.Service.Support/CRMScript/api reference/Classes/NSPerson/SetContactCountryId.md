@@ -13,6 +13,6 @@ The persons contact country id
 
 
 * **ContactCountryId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

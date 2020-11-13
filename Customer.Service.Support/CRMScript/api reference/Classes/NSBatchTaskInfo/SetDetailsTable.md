@@ -13,6 +13,6 @@ Id of table with more information about the task.
 
 
 * **DetailsTable:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

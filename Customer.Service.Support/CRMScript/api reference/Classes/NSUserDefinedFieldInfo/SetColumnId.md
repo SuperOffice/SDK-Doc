@@ -13,6 +13,6 @@ The ID of the database column this field corresponds to
 
 
 * **ColumnId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

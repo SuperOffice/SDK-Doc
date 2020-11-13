@@ -13,6 +13,6 @@ An array of ids with chat topics that this user is a member of
 
 
 * **ChatTopics:** IntegerArray
-* **Returns:** IntegerArray
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The id of the ticket category. (primary key)
 
 
 * **TicketCategoryId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

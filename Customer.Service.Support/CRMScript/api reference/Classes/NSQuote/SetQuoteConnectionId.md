@@ -13,6 +13,6 @@ The connection in the CRM system to where this quote came from. Identifies the E
 
 
 * **QuoteConnectionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The id of the user who owns the ticket. 1 (system user) if the ticket is unassig
 
 
 * **OwnedBy:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

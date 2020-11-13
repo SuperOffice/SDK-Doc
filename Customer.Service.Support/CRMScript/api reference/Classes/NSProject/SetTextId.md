@@ -13,6 +13,6 @@ The id of the description
 
 
 * **TextId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

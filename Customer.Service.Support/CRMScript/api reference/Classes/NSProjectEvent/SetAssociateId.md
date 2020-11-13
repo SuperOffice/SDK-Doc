@@ -13,6 +13,6 @@ Id of the person that ows the event (i.e. project)
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

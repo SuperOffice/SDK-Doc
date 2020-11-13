@@ -13,6 +13,6 @@ The id of the icon of the external app
 
 
 * **Icon:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

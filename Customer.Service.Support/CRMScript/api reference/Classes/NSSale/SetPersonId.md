@@ -13,6 +13,6 @@ The sale's contact persons id
 
 
 * **PersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Bottom margin in twips
 
 
 * **BottomMargin:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

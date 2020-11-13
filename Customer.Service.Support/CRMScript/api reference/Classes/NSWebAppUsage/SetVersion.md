@@ -13,6 +13,6 @@ keywords: SetVersion(Integer)
 
 
 * **Version:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

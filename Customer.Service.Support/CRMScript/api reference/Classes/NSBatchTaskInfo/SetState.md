@@ -13,6 +13,6 @@ BatchTaskState of the task.
 
 
 * **State:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

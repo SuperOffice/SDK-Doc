@@ -13,6 +13,6 @@ Number of active links to documents, other appointments, and such
 
 
 * **ActiveLinks:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

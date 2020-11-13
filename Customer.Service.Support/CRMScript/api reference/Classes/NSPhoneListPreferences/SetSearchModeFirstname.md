@@ -13,6 +13,6 @@ The firstname search type, e.g. BeginsWith, Contains, Endswith, Matches
 
 
 * **SearchModeFirstname:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

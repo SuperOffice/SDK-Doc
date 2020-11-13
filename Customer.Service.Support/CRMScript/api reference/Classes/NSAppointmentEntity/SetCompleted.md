@@ -13,6 +13,6 @@ Appointment Completed state. This property is the part of the Status property th
 
 
 * **Completed:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

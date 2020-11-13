@@ -13,6 +13,6 @@ Identity of project to use as source for recipients.
 
 
 * **ProjectId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

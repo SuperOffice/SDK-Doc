@@ -13,6 +13,6 @@ Current value of counter
 
 
 * **CurrentValue:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

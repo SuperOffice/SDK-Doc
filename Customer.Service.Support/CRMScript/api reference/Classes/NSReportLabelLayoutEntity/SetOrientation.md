@@ -13,6 +13,6 @@ Paper orientation: 1=portrait, 2=landscape
 
 
 * **Orientation:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

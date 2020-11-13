@@ -13,6 +13,6 @@ keywords: SetIncludePerson(Integer)
 
 
 * **IncludePerson:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

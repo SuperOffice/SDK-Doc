@@ -13,6 +13,6 @@ The optional id of the person who submitted.
 
 
 * **PersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

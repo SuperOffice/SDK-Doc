@@ -13,6 +13,6 @@ If a ticket is connected to another ticket, this field is set to the id of the &
 
 
 * **ConnectId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

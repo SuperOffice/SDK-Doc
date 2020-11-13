@@ -13,6 +13,6 @@ Account Id
 
 
 * **AccountId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The id of the prefdesc this preference is connected to
 
 
 * **PrefDescId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

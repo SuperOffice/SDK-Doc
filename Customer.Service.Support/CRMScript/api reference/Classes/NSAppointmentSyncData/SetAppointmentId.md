@@ -13,6 +13,6 @@ Primary key
 
 
 * **AppointmentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ What platform does this device belong to
 
 
 * **Platform:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

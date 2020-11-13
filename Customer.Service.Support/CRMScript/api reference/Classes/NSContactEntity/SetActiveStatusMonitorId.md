@@ -13,6 +13,6 @@ Active status monitor identity with the lowest rank for contact
 
 
 * **ActiveStatusMonitorId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

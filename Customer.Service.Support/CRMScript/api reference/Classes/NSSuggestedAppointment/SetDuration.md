@@ -13,6 +13,6 @@ Duration in minutes of suggested appointment
 
 
 * **Duration:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

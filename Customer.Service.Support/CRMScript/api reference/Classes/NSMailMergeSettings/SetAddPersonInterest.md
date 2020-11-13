@@ -13,6 +13,6 @@ Add this person interest to each person recipient.
 
 
 * **AddPersonInterest:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

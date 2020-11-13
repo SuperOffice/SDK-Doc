@@ -13,6 +13,6 @@ Rank order
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

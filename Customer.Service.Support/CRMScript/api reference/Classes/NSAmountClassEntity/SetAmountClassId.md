@@ -13,6 +13,6 @@ Primary key
 
 
 * **AmountClassId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

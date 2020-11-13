@@ -13,6 +13,6 @@ The optional id of the contact of the person who submitted.
 
 
 * **ContactId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

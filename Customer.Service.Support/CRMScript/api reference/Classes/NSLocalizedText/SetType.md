@@ -13,6 +13,6 @@ The type of the text string, e.g. Field label, Udef label, etc.
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

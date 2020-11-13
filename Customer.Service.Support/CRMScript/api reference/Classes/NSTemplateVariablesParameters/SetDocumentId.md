@@ -13,6 +13,6 @@ Identifier for a document
 
 
 * **DocumentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

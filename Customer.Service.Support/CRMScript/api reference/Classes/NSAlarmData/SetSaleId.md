@@ -13,6 +13,6 @@ Owning sale, if any (may be 0)
 
 
 * **SaleId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

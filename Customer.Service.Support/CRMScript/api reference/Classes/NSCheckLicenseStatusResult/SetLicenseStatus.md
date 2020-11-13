@@ -20,6 +20,6 @@ Result of CheckLicenseStatus
 
 
 * **LicenseStatus:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

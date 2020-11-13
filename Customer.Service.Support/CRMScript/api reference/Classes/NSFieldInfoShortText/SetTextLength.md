@@ -13,6 +13,6 @@ Length (in characters) of a text field, 0 for other types
 
 
 * **TextLength:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

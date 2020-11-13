@@ -13,6 +13,6 @@ Count of concurring errors of fetching email. Readonly field
 
 
 * **ErrorCount:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

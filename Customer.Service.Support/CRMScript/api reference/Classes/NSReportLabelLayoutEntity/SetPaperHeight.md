@@ -13,6 +13,6 @@ Paper height in twips
 
 
 * **PaperHeight:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

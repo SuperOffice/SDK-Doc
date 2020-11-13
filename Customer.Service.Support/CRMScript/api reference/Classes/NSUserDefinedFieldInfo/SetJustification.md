@@ -14,5 +14,5 @@ Justification
 * Right=3
 
 * **p_0:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 

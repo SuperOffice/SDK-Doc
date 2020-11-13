@@ -13,6 +13,6 @@ Actor type
 
 
 * **ActorType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

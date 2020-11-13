@@ -13,6 +13,6 @@ Id of BinaryObject row that contains image for status monitor
 
 
 * **PictureId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

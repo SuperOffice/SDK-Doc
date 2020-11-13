@@ -13,6 +13,6 @@ Days in the third period
 
 
 * **Period3:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

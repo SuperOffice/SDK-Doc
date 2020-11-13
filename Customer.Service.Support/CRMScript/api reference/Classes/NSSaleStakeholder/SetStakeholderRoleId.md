@@ -13,6 +13,6 @@ Stakeholde role list id - Primary key
 
 
 * **StakeholderRoleId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

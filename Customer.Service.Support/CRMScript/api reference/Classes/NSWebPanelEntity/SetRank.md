@@ -13,6 +13,6 @@ The rank of the web panel
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

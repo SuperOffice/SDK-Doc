@@ -13,6 +13,6 @@ Registered by whom
 
 
 * **RegisteredAssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

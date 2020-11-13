@@ -13,6 +13,6 @@ Identifier for a person
 
 
 * **PersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

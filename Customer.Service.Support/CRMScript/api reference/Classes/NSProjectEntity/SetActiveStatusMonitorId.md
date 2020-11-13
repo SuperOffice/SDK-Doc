@@ -13,6 +13,6 @@ Active status monitor identity with the lowest rank for project
 
 
 * **ActiveStatusMonitorId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

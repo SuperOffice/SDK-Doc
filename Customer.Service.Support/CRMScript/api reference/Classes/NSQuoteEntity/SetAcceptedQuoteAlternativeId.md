@@ -13,6 +13,6 @@ The primary key of the Quote Alternative which was finally accepted by the custo
 
 
 * **AcceptedQuoteAlternativeId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

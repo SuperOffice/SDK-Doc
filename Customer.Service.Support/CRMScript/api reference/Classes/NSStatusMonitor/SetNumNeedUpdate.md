@@ -13,6 +13,6 @@ Number of targets that had this status, but have their needsUpdate bit set due t
 
 
 * **NumNeedUpdate:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

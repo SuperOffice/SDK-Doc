@@ -13,6 +13,6 @@ Timezone location ID
 
 
 * **TZLocationID:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

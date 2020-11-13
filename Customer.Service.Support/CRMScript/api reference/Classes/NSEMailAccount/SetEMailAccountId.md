@@ -13,6 +13,6 @@ The account primary key
 
 
 * **EMailAccountId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

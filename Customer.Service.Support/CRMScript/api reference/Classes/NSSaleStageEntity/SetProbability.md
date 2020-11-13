@@ -13,6 +13,6 @@ The numeric probability of the sale
 
 
 * **Probability:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

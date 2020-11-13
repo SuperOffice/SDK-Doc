@@ -13,6 +13,6 @@ RightSelectionId  is used in combination with LeftSelectionId and CombinationTyp
 
 
 * **RightSelectionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

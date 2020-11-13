@@ -13,6 +13,6 @@ Primary key
 
 
 * **RelationId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

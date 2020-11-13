@@ -9,6 +9,6 @@ keywords: SetPollingInterval(Integer)
 
 
 * **PollingInterval:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

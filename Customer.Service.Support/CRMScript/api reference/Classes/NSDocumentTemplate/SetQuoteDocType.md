@@ -16,4 +16,4 @@ keywords: SetQuoteDocType(Integer)
 * ConfirmationLines=5
 
 * **p0:** Integer
-* **Returns:** Integer
+* **Returns:** Void

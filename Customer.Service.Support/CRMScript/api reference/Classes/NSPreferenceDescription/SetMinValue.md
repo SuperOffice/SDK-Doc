@@ -13,6 +13,6 @@ Min value (if type 1); list extra id (if type 5)
 
 
 * **MinValue:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

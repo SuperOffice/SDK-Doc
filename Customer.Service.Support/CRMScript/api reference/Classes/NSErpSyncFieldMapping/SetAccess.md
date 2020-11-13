@@ -13,6 +13,6 @@ Access restrictions for the field
 * ReadOnly=2
 
 * **p0:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

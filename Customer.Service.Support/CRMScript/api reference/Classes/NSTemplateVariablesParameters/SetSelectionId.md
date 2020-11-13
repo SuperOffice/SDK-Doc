@@ -13,6 +13,6 @@ Identifier for a selection
 
 
 * **SelectionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

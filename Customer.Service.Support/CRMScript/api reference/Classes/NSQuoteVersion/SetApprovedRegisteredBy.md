@@ -13,6 +13,6 @@ Id of associate who actually entered the approval; might be different from Appro
 
 
 * **ApprovedRegisteredBy:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

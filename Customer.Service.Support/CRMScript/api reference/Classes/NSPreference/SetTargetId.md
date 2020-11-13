@@ -13,6 +13,6 @@ The id of the target row. The table it points at is specified by the preference 
 
 
 * **TargetId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

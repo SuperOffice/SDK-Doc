@@ -13,6 +13,6 @@ Link to document
 
 
 * **DocumentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

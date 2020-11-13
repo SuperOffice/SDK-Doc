@@ -13,6 +13,6 @@ The person's id - primary key
 
 
 * **PersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

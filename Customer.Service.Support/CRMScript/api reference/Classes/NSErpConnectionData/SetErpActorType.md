@@ -13,6 +13,6 @@ The erp actor type which these fields belongs to
 
 
 * **ErpActorType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

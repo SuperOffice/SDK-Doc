@@ -12,4 +12,4 @@ keywords: SetRecordType(Integer)
 
 
 * **p0:** Integer
-* **Returns:** Integer
+* **Returns:** Void

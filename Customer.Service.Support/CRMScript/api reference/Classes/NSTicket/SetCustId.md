@@ -13,6 +13,6 @@ The reference to the customer. NULL or -1 if ticket is not connected to customer
 
 
 * **CustId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

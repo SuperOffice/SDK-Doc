@@ -13,6 +13,6 @@ Id of the destination contact. The value is mandatory.
 
 
 * **DestinationContactId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

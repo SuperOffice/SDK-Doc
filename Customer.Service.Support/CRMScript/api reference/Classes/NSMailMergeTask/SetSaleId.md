@@ -13,6 +13,6 @@ Sale identity to set on task
 
 
 * **SaleId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

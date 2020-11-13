@@ -13,6 +13,6 @@ Support priority ID
 
 
 * **SupportLanguageId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

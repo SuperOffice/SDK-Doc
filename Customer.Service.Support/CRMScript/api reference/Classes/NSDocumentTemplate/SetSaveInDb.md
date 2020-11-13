@@ -13,6 +13,6 @@ keywords: SetSaveInDb(Integer)
 
 
 * **SaveInDb:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

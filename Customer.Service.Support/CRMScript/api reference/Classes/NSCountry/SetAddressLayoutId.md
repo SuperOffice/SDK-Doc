@@ -13,6 +13,6 @@ Address layout of the country
 
 
 * **AddressLayoutId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

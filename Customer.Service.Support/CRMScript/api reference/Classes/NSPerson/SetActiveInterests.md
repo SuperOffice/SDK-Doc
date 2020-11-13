@@ -13,6 +13,6 @@ Number of records in pintr table; select count(*) from pintr pi where pi.person\
 
 
 * **ActiveInterests:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

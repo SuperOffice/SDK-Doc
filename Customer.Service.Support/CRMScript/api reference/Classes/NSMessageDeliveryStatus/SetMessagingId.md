@@ -17,6 +17,6 @@ Id to the outgoing message table
 
 
 * **MessagingId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

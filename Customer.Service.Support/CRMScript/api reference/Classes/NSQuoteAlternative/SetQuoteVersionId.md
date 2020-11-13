@@ -13,6 +13,6 @@ The version that owns this alternative (the chain is Sale 1->1 Quote 1->+ QuoteV
 
 
 * **QuoteVersionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

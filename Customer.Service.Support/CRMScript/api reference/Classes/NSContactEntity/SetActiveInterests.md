@@ -13,6 +13,6 @@ The number of active interests.
 
 
 * **ActiveInterests:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

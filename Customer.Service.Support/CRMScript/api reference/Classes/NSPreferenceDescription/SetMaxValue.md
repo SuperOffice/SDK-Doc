@@ -13,6 +13,6 @@ Max value (if type 1); list table ID (if type 5)
 
 
 * **MaxValue:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

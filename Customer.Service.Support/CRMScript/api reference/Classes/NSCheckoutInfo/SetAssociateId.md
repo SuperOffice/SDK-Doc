@@ -13,6 +13,6 @@ Id of associate who has currently checked out the document; 0 if it is not check
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

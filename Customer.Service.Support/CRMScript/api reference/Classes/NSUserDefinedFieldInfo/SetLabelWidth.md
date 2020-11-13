@@ -13,6 +13,6 @@ label width in pixels, 0 = 'enough' (from font)
 
 
 * **LabelWidth:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

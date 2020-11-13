@@ -13,6 +13,6 @@ where=no start time,note,docin, docout
 
 
 * **AppointmentType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

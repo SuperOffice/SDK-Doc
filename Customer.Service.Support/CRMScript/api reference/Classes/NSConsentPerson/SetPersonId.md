@@ -13,6 +13,6 @@ Person ID
 
 
 * **PersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

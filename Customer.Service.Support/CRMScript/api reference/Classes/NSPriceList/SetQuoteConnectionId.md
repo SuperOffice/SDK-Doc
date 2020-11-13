@@ -13,6 +13,6 @@ keywords: SetQuoteConnectionId(Integer)
 
 
 * **QuoteConnectionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

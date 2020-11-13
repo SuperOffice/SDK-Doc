@@ -13,6 +13,6 @@ Checkout state
 
 
 * **State:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

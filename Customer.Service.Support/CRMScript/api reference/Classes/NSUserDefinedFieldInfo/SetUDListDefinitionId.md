@@ -13,6 +13,6 @@ List to use for populating dropdown or listbox
 
 
 * **UDListDefinitionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

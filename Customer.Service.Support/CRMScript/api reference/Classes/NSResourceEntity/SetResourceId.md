@@ -13,6 +13,6 @@ Primary key
 
 
 * **ResourceId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

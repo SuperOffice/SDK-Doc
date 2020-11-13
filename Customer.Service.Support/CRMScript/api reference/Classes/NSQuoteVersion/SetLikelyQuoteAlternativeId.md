@@ -13,6 +13,6 @@ The alternative that is considered most likely to be accepted. Used to calculate
 
 
 * **LikelyQuoteAlternativeId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

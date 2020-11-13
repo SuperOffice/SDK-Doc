@@ -13,6 +13,6 @@ Number of new invitations
 
 
 * **NotificationsCount:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

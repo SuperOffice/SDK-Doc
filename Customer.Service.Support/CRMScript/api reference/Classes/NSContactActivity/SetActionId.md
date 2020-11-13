@@ -13,6 +13,6 @@ Id of the last element an activity was found on. I.e. AppointmentId, ContactId, 
 
 
 * **ActionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

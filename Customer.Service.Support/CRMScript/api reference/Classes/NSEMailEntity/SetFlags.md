@@ -20,6 +20,6 @@ Flag status of this mail (unread, replied, deleted )
 
 
 * **Flags:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

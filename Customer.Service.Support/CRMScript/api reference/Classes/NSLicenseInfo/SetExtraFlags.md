@@ -13,6 +13,6 @@ Unspecified extra flags of license, part of checksum
 
 
 * **ExtraFlags:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

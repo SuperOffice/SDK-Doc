@@ -13,6 +13,6 @@ Sort order, indexed so it can used for sorting in the query
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -12,6 +12,6 @@ Units for the duration
 
 
 * **p_0:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

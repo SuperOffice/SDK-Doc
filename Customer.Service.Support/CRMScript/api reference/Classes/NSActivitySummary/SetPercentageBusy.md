@@ -13,6 +13,6 @@ How much of the active work-day which is booked in appointments.
 
 
 * **PercentageBusy:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

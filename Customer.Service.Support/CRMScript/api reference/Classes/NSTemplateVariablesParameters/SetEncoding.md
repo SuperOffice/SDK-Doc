@@ -13,6 +13,6 @@ Encoding of source string. Non-text formats such as MsWord or Excel should be Ba
 
 
 * **Encoding:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

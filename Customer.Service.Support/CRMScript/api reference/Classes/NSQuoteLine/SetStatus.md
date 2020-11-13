@@ -15,6 +15,6 @@ If there was a problem with for instance calculation, this field is set to warni
 * Error=3
 
 * **p_0:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

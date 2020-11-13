@@ -22,6 +22,6 @@ Status if this appointment represents an invitation
 * Cancelled=10
 
 * **InvitationStatus:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

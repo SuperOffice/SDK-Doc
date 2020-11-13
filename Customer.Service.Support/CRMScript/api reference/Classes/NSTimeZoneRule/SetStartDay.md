@@ -13,6 +13,6 @@ Custom DST start day, if 0 then parse startRule
 
 
 * **StartDay:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

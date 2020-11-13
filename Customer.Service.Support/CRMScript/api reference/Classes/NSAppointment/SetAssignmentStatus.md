@@ -22,6 +22,6 @@ Status if this appointment is in the process of being assigned to someone else
 * Cancelled=10
 
 * **AssignmentStatus:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

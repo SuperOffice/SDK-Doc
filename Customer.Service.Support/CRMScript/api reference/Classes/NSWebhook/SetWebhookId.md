@@ -13,6 +13,6 @@ Primary Key. Unique id for this webhook.
 
 
 * **WebhookId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

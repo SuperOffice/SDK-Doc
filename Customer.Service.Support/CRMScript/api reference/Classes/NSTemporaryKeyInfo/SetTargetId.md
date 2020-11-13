@@ -13,6 +13,6 @@ The primary key of the entity this temporary key is for, dependent of dmain
 
 
 * **TargetId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

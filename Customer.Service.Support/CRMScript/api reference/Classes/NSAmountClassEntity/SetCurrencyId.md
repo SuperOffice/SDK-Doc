@@ -13,6 +13,6 @@ Currency the limits in this amount class refer to. Mixing currencies between cla
 
 
 * **CurrencyId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

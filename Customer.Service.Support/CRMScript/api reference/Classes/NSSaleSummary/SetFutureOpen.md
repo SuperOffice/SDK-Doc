@@ -13,6 +13,6 @@ Number of all Future Pipe/All open sales with date after the period
 
 
 * **FutureOpen:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

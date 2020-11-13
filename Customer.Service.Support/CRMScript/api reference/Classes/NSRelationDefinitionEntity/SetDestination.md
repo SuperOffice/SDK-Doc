@@ -13,6 +13,6 @@ The destination of the relation
 
 
 * **Destination:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

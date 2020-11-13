@@ -13,6 +13,6 @@ The color indicator of the ListItem color block
 
 
 * **ColorBlock:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

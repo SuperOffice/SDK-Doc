@@ -12,6 +12,6 @@ Lowest allowed setting level, set by SuperOffice
 
 
 * **p_0:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

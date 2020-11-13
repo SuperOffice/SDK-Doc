@@ -13,6 +13,6 @@ Id of the associates primary group at storage time
 
 
 * **GroupId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

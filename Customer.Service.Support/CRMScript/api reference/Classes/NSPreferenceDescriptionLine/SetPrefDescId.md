@@ -13,6 +13,6 @@ Preference description (parent)
 
 
 * **PrefDescId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

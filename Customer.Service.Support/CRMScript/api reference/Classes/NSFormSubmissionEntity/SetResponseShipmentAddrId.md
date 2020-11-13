@@ -13,6 +13,6 @@ The id of the s\_shipment_addr that is the response mail
 
 
 * **ResponseShipmentAddrId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,4 +13,4 @@ keywords: SetType(Integer)
 
 
 * **p_0:** Integer
-* **Returns:** Integer
+* **Returns:** Void

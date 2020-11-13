@@ -13,6 +13,6 @@ Default currency for this country
 
 
 * **CurrencyId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

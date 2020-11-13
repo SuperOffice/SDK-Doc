@@ -13,6 +13,6 @@ Quoted products (quote lines or confirmation lines) document, as PDF
 
 
 * **QuotedProductsId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

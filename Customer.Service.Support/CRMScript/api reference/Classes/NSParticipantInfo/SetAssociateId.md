@@ -13,6 +13,6 @@ Associate id of the participant if the participant is an associate (or resource)
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

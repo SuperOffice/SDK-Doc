@@ -21,6 +21,6 @@ State that this quote version had, right before it was changed to Archived; in t
 * Sold=9
 
 * **p_0:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

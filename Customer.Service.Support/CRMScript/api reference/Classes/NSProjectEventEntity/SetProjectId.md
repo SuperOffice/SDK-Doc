@@ -13,6 +13,6 @@ The projectId for the project this projectEvent belongs to
 
 
 * **ProjectId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Category of sale type, copied to sale
 
 
 * **SaleTypeCatId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

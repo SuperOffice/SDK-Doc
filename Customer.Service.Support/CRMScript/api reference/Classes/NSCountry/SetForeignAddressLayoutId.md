@@ -13,6 +13,6 @@ Foreign address layout of the country
 
 
 * **ForeignAddressLayoutId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

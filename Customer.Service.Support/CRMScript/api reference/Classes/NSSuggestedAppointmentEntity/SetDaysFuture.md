@@ -13,6 +13,6 @@ How many days into the future the appointment should be scheduled
 
 
 * **DaysFuture:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

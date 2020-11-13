@@ -13,6 +13,6 @@ The crm actor type which these fields belongs to
 
 
 * **CrmActorType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

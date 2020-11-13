@@ -13,6 +13,6 @@ Reply status stored in calendar data for the ical method is REPLY
 
 
 * **CalReplyStatus:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

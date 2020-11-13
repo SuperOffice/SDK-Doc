@@ -13,6 +13,6 @@ Primary key
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

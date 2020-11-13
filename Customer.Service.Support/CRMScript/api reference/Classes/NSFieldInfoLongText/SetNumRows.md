@@ -13,6 +13,6 @@ Number of lines of text to show. Text area height.
 
 
 * **NumRows:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Id of associate who approved (or rejected approval) for this version
 
 
 * **ApprovedBy:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

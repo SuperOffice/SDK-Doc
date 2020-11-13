@@ -13,6 +13,6 @@ Get or set the parenthesis (if any) associated with this restriction. Positive v
 
 
 * **InterParenthesis:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

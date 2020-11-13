@@ -18,6 +18,6 @@ Importance of the e-mail
 * Lowest=5
 
 * **Priority:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

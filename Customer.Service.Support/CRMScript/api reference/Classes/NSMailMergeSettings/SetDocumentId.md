@@ -13,6 +13,6 @@ Identity of document to be used as merge draft.
 
 
 * **DocumentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

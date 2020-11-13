@@ -13,6 +13,6 @@ Primary key
 
 
 * **PhoneId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

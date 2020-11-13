@@ -13,6 +13,6 @@ The id of the list which this list item belongs to
 
 
 * **UdListDefinitionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -9,6 +9,6 @@ keywords: SetNumberOfLicensesNewTotal(Integer)
 
 
 * **NumberOfLicensesNewTotal:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

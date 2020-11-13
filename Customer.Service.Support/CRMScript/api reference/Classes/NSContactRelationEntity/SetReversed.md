@@ -13,6 +13,6 @@ Is direction reversed relative to definition
 
 
 * **Reversed:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

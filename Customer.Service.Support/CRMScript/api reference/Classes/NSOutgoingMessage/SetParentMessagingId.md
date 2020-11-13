@@ -13,6 +13,6 @@ Id to the previous outgoing message related to this one. Used from message threa
 
 
 * **ParentMessagingId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

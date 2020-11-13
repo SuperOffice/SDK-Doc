@@ -9,6 +9,6 @@ keywords: SetSomeEnum(Integer)
 
 
 * **SomeEnum:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

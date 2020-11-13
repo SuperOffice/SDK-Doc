@@ -13,6 +13,6 @@ Id of the history item, for instance a contact id. Represents the history table'
 
 
 * **Id:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

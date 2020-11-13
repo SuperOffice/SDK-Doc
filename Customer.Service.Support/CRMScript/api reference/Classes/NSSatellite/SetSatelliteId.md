@@ -13,6 +13,6 @@ Primary key
 
 
 * **SatelliteId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

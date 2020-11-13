@@ -13,6 +13,6 @@ Id of the created follow up.
 
 
 * **CreatedAppointmentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

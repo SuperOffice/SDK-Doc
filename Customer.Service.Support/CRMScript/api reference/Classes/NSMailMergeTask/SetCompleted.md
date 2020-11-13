@@ -13,6 +13,6 @@ Completed status for task
 
 
 * **Completed:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The sale's status, indicating wether the sale is open, sold or lost.
 
 
 * **Status:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

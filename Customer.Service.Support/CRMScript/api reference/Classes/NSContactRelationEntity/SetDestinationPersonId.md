@@ -13,6 +13,6 @@ Id of the destination person. The value is not mandatory. The person must belong
 
 
 * **DestinationPersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

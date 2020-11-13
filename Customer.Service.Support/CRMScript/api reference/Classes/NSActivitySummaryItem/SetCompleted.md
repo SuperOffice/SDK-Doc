@@ -14,6 +14,6 @@ keywords: SetCompleted(Integer)
 
 
 * **Completed:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

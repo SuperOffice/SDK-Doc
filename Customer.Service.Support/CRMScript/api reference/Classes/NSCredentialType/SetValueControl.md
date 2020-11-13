@@ -17,6 +17,6 @@ Type of control used to display the value.
 * Hidden=4
 
 * **ValueControl:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

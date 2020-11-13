@@ -13,6 +13,6 @@ The sale's type id
 
 
 * **SaleTypeId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

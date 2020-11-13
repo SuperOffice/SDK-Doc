@@ -13,6 +13,6 @@ The activity that has occured on this contact.
 
 
 * **Action:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

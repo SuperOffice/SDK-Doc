@@ -13,6 +13,6 @@ ConsentPerson ID
 
 
 * **ConsentPersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

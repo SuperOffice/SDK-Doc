@@ -13,6 +13,6 @@ Same as time\_to_close, but not calculated based on priority.
 
 
 * **RealTimeToClose:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

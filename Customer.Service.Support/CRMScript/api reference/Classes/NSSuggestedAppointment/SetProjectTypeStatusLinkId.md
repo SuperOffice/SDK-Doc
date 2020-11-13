@@ -13,6 +13,6 @@ Link to projectTypeStatusLink, the anchor for project guide items. Either this O
 
 
 * **ProjectTypeStatusLinkId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

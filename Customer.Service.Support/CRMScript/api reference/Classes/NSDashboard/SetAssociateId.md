@@ -13,6 +13,6 @@ Id of the associate who owns this dashboard
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

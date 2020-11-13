@@ -13,6 +13,6 @@ Actual probability, may differ from the one in the list
 
 
 * **Probability:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

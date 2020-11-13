@@ -13,6 +13,6 @@ Resource ID
 
 
 * **ResourceId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

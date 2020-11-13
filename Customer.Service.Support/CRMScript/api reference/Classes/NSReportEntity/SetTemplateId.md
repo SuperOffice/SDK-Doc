@@ -13,6 +13,6 @@ The id of report template.
 
 
 * **TemplateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

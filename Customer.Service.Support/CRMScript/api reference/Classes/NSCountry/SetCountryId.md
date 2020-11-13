@@ -13,6 +13,6 @@ Primary key
 
 
 * **CountryId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

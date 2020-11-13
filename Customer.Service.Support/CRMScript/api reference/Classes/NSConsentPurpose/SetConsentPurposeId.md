@@ -13,6 +13,6 @@ Primary key
 
 
 * **ConsentPurposeId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The identity of the list
 
 
 * **Id:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

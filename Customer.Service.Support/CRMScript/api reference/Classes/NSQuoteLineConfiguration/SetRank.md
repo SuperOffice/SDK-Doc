@@ -13,6 +13,6 @@ Rank of the field
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

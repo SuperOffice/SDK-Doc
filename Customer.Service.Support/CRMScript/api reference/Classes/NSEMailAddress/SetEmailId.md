@@ -13,6 +13,6 @@ Primary key
 
 
 * **EmailId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

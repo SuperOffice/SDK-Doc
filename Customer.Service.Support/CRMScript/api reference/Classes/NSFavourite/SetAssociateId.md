@@ -13,6 +13,6 @@ Id of the associate this favourite belongs to.
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

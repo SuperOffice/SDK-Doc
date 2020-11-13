@@ -13,6 +13,6 @@ User type: 1=InternalAssociate, 2=ResourceAssociate, 3=ExternalAssociate, 4=Anon
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

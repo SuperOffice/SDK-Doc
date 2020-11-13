@@ -13,6 +13,6 @@ The owner of the report.
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

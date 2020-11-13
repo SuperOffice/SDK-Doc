@@ -13,6 +13,6 @@ The person's email address id
 
 
 * **EmailId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

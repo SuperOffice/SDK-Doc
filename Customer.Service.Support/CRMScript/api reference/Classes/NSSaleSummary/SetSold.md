@@ -13,6 +13,6 @@ Number of all sold within the period
 
 
 * **Sold:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

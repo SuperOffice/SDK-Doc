@@ -13,6 +13,6 @@ Primary key
 
 
 * **TaskListItemId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

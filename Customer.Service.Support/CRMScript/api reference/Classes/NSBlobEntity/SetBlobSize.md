@@ -13,6 +13,6 @@ The length, in bytes, of the binary data AS STORED after any encryption and/or z
 
 
 * **BlobSize:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

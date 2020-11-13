@@ -13,6 +13,6 @@ Our support contact for this person
 
 
 * **SupportAssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

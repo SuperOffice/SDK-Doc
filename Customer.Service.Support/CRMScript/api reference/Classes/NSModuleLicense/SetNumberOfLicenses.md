@@ -13,6 +13,6 @@ Number of licenses purchased.
 
 
 * **NumberOfLicenses:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

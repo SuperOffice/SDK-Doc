@@ -13,6 +13,6 @@ Reply template to merge with messages posted in this category
 
 
 * **ReplyTemplate:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

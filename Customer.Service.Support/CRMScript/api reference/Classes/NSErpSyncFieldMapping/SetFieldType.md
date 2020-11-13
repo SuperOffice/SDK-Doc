@@ -19,7 +19,7 @@ Field type
 * Label=99	
 
 * **p0:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 
 

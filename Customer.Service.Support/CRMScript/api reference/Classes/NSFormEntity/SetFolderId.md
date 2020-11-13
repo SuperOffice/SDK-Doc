@@ -13,6 +13,6 @@ The folder which this form belongs to. -1 indicates that the shipment is on the 
 
 
 * **FolderId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

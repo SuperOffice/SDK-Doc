@@ -13,6 +13,6 @@ Allowed associate type for user licenses: `internal(0)`, `external(4)`.
 
 
 * **AllowedUserType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

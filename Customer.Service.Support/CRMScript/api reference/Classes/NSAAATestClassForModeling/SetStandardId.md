@@ -9,6 +9,6 @@ keywords: SetStandardId(Integer)
 
 
 * **StandardId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

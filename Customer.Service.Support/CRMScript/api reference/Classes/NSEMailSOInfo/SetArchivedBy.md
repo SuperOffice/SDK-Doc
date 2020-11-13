@@ -13,6 +13,6 @@ The associate who archived this email
 
 
 * **ArchivedBy:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Total count of search words
 
 
 * **Occurrences:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

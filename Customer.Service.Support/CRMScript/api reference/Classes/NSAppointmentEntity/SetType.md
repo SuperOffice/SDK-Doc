@@ -13,6 +13,6 @@ The different types of appointment, if the appointment is supposed to be shown i
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

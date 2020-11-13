@@ -13,6 +13,6 @@ The offset in minutes compared with UTC, calculated for DateTime.Now
 
 
 * **TZOffset:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

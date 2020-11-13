@@ -13,6 +13,6 @@ Spare ID, not yet in use
 
 
 * **ExtraId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

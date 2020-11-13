@@ -13,6 +13,6 @@ Same as time\_to_reply, but not calculated based on priority.
 
 
 * **RealTimeToReply:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

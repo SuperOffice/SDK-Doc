@@ -13,6 +13,6 @@ The icon of the webpanel
 
 
 * **Icon:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

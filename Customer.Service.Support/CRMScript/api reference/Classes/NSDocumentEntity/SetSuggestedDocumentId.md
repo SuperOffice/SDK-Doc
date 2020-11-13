@@ -13,6 +13,6 @@ Suggested guide item that this document is an instance of (Note: NOT valid for a
 
 
 * **SuggestedDocumentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

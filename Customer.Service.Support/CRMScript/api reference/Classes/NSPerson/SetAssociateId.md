@@ -13,6 +13,6 @@ Id of the item's owner (Associate id)
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

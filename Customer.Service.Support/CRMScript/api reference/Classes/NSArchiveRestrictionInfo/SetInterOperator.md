@@ -13,6 +13,6 @@ Get or set the inter-restriction operator that describes how this restriction is
 
 
 * **InterOperator:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 
