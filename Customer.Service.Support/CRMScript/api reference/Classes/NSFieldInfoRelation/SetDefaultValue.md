@@ -13,6 +13,6 @@ Default record id.
 
 
 * **DefaultValue:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

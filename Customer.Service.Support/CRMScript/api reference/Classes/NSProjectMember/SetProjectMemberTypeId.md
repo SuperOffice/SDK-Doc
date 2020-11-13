@@ -13,6 +13,6 @@ ProjectMember Type Id - from the ProjectMemberType list.
 
 
 * **ProjectMemberTypeId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

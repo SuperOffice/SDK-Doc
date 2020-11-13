@@ -7,7 +7,10 @@ sortOrder: 4168
 keywords: GetCustomerLanguageList(Integer[])
 ---
 
+Gets an array of CustomerLanguage objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for CustomerLanguage
+* **Returns:** Array of NSCustomerLanguage
 
 

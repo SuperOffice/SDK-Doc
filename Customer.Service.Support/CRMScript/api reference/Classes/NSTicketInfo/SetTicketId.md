@@ -13,6 +13,6 @@ The id of the created ticket
 
 
 * **TicketId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

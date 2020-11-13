@@ -13,6 +13,6 @@ What is the state of the recaptcha configuration? This is a read-only member
 
 
 * **RecaptchaMode:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

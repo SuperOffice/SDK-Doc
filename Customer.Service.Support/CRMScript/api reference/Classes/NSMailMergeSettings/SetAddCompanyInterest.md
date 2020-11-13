@@ -13,6 +13,6 @@ Add this company interest to each company recipient.
 
 
 * **AddCompanyInterest:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

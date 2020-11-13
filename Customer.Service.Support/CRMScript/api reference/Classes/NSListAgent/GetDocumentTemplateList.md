@@ -7,7 +7,10 @@ sortOrder: 4180
 keywords: GetDocumentTemplateList(Integer[])
 ---
 
+Gets an array of DocumentTemplate objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for DocumentTemplate
+* **Returns:** Array of NSDocumentTemplate
 
 

@@ -13,6 +13,6 @@ Declaration of what kind of return type the execution of this command will give.
 
 
 * **ReturnType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

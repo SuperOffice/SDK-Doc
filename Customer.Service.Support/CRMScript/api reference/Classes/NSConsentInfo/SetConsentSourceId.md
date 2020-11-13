@@ -13,6 +13,6 @@ Primary key for the ConsentSource associated with this consent
 
 
 * **ConsentSourceId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

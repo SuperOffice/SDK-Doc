@@ -13,6 +13,6 @@ The domain for this key. Unknown if key is not valid.
 
 
 * **Domain:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

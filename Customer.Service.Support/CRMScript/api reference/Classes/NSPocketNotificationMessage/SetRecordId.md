@@ -13,6 +13,6 @@ If the message is about some specific database record, this could be its primary
 
 
 * **RecordId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

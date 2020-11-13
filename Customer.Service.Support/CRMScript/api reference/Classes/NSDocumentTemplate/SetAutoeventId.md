@@ -13,6 +13,6 @@ Which document plugin is responsible for the documents generated from this templ
 
 
 * **AutoeventId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

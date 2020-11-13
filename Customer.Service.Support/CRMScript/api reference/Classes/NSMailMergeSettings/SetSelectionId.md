@@ -13,6 +13,6 @@ Identity of selection to use as source for recipients.
 
 
 * **SelectionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

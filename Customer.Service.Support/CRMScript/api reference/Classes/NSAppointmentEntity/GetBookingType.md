@@ -10,7 +10,10 @@ keywords: GetBookingType()
 
 The type of booking the appointment represents
 
-
+* Unknown=0
+* None=1
+* Owner=2
+* Participant=3
 
 * **Returns:** Integer
 

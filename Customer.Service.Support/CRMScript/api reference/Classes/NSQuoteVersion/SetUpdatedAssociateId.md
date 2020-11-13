@@ -13,6 +13,6 @@ Last updated by whom
 
 
 * **UpdatedAssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

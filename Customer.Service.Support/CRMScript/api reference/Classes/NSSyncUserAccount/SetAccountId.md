@@ -13,6 +13,6 @@ The account primary key
 
 
 * **AccountId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

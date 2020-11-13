@@ -13,6 +13,6 @@ Id of table that owns the status monitor
 
 
 * **OwnerTable:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

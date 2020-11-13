@@ -9,6 +9,6 @@ keywords: SetStandardInt(Integer)
 
 
 * **StandardInt:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

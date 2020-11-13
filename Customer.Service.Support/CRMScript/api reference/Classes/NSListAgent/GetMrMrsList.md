@@ -7,7 +7,10 @@ sortOrder: 4243
 keywords: GetMrMrsList(Integer[])
 ---
 
+Gets an array of MrMrs objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for MrMrs
+* **Returns:** Array of NSMrMrs
 
 

@@ -13,6 +13,6 @@ The Id of the Audience layout
 
 
 * **AudienceLayoutId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

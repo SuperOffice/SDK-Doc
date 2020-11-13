@@ -13,6 +13,6 @@ Is this a normal document or a mail-merge or report?
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Reference to foregin application (device type)
 
 
 * **ForeignAppId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

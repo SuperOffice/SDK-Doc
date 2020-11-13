@@ -7,7 +7,10 @@ sortOrder: 4265
 keywords: GetProjectStatusList(Integer[])
 ---
 
+Gets an array of ProjectStatus objects.
 
-* **Returns:** IntegerArray
 
+
+* **p0:** IntegerArray of identifiers for ProjectStatus
+* **Returns:** Array of NSProjectStatus
 

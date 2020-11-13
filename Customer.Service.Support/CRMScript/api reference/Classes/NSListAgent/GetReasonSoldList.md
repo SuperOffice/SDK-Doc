@@ -7,7 +7,11 @@ sortOrder: 4284
 keywords: GetReasonSoldList(Integer[])
 ---
 
+Gets an array of ReasonSold objects.
 
-* **Returns:** IntegerArray
+
+
+* **p0:** IntegerArray of identifiers for ReasonSold
+* **Returns:** Array of NSReasonSold
 
 

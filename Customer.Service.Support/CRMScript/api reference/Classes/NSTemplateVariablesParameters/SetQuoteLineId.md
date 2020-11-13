@@ -13,6 +13,6 @@ Quote line id
 
 
 * **QuoteLineId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

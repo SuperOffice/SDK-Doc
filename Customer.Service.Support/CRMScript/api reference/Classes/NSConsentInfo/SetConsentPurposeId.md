@@ -13,6 +13,6 @@ Primary key for the ConsentPurpose associated with this consent
 
 
 * **ConsentPurposeId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

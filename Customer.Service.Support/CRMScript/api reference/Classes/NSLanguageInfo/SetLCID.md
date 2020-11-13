@@ -13,6 +13,6 @@ Language/culture id as a numeric .NET code
 
 
 * **LCID:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

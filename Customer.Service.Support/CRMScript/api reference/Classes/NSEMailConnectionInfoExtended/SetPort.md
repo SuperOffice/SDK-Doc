@@ -9,6 +9,6 @@ keywords: SetPort(Integer)
 
 
 * **Port:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

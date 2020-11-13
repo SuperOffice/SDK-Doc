@@ -1,13 +1,14 @@
 ---
-title: NSContact[] GetContactList(Integer[] p0)
-path: /EJScript/Classes/NSContactAgent/Member functions/NSContact[] GetContactList(Integer[] p_0)
+title: NSContact[] GetContactList(Integer[] contactIds)
+path: /EJScript/Classes/NSContactAgent/Member functions/NSContact[] GetContactList(Integer[] contactIds)
 intellisense: 1
 classref: 1
 sortOrder: 1804
 keywords: GetContactList(Integer[])
 ---
 
+Gets an array of Contact objects.
 
-* **Returns:** IntegerArray
 
-
+* **contactIds:** IntegerArray of identifiers for Contact
+* **Returns:** Array of NSContact

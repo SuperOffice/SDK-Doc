@@ -13,6 +13,6 @@ Rank, controls rank of non-instantiated items in Guide
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

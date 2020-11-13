@@ -13,6 +13,6 @@ The table ID of the source table for lists: kTableAssoc, kTableContInt or whatev
 
 
 * **ListTableId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

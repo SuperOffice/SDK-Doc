@@ -13,6 +13,6 @@ Access restrictions on the field
 
 
 * **Access:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

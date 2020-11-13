@@ -13,6 +13,6 @@ The number of licenses that are free to be assigned
 
 
 * **Free:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

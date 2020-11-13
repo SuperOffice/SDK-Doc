@@ -13,6 +13,6 @@ Primary key
 
 
 * **PriceListId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

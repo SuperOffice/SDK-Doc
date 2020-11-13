@@ -13,6 +13,6 @@ The Sale completed state. The completed state is either Started or Completed. No
 
 
 * **Completed:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

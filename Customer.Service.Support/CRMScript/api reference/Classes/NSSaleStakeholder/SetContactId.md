@@ -13,6 +13,6 @@ Contact ID of person or contact who is the sale stakeholder
 
 
 * **ContactId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

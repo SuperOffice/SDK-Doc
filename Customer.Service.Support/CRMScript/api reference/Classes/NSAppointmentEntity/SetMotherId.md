@@ -13,6 +13,6 @@ ID of mother appointment; self if booking master, master ID if booking slave, 0 
 
 
 * **MotherId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

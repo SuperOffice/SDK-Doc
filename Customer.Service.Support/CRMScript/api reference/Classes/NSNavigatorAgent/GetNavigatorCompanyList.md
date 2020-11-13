@@ -7,7 +7,11 @@ sortOrder: 4696
 keywords: GetNavigatorCompanyList(Integer[])
 ---
 
+Gets an array of NavigatorCompany objects.
 
-* **Returns:** IntegerArray
+
+
+* **p0:** IntegerArray of identifiers for NavigatorCompany
+* **Returns:** Array of NSNavigatorCompany
 
 

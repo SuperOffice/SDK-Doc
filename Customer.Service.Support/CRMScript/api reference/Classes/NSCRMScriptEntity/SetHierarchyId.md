@@ -13,6 +13,6 @@ The script is inside this hierarchy folder
 
 
 * **HierarchyId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

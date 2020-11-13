@@ -13,6 +13,6 @@ Number of targets that have this status, this should be the number of rows in St
 
 
 * **NumMatches:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

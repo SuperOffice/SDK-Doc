@@ -13,6 +13,6 @@ The number of active erp links
 
 
 * **ActiveErpLinks:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Primary key
 
 
 * **ErpConnectionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Display sort sequence for default sort order
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

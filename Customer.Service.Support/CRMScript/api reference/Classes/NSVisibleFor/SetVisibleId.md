@@ -9,6 +9,6 @@ keywords: SetVisibleId(Integer)
 
 
 * **VisibleId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

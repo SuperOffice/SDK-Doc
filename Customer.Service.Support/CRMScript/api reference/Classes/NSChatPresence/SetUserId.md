@@ -13,6 +13,6 @@ The id for the chat user
 
 
 * **UserId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

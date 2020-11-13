@@ -13,6 +13,6 @@ The id of the login row
 
 
 * **LoginId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ What sort of data does this field contain. 1 = int, 2 = short text, ...
 
 
 * **FieldType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

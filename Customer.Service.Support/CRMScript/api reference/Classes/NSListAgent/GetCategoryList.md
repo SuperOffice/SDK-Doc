@@ -7,7 +7,10 @@ sortOrder: 4131
 keywords: GetCategoryList(Integer[])
 ---
 
+Gets an array of Category objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for Category
+* **Returns:** Array of NSCategory
 
 

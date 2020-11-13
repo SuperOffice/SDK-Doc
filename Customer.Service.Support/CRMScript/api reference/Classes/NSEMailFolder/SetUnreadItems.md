@@ -13,6 +13,6 @@ Number of unread messages in the folder
 
 
 * **UnreadItems:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

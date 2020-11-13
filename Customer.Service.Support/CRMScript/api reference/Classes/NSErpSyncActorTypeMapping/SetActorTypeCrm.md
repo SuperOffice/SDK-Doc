@@ -7,6 +7,12 @@ sortOrder: 3169
 keywords: SetActorTypeCrm(Integer)
 ---
 
+The actor type (CRM side)
+* Unknown=0
+* Contact=1
+* Person=2
+* Project=3
+* Sale=4
 
-
-
+* **p0:** Integer
+* **Returns:** Void

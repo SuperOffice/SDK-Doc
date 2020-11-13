@@ -9,6 +9,6 @@ keywords: SetNumberOfLicensesFree(Integer)
 
 
 * **NumberOfLicensesFree:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

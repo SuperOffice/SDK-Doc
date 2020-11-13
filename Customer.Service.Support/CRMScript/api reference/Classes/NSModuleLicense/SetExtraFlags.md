@@ -13,6 +13,6 @@ Unspecified extra flags of license, part of checksum. Value=1 means this a 'user
 
 
 * **ExtraFlags:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Record in the referenced table
 
 
 * **RecordId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

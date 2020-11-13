@@ -9,6 +9,6 @@ keywords: SetType(Integer)
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

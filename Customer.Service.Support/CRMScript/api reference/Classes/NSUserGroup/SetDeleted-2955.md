@@ -13,6 +13,6 @@ Deleted equal to true means that this is a user group that no longer can be sele
 
 
 * **Deleted:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

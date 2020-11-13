@@ -13,6 +13,6 @@ The id of the Audience layout this configuration setting belongs to
 
 
 * **AudienceLayoutId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

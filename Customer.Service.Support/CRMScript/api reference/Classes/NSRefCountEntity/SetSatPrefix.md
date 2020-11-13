@@ -13,6 +13,6 @@ size of prefix for Satellite use of this counter
 
 
 * **SatPrefix:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

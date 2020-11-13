@@ -13,6 +13,6 @@ Apply role category membership to users
 
 
 * **UseCategories:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

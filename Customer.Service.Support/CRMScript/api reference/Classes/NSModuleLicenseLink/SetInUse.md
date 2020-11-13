@@ -13,6 +13,6 @@ The total number of licenses (of a given license module) that are occupied
 
 
 * **InUse:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

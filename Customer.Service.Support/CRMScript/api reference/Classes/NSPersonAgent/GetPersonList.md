@@ -7,7 +7,11 @@ sortOrder: 4942
 keywords: GetPersonList(Integer[])
 ---
 
+Gets an array of Person objects.
 
-* **Returns:** IntegerArray
+
+
+* **p0:** IntegerArray of identifiers for Person
+* **Returns:** Array of NSPerson
 
 

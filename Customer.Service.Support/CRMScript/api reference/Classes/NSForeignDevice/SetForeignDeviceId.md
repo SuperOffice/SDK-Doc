@@ -13,6 +13,6 @@ Primary key
 
 
 * **ForeignDeviceId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

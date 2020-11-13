@@ -13,6 +13,6 @@ Id of the project that represents the event
 
 
 * **ProjectId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

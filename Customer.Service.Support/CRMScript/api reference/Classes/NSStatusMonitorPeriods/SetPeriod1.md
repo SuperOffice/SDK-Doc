@@ -13,6 +13,6 @@ Days in the first period
 
 
 * **Period1:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

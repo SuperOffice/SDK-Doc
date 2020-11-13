@@ -13,6 +13,6 @@ The role type. Note that changing this field has no effect, so treat this as a r
 
 
 * **RoleType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

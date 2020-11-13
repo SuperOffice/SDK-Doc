@@ -13,6 +13,6 @@ Primary key
 
 
 * **HistoryId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

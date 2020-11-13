@@ -7,7 +7,10 @@ sortOrder: 4160
 keywords: GetCurrencyList(Integer[])
 ---
 
+Gets an array of Currency objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for Currency
+* **Returns:** Array of NSCurrency
 
 

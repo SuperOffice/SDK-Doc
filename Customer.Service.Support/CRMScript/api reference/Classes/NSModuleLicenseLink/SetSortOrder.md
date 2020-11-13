@@ -9,6 +9,6 @@ keywords: SetSortOrder(Integer)
 
 
 * **SortOrder:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

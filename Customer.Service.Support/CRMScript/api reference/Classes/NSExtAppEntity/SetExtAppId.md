@@ -13,6 +13,6 @@ The identity of the external app
 
 
 * **ExtAppId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The phone id
 
 
 * **PhoneId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

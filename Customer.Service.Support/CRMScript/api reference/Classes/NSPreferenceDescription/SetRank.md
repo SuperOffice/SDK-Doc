@@ -13,6 +13,6 @@ Rank field for ordering sections, and keys within sections
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

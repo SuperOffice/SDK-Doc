@@ -13,6 +13,6 @@ TargetTableNumber defines the type of selection members this selection contains.
 
 
 * **TargetTableNumber:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

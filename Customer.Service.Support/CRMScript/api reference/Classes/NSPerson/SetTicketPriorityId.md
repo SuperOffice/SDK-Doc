@@ -13,6 +13,6 @@ Ticket priority ID
 
 
 * **TicketPriorityId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

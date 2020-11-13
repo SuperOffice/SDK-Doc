@@ -13,6 +13,6 @@ Number of minutes we shall override the assignment if a customer sends consecuti
 
 
 * **AssignmentLag:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

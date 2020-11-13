@@ -7,7 +7,10 @@ sortOrder: 4255
 keywords: GetPriorityList(Integer[])
 ---
 
+Gets an array of Priority objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for Priority
+* **Returns:** Array of NSPriority
 
 

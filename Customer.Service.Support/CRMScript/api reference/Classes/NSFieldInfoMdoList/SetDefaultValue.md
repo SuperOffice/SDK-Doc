@@ -13,6 +13,6 @@ Default list item id
 
 
 * **DefaultValue:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

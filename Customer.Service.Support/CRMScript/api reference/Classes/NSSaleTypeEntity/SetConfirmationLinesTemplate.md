@@ -13,6 +13,6 @@ The template that this sale type should use when producing the order confirmatio
 
 
 * **ConfirmationLinesTemplate:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

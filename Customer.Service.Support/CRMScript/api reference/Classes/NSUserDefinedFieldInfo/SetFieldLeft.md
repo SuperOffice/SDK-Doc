@@ -13,6 +13,6 @@ X pixel coordinate of field
 
 
 * **FieldLeft:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

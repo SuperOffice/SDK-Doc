@@ -7,7 +7,9 @@ sortOrder: 4330
 keywords: GetTaskList(Integer[])
 ---
 
+Gets an array of Task objects.
 
-* **Returns:** IntegerArray
 
+* **p0:** IntegerArray of identifiers for Task
+* **Returns:** Array of NSTask
 

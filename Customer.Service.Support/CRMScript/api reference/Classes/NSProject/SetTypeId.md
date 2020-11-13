@@ -9,6 +9,6 @@ keywords: SetTypeId(Integer)
 
 
 * **TypeId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -8,5 +8,12 @@ keywords: SetQuoteDocType(Integer)
 ---
 
 
+* None=0
+* MailBody=1
+* MainDocument=2
+* QuoteLines=3
+* ConfirmationMailBody=4
+* ConfirmationLines=5
 
-
+* **p0:** Integer
+* **Returns:** Void

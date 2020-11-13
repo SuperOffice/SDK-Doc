@@ -7,7 +7,10 @@ sortOrder: 4276
 keywords: GetRatingList(Integer[])
 ---
 
+Gets an array of Rating objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for Rating
+* **Returns:** Array of NSRating
 
 

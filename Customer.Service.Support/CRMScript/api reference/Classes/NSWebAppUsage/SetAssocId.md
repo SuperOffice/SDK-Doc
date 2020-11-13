@@ -13,6 +13,6 @@ Associate Id
 
 
 * **AssocId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

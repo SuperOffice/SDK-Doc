@@ -13,6 +13,6 @@ The category of the report.
 
 
 * **ReportCategory:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Primary key
 
 
 * **LanguageInfoId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

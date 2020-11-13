@@ -13,6 +13,6 @@ Owning associate id for the DiaryView.
 
 
 * **AssocId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

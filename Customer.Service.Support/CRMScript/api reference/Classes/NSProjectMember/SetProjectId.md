@@ -13,6 +13,6 @@ Parent project - the project this project member belongs to.
 
 
 * **ProjectId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

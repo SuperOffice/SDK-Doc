@@ -13,6 +13,6 @@ The width of the widget
 
 
 * **Width:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Primary key
 
 
 * **EjscriptId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

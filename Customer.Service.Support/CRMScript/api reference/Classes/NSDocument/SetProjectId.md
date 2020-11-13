@@ -13,6 +13,6 @@ ID of project referred to, may be 0
 
 
 * **ProjectId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

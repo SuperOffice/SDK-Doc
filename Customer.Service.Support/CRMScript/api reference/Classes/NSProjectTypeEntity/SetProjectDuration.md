@@ -13,6 +13,6 @@ Expected duration of project, in given units
 
 
 * **ProjectDuration:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

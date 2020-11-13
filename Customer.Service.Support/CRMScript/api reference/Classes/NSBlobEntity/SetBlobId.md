@@ -13,6 +13,6 @@ Primary key
 
 
 * **BlobId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

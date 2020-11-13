@@ -13,6 +13,6 @@ How many active ERP links are there for this person?
 
 
 * **ActiveErpLinks:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

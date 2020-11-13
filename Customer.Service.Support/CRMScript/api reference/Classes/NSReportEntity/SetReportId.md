@@ -17,6 +17,6 @@ The id of the report.
 
 
 * **ReportId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

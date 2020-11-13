@@ -13,6 +13,6 @@ Appointment colour, used only in Japanese versions. Western versions take colour
 
 
 * **ColorIndex:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

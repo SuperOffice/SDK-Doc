@@ -13,6 +13,6 @@ Unique id for the e-mail on the server
 
 
 * **ServerId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

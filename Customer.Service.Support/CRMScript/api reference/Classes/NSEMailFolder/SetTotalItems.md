@@ -13,6 +13,6 @@ Total number of messages in the folder
 
 
 * **TotalItems:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

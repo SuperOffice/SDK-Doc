@@ -13,6 +13,6 @@ Id of the source person. The value is not mandatory. The person must belong to t
 
 
 * **SourcePersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

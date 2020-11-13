@@ -13,6 +13,6 @@ Action for the button
 
 
 * **Action:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

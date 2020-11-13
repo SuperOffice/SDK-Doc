@@ -7,7 +7,10 @@ sortOrder: 4150
 keywords: GetCountryList(Integer[])
 ---
 
+Gets an array of Country objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for Country
+* **Returns:** Array of NSCountry
 
 

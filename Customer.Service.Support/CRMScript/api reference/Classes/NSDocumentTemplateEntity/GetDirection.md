@@ -7,6 +7,10 @@ sortOrder: 2656
 keywords: GetDirection()
 ---
 
+1 = incoming, 2 = outgoing, see EAppntDirection
 
+
+
+* **Returns:** Integer
 
 

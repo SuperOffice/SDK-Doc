@@ -13,6 +13,6 @@ Postit text record id.
 
 
 * **PostitTextId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

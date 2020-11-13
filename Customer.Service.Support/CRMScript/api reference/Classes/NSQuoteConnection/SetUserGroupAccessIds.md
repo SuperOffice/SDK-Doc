@@ -13,6 +13,6 @@ Array of ids containing usergroups that will have access to this connection.
 
 
 * **UserGroupAccessIds:** IntegerArray
-* **Returns:** IntegerArray
+* **Returns:** Void
 
 

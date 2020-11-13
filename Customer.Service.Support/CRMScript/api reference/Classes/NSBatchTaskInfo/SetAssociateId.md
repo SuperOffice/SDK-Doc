@@ -13,6 +13,6 @@ Task owner. If it is a System task, AssociateId = 0.
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

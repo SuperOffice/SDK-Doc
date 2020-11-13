@@ -13,6 +13,6 @@ The tile entity type
 
 
 * **EntityType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

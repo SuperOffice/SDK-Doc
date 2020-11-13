@@ -13,6 +13,6 @@ The rank of the list item
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The projects status id
 
 
 * **StatusId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

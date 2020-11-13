@@ -13,6 +13,6 @@ Direction to order.
 
 
 * **Direction:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

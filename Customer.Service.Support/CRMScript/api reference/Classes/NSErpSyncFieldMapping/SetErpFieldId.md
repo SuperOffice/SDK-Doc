@@ -13,6 +13,6 @@ Primary key
 
 
 * **ErpFieldId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

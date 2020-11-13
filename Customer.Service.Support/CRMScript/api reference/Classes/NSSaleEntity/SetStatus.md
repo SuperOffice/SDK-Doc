@@ -13,6 +13,6 @@ The state of the Sale
 
 
 * **Status:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

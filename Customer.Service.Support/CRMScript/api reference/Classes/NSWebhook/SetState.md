@@ -1,10 +1,10 @@
 ---
-title: Void SetState(NSWebhookState State)
-path: /EJScript/Classes/NSWebhook/Member functions/Void SetState(NSWebhookState p_0)
+title: Void SetState(Integer State)
+path: /EJScript/Classes/NSWebhook/Member functions/Void SetState(Integer p_0)
 intellisense: 1
 classref: 1
 sortOrder: 8790
-keywords: SetState(NSWebhookState)
+keywords: SetState(Integer)
 ---
 
 
@@ -12,7 +12,7 @@ Webhook status - should we post events to the URL? 1=Active, 2=Stopped or 3=TooM
 
 
 
-* **State:** WebhookState
-* **Returns:** WebhookState
+* **State:** Integer
+* **Returns:** Void
 
 

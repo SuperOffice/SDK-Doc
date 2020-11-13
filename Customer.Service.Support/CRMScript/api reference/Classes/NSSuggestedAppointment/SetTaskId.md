@@ -13,6 +13,6 @@ Type of the suggested appointment
 
 
 * **TaskId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

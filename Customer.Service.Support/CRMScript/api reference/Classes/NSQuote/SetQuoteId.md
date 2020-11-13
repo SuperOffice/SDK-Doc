@@ -13,6 +13,6 @@ Primary key
 
 
 * **QuoteId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

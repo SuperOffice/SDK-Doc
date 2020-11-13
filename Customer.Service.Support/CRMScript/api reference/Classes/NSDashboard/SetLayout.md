@@ -13,6 +13,6 @@ The dashboard layout, how the tiles are organized on the screen
 
 
 * **Layout:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

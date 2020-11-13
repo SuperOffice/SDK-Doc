@@ -13,6 +13,6 @@ Expected number of dales from initiation to close of sale
 
 
 * **SaleDuration:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -7,6 +7,11 @@ sortOrder: 5865
 keywords: SetDurationUnit(Integer)
 ---
 
+Units for the duration
 
+
+
+* **p_0:** Integer
+* **Returns:** Void
 
 

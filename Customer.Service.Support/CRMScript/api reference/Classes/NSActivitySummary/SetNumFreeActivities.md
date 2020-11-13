@@ -13,6 +13,6 @@ Number of activites of the type 'free'. Sales and documents are not activites in
 
 
 * **NumFreeActivities:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

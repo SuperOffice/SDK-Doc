@@ -13,6 +13,6 @@ Display type, populated when asked for.
 
 
 * **DisplayType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -7,7 +7,10 @@ sortOrder: 4342
 keywords: GetTicketPriorityList(Integer[])
 ---
 
+Gets an array of TicketPriority objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for TicketPriority
+* **Returns:** Array of NSTicketPriority
 
 

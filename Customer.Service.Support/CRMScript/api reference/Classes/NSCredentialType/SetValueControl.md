@@ -10,9 +10,13 @@ keywords: SetValueControl(Integer)
 
 Type of control used to display the value.
 
-
+* Static=0
+* Edit=1
+* Password=2
+* Link=3
+* Hidden=4
 
 * **ValueControl:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

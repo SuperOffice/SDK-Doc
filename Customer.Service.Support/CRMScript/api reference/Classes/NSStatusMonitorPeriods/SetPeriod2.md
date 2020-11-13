@@ -13,6 +13,6 @@ Days in the second period
 
 
 * **Period2:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ keywords: SetOwner(Integer)
 
 
 * **Owner:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Primary key
 
 
 * **WindowPosSizeId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

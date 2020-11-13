@@ -13,6 +13,6 @@ If nonzero, then this contact is 'deleted' and should generally not be shown
 
 
 * **Deleted:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

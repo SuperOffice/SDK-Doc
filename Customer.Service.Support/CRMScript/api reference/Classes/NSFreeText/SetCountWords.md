@@ -13,6 +13,6 @@ Count of unique search words
 
 
 * **CountWords:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

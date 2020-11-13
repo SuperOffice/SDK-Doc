@@ -13,6 +13,6 @@ The type of event we are triggered by
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

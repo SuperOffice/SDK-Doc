@@ -13,6 +13,6 @@ Quote alternative id
 
 
 * **QuoteAlternativeId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

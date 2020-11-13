@@ -13,6 +13,6 @@ The id of the user who created the ticket. 1 (system user) if the ticket was cre
 
 
 * **CreatedBy:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

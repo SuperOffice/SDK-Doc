@@ -13,6 +13,6 @@ Default valid days for quotes linked to sales of this type (valid from quote tra
 
 
 * **DefaultQuoteValidity:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

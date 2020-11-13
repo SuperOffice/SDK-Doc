@@ -13,6 +13,6 @@ Y pixel coordinate of label
 
 
 * **LabelTop:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

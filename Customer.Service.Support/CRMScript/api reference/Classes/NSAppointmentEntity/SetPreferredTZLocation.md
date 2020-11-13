@@ -13,6 +13,6 @@ Appoinmtments preferred timezone location.
 
 
 * **PreferredTZLocation:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The confidentiality of appointments is shown as different types of “private”
 
 
 * **Private:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

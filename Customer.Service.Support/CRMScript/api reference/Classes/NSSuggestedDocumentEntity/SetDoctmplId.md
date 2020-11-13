@@ -13,6 +13,6 @@ Type of the suggested document
 
 
 * **DoctmplId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Number of active links to sale, document, appointment.
 
 
 * **ActiveLinks:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

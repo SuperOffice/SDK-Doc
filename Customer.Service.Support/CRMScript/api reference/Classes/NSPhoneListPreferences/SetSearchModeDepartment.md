@@ -13,6 +13,6 @@ The Department search type, e.g. BeginsWith, Contains, Endswith, Matches
 
 
 * **SearchModeDepartment:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -8,6 +8,7 @@ keywords: GetLegalBaseList(Integer[])
 ---
 
 
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for LegalBase
+* **Returns:** Array of NSLegalBase
 
 

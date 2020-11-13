@@ -7,7 +7,10 @@ sortOrder: 4250
 keywords: GetPositionList(Integer[])
 ---
 
+Gets an array of Position objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for Position
+* **Returns:** Array of NSPosition
 
 

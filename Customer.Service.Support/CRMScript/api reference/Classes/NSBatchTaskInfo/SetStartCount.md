@@ -13,6 +13,6 @@ Maps to the startcount field in the batchtask table.
 
 
 * **StartCount:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

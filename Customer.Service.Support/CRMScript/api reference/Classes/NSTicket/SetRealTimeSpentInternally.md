@@ -13,6 +13,6 @@ The total time (seconds) within 24x7 the ticket has been in an open status (conf
 
 
 * **RealTimeSpentInternally:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

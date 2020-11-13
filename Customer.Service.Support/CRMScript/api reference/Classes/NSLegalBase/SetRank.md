@@ -13,6 +13,6 @@ Rank of this consent source
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

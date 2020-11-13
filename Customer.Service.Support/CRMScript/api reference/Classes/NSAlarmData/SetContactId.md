@@ -13,6 +13,6 @@ Contact ID of owning contact, may be 0
 
 
 * **ContactId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

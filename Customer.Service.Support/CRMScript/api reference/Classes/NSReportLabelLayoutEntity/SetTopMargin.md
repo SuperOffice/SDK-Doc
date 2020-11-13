@@ -13,6 +13,6 @@ Top margin in twips
 
 
 * **TopMargin:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

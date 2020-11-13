@@ -13,6 +13,6 @@ Number of all overdue sales within the period
 
 
 * **CurrentOverdue:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

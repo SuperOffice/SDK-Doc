@@ -13,6 +13,6 @@ String, int, decimal, etc.
 
 
 * **FieldType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

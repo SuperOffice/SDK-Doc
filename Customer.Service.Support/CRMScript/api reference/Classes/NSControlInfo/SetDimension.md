@@ -9,6 +9,6 @@ keywords: SetDimension(Integer)
 
 
 * **Dimension:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

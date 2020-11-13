@@ -7,6 +7,12 @@ sortOrder: 3304
 keywords: SetAccess(Integer)
 ---
 
+Access restrictions for the field
+* Normal=0
+* Mandatory=1
+* ReadOnly=2
 
+* **p0:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The lastname search type, e.g. BeginsWith, Contains, Endswith, Matches
 
 
 * **SearchModeLastname:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

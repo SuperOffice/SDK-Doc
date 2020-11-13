@@ -13,6 +13,6 @@ Which document plugin is responsible for this template's contents
 
 
 * **LoadTemplateFromPlugin:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

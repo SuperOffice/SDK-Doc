@@ -13,6 +13,6 @@ Project identity to set on task
 
 
 * **ProjectId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

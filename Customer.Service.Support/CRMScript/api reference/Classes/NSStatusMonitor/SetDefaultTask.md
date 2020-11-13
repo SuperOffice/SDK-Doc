@@ -13,6 +13,6 @@ keywords: SetDefaultTask(Integer)
 
 
 * **DefaultTask:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

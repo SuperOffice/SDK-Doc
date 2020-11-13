@@ -13,6 +13,6 @@ String, url, image. How the value should be interpreted.
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The number of ongoing chats this users has now
 
 
 * **OngoingChats:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

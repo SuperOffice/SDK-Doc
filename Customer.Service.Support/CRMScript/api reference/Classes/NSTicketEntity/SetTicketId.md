@@ -13,6 +13,6 @@ The primary key (auto-incremented)
 
 
 * **TicketId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Left margin in twips
 
 
 * **LeftMargin:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

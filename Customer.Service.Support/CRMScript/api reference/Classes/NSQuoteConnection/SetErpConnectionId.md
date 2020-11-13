@@ -13,6 +13,6 @@ The ERP Connection that this Quote connection is an extension of
 
 
 * **ErpConnectionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

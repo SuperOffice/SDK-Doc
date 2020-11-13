@@ -7,7 +7,10 @@ sortOrder: 5589
 keywords: GetProjectEventList(Integer[])
 ---
 
+Gets an array of ProjectEvent objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for ProjectEvent
+* **Returns:** Array of NSProjectEvent
 
 

@@ -13,6 +13,6 @@ The alert level for the ticket. Matches the level value of the ticket\_alert tab
 
 
 * **AlertLevel:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

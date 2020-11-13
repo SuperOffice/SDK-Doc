@@ -13,6 +13,6 @@ Suggested guide item that this appointment is an instance of (Note: NOT VALID fo
 
 
 * **SuggestedAppointmentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

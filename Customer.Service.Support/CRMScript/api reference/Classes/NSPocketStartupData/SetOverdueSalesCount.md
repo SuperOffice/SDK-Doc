@@ -13,6 +13,6 @@ Number of overdued sales for current user
 
 
 * **OverdueSalesCount:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

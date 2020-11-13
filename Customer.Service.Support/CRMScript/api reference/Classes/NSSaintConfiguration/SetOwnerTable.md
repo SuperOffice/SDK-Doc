@@ -13,6 +13,6 @@ The table that is the owning entity
 
 
 * **OwnerTable:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

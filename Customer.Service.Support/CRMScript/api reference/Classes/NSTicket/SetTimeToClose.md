@@ -13,6 +13,6 @@ The time (minutes) between when the ticket was created and when it was closed. C
 
 
 * **TimeToClose:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

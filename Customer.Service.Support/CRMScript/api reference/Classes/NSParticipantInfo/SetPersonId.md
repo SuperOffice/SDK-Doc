@@ -13,6 +13,6 @@ Person id of the participant if the participant is a person
 
 
 * **PersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

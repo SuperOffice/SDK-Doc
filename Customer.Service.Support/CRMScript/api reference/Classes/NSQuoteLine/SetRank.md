@@ -13,6 +13,6 @@ QuoteLines can be re-ordered, so we must track the ordering.
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

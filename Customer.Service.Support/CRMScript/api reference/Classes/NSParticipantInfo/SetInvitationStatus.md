@@ -13,6 +13,6 @@ The participant status for the appointment
 
 
 * **InvitationStatus:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

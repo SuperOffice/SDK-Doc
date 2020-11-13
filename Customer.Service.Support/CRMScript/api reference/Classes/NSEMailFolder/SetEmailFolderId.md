@@ -13,6 +13,6 @@ Primary key
 
 
 * **EmailFolderId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

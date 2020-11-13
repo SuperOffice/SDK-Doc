@@ -13,6 +13,6 @@ Associate id of the Associate/Person owning this window setting
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

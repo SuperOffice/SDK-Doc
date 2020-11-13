@@ -13,6 +13,6 @@ Method stored in the associated iCal appointment. Indicates if the iCal data is 
 
 
 * **CalMethod:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

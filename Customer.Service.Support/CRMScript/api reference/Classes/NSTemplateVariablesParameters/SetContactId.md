@@ -13,6 +13,6 @@ Identifier for a contact
 
 
 * **ContactId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The different task types of the appointment, if the activity is an appointment, 
 
 
 * **TaskType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

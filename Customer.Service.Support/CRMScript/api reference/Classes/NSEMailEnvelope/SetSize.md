@@ -13,6 +13,6 @@ Total size of the e-mail
 
 
 * **Size:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

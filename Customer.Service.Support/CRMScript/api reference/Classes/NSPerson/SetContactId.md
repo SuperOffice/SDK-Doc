@@ -13,6 +13,6 @@ Owning contact ID
 
 
 * **ContactId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

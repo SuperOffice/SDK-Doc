@@ -13,6 +13,6 @@ Default integer value
 
 
 * **DefaultValue:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

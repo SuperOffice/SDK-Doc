@@ -7,7 +7,10 @@ sortOrder: 8508
 keywords: GetUserGroupList(Integer[])
 ---
 
+Gets an array of UserGroup objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for UserGroup
+* **Returns:** Array of NSUserGroup
 
 

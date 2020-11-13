@@ -13,6 +13,6 @@ Group id of original owning associate, semantics like appnt.grp\_id
 
 
 * **GroupId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

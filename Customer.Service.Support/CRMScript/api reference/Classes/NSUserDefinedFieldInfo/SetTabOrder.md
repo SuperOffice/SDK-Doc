@@ -13,6 +13,6 @@ Tab order value, sets the field processing sequence
 
 
 * **TabOrder:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

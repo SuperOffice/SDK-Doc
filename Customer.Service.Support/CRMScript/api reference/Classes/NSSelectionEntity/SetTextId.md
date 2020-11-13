@@ -13,6 +13,6 @@ Description text record id
 
 
 * **TextId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

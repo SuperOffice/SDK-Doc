@@ -13,6 +13,6 @@ If true, then the Earning, Earning\_Percent and Amount fields are populated from
 
 
 * **UseValuesFromQuote:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

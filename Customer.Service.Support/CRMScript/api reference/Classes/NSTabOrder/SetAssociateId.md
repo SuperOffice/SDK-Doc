@@ -13,6 +13,6 @@ Associate who owns this tab order
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

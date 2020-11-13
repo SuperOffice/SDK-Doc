@@ -13,6 +13,6 @@ The total number of messages for this request.
 
 
 * **NumMessages:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

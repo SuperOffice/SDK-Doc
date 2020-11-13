@@ -13,6 +13,6 @@ Primary key
 
 
 * **PrefDescLineId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

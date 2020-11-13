@@ -13,6 +13,6 @@ Primary key for the LegalBase associated with this consent
 
 
 * **LegalBaseId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

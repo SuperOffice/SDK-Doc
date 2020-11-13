@@ -13,6 +13,6 @@ Sort group lines by this field
 
 
 * **SortGroupLinesBy:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

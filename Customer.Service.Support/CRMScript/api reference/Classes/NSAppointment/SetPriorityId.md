@@ -13,6 +13,6 @@ Link to priority list
 
 
 * **PriorityId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The user associated with this category.
 
 
 * **CategoryMaster:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

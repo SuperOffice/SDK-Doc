@@ -13,6 +13,6 @@ Number of all open sales with date before this period
 
 
 * **PreviousOverdue:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

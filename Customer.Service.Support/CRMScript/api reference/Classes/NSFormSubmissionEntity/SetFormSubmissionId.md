@@ -13,6 +13,6 @@ Primary key
 
 
 * **FormSubmissionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

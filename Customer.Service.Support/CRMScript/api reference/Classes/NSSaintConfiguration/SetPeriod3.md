@@ -13,6 +13,6 @@ Length of the third counter period
 
 
 * **Period3:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

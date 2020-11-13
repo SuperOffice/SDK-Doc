@@ -13,6 +13,6 @@ The number of replies (messages) to the customer for this request.
 
 
 * **NumReplies:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The primary key
 
 
 * **ServiceAuthId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

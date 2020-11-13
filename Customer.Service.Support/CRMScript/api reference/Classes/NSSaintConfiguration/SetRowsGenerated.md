@@ -13,6 +13,6 @@ Number of CounterValue rows generated for this entity
 
 
 * **RowsGenerated:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

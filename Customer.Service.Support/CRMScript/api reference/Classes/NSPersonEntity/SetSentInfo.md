@@ -13,6 +13,6 @@ Has information on username/password been sent (ejournal)
 
 
 * **SentInfo:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

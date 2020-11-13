@@ -13,6 +13,6 @@ The template that this sale type should use when producing the product lines off
 
 
 * **QuoteLinesTemplate:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

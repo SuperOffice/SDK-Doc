@@ -13,6 +13,6 @@ Tab order, ranking within the custom fields.
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ keywords: SetRetired(Integer)
 
 
 * **Retired:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

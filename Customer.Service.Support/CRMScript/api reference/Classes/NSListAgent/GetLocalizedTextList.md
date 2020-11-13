@@ -7,7 +7,11 @@ sortOrder: 4234
 keywords: GetLocalizedTextList(Integer[])
 ---
 
+Gets an array of LocalizedText objects.
 
-* **Returns:** IntegerArray
+
+
+* **p0:** IntegerArray of identifiers for LocalizedText
+* **Returns:** Array of NSLocalizedText
 
 

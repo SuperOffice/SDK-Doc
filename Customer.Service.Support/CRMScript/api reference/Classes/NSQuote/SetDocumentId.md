@@ -13,6 +13,6 @@ The ID of the main Quote Document
 
 
 * **DocumentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

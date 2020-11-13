@@ -13,6 +13,6 @@ Max age of data when generating db's based on this area
 
 
 * **MaxDataAge:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

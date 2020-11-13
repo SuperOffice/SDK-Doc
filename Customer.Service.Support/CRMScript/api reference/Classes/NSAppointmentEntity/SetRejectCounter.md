@@ -13,6 +13,6 @@ How many invitees have rejected this appointment
 
 
 * **RejectCounter:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

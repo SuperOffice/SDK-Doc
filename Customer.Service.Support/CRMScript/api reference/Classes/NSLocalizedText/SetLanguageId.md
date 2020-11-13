@@ -13,6 +13,6 @@ Language id as LCID value
 
 
 * **LanguageId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Task progress, in percent of estimated total
 
 
 * **ProgressPercent:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

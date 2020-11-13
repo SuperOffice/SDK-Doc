@@ -13,6 +13,6 @@ Current message status
 
 
 * **Status:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

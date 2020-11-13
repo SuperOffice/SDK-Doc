@@ -13,6 +13,6 @@ The rank of the application
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

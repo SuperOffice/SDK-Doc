@@ -13,6 +13,6 @@ Integration agent (eJournal)
 
 
 * **DbiAgentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

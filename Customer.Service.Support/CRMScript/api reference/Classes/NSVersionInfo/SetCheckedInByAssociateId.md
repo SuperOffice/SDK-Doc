@@ -13,6 +13,6 @@ Associate id of the user who performed the checkin
 
 
 * **CheckedInByAssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

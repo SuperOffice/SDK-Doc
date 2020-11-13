@@ -13,6 +13,6 @@ Original size of the binary data, before encryption and/or zipping. This is what
 
 
 * **OriginalSize:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

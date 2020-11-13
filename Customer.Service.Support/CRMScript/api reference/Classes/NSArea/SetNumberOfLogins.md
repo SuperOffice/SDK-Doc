@@ -9,6 +9,6 @@ keywords: SetNumberOfLogins(Integer)
 
 
 * **NumberOfLogins:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

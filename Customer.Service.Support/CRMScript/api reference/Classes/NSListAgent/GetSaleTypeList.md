@@ -7,7 +7,11 @@ sortOrder: 4301
 keywords: GetSaleTypeList(Integer[])
 ---
 
+Gets an array of SaleType objects.
 
-* **Returns:** IntegerArray
+
+
+* **p0:** IntegerArray of identifiers for SaleType
+* **Returns:** Array of NSSaleType
 
 

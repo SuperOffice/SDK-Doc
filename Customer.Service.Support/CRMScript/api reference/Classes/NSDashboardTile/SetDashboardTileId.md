@@ -13,6 +13,6 @@ The tile id
 
 
 * **DashboardTileId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Person id of the associate owning this window setting
 
 
 * **PersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

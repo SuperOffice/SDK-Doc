@@ -7,6 +7,10 @@ sortOrder: 5330
 keywords: GetMaxLevel()
 ---
 
+Lowest allowed setting level, set by user, but not lower than sysMaxLevel
 
+
+
+* **Returns:** Integer
 
 

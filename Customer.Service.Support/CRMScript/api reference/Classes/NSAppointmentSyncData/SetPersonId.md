@@ -13,6 +13,6 @@ Person ID of person the appointment is with, may be 0
 
 
 * **PersonId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

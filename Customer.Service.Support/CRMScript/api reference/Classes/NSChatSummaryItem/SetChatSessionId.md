@@ -13,6 +13,6 @@ The primary key (auto-incremented)
 
 
 * **ChatSessionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

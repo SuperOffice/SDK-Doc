@@ -13,6 +13,6 @@ Domestic address layout of the country
 
 
 * **DomesticAddressLayoutId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

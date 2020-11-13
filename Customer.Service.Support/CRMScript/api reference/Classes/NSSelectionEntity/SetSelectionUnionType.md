@@ -13,6 +13,6 @@ How to combine the two selections when SelectionType = Combined.
 
 
 * **SelectionUnionType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

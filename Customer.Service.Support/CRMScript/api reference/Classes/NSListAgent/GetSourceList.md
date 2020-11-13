@@ -7,7 +7,9 @@ sortOrder: 4323
 keywords: GetSourceList(Integer[])
 ---
 
+Gets an array of Source objects.
 
-* **Returns:** IntegerArray
 
+* **p0:** IntegerArray of identifiers for Source
+* **Returns:** Array of NSSource
 

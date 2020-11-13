@@ -13,6 +13,6 @@ Number of activites and tasks in the diary that are of type 'busy'. Sales and do
 
 
 * **NumBusyActivities:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

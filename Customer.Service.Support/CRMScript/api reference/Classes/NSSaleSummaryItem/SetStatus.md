@@ -13,6 +13,6 @@ The sale's status, indicating whether the sale is `open(1)`, `sold(2)` or `lost(
 
 
 * **Status:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

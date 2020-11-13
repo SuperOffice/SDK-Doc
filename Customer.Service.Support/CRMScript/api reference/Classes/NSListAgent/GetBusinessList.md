@@ -7,7 +7,9 @@ sortOrder: 4127
 keywords: GetBusinessList(Integer[])
 ---
 
+Gets an array of Business objects.
 
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Business
+* **Returns:** Array of NSBusiness
 
 

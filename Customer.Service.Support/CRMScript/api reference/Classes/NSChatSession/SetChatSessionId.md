@@ -13,6 +13,6 @@ Id of the chat session. The value is mandatory.
 
 
 * **ChatSessionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

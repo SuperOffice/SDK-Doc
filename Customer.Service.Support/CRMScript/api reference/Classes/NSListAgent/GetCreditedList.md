@@ -7,7 +7,10 @@ sortOrder: 4153
 keywords: GetCreditedList(Integer[])
 ---
 
+Gets an array of Credited objects.
 
-* **Returns:** IntegerArray
 
+
+* **p0:** IntegerArray of identifiers for Credited
+* **Returns:** Array of NSCredited
 

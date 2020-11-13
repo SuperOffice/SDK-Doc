@@ -13,6 +13,6 @@ Id of the source contact. The value is mandatory.
 
 
 * **SourceContactId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

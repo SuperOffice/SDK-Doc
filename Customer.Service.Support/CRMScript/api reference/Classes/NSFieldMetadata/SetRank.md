@@ -13,6 +13,6 @@ A way to set the order of the fields. Lowest value will be displayed first/over 
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

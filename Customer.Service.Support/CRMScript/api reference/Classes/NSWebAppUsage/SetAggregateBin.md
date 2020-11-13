@@ -13,6 +13,6 @@ keywords: SetAggregateBin(Integer)
 
 
 * **AggregateBin:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

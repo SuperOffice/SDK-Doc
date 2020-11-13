@@ -13,6 +13,6 @@ Paper width in twips
 
 
 * **PaperWidth:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

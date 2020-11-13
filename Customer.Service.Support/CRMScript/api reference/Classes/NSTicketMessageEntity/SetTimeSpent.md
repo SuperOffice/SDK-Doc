@@ -13,6 +13,6 @@ The time spent (minutes) for this message.
 
 
 * **TimeSpent:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

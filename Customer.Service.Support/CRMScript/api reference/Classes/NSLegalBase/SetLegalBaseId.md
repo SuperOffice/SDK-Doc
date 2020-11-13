@@ -13,6 +13,6 @@ Primary key
 
 
 * **LegalBaseId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

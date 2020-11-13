@@ -13,6 +13,6 @@ Method field stored in ICS file.
 
 
 * **CalMethod:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Id of record, should never be 0
 
 
 * **RecordId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

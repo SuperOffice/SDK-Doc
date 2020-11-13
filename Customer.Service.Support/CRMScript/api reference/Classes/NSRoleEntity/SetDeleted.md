@@ -13,6 +13,6 @@ keywords: SetDeleted(Integer)
 
 
 * **Deleted:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

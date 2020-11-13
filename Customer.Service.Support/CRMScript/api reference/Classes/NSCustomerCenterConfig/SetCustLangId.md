@@ -13,6 +13,6 @@ The customer language which this config belongs to. 0 indicates that the config 
 
 
 * **CustLangId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

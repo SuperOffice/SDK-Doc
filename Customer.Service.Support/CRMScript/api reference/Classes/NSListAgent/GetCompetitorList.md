@@ -7,7 +7,10 @@ sortOrder: 4134
 keywords: GetCompetitorList(Integer[])
 ---
 
+Gets an array of Competitor objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for Competitor
+* **Returns:** Array of NSCompetitor
 
 

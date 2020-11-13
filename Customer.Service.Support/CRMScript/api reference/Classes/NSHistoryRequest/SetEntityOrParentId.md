@@ -13,6 +13,6 @@ ID of entity to get history for, or parent entity id if requesting insert rights
 
 
 * **EntityOrParentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

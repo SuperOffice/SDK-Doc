@@ -13,6 +13,6 @@ Country of delivery address, typically copied from the contact record
 
 
 * **DeliveryCountryId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

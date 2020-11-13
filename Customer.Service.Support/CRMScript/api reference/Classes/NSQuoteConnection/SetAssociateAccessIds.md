@@ -13,6 +13,6 @@ Array of ids containing associates that will have access to this connection.
 
 
 * **AssociateAccessIds:** IntegerArray
-* **Returns:** IntegerArray
+* **Returns:** Void
 
 

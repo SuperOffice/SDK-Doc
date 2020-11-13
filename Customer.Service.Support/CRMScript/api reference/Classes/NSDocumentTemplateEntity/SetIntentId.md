@@ -13,6 +13,6 @@ What is the intention of this document (used by SAINT)
 
 
 * **IntentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

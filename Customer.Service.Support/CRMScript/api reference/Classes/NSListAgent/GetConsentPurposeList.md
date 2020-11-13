@@ -8,6 +8,7 @@ keywords: GetConsentPurposeList(Integer[])
 ---
 
 
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for ConsentPurpose
+* **Returns:** Array of NSConsentPurpose
 
 

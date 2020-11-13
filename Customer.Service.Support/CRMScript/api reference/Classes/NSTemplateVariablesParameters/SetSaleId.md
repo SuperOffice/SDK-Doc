@@ -13,6 +13,6 @@ Identifier for a sale
 
 
 * **SaleId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

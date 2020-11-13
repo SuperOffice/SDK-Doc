@@ -7,6 +7,12 @@ sortOrder: 8594
 keywords: SetJustification(Integer)
 ---
 
+Justification
+* Default=0
+* Left=1
+* Center=2
+* Right=3
 
-
+* **p_0:** Integer
+* **Returns:** Void
 

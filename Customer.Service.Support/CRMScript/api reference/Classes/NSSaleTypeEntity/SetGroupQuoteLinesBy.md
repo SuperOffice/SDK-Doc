@@ -13,6 +13,6 @@ Group quote lines by this field
 
 
 * **GroupQuoteLinesBy:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

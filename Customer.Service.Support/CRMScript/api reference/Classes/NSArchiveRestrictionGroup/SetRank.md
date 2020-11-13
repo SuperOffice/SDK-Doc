@@ -13,6 +13,6 @@ Rank order within this CriteriaModel
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

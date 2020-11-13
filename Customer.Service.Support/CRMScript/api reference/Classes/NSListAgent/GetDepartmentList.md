@@ -7,7 +7,10 @@ sortOrder: 4176
 keywords: GetDepartmentList(Integer[])
 ---
 
+Gets an array of Department objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for Department
+* **Returns:** Array of NSDepartment
 
 

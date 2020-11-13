@@ -9,6 +9,6 @@ keywords: SetUniqueHash(Integer)
 
 
 * **UniqueHash:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

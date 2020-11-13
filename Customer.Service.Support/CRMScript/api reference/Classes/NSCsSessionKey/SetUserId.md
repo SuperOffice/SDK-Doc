@@ -13,6 +13,6 @@ The ejuser id owning this session key
 
 
 * **UserId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

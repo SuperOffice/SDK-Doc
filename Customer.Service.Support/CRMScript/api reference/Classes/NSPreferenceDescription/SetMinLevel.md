@@ -13,6 +13,6 @@ The minimum (furthest away from User) level this preference can be set for
 
 
 * **MinLevel:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

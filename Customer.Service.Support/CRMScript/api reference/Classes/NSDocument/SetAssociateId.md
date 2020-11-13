@@ -13,6 +13,6 @@ ID of associate whose diary the appointment is in, REQUIRED
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Definition version number; ALL fields get new version whenever layout is updated
 
 
 * **Version:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

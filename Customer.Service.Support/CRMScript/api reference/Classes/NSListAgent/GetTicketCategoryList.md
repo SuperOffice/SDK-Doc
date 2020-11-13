@@ -8,6 +8,6 @@ keywords: GetTicketCategoryList(Integer[])
 ---
 
 
-* **Returns:** IntegerArray
-
+* **p0:** IntegerArray of identifiers for TicketCategory
+* **Returns:** Array of NSTicketCategoryEntity
 

@@ -13,6 +13,6 @@ keywords: SetAccessFlags(Integer)
 
 
 * **AccessFlags:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

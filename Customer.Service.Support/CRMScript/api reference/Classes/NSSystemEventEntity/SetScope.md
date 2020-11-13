@@ -13,6 +13,6 @@ keywords: SetScope(Integer)
 
 
 * **Scope:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

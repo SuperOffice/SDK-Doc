@@ -13,6 +13,6 @@ Default attachment id value
 
 
 * **DefaultValue:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

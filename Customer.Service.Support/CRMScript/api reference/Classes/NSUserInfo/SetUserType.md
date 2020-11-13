@@ -9,6 +9,6 @@ keywords: SetUserType(Integer)
 
 
 * **UserType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

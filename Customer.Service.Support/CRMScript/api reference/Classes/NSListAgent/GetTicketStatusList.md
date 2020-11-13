@@ -8,6 +8,7 @@ keywords: GetTicketStatusList(Integer[])
 ---
 
 
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for TicketStatus
+* **Returns:** Array of NSTicketStatusEntity
 
 

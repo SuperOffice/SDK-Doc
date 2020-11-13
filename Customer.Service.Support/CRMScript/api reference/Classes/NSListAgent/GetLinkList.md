@@ -7,7 +7,11 @@ sortOrder: 4212
 keywords: GetLinkList(Integer[])
 ---
 
+Gets an array of Link objects.
 
-* **Returns:** IntegerArray
+
+
+* **p0:** IntegerArray of identifiers for Link
+* **Returns:** Array of NSLink
 
 

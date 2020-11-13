@@ -13,6 +13,6 @@ The layout of the report.
 
 
 * **ReportLayout:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

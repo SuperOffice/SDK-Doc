@@ -13,6 +13,6 @@ Number of rows
 
 
 * **CountRows:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

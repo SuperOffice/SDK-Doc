@@ -7,7 +7,10 @@ sortOrder: 5578
 keywords: GetProjectList(Integer[])
 ---
 
+Gets an array of Project objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for Project
+* **Returns:** Array of NSProject
 
 

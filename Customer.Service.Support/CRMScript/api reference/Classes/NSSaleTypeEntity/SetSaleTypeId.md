@@ -13,6 +13,6 @@ Primary key
 
 
 * **SaleTypeId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

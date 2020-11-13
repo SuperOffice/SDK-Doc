@@ -13,6 +13,6 @@ Read-only field, If valueType = 5, and TableName is UDList, then UserdefinedLIst
 
 
 * **UserDefinedListId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Primary key
 
 
 * **DocumentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

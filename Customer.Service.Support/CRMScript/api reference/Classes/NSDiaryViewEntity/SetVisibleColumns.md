@@ -13,6 +13,6 @@ Number of columns that should be visible simultanously.
 
 
 * **VisibleColumns:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

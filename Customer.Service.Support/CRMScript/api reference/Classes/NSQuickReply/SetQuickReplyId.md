@@ -13,6 +13,6 @@ Primary key
 
 
 * **QuickReplyId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

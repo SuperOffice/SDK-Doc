@@ -13,6 +13,6 @@ Priority of task
 
 
 * **PriorityId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

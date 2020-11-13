@@ -13,6 +13,6 @@ Static/Dynamic/Combined?
 
 
 * **SelectionType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

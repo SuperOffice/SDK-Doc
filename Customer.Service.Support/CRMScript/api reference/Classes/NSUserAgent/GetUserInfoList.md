@@ -7,7 +7,10 @@ sortOrder: 8511
 keywords: GetUserInfoList(Integer[])
 ---
 
+Gets an array of UserInfo objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for UserInfo
+* **Returns:** Array of NSUserInfo
 
 

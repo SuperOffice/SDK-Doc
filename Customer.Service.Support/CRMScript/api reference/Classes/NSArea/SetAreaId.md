@@ -13,6 +13,6 @@ Primary key
 
 
 * **AreaId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

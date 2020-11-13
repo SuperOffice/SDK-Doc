@@ -13,6 +13,6 @@ Link to the intention of this kind of task (used by SAINT)
 
 
 * **IntentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

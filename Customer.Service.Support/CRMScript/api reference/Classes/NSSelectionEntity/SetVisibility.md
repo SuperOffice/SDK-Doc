@@ -13,6 +13,6 @@ Obsolete, but still maintained denormalization of visiblefor
 
 
 * **Visibility:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

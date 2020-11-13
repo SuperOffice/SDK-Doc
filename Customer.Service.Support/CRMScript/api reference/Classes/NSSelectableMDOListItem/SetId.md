@@ -13,6 +13,6 @@ The Id of the ListItem
 
 
 * **Id:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

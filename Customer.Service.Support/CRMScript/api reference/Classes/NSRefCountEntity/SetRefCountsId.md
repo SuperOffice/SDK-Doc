@@ -13,6 +13,6 @@ Primary key
 
 
 * **RefCountsId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

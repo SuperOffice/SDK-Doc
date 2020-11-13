@@ -13,6 +13,6 @@ How many decimals to display
 
 
 * **Precision:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

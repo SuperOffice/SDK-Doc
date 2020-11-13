@@ -8,6 +8,6 @@ keywords: GetSaleStakeholderList(Integer[])
 ---
 
 
-* **Returns:** IntegerArray
-
+* **p0:** IntegerArray of identifiers for SaleStakeholder
+* **Returns:** Array of NSSaleStakeholder
 

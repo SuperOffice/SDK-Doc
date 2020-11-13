@@ -13,6 +13,6 @@ Primary key
 
 
 * **ReportLabelLayoutId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

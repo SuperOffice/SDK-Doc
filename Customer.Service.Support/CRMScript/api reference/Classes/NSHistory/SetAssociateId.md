@@ -13,6 +13,6 @@ Owner of history list
 
 
 * **AssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

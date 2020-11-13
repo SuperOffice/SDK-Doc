@@ -7,7 +7,10 @@ sortOrder: 4320
 keywords: GetSelectionCategoryList(Integer[])
 ---
 
+Gets an array of SelectionCategory objects.
 
-* **Returns:** IntegerArray
 
+
+* **p0:** IntegerArray of identifiers for SelectionCategory
+* **Returns:** Array of NSSelectionCategory
 

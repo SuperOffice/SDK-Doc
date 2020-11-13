@@ -8,6 +8,7 @@ keywords: GetAppointmentList(Integer[])
 ---
 
 
-* **Returns:** IntegerArray
+* **p0:** IntegerArray of identifiers for Appointment
+* **Returns:** Array of NSAppointment
 
 

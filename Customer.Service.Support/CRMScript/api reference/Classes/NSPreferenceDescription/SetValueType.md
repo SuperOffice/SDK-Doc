@@ -13,6 +13,6 @@ keywords: SetValueType(Integer)
 
 
 * **ValueType:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The id of the category a ticket is in.
 
 
 * **Category:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

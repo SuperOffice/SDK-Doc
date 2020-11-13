@@ -13,6 +13,6 @@ The id of the user preference
 
 
 * **UserPreferenceId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

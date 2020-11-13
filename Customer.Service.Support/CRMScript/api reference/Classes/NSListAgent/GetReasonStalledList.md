@@ -7,7 +7,10 @@ sortOrder: 4287
 keywords: GetReasonStalledList(Integer[])
 ---
 
+Gets an array of ReasonStalled objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for ReasonStalled
+* **Returns:** Array of NSReasonStalled
 
 

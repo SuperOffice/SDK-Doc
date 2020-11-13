@@ -13,6 +13,6 @@ Should this appointment be auto-suggested
 
 
 * **AutoSuggest:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ How is the return value to be understood by the caller
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

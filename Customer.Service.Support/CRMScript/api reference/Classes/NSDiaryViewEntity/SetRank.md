@@ -13,6 +13,6 @@ DiaryView rank.
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

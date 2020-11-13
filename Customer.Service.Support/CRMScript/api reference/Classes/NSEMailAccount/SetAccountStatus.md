@@ -13,6 +13,6 @@ The account status (Disabled or...) Readonly field
 
 
 * **AccountStatus:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

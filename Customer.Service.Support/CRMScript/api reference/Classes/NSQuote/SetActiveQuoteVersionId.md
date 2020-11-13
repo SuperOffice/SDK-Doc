@@ -13,6 +13,6 @@ The primary key of the Quote Version that is currently active. (The active versi
 
 
 * **ActiveQuoteVersionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

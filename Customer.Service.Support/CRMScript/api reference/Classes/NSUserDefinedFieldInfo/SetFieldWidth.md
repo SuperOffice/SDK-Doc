@@ -13,6 +13,6 @@ field width in pixels, 0 = 'enough' (from font)
 
 
 * **FieldWidth:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ ID of owning table (contact, person, project) - this is not the actual tableNumb
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

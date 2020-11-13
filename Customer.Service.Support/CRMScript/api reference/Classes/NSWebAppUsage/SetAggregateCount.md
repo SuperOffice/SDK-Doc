@@ -13,6 +13,6 @@ Number of times the specific soprotocol is accessed
 
 
 * **AggregateCount:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

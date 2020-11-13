@@ -13,6 +13,6 @@ Identifier for an appointment
 
 
 * **AppointmentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

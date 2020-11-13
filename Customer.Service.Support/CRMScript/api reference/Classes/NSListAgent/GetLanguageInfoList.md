@@ -7,7 +7,10 @@ sortOrder: 4205
 keywords: GetLanguageInfoList(Integer[])
 ---
 
+Gets an array of LanguageInfo objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for LanguageInfo
+* **Returns:** Array of NSLanguageInfo
 
 

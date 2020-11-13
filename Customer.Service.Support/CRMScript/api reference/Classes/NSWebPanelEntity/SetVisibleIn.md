@@ -13,6 +13,6 @@ The webpanel is visible in
 
 
 * **VisibleIn:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

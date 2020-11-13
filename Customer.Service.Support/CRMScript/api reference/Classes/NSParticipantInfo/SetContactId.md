@@ -13,6 +13,6 @@ Contact id of the participant if the participant is an associate or person
 
 
 * **ContactId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Id of the associate that created the appointment
 
 
 * **CreatedByAssociateId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

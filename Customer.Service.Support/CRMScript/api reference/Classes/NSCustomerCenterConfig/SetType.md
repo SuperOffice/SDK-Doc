@@ -13,6 +13,6 @@ What kind of data is in this row
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

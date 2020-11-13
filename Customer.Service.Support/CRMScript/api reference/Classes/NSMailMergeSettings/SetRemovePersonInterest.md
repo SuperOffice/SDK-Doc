@@ -13,6 +13,6 @@ Remove this person interest on each person recipient.
 
 
 * **RemovePersonInterest:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

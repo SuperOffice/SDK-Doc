@@ -13,6 +13,6 @@ Number og columns
 
 
 * **CountColumns:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

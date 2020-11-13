@@ -13,6 +13,6 @@ The contact or person's id
 
 
 * **Id:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

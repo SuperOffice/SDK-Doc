@@ -13,6 +13,6 @@ Optional contact reference
 
 
 * **ContactId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

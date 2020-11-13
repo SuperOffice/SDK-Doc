@@ -13,6 +13,6 @@ Priority rank, in case more than one status is signalled. Lowest wins
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

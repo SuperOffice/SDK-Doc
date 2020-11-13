@@ -13,6 +13,6 @@ The encoding of the URL
 
 
 * **UrlEncoding:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

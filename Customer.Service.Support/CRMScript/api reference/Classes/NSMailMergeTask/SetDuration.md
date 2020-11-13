@@ -13,6 +13,6 @@ Duration of task
 
 
 * **Duration:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

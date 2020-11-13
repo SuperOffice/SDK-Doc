@@ -9,6 +9,6 @@ keywords: SetDatabaseEnum(Integer)
 
 
 * **DatabaseEnum:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

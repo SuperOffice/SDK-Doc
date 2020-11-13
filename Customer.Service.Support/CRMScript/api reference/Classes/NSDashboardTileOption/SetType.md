@@ -13,6 +13,6 @@ The type of option - integer, list, boolean (checkbox) etc.
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

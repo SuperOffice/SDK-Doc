@@ -13,6 +13,6 @@ The parent category for this category. -1 if this is a toplevel category.
 
 
 * **ParentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

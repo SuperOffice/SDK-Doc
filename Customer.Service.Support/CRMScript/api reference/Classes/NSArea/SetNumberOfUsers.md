@@ -9,6 +9,6 @@ keywords: SetNumberOfUsers(Integer)
 
 
 * **NumberOfUsers:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Y of origin, upper edge of widget
 
 
 * **UpperY:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -7,7 +7,10 @@ sortOrder: 6940
 keywords: GetSaleList(Integer[])
 ---
 
+Gets an array of Sale objects.
 
-* **Returns:** IntegerArray
+
+* **p0:** IntegerArray of identifiers for Sale
+* **Returns:** Array of NSSale
 
 

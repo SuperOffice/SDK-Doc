@@ -13,6 +13,6 @@ ID of appointment that "caused" the nextMilestoneDate, can be 0
 
 
 * **NmdAppointmentId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

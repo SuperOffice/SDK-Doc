@@ -9,6 +9,6 @@ keywords: SetArrayOfIds(Integer[])
 
 
 * **ArrayOfIds:** IntegerArray
-* **Returns:** IntegerArray
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Document Completed state. This is the part of the Status property.
 
 
 * **Completed:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

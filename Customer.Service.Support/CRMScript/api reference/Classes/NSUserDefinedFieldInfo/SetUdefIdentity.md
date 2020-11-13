@@ -13,6 +13,6 @@ Unique number used to track field identity across layout changes
 
 
 * **UdefIdentity:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ The tile type, what kind of tile this is
 
 
 * **Type:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

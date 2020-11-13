@@ -13,6 +13,6 @@ Rank in list of stakeholders
 
 
 * **Rank:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

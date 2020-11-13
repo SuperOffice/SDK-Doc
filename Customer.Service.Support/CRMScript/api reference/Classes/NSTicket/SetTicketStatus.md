@@ -13,6 +13,6 @@ User defined ticket status
 
 
 * **TicketStatus:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

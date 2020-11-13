@@ -13,6 +13,6 @@ Remove this company interest on each company recipient.
 
 
 * **RemoveCompanyInterest:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

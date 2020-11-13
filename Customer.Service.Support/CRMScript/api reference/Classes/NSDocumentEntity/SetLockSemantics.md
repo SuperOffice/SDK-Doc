@@ -9,6 +9,6 @@ keywords: SetLockSemantics(Integer)
 
 
 * **LockSemantics:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

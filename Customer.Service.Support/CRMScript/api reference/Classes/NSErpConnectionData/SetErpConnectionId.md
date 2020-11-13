@@ -13,6 +13,6 @@ The id of the connection
 
 
 * **ErpConnectionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -7,6 +7,11 @@ sortOrder: 5363
 keywords: SetSysMaxLevel(Integer)
 ---
 
+Lowest allowed setting level, set by SuperOffice
 
+
+
+* **p_0:** Integer
+* **Returns:** Void
 
 

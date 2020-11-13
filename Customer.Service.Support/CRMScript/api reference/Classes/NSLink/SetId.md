@@ -13,6 +13,6 @@ Id of the entity the link points to (The destination/target entity primary key)
 
 
 * **Id:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ Id of the DiaryView
 
 
 * **DiaryViewId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

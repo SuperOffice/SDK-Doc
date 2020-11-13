@@ -13,6 +13,6 @@ Primary key
 
 
 * **StatusMonitorId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

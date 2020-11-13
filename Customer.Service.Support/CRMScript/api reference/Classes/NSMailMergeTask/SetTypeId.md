@@ -13,6 +13,6 @@ Type identity to set on task
 
 
 * **TypeId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

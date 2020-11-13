@@ -13,6 +13,6 @@ Indicates the sort order for this priority. 1 is first, 100 is last
 
 
 * **SortOrder:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

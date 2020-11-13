@@ -13,6 +13,6 @@ Optional project reference
 
 
 * **ProjectId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

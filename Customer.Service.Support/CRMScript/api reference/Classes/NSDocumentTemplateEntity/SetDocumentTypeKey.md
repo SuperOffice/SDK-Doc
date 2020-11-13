@@ -13,6 +13,6 @@ The document type to use when creating a blank document. Plugin-specific. Used w
 
 
 * **DocumentTypeKey:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

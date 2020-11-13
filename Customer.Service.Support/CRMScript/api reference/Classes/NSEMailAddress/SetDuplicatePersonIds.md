@@ -13,6 +13,6 @@ All persons with this EmailAddress stored in db is listed here
 
 
 * **DuplicatePersonIds:** IntegerArray
-* **Returns:** IntegerArray
+* **Returns:** Void
 
 

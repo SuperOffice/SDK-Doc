@@ -13,6 +13,6 @@ Primary key
 
 
 * **QuoteLineConfigurationId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 

@@ -13,6 +13,6 @@ UDefFieldId this field had in the previous version, 0 = field is new in this ver
 
 
 * **LastVersionId:** Integer
-* **Returns:** Integer
+* **Returns:** Void
 
 
