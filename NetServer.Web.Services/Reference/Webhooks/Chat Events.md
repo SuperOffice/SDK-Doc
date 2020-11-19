@@ -3,7 +3,7 @@
 These events are fired when chat sessions and messages change:
 
 * `chatsession.created` - new session starts
-* `chatmessage.created` - new message added to chat
+* `chatsession.message` - new message added to chat
 * `chatsession.changed` - session has changed state
 
 # Webhook Callback Examples
@@ -32,7 +32,7 @@ X-Superoffice-Signature: X1FmmRIXuzH8o0MDanva1lnuNZXoix6M0US1S64s+e8=
 }
 ```
 
-ChatMessage.Created
+ChatSession.Message
 
 ```json
 {
@@ -54,9 +54,9 @@ ChatMessage.Created
     "chatMessage.specialParam",
     "chatMessage.author",
   ],
-  "Event": "chatmessage.created",
+  "Event": "chatsession.message",
   "PrimaryKey": 178105,
-  "Entity": "chatmessage",
+  "Entity": "chatsession",
   "ContextIdentifier": "Default",
   "ChangedByAssociateId": 316,
   "WebhookName": "Name you provided"
