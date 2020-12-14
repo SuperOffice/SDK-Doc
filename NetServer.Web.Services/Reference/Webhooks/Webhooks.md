@@ -1,6 +1,5 @@
 ---
 uid: webhooks_ref
-SortOrder: 0
 ---
 # Webhooks Reference
 
@@ -13,7 +12,7 @@ webhook receiver.
 
 # Register a webhook
 
-To register a webhook: ****
+Send the following request to register a webhook: 
 
 ``` json
 POST /api/v1/Webhook HTTP/1.1
@@ -34,8 +33,12 @@ Content-Type: application/json
 ```
 
 This will register the webhook, and check that the `TargetUrl` responds to a test POST.
+The  `TargetUrl` must 
+* be https
+* have a valid TLS certificate.
+* respond 200 OK when it receives a POST with a test event.
 
-When the event(s) happen (`contact.changed` for example), then the Target URL is notified by HTTP POST using a message like the one described here:
+When the event(s) happen (`contact.changed` for example), then the Target URL is notified by HTTP POST using a message like the one shown here:
 
 ```json
 {
@@ -60,7 +63,7 @@ When the event(s) happen (`contact.changed` for example), then the Target URL is
 
 ## Delete events
 
-Since the item has been deleted, the delete event carriers the id values from the deleted object as part of the webhook payload.
+Since the item has been deleted, the delete event contains the id values from the deleted object as part of the webhook payload.
 
 ```json
 {
