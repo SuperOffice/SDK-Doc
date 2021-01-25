@@ -28,9 +28,9 @@ Gets the detailed information about an FAQ entry.
 
 * links        - Array of all links attached to this entry.
 
-o   name                                  - The name of the link
+  * name                                  - The name of the link
 
-o   url                                      - The URL to the link
+  * url                                      - The URL to the link
 
 * attachmentInfo     - Array of information about attachments connected to this FAQ entry. Each element contains the fields: attachmentId, attachmentName and contentType.
 
@@ -40,14 +40,14 @@ o   url                                      - The URL to the link
 
 * faqParents - All parents to this entry, listed in a top-down matter.
 
-o   id                                       - id of the parent folder
+  * id                                       - id of the parent folder
 
-o   name                                  - name of the parent folder
+  * name                                  - name of the parent folder
 
  
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService();
 
 string title;
@@ -68,14 +68,5 @@ customer.FaqParentStruct\[\] faqParents;
 
 string entryId = "2";
 
-string res = custService.faq\_getEntry("",
-
-                   entryId,
-                   out title,
-                   out question,
-                   out answer,
-                   out links,
-                   out attachmentIds,
-                   out hasHtml,
-                   out score,
-                   out faqParents);
+string res = custService.faq\_getEntry("", entryId, out title, out question, out answer, out links, out attachmentIds, out hasHtml, out score, out faqParents);
+```

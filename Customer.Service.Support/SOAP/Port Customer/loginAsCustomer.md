@@ -30,9 +30,10 @@ This method is used to log in a customer, but instead of using the customers pas
  
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService();
 
 string sessionKey;
 
 string ret = custService.loginAsCustomer("john", "pw", “johndoe”, out sessionKey);
+```

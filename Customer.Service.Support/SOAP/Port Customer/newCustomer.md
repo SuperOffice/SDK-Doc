@@ -23,11 +23,11 @@ This method will create a new customer with the specified user name and password
  
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService();
 
 string ret = custService.newCustomer("Billy", "pass");
 
 if (ret.Equals(“0”))
-
        //Ok, customer created
+```

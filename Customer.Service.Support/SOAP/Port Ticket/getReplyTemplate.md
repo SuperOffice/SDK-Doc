@@ -32,39 +32,22 @@ Gets data for a single reply template in a specified language.
 
 * hasHtmlBody        - If true the reply template is set to include the html body
 
-* *
+
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
-
-                   "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
  
-
 if (errorCode.Equals("0")
-
 {
 
-  getReplyTemplate(sessionKey, 19, 1,
-
-                         out subject,
-                         out headers,
-
- out plainBody,
-
- out htmlBody,
-
- out hasPlainBody,
-
- out hasHtmlBody);
+  getReplyTemplate(sessionKey, 19, 1, out subject, out headers, out plainBody, out htmlBody,  out hasPlainBody,  out hasHtmlBody);
 
 }
-
+```
  
