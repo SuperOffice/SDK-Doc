@@ -10,13 +10,13 @@ Valid data field to retrieve are:
 
  
 
-* message.id
-* message.body
-* message.header
-* message.md\_body
-* message.created\_at
-* message.author
-* message.slevel (1=internal, 2=external)
+            message.id
+            message.body
+            message.header
+            message.md\_body
+            message.created\_at
+            message.author
+            message.slevel (1=internal, 2=external)
 
  
 
@@ -34,53 +34,66 @@ Valid data field to retrieve are:
 
 * messageResult       - An array containing these fields:
 
-  * field                                   - The field name
+o   field                                   - The field name
 
-  * type                                   - The field type, see appendix for info
+o   type                                   - The field type, see appendix for info
 
-  * value                                  - The value
+o   value                                  - The value
 
 * attachmentInfo     - A list of all attachments on this message.
 
-  * attachmentId   - The id
+o   attachmentId   - The id
 
-  * attachmentName         - The file name of the attachment
+o   attachmentName         - The file name of the attachment
 
-  * contentType    - The content type (“text/plain”, “text/html” etc)
+o   contentType    - The content type (“text/plain”, “text/html” etc)
 
-  * attachmentKey            - A key needed to retrieve the attachment.
+o   attachmentKey            - A key needed to retrieve the attachment.
 
-
+* *
 
 *Example*:
-```
+
 ticket.ticketService ticketService = new ticket.ticketService();
+
+ 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon",
+
+                   "norges bank", out sessionKey);
 
  
+
 if (errorCode.Equals(“0”)
+
 {
 
   string\[\] messageFields = new string\[1\];
 
   messageFields\[0\] = ”message.body”;
 
+ 
+
   ticket.ResultStruct\[\] messageInfo;
 
   ticket.AttachmentInfoStruct\[\] attachments;
 
-  getMessage(sessionKey,”23”,messageFields, out messageInfo, out attachments);
-  
-  foreach(ticket.ResultStruct i in messageInfo)
+ 
+
+  getMessage(sessionKey,”23”,messageFields,
+
+                         out messageInfo,
+                         out attachments);
+       foreach(ticket.ResultStruct i in messageInfo)
+
   {
+
     cout &lt;&lt; “field:” &lt;&lt; i.field &lt;&lt; “ value:” &lt;&lt; i.value &lt;&lt; endl;
 
   }
 
 }
-```
 
  

@@ -14,23 +14,23 @@ Retrieve information about the company this user is connected to. You specify wh
 
 * customerFields      - A list of the fields you wish to retrieve. You can specify standard fields or extra fields. Extra fields are given on the form “company.x\_2” where the number is the ID on the extra field. Legal standard fields are:
 
-  * company.id
+o   company.id
 
-  * company.name
+o   company.name
 
-  * company.address
+o   company.address
 
-  * company.extTable
+o   company.extTable
 
-  * company.extKey
+o   company.extKey
 
-  * company.note
+o   company.note
 
-  * company.phone
+o   company.phone
 
-  * company.fax
+o   company.fax
 
-  * company.primContact
+o   company.primContact
 
  
 
@@ -43,13 +43,15 @@ Retrieve information about the company this user is connected to. You specify wh
  
 
 *Example*:
-```
+
 string sessionKey;
 
 customer.customerService custService = new customer.customerService();
 
 if(custService.login("test","test", out sessionKey) =="0")
+
 {
+
        string\[\] companyFields = new string\[4\];
        companyFields\[0\]="company.name";
        companyFields\[1\]="company.phone";
@@ -57,6 +59,8 @@ if(custService.login("test","test", out sessionKey) =="0")
       
        customer.ResultStruct\[\] companyResult;
                                                              
-       string res = custService.getCompany(sessionKey, companyFields, out companyResult);
+       string res = custService.getCompany(sessionKey,
+                                    companyFields,
+                                    out companyResult);
+
 }
-```

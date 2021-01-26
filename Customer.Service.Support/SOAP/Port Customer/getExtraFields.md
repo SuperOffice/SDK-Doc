@@ -22,25 +22,27 @@ Finds the extra fields that are connected to customer, company or ticket. The st
 
 * extraFields            - The available extra fields. Contained in the structure are the following fields:
 
-  * fieldName                   - Internal name of the field. i.e.: ”customer.x\_1”
+o   fieldName                   - Internal name of the field. i.e.: ”customer.x\_1”
 
-  * displayField                - The external name of the extra field.
+o   displayField                - The external name of the extra field.
 
-  * fieldId                         - The internal ID. Same as the number in *fieldName*
+o   fieldId                         - The internal ID. Same as the number in *fieldName*
 
-  * fieldType                     - Data type of the field. See appendix for legal types.
+o   fieldType                     - Data type of the field. See appendix for legal types.
 
  
 
 *Example*:
-```
+
 string sessionKey;
 
 customer.customerService custService = new customer.customerService();
 
 if(custService.login("test","test",out sessionKey)=="0")
+
 {
+
        customer.ExtraFieldsStruct\[\] extraFields;
        custService.getExtraFields(sessionKey, "customer", out extraFields);
+
 }
-```

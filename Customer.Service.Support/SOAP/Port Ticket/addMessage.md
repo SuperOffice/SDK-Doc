@@ -45,16 +45,22 @@ Please note that *addMessage* will not effect ticket.status, this can be set usi
  
 
 *Example*:
-```
+
 ticket.ticketService ticketService = new ticket.ticketService();
+
+ 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon",
+
+                   "norges bank", out sessionKey);
+
+ 
 
 if (errorCode.Equals(“0”))
 
-{
+    {
 
   string\[\] attachmentIds = new string\[1\];
 
@@ -70,5 +76,4 @@ if (errorCode.Equals(“0”))
      attachmentIds, 
      true,           //send notification
      out messageId);
-}
-```
+    }

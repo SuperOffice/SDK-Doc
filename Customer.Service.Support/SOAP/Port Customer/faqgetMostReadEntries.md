@@ -27,12 +27,15 @@ Finds the most read entries in a category. The most read entries first.
  
 
 *Example*:
-```
+
 customer.customerService custService = new customer.customerService();
 
 string maxEntries ="10";
 
 customer.FaqEntryStruct\[\] faqEntries;
 
-string res = custService.faq\_getMostReadEntries("","-1",maxEntries, out faqEntries);
-```
+string res = custService.faq\_getMostReadEntries("",
+
+       "-1",
+       maxEntries,
+       out faqEntries);

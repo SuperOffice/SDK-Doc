@@ -14,27 +14,27 @@ Retrieve information about a customer. You specify which fields you wish to retr
 
 * customerFields      - A list of the fields you wish to retrieve. You can specify standard fields or extra fields. Extra fields are given on the form “customer.x\_2” where the number is the ID on the extra field. Legal standard fields are:
 
-  * customer.id
+o   customer.id
 
-  * customer.name
+o   customer.name
 
-  * customer.firstname
+o   customer.firstname
 
-  * customer.lastname
+o   customer.lastname
 
-  * customer.phone
+o   customer.phone
 
-  * customer.cellphone
+o   customer.cellphone
 
-  * customer.note
+o   customer.note
 
-  * customer.language
+o   customer.language
 
-  * customer.username
+o   customer.username
 
-  * customer.extTable
+o   customer.extTable
 
-  * customer.extKey
+o   customer.extKey
 
  
 
@@ -49,23 +49,29 @@ Retrieve information about a customer. You specify which fields you wish to retr
  
 
 *Example*:
-```
+
 string sessionKey;
 
 customer.customerService custService = new customer.customerService();
 
 if(custService.login("test","test", out sessionKey) =="0")
+
 {
+
        string\[\] customerFields = new string\[4\];
        customerFields\[0\]="customer.name";
        customerFields\[1\]="customer.phone";
        customerFields\[2\]="customer.note";
        customerFields\[3\]="customer.cellphone";
 
+ 
+
        customer.ResultStruct\[\] customerResult;
        string \[\] customerEmail;
                                                              
-       string res = custService.getCustomer(sessionKey, customerFields, out customerResult, out customerEmail);
+       string res = custService.getCustomer(sessionKey,
+                                    customerFields,
+                                    out customerResult,
+                                    out customerEmail);
 
 }
-```

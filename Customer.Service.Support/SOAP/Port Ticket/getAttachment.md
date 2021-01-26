@@ -26,20 +26,20 @@ Retrieves an attachment. Attachment can be linked to various types of eJournal e
 
 * contentType          - The mime like content type of the file. Popular content types are:
 
-  * “text/html”                                       .md .md
+o   “text/html”                                       .md .md
 
-  * “application/msword”                      .doc
+o   “application/msword”                      .doc
 
-  * “application/octet-stream”               .bin .exe
+o   “application/octet-stream”               .bin .exe
 
-  * “application/x-zip”                           .zip
+o   “application/x-zip”                           .zip
 
 * data                                   The attachment binary data.
 
  
 
 *Example*:
-```
+
 ticket.ticketService ticketService = new ticket.ticketService();
 
 string attachmentId = "34";
@@ -57,17 +57,28 @@ ticketService.login(“Kai”,”Akk”, out sessionKey);
 string\[\] messageFields = new string\[0\];
 
 ticketService.ResultStruct\[\] messageResult;
+
 ticketService.AttachmentInfoStruct\[\] attachments;
-ticketService.getMessage(sessionKey,”12324”,messageFields, out messageResult, out attachmentInfoStruct);
+
+ticketService.getMessage(sessionKey,”12324”,messageFields,
+
+                         out messageResult,
+                         out attachmentInfoStruct);
 
 System.Byte\[\] data;
 
-string res = ticketService.getAttachment(sessionKey, attachments\[0\].attachmentId, attachments\[0\].attachmentKey, out attachmentName, out contentType, out data);
+string res = ticketService.getAttachment(sessionKey,
+
+                   attachments\[0\].attachmentId,
+              attachments\[0\].attachmentKey,
+                   out attachmentName,
+                   out contentType,
+                   out data);
 
 if(res == ”0”)
+
 {
 
   ...StoreAttachmentToDisk...
 
 }
-```

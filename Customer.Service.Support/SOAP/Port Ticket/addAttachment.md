@@ -4,7 +4,7 @@ SortOrder="140"
 
 *Description*:
 
-Adds an attachment to Service. This attachment can be used to attach to a message, faq entry, reply template etc. The binary data should be automatically base64 encoded by your client SOAP stack, but if not you have to do this manually.
+Adds an attachment to eJournal. This attachment can be used to attach to a message, faq entry, reply template etc. The binary data should be automatically base64 encoded by your client SOAP stack, but if not you have to do this manually.
 
                   
 
@@ -29,17 +29,27 @@ Adds an attachment to Service. This attachment can be used to attach to a messag
  
 
 *Example*:
-```
+
 ticket.ticketService ticketService = new ticket.ticketService();
+
+ 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon",
+
+                   "norges bank", out sessionKey);
+
+ 
 
 if (errorCode.Equals(“0”))
-{
 
-  System.IO.FileStream infile = new System.IO.FileStream("DivFix.exe", System.IO.FileMode.Open,System.IO.FileAccess.Read);
+    {
+
+  System.IO.FileStream infile = new System.IO.FileStream("DivFix.exe",
+
+                             System.IO.FileMode.Open,
+                             System.IO.FileAccess.Read);
 
   byte\[\] buffer = new byte\[infile.Length\];
 
@@ -47,8 +57,16 @@ if (errorCode.Equals(“0”))
 
   infile.Close();
 
+  
+
   string attachmentId;
 
-  ticketService.addAttachment(sessionKey, infile.Name, "application/octet-stream", buffer, out attachmentId);
-}
-```
+  
+
+  ticketService.addAttachment(sessionKey,
+
+                       infile.Name,
+                       "application/octet-stream",
+                       buffer,
+                       out attachmentId);
+    }

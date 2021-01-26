@@ -20,21 +20,26 @@ Renders a session key invalid.
 
 * errorCode  - See appendix for error codes
 
-
+* *
 
 *Example*:
-```
+
 ticket.ticketService ticketService = new ticket.ticketService();
 
  
+
 string sessionKey;
 
-string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon",
+
+                   "norges bank", out sessionKey);
+
+ 
 
 if (errorCode.Equals(“0”)
+
 {
 
   ticketService.logout(sessionKey);
 
 }
-```

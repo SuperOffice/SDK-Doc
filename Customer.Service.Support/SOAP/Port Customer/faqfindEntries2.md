@@ -10,7 +10,7 @@ This method will search for FAQ entries. The search words are given as a string,
 
 Windows:
 
-C:\\Service\\bin\\ejournalCron -force \[mydomain.com\]
+C:\\ejournal\\bin\\ejournalCron -force \[mydomain.com\]
 
 Linux:
 
@@ -18,7 +18,7 @@ Linux:
 
  
 
-Replace \[mydomain.com\] with the domain Service is registered on. On some systems the ejournalCron command is located in other folders.
+Replace \[mydomain.com\] with the domain eJournal is registered on. On some systems the ejournalCron command is located in other folders.
 
  
 
@@ -38,24 +38,24 @@ Replace \[mydomain.com\] with the domain Service is registered on. On some syste
 
 * faqEntries  - An array of the faq entries. The struct that is returned contains the following elements:
 
-  * id   - The FAQ entry ID
+o   id   - The FAQ entry ID
 
-  * question                 - The question.
+o   question                 - The question.
 
-  * title                        - Title of the entry.
+o   title                        - Title of the entry.
 
-  * hasHtml                 - 1 if this FAQ entry is HTML formatted, 0 if it is plain text.
+o   hasHtml                 - 1 if this FAQ entry is HTML formatted, 0 if it is plain text.
 
-  * score                      - The score this entry has achieved.
+o   score                      - The score this entry has achieved.
 
-  * fullName               - The name of the entry including all parent folders.
+o   fullName               - The name of the entry including all parent folders.
 
-  * parentId                - The id of the folder this entry is stored in. -1 if top node.
+o   parentId                - The id of the folder this entry is stored in. -1 if top node.
 
  
 
 *Example*:
-```
+
 customer.customerService custService = new customer.customerService();
 
 customer.FaqEntryStruct\[\] myFaqEntries;
@@ -66,10 +66,12 @@ attachmentIDs\[0\] = "1";
 
 attachmentIDs\[1\] = "2";
 
-string ret = custService.faq\_findEntries("", "public", attachmentIDs, out myFaqEntries);
+string ret = custService.faq\_findEntries("",
+
+                   "public",
+                   attachmentIDs,
+                   out myFaqEntries);
 
 if(ret == “0”)
 
        //myFaqEntries now contains the results.
-
-```

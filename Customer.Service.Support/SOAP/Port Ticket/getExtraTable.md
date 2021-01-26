@@ -20,11 +20,11 @@ Same as getExtraTables, but returns only one extra table. See getExtraTables() f
 
 * extraTables         - An array of all extra tables
 
-  * id   - the id
+o   id   - the id
 
-  * name    - the name
+o   name    - the name
 
-  * fields   - array of fields
+o   fields   - array of fields
 
 * id
 
@@ -37,12 +37,15 @@ Same as getExtraTables, but returns only one extra table. See getExtraTables() f
  
 
 *Example*:
-```
+
 string sessionKey;
 
 ticket.ticketService ticketService = new ticket.ticketService();
 
+ 
+
 if(ticketService.login("test","test", out sessionKey) == "0")
+
 {
 
        ticket.ExtraTablesStruct extraTable;
@@ -54,4 +57,3 @@ if(ticketService.login("test","test", out sessionKey) == "0")
        }
 
 }
-```

@@ -21,7 +21,7 @@ Finds the descriptive text for an error. These messages are linked to the sessio
  
 
 *Example*:
-```
+
 string sessionKey;
 
 customer.customerService custService = new customer.customerService();
@@ -36,10 +36,16 @@ customer.ResultStruct\[\] customerResult;
 
 string\[\] customerEmail;
 
-string res = custService.getCustomer(sessionKey, customerFields, out customerResult, out customerEmail);
+string res = custService.getCustomer(sessionKey,
+
+                   customerFields,
+                   out customerResult,
+                   out customerEmail);
 
 if(res =="0")
+
        textBox1.Text = "OK";
+
 else
+
        textBox1.Text = custService.getErrorMessage(sessionKey);
-```

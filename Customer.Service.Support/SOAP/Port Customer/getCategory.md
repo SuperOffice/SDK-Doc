@@ -20,23 +20,27 @@ Retrives the category with the given ID. The category has to be available for th
 
 * category   - The category with the given ID. The structure is as follows:
 
-  * id                        - The category ID
+o   id                        - The category ID
 
-  * name                   - External category name
+o   name                   - External category name
 
-  * parentId             - The category ID of the parent. -1 if this is a top level category, or the parent is internal.
+o   parentId             - The category ID of the parent. -1 if this is a top level category, or the parent is internal.
 
  
 
 *Example*:
-```
+
 string sessionKey;
 
 customer.customerService custService = new customer.customerService();
 
+ 
+
 if(custService.login("test","test", out sessionKey) == "0")
+
 {
+
        customer.CategoryStruct category;
        string res = custService.getCategory(sessionKey, out category);
+
 }
-```

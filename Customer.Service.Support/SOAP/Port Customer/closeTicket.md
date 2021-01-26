@@ -23,7 +23,7 @@ This method will close the given request if the customer has access to this. The
  
 
 *Example*:
-```
+
 string sessionKey;
 
 customer.customerService custService = new customer.customerService();
@@ -41,4 +41,3 @@ if(custService.login("test","test", out sessionKey) == "0")
           cout &lt;&lt;  "Something went wrong. Check error code";
 
 }
-```

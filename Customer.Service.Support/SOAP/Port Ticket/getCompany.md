@@ -12,25 +12,25 @@ Retrieve information about the specified company. You specify which fields you w
 
 * companyId            - Id of the company to retrieve
 
-* companyFields      - A list of the fields you wish to retrieve. You can specify standard fields or extra fields. Extra fields are given on the form “company.x\_2” where the number is the ID on the extra field. Legal standard fields are:
+* customerFields      - A list of the fields you wish to retrieve. You can specify standard fields or extra fields. Extra fields are given on the form “company.x\_2” where the number is the ID on the extra field. Legal standard fields are:
 
-  *   company.id
+o   company.id
 
-  *   company.name
+o   company.name
 
-  *   company.address
+o   company.address
 
-  *   company.extTable
+o   company.extTable
 
-  *   company.extKey
+o   company.extKey
 
-  *   company.note
+o   company.note
 
-  *   company.phone
+o   company.phone
 
-  *   company.fax
+o   company.fax
 
-  *   company.primContact
+o   company.primContact
 
  
 
@@ -43,22 +43,24 @@ Retrieve information about the specified company. You specify which fields you w
  
 
 *Example*:
-```
+
 string sessionKey;
 
 ticket.ticketService ticketService = new ticket.ticketService();
 
 if(ticketService.login("test","test", out sessionKey) == "0")
+
 {
 
        string\[\] companyFields = new string\[4\];
        companyFields\[0\]="company.name";
        companyFields\[1\]="company.phone";
-       companyFields\[2\]="company.note";
+       companyFields\[2\]=" company.note";
       
        ticket.ResultStruct\[\] companyResult;
                                                              
-       string res = ticketService.getCompany(sessionKey, companyFields, out companyResult);
+       string res = ticketService.getCompany(sessionKey,
+                                    companyFields,
+                                    out companyResult);
 
 }
-```

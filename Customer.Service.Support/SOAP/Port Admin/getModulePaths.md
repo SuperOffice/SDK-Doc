@@ -4,7 +4,7 @@ SortOrder="183"
 
 *Description*:
 
-Returns a list of the name and paths to all executable cgi-bin modules of Service (ie: customer= <http://cs.mydomain.com/scripts/customer.exe>). Usefull if you need to redirect to a specific frame or screen in Service.
+Returns a list of the name and paths to all executable cgi-bin modules of ejournal (ie: customer= <http://ejournal.ejournal.no/bin/customer.exe>). Usefull if you need to redirect to a specific frame or screen in eJournal.
 
                   
 
@@ -20,35 +20,42 @@ Returns a list of the name and paths to all executable cgi-bin modules of Servic
 
 * paths    - An array of names and modules:
 
-  * module – the name
+o   module – the name
 
-  * path – the path
+o   path – the path
 
-
+* *
 
 *Example*:
-```
+
 admin.adminService adminService = new admin.adminService();
 
 ticket.ticketService ticketService = new ticket.ticketService();
 
+ 
+
 string sessionKey;
 
-string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon",
 
+                   "norges bank", out sessionKey);
+
+ 
 
 if (errorCode.Equals("0")
+
 {
 
   admin.ModulePathStruct\[\] tmpPaths;
 
   adminService.getModulePaths(sessionKey, out tmpPaths);
 
-  foreach(admin.ModulePathStruct i in tmpPaths)
+       foreach(admin.ModulePathStruct i in tmpPaths)
+
   {
+
     cout &lt;&lt; "module: " &lt;&lt; i.module &lt;&lt;" path: "&lt;&lt; i.path &lt;&lt; endl;
 
   }
 
 }
-```

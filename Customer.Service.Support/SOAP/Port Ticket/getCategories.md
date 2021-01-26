@@ -18,27 +18,29 @@ Retrieves all categories that are available in the system. If you wish to build 
 
 * categoryIds           - An array of all categories. Elements of this structure is as follows:
 
-  * id                        - The category ID
+o   id                        - The category ID
 
-  * name                   - External category name
+o   name                   - External category name
 
-  * parentId             - The category ID of the parent. -1 if this is a top level category.
+o   parentId             - The category ID of the parent. -1 if this is a top level category.
 
-  * isInternal – Boolean indicating if it is internal or external
+o   isInternal – Boolean indicating if it is internal or external
 
  
 
 *Example*:
-```
+
 string sessionKey;
 
 ticket.ticketService ticketService = new ticket.ticketService();
 
+ 
+
 if(ticketService.login("test","test", out sessionKey) == "0")
+
 {
 
        ticket.CategoryStruct\[\] categoryIds;
        string res = ticketService.getCategories(sessionKey, out categoryIds);
 
 }
-```

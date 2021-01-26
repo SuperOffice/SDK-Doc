@@ -38,18 +38,24 @@ Creates a new ticket. To add messages to this ticket you need to use addMessage(
 
 * ticketId                       - The Id of the new ticket.
 
-
+* *
 
 *Example*:
-```
+
 ticket.ticketService ticketService = new ticket.ticketService();
+
+ 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon",
+
+                   "norges bank", out sessionKey);
 
  
+
 if (errorCode.Equals(“0”)
+
 {
 
   string\[\] custIds = new string\[1\];
@@ -57,13 +63,17 @@ if (errorCode.Equals(“0”)
   custIds\[0\] = "5";
 
   ticket.ValuePairStruct\[\] extraFields = new ticket.ValuePairStruct\[1\];
+
   extraFields\[0\] = new ticket.ValuePairStruct();
+
   extraFields\[0\].field = "ticket.x\_24";
+
   extraFields\[0\].value = "1234";
 
   string ticketId;
 
   ticketService.newTicket(sessionKey,
+
                    "New Soap Ticket",
                    "2",
                    "4",
@@ -73,5 +83,3 @@ if (errorCode.Equals(“0”)
                    extraFields,
                    true,
                    out ticketId);
-}
-```

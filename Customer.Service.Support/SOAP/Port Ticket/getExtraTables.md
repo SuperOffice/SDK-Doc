@@ -41,13 +41,13 @@ The flags returned for extra fields are a bit combination of the following:
 
 * extraTables         - An array of all extra tables
 
-  * id   - the id
+o   id   - the id
 
-  * name    - the name
+o   name    - the name
 
-  * flags    - the flags for this field (see above)
+o   flags    - the flags for this field (see above)
 
-  * fields   - array of fields
+o   fields   - array of fields
 
 * id
 
@@ -60,12 +60,15 @@ The flags returned for extra fields are a bit combination of the following:
  
 
 *Example*:
-```
+
 string sessionKey;
 
 ticket.ticketService ticketService = new ticket.ticketService();
 
+ 
+
 if(ticketService.login("test","test", out sessionKey) == "0")
+
 {
 
        ticket.ExtraTablesStruct\[\] extraTables;
@@ -80,4 +83,3 @@ if(ticketService.login("test","test", out sessionKey) == "0")
        }
 
 }
-```

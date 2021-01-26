@@ -24,18 +24,18 @@ Retrieves an attachment either linked to a message or to an FAQ entry. For attac
 
 * contentType          - The mime like content type of the file. Popular content types are:
 
-  * “text/html”                                       .md .md
+o   “text/html”                                       .md .md
 
-  * “application/msword”                      .doc
+o   “application/msword”                      .doc
 
-  * “application/octet-stream”               .bin .exe
+o   “application/octet-stream”               .bin .exe
 
-  * “application/x-zip”                           .zip
+o   “application/x-zip”                           .zip
 
  
 
 *Example*:
-```
+
 customer.customerService custService = new customer.customerService();
 
 string attachmentId = "34";
@@ -46,7 +46,11 @@ string contentType;
 
 string data;
 
-string res = custService.getAttachment("", attachmentId, out attachmentName, out contentType, out data);
+string res = custService.getAttachment("",
+
+                   attachmentId,
+                   out attachmentName,
+                   out contentType,
+                   out data);
 
 byte\[\] newData = System.Convert.FromBase64String(data);
-```

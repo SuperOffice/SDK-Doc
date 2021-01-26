@@ -23,7 +23,7 @@ Gets entry information about all entries in an faq group. Useful if you wish to 
 * entries        - All entries in a group. See **faq\_findEntries()** for a description of the fields.
 
 *Example*:
-```
+
 customer.customerService custService = new customer.customerService();
 
 customer.FaqCategoryStruct\[\] categories;
@@ -37,7 +37,15 @@ customer.FaqGroupStruct\[\] groups;
 string sessionKey =””;
 
 string ret = custService.faq\_getCategory(sessionKey,
-"2",out categories,out entries,out parents,out groups);
-out attachmentIds,out hasHtml,out score,out faqParents);
 
-```
+                     "2",
+                     out categories,
+                     out entries,
+                     out parents,
+                     out groups);
+                   out attachmentIds,
+                   out hasHtml,
+                   out score,
+                   out faqParents);
+
+foreach(FaqGroupEntry in

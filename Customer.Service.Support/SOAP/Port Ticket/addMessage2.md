@@ -59,12 +59,16 @@ Please note that *addMessage2* will not effect ticket.status, this can be set us
  
 
 *Example*:
-```
+
 ticket.ticketService ticketService = new ticket.ticketService();
+
+ 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon",
+
+                   "norges bank", out sessionKey);
 
 string replyTemplateId = "10"; // hard coded id of template
 
@@ -74,9 +78,13 @@ string \[\] cc;
 
 string \[\] bcc;
 
+ 
+
+ 
 
 if (errorCode.Equals("0"))
-{
+
+    {
 
   string\[\] attachmentIds = new string\[1\];
 
@@ -84,7 +92,7 @@ if (errorCode.Equals("0"))
 
   string messageId;
 
-  string error = ticketService.addMessage2(sessionKey,
+  string error = ticketService.addMessage(sessionKey,
 
      "",             // Empty body
      replyTemplateId,
@@ -96,5 +104,4 @@ if (errorCode.Equals("0"))
      cc,
      bcc,
      out messageId);
-}
-```
+    }

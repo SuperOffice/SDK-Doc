@@ -4,7 +4,7 @@ SortOrder="107"
 
 *Description*:
 
-Deletes an attachment. Only attachments not attached to any other entities in Service can be deleted. That way only stray attachments can be deleted, hence we don’t need to verify the validity of the contact.
+Deletes an attachment. Only attachments not attached to any other entities in eJournal can be deleted. That way only stray attachments can be deleted, hence we don’t need to verify the validity of the contact.
 
  
 
@@ -21,7 +21,7 @@ Deletes an attachment. Only attachments not attached to any other entities in Se
  
 
 *Example*:
-```
+
 customer.customerService custService = new customer.customerService();
 
 string ret = custService.deleteAttachment(“10”);
@@ -33,4 +33,3 @@ if(ret == "0")
 else
 
        cout &lt;&lt;  "Oh no";
-```

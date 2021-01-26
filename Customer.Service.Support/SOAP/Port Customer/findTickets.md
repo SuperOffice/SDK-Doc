@@ -14,87 +14,95 @@ This method is used to find one or more requests (tickets), based on a search cr
 
 * searchCriteria        - The search criteria consisting of a field, op and value. All are supplied as strings. If you specify an illegal field, it will be ignored. Valid fields are:
 
-  * ticket.id
+o   ticket.id
 
-  * ticket.title
+o   ticket.title
 
-  * ticket.created\_at
+o   ticket.created\_at
 
-  * ticket.category
+o   ticket.category
 
-  * ticket.status
+o   ticket.status
 
-  * ticket.replied\_at
+o   ticket.replied\_at
 
-  * ticket.closed\_at
+o   ticket.closed\_at
 
-  * ticket.priority
+o   ticket.priority
 
-  * ticket.read\_by\_customer
+o   ticket.read\_by\_customer
 
-  * ticket.has\_attachment
+o   ticket.has\_attachment
 
-  * ticket.last\_changed
+o   ticket.last\_changed
 
-  * ticket.\[extra field name\]
+ 
+
+Extra fields are also valid on the form:
+
+o   ticket.\[extra field name\]
 
  
 
 If you specify an illegal operator, the search criteria will be ignored. Valid operators are:
 
-  * OperatorContains
+o   OperatorContains
 
-  * OperatorBeginsWith
+o   OperatorBeginsWith
 
-  * OperatorEquals
+o   OperatorEquals
 
-  * OperatorGt
+o   OperatorGt
 
-  * OperatorLt
+o   OperatorLt
 
-  * OperatorGte
+o   OperatorGte
 
-  * OperatorLte
+o   OperatorLte
 
-  * OperatorIn (Only valid for integer/relation fields. Example value: 1,2-4,8-10)
+o   OperatorIn (Only valid for integer/relation fields. Example value: 1,2-4,8-10)
 
-  * OperatorNotIn
+o   OperatorNotIn
 
-  * OperatorEmpty
+o   OperatorEmpty
 
 * searchFields          - An array of strings indicating all fields to be retrieved for this request. If you specify an illegal field, it will be ignored. Valid fields are:
 
-  * ticket.id
+o   ticket.id
 
-  * ticket.title
+o   ticket.title
 
-  * ticket.created\_at
+o   ticket.created\_at
 
-  * ticket.category
+o   ticket.category
 
-  * ticket.status
+o   ticket.status
 
-  * ticket.replied\_at
+o   ticket.replied\_at
 
-  * ticket.closed\_at
+o   ticket.closed\_at
 
-  * ticket.priority
+o   ticket.priority
 
-  * ticket.read\_by\_customer
+o   ticket.read\_by\_customer
 
-  * ticket.has\_attachment
+o   ticket.has\_attachment
 
-  * ticket.author
+o   ticket.author
 
-  * ticket.created\_by
+o   ticket.created\_by
 
-  * customer.id
+o   customer.id
 
-  * customer.firstname
+o   customer.firstname
 
-  * customer.lastname
+o   customer.lastname
 
-  * ticket.\[extra field name\]
+ 
+
+Extra fields are also valid on the form:
+
+o   ticket.\[extra field name\]
 
  
 
@@ -109,7 +117,7 @@ If you specify an illegal operator, the search criteria will be ignored. Valid o
  
 
 *Example*:
-```
+
 customer.customerService custService = new customer.customerService();
 
 string sessionKey;
@@ -117,21 +125,33 @@ string sessionKey;
 string errorCode = custService.login(“johndoe”,”pw”,out sessionKey);
 
 if(errorCode.Equals(“0”))
-{
-    customer.CriteriaStruct\[\] ticketSearchCriteria = new customer.CriteriaStruct\[1\];
 
-    string\[\] ticketSearchFields = new string\[2\];
+    {
 
-    customer.ResultStruct\[\]\[\] ticketSearchResult;
+customer.CriteriaStruct\[\] ticketSearchCriteria = 
 
-    ticketSearchCriteria\[0\] = new customer.CriteriaStruct();
-    ticketSearchCriteria\[0\].field = "ticket.id";
-    ticketSearchCriteria\[0\].op = "OperatorGt";
-    ticketSearchCriteria\[0\].value = "0";
+          new customer.CriteriaStruct\[1\];
 
-    ticketSearchFields\[0\] = "ticket.id";
-    ticketSearchFields\[1\] = "ticket.title";
+string\[\] ticketSearchFields = new string\[2\];
 
-    custService.findTickets(Session\["sessionKey"\].ToString(), ticketSearchCriteria, ticketSearchFields, out ticketSearchResult);
-}
-```
+customer.ResultStruct\[\]\[\] ticketSearchResult;
+
+ticketSearchCriteria\[0\] = new customer.CriteriaStruct();
+
+ticketSearchCriteria\[0\].field = "ticket.id";
+
+ticketSearchCriteria\[0\].op = "OperatorGt";
+
+ticketSearchCriteria\[0\].value = "0";
+
+ 
+
+ticketSearchFields\[0\] = "ticket.id";
+
+ticketSearchFields\[1\] = "ticket.title";
+
+ 
+
+ 
+
+custService.findTickets(Session\["sessionKey"\].ToString(), ticketSearchCriteria, ticketSearchFields, out ticketSearchResult);

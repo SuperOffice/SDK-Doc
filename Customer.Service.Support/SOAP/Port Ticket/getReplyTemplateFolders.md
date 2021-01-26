@@ -20,38 +20,50 @@ Gets all reply template folders in the system.
 
 * replyTemplateFolders       - An array of *ReplyTemplateFolderStruct*. Elements are:
 
-  * id                     - Id of the reply template folder.
+o   id                     - Id of the reply template folder.
 
-  * description      - Description of the reply template folder
+o   description      - Description of the reply template folder
 
-  * name                - Name of the reply template folder
+o   name                - Name of the reply template folder
 
-  * parent              - Id of the parent folder.
+o   parent              - Id of the parent folder.
 
                        
 
 *Example*:
-```
+
 ticket.ticketService ticketService = new ticket.ticketService();
+
+ 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon",
 
+                   "norges bank", out sessionKey);
+
+ 
 
 if (errorCode.Equals("0")
+
 {
 
        ticket.ReplyTemplateFolderStruct\[\] replyTemplateFolders;
        ticketService.getReplyTemplateFolders(sessionKey);
 
+ 
+
        TreeView tree;
 
-       // assume addNode takes a node id, a node description and a
+ 
 
-       // parent node id
+// assume addNode takes a node id, a node description and a
+
+ // parent node id
 
        tree.addNode(-1, “Reply template root node”, -1);
+
+ 
 
        foreach(ticket.ReplyTemplateFolderStruct folder in replyTemplateFolders)
        {
@@ -59,7 +71,7 @@ if (errorCode.Equals("0")
        }
 
 }
-```
+
  
 
  
