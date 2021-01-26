@@ -64,13 +64,13 @@ string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 if (errorCode.Equals(“0”)
 {
 
-  string\[\] messageFields = new string\[1\];
+  string[] messageFields = new string[1];
 
-  messageFields\[0\] = ”message.body”;
+  messageFields[0] = ”message.body”;
 
-  ticket.ResultStruct\[\] messageInfo;
+  ticket.ResultStruct[] messageInfo;
 
-  ticket.AttachmentInfoStruct\[\] attachments;
+  ticket.AttachmentInfoStruct[] attachments;
 
   getMessage(sessionKey,”23”,messageFields, out messageInfo, out attachments);
   

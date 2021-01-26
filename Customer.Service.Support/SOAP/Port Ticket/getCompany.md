@@ -51,12 +51,12 @@ ticket.ticketService ticketService = new ticket.ticketService();
 if(ticketService.login("test","test", out sessionKey) == "0")
 {
 
-       string\[\] companyFields = new string\[4\];
-       companyFields\[0\]="company.name";
-       companyFields\[1\]="company.phone";
-       companyFields\[2\]="company.note";
+       string[] companyFields = new string[4];
+       companyFields[0]="company.name";
+       companyFields[1]="company.phone";
+       companyFields[2]="company.note";
       
-       ticket.ResultStruct\[\] companyResult;
+       ticket.ResultStruct[] companyResult;
                                                              
        string res = ticketService.getCompany(sessionKey, companyFields, out companyResult);
 

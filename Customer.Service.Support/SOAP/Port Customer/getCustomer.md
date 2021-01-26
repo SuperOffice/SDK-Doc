@@ -56,16 +56,16 @@ customer.customerService custService = new customer.customerService();
 
 if(custService.login("test","test", out sessionKey) =="0")
 {
-       string\[\] customerFields = new string\[4\];
-       customerFields\[0\]="customer.name";
-       customerFields\[1\]="customer.phone";
-       customerFields\[2\]="customer.note";
-       customerFields\[3\]="customer.cellphone";
+  string[] customerFields = new string[4];
+  customerFields[0]="customer.name";
+  customerFields[1]="customer.phone";
+  customerFields[2]="customer.note";
+  customerFields[3]="customer.cellphone";
 
-       customer.ResultStruct\[\] customerResult;
-       string \[\] customerEmail;
-                                                             
-       string res = custService.getCustomer(sessionKey, customerFields, out customerResult, out customerEmail);
+  customer.ResultStruct[] customerResult;
+  string [] customerEmail;
+                                                        
+  string res = custService.getCustomer(sessionKey, customerFields, out customerResult, out customerEmail);
 
 }
 ```

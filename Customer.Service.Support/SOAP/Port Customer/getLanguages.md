@@ -24,7 +24,7 @@ string sessionKey;
 
 customer.customerService custService = new customer.customerService();
 
-customer.LanguagesStruct tmpLangStruct\[\];
+customer.LanguagesStruct tmpLangStruct[];
 
 custService.getLanguages(tmpLangStruct);
 

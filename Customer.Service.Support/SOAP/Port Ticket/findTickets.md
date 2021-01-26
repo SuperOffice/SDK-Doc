@@ -108,21 +108,21 @@ string errorCode = ticketService.login("tommy", "myPwd", out sessionKey);
 if (errorCode.Equals(“0”)
 {
 
-  ticket.CriteriaStruct\[\] searchCriteria = new searchCriteria\[1\];
+  ticket.CriteriaStruct[] searchCriteria = new searchCriteria[1];
 
-  searchCriteria\[0\].field = “ticket.id”;
-  searchCriteria\[0\].op    = “OperatorLt”;
-  searchCriteria\[0\].value = “10”;
+  searchCriteria[0].field = “ticket.id”;
+  searchCriteria[0].op    = “OperatorLt”;
+  searchCriteria[0].value = “10”;
 
-  string\[\] fields = new string\[2\];
-  fields\[0\] = “ticket.id”;
-  fields\[1\] = “ticket.title”;
+  string[] fields = new string[2];
+  fields[0] = “ticket.id”;
+  fields[1] = “ticket.title”;
 
-  ticket.ResultStruct\[\]\[\] result;
+  ticket.ResultStruct[][] result;
 
   if(ticketService.findTickets(sessionKey, searchCriteria, fields, “100”, “ticket.id”,true, out result)== “0”);
   {
-    foreach(i1 ResultStruct\[\] in result)
+    foreach(i1 ResultStruct[] in result)
     {
       cout &lt;&lt; “Row\\n”;
       foreach(i2 ResultStruct in i1)

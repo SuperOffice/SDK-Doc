@@ -25,19 +25,20 @@ Gets entry information about all entries in an faq group. Useful if you wish to 
 *Example*:
 ```
 customer.customerService custService = new customer.customerService();
+string sessionKey;
+if(custService.login("test","test", out sessionKey) == "0")
+{
+    customer.FaqCategoryStruct[] categories;
 
-customer.FaqCategoryStruct\[\] categories;
+    customer.FaqEntryStruct[] entries;
 
-customer.FaqEntryStruct\[\] entries;
+    customer.FaqParentStruct[] parents;
 
-customer.FaqParentStruct\[\] parents;
+    customer.FaqGroupStruct[] groups;
 
-customer.FaqGroupStruct\[\] groups;
-
-string sessionKey =””;
-
-string ret = custService.faq\_getCategory(sessionKey,
-"2",out categories,out entries,out parents,out groups);
-out attachmentIds,out hasHtml,out score,out faqParents);
+    string ret = custService.faq_getCategory(sessionKey,
+    "2",out categories,out entries,out parents,out groups);
+    out attachmentIds,out hasHtml,out score,out faqParents);
+}
 
 ```

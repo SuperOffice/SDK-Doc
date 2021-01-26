@@ -55,12 +55,12 @@ string errorCode = ticketService.login("egon", "pass1234", out sessionKey);
 if (errorCode.Equals(“0”)
 {
 
-  admin.ResultStruct\[\] userResult;
+  admin.ResultStruct[] userResult;
 
-  string\[\] userFields = new string\[2\];
+  string[] userFields = new string[2];
 
-  userFields\[0\] = "user.id";
-  userFields\[1\] = "user.email";
+  userFields[0] = "user.id";
+  userFields[1] = "user.email";
 
   errorCode = adminService.getUser(sessionKey, userFields, out userResult);
 

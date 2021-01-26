@@ -22,15 +22,16 @@ Deletes an attachment. Only attachments not attached to any other entities in Se
 
 *Example*:
 ```
+string sessionKey;
 customer.customerService custService = new customer.customerService();
 
-string ret = custService.deleteAttachment(“10”);
+if(custService.login("test","test", out sessionKey) == "0")
+{
+       string ret = custService.deleteAttachment(“10”);
 
-if(ret == "0")    
-
-       cout &lt;&lt;  "Hip hurray";
-
-else
-
-       cout &lt;&lt;  "Oh no";
+       if(ret == "0")    
+              cout <<  "Hip hurray";
+       else
+              cout <<  "Oh no";
+}
 ```

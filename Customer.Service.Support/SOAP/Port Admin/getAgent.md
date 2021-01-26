@@ -28,12 +28,9 @@ Gets the binary file of the agent available on the server.
 ```
 admin.adminService adminService = new admin.adminService();
 
-System.Byte\[\] data;
-
- 
+System.Byte[] data;
 
 if(adminService.getAgent( out data ) == “0”)
-
 {
 
   ...storeDataToDisk...

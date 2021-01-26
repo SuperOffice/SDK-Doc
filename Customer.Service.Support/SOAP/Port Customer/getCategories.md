@@ -42,7 +42,7 @@ customer.customerService custService = new customer.customerService();
 
 if(custService.login("test","test", out sessionKey) == "0")
 {
-       customer.CategoryStruct\[\] categoryIds;
-       string res = custService.getCategories(sessionKey, out categoryIds);
+  customer.CategoryStruct[] categoryIds;
+  string res = custService.getCategories(sessionKey, out categoryIds);
 }
 ```

@@ -42,7 +42,7 @@ string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 if (errorCode.Equals("0")
 {
 
-       ticket.ReplyTemplateFolderStruct\[\] replyTemplateFolders;
+       ticket.ReplyTemplateFolderStruct[] replyTemplateFolders;
        ticketService.getReplyTemplateFolders(sessionKey);
 
        TreeView tree;

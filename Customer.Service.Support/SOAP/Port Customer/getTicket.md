@@ -62,14 +62,14 @@ string errorCode = custService.login(“johndoe”,”pw”,out sessionKey);
 if(errorCode.Equals(“0”))
 {
    // The fields we want to get
-   string\[\] ticketFields = new string\[3\];
-   ticketFields\[0\] = "ticket.title";
-   ticketFields\[1\] = "ticket.created\_at";
-   ticketFields\[2\] = "ticket.category";
+   string[] ticketFields = new string[3];
+   ticketFields[0] = "ticket.title";
+   ticketFields[1] = "ticket.created_at";
+   ticketFields[2] = "ticket.category";
 
    // The return values goes here
-   customer.ResultStruct\[\] ticketResult;
-   string\[\] messageIds;
+   customer.ResultStruct[] ticketResult;
+   string[] messageIds;
 
    // Get request 1012
 
@@ -78,16 +78,16 @@ if(errorCode.Equals(“0”))
    if (errorCode.Equals(“0”))
    {
       foreach (string i in messageIds)
-      \[Here *i* is running through all message id’s\]
+      \\Here *i* is running through all message id’s
 
-      if (ticketFields\[0\].field.Equals(“ticket.title”))
-      \[Here ticketFields\[0\].value is the title of the request\]
+      if (ticketFields[0].field.Equals(“ticket.title”))
+      \\Here ticketFields[0].value is the title of the request
    }
    else
       string errorMsg = custService.getErrorMessage(sessionKey);
 }
 else
 {
-   \[Could not login customer\]
+   \\Could not login customer
 }
 ```

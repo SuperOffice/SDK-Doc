@@ -30,7 +30,7 @@ ticket.ticketService ticketService = new ticket.ticketService();
 
 ticketService.login("test","test",out sessionKey);
 
-string res = \[some method()\]
+string res = some_method();
 
 if(res =="0")
        textBox1.Text = "OK";

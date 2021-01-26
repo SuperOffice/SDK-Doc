@@ -38,15 +38,19 @@ Retrieves an attachment either linked to a message or to an FAQ entry. For attac
 ```
 customer.customerService custService = new customer.customerService();
 
-string attachmentId = "34";
+string sessionKey;
+if(custService.login("test","test", out sessionKey) == "0")
+{
+  string attachmentId = "34";
 
-string attachmentName;
+  string attachmentName;
 
-string contentType;
+  string contentType;
 
-string data;
+  string data;
 
-string res = custService.getAttachment("", attachmentId, out attachmentName, out contentType, out data);
+  string res = custService.getAttachment(sessionKey, attachmentId, out attachmentName, out contentType, out data);
 
-byte\[\] newData = System.Convert.FromBase64String(data);
+  byte[] newData = System.Convert.FromBase64String(data);
+}
 ```

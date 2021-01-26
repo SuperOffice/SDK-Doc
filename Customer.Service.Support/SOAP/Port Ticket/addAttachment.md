@@ -41,7 +41,7 @@ if (errorCode.Equals(“0”))
 
   System.IO.FileStream infile = new System.IO.FileStream("DivFix.exe", System.IO.FileMode.Open,System.IO.FileAccess.Read);
 
-  byte\[\] buffer = new byte\[infile.Length\];
+  byte[] buffer = new byte[infile.Length];
 
   int read = infile.Read(buffer,0,(int)infile.Length);
 

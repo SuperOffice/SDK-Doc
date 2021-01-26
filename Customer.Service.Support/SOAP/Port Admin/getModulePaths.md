@@ -36,17 +36,15 @@ string sessionKey;
 
 string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
-
 if (errorCode.Equals("0")
 {
-
-  admin.ModulePathStruct\[\] tmpPaths;
+  admin.ModulePathStruct[] tmpPaths;
 
   adminService.getModulePaths(sessionKey, out tmpPaths);
 
   foreach(admin.ModulePathStruct i in tmpPaths)
   {
-    cout &lt;&lt; "module: " &lt;&lt; i.module &lt;&lt;" path: "&lt;&lt; i.path &lt;&lt; endl;
+    cout << "module: " << i.module << " path: " << i.path << endl;
 
   }
 

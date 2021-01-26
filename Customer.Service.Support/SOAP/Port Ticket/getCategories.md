@@ -37,7 +37,7 @@ ticket.ticketService ticketService = new ticket.ticketService();
 if(ticketService.login("test","test", out sessionKey) == "0")
 {
 
-       ticket.CategoryStruct\[\] categoryIds;
+       ticket.CategoryStruct[] categoryIds;
        string res = ticketService.getCategories(sessionKey, out categoryIds);
 
 }

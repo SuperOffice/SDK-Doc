@@ -56,9 +56,9 @@ if (errorCode.Equals(“0”))
 
 {
 
-  string\[\] attachmentIds = new string\[1\];
+  string[] attachmentIds = new string\[1\];
 
-  attachmentIds\[0\]="62";
+  attachmentIds[0]="62";
 
   string messageId;
 

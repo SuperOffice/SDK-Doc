@@ -40,7 +40,7 @@ customer.customerService custService = new customer.customerService();
 
 if(custService.login("test","test",out sessionKey)=="0")
 {
-       customer.ExtraFieldsStruct\[\] extraFields;
+       customer.ExtraFieldsStruct[] extraFields;
        custService.getExtraFields(sessionKey, "customer", out extraFields);
 }
 ```

@@ -48,22 +48,22 @@ customer.customerService custService = new customer.customerService();
 
 if(custService.login("test","test", out sessionKey)=="0")
 {
-   string\[\] ticketFields = new string\[1\];
-   ticketFields\[0\]="ticket.id";
-   customer.ResultStruct\[\] ticketResult;
-   string\[\] messageIds;
+   string[] ticketFields = new string[1];
+   ticketFields[0]="ticket.id";
+   customer.ResultStruct[] ticketResult;
+   string[] messageIds;
    if(custService.getTicket(sessionKey, "1208", ticketFields, out ticketResult, out messageIds)=="0")
    {
       string newValue ="";
-      string\[\] messageFields = new string\[2\];
-      messageFields\[0\] = "message.created\_at";
-      messageFields\[1\] = "message.body";
+      string[] messageFields = new string[2];
+      messageFields[0] = "message.created_at";
+      messageFields[1] = "message.body";
 
-      customer.ResultStruct\[\] messageResult;
-      customer.AttachmentInfoStruct\[\] attachmentInfo;
+      customer.ResultStruct[] messageResult;
+      customer.AttachmentInfoStruct[] attachmentInfo;
 
       if(custService.getMessage(sessionKey,
-         messageIds\[0\],
+         messageIds[0],
          messageFields,
          out messageResult,
          out attachmentInfo)=="0")

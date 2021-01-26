@@ -29,10 +29,7 @@ customer.customerService custService = new customer.customerService();
 string ret = custService.checkPassword(“username”,”password”);
 
 if(ret == "0")    
-
-       cout &lt;&lt;  "Hip hurray";
-
+       cout <<  "Hip hurray";
 else
-
-       cout &lt;&lt;  "Oh no";
+       cout << "Oh no";
 ```

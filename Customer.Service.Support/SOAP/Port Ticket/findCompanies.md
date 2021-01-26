@@ -81,22 +81,22 @@ string errorCode = ticketService.login("tommy", "myPwd", out sessionKey);
 
 if (errorCode.Equals(“0”)
 {
-  ticket.CriteriaStruct\[\] searchCriteria = new searchCriteria\[1\];
+  ticket.CriteriaStruct[] searchCriteria = new searchCriteria[1];
 
-  searchCriteria\[0\].field = “contact.id”;
-  searchCriteria\[0\].op    = “OperatorEquals”;
-  searchCriteria\[0\].value = “23”;
+  searchCriteria[0].field = “contact.id”;
+  searchCriteria[0].op    = “OperatorEquals”;
+  searchCriteria[0].value = “23”;
 
-  string\[\] fields = new string\[2\];
-  fields\[0\] = “contact.id”;
-  fields\[1\] = “contact.name”;
+  string[] fields = new string[2];
+  fields[0] = “contact.id”;
+  fields[1] = “contact.name”;
 
-  ticket.ResultStruct\[\]\[\] result;
+  ticket.ResultStruct[][] result;
 
   if(ticketService.findCompanies(sessionKey, searchCriteria, fields, “100”, “customer.id”, true, out result)== “0”);
   {
 
-    foreach(i1 ResultStruct\[\] in result)
+    foreach(i1 ResultStruct[] in result)
     {
       cout &lt;&lt; “Row\\n”;
       foreach(i2 ResultStruct in i1)

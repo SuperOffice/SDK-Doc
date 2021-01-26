@@ -37,7 +37,7 @@ ticket.ticketService ticketService = new ticket.ticketService();
 if(ticketService.login("test","test",out sessionKey)=="0")
 {
 
-       ticket.PriorityStruct\[\] priorities;
+       ticket.PriorityStruct[] priorities;
        ticketService.getPriorities(sessionKey, out priorities);
        string newValue="";
        foreach(ticket.PriorityStruct i in priorities)

@@ -58,18 +58,19 @@ Replace \[mydomain.com\] with the domain Service is registered on. On some syste
 ```
 customer.customerService custService = new customer.customerService();
 
-customer.FaqEntryStruct\[\] myFaqEntries;
+string sessionKey;
+if(custService.login("test","test", out sessionKey) == "0")
+{
+       customer.FaqEntryStruct[] myFaqEntries;
 
-string\[\] attachmentIDs = new string\[2\];
+       string[] categoryIds = new string[2];
 
-attachmentIDs\[0\] = "1";
+       categoryIds[0] = "1";
+       categoryIds[1] = "2";
 
-attachmentIDs\[1\] = "2";
+       string ret = custService.faq_findEntries2(sessionKey, "public", categoryIds, out myFaqEntries);
 
-string ret = custService.faq\_findEntries("", "public", attachmentIDs, out myFaqEntries);
-
-if(ret == “0”)
-
-       //myFaqEntries now contains the results.
-
+       if(ret == “0”)
+              //myFaqEntries now contains the results.
+}
 ```

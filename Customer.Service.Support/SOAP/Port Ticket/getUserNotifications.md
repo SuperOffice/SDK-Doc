@@ -50,7 +50,7 @@ if (errorCode.Equals(“0”)
 
   allocUserNotifications(sessionKey, “MyClient”,out notifyKey);
 
-  ticket.NotificationStruct\[\] notifications;
+  ticket.NotificationStruct[] notifications;
 
   getUserNotfications(sessionKey, notifyKey, out notifications);
 

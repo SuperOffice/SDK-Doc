@@ -52,14 +52,14 @@ string errorCode = custService.login(“johndoe”,”pw”,out sessionKey);
 
 if(errorCode.Equals(“0”))
 {
-       customer.ValuePairStruct\[\] customerValues = new customer.ValuePairStruct\[2\];
+       customer.ValuePairStruct[] customerValues = new customer.ValuePairStruct[2];
 
-       customerValues\[0\] = new customer.ValuePairStruct();
-       customerValues\[0\].field = "name";
-       customerValues\[0\].value = "Johnny X";
-       customerValues\[1\] = new customer.ValuePairStruct();
-       customerValues\[1\].field = "email";
-       customerValues\[1\].value = "johnny@x.com";
+       customerValues[0] = new customer.ValuePairStruct();
+       customerValues[0].field = "name";
+       customerValues[0].value = "Johnny X";
+       customerValues[1] = new customer.ValuePairStruct();
+       customerValues[1].field = "email";
+       customerValues[1].value = "johnny@x.com";
 
        string ret = custService.setCustomer(sessionKey, customerValues);
 }

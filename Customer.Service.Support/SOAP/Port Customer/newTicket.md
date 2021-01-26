@@ -36,7 +36,7 @@ This method will create a new request/ticket with the customer as author of the 
 ```
 customer.customerService custService = new customer.customerService();
 
-customer.ValuePairStruct\[\] extraFields = new customer.ValuePairStruct\[0\]; //We do not want any extra fields set
+customer.ValuePairStruct[] extraFields = new customer.ValuePairStruct[0]; //We do not want any extra fields set
 
 string errorCode = custService.login(“johndoe”,”pw”,out sessionKey);
 

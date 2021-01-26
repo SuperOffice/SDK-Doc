@@ -28,17 +28,11 @@ admin.adminService adminService = new admin.adminService();
 
 ticket.ticketService ticketService = new ticket.ticketService();
 
- 
+string errorCode = ticketService.login("test","test",out sessionKey);
 
-ticketService.login("test","test",out sessionKey);
-
-string res = \[some method()\]
-
-if(res =="0")
-
-       textBox1.Text = "OK";
-
-else
-
-       textBox1.Text = adminService.getErrorMessage(sessionKey);
+if(errorCode.Equals("0"))
+{
+       string tag;
+       adminService.getTag(sessionKey, out tag);
+}
 ```

@@ -41,7 +41,7 @@ ticket.ticketService ticketService = new ticket.ticketService();
 if(ticketService.login("test","test",out sessionKey)=="0")
 {
 
-       ticket.ExtraFieldsStruct\[\] extraFields;
+       ticket.ExtraFieldsStruct[] extraFields;
        ticketService.getExtraFields(sessionKey, "customer", out extraFields);
 
 }

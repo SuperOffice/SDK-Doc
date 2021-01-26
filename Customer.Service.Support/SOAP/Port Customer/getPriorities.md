@@ -36,7 +36,7 @@ customer.customerService custService = new customer.customerService();
 
 if(custService.login("test","test",out sessionKey)=="0")
 {
-   customer.PriorityStruct\[\] priorities;
+   customer.PriorityStruct[] priorities;
    custService.getPriorities(sessionKey, out priorities);
    string newValue="";
    foreach(customer.PriorityStruct i in priorities)

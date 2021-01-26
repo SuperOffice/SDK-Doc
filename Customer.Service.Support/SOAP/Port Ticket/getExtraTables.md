@@ -68,9 +68,8 @@ ticket.ticketService ticketService = new ticket.ticketService();
 if(ticketService.login("test","test", out sessionKey) == "0")
 {
 
-       ticket.ExtraTablesStruct\[\] extraTables;
-       string res = ticketService.getExtraTables(sessionKey,
-                     out extraTables);
+       ticket.ExtraTablesStruct[] extraTables;
+       string res = ticketService.getExtraTables(sessionKey, out extraTables);
        if(res == “0”)
        {
           foreach(i ticket.ExtraTableStruct in extraTables)

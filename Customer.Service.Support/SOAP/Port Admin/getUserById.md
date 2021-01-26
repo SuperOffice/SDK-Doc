@@ -52,28 +52,23 @@ string sessionKey;
 
 string errorCode = ticketService.login("egon", "pass1234", out sessionKey);
 
- 
-
 if (errorCode.Equals(“0”)
 {
 
-  admin.ResultStruct\[\] userResult;
+  admin.ResultStruct[] userResult;
 
-  string\[\] userFields = new string\[2\];
+  string[] userFields = new string[2];
 
-  userFields\[0\] = "user.id";
-  userFields\[1\] = "user.email";
+  userFields[0] = "user.id";
+  userFields[1] = "user.email";
 
   errorCode = adminService.getUser(sessionKey, “2”, userFields, out           userResult);
 
   foreach(admin.ResultStruct i in userResult)
   {
-
     string field = i.field; // Here you get the field
     string value = i.value; // Here you get the value
     string type = i.type;   // Here you get the type
-
   }
-
 }
 ```

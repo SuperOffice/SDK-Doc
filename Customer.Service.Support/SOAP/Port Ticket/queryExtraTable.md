@@ -91,25 +91,25 @@ string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 if (errorCode.Equals(“0”)
 {
 
-  string\[\] extraTableFields = new string\[2\];
+  string[] extraTableFields = new string[2];
 
-  extraTableFields\[0\] = “4”;
-  extraTableFields\[1\] = “5”;
+  extraTableFields[0] = “4”;
+  extraTableFields[1] = “5”;
 
-  ticket.ExtraTableCriteriaStruct\[\] criterias = new ticket.ExtraTableCriteriaStruct\[1\];
+  ticket.ExtraTableCriteriaStruct[] criterias = new ticket.ExtraTableCriteriaStruct[1];
 
-  criterias\[0\] = new ticket.ExtraTableCriteriaStruct();
-  criterias\[0\].columnId = “8”; // extra field with id 8
-  criterias\[0\].op = “OperatorEquals”;
-  criterias\[0\].value = “100”;  //return all rows with x\_8 = 100
-  criterias\[0\].maxEntries = “1000”; //truncate rows after 1000
-  criterias\[0\].logicalOp = “and” //not needed, but set anyway
+  criterias[0] = new ticket.ExtraTableCriteriaStruct();
+  criterias[0].columnId = “8”; // extra field with id 8
+  criterias[0].op = “OperatorEquals”;
+  criterias[0].value = “100”;  //return all rows with x\_8 = 100
+  criterias[0].maxEntries = “1000”; //truncate rows after 1000
+  criterias[0].logicalOp = “and” //not needed, but set anyway
 
-  ticket.ExtraTableRowStruct\[\] result;
+  ticket.ExtraTableRowStruct[] result;
 
   ticket.queryExtraTable(sessionKey,”1”,extraTableFields,
                           criterias,
-                          ”4”,    //order by x\_4
+                          ”4”,    //order by x_4
                           “true”, //ascending
                           out result);
 

@@ -36,7 +36,7 @@ string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 if (errorCode.Equals(“0”)
 {
 
-  ticket.ActiveTicketsStruct\[\] tickets;
+  ticket.ActiveTicketsStruct[] tickets;
 
   getActiveTicketsStatus(sessionKey, out tickets);
 

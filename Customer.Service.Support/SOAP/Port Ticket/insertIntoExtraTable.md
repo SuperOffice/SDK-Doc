@@ -46,11 +46,11 @@ string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 if (errorCode.Equals(“0”))
 {
 
-  ticket.ValuePairStruct\[\] values = new ticket.ValuePairStruct\[1\];
+  ticket.ValuePairStruct[] values = new ticket.ValuePairStruct[1];
 
-  values\[0\] = new ticket.ValuePairStruct();
-  values\[0\].field = "27";   //extra field id
-  values\[0\].value = "123";  //new value
+  values[0] = new ticket.ValuePairStruct();
+  values[0].field = "27";   //extra field id
+  values[0].value = "123";  //new value
 
   string rowId = "-1";
 

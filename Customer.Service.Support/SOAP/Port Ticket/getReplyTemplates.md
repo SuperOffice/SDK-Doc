@@ -45,7 +45,7 @@ string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
  
 if (errorCode.Equals("0")
 {
-   ticket.ReplyTemplateStruct\[\] replyTemplates;
+   ticket.ReplyTemplateStruct[] replyTemplates;
    ticketService.getReplyTemplates(sessionKey, -1);
 
    // assume this has been populated, see example for

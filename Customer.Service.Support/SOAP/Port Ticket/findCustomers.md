@@ -80,25 +80,25 @@ string errorCode = ticketService.login("tommy", "myPwd", out sessionKey);
 if (errorCode.Equals(“0”)
 {
 
-  ticket.CriteriaStruct\[\] searchCriteria = new    ticket.CriteriaStruct\[1\];
+  ticket.CriteriaStruct[] searchCriteria = new    ticket.CriteriaStruct[1];
 
-  searchCriteria\[0\] = new ticketService.CriteriaStruct();
-  searchCriteria\[0\].field = “customer.email”;
-  searchCriteria\[0\].op    = “OperatorEquals”;
-  searchCriteria\[0\].value = “hjelms@ejournal.no”;
+  searchCriteria[0] = new ticketService.CriteriaStruct();
+  searchCriteria[0].field = “customer.email”;
+  searchCriteria[0].op    = “OperatorEquals”;
+  searchCriteria[0].value = “hjelms@ejournal.no”;
 
-  string\[\] fields = new string\[2\];
-  fields\[0\] = “customer.id”;
-  fields\[1\] = “customer.email”;
+  string[] fields = new string[2];
+  fields[0] = “customer.id”;
+  fields[1] = “customer.email”;
 
-  ticket.ResultStruct\[\]\[\] result;
+  ticket.ResultStruct[][] result;
 
   if(ticketService.findCustomers(sessionKey, searchCriteria, fields, “100”, “customer.id”, true, out result)== “0”);
   {
-    foreach(ticketService.ResultStruct\[\] i1 in result)
+    foreach(ticketService.ResultStruct[] i1 in result)
     {
       cout &lt;&lt; “Row\\n”;
-      foreach(ticketService.ResultStruct\[\] i2 in i1)
+      foreach(ticketService.ResultStruct[] i2 in i1)
       {
         cout &lt;&lt; “Field:” &lt;&lt; i2.field &lt;&lt; endl;
         cout &lt;&lt; “Value:” &lt;&lt; i2.value &lt;&lt; endl;

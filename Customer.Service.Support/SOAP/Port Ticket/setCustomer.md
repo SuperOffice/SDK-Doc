@@ -61,14 +61,14 @@ string customerId = “10”; // Hard coded customer id for example
 if(errorCode.Equals(“0”))
 {
 
-       ticket.ValuePairStruct\[\] customerValues = new ticket.ValuePairStruct\[2\];
+       ticket.ValuePairStruct[] customerValues = new ticket.ValuePairStruct[2];
 
-       customerValues\[0\] = new ticket.ValuePairStruct();
-       customerValues\[0\].field = "name";
-       customerValues\[0\].value = "Johnny X";
-       ustomerValues\[1\] = new customer.ValuePairStruct();
-       customerValues\[1\].field = "company";
-       customerValues\[1\].value = "23";
+       customerValues[0] = new ticket.ValuePairStruct();
+       customerValues[0].field = "name";
+       customerValues[0].value = "Johnny X";
+       customerValues[1] = new customer.ValuePairStruct();
+       customerValues[1].field = "company";
+       customerValues[1].value = "23";
 
        string ret = ticketService.setCustomer(sessionKey, customerId, customerValues);
 

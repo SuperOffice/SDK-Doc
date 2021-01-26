@@ -49,24 +49,27 @@ Gets the detailed information about an FAQ entry.
 *Example*:
 ```
 customer.customerService custService = new customer.customerService();
+string sessionKey;
+if(custService.login("test","test", out sessionKey) == "0")
+{
+  string title;
 
-string title;
+  string question;
 
-string question;
+  string answer;
 
-string answer;
+  customer.FaqLinkStruct[] links;
 
-customer.FaqLinkStruct\[\] links;
+  string[] attachmentIds;
 
-string\[\] attachmentIds;
+  bool hasHtml;
 
-bool hasHtml;
+  string score;
 
-string score;
+  customer.FaqParentStruct[] faqParents;
 
-customer.FaqParentStruct\[\] faqParents;
+  string entryId = "2";
 
-string entryId = "2";
-
-string res = custService.faq\_getEntry("", entryId, out title, out question, out answer, out links, out attachmentIds, out hasHtml, out score, out faqParents);
+  string res = custService.faq_getEntry(sessionKey, entryId, out title, out question, out answer, out links, out attachmentIds, out hasHtml, out score, out faqParents);
+}
 ```

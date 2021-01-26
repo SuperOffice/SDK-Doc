@@ -49,11 +49,11 @@ string errorCode = ticketService.login("egon", "banken", out sessionKey);
 if (errorCode.Equals(“0”)
 {
 
-  ticket.ValuePairStruct\[\] values = new ticket.ValuePairStruct\[1\];
+  ticket.ValuePairStruct[] values = new ticket.ValuePairStruct[1];
 
-  values\[0\] = new ticket.ValuePairStruct();
-  values\[0\].field = “ticket.title”;
-  values\[0\].value = “New title”;
+  values[0] = new ticket.ValuePairStruct();
+  values[0].field = “ticket.title”;
+  values[0].value = “New title”;
 
   ticketService.setTicket(sessionKey,”70”, values);
 

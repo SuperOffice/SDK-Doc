@@ -18,25 +18,25 @@ This method is used to find one or more requests (tickets), based on a search cr
 
   * ticket.title
 
-  * ticket.created\_at
+  * ticket.created_at
 
   * ticket.category
 
   * ticket.status
 
-  * ticket.replied\_at
+  * ticket.replied_at
 
-  * ticket.closed\_at
+  * ticket.closed_at
 
   * ticket.priority
 
-  * ticket.read\_by\_customer
+  * ticket.read_by_customer
 
-  * ticket.has\_attachment
+  * ticket.has_attachment
 
-  * ticket.last\_changed
+  * ticket.last_changed
 
-  * ticket.\[extra field name\]
+  * ticket.[extra field name]
 
  
 
@@ -68,25 +68,25 @@ If you specify an illegal operator, the search criteria will be ignored. Valid o
 
   * ticket.title
 
-  * ticket.created\_at
+  * ticket.created_at
 
   * ticket.category
 
   * ticket.status
 
-  * ticket.replied\_at
+  * ticket.replied_at
 
-  * ticket.closed\_at
+  * ticket.closed_at
 
   * ticket.priority
 
-  * ticket.read\_by\_customer
+  * ticket.read_by_customer
 
-  * ticket.has\_attachment
+  * ticket.has_attachment
 
   * ticket.author
 
-  * ticket.created\_by
+  * ticket.created_by
 
   * customer.id
 
@@ -94,7 +94,7 @@ If you specify an illegal operator, the search criteria will be ignored. Valid o
 
   * customer.lastname
 
-  * ticket.\[extra field name\]
+  * ticket.[extra field name]
 
  
 
@@ -118,20 +118,20 @@ string errorCode = custService.login(“johndoe”,”pw”,out sessionKey);
 
 if(errorCode.Equals(“0”))
 {
-    customer.CriteriaStruct\[\] ticketSearchCriteria = new customer.CriteriaStruct\[1\];
+    customer.CriteriaStruct[] ticketSearchCriteria = new customer.CriteriaStruct[1];
 
-    string\[\] ticketSearchFields = new string\[2\];
+    string[] ticketSearchFields = new string[2];
 
-    customer.ResultStruct\[\]\[\] ticketSearchResult;
+    customer.ResultStruct[][] ticketSearchResult;
 
-    ticketSearchCriteria\[0\] = new customer.CriteriaStruct();
-    ticketSearchCriteria\[0\].field = "ticket.id";
-    ticketSearchCriteria\[0\].op = "OperatorGt";
-    ticketSearchCriteria\[0\].value = "0";
+    ticketSearchCriteria[0] = new customer.CriteriaStruct();
+    ticketSearchCriteria[0].field = "ticket.id";
+    ticketSearchCriteria[0].op = "OperatorGt";
+    ticketSearchCriteria[0].value = "0";
 
-    ticketSearchFields\[0\] = "ticket.id";
-    ticketSearchFields\[1\] = "ticket.title";
+    ticketSearchFields[0] = "ticket.id";
+    ticketSearchFields[1] = "ticket.title";
 
-    custService.findTickets(Session\["sessionKey"\].ToString(), ticketSearchCriteria, ticketSearchFields, out ticketSearchResult);
+    custService.findTickets(sessionKey.ToString(), ticketSearchCriteria, ticketSearchFields, out ticketSearchResult);
 }
 ```

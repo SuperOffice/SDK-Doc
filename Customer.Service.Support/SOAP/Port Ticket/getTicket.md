@@ -72,12 +72,12 @@ string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 if (errorCode.Equals(“0”)
 {
 
-  string\[\] ticketFields = new string\[1\];
-  ticketFields\[0\] = ”ticket.title”;
+  string[] ticketFields = new string[1];
+  ticketFields[0] = ”ticket.title”;
 
-  ticket.ResultStruct\[\] ticketInfo;
+  ticket.ResultStruct[] ticketInfo;
 
-  int\[\] messageIds;
+  int[] messageIds;
 
   getTicket(sessionKey,”10”,ticketFields, out ticketInfo, out messageIds);
   

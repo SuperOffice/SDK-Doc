@@ -54,15 +54,15 @@ string sessionKey;
 
 ticketService.login(“Kai”,”Akk”, out sessionKey);
 
-string\[\] messageFields = new string\[0\];
+string[] messageFields = new string[0];
 
-ticketService.ResultStruct\[\] messageResult;
-ticketService.AttachmentInfoStruct\[\] attachments;
+ticketService.ResultStruct[] messageResult;
+ticketService.AttachmentInfoStruct[] attachments;
 ticketService.getMessage(sessionKey,”12324”,messageFields, out messageResult, out attachmentInfoStruct);
 
-System.Byte\[\] data;
+System.Byte[] data;
 
-string res = ticketService.getAttachment(sessionKey, attachments\[0\].attachmentId, attachments\[0\].attachmentKey, out attachmentName, out contentType, out data);
+string res = ticketService.getAttachment(sessionKey, attachments[0].attachmentId, attachments[0].attachmentKey, out attachmentName, out contentType, out data);
 
 if(res == ”0”)
 {

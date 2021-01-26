@@ -63,14 +63,14 @@ string companyId = “10”; // Hard coded company id for example
 if(errorCode.Equals(“0”))
 {
 
-       ticket.ValuePairStruct\[\] companyValues = new ticket.ValuePairStruct\[2\];
+       ticket.ValuePairStruct[] companyValues = new ticket.ValuePairStruct[2];
 
-       companyValues\[0\] = new ticket.ValuePairStruct();
-       companyValues\[0\].field = "name";
-       companyValues\[0\].value = "Libery Communications";
-       companyValues\[1\] = new customer.ValuePairStruct();
-       companyValues\[1\].field = "company";
-       companyValues\[1\].value = "23";
+       companyValues[0] = new ticket.ValuePairStruct();
+       companyValues[0].field = "name";
+       companyValues[0].value = "Libery Communications";
+       companyValues[1] = new customer.ValuePairStruct();
+       companyValues[1].field = "company";
+       companyValues[1].value = "23";
 
        string ret = ticketService.setCompany(sessionKey, companyId, companyValues);
 
