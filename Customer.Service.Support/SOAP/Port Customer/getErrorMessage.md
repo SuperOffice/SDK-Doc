@@ -21,31 +21,25 @@ Finds the descriptive text for an error. These messages are linked to the sessio
  
 
 *Example*:
-
+```
 string sessionKey;
 
 customer.customerService custService = new customer.customerService();
 
 custService.login("test","test",out sessionKey);
 
-string\[\] customerFields = new string\[1\];
+string[] customerFields = new string[1];
 
-customerFields\[0\]="kuztumer.name";
+customerFields[0]="kuztumer.name";
 
-customer.ResultStruct\[\] customerResult;
+customer.ResultStruct[] customerResult;
 
-string\[\] customerEmail;
+string[] customerEmail;
 
-string res = custService.getCustomer(sessionKey,
-
-                   customerFields,
-                   out customerResult,
-                   out customerEmail);
+string res = custService.getCustomer(sessionKey, customerFields, out customerResult, out customerEmail);
 
 if(res =="0")
-
        textBox1.Text = "OK";
-
 else
-
        textBox1.Text = custService.getErrorMessage(sessionKey);
+```

@@ -24,40 +24,35 @@ Will retrieve all notification to the current user that has been generated since
 
 * userNotifications   - All notifications with the following fields:
 
-o   type                 - type of notification, see appendix
+  * type                 - type of notification, see appendix
 
-o   createdBy        - the id of the user that generated this notification
+  * createdBy        - the id of the user that generated this notification
 
-o   ticketId           - the ticketId associated with this notification if any
+  * ticketId           - the ticketId associated with this notification if any
 
-o   message           - the text message.
+  * message           - the text message.
 
  
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
-
-                   "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
  
-
 if (errorCode.Equals(“0”)
-
 {
 
   string notifyKey;
 
   allocUserNotifications(sessionKey, “MyClient”,out notifyKey);
 
-  ticket.NotificationStruct\[\] notifications;
+  ticket.NotificationStruct[] notifications;
 
   getUserNotfications(sessionKey, notifyKey, out notifications);
 
 }
+```

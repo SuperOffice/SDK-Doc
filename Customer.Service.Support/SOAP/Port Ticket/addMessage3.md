@@ -57,41 +57,32 @@ Please note that *addMessage3* will not affect ticket.status, this can be set us
  
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
-
-                   "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
 string replyTemplateId = "10"; // hard coded id of template
 
-string \[\] to = \["[hjelms@ejournal.no](mailto:hjelms@ejournal.no)"\];
+string [] to = "[hjelms@ejournal.no](mailto:hjelms@ejournal.no)";
 
-string \[\] cc;
+string [] cc;
 
-string \[\] bcc;
+string [] bcc;
 
- 
-
- 
 
 if (errorCode.Equals("0"))
+{
 
-    {
+  string[] attachmentIds = new string[1];
 
-  string\[\] attachmentIds = new string\[1\];
-
-  attachmentIds\[0\]="62";
+  attachmentIds[0]="62";
 
   string messageId;
 
-  string error = ticketService.addMessage(sessionKey,
-
+  string error = ticketService.addMessage3(sessionKey,
      "",             // Empty body
      replyTemplateId,
      "1602",         //ticketId
@@ -102,4 +93,5 @@ if (errorCode.Equals("0"))
      cc,
      bcc,
      out messageId);
-    }
+}
+```

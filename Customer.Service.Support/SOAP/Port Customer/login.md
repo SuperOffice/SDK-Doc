@@ -25,9 +25,10 @@ This method is used to log in a customer. Almost all the other methods require t
  
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService();
 
 string sessionKey;
 
 string errorCode = custService.login(“johndoe”,”pw”,out sessionKey);
+```

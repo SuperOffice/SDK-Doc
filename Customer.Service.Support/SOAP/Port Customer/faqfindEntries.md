@@ -14,7 +14,7 @@ This method will search for a FAQ entry. The search words are given as a string,
 
 Windows:
 
-C:\\ejournal\\bin\\ejournalCron -force \[mydomain.com\]
+C:\\Service\\bin\\ejournalCron -force \[mydomain.com\]
 
 Linux:
 
@@ -42,34 +42,33 @@ Replace \[mydomain.com\] with the domain eJournal is registered on. On some syst
 
 * faqEntries  - An array of the faq entries. The struct that is returned contains the following elements:
 
-o   id   - The FAQ entry ID
+  * id   - The FAQ entry ID
 
-o   question                 - The question.
+  * question                 - The question.
 
-o   title                        - Title of the entry.
+  * title                        - Title of the entry.
 
-o   hasHtml                 - 1 if this FAQ entry is HTML formatted, 0 if it is plain text.
+  * hasHtml                 - 1 if this FAQ entry is HTML formatted, 0 if it is plain text.
 
-o   score                      - The score this entry has achieved.
+  * score                      - The score this entry has achieved.
 
-o   fullName               - The name of the entry including all parent folders.
+  * fullName               - The name of the entry including all parent folders.
 
-o   parentId                - The id of the folder this entry is stored in. -1 if top node.
+  * parentId                - The id of the folder this entry is stored in. -1 if top node.
 
  
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService();
 
-customer.FaqEntryStruct\[\] myFaqEntries;
+string sessionKey;
+if(custService.login("test","test", out sessionKey) == "0")
+{
+       customer.FaqEntryStruct[] myFaqEntries;
+       string ret = custService.faq_findEntries(sessionKey, "public", "-1", out myFaqEntries);
 
-string ret = custService.faq\_findEntries("",
-
-                   "public",
-                   "-1",
-                   out myFaqEntries);
-
-if(ret == “0”)
-
-       //myFaqEntries now contains the results.
+       if(ret == “0”)
+              //myFaqEntries now contains the results.
+}
+```

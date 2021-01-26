@@ -14,27 +14,27 @@ This method will set/change one or more values on the logged in customer. The va
 
 * customerValues     - An array of **ValuePairStruct** consisting of a field and a value. The field indicate which customer field you want to set, and in value you set the value for this field. It is important to only use legal fields, else the whole method will fail. To set an external extra field on customer, use x\_&lt;nr&gt; where nr = number of the extra fields. Use the method **getExtraFields()** to find available extra fields. Other legal fields are:
 
-o   name
+  * name
 
-o   display\_name
+  * display\_name
 
-o   firstname
+  * firstname
 
-o   lastname
+  * lastname
 
-o   phone
+  * phone
 
-o   cellphone
+  * cellphone
 
-o   note
+  * note
 
-o   password
+  * password
 
-o   email (will add the email address)
+  * email (will add the email address)
 
-o   language
+  * language
 
-o   company (the id of the company)
+  * company (the id of the company)
 
  
 
@@ -45,26 +45,23 @@ o   company (the id of the company)
  
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService();
 
 string errorCode = custService.login(“johndoe”,”pw”,out sessionKey);
 
 if(errorCode.Equals(“0”))
-
 {
+       customer.ValuePairStruct[] customerValues = new customer.ValuePairStruct[2];
 
-customer.ValuePairStruct\[\] customerValues = new customer.ValuePairStruct\[2\];
+       customerValues[0] = new customer.ValuePairStruct();
+       customerValues[0].field = "name";
+       customerValues[0].value = "Johnny X";
+       customerValues[1] = new customer.ValuePairStruct();
+       customerValues[1].field = "email";
+       customerValues[1].value = "johnny@x.com";
 
- 
-
-       customerValues\[0\] = new customer.ValuePairStruct();
-       customerValues\[0\].field = "name";
-       customerValues\[0\].value = "Johnny X";
-       customerValues\[1\] = new customer.ValuePairStruct();
-       customerValues\[1\].field = "email";
-       customerValues\[1\].value = "johnny@x.com";
-
-string ret = custService.setCustomer(sessionKey, customerValues);
-
+       string ret = custService.setCustomer(sessionKey, customerValues);
 }
+
+```

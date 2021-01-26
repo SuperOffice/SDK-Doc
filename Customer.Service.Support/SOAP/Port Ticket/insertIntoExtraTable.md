@@ -18,9 +18,9 @@ Inserts or updates a row in an extra table.
 
 * Column values      - An array of each column and new value for the row
 
-o   Name   - The id of the column
+  * Name   - The id of the column
 
-o   Value   - The new value
+  * Value   - The new value
 
  
 
@@ -32,40 +32,32 @@ o   Value   - The new value
 
 * rowId                    - The row id of the inserted or updated row.
 
-* *
+
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
-
-                   "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
  
-
 if (errorCode.Equals(“0”))
-
 {
 
-  ticket.ValuePairStruct\[\] values = new ticket.ValuePairStruct\[1\];
+  ticket.ValuePairStruct[] values = new ticket.ValuePairStruct[1];
 
-  values\[0\] = new ticket.ValuePairStruct();
-
-  values\[0\].field = "27";   //extra field id
-
-  values\[0\].value = "123";  //new value
+  values[0] = new ticket.ValuePairStruct();
+  values[0].field = "27";   //extra field id
+  values[0].value = "123";  //new value
 
   string rowId = "-1";
 
   errorCode = t.insertIntoExtraTable(sessionKey,
-
     "10",
     ref rowId, // rowId will be updated with the new ID
     values);
 
 }
+```

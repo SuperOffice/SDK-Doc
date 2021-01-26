@@ -21,23 +21,19 @@ Finds the descriptive text for an error. These messages are linked to the sessio
  
 
 *Example*:
-
+```
 string sessionKey;
 
 admin.adminService adminService = new admin.adminService();
 
 ticket.ticketService ticketService = new ticket.ticketService();
 
- 
-
 ticketService.login("test","test",out sessionKey);
 
-string res = \[some method()\]
+string res = some_method();
 
 if(res =="0")
-
        textBox1.Text = "OK";
-
 else
-
        textBox1.Text = adminService.getErrorMessage(sessionKey);
+```

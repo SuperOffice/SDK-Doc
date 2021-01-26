@@ -10,63 +10,63 @@ This method will search for tickets/requests and return information about the ti
 
 Valid fields for search criterias  and search fields are:
 
-ticket.id
+* ticket.id
 
-ticket.title
+* ticket.title
 
-ticket.created\_at
+* ticket.created\_at
 
-ticket.category
+* ticket.category
 
-ticket.status
+* ticket.status
 
-ticket.replied\_at
+* ticket.replied\_at
 
-ticket.closed\_at
+* ticket.closed\_at
 
-ticket.priority
+* ticket.priority
 
-ticket.read\_by\_customer
+* ticket.read\_by\_customer
 
-ticket.has\_attachment
+* ticket.has\_attachment
 
-ticket.last\_changed
+* ticket.last\_changed
 
-ticket.author
+* ticket.author
 
-ticket.created\_by
+* ticket.created\_by
 
-ticket.owned\_by
+* ticket.owned\_by
 
-customer.id (note that this only will match the primary customer)
+* customer.id (note that this only will match the primary customer)
 
-customer.firstname
+* customer.firstname
 
-customer.lastname
+* customer.lastname
 
-and any extra field.
+* and any extra field.
 
  
 
 Valid operator for search criterias are:
 
-OperatorContains
+* OperatorContains
 
-OperatorBeginsWith
+* OperatorBeginsWith
 
-OperatorEquals
+* OperatorEquals
 
-OperatorGt
+* OperatorGt
 
-OperatorLt
+* OperatorLt
 
-OperatorGte
+* OperatorGte
 
-OperatorLte
+* OperatorLte
 
-OperatorNotEqualsOperatorIn (Only valid for integer/relation fields. Example value: 1,2-4,8-10)
+* OperatorNotEqualsOperatorIn (Only valid for integer/relation fields. Example value: 1,2-4,8-10)
 
-OperatorNotIn
+* OperatorNotIn
 
  
 
@@ -97,49 +97,32 @@ OperatorNotIn
  
 
 *Example*:
-
-ticket.ticketService ticketService = new ticket.ticketService();
-
- 
+```
+ticket.ticketService ticketService = new * ticket.ticketService();
 
 string sessionKey;
 
- 
-
-string errorCode = ticketService.login("tommy",
-
-                   "myPwd", out sessionKey);
+string errorCode = ticketService.login("tommy", "myPwd", out sessionKey);
 
  
-
 if (errorCode.Equals(“0”)
-
 {
 
-  ticket.CriteriaStruct\[\] searchCriteria = new searchCriteria\[1\];
+  ticket.CriteriaStruct[] searchCriteria = new searchCriteria[1];
 
-  searchCriteria\[0\].field = “ticket.id”;
+  searchCriteria[0].field = “ticket.id”;
+  searchCriteria[0].op    = “OperatorLt”;
+  searchCriteria[0].value = “10”;
 
-  searchCriteria\[0\].op    = “OperatorLt”;
+  string[] fields = new string[2];
+  fields[0] = “ticket.id”;
+  fields[1] = “ticket.title”;
 
-  searchCriteria\[0\].value = “10”;
+  ticket.ResultStruct[][] result;
 
-  string\[\] fields = new string\[2\];
-
-  fields\[0\] = “ticket.id”;
-
-  fields\[1\] = “ticket.title”;
-
-  ticket.ResultStruct\[\]\[\] result;
-
-  if(ticketService.findTickets(sessionKey, 
-
-                            searchCriteria, fields, “100”,
-                            “ticket.id”,true, out result)== “0”);
-
+  if(ticketService.findTickets(sessionKey, searchCriteria, fields, “100”, “ticket.id”,true, out result)== “0”);
   {
-
-    foreach(i1 ResultStruct\[\] in result)
+    foreach(i1 ResultStruct[] in result)
     {
       cout &lt;&lt; “Row\\n”;
       foreach(i2 ResultStruct in i1)
@@ -152,5 +135,6 @@ if (errorCode.Equals(“0”)
   }
 
 }
+```
 
  

@@ -20,24 +20,20 @@ Creates a new empty customer.
 
 * customerId      - The Id of the new customer
 
-* *
+
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
 
  
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
-                   "norges bank", out sessionKey);
 
- 
-
-if (errorCode.Equals(“0”)
-
+if(errorCode.Equals(“0”)
 {
 
   string customerId;
@@ -45,3 +41,4 @@ if (errorCode.Equals(“0”)
   ticketService.newCustomer(sessionKey, out customerId);
 
 }
+```

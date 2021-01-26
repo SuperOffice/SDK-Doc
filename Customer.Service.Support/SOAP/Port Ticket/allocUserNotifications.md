@@ -25,29 +25,24 @@ To avoid that several clients receives user notifications (new request, new chat
  
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
-
-                   "norges bank", out sessionKey);
-
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
  
 
 if (errorCode.Equals(“0”)
-
-    {
+{
 
   string notifyKey;
 
   allocUserNotifications(sessionKey, “MyClient”,out notifyKey);
 
-  ticket.NotificationStruct\[\] notifications;
+  ticket.NotificationStruct[] notifications;
 
   getUserNotfications(sessionKey, notifyKey, out notifications);
 
-    }
+}
+```

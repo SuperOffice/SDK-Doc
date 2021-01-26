@@ -18,33 +18,29 @@ This method is used to retrieve one request (ticket). You are only allowed to se
 
 * ticketFields           - An array of strings indicating all fields to be retrieved for this request. If you specify an illegal field, it will be ignored. Valid fields are:
 
-o   ticket.id
+  * ticket.id
 
-o   ticket.title
+  * ticket.title
 
-o   ticket.created\_at
+  * ticket.created\_at
 
-o   ticket.category
+  * ticket.category
 
-o   ticket.status
+  * ticket.status
 
-o   ticket.replied\_at
+  * ticket.replied\_at
 
-o   ticket.closed\_at
+  * ticket.closed\_at
 
-o   ticket.priority
+  * ticket.priority
 
-o   ticket.read\_by\_customer
+  * ticket.read\_by\_customer
 
-o   ticket.has\_attachment
+  * ticket.has\_attachment
 
-o   ticket\_last\_changed
+  * ticket\_last\_changed
 
- 
-
-Extra fields are also valid on the form:
-
-o   ticket.x\_\[extra field id\]
+  * ticket.x\_\[extra field id\] - Extra fields are also valid on the form
 
 *Out Parameters*:
 
@@ -54,10 +50,9 @@ o   ticket.x\_\[extra field id\]
 
 * messageIds            An array of integers of all external messages connected to this request.
 
-* *
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService();
 
 string sessionKey;
@@ -65,44 +60,34 @@ string sessionKey;
 string errorCode = custService.login(“johndoe”,”pw”,out sessionKey);
 
 if(errorCode.Equals(“0”))
+{
+   // The fields we want to get
+   string[] ticketFields = new string[3];
+   ticketFields[0] = "ticket.title";
+   ticketFields[1] = "ticket.created_at";
+   ticketFields[2] = "ticket.category";
 
-    {
-       // The fields we want to get
-       string\[\] ticketFields = new string\[3\];
-       ticketFields\[0\] = "ticket.title";
-       ticketFields\[1\] = "ticket.created\_at";
-       ticketFields\[2\] = "ticket.category";
+   // The return values goes here
+   customer.ResultStruct[] ticketResult;
+   string[] messageIds;
 
- 
+   // Get request 1012
 
-       // The return values goes here
-       customer.ResultStruct\[\] ticketResult;
-       string\[\] messageIds;
+   errorCode = custService.getTicket(sessionKey, “1012”, ticketFields, out ticketResult, out messageIds);
 
- 
+   if (errorCode.Equals(“0”))
+   {
+      foreach (string i in messageIds)
+      \\Here *i* is running through all message id’s
 
-       // Get request 1012
-
-errorCode = custService.getTicket(sessionKey, “1012”, ticketFields, out ticketResult, out messageIds);
-
- 
-
-       if (errorCode.Equals(“0”))
-       {
-          foreach (string i in messageIds)
-            \[Here *i* is running through all message id’s\]
-
- 
-
-          if (ticketFields\[0\].field.Equals(“ticket.title”))
-            \[Here ticketFields\[0\].value is the title of the request\]
-       }
-       else
-          string errorMsg = custService.getErrorMessage(sessionKey);
-    }
-
+      if (ticketFields[0].field.Equals(“ticket.title”))
+      \\Here ticketFields[0].value is the title of the request
+   }
+   else
+      string errorMsg = custService.getErrorMessage(sessionKey);
+}
 else
-
-    {
-       \[Could not login customer\]
-    }
+{
+   \\Could not login customer
+}
+```

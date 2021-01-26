@@ -20,33 +20,32 @@ Gets all the available priorities. The lowest ordered priority will be first in 
 
 * priorities    - A sorted array of *PriorityStruct* with lowest sortOrder first. Elements are:
 
-o   id         - internal ID of the priority
+  * id         - internal ID of the priority
 
-o   name    - name of the priority
+  * name    - name of the priority
 
-o   sortOrder         - Sort order number, where higher number indicates higher priority.
+  * sortOrder         - Sort order number, where higher number indicates higher priority.
 
                        
 
 *Example*:
-
+```
 string sessionKey;
 
-customer.customerService custService = new customer.customerService();
+ticket.ticketService ticketService = new ticket.ticketService();
 
-if(custService.login("test","test",out sessionKey)=="0")
-
+if(ticketService.login("test","test",out sessionKey)=="0")
 {
 
-       customer.PriorityStruct\[\] priorities;
-       custService.getPriorities(sessionKey, out priorities);
+       ticket.PriorityStruct[] priorities;
+       ticketService.getPriorities(sessionKey, out priorities);
        string newValue="";
-       foreach(customer.PriorityStruct i in priorities)
+       foreach(ticket.PriorityStruct i in priorities)
        {
           newValue += i.name +"\\r\\n";
        }
        textBox1.Text = newValue;
 
 }
-
+```
  

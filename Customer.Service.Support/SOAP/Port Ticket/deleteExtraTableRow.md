@@ -23,23 +23,17 @@ Deletes a row from an extra table if the row exists.
 * *
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
-
-                   "norges bank", out sessionKey);
-
- 
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
 if (errorCode.Equals(“0”))
-
-    {
+{
 
   errorCode = t.deleteExtraTableRows(sessionKey,"10",rowId);
 
-    }
+}
+```

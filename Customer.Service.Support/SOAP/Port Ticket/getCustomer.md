@@ -16,31 +16,31 @@ Retrieve information about a customer. You specify which fields you wish to retr
 
 * customerFields      - A list of the fields you wish to retrieve. You can specify standard fields or extra fields. Extra fields are given on the form “customer.x\_2” where the number is the ID on the extra field. Legal standard fields are:
 
-o   customer.id
+  *   customer.id
 
-o   customer.name
+  *   customer.name
 
-o   customer.firstname
+  *   customer.firstname
 
-o   customer.lastname
+  *   customer.lastname
 
-o   customer.phone
+  *   customer.phone
 
-o   customer.cellphone
+  *   customer.cellphone
 
-o   customer.note
+  *   customer.note
 
-o   customer.language
+  *   customer.language
 
-o   customer.username
+  *   customer.username
 
-o   customer.extTable
+  *   customer.extTable
 
-o   customer.extKey
+  *   customer.extKey
 
-o   customer.company
+  *   customer.company
 
-o   customer.password
+  *   customer.password
 
  
 
@@ -55,30 +55,24 @@ o   customer.password
  
 
 *Example*:
-
+```
 string sessionKey;
 
 ticket.ticketService ticketService = new ticket.ticketService();
 
 if(ticketService.login("test","test", out sessionKey) == "0")
-
 {
 
-       string\[\] customerFields = new string\[4\];
-       customerFields\[0\]="customer.name";
-       customerFields\[1\]="customer.phone";
-       customerFields\[2\]="customer.note";
-       customerFields\[3\]="customer.cellphone";
+  string[] customerFields = new string[4];
+  customerFields[0]="customer.name";
+  customerFields[1]="customer.phone";
+  customerFields[2]="customer.note";
+  customerFields[3]="customer.cellphone";
 
- 
-
-       ticket.ResultStruct\[\] customerResult;
-       string \[\] customerEmail;
-                                                             
-       string res = ticketService.getCustomer(sessionKey,
-                                    “22”,
-                                    customerFields,
-                                    out customerResult,
-                                    out customerEmail);
+  ticket.ResultStruct[] customerResult;
+  string [] customerEmail;
+                                                        
+  string res = ticketService.getCustomer(sessionKey, “22”, customerFields, out customerResult, out customerEmail);
 
 }
+```

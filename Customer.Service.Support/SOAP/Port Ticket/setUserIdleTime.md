@@ -20,24 +20,17 @@ Sets the number of seconds a user has been idle, ie. no inputs from keyboard or 
 
 * errorCode  - See appendix for error codes
 
-* *
+
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
-
-                   "norges bank", out sessionKey);
-
- 
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
 if (errorCode.Equals(“0”)
-
 {
 
   int it = GetUserIdleTime() //your own method for finding idle time
@@ -45,3 +38,4 @@ if (errorCode.Equals(“0”)
   ticketService.setUserIdleTime(sessionKey, idleTime);
 
 }
+```

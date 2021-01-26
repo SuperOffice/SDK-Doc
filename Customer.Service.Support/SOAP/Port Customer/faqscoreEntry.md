@@ -25,11 +25,15 @@ Enter a users score to an FAQ entry. The total score is weighted of all votes.
  
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService(); 
+string sessionKey;
+if(custService.login("test","test", out sessionKey) == "0")
+{
+    string entryId="2";
 
-string entryId="2";
+    string score = "8";
 
-string score = "8";
-
-string res = custService.faq\_scoreEntry("",entryId,score);
+    string res = custService.faq_scoreEntry(sessionKey,entryId,score);
+}
+```

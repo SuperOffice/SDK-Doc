@@ -18,41 +18,33 @@ Returns all active tickets for the user and their read/unread status.
 
 * ticketStatusResult - An array containing the active tickets:
 
-o   ticketId – the ticket id
+* ticketId – the ticket id
 
-o   readStatus – {1=green (read), 2=yellow(new info), 3=red(unread)}
+* readStatus – {1=green (read), 2=yellow(new info), 3=red(unread)}
 
  
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
-                   "norges bank", out sessionKey);
-
- 
 
 if (errorCode.Equals(“0”)
-
 {
 
-  ticket.ActiveTicketsStruct\[\] tickets;
+  ticket.ActiveTicketsStruct[] tickets;
 
   getActiveTicketsStatus(sessionKey, out tickets);
 
-       foreach(ticket.ActiveTicketsStruct i in tickets)
-
+  foreach(ticket.ActiveTicketsStruct i in tickets)
   {
-
     cout &lt;&lt; “ticket ID:” &lt;&lt; i.ticketId &lt;&lt; endl;
     cout &lt;&lt; “read status:” &lt;&lt; i.readStatus &lt;&lt; endl;
-
   }
 
 }
+```

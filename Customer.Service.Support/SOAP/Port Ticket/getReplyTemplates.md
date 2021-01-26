@@ -22,11 +22,11 @@ Gets the id and name of all reply templates under a given folder. Useful for get
 
 * replyTemplates      - An array of *ReplyTemplateStruct*. Elements are:
 
-o   id                     - Id of the reply template.
+  * id                     - Id of the reply template.
 
-o   description      - Description of the reply template
+  * description      - Description of the reply template
 
-o   folder              - Folder id the reply template is in.
+  * folder              - Folder id the reply template is in.
 
 * description                        - The description of the given folder
 
@@ -35,37 +35,27 @@ o   folder              - Folder id the reply template is in.
                        
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
-
-                   "norges bank", out sessionKey);
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
  
-
 if (errorCode.Equals("0")
-
 {
+   ticket.ReplyTemplateStruct[] replyTemplates;
+   ticketService.getReplyTemplates(sessionKey, -1);
 
-       ticket.ReplyTemplateStruct\[\] replyTemplates;
-       ticketService.getReplyTemplates(sessionKey, -1);
+   // assume this has been populated, see example for
+   // getReplyTemplateFolders
+   TreeView tree;
 
- 
-
-       // assume this has been populated, see example for
-       // getReplyTemplateFolders
-       TreeView tree;
-
- 
-
-       foreach(ticket.ReplyTemplateStruct rt in replyTemplates)
-       {
-          tree.addNode(rt.id, rt.description, rt.folder);
-       }
+   foreach(ticket.ReplyTemplateStruct rt in replyTemplates)
+   {
+      tree.addNode(rt.id, rt.description, rt.folder);
+   }
 
 }
+```

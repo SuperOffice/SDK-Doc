@@ -2,8 +2,8 @@
 SortOrder="139"
 />
 
-This port contains method used manipulate requests, customers and companies in eJournal. It will cover the functionality available when clicking “Request management” in eJournal RMS.
+This port contains method used manipulate requests, customers and companies in Service. It will cover the functionality available when clicking “Request management” in Service.
 
-The mehods takes the username and password of an eJournal user as parameter. This user must have administration rights in eJournal to be allowed to execute the methods.
+The mehods takes the username and password of an Service user as parameter. This user must have administration rights in Service to be allowed to execute the methods.
 
 1. autolist

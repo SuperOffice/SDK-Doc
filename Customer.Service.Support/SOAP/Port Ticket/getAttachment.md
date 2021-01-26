@@ -26,20 +26,20 @@ Retrieves an attachment. Attachment can be linked to various types of eJournal e
 
 * contentType          - The mime like content type of the file. Popular content types are:
 
-o   “text/html”                                       .md .md
+  * “text/html”                                       .md .md
 
-o   “application/msword”                      .doc
+  * “application/msword”                      .doc
 
-o   “application/octet-stream”               .bin .exe
+  * “application/octet-stream”               .bin .exe
 
-o   “application/x-zip”                           .zip
+  * “application/x-zip”                           .zip
 
 * data                                   The attachment binary data.
 
  
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
 
 string attachmentId = "34";
@@ -54,31 +54,20 @@ string sessionKey;
 
 ticketService.login(“Kai”,”Akk”, out sessionKey);
 
-string\[\] messageFields = new string\[0\];
+string[] messageFields = new string[0];
 
-ticketService.ResultStruct\[\] messageResult;
+ticketService.ResultStruct[] messageResult;
+ticketService.AttachmentInfoStruct[] attachments;
+ticketService.getMessage(sessionKey,”12324”,messageFields, out messageResult, out attachmentInfoStruct);
 
-ticketService.AttachmentInfoStruct\[\] attachments;
+System.Byte[] data;
 
-ticketService.getMessage(sessionKey,”12324”,messageFields,
-
-                         out messageResult,
-                         out attachmentInfoStruct);
-
-System.Byte\[\] data;
-
-string res = ticketService.getAttachment(sessionKey,
-
-                   attachments\[0\].attachmentId,
-              attachments\[0\].attachmentKey,
-                   out attachmentName,
-                   out contentType,
-                   out data);
+string res = ticketService.getAttachment(sessionKey, attachments[0].attachmentId, attachments[0].attachmentKey, out attachmentName, out contentType, out data);
 
 if(res == ”0”)
-
 {
 
   ...StoreAttachmentToDisk...
 
 }
+```

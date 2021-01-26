@@ -12,39 +12,35 @@ If you specify an illegal search field, the field will be dropped in the output.
 
 All fields that are reachable by the eJournal dot syntax can be used. Refer to ejScript documentation for explanation of this format. Examples of valid fields for search criteria and search fields are:
 
-person.person\_id
+  * person.person\_id
 
-person.firstname
+  * person.firstname
 
-person.lastname
+  * person.lastname
 
-person.contact\_id.contact\_id (id of the company)
+  * person.contact\_id.contact\_id (id of the company)
 
-person.contact\_id.name (name of the company)
+  * person.contact\_id.name (name of the company)
 
-person.(Email-&gt;person\_id).email\_address
-
- 
-
- 
-
+  * person.(Email-&gt;person\_id).email\_address
+  
 Valid operators for search criteria are:
 
-OperatorContains
+* OperatorContains
 
-OperatorBeginsWith
+* OperatorBeginsWith
 
-OperatorEquals
+* OperatorEquals
 
-OperatorNotEquals
+* OperatorNotEquals
 
-OperatorLt (only for numerics)
+* OperatorLt (only for numerics)
 
-OperatorGt (only for numerics)
+* OperatorGt (only for numerics)
 
-OperatorLte (less than equal)
+* OperatorLte (less than equal)
 
-OperatorGte (greater than equal)
+* OperatorGte (greater than equal)
 
  
 
@@ -73,60 +69,42 @@ OperatorGte (greater than equal)
  
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
- 
-
-string errorCode = ticketService.login("tommy",
-
-                   "myPwd", out sessionKey);
+string errorCode = ticketService.login("tommy", "myPwd", out sessionKey);
 
  
-
 if (errorCode.Equals(“0”)
+{
 
-    {
+  ticket.CriteriaStruct[] searchCriteria = new    ticket.CriteriaStruct[1];
 
-  ticket.CriteriaStruct\[\] searchCriteria = new    ticket.CriteriaStruct\[1\];
+  searchCriteria[0] = new ticketService.CriteriaStruct();
+  searchCriteria[0].field = “customer.email”;
+  searchCriteria[0].op    = “OperatorEquals”;
+  searchCriteria[0].value = “hjelms@ejournal.no”;
 
-  searchCriteria\[0\] = new ticketService.CriteriaStruct();
+  string[] fields = new string[2];
+  fields[0] = “customer.id”;
+  fields[1] = “customer.email”;
 
-  searchCriteria\[0\].field = “customer.email”;
+  ticket.ResultStruct[][] result;
 
-  searchCriteria\[0\].op    = “OperatorEquals”;
-
-  searchCriteria\[0\].value = “hjelms@ejournal.no”;
-
-  string\[\] fields = new string\[2\];
-
-  fields\[0\] = “customer.id”;
-
-  fields\[1\] = “customer.email”;
-
-  ticket.ResultStruct\[\]\[\] result;
-
-  if(ticketService.findCustomers(sessionKey, 
-
-                            searchCriteria, fields, “100”,
-                            “customer.id”, true, out result)== “0”);
-
+  if(ticketService.findCustomers(sessionKey, searchCriteria, fields, “100”, “customer.id”, true, out result)== “0”);
   {
-
-    foreach(ticketService.ResultStruct\[\] i1 in result)
+    foreach(ticketService.ResultStruct[] i1 in result)
     {
       cout &lt;&lt; “Row\\n”;
-      foreach(ticketService.ResultStruct\[\] i2 in i1)
+      foreach(ticketService.ResultStruct[] i2 in i1)
       {
         cout &lt;&lt; “Field:” &lt;&lt; i2.field &lt;&lt; endl;
         cout &lt;&lt; “Value:” &lt;&lt; i2.value &lt;&lt; endl;
       }
     }
-
   }
 
-    }
+}
+```

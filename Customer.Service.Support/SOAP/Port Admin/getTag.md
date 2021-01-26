@@ -16,28 +16,23 @@ Get the tag that is used by eJournal to identify incoming emails with the correc
 
 *Out Parameters*:
 
-* tag                         - The configured tag for eJournal
+* tag                         - The configured tag for Service
 
  
 
 *Example*:
-
+```
 string sessionKey;
 
 admin.adminService adminService = new admin.adminService();
 
 ticket.ticketService ticketService = new ticket.ticketService();
 
- 
+string errorCode = ticketService.login("test","test",out sessionKey);
 
-ticketService.login("test","test",out sessionKey);
-
-string res = \[some method()\]
-
-if(res =="0")
-
-       textBox1.Text = "OK";
-
-else
-
-       textBox1.Text = adminService.getErrorMessage(sessionKey);
+if(errorCode.Equals("0"))
+{
+       string tag;
+       adminService.getTag(sessionKey, out tag);
+}
+```

@@ -32,10 +32,10 @@ System.IO.FileStream inFile;
 
 string fileName = "c:\\\\myfile.bin";
 
-byte\[\] binaryData;
+byte[] binaryData;
 inFile = new System.IO.FileStream(fileName, System.IO.FileMode.Open, System.IO.FileAccess.Read);
 
-binaryData = new Byte\[inFile.Length\];
+binaryData = new Byte[inFile.Length];
 long bytesRead = inFile.Read(binaryData, 0, (int)inFile.Length);
 inFile.Close();
 
@@ -49,10 +49,10 @@ string ret = custService.login("testuser","testpassword", out sessionKey);
 
 if(ret == "0")
 {
-       string attachmentID;
-       ret = custService.addAttachment(sessionKey, fileName, "application/octet-stream", base64String, out attachmentID);
-       //\[insert the attachment id in the new message here\]
-       custService.logout(sessionKey);
+  string attachmentID;
+  ret = custService.addAttachment(sessionKey, fileName, "application/octet-stream", base64String, out attachmentID);
+  //\[insert the attachment id in the new message here\]
+  custService.logout(sessionKey);
 }
 
 ret = custService.logout(sessionKey);

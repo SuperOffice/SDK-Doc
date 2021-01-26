@@ -14,95 +14,87 @@ This method is used to find one or more requests (tickets), based on a search cr
 
 * searchCriteria        - The search criteria consisting of a field, op and value. All are supplied as strings. If you specify an illegal field, it will be ignored. Valid fields are:
 
-o   ticket.id
+  * ticket.id
 
-o   ticket.title
+  * ticket.title
 
-o   ticket.created\_at
+  * ticket.created_at
 
-o   ticket.category
+  * ticket.category
 
-o   ticket.status
+  * ticket.status
 
-o   ticket.replied\_at
+  * ticket.replied_at
 
-o   ticket.closed\_at
+  * ticket.closed_at
 
-o   ticket.priority
+  * ticket.priority
 
-o   ticket.read\_by\_customer
+  * ticket.read_by_customer
 
-o   ticket.has\_attachment
+  * ticket.has_attachment
 
-o   ticket.last\_changed
+  * ticket.last_changed
 
- 
-
-Extra fields are also valid on the form:
-
-o   ticket.\[extra field name\]
+  * ticket.[extra field name]
 
  
 
 If you specify an illegal operator, the search criteria will be ignored. Valid operators are:
 
-o   OperatorContains
+  * OperatorContains
 
-o   OperatorBeginsWith
+  * OperatorBeginsWith
 
-o   OperatorEquals
+  * OperatorEquals
 
-o   OperatorGt
+  * OperatorGt
 
-o   OperatorLt
+  * OperatorLt
 
-o   OperatorGte
+  * OperatorGte
 
-o   OperatorLte
+  * OperatorLte
 
-o   OperatorIn (Only valid for integer/relation fields. Example value: 1,2-4,8-10)
+  * OperatorIn (Only valid for integer/relation fields. Example value: 1,2-4,8-10)
 
-o   OperatorNotIn
+  * OperatorNotIn
 
-o   OperatorEmpty
+  * OperatorEmpty
 
 * searchFields          - An array of strings indicating all fields to be retrieved for this request. If you specify an illegal field, it will be ignored. Valid fields are:
 
-o   ticket.id
+  * ticket.id
 
-o   ticket.title
+  * ticket.title
 
-o   ticket.created\_at
+  * ticket.created_at
 
-o   ticket.category
+  * ticket.category
 
-o   ticket.status
+  * ticket.status
 
-o   ticket.replied\_at
+  * ticket.replied_at
 
-o   ticket.closed\_at
+  * ticket.closed_at
 
-o   ticket.priority
+  * ticket.priority
 
-o   ticket.read\_by\_customer
+  * ticket.read_by_customer
 
-o   ticket.has\_attachment
+  * ticket.has_attachment
 
-o   ticket.author
+  * ticket.author
 
-o   ticket.created\_by
+  * ticket.created_by
 
-o   customer.id
+  * customer.id
 
-o   customer.firstname
+  * customer.firstname
 
-o   customer.lastname
+  * customer.lastname
 
- 
-
-Extra fields are also valid on the form:
-
-o   ticket.\[extra field name\]
+  * ticket.[extra field name]
 
  
 
@@ -117,7 +109,7 @@ o   ticket.\[extra field name\]
  
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService();
 
 string sessionKey;
@@ -125,33 +117,21 @@ string sessionKey;
 string errorCode = custService.login(“johndoe”,”pw”,out sessionKey);
 
 if(errorCode.Equals(“0”))
+{
+    customer.CriteriaStruct[] ticketSearchCriteria = new customer.CriteriaStruct[1];
 
-    {
+    string[] ticketSearchFields = new string[2];
 
-customer.CriteriaStruct\[\] ticketSearchCriteria = 
+    customer.ResultStruct[][] ticketSearchResult;
 
-          new customer.CriteriaStruct\[1\];
+    ticketSearchCriteria[0] = new customer.CriteriaStruct();
+    ticketSearchCriteria[0].field = "ticket.id";
+    ticketSearchCriteria[0].op = "OperatorGt";
+    ticketSearchCriteria[0].value = "0";
 
-string\[\] ticketSearchFields = new string\[2\];
+    ticketSearchFields[0] = "ticket.id";
+    ticketSearchFields[1] = "ticket.title";
 
-customer.ResultStruct\[\]\[\] ticketSearchResult;
-
-ticketSearchCriteria\[0\] = new customer.CriteriaStruct();
-
-ticketSearchCriteria\[0\].field = "ticket.id";
-
-ticketSearchCriteria\[0\].op = "OperatorGt";
-
-ticketSearchCriteria\[0\].value = "0";
-
- 
-
-ticketSearchFields\[0\] = "ticket.id";
-
-ticketSearchFields\[1\] = "ticket.title";
-
- 
-
- 
-
-custService.findTickets(Session\["sessionKey"\].ToString(), ticketSearchCriteria, ticketSearchFields, out ticketSearchResult);
+    custService.findTickets(sessionKey.ToString(), ticketSearchCriteria, ticketSearchFields, out ticketSearchResult);
+}
+```

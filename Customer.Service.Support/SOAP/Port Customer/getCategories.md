@@ -26,27 +26,23 @@ If the session key is empty the default customer language is chosen, otherwise t
 
 * categoryIds           - An array of all external categories. Elements of this structure is as follows:
 
-o   id                        - The category ID
+  * id                        - The category ID
 
-o   name                   - External category name
+  * name                   - External category name
 
-o   parentId             - The category ID of the parent. -1 if this is a top level category.
+  * parentId             - The category ID of the parent. -1 if this is a top level category.
 
  
 
 *Example*:
-
+```
 string sessionKey;
 
 customer.customerService custService = new customer.customerService();
 
- 
-
 if(custService.login("test","test", out sessionKey) == "0")
-
 {
-
-       customer.CategoryStruct\[\] categoryIds;
-       string res = custService.getCategories(sessionKey, out categoryIds);
-
+  customer.CategoryStruct[] categoryIds;
+  string res = custService.getCategories(sessionKey, out categoryIds);
 }
+```

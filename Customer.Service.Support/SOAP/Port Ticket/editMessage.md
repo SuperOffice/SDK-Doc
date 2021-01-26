@@ -27,46 +27,27 @@ Edits an existing message by setting values.
  
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
-                   "norges bank", out sessionKey);
-
- 
 
 if (errorCode.Equals("0"))
-
-    {
+{
 
   string messageId = 10;
 
- 
+  ticket.ValuePairStruct[] values = new ticket.ValuePairStruct[2];
 
-  ticket.ValuePairStruct\[\] values = new ticket.ValuePairStruct\[2\];
+  values[0] = new ticket.ValuePairStruct();
+  values[0].field = "body";   // field id, can be extra field
+  values[0].value = "denne meldingen er endret fra SOAP";  //new value
+  values[1].field = "x_field";   // field id, can be extra field
+  values[1].value = "1032";  //new value 
 
-  values\[0\] = new ticket.ValuePairStruct();
-
-  values\[0\].field = "body";   // field id, can be extra field
-
-  values\[0\].value = "denne meldingen er endret fra SOAP";  //new value
-
-  values\[1\].field = "x\_field";   // field id, can be extra field
-
-  values\[1\].value = "1032";  //new value
-
- 
-
- 
-
-  string error = ticketService.editMessage(sessionKey,
-
-     messageId,
-     values,
-     out messageId);
-    }
+  string error = ticketService.editMessage(sessionKey, messageId, values, out messageId);
+}
+```

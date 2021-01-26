@@ -33,25 +33,22 @@ This method will create a new request/ticket with the customer as author of the 
  
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService();
 
-customer.ValuePairStruct\[\] extraFields = new customer.ValuePairStruct\[0\]; //We do not want any extra fields set
-
- 
+customer.ValuePairStruct[] extraFields = new customer.ValuePairStruct[0]; //We do not want any extra fields set
 
 string errorCode = custService.login(“johndoe”,”pw”,out sessionKey);
 
 if(errorCode.Equals(“0”))
-
 {
 
-       string ticketId;
+  string ticketId;
 
-string retVal = custService.newTicket(sessionKey, "Server error", "2", “23”, "-1", extraFields, out ticketId);
+  string retVal = custService.newTicket(sessionKey, "Server error", "2", “23”, "-1", extraFields, out ticketId);
 
-if (retVal.Equals(“0”))
-
-  // ticketId now contains the id of the new request
+  if (retVal.Equals(“0”))
+    // ticketId now contains the id of the new request
 
 }
+```

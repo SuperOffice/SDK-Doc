@@ -21,7 +21,8 @@ This method is used to log out a customer, and thus making the session key inval
  
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService();
 
 string ret = custService.logout(sessionKey);
+```

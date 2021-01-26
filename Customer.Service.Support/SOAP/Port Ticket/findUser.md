@@ -13,9 +13,9 @@ Finds the id of the specified user. If the specified user is not found, an error
 * sessionKey                        - A valid session key
 
 * field                                   - The field to search. Valid fields are:
-                                              username
-                                              loginname
-                                              email
+  * username
+  * loginname
+  * email
 
 *Out Parameters*:
 
@@ -23,6 +23,6 @@ Finds the id of the specified user. If the specified user is not found, an error
 
 * userId        - The id of the user
 
-* *
+
 
  

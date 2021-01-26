@@ -22,15 +22,15 @@ The logical operator is of course ignored if you apply only one criteria.
 
  The criteria operator can be one of:
 
-    OperatorContains
-    OperatorBeginsWith
-    OperatorEquals
-    OperatorGt
-    OperatorLt
-    OperatorGte
-    OperatorLte
-    OperatorNotEquals
-    OperatorIn
+* OperatorContains
+* OperatorBeginsWith
+* OperatorEquals
+* OperatorGt
+* OperatorLt
+* OperatorGte
+* OperatorLte
+* OperatorNotEquals
+* OperatorIn
 
  
 
@@ -48,13 +48,13 @@ The logical operator is of course ignored if you apply only one criteria.
 
 * criterias                        - A list of criteria structs:
 
-o   columnId         - The extra field id
+  * columnId         - The extra field id
 
-o   op  - The operator (see above)
+  * op  - The operator (see above)
 
-o   value                - The value
+  * value                - The value
 
-o   logicalOp         - A logical operator. Can be “and” or “or”
+  * logicalOp         - A logical operator. Can be “and” or “or”
 
 * orderByField   - Which field the result set should be sorted by (extra field id)
 
@@ -70,76 +70,55 @@ o   logicalOp         - A logical operator. Can be “and” or “or”
 
 * rows          - A two dimensional array of columns
 
-o   columnId         - An increasing number from 0 to the number of columns
+  * columnId         - An increasing number from 0 to the number of columns
 
-o   extraFieldId    - The id of the extra field stored in this column
+  * extraFieldId    - The id of the extra field stored in this column
 
-o   name                - The name of this column/extra field
+  * name                - The name of this column/extra field
 
-o   value                - The value
+  * value                - The value
 
-* *
+
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
-
-                   "norges bank", out sessionKey);
-
- 
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
 if (errorCode.Equals(“0”)
-
 {
 
-  string\[\] extraTableFields = new string\[2\];
+  string[] extraTableFields = new string[2];
 
-  extraTableFields\[0\] = “4”;
+  extraTableFields[0] = “4”;
+  extraTableFields[1] = “5”;
 
-  extraTableFields\[1\] = “5”;
+  ticket.ExtraTableCriteriaStruct[] criterias = new ticket.ExtraTableCriteriaStruct[1];
 
-  ticket.ExtraTableCriteriaStruct\[\] criterias = new ticket.ExtraTableCriteriaStruct\[1\];
+  criterias[0] = new ticket.ExtraTableCriteriaStruct();
+  criterias[0].columnId = “8”; // extra field with id 8
+  criterias[0].op = “OperatorEquals”;
+  criterias[0].value = “100”;  //return all rows with x\_8 = 100
+  criterias[0].maxEntries = “1000”; //truncate rows after 1000
+  criterias[0].logicalOp = “and” //not needed, but set anyway
 
-  criterias\[0\] = new ticket.ExtraTableCriteriaStruct();
-
-  criterias\[0\].columnId = “8”; // extra field with id 8
-
-  criterias\[0\].op = “OperatorEquals”;
-
-  criterias\[0\].value = “100”;  //return all rows with x\_8 = 100
-
-  criterias\[0\].maxEntries = “1000”; //truncate rows after 1000
-
-  criterias\[0\].logicalOp = “and” //not needed, but set anyway
-
- 
-
-  ticket.ExtraTableRowStruct\[\] result;
-
- 
+  ticket.ExtraTableRowStruct[] result;
 
   ticket.queryExtraTable(sessionKey,”1”,extraTableFields,
-
                           criterias,
-                          ”4”,    //order by x\_4
+                          ”4”,    //order by x_4
                           “true”, //ascending
                           out result);
 
   foreach(i ticket.ExtraTableRowStruct in result)
-
   {
-
     foreach(i2 ticket.ExtraTableColumnStruct in i.columns)
     {
       cout &lt;&lt; “name:” &lt;&lt; i2.name &lt;&lt; “ value:” &lt;&lt; i2.value &lt;&lt; endl;
     }
-
   }
-
 }
+```
