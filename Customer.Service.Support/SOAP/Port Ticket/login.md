@@ -24,26 +24,19 @@ Authenticates a user and returns a valid session key if successful.
 
 * sessionKey            - All notifications with the following fields:
 
-* *
+
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string sessionKey;
 
-string errorCode = ticketService.login("egon",
-
-                   "norges bank", out sessionKey);
-
- 
+string errorCode = ticketService.login("egon", "norges bank", out sessionKey);
 
 if (errorCode.Equals(“0”))
-
 {
 
   cout &lt;&lt; “hurray!” &lt;&lt; endl;
-
 }
+```

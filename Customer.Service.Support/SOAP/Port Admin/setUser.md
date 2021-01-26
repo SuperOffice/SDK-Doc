@@ -6,19 +6,15 @@ SortOrder="188"
 
 With this method you can set various information about a user. Just supply the fields you want to retrieve. Valid fields are:
 
- 
-
-            user.password
-            user.firstname
-
-user.middlename
-
-            user.lastname
-            user.email
-            user.loginname           
-            user.username
-            user.language (0 = English, 1 = Norwegian)
-            user.status (1 = Normal, 2 = Not available)
+* user.password
+* user.firstname
+* user.middlename
+* user.lastname
+* user.email
+* user.loginname           
+* user.username
+* user.language (0 = English, 1 = Norwegian)
+* user.status (1 = Normal, 2 = Not available)
                   
 
 *In Parameters*:
@@ -33,4 +29,4 @@ user.middlename
 
 * errorCode  - See appendix for error codes
 
-* *
+

@@ -4,8 +4,6 @@ SortOrder="181"
 
 *Description*:                
 
-* *
-
 *This method should normally not be used.*
 
  
@@ -24,10 +22,10 @@ Gets the binary file of the agent available on the server.
 
 * binaryData            - The binary executable.
 
-* *
+
 
 *Example*:
-
+```
 admin.adminService adminService = new admin.adminService();
 
 System.Byte\[\] data;
@@ -41,3 +39,4 @@ if(adminService.getAgent( out data ) == “0”)
   ...storeDataToDisk...
 
 }
+```

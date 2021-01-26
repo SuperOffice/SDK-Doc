@@ -27,19 +27,14 @@ Deprecated: use findCustomers() instead.
  
 
 *Example*:
-
+```
 ticket.ticketService ticketService = new ticket.ticketService();
-
- 
 
 string custUsername;
 
-string errorCode = ticketService.findCustomerFromEmail("myUser",
-
-                   "myPwd", "customer@domain.com", out custUsername);
-
- 
+string errorCode = ticketService.findCustomerFromEmail("myUser", "myPwd", "customer@domain.com", out custUsername);
 
 if (errorCode.Equals(“0”)
-
   cout &lt;&lt; custUsername; // Here we have the username
+
+```

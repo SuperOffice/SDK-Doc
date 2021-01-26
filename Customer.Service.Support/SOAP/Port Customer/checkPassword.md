@@ -23,7 +23,7 @@ Checks if this user name and passwords contains valid login credentials. Will re
  
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService();
 
 string ret = custService.checkPassword(“username”,”password”);
@@ -35,3 +35,4 @@ if(ret == "0")
 else
 
        cout &lt;&lt;  "Oh no";
+```

@@ -21,15 +21,14 @@ This method will send the username and password to the given email address (if i
  
 
 *Example*:
-
+```
 customer.customerService custService = new customer.customerService();
 
 string errorCode = custService.login(“johndoe”,”pw”,out sessionKey);
 
 if(errorCode.Equals(“0”))
-
 {
-
        string ret = custService.sendPassword("test@mycompany.com");
-
 }
+
+```
